@@ -1,0 +1,24 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: scm-integration-api
+toolchain_product_name: scm-integration
+service_name: scm-integration/api
+gunicorn_image_rev:
+  us-east-1: prod-2023-04-26.16-00-05-bec30673bb16
+dbs: [users, scm-integration]
+has_static_files: false
+service_type: api
+iam_service_role_arn: null  # set by deploy script
+secrets:
+- github-app-private-key
+- bitbucket-app-creds
+resources:
+  gunicorn:
+    requests:
+      cpu: 200m
+      memory: 256Mi
+extra_config:
+  # Resolved in resources_resolver.py
+  SCM_INTEGRATION_BUCKET: null
+

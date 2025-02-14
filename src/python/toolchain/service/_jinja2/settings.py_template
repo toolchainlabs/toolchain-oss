@@ -1,0 +1,16 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+# Copyright {{ copyright_year }} Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+from toolchain.django.site.settings.service import *  # noqa: F403
+
+
+ROOT_URLCONF = '{{ service_pkg }}.urls'
+
+INSTALLED_APPS.extend([
+  #### List required Django app configs here. ####
+])
+
+#### Set up required databases here. ####
+# set_up_databases('foo', 'bar')

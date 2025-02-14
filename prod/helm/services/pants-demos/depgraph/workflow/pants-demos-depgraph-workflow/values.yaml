@@ -1,0 +1,31 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: pants-demos-depgraph-workflow
+service_name: pants-demos/depgraph/workflow
+toolchain_product_name: pants-demos
+workflow_server_rev:
+  us-east-1: prod-2023-05-19.15-03-05-c19985e0b1e1
+workflow_maintenance_image_rev:
+  us-east-1: prod-2023-05-19.15-03-05-c19985e0b1e1
+dbs: [pants-demos]
+workers:
+  pants_demos_depgraph_worker_values:
+    target_namespace: null   # set by deploy script, for pod deploys 
+    service_account_name: pants-demos-depgraph-workflow
+    iam_service_role_arn: null  # set by deploy script
+    worker_deployment_name: pants-demos-depgraph-worker
+    replicas: 1
+    resources:
+      worker:
+        requests:
+          cpu: 30m
+          memory: 512Mi
+          ephemeral_storage: 512Mi
+        limits:
+          cpu: 300m
+          memory: 1Gi
+          ephemeral_storage: 3Gi
+    extra_config:
+    # Resolved in resources_resolver.py
+      JOB_CONFIG: {}

@@ -1,0 +1,59 @@
+# Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: buildbox-worker-{{ .Values.customer }}
+  labels:
+    toolchain_product: remote-execution
+    app: buildbox-worker-{{ .Values.customer }}
+    component: buildbox-worker
+    customer: {{ .Values.customer }}
+spec:
+  selector:
+    matchLabels:
+      app: buildbox-worker-{{ .Values.customer }}
+  replicas: {{ .Values.replicas }}
+  template:
+    metadata:
+      labels:
+        app: buildbox-worker-{{ .Values.customer }}
+        toolchain_product: remote-execution
+        component: buildbox-worker
+        customer: {{ .Values.customer }}
+    spec:
+      nodeSelector:
+          toolchain.instance_category: {{ .Values.nodeType }}
+      containers:
+        - name: workers
+          image: {{ .Values.image }}
+          imagePullPolicy: IfNotPresent
+          command:
+            - /usr/local/bin/worker
+            - --endpoint={{ .Values.endpoint }}
+            - --org-id={{ .Values.mainInstanceName }}
+            - --worker-concurrency={{ .Values.workersPerPod }}
+            - --cache-directory=/var/buildbox-cache
+            - --max-cache-size={{ .Values.cache_size }}
+            - --request-timeout={{ .Values.requestTimeout }}
+          volumeMounts:
+            - name: worker
+              mountPath: /var/buildbox-cache
+              mountPropagation: Bidirectional
+            - name: toolchain-cache
+              mountPath: /toolchain
+          securityContext: # TODO: do we really need this?
+            privileged: true
+          resources:
+            requests:
+              cpu: {{ .Values.cpu_request }}
+              memory: {{ .Values.memory_request }}
+
+      volumes:
+        - name: worker
+          emptyDir:
+            sizeLimit: {{ .Values.cache_size }}
+        - name: toolchain-cache
+          emptyDir:
+            sizeLimit: "50G"

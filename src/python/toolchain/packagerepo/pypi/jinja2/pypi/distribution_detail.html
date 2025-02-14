@@ -1,0 +1,33 @@
+{#
+Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "pypi/base.html" %}
+
+{% block content %}
+<h2>Details for {{ object.filename }}</h2>
+
+<table class="table">
+  <tr>
+    <td>Project: </td>
+    <td><a href="{{ object.release.project.get_absolute_url() }}">{{ object.release.project.name }}</a></td>
+  </tr>
+  <tr>
+    <td>Release: </td>
+    <td><a href="{{ object.release.get_absolute_url() }}">{{ object.release.version }}</a></td>
+  </tr>
+  {% if hasattr(object, 'data') %}
+    <tr>
+      <th>Metadata: </th>
+    </tr>
+    {% for key, value in object.data.metadata.items() %}
+      <tr>
+        <td>{{ key }}:</td>
+        <td>{{ value }}</td>
+      </tr>
+    {% endfor %}
+  {% endif %}
+</table>
+
+{% endblock content %}

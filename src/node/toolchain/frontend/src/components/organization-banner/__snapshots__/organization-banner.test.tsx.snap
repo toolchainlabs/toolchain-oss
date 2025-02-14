@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OrganizationBanner /> should render free_trial banner 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-p0slgd-MuiPaper-root"
+    color="primary"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-pc5njo-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item css-15jbcmx-MuiGrid-root"
+      >
+        <img
+          alt="Toolchain logo"
+          class="css-k008qs"
+          src="test-file-stub"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-body3 css-s1qcug-MuiTypography-root"
+        >
+          Toolchain is in free trial. Upgrade to continue using the service at the end of the trial.
+        </span>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item css-1snjm19-MuiGrid-root"
+      >
+        <a
+          href="/organizations/toolchaindev/"
+          style="text-decoration: none;"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-akjgsv-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-button1 css-107i9xx-MuiTypography-root"
+            >
+              SEE PLANS
+            </span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<OrganizationBanner /> should render limited banner 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-yefwl-MuiPaper-root"
+    color="error"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-pc5njo-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item css-15jbcmx-MuiGrid-root"
+      >
+        <img
+          alt="Toolchain logo"
+          class="css-k008qs"
+          src="test-file-stub"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-body3 css-s1qcug-MuiTypography-root"
+        >
+          The free trial has expired. Upgrade to resume service.
+        </span>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item css-1snjm19-MuiGrid-root"
+      >
+        <a
+          href="/organizations/toolchaindev/"
+          style="text-decoration: none;"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium css-131gysx-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-button1 css-107i9xx-MuiTypography-root"
+            >
+              UPGRADE
+            </span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<OrganizationBanner /> should render no builds banner 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1xzvluh-MuiPaper-root"
+    color="warning"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-pc5njo-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item css-15jbcmx-MuiGrid-root"
+      >
+        <img
+          alt="Toolchain logo"
+          class="css-k008qs"
+          src="test-file-stub"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-body3 css-s1qcug-MuiTypography-root"
+        >
+          To start running builds in this repo, please finish the setup.
+        </span>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item css-1snjm19-MuiGrid-root"
+      >
+        <a
+          href="https://docs.toolchain.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+          type="external"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedWarning MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedWarning MuiButton-sizeMedium MuiButton-containedSizeMedium css-176ogs5-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-button1 css-107i9xx-MuiTypography-root"
+            >
+              INSTRUCTIONS
+            </span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

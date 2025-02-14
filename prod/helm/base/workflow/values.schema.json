@@ -1,0 +1,106 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "config": {
+            "type": "object"
+        },
+        "dbs": {
+            "description": "List of dbs releases of this chart can access (so we know to mount their creds secrets).",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "extra_config": {
+            "type": "object"
+        },
+        "healthcheck_path": {
+            "type": "string"
+        },
+        "image_registry": {
+            "description": "Location of the Docker registry",
+            "type": "string"
+        },
+        "log_level": {
+            "type": "string",
+            "enum": [
+                "debug",
+                "info"
+            ]
+        },
+        "name": {
+            "description": "Name of the service",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "service_account_name": {
+            "description": "Name of k8s Service Account",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "replicas": {
+            "description": "Number of pods to deploy",
+            "type": "number"
+        },
+        "resources": {
+            "type": "object"
+        },
+        "secrets": {
+            "description": "Names of secrets to mount in container",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "node_selector": {
+            "type": "string"
+        },
+        "toolchain_env": {
+            "description": "Toolchain-specific environment name (e.g., prod / staging)",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "worker_deployment_name": {
+            "description": "Worker deployment name. Defaults to name. Use if the worker service has multiple deployments.",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "workflow_server_rev": {
+            "type": "object"
+        },
+        "workflow_maintenance_image_rev": {
+            "type": "object"
+        },
+        "workerExtraVolumes": {
+            "type": "array"
+        },
+        "workerExtraVolumeMounts": {
+            "type": "array"
+        }
+    }
+}

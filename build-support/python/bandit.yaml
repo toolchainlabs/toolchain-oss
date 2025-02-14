@@ -1,0 +1,12 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+# https://bandit.readthedocs.io/en/latest/config.html
+skips: [
+  'B603',  # subprocess_without_shell_equals_true
+  'B404',  # import_subprocess
+   #TODO: Enable the following tests:
+  'B607',  # start_process_with_partial_path
+  'B303',  # Use of insecure MD2, MD4, MD5, or SHA1 hash function
+  'B405',  # ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks.
+  'B314',  # Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called
+]

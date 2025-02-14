@@ -1,0 +1,50 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# null values may (and sometimes must) be provided in the dependent chart's values.
+
+global:
+  region: null
+image_registry: 283194185447.dkr.ecr.us-east-1.amazonaws.com
+name: null
+worker_deployment_name: null  # Defaults to name. Use if the worker service has multiple deployments.
+iam_service_role_arn: null # for use w/ k8s service accounts mapping to IAM foles
+toolchain_env: null
+service_account_name: null
+workflow_server_rev:
+  us-east-1: null
+workflow_maintenance_image_rev:
+  us-east-1: null
+replicas: 1
+resources:
+  worker:
+    requests:
+      cpu: "50m"
+      memory: "512Mi"
+      ephemeral_storage: "512Mi"
+    limits:
+      cpu: "200m"
+      memory: "1Gi"
+      ephemeral_storage: "1Gi"
+dbs: []  # List of dbs releases of this chart can access (so we know to mount their creds secrets).
+log_level: info  # Ignored if loggers is non-empty.
+secrets: []
+node_selector: "toolchain.instance_category: worker"
+# NB: Helm doesn't interpolate in values.yaml itself, so when constructing the env config we must
+# explicitly call tpl on the values below.
+config:
+  LOG_LEVEL: "{{ .Values.log_level }}"
+  # See https://github.com/boto/botocore/issues/1617 (we have encountered this issue occasionally).
+  AWS_METADATA_SERVICE_TIMEOUT: "10"
+  AWS_METADATA_SERVICE_NUM_ATTEMPTS: "3"
+extra_config: {}
+healthcheck_path: /healthz
+workerExtraVolumes: []
+  # - name: example-name
+  #   hostPath:
+  #     path: /path/on/host
+  #     type: DirectoryOrCreate
+# Any extra volume mounts to define for the workflow container
+workerExtraVolumeMounts: []
+#   - name: example-name
+#     mountPath: /path/in/container

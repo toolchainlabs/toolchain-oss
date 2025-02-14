@@ -1,0 +1,78 @@
+{
+    "counter_names": [
+        "local_process_total_time_run_ms",
+        "remote_store_missing_digest",
+        "remote_store_blob_bytes_downloaded",
+        "remote_store_blob_bytes_uploaded"
+    ],
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 10.62073802947998
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 718,
+        "preceding_graph_size": 19943,
+        "resulting_graph_size": 26777
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "named_caches_dir": "/Users/asher/.cache/pants/named_caches",
+            "remote_oauth_bearer_token_path": null,
+            "remote_store_address": "grpcs://cache.toolchain.com:443",
+            "watch_filesystem": true
+        },
+        "validate": {
+            "detail_level": "nonmatching"
+        }
+    },
+    "run_info": {
+        "branch": "george",
+        "buildroot": "/Users/asher/projects/toolchain",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.8.0.dev3 filter --target-type=python_requirement_library 3rdparty/python/curator:certifi 3rdparty/python/curator:requirements.txt 3rdparty/python/curator:six 3 0003_indexpantsmetrics.py src/python/toolchain/buildsense/ingestion/migrations/__init__.py src/python/toolchain/workflow/worker_thread_test.py:tests src/python/toolchain/workflow/worker_views.py",
+        "computed_goals": [
+            "filter"
+        ],
+        "datetime": "Monday Oct 04, 2021 11:45:24",
+        "id": "pants_run_2021_10_04_11_45_25_63_d1918943820c43a78258141ca9fd2739",
+        "machine": "Ashers-MacBook-Pro.local",
+        "outcome": "SUCCESS",
+        "path": "/Users/asher/projects/toolchain",
+        "revision": "77c30080132cf2723558b4692affa63ef51f84d9",
+        "specs_from_command_line": [
+            "3rdparty/python/curator:certifi",
+            "3rdparty/python/curator:requirements.txt",
+            "3rdparty/python/curator:six",
+            "3rdparty/python/curator:voluptuous",
+            "3rdparty/python/tools:requirements.txt",
+            "3rdparty/python:prometheus-client",
+            "prod/terraform/resources/us-east-1/kubernetes/remoting-prod-e1-1/service_role_policies/service_role_policies.tf:../../../../../terraform",
+            "prod/terraform/resources/us-east-1/kubernetes/remoting-prod-e1-1/service_role_policies/versions.tf:../../../../../terraform",
+            "src/python/toolchain/workflow/worker.py",
+            "src/python/toolchain/workflow/worker_thread.py",
+            "src/python/toolchain/workflow/worker_thread_test.py:tests",
+            "src/python/toolchain/workflow/worker_views.py"
+        ],
+        "timestamp": 1633373124.396951,
+        "user": "asher",
+        "version": "2.8.0.dev3"
+    },
+    "targets": {
+        "src/python/toolchain/workflow/worker_thread_test.py:tests": [
+            {
+                "filename": "src/python/toolchain/workflow/worker_thread_test.py"
+            }
+        ],
+        "src/python/toolchain/workflow/worker_views.py": [
+            {
+                "filename": "src/python/toolchain/workflow/worker_views.py"
+            }
+        ]
+    },
+    "workunits": []
+}

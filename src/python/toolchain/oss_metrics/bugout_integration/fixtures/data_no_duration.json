@@ -1,0 +1,28 @@
+[
+    {
+        "entry_url": "http://spire.bugout.dev/journals/26fab8ef-9575-4638-9fe2-603df8bea4b9/entries/61027558-7610-4df0-9bb8-5837f1ec8c2f",
+        "content_url": "http://spire.bugout.dev/journals/26fab8ef-9575-4638-9fe2-603df8bea4b9/entries/61027558-7610-4df0-9bb8-5837f1ec8c2f/content",
+        "title": "pants run pants_run_2021_10_02_15_33_15_527_2f039cc88ae349e0ba309e886811b6c8",
+        "content": "{\"duration\": \"None\", \"machine_id\": \"097b023dff17a92ec35caba50371cabea2007f5d01570309782e7c487c7c4dda\", \"num_goals\": \"1\", \"outcome\": \"None\", \"pants_version\": \"2.8.0.dev2\", \"platform\": \"Darwin-20.6.0-x86_64-i386-64bit\", \"python_implementation\": \"CPython\", \"python_version\": \"3.7.7\", \"repo_id\": \"5a01f053c895c2078d9a3db0496d8944fda894ec5f43a4f5df0023bc927e8fb5\", \"run_id\": \"pants_run_2021_10_02_15_33_15_527_2f039cc88ae349e0ba309e886811b6c8\", \"standard_goals\": [\"test\"], \"timestamp\": \"1633213991.175005\", \"user_id\": \"81f6665e4d19e97e07ef0c9f0427a6debc96b182fe6e1387a3738939a0274925\"}",
+        "tags": [
+            "python:3.7.7",
+            "duration:None",
+            "repo:5a01f053c895c2078d9a3db0496d8944fda894ec5f43a4f5df0023bc927e8fb5",
+            "user:81f6665e4d19e97e07ef0c9f0427a6debc96b182fe6e1387a3738939a0274925",
+            "machine:097b023dff17a92ec35caba50371cabea2007f5d01570309782e7c487c7c4dda",
+            "reporter_token:974b1acc-e052-4e5f-a45e-bae928e47bb0",
+            "arch:x86_64",
+            "python:3",
+            "python:3.7",
+            "goal:test",
+            "pants_version:2.8.0.dev2",
+            "os:Darwin",
+            "source:pantsbuild/pants",
+            "outcome:None",
+            "session:pants_run_2021_10_02_15_33_15_527_2f039cc88ae349e0ba309e886811b6c8"
+        ],
+        "created_at": "2021-10-02 22:33:16.589201+00:00",
+        "updated_at": "2021-10-02 22:33:16.589201+00:00",
+        "score": 1
+    }
+]

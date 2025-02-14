@@ -1,0 +1,31 @@
+{#
+Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+<div class="d-md-none">
+    <svg width="260" height="151" viewBox="0 0 260 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path vector-effect="non-scaling-stroke" d="M0 0V150.111L260 0L0 0Z" fill="#1C2B39"/>
+    </svg>
+  <div class="gradient-mobile">
+      <svg width="360" height="208" viewBox="0 0 360 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M360 0V207.614L0 0L360 0Z" fill="url(#paint0_linear_608:6312)"/>
+          <defs>
+              <linearGradient id="paint0_linear_608:6312" x1="0" y1="0" x2="359.799" y2="207.866" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#00A9B7" stop-opacity="0.08"/>
+                  <stop offset="1" stop-color="#00A9B7" stop-opacity="0"/>
+              </linearGradient>
+          </defs>
+      </svg>
+  </div>
+  {% if request.path == url('home') %}
+  <div class="launch-app-mobile">
+        <a href="https://app.toolchain.com/" class="launch-container-mobile d-flex align-items-center app-link">
+            <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 0L21.3923 6V18L11 24L0.607696 18V6L11 0Z" fill="#00A9B7"/>
+            </svg>
+            <div class="button1 launch-text-mobile palette-primary">START FREE</div>
+        </a>
+    </div>
+{% endif %}
+</div>

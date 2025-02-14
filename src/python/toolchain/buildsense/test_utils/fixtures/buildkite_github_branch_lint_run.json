@@ -1,0 +1,194 @@
+{
+    "ci_env": {
+        "BUILDKITE": "true",
+        "BUILDKITE_AGENT_DEBUG": "true",
+        "BUILDKITE_AGENT_DEBUG_HTTP": "false",
+        "BUILDKITE_AGENT_ENDPOINT": "https://agent.buildkite.com/v3",
+        "BUILDKITE_AGENT_EXPERIMENT": "",
+        "BUILDKITE_AGENT_ID": "c5eff90d-c2d2-4370-a7e0-8edefab49c45",
+        "BUILDKITE_AGENT_NAME": "14728f40894d-1",
+        "BUILDKITE_AGENT_PID": "7",
+        "BUILDKITE_ARTIFACT_PATHS": "",
+        "BUILDKITE_BIN_PATH": "/usr/local/bin",
+        "BUILDKITE_BRANCH": "main",
+        "BUILDKITE_BUILD_AUTHOR": "Asher Foa",
+        "BUILDKITE_BUILD_AUTHOR_EMAIL": "asher@toolchain.com",
+        "BUILDKITE_BUILD_CHECKOUT_PATH": "/buildkite/builds/14728f40894d-1/toolchain-labs/minimal-pants-github",
+        "BUILDKITE_BUILD_CREATOR": "Asher Foa",
+        "BUILDKITE_BUILD_CREATOR_EMAIL": "asher@toolchain.com",
+        "BUILDKITE_BUILD_ID": "18de0a11-442f-4634-b6d1-e0764309b43d",
+        "BUILDKITE_BUILD_NUMBER": "3",
+        "BUILDKITE_BUILD_PATH": "/buildkite/builds",
+        "BUILDKITE_BUILD_URL": "https://buildkite.com/toolchain-labs/minimal-pants-github/builds/3",
+        "BUILDKITE_COMMAND": "./pants lint ::",
+        "BUILDKITE_COMMAND_EVAL": "true",
+        "BUILDKITE_COMMIT": "8c72128f7f930dd6658c4b2723f48dc431860e6c",
+        "BUILDKITE_CONFIG_PATH": "/buildkite/buildkite-agent.cfg",
+        "BUILDKITE_ENV_FILE": "/tmp/job-env-e5e98dcf-23f0-48d4-87f0-c1ffbf023c2a877448956",
+        "BUILDKITE_GIT_CLEAN_FLAGS": "-ffxdq",
+        "BUILDKITE_GIT_CLONE_FLAGS": "-v",
+        "BUILDKITE_GIT_CLONE_MIRROR_FLAGS": "-v",
+        "BUILDKITE_GIT_FETCH_FLAGS": "-v --prune",
+        "BUILDKITE_GIT_MIRRORS_LOCK_TIMEOUT": "300",
+        "BUILDKITE_GIT_MIRRORS_PATH": "",
+        "BUILDKITE_GIT_SUBMODULES": "true",
+        "BUILDKITE_HOOKS_PATH": "/buildkite/hooks",
+        "BUILDKITE_JOB_ID": "e5e98dcf-23f0-48d4-87f0-c1ffbf023c2a",
+        "BUILDKITE_LABEL": "Pants Lint",
+        "BUILDKITE_LAST_HOOK_EXIT_STATUS": "0",
+        "BUILDKITE_LOCAL_HOOKS_ENABLED": "true",
+        "BUILDKITE_MESSAGE": "Merge pull request #1 from hello-newman/costanza\n\nUpdate from bitbucket.",
+        "BUILDKITE_ORGANIZATION_SLUG": "toolchain-labs",
+        "BUILDKITE_PIPELINE_DEFAULT_BRANCH": "main",
+        "BUILDKITE_PIPELINE_ID": "4a3f1a57-cd37-4b09-b9ae-76b00e94e8f1",
+        "BUILDKITE_PIPELINE_NAME": "Minimal Pants - Github",
+        "BUILDKITE_PIPELINE_PROVIDER": "github",
+        "BUILDKITE_PIPELINE_SLUG": "minimal-pants-github",
+        "BUILDKITE_PLUGINS_ENABLED": "true",
+        "BUILDKITE_PLUGINS_PATH": "/buildkite/plugins",
+        "BUILDKITE_PLUGIN_VALIDATION": "false",
+        "BUILDKITE_PROJECT_PROVIDER": "github",
+        "BUILDKITE_PROJECT_SLUG": "toolchain-labs/minimal-pants-github",
+        "BUILDKITE_PULL_REQUEST": "false",
+        "BUILDKITE_PULL_REQUEST_BASE_BRANCH": "",
+        "BUILDKITE_PULL_REQUEST_REPO": "",
+        "BUILDKITE_REBUILT_FROM_BUILD_ID": "",
+        "BUILDKITE_REBUILT_FROM_BUILD_NUMBER": "",
+        "BUILDKITE_REDACTED_VARS": "*_PASSWORD,*_SECRET,*_TOKEN,*_ACCESS_KEY,*_SECRET_KEY",
+        "BUILDKITE_REPO": "https://github.com/hello-newman/minimal-pants",
+        "BUILDKITE_RETRY_COUNT": "0",
+        "BUILDKITE_SCRIPT_PATH": "./pants lint ::",
+        "BUILDKITE_SHELL": "/bin/bash -e -c",
+        "BUILDKITE_SOURCE": "webhook",
+        "BUILDKITE_SSH_KEYSCAN": "true",
+        "BUILDKITE_STEP_ID": "74e82c23-2dff-430e-a6f8-81e420b85aed",
+        "BUILDKITE_STEP_KEY": "",
+        "BUILDKITE_TAG": "",
+        "BUILDKITE_TIMEOUT": "false",
+        "BUILDKITE_TRACE_CONTEXT": "Hv-BBAEBDlRleHRNYXBDYXJyaWVyAf-CAAEMAQwAAAT_ggAA",
+        "BUILDKITE_TRIGGERED_FROM_BUILD_ID": "",
+        "BUILDKITE_TRIGGERED_FROM_BUILD_NUMBER": "",
+        "BUILDKITE_TRIGGERED_FROM_BUILD_PIPELINE_SLUG": ""
+    },
+    "counter_names": [
+        "local_process_total_time_run_ms",
+        "local_cache_requests",
+        "local_cache_requests_cached",
+        "local_cache_requests_uncached",
+        "local_cache_read_errors",
+        "local_cache_write_errors",
+        "local_cache_total_time_saved_ms",
+        "local_execution_requests",
+        "remote_process_total_time_run_ms",
+        "remote_cache_requests",
+        "remote_cache_requests_cached",
+        "remote_cache_requests_uncached",
+        "remote_cache_read_errors",
+        "remote_cache_write_attempts",
+        "remote_cache_write_successes",
+        "remote_cache_write_errors",
+        "remote_cache_speculation_local_completed_first",
+        "remote_cache_speculation_remote_completed_first",
+        "remote_cache_total_time_saved_ms",
+        "remote_execution_errors",
+        "remote_execution_requests",
+        "remote_execution_rpc_errors",
+        "remote_execution_rpc_execute",
+        "remote_execution_rpc_retries",
+        "remote_execution_rpc_wait_execution",
+        "remote_execution_success",
+        "remote_execution_timeouts",
+        "remote_store_missing_digest",
+        "remote_store_blob_bytes_downloaded",
+        "remote_store_blob_bytes_uploaded"
+    ],
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 27.545770168304443
+        }
+    ],
+    "observation_histograms": {
+        "histograms": {
+            "local_process_time_run_ms": "HISTFAAAAEp4nC3JoRGAIBhA4d/nL2ewWS0WdzAxgzvZCUzAMQfj0LljAAjwyhfe9ftTRG4ZrdNlYJstcxhVRV+IGwEc5J2P9JAOqqEDGBMKAA==",
+            "local_store_read_blob_size": "HISTFAAAAIh4nC1LuwkCQRScnffZveUQRA4RBQVDIxEDo+vKCuzAIgQTMbYUSxDBxPhcPd+DGeY3OxxHAPboT/4cfth2XfvqjRVR3rhmIVKU8aszkWSRspADr0E1dUbl1qtsnKhxqPDG5wpufOy7NC3jEkRd+juwIh8hXSyDTak8RU/nwKvwZrxb/QESOg+t"
+        },
+        "version": 0
+    },
+    "pantsd_stats": {
+        "affected_file_count": 9,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 249
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "level": "info",
+            "local_execution_root_dir": "/tmp",
+            "local_store_dir": "/root/.cache/pants/lmdb_store",
+            "local_store_directories_max_size_bytes": 16000000000,
+            "local_store_files_max_size_bytes": 256000000000,
+            "local_store_processes_max_size_bytes": 16000000000,
+            "verify_config": true,
+            "watch_filesystem": true
+        },
+        "anonymous-telemetry": {
+            "enabled": false,
+            "repo_id": null
+        },
+        "typecheck": {},
+        "valsidate": {
+            "detail_level": "nonmatching"
+        }
+    },
+    "run_info": {
+        "branch": "8c72128f7f930dd6658c4b2723f48dc431860e6c",
+        "buildroot": "/buildkite/builds/14728f40894d-1/toolchain-labs/minimal-pants-github",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.6.1rc2 lint ::",
+        "computed_goals": [
+            "lint"
+        ],
+        "datetime": "Friday Sep 03, 2021 21:27:14",
+        "id": "pants_run_2021_09_03_21_27_24_650_906810e2ea584decb1fa36514f41f2eb",
+        "machine": "14728f40894d [docker]",
+        "outcome": "SUCCESS",
+        "path": "/buildkite/builds/14728f40894d-1/toolchain-labs/minimal-pants-github",
+        "revision": "8c72128f7f930dd6658c4b2723f48dc431860e6c",
+        "specs_from_command_line": [
+            "::"
+        ],
+        "timestamp": 1630704434.5400872,
+        "user": "root",
+        "version": "2.6.1rc2"
+    },
+    "targets": {
+        "//:ansicolors": [
+            {
+                "filename": "//:ansicolors"
+            }
+        ],
+        "//:requirements.txt": [
+            {
+                "filename": "//:requirements.txt"
+            }
+        ],
+        "seinfeld": [
+            {
+                "filename": "seinfeld/main.py"
+            },
+            {
+                "filename": "seinfeld/quote_of_the_day.py"
+            }
+        ],
+        "seinfeld:main": [
+            {
+                "filename": "seinfeld:main"
+            }
+        ],
+        "seinfeld:tests": [
+            {
+                "filename": "seinfeld/quote_of_the_day_test.py"
+            }
+        ]
+    },
+    "workunits": []
+}

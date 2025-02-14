@@ -1,0 +1,619 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Targets /> should display only files if there is no folders in inout data 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-cqph87-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-h4 css-1tlcnvt-MuiTypography-root"
+            >
+              4 files  in total
+            </h4>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <form
+              autocomplete="off"
+              novalidate=""
+            >
+              <div
+                class="MuiFormControl-root MuiTextField-root css-83sw5v-MuiFormControl-root-MuiTextField-root"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorSecondary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1szheb4-MuiFormLabel-root-MuiInputLabel-root"
+                  data-shrink="false"
+                  for="search-files"
+                  id="search-files-label"
+                >
+                  Search file name
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorSecondary MuiInputBase-formControl css-2ynkuf-MuiInputBase-root-MuiInput-root"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                    id="search-files"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item css-sa2p1a-MuiGrid-root"
+          >
+            <div
+              class="css-1r1nkb0"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+              >
+                <span
+                  class="css-1vg6q84"
+                />
+                file100.py
+              </p>
+              <div
+                class="css-jb85ns"
+              />
+            </div>
+            <div
+              class="css-1r1nkb0"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+              >
+                <span
+                  class="css-1vg6q84"
+                />
+                file110.py
+              </p>
+              <div
+                class="css-jb85ns"
+              />
+            </div>
+            <div
+              class="css-1r1nkb0"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+              >
+                <span
+                  class="css-1vg6q84"
+                />
+                file120.py
+              </p>
+              <div
+                class="css-jb85ns"
+              />
+            </div>
+            <div
+              class="css-1r1nkb0"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+              >
+                <span
+                  class="css-1vg6q84"
+                />
+                file130.py
+              </p>
+              <div
+                class="css-jb85ns"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Targets /> should render the component 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-cqph87-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-h4 css-1tlcnvt-MuiTypography-root"
+            >
+              10 files  in total
+            </h4>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <form
+              autocomplete="off"
+              novalidate=""
+            >
+              <div
+                class="MuiFormControl-root MuiTextField-root css-83sw5v-MuiFormControl-root-MuiTextField-root"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorSecondary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1szheb4-MuiFormLabel-root-MuiInputLabel-root"
+                  data-shrink="false"
+                  for="search-files"
+                  id="search-files-label"
+                >
+                  Search file name
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorSecondary MuiInputBase-formControl css-2ynkuf-MuiInputBase-root-MuiInput-root"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                    id="search-files"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item css-sa2p1a-MuiGrid-root"
+          >
+            <div
+              class="css-1cwlv21"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+              >
+                <span
+                  class="css-1vg6q84"
+                />
+                folder1/subfolder1a/subfolder1b/
+              </p>
+              <div
+                class="css-jb85ns"
+              />
+              <span
+                class="MuiTypography-root MuiTypography-caption css-44pf3c-MuiTypography-root"
+              >
+                4 items
+              </span>
+            </div>
+            <div
+              class="css-6ffh5f"
+            >
+              <div
+                class="css-1cwlv21"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="ExpandMoreIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                </svg>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+                >
+                  <span
+                    class="css-1vg6q84"
+                  />
+                  subfolder1c
+                </p>
+                <div
+                  class="css-jb85ns"
+                />
+                <span
+                  class="MuiTypography-root MuiTypography-caption css-44pf3c-MuiTypography-root"
+                >
+                  2 items
+                </span>
+              </div>
+              <div
+                class="css-6ffh5f"
+              >
+                <div
+                  class="css-1r1nkb0"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+                  >
+                    <span
+                      class="css-1vg6q84"
+                    />
+                    file100.py
+                  </p>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+                <div
+                  class="css-1r1nkb0"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+                  >
+                    <span
+                      class="css-1vg6q84"
+                    />
+                    file110.py
+                  </p>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1cwlv21"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="ExpandMoreIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                </svg>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+                >
+                  <span
+                    class="css-1vg6q84"
+                  />
+                  subfolder2c
+                </p>
+                <div
+                  class="css-jb85ns"
+                />
+                <span
+                  class="MuiTypography-root MuiTypography-caption css-44pf3c-MuiTypography-root"
+                >
+                  2 items
+                </span>
+              </div>
+              <div
+                class="css-6ffh5f"
+              >
+                <div
+                  class="css-1r1nkb0"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+                  >
+                    <span
+                      class="css-1vg6q84"
+                    />
+                    file200.py
+                  </p>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+                <div
+                  class="css-1r1nkb0"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+                  >
+                    <span
+                      class="css-1vg6q84"
+                    />
+                    file210.py
+                  </p>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-1cwlv21"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+              >
+                <span
+                  class="css-1vg6q84"
+                />
+                folder2/subfolder2a/subfolder2b/
+              </p>
+              <div
+                class="css-jb85ns"
+              />
+              <span
+                class="MuiTypography-root MuiTypography-caption css-44pf3c-MuiTypography-root"
+              >
+                5 items
+              </span>
+            </div>
+            <div
+              class="css-6ffh5f"
+            >
+              <div
+                class="css-1cwlv21"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="ExpandMoreIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                </svg>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+                >
+                  <span
+                    class="css-1vg6q84"
+                  />
+                  subfolder3c
+                </p>
+                <div
+                  class="css-jb85ns"
+                />
+                <span
+                  class="MuiTypography-root MuiTypography-caption css-44pf3c-MuiTypography-root"
+                >
+                  3 items
+                </span>
+              </div>
+              <div
+                class="css-6ffh5f"
+              >
+                <div
+                  class="css-1r1nkb0"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+                  >
+                    <span
+                      class="css-1vg6q84"
+                    />
+                    file300.py
+                  </p>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+                <div
+                  class="css-1r1nkb0"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+                  >
+                    <span
+                      class="css-1vg6q84"
+                    />
+                    file310.py
+                  </p>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+                <div
+                  class="css-1r1nkb0"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+                  >
+                    <span
+                      class="css-1vg6q84"
+                    />
+                    file320.py
+                  </p>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1cwlv21"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="ExpandMoreIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                </svg>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+                >
+                  <span
+                    class="css-1vg6q84"
+                  />
+                  subfolder4c
+                </p>
+                <div
+                  class="css-jb85ns"
+                />
+                <span
+                  class="MuiTypography-root MuiTypography-caption css-44pf3c-MuiTypography-root"
+                >
+                  2 items
+                </span>
+              </div>
+              <div
+                class="css-6ffh5f"
+              >
+                <div
+                  class="css-1r1nkb0"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+                  >
+                    <span
+                      class="css-1vg6q84"
+                    />
+                    file400.py
+                  </p>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+                <div
+                  class="css-1r1nkb0"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+                  >
+                    <span
+                      class="css-1vg6q84"
+                    />
+                    file410.py
+                  </p>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-1cwlv21"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+              >
+                <span
+                  class="css-1vg6q84"
+                />
+                folder3
+              </p>
+              <div
+                class="css-jb85ns"
+              />
+              <span
+                class="MuiTypography-root MuiTypography-caption css-44pf3c-MuiTypography-root"
+              >
+                1 item
+              </span>
+            </div>
+            <div
+              class="css-6ffh5f"
+            >
+              <div
+                class="css-1r1nkb0"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+                >
+                  <span
+                    class="css-1vg6q84"
+                  />
+                  file500.py
+                </p>
+                <div
+                  class="css-jb85ns"
+                />
+              </div>
+            </div>
+            <div
+              class="css-1r1nkb0"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-14hydqa-MuiTypography-root"
+              >
+                <span
+                  class="css-1vg6q84"
+                />
+                folder4
+              </p>
+              <div
+                class="css-jb85ns"
+              />
+              <span
+                class="MuiTypography-root MuiTypography-caption css-44pf3c-MuiTypography-root"
+              >
+                0 items
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

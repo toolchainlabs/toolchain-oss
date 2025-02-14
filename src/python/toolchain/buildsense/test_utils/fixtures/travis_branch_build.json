@@ -1,0 +1,110 @@
+{
+    "ci_env": {
+        "TRAVIS": "true",
+        "TRAVIS_ALLOW_FAILURE": "",
+        "TRAVIS_APP_HOST": "build.travis-ci.com",
+        "TRAVIS_APT_PROXY": "http://build-cache.travisci.net",
+        "TRAVIS_ARCH": "amd64",
+        "TRAVIS_BRANCH": "master",
+        "TRAVIS_BUILD_DIR": "/home/travis/build/pantsbuild/pants",
+        "TRAVIS_BUILD_ID": "208134333",
+        "TRAVIS_BUILD_NUMBER": "36818",
+        "TRAVIS_BUILD_STAGE_NAME": "Deploy Pants Pex Unstable",
+        "TRAVIS_BUILD_WEB_URL": "https://travis-ci.com/pantsbuild/pants/builds/208134333",
+        "TRAVIS_CMD": "./build-support/bin/release.sh -p",
+        "TRAVIS_COMMIT": "e58d40129dfdb2de8cf0c25b9de09479010aa597",
+        "TRAVIS_COMMIT_MESSAGE": "[internal] Enable the Toolchain plugin in CI. (#11264)\n\nThis PR enables the toolchain plugin when running under travis CI.\r",
+        "TRAVIS_COMMIT_RANGE": "1ad831e95bce...e58d40129dfd",
+        "TRAVIS_CPU_ARCH": "amd64",
+        "TRAVIS_DIST": "bionic",
+        "TRAVIS_ENABLE_INFRA_DETECTION": "true",
+        "TRAVIS_EVENT_TYPE": "push",
+        "TRAVIS_FILTERED": "redirect_io",
+        "TRAVIS_HOME": "/home/travis",
+        "TRAVIS_INFRA": "unknown",
+        "TRAVIS_INIT": "systemd",
+        "TRAVIS_INTERNAL_RUBY_REGEX": "^ruby-(2\\.[0-4]\\.[0-9]|1\\.9\\.3)",
+        "TRAVIS_JOB_ID": "458406031",
+        "TRAVIS_JOB_NAME": "Deploy unstable pants.pex",
+        "TRAVIS_JOB_NUMBER": "36818.13",
+        "TRAVIS_JOB_WEB_URL": "https://travis-ci.com/pantsbuild/pants/jobs/458406031",
+        "TRAVIS_LANGUAGE": "python",
+        "TRAVIS_OSX_IMAGE": "",
+        "TRAVIS_OS_NAME": "linux",
+        "TRAVIS_PRE_CHEF_BOOTSTRAP_TIME": "2020-06-30T12:56:42",
+        "TRAVIS_PULL_REQUEST": "false",
+        "TRAVIS_PULL_REQUEST_BRANCH": "",
+        "TRAVIS_PULL_REQUEST_SHA": "",
+        "TRAVIS_PULL_REQUEST_SLUG": "",
+        "TRAVIS_PYTHON_VERSION": "2.7",
+        "TRAVIS_REPO_SLUG": "pantsbuild/pants",
+        "TRAVIS_ROOT": "/",
+        "TRAVIS_SECURE_ENV_VARS": "true",
+        "TRAVIS_STACK_FEATURES": "basic couchdb disabled-ipv6 docker docker-compose elasticsearch firefox go-toolchain google-chrome jdk memcached mongodb mysql nodejs_interpreter perl_interpreter perlbrew phantomjs postgresql python_interpreter redis ruby_interpreter sqlite xserver",
+        "TRAVIS_STACK_JOB_BOARD_REGISTER": "/.job-board-register.yml",
+        "TRAVIS_STACK_LANGUAGES": "__ubuntu_1804__ c c++ clojure cplusplus cpp crystal default generic go groovy java node_js php pure_java python ruby scala julia perl perl6 elixir erlang",
+        "TRAVIS_STACK_NAME": "ubuntu_1804",
+        "TRAVIS_STACK_NODE_ATTRIBUTES": "/.node-attributes.yml",
+        "TRAVIS_STACK_TIMESTAMP": "2020-06-30 12:56:57 UTC",
+        "TRAVIS_SUDO": "true",
+        "TRAVIS_TAG": "",
+        "TRAVIS_TEST_RESULT": "",
+        "TRAVIS_TIMER_ID": "1689e7e0",
+        "TRAVIS_TIMER_START_TIME": "1607709101345985243",
+        "TRAVIS_TMPDIR": "/tmp/tmp.jrd5KtupmX",
+        "TRAVIS_UID": "2000"
+    },
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 105.39751243591309,
+            "is_tool": false
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 291,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 4155
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "log_levels_by_target": {},
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false
+        },
+        "typecheck": {}
+    },
+    "run_info": {
+        "id": "pants_run_2020_12_11_17_52_20_979_bf2a9125ddd942fea5da2c4d4377e9c4",
+        "timestamp": "1607709140.979262",
+        "datetime": "Friday Dec 11, 2020 17:52:20",
+        "user": "travis",
+        "machine": "travis-job-6f270160-5a4f-4a01-acfe-f267a65108c7",
+        "path": "/home/travis/build/pantsbuild/pants",
+        "buildroot": "/home/travis/build/pantsbuild/pants",
+        "version": "2.2.0.dev1",
+        "cmd_line": "pants --concurrent run /home/travis/build/pantsbuild/pants/build-support/bin/packages.py -- fetch-and-check-prebuilt-wheels --wheels-dest /home/travis/build/pantsbuild/pants/dist/deploy",
+        "specs_from_command_line": [
+            "build-support/bin/packages.py"
+        ],
+        "outcome": "SUCCESS",
+        "revision": "e58d40129dfdb2de8cf0c25b9de09479010aa597",
+        "branch": "e58d40129dfdb2de8cf0c25b9de09479010aa597",
+        "computed_goals": [
+            "run"
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "bebbb3d24bbd41b6",
+            "name": "select",
+            "state": "finished",
+            "version": 69,
+            "parent_id": null,
+            "last_update": 1607709209,
+            "start_usecs": 1607709141015497,
+            "end_usecs": 1607709209912972
+        }
+    ]}
+       

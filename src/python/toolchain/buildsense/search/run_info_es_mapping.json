@@ -1,0 +1,163 @@
+{
+    "properties": {
+        "branch": {
+            "type": "text",
+            "fields": {
+                "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                }
+            }
+        },
+        "buildroot": {
+            "type": "text",
+            "fields": {
+                "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                }
+            }
+        },
+        "cmd_line": {
+            "type": "text",
+            "fields": {
+                "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                }
+            }
+        },
+        "customer_id": {
+            "type": "keyword"
+        },
+        "machine": {
+            "type": "text",
+            "fields": {
+                "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                }
+            }
+        },
+        "outcome": {
+            "type": "keyword"
+        },
+        "path": {
+            "type": "text",
+            "fields": {
+                "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                }
+            }
+        },
+        "repo_id": {
+            "type": "keyword"
+        },
+        "revision": {
+            "type": "keyword"
+        },
+        "run_id": {
+            "type": "keyword"
+        },
+        "run_time": {
+            "type": "integer"
+        },
+        "specs_from_command_line": {
+            "type": "keyword"
+        },
+        "computed_goals": {
+            "type": "keyword"
+        },
+        "title": {
+            "type": "text",
+            "fields": {
+                "completion": {
+                    "type": "completion"
+                }
+            }
+        },
+        "ci_info": {
+            "properties": {
+                "username": {
+                    "type": "keyword"
+                },
+                "run_type": {
+                    "type": "keyword"
+                },
+                "pull_request": {
+                    "type": "integer"
+                },
+                "job_name": {
+                    "type": "keyword"
+                },
+                "build_num": {
+                    "type": "integer"
+                },
+                "build_url": {
+                    "type": "text"
+                },
+                "link": {
+                    "type": "text"
+                },
+                "ref_name": {
+                    "type": "text"
+                }
+            }
+        },
+        "server_info": {
+            "properties": {
+                "accept_time": {
+                    "type": "date",
+                    "format": "epoch_second"
+                },
+                "environment": {
+                    "type": "keyword"
+                },
+                "request_id": {
+                    "type": "keyword"
+                },
+                "s3_bucket": {
+                    "type": "keyword"
+                },
+                "s3_key": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "stats_version": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "client_ip": {
+                    "type": "ip"
+                }
+            }
+        },
+        "timestamp": {
+            "type": "date",
+            "format": "epoch_second"
+        },
+        "user_api_id": {
+            "type": "keyword"
+        },
+        "version": {
+            "type": "text",
+            "fields": {
+                "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                }
+            }
+        }
+    }
+}

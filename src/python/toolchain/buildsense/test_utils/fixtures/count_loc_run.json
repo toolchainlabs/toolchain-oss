@@ -1,0 +1,260 @@
+{
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 7.244050979614258,
+            "is_tool": false
+        },
+        {
+            "label": "main:complete",
+            "timing": 5.793571472167969e-05,
+            "is_tool": false
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 2432,
+        "affected_targets_size": 0,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 9331,
+        "target_root_size": 0
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "allow_external_binary_tool_downloads": true,
+            "backend_packages": [
+                "toolchain.pants.auth",
+                "toolchain.pants.buildsense",
+                "toolchain.pants.common",
+                "toolchain.pants.rules",
+                "pants.backend.awslambda.python",
+                "pants.backend.project_info",
+                "pants.backend.python",
+                "pants.backend.python.lint.bandit",
+                "pants.backend.python.lint.black",
+                "pants.backend.python.lint.docformatter",
+                "pants.backend.python.lint.flake8",
+                "pants.backend.python.lint.pylint",
+                "pants.backend.python.lint.isort",
+                "pants.backend.python.typecheck.mypy"
+            ],
+            "backend_packages2": [],
+            "binaries_baseurls": [
+                "https://binaries.pantsbuild.org"
+            ],
+            "binaries_fetch_timeout_secs": 30,
+            "binaries_path_by_id": {},
+            "build_file_prelude_globs": [],
+            "build_ignore": [
+                "3rdparty/jvm",
+                "3rdparty/go",
+                "prod/java",
+                "src/java",
+                "src/go",
+                "src/node",
+                "testdata/java"
+            ],
+            "build_patterns": [
+                "BUILD",
+                "BUILD.*"
+            ],
+            "ca_certs_path": null,
+            "colors": true,
+            "concurrent": false,
+            "dependency_inference": false,
+            "dynamic_ui": true,
+            "exclude_target_regexp": [],
+            "files_not_found_behavior": "warn",
+            "ignore_pants_warnings": [],
+            "level": "info",
+            "local_execution_root_dir": "/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T",
+            "local_store_dir": "/Users/asher/.cache/pants/lmdb_store",
+            "pantsd_pailgun_quit_timeout": 5,
+            "pantsd_timeout_when_multiple_invocations": 60,
+            "streaming_workunits_report_interval": 1,
+            "subproject_roots": [],
+            "tag": [],
+            "v1": false,
+            "v2": true,
+            "verify_config": true
+        },
+    
+        "typecheck": {}
+
+    },
+    "run_info": {
+        "id": "pants_run_2020_10_23_12_44_34_330_a7a47c542e5d49ea9b18a273b20e1628",
+        "timestamp": "1603482274.330834",
+        "datetime": "Friday Oct 23, 2020 12:44:34",
+        "user": "asher",
+        "machine": "Ashers-MacBook-Pro.local",
+        "path": "/Users/asher/projects/toolchain",
+        "buildroot": "/Users/asher/projects/toolchain",
+        "version": "2.0.0rc2",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.0.0rc2 count-loc ::",
+        "specs_from_command_line": [
+            "::"
+        ],
+        "outcome": "SUCCESS",
+        "revision": "2aee79e114bc812a8117730b70ca0c320230a2d6",
+        "branch": "dolores",
+        "computed_goals": [
+            "count-loc"
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "94eb605b22e78925",
+            "name": "select",
+            "state": "finished",
+            "version": 4,
+            "parent_id": null,
+            "last_update": 1603482280,
+            "start_usecs": 1603482274426197,
+            "end_usecs": 1603482280301205
+        },
+        {
+            "workunit_id": "668427a04b7baed7",
+            "name": "pants.backend.project_info.count_loc.count_loc",
+            "state": "finished",
+            "version": 4,
+            "parent_id": "94eb605b22e78925",
+            "last_update": 1603482280,
+            "start_usecs": 1603482274426898,
+            "description": "`count-loc` goal",
+            "end_usecs": 1603482280301097
+        },
+        {
+            "workunit_id": "44b995ec539ea4b3",
+            "name": "pants.core.util_rules.external_tool.download_external_tool",
+            "state": "finished",
+            "version": 4,
+            "parent_id": "668427a04b7baed7",
+            "last_update": 1603482280,
+            "start_usecs": 1603482278167970,
+            "end_usecs": 1603482279987910
+        },
+        {
+            "workunit_id": "479a8492e9574af7",
+            "name": "pants.core.util_rules.archive.maybe_extract_archive",
+            "state": "finished",
+            "version": 4,
+            "parent_id": "44b995ec539ea4b3",
+            "last_update": 1603482280,
+            "start_usecs": 1603482279516768,
+            "description": "Extracting an archive file",
+            "end_usecs": 1603482279987799
+        },
+        {
+            "workunit_id": "ba0965b974b3b278",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 4,
+            "parent_id": "479a8492e9574af7",
+            "last_update": 1603482280,
+            "start_usecs": 1603482279896677,
+            "end_usecs": 1603482279987283
+        },
+        {
+            "workunit_id": "49f44303a610fe2d",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 4,
+            "parent_id": "ba0965b974b3b278",
+            "last_update": 1603482280,
+            "start_usecs": 1603482279896816,
+            "end_usecs": 1603482279987211
+        },
+        {
+            "workunit_id": "a655ce4991b5a1ac",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 4,
+            "parent_id": "49f44303a610fe2d",
+            "last_update": 1603482280,
+            "start_usecs": 1603482279897056,
+            "description": "Extract scc-2.12.0-x86_64-apple-darwin.zip",
+            "end_usecs": 1603482279986860
+        },
+        {
+            "workunit_id": "e5cd447c5f26f134",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 4,
+            "parent_id": "a655ce4991b5a1ac",
+            "last_update": 1603482280,
+            "start_usecs": 1603482279897556,
+            "description": "(Waiting) Extract scc-2.12.0-x86_64-apple-darwin.zip",
+            "end_usecs": 1603482279986617
+        },
+        {
+            "workunit_id": "409a3780bab47496",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 4,
+            "parent_id": "e5cd447c5f26f134",
+            "last_update": 1603482280,
+            "start_usecs": 1603482279897571,
+            "description": "Extract scc-2.12.0-x86_64-apple-darwin.zip",
+            "end_usecs": 1603482279986596,
+            "artifacts": {
+                "stdout": "Archive:  scc-2.12.0-x86_64-apple-darwin.zip\n  inflating: __output/scc            \n"
+            }
+        },
+        {
+            "workunit_id": "3c528c77c8bc7b86",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 4,
+            "parent_id": "668427a04b7baed7",
+            "last_update": 1603482280,
+            "start_usecs": 1603482279988512,
+            "end_usecs": 1603482280298257
+        },
+        {
+            "workunit_id": "f37b4663c964c691",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 4,
+            "parent_id": "3c528c77c8bc7b86",
+            "last_update": 1603482280,
+            "start_usecs": 1603482279988629,
+            "end_usecs": 1603482280298185
+        },
+        {
+            "workunit_id": "ddc7bbf2ce04a215",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 4,
+            "parent_id": "f37b4663c964c691",
+            "last_update": 1603482280,
+            "start_usecs": 1603482279988834,
+            "description": "Count lines of code for 1608 files",
+            "end_usecs": 1603482280297869
+        },
+        {
+            "workunit_id": "ef3885e2b2fd6750",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 4,
+            "parent_id": "ddc7bbf2ce04a215",
+            "last_update": 1603482280,
+            "start_usecs": 1603482279988969,
+            "description": "(Waiting) Count lines of code for 1608 files",
+            "end_usecs": 1603482280297528
+        },
+        {
+            "workunit_id": "1547c5ded140dbc6",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 4,
+            "parent_id": "ef3885e2b2fd6750",
+            "last_update": 1603482280,
+            "start_usecs": 1603482279988980,
+            "description": "Count lines of code for 1608 files",
+            "end_usecs": 1603482280297509,
+            "artifacts": {
+                "stdout": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nPython                     952     97007    10237     10614    76156       4720\nTerraform                  201      9027     1176      2086     5765        187\nYAML                       172     19686      509      1934    17243          0\nJSON                        87    178821       14         0   178807          0\nHTML                        84      4002      714        11     3277          0\nPlain Text                  27      1266        9         0     1257          0\nJavaScript                  15      1979      172       442     1365        199\nSVG                          8       218        0         4      214          3\nCSS                          5      1670      314        94     1262          0\nXML                          3       972       57         0      915          0\nJinja                        1        88        8        10       70         22\nMarkdown                     1        31        6         0       25          0\n───────────────────────────────────────────────────────────────────────────────\nTotal                     1556    314767    13216     15195   286356       5131\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop $10,264,715\nEstimated Schedule Effort 37.170860 months\nEstimated People Required 32.711388\n───────────────────────────────────────────────────────────────────────────────\n\n"
+            }
+        }
+    ]
+}

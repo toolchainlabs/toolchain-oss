@@ -1,0 +1,68 @@
+{
+    "services": [
+        {
+            "id": "COSTANZA",
+            "name": "feats-of-strength",
+            "description": "Festivus for the rest of us",
+            "created_at": "2021-05-12T16:22:26-07:00",
+            "updated_at": "2021-05-12T16:22:26-07:00",
+            "status": "active",
+            "teams": [],
+            "alert_creation": "create_alerts_and_incidents",
+            "addons": [],
+            "scheduled_actions": [],
+            "support_hours": null,
+            "last_incident_timestamp": null,
+            "escalation_policy": {
+                "id": "PDK5OVS",
+                "type": "escalation_policy_reference",
+                "summary": "Escalation Policy for toolchain_prod",
+                "self": "https://api.pagerduty.com/escalation_policies/PDK5OVS",
+                "html_url": "https://toolchainlabs.pagerduty.com/escalation_policies/PDK5OVS"
+            },
+            "incident_urgency_rule": {
+                "type": "constant",
+                "urgency": "high"
+            },
+            "acknowledgement_timeout": 600,
+            "auto_resolve_timeout": 14400,
+            "integrations": [
+                {
+                    "id": "SOUP",
+                    "type": "generic_events_api_inbound_integration",
+                    "summary": "prometheus-alert-mgr",
+                    "self": "https://api.pagerduty.com/services/PKDSSTI/integrations/P4ZVU8I",
+                    "html_url": "https://toolchainlabs.pagerduty.com/services/PKDSSTI/integrations/P4ZVU8I",
+                    "name": "aluminum-pole",
+                    "service": {
+                        "id": "PKDSSTI",
+                        "type": "service_reference",
+                        "summary": "toolchain_prod",
+                        "self": "https://api.pagerduty.com/services/PKDSSTI",
+                        "html_url": "https://toolchainlabs.pagerduty.com/service-directory/PKDSSTI"
+                    },
+                    "created_at": "2021-05-13T21:14:50-07:00",
+                    "vendor": {
+                        "id": "P1S0PW6",
+                        "type": "vendor_reference",
+                        "summary": "Prometheus",
+                        "self": "https://api.pagerduty.com/vendors/P1S0PW6",
+                        "html_url": null
+                    },
+                    "integration_key": "SOUP",
+                    "config": {
+                        "fields": {}
+                    }
+                }
+            ],
+            "type": "service",
+            "summary": "toolchain_prod",
+            "self": "https://api.pagerduty.com/services/PKDSSTI",
+            "html_url": "https://toolchainlabs.pagerduty.com/service-directory/PKDSSTI"
+        }
+    ],
+    "limit": 100,
+    "offset": 0,
+    "total": null,
+    "more": false
+}

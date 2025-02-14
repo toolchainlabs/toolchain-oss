@@ -1,0 +1,4 @@
+# Support a standard of generating local temporary files via `resource "local_file" ...` in
+# `.generated/` directories.
+.generated/
+

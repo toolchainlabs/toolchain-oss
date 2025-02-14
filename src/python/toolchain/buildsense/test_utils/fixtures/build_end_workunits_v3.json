@@ -1,0 +1,2204 @@
+{
+    "artifact_cache_stats": [],
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 28.624116897583008,
+            "is_tool": false
+        },
+        {
+            "label": "main:complete",
+            "timing": 0.0006539821624755859,
+            "is_tool": false
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 66,
+        "affected_targets_size": 0,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 299,
+        "target_root_size": 0
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "allow_external_binary_tool_downloads": true,
+            "backend_packages": [
+                "pants.backend.graph_info",
+                "pants.backend.project_info",
+                "pants.backend.python",
+                "pants.backend.jvm",
+                "toolchain.pants.internal"
+            ],
+            "backend_packages2": [
+                "toolchain.pants.auth",
+                "toolchain.pants.buildsense",
+                "toolchain.pants.common",
+                "toolchain.pants.internal",
+                "toolchain.pants.external",
+                "toolchain.pants.rules.mypy",
+                "pants.backend.awslambda.python",
+                "pants.backend.project_info",
+                "pants.backend.python",
+                "pants.backend.python.lint.bandit",
+                "pants.backend.python.lint.black",
+                "pants.backend.python.lint.docformatter",
+                "pants.backend.python.lint.flake8",
+                "pants.backend.python.lint.isort",
+                "pants.contrib.go",
+                "pants.contrib.node"
+            ],
+            "binaries_baseurls": [
+                "https://binaries.pantsbuild.org",
+                "https://github.com/toolchainlabs/binhost/raw/master/"
+            ],
+            "binaries_fetch_timeout_secs": 30,
+            "binaries_path_by_id": {},
+            "build_file_imports": "error",
+            "build_file_prelude_globs": [],
+            "build_ignore": [
+                ".*/",
+                "bower_components/",
+                "node_modules/",
+                "*.egg-info/"
+            ],
+            "cache_key_gen_version": "200",
+            "colors": true,
+            "concurrent": false,
+            "enable_pantsd": false,
+            "exclude_target_regexp": [],
+            "experimental_fs_watcher": true,
+            "explain": false,
+            "fail_fast": false,
+            "files_not_found_behavior": "warn",
+            "ignore_pants_warnings": [],
+            "kill_nailguns": false,
+            "level": "info",
+            "local_store_dir": "/Users/asher/.cache/pants/lmdb_store",
+            "lock": true,
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "max_subprocess_args": 100,
+            "native_engine_visualize_to": null,
+            "option_name_check_distance": 2,
+            "owners_not_found_behavior": "error",
+            "pants_bin_name": "./tc",
+            "pants_bootstrapdir": "/Users/asher/.cache/pants",
+            "pants_config_files": [
+                "/Users/asher/projects/toolchain/pants.toml",
+                "/Users/asher/projects/toolchain/toolchain.toml"
+            ],
+            "pants_configdir": "/Users/asher/.config/pants",
+            "pants_distdir": "/Users/asher/projects/toolchain/dist",
+            "pants_ignore": [
+                ".*/",
+                "/dist/"
+            ],
+            "pants_ignore_use_gitignore": true,
+            "pants_physical_workdir_base": null,
+            "pants_subprocessdir": "/Users/asher/projects/toolchain/.pids",
+            "pants_supportdir": "/Users/asher/projects/toolchain/build-support",
+            "pants_version": "1.28.0.dev1",
+            "pants_workdir": "/Users/asher/projects/toolchain/.pants.d",
+            "pantsd_invalidation_globs": [],
+            "pantsd_log_dir": null,
+            "pantsd_pailgun_host": "127.0.0.1",
+            "pantsd_pailgun_port": 0,
+            "pantsd_pailgun_quit_timeout": 5,
+            "pantsd_timeout_when_multiple_invocations": 60,
+            "pantsrc": true,
+            "pantsrc_files": [
+                "/etc/pantsrc",
+                "~/.pants.rc"
+            ],
+            "parent_build_id": null,
+            "plugin_cache_dir": "/Users/asher/.cache/pants/plugins",
+            "plugins": [
+                "pantsbuild.pants.contrib.codeanalysis==1.28.0.dev1",
+                "pantsbuild.pants.contrib.go==1.28.0.dev1",
+                "pantsbuild.pants.contrib.mypy==1.28.0.dev1",
+                "pantsbuild.pants.contrib.node==1.28.0.dev1",
+                "boto3==1.13.1",
+                "docutils==0.14",
+                "isort==4.3.21",
+                "networkx==2.4",
+                "pkginfo==1.5.0.1",
+                "plyvel==1.2.0",
+                "protobuf==3.11.3",
+                "setuptools==44.0.0"
+            ],
+            "plugins2": [],
+            "plugins_force_resolve": false,
+            "print_exception_stacktrace": false,
+            "process_execution_cleanup_local_dirs": true,
+            "process_execution_local_enable_nailgun": false,
+            "process_execution_local_parallelism": 4,
+            "process_execution_remote_parallelism": 128,
+            "process_execution_speculation_delay": 1,
+            "process_execution_speculation_strategy": "local_first",
+            "process_execution_use_local_cache": true,
+            "pythonpath": [
+                "/Users/asher/projects/toolchain/src/python"
+            ],
+            "quiet": false,
+            "remote_ca_certs_path": null,
+            "remote_execution": false,
+            "remote_execution_extra_platform_properties": [
+                "execution-policy=network",
+                "execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-02.03-27-51-70240f9a2a2f"
+            ],
+            "remote_execution_headers": {},
+            "remote_execution_process_cache_namespace": null,
+            "remote_execution_server": null,
+            "remote_instance_name": null,
+            "remote_oauth_bearer_token_path": null,
+            "remote_store_chunk_bytes": 1048576,
+            "remote_store_chunk_upload_timeout_seconds": 60,
+            "remote_store_connection_limit": 5,
+            "remote_store_rpc_retries": 2,
+            "remote_store_server": [],
+            "remote_store_thread_count": 1,
+            "shutdown_pantsd_after_run": false,
+            "spec_files": [],
+            "streaming_workunits_handlers": [
+                "toolchain.pants.buildsense.reporter.Reporter"
+            ],
+            "streaming_workunits_report_interval": 1,
+            "subproject_roots": [],
+            "tag": [],
+            "time": false,
+            "v1": false,
+            "v2": true,
+            "v2_ui": false,
+            "verify_config": true,
+            "watchman_enable": true,
+            "watchman_socket_path": null,
+            "watchman_socket_timeout": 0.1,
+            "watchman_startup_timeout": 60,
+            "watchman_supportdir": "bin/watchman",
+            "watchman_version": "4.9.0-pants1",
+            "workdir_max_build_entries": 8
+        }
+    },
+    "run_info": {
+        "id": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "timestamp": "1588870458.5423281",
+        "datetime": "Thursday May 07, 2020 09:54:18",
+        "user": "asher",
+        "machine": "ip-192-168-7-37.ec2.internal",
+        "path": "/Users/asher/projects/toolchain",
+        "buildroot": "/Users/asher/projects/toolchain",
+        "version": "1.28.0.dev1",
+        "cmd_line": "pants --pants-config-files=+[\"/Users/asher/projects/toolchain/toolchain.toml\"] --pants-bin-name=./tc --no-v2-ui lint src/python/toolchain/pants/::",
+        "default_report": "/Users/asher/projects/toolchain/.pants.d/reports/pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886/html/build.html",
+        "specs_from_command_line": [
+            "src/python/toolchain/pants::"
+        ],
+        "outcome": "SUCCESS",
+        "revision": "e9a7bd1fe63656ee80ef09b788e1ecfca107ce6f",
+        "branch": "jarmel"
+    },
+    "workunits": [
+        {
+            "workunit_id": "ad8250ac9e9f12d1",
+            "name": "union_membership_singleton",
+            "version": 1,
+            "parent_id": "1a3efdafbab3cad6",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458571042,
+            "description": "",
+            "end_usecs": 1588870458571226
+        },
+        {
+            "workunit_id": "a24ef850a868012c",
+            "name": "address_mapper_singleton",
+            "version": 1,
+            "parent_id": "a4a93702b5b545b1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458572567,
+            "description": "",
+            "end_usecs": 1588870458572610
+        },
+        {
+            "workunit_id": "a85720ad99f9e7d2",
+            "name": "parse_options",
+            "version": 1,
+            "parent_id": "8a4edbf31020385d",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458572832,
+            "description": "",
+            "end_usecs": 1588870458591195
+        },
+        {
+            "workunit_id": "8a4edbf31020385d",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "1a3efdafbab3cad6",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458572579,
+            "description": "",
+            "end_usecs": 1588870458591324
+        },
+        {
+            "workunit_id": "750081d09b0ae86d",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "a4a93702b5b545b1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458584673,
+            "description": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/**/BUILD', 'src/python/toolchain/pants/**/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1588870458596400
+        },
+        {
+            "workunit_id": "1aec555400067ff8",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "2b27cdce9638d8f9",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458598049,
+            "description": "Snapshot(PathGlobs(globs=(), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1588870458598191
+        },
+        {
+            "workunit_id": "2b27cdce9638d8f9",
+            "name": "evalute_preludes",
+            "version": 1,
+            "parent_id": "4f10345cdc996bb3",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458597578,
+            "description": "",
+            "end_usecs": 1588870458598421
+        },
+        {
+            "workunit_id": "34c305dc6e1d520a",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "69c15ef534f2d19a",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458599860,
+            "description": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/auth/BUILD', 'src/python/toolchain/pants/auth/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1588870458600926
+        },
+        {
+            "workunit_id": "ed4fc9c1fd21fb0d",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "1c65678a90e2397e",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458599842,
+            "description": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/util/BUILD', 'src/python/toolchain/pants/util/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1588870458601043
+        },
+        {
+            "workunit_id": "7e5792344471060b",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "4f10345cdc996bb3",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458599881,
+            "description": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/BUILD', 'src/python/toolchain/pants/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1588870458601162
+        },
+        {
+            "workunit_id": "81cdc4e3ffc776ca",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "2b0d1bd4a485f202",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458599670,
+            "description": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/buildgen/BUILD', 'src/python/toolchain/pants/buildgen/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1588870458601299
+        },
+        {
+            "workunit_id": "ec434188a53e53e8",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "a8119a130c7ed8d7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458599833,
+            "description": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/rules/BUILD', 'src/python/toolchain/pants/rules/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1588870458601733
+        },
+        {
+            "workunit_id": "84cf340c01830a78",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "5128b25212c1aa2a",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458599814,
+            "description": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/external/BUILD', 'src/python/toolchain/pants/external/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1588870458601950
+        },
+        {
+            "workunit_id": "e0ad67af2073523b",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "47b97ac2fa18a255",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458600351,
+            "description": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/buildsense/BUILD', 'src/python/toolchain/pants/buildsense/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1588870458602349
+        },
+        {
+            "workunit_id": "b82dfce0a6480db5",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "9cd292e8d8fb51bb",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458600756,
+            "description": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/common/BUILD', 'src/python/toolchain/pants/common/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1588870458602470
+        },
+        {
+            "workunit_id": "4da1787d59a557ff",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "a0d9c5d0923ff28d",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458600930,
+            "description": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/internal/BUILD', 'src/python/toolchain/pants/internal/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1588870458602699
+        },
+        {
+            "workunit_id": "f21f5ad26579846b",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "03f7f24291ad5a04",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458601928,
+            "description": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/rules/mypy/BUILD', 'src/python/toolchain/pants/rules/mypy/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1588870458603351
+        },
+        {
+            "workunit_id": "69c15ef534f2d19a",
+            "name": "parse_address_family",
+            "version": 1,
+            "parent_id": "a4a93702b5b545b1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458597955,
+            "description": "",
+            "end_usecs": 1588870458603553
+        },
+        {
+            "workunit_id": "4f10345cdc996bb3",
+            "name": "parse_address_family",
+            "version": 1,
+            "parent_id": "a4a93702b5b545b1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458597036,
+            "description": "",
+            "end_usecs": 1588870458603748
+        },
+        {
+            "workunit_id": "1c65678a90e2397e",
+            "name": "parse_address_family",
+            "version": 1,
+            "parent_id": "a4a93702b5b545b1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458597826,
+            "description": "",
+            "end_usecs": 1588870458604569
+        },
+        {
+            "workunit_id": "2b0d1bd4a485f202",
+            "name": "parse_address_family",
+            "version": 1,
+            "parent_id": "a4a93702b5b545b1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458597208,
+            "description": "",
+            "end_usecs": 1588870458604786
+        },
+        {
+            "workunit_id": "a8119a130c7ed8d7",
+            "name": "parse_address_family",
+            "version": 1,
+            "parent_id": "a4a93702b5b545b1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458598006,
+            "description": "",
+            "end_usecs": 1588870458605420
+        },
+        {
+            "workunit_id": "47b97ac2fa18a255",
+            "name": "parse_address_family",
+            "version": 1,
+            "parent_id": "a4a93702b5b545b1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458597544,
+            "description": "",
+            "end_usecs": 1588870458605684
+        },
+        {
+            "workunit_id": "03f7f24291ad5a04",
+            "name": "parse_address_family",
+            "version": 1,
+            "parent_id": "a4a93702b5b545b1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458597447,
+            "description": "",
+            "end_usecs": 1588870458605986
+        },
+        {
+            "workunit_id": "5128b25212c1aa2a",
+            "name": "parse_address_family",
+            "version": 1,
+            "parent_id": "a4a93702b5b545b1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458597852,
+            "description": "",
+            "end_usecs": 1588870458606300
+        },
+        {
+            "workunit_id": "9cd292e8d8fb51bb",
+            "name": "parse_address_family",
+            "version": 1,
+            "parent_id": "a4a93702b5b545b1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458597780,
+            "description": "",
+            "end_usecs": 1588870458606432
+        },
+        {
+            "workunit_id": "a0d9c5d0923ff28d",
+            "name": "parse_address_family",
+            "version": 1,
+            "parent_id": "a4a93702b5b545b1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458597939,
+            "description": "",
+            "end_usecs": 1588870458606692
+        },
+        {
+            "workunit_id": "a4a93702b5b545b1",
+            "name": "addresses_with_origins_from_address_families",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458572082,
+            "description": "",
+            "end_usecs": 1588870458607297
+        },
+        {
+            "workunit_id": "cec091bb370568f8",
+            "name": "registered_target_types_singleton",
+            "version": 1,
+            "parent_id": "49b48649ff00bdcf",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458610363,
+            "description": "",
+            "end_usecs": 1588870458610673
+        },
+        {
+            "workunit_id": "117d3d30e782e06d",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "eb664c3c9c9c0c9b",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458610304,
+            "description": "",
+            "end_usecs": 1588870458611418
+        },
+        {
+            "workunit_id": "fd6945665bbe7e81",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "7806be777c1498dc",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458610559,
+            "description": "",
+            "end_usecs": 1588870458611869
+        },
+        {
+            "workunit_id": "9cf87b95cb0fcee1",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "e2437482222305e2",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458610829,
+            "description": "",
+            "end_usecs": 1588870458612930
+        },
+        {
+            "workunit_id": "b82662b8ecc27aab",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "11aa6c930e0f3b4c",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458612169,
+            "description": "",
+            "end_usecs": 1588870458613231
+        },
+        {
+            "workunit_id": "43d60fa43309e87b",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "dbb499e16f1019a2",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458612517,
+            "description": "",
+            "end_usecs": 1588870458613727
+        },
+        {
+            "workunit_id": "82d2daa0cf612c28",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "d845c14e57bc2f42",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458612108,
+            "description": "",
+            "end_usecs": 1588870458613968
+        },
+        {
+            "workunit_id": "11aa6c930e0f3b4c",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "b6f3d9d55e54c5d3",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458611148,
+            "description": "",
+            "end_usecs": 1588870458614381
+        },
+        {
+            "workunit_id": "dbb499e16f1019a2",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "dc80ea16007308ab",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458612356,
+            "description": "",
+            "end_usecs": 1588870458614541
+        },
+        {
+            "workunit_id": "969177449b23d94d",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "adcaf8d8f64a0a49",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458612218,
+            "description": "",
+            "end_usecs": 1588870458614910
+        },
+        {
+            "workunit_id": "fa1cf9ab65bd99ea",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "203009bbfa81cc6b",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458611162,
+            "description": "",
+            "end_usecs": 1588870458615021
+        },
+        {
+            "workunit_id": "315c84bf4ee7710c",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "33dde02c76e55ddc",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458611965,
+            "description": "",
+            "end_usecs": 1588870458615211
+        },
+        {
+            "workunit_id": "b6f3d9d55e54c5d3",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458609628,
+            "description": "",
+            "end_usecs": 1588870458615314
+        },
+        {
+            "workunit_id": "adcaf8d8f64a0a49",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "5badb8a1ee468ff0",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458610506,
+            "description": "",
+            "end_usecs": 1588870458615818
+        },
+        {
+            "workunit_id": "33dde02c76e55ddc",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "37b1ada2b75f680b",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458611625,
+            "description": "",
+            "end_usecs": 1588870458616121
+        },
+        {
+            "workunit_id": "37b1ada2b75f680b",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458607988,
+            "description": "",
+            "end_usecs": 1588870458616161
+        },
+        {
+            "workunit_id": "dc80ea16007308ab",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458611465,
+            "description": "",
+            "end_usecs": 1588870458616180
+        },
+        {
+            "workunit_id": "5badb8a1ee468ff0",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458608898,
+            "description": "",
+            "end_usecs": 1588870458616272
+        },
+        {
+            "workunit_id": "257548a943829f0e",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "c82ef888ac135f44",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458613795,
+            "description": "",
+            "end_usecs": 1588870458616875
+        },
+        {
+            "workunit_id": "7806be777c1498dc",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "8618f6844a336ca7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458610124,
+            "description": "",
+            "end_usecs": 1588870458617183
+        },
+        {
+            "workunit_id": "203009bbfa81cc6b",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "3e166a8d6df494ca",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458610315,
+            "description": "",
+            "end_usecs": 1588870458617674
+        },
+        {
+            "workunit_id": "3e166a8d6df494ca",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458608505,
+            "description": "",
+            "end_usecs": 1588870458617706
+        },
+        {
+            "workunit_id": "c82ef888ac135f44",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "86deb4cb80f2a5e8",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458613036,
+            "description": "",
+            "end_usecs": 1588870458618223
+        },
+        {
+            "workunit_id": "86deb4cb80f2a5e8",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458612118,
+            "description": "",
+            "end_usecs": 1588870458618255
+        },
+        {
+            "workunit_id": "8618f6844a336ca7",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458609855,
+            "description": "",
+            "end_usecs": 1588870458618306
+        },
+        {
+            "workunit_id": "cadcbe3293b617c7",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "a2cd9e08b3749b68",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458614407,
+            "description": "",
+            "end_usecs": 1588870458618486
+        },
+        {
+            "workunit_id": "d845c14e57bc2f42",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "21e1d70c5e871334",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458610495,
+            "description": "",
+            "end_usecs": 1588870458618717
+        },
+        {
+            "workunit_id": "21e1d70c5e871334",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458608515,
+            "description": "",
+            "end_usecs": 1588870458618765
+        },
+        {
+            "workunit_id": "e2437482222305e2",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "59ccf675cb2e230d",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458610167,
+            "description": "",
+            "end_usecs": 1588870458619326
+        },
+        {
+            "workunit_id": "f315a8b77cd9dbbc",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "49b48649ff00bdcf",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458618931,
+            "description": "",
+            "end_usecs": 1588870458619692
+        },
+        {
+            "workunit_id": "49b48649ff00bdcf",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "449a70b6bcab2b29",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458608864,
+            "description": "",
+            "end_usecs": 1588870458619879
+        },
+        {
+            "workunit_id": "eb664c3c9c9c0c9b",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "ba1fa272210d6ac8",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458609401,
+            "description": "",
+            "end_usecs": 1588870458620044
+        },
+        {
+            "workunit_id": "84af52bdf07abbae",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "282cc210b70ebd86",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458615280,
+            "description": "",
+            "end_usecs": 1588870458620218
+        },
+        {
+            "workunit_id": "9057cd2b83a5b222",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "e1b6664793b8d254",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458617186,
+            "description": "",
+            "end_usecs": 1588870458620400
+        },
+        {
+            "workunit_id": "ba1fa272210d6ac8",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458609089,
+            "description": "",
+            "end_usecs": 1588870458620428
+        },
+        {
+            "workunit_id": "a2cd9e08b3749b68",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "0ed73cd21ed8d1b1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458612178,
+            "description": "",
+            "end_usecs": 1588870458620935
+        },
+        {
+            "workunit_id": "e1b6664793b8d254",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "435486fd7ba80c4c",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458613635,
+            "description": "",
+            "end_usecs": 1588870458621106
+        },
+        {
+            "workunit_id": "449a70b6bcab2b29",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458608260,
+            "description": "",
+            "end_usecs": 1588870458621147
+        },
+        {
+            "workunit_id": "59ccf675cb2e230d",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458609232,
+            "description": "",
+            "end_usecs": 1588870458621392
+        },
+        {
+            "workunit_id": "0ed73cd21ed8d1b1",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458610342,
+            "description": "",
+            "end_usecs": 1588870458621430
+        },
+        {
+            "workunit_id": "282cc210b70ebd86",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "53f6760146a48fc9",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458613439,
+            "description": "",
+            "end_usecs": 1588870458621776
+        },
+        {
+            "workunit_id": "435486fd7ba80c4c",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458612473,
+            "description": "",
+            "end_usecs": 1588870458621876
+        },
+        {
+            "workunit_id": "7a1544e2fabec537",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "79383a71151286f1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458620635,
+            "description": "",
+            "end_usecs": 1588870458622252
+        },
+        {
+            "workunit_id": "79383a71151286f1",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "ad49223b0efd3ba4",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458618786,
+            "description": "",
+            "end_usecs": 1588870458622478
+        },
+        {
+            "workunit_id": "ad49223b0efd3ba4",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458616458,
+            "description": "",
+            "end_usecs": 1588870458622502
+        },
+        {
+            "workunit_id": "da9dd7957299c666",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "530e2946dd70ccf7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458621192,
+            "description": "",
+            "end_usecs": 1588870458622709
+        },
+        {
+            "workunit_id": "530e2946dd70ccf7",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "d92b6532c25e9427",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458620313,
+            "description": "",
+            "end_usecs": 1588870458622886
+        },
+        {
+            "workunit_id": "d92b6532c25e9427",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458617436,
+            "description": "",
+            "end_usecs": 1588870458622911
+        },
+        {
+            "workunit_id": "53f6760146a48fc9",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458610918,
+            "description": "",
+            "end_usecs": 1588870458623036
+        },
+        {
+            "workunit_id": "d5823238f570df57",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "99fc656cddb6d011",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458621587,
+            "description": "",
+            "end_usecs": 1588870458623219
+        },
+        {
+            "workunit_id": "99fc656cddb6d011",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "7f175b19818c5d40",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458619424,
+            "description": "",
+            "end_usecs": 1588870458623351
+        },
+        {
+            "workunit_id": "7f175b19818c5d40",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458616480,
+            "description": "",
+            "end_usecs": 1588870458623374
+        },
+        {
+            "workunit_id": "1de61a57eaa0c313",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "4f496978c8303d81",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458620611,
+            "description": "",
+            "end_usecs": 1588870458623600
+        },
+        {
+            "workunit_id": "1c0b69041fc96674",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "e1aabcfcf0dc2cfc",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458623122,
+            "description": "",
+            "end_usecs": 1588870458623852
+        },
+        {
+            "workunit_id": "4f496978c8303d81",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "424cd5dcda4b7a92",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458617458,
+            "description": "",
+            "end_usecs": 1588870458624034
+        },
+        {
+            "workunit_id": "424cd5dcda4b7a92",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458616143,
+            "description": "",
+            "end_usecs": 1588870458624089
+        },
+        {
+            "workunit_id": "e1aabcfcf0dc2cfc",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "54cf784dce4a5c93",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458622041,
+            "description": "",
+            "end_usecs": 1588870458624268
+        },
+        {
+            "workunit_id": "54cf784dce4a5c93",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "827fdfaec26b73b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458620585,
+            "description": "",
+            "end_usecs": 1588870458624287
+        },
+        {
+            "workunit_id": "827fdfaec26b73b7",
+            "name": "resolve_targets_with_origins",
+            "version": 1,
+            "parent_id": "1a3efdafbab3cad6",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458571535,
+            "description": "",
+            "end_usecs": 1588870458624332
+        },
+        {
+            "workunit_id": "97073ef611dae642",
+            "name": "glob_match_error_behavior_singleton",
+            "version": 1,
+            "parent_id": "ab3e615699d8287b",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458632904,
+            "description": "",
+            "end_usecs": 1588870458632935
+        },
+        {
+            "workunit_id": "c317a1dce17ea379",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458632331,
+            "description": "",
+            "end_usecs": 1588870458633946
+        },
+        {
+            "workunit_id": "18d9c3251fac8cbb",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "ef8c785683d21483",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458636026,
+            "description": "Snapshot(PathGlobs(globs=(), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.all_match: 'all_match'>, description_of_origin=\"src/python/toolchain/pants:pants's `sources` field\"))",
+            "end_usecs": 1588870458638503
+        },
+        {
+            "workunit_id": "f9b1f78009ed1129",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "bc530058b9759783",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458636370,
+            "description": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/auth/*_test.py', '!src/python/toolchain/pants/auth/conftest.py', '!src/python/toolchain/pants/auth/test_*.py', 'src/python/toolchain/pants/auth/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/auth:auth's `sources` field\"))",
+            "end_usecs": 1588870458640050
+        },
+        {
+            "workunit_id": "5d666367279e8527",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "1c4e3eb908336545",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458635864,
+            "description": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/buildgen/*_test.py', '!src/python/toolchain/pants/buildgen/conftest.py', '!src/python/toolchain/pants/buildgen/test_*.py', 'src/python/toolchain/pants/buildgen/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/buildgen:buildgen's `sources` field\"))",
+            "end_usecs": 1588870458640419
+        },
+        {
+            "workunit_id": "6f30f61ea3f97719",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "e3f579909b206591",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458635932,
+            "description": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/internal/*_test.py', '!src/python/toolchain/pants/internal/conftest.py', '!src/python/toolchain/pants/internal/test_*.py', 'src/python/toolchain/pants/internal/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/internal:internal's `sources` field\"))",
+            "end_usecs": 1588870458640771
+        },
+        {
+            "workunit_id": "1c4e3eb908336545",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458632856,
+            "description": "",
+            "end_usecs": 1588870458640812
+        },
+        {
+            "workunit_id": "d59a12f14ab9c76f",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "90eb0a9f300aa83f",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458636217,
+            "description": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/rules/mypy/*_test.py', '!src/python/toolchain/pants/rules/mypy/conftest.py', '!src/python/toolchain/pants/rules/mypy/test_*.py', 'src/python/toolchain/pants/rules/mypy/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/rules/mypy:mypy's `sources` field\"))",
+            "end_usecs": 1588870458640930
+        },
+        {
+            "workunit_id": "e3f556e8c5e4983b",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "5a6c78da541a77b7",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458636344,
+            "description": "Snapshot(PathGlobs(globs=('src/python/toolchain/pants/buildgen/*_test.py', 'src/python/toolchain/pants/buildgen/conftest.py', 'src/python/toolchain/pants/buildgen/test_*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/buildgen:tests's `sources` field\"))",
+            "end_usecs": 1588870458640974
+        },
+        {
+            "workunit_id": "2337571729c1590b",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "652a0916155afbd4",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458636280,
+            "description": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/common/*_test.py', '!src/python/toolchain/pants/common/conftest.py', '!src/python/toolchain/pants/common/test_*.py', 'src/python/toolchain/pants/common/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/common:common's `sources` field\"))",
+            "end_usecs": 1588870458641020
+        },
+        {
+            "workunit_id": "5a6c78da541a77b7",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458632211,
+            "description": "",
+            "end_usecs": 1588870458641231
+        },
+        {
+            "workunit_id": "40db00db67b82e66",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "482137471983193e",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458639395,
+            "description": "Snapshot(PathGlobs(globs=('src/python/toolchain/pants/auth/*_test.py', 'src/python/toolchain/pants/auth/conftest.py', 'src/python/toolchain/pants/auth/test_*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/auth:tests's `sources` field\"))",
+            "end_usecs": 1588870458641402
+        },
+        {
+            "workunit_id": "2733d10aa2918070",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "611a8c2073a8ec74",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458636153,
+            "description": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/rules/*_test.py', '!src/python/toolchain/pants/rules/conftest.py', '!src/python/toolchain/pants/rules/test_*.py', 'src/python/toolchain/pants/rules/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/rules:rules's `sources` field\"))",
+            "end_usecs": 1588870458641697
+        },
+        {
+            "workunit_id": "0a36618b953783fe",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "be29a17a949c7dfc",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458637441,
+            "description": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/external/*_test.py', '!src/python/toolchain/pants/external/conftest.py', '!src/python/toolchain/pants/external/test_*.py', 'src/python/toolchain/pants/external/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/external:external's `sources` field\"))",
+            "end_usecs": 1588870458641782
+        },
+        {
+            "workunit_id": "771cc42ff797b6b6",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "dad1a249e91a9c85",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458637162,
+            "description": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/util/*_test.py', '!src/python/toolchain/pants/util/conftest.py', '!src/python/toolchain/pants/util/test_*.py', 'src/python/toolchain/pants/util/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/util:util's `sources` field\"))",
+            "end_usecs": 1588870458641848
+        },
+        {
+            "workunit_id": "bc530058b9759783",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458631618,
+            "description": "",
+            "end_usecs": 1588870458641868
+        },
+        {
+            "workunit_id": "0207cd89ca503e71",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "92aaf8fcef8d01f3",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458637056,
+            "description": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/buildsense/*_test.py', '!src/python/toolchain/pants/buildsense/conftest.py', '!src/python/toolchain/pants/buildsense/test_*.py', 'src/python/toolchain/pants/buildsense/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/buildsense:buildsense's `sources` field\"))",
+            "end_usecs": 1588870458641883
+        },
+        {
+            "workunit_id": "8ad1355d2fd347ca",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "ab3e615699d8287b",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458639874,
+            "description": "Snapshot(PathGlobs(globs=('src/python/toolchain/pants/rules/mypy/*_integration_test.py',), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.all_match: 'all_match'>, description_of_origin=\"src/python/toolchain/pants/rules/mypy:integration's `sources` field\"))",
+            "end_usecs": 1588870458641906
+        },
+        {
+            "workunit_id": "5b994ab2ecbef23a",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "eb9228b66cb3e4e2",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458637001,
+            "description": "Snapshot(PathGlobs(globs=('src/python/toolchain/pants/buildsense/*_test.py', 'src/python/toolchain/pants/buildsense/conftest.py', 'src/python/toolchain/pants/buildsense/test_*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/buildsense:tests's `sources` field\"))",
+            "end_usecs": 1588870458642033
+        },
+        {
+            "workunit_id": "d23143a7c18e6b84",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "39466a8038186501",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458639830,
+            "description": "Snapshot(PathGlobs(globs=('src/python/toolchain/pants/rules/*_test.py', 'src/python/toolchain/pants/rules/conftest.py', 'src/python/toolchain/pants/rules/test_*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/rules:tests's `sources` field\"))",
+            "end_usecs": 1588870458642123
+        },
+        {
+            "workunit_id": "ef8c785683d21483",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458632101,
+            "description": "",
+            "end_usecs": 1588870458642177
+        },
+        {
+            "workunit_id": "652a0916155afbd4",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458632558,
+            "description": "",
+            "end_usecs": 1588870458642537
+        },
+        {
+            "workunit_id": "dad1a249e91a9c85",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458631638,
+            "description": "",
+            "end_usecs": 1588870458642656
+        },
+        {
+            "workunit_id": "eb9228b66cb3e4e2",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458632431,
+            "description": "",
+            "end_usecs": 1588870458642729
+        },
+        {
+            "workunit_id": "482137471983193e",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458632471,
+            "description": "",
+            "end_usecs": 1588870458642825
+        },
+        {
+            "workunit_id": "ab3e615699d8287b",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458630985,
+            "description": "",
+            "end_usecs": 1588870458642910
+        },
+        {
+            "workunit_id": "90eb0a9f300aa83f",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458632269,
+            "description": "",
+            "end_usecs": 1588870458643170
+        },
+        {
+            "workunit_id": "92aaf8fcef8d01f3",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458632762,
+            "description": "",
+            "end_usecs": 1588870458643326
+        },
+        {
+            "workunit_id": "e3f579909b206591",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458630843,
+            "description": "",
+            "end_usecs": 1588870458643494
+        },
+        {
+            "workunit_id": "39466a8038186501",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458632627,
+            "description": "",
+            "end_usecs": 1588870458643645
+        },
+        {
+            "workunit_id": "611a8c2073a8ec74",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458632682,
+            "description": "",
+            "end_usecs": 1588870458643787
+        },
+        {
+            "workunit_id": "be29a17a949c7dfc",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "9acaef665c5f2353",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458632008,
+            "description": "",
+            "end_usecs": 1588870458643875
+        },
+        {
+            "workunit_id": "6d9903980a3ca371",
+            "name": "determine_field_sets_with_sources",
+            "version": 1,
+            "parent_id": "1a3efdafbab3cad6",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458628886,
+            "description": "",
+            "end_usecs": 1588870458643953
+        },
+        {
+            "workunit_id": "f653243ac838798d",
+            "name": "determine_field_sets_with_sources",
+            "version": 1,
+            "parent_id": "1a3efdafbab3cad6",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458627870,
+            "description": "",
+            "end_usecs": 1588870458644016
+        },
+        {
+            "workunit_id": "b58b1c2ed736d605",
+            "name": "determine_field_sets_with_sources",
+            "version": 1,
+            "parent_id": "1a3efdafbab3cad6",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458628612,
+            "description": "",
+            "end_usecs": 1588870458644075
+        },
+        {
+            "workunit_id": "9acaef665c5f2353",
+            "name": "determine_field_sets_with_sources",
+            "version": 1,
+            "parent_id": "1a3efdafbab3cad6",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458628195,
+            "description": "",
+            "end_usecs": 1588870458644125
+        },
+        {
+            "workunit_id": "f1f4f3b58ec48396",
+            "name": "determine_field_sets_with_sources",
+            "version": 1,
+            "parent_id": "1a3efdafbab3cad6",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458629067,
+            "description": "",
+            "end_usecs": 1588870458644174
+        },
+        {
+            "workunit_id": "351fec75eca9aced",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "2ab4e52d868f0f95",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458647527,
+            "description": "",
+            "end_usecs": 1588870458651228
+        },
+        {
+            "workunit_id": "28be2e321d817d4c",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "8d45843e928bb8a3",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458650861,
+            "description": "",
+            "end_usecs": 1588870458656526
+        },
+        {
+            "workunit_id": "b9ba46b72de6a755",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "d56d66c9cf830db5",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458653984,
+            "description": "",
+            "end_usecs": 1588870458660088
+        },
+        {
+            "workunit_id": "e4d4be376f5c741c",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "31cf045f2636160f",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458658568,
+            "description": "",
+            "end_usecs": 1588870458662437
+        },
+        {
+            "workunit_id": "5b46e76f31a34995",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "e7d3da16d0a89112",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458662496,
+            "description": "",
+            "end_usecs": 1588870458664846
+        },
+        {
+            "workunit_id": "9572554d08f62d13",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "31cf045f2636160f",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458650564,
+            "description": "",
+            "end_usecs": 1588870458665287
+        },
+        {
+            "workunit_id": "35316163d937a6eb",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "21f68f428a212967",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458665047,
+            "description": "",
+            "end_usecs": 1588870458667334
+        },
+        {
+            "workunit_id": "21f68f428a212967",
+            "name": "create_subprocess_encoding_environment",
+            "version": 1,
+            "parent_id": "31cf045f2636160f",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458647241,
+            "description": "",
+            "end_usecs": 1588870458667753
+        },
+        {
+            "workunit_id": "8789e6a0c3c7492e",
+            "name": "materialize_platform",
+            "version": 1,
+            "parent_id": "004e2e99afbb1b4d",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458671925,
+            "description": "",
+            "end_usecs": 1588870458673778
+        },
+        {
+            "workunit_id": "facc978c62f889e0",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "484e10058284c836",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458675217,
+            "description": "",
+            "end_usecs": 1588870458676615
+        },
+        {
+            "workunit_id": "2ef7fedc7545d5bc",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "a084fc92b13386d9",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458676710,
+            "description": "",
+            "end_usecs": 1588870458677065
+        },
+        {
+            "workunit_id": "b83ae5934bc33abf",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "bbc2bb11de142761",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458677235,
+            "description": "",
+            "end_usecs": 1588870458678891
+        },
+        {
+            "workunit_id": "bbc2bb11de142761",
+            "name": "create_pex_native_build_environment",
+            "version": 1,
+            "parent_id": "004e2e99afbb1b4d",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458673202,
+            "description": "",
+            "end_usecs": 1588870458679013
+        },
+        {
+            "workunit_id": "820e2a572a8a4800",
+            "name": "provide_binary_util",
+            "version": 1,
+            "parent_id": "37ac7785e6077d72",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458680328,
+            "description": "",
+            "end_usecs": 1588870458681425
+        },
+        {
+            "workunit_id": "a084fc92b13386d9",
+            "name": "log_level",
+            "version": 1,
+            "parent_id": "004e2e99afbb1b4d",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458672544,
+            "description": "",
+            "end_usecs": 1588870458681481
+        },
+        {
+            "workunit_id": "f89802edb3c0dacd",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "0ca14f40d6814698",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458674545,
+            "description": "",
+            "end_usecs": 1588870458683014
+        },
+        {
+            "workunit_id": "3d3864ab0f708e4b",
+            "name": "translate_host_platform",
+            "version": 1,
+            "parent_id": "37ac7785e6077d72",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458683506,
+            "description": "",
+            "end_usecs": 1588870458683632
+        },
+        {
+            "workunit_id": "37ac7785e6077d72",
+            "name": "get_binary_tool_urls",
+            "version": 1,
+            "parent_id": "82947b8b19e9765c",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458680233,
+            "description": "",
+            "end_usecs": 1588870458683669
+        },
+        {
+            "workunit_id": "82947b8b19e9765c",
+            "name": "fetch_binary_tool",
+            "version": 1,
+            "parent_id": "484e10058284c836",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458679781,
+            "description": "",
+            "end_usecs": 1588870458686895
+        },
+        {
+            "workunit_id": "484e10058284c836",
+            "name": "download_pex_bin",
+            "version": 1,
+            "parent_id": "0ca14f40d6814698",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458672610,
+            "description": "",
+            "end_usecs": 1588870458686964
+        },
+        {
+            "workunit_id": "1e4c2a6f66e3e2a1",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "a441c780a85defbf",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458688025,
+            "description": "Snapshot(PathGlobs(globs=('3rdparty/python/constraints.txt',), glob_match_error_behavior=<GlobMatchErrorBehavior.error: 'error'>, conjunction=<GlobExpansionConjunction.all_match: 'all_match'>, description_of_origin='the option `--python-setup-requirement-constraints`'))",
+            "end_usecs": 1588870458689266
+        },
+        {
+            "workunit_id": "bf2495657a9e59e3",
+            "name": "get_multi_platform_request_description",
+            "version": 1,
+            "parent_id": "69703f3035eb6cf2",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458695991,
+            "description": "",
+            "end_usecs": 1588870458696272
+        },
+        {
+            "workunit_id": "84a60dec55dc70ef",
+            "name": "get_multi_platform_request_description",
+            "version": 1,
+            "parent_id": "0798231fc6e02464",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458696045,
+            "description": "",
+            "end_usecs": 1588870458696399
+        },
+        {
+            "workunit_id": "1d0f4596b3be81e9",
+            "name": "get_multi_platform_request_description",
+            "version": 1,
+            "parent_id": "2c6f7f3694f61a3d",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458696617,
+            "description": "",
+            "end_usecs": 1588870458697863
+        },
+        {
+            "workunit_id": "cc8163edea0bc8aa",
+            "name": "build_pex",
+            "version": 1,
+            "parent_id": "3d967589ebfc7ae1",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458698182,
+            "description": "isort.pex (isort>=4.3.21,<4.4, setuptools<45)",
+            "end_usecs": 1588870458698740
+        },
+        {
+            "workunit_id": "31b1e50e01f06e60",
+            "name": "build_pex",
+            "version": 1,
+            "parent_id": "89af47e4ffdb6987",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458698748,
+            "description": "docformatter.pex (docformatter>=1.3.1,<1.4)",
+            "end_usecs": 1588870458699165
+        },
+        {
+            "workunit_id": "89af47e4ffdb6987",
+            "name": "remove_platform_information",
+            "version": 1,
+            "parent_id": "2c6f7f3694f61a3d",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458695010,
+            "description": "",
+            "end_usecs": 1588870458699599
+        },
+        {
+            "workunit_id": "3d967589ebfc7ae1",
+            "name": "remove_platform_information",
+            "version": 1,
+            "parent_id": "0798231fc6e02464",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458695277,
+            "description": "",
+            "end_usecs": 1588870458699682
+        },
+        {
+            "workunit_id": "c2a604fa017741d0",
+            "name": "get_multi_platform_request_description",
+            "version": 1,
+            "parent_id": "fbdd7c68bbc40eca",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458699618,
+            "description": "",
+            "end_usecs": 1588870458699780
+        },
+        {
+            "workunit_id": "2c6f7f3694f61a3d",
+            "name": "fallible_to_exec_result_or_raise",
+            "version": 1,
+            "parent_id": "904bcaed74719780",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458694766,
+            "description": "",
+            "end_usecs": 1588870458700044
+        },
+        {
+            "workunit_id": "0798231fc6e02464",
+            "name": "fallible_to_exec_result_or_raise",
+            "version": 1,
+            "parent_id": "004e2e99afbb1b4d",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458694180,
+            "description": "",
+            "end_usecs": 1588870458700115
+        },
+        {
+            "workunit_id": "004e2e99afbb1b4d",
+            "name": "create_pex",
+            "version": 1,
+            "parent_id": "d4d43fc01679369c",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458671094,
+            "description": "",
+            "end_usecs": 1588870458700163
+        },
+        {
+            "workunit_id": "73adc6de8e62d008",
+            "name": "get_multi_platform_request_description",
+            "version": 1,
+            "parent_id": "0be0e66a220b10f2",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458699862,
+            "description": "",
+            "end_usecs": 1588870458700296
+        },
+        {
+            "workunit_id": "904bcaed74719780",
+            "name": "create_pex",
+            "version": 1,
+            "parent_id": "1f74503d6a2a4e17",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458673723,
+            "description": "",
+            "end_usecs": 1588870458700907
+        },
+        {
+            "workunit_id": "90345c9674622283",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "d4d43fc01679369c",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458700464,
+            "description": "Snapshot(PathGlobs(globs=('.isort.cfg',), glob_match_error_behavior=<GlobMatchErrorBehavior.error: 'error'>, conjunction=<GlobExpansionConjunction.all_match: 'all_match'>, description_of_origin='the option `--isort-config`'))",
+            "end_usecs": 1588870458700969
+        },
+        {
+            "workunit_id": "4b5a851c17f681b3",
+            "name": "build_pex",
+            "version": 1,
+            "parent_id": "01024df160ea0301",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458700881,
+            "description": "flake8.pex (flake8-2020, flake8-absolute-import, flake8-bugbear, flake8-comprehensions, flake8-debugger, flake8-django==0.0.4, flake8-executable, flake8-mutable, flake8-os-walk==0.4.0, flake8-pytest-style==0.5.0, flake8>=3.7.9,<3.8, setuptools<45)",
+            "end_usecs": 1588870458702295
+        },
+        {
+            "workunit_id": "89ebc09fc80c755c",
+            "name": "build_pex",
+            "version": 1,
+            "parent_id": "33af2d47c1cd2769",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458702522,
+            "description": "black.pex (black==19.10b0, setuptools)",
+            "end_usecs": 1588870458702856
+        },
+        {
+            "workunit_id": "01024df160ea0301",
+            "name": "remove_platform_information",
+            "version": 1,
+            "parent_id": "69703f3035eb6cf2",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458696547,
+            "description": "",
+            "end_usecs": 1588870458703300
+        },
+        {
+            "workunit_id": "33af2d47c1cd2769",
+            "name": "remove_platform_information",
+            "version": 1,
+            "parent_id": "0be0e66a220b10f2",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458699894,
+            "description": "",
+            "end_usecs": 1588870458703348
+        },
+        {
+            "workunit_id": "69703f3035eb6cf2",
+            "name": "fallible_to_exec_result_or_raise",
+            "version": 1,
+            "parent_id": "e46bcf29e5281d31",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458695487,
+            "description": "",
+            "end_usecs": 1588870458703377
+        },
+        {
+            "workunit_id": "0be0e66a220b10f2",
+            "name": "fallible_to_exec_result_or_raise",
+            "version": 1,
+            "parent_id": "a441c780a85defbf",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458696532,
+            "description": "",
+            "end_usecs": 1588870458703404
+        },
+        {
+            "workunit_id": "e46bcf29e5281d31",
+            "name": "create_pex",
+            "version": 1,
+            "parent_id": "d56d66c9cf830db5",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458672596,
+            "description": "",
+            "end_usecs": 1588870458703485
+        },
+        {
+            "workunit_id": "a441c780a85defbf",
+            "name": "create_pex",
+            "version": 1,
+            "parent_id": "45dc352a93020742",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458672462,
+            "description": "",
+            "end_usecs": 1588870458703604
+        },
+        {
+            "workunit_id": "6700ef4bfd73fc1e",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "45dc352a93020742",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458703939,
+            "description": "Snapshot(PathGlobs(globs=(), glob_match_error_behavior=<GlobMatchErrorBehavior.error: 'error'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin='the option `--black-config`'))",
+            "end_usecs": 1588870458704291
+        },
+        {
+            "workunit_id": "b398e5a0962e80d9",
+            "name": "build_pex",
+            "version": 1,
+            "parent_id": "acfdf2b8abaab165",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458703006,
+            "description": "bandit.pex (bandit>=1.6.2,<1.7, setuptools)",
+            "end_usecs": 1588870458704353
+        },
+        {
+            "workunit_id": "acfdf2b8abaab165",
+            "name": "remove_platform_information",
+            "version": 1,
+            "parent_id": "fbdd7c68bbc40eca",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458698592,
+            "description": "",
+            "end_usecs": 1588870458705022
+        },
+        {
+            "workunit_id": "fbdd7c68bbc40eca",
+            "name": "fallible_to_exec_result_or_raise",
+            "version": 1,
+            "parent_id": "0ca14f40d6814698",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458697304,
+            "description": "",
+            "end_usecs": 1588870458705057
+        },
+        {
+            "workunit_id": "0ca14f40d6814698",
+            "name": "create_pex",
+            "version": 1,
+            "parent_id": "31cf045f2636160f",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458671075,
+            "description": "",
+            "end_usecs": 1588870458705104
+        },
+        {
+            "workunit_id": "a99dcbff88e7445d",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "d56d66c9cf830db5",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458704020,
+            "description": "Snapshot(PathGlobs(globs=('build-support/flake8/.flake8',), glob_match_error_behavior=<GlobMatchErrorBehavior.error: 'error'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin='the option `--flake8-config`'))",
+            "end_usecs": 1588870458706976
+        },
+        {
+            "workunit_id": "80322615820e75c7",
+            "name": "determine_all_source_files",
+            "version": 1,
+            "parent_id": "1f74503d6a2a4e17",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458701662,
+            "description": "",
+            "end_usecs": 1588870458707573
+        },
+        {
+            "workunit_id": "ff5872ad1fb60ad8",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "31cf045f2636160f",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458705304,
+            "description": "Snapshot(PathGlobs(globs=('build-support/bandit/bandit.yaml',), glob_match_error_behavior=<GlobMatchErrorBehavior.error: 'error'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin='the option `--bandit-config`'))",
+            "end_usecs": 1588870458707845
+        },
+        {
+            "workunit_id": "f07bdbfdc48552be",
+            "name": "determine_specified_source_files",
+            "version": 1,
+            "parent_id": "d56d66c9cf830db5",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458708546,
+            "description": "",
+            "end_usecs": 1588870458711971
+        },
+        {
+            "workunit_id": "d4d43fc01679369c",
+            "name": "setup",
+            "version": 1,
+            "parent_id": "2ab4e52d868f0f95",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458666102,
+            "description": "",
+            "end_usecs": 1588870458713820
+        },
+        {
+            "workunit_id": "bd816525924fdadc",
+            "name": "upcast_process",
+            "version": 1,
+            "parent_id": "9271743886a2177c",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458714310,
+            "description": "",
+            "end_usecs": 1588870458714377
+        },
+        {
+            "workunit_id": "45dc352a93020742",
+            "name": "setup",
+            "version": 1,
+            "parent_id": "8d45843e928bb8a3",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458666128,
+            "description": "",
+            "end_usecs": 1588870458717541
+        },
+        {
+            "workunit_id": "1f74503d6a2a4e17",
+            "name": "setup",
+            "version": 1,
+            "parent_id": "e7d3da16d0a89112",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458669574,
+            "description": "",
+            "end_usecs": 1588870458717787
+        },
+        {
+            "workunit_id": "42567af24d1b06e1",
+            "name": "upcast_process",
+            "version": 1,
+            "parent_id": "fdb5484ea1da7730",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458718336,
+            "description": "",
+            "end_usecs": 1588870458718405
+        },
+        {
+            "workunit_id": "fe9a60c1dd4f545e",
+            "name": "upcast_process",
+            "version": 1,
+            "parent_id": "dcef659e80b62740",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458722302,
+            "description": "",
+            "end_usecs": 1588870458722465
+        },
+        {
+            "workunit_id": "653a5627bc9a95a1",
+            "name": "upcast_process",
+            "version": 1,
+            "parent_id": "ce63ae1a6334efa3",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458724346,
+            "description": "",
+            "end_usecs": 1588870458724424
+        },
+        {
+            "workunit_id": "77c0ba2a6ecd1453",
+            "name": "upcast_process",
+            "version": 1,
+            "parent_id": "eda55a6169bc21de",
+            "last_update": 1588870459,
+            "start_usecs": 1588870458726280,
+            "description": "",
+            "end_usecs": 1588870458726375
+        },
+        {
+            "workunit_id": "ef43ecd98c565bcb",
+            "name": "isort",
+            "version": 2,
+            "parent_id": "9271743886a2177c",
+            "last_update": 1588870460,
+            "start_usecs": 1588870458715836,
+            "description": "14 targets: src/python/toolchain/pants/auth, src/python/toolchain/pants/auth:tests, src/python/toolchain/pants/buildgen, src/python/toolchain/pants/buildgen:tests, src/python/toolchain/pants/buildsense, src/python/toolchain/pants/buildsense:tests, src/python/toolchain/pants/common, src/python/toolchain/pants/external, src/python/toolchain/pants/internal, src/python/toolchain/pants/rules, src/python/toolchain/pants/rules/mypy, src/python/toolchain/pants/rules/mypy:integration, src/python/toolchain/pants/rules:tests, src/python/toolchain/pants/util.",
+            "end_usecs": 1588870460424583
+        },
+        {
+            "workunit_id": "9271743886a2177c",
+            "name": "remove_platform_information",
+            "version": 2,
+            "parent_id": "2ab4e52d868f0f95",
+            "last_update": 1588870460,
+            "start_usecs": 1588870458714167,
+            "description": "",
+            "end_usecs": 1588870460424934
+        },
+        {
+            "workunit_id": "2ab4e52d868f0f95",
+            "name": "isort_lint",
+            "version": 2,
+            "parent_id": "1a3efdafbab3cad6",
+            "last_update": 1588870460,
+            "start_usecs": 1588870458645144,
+            "description": "",
+            "end_usecs": 1588870460425057
+        },
+        {
+            "workunit_id": "793e44674ef7833b",
+            "name": "docformatter",
+            "version": 3,
+            "parent_id": "eda55a6169bc21de",
+            "last_update": 1588870461,
+            "start_usecs": 1588870458728772,
+            "description": "14 targets: src/python/toolchain/pants/auth, src/python/toolchain/pants/auth:tests, src/python/toolchain/pants/buildgen, src/python/toolchain/pants/buildgen:tests, src/python/toolchain/pants/buildsense, src/python/toolchain/pants/buildsense:tests, src/python/toolchain/pants/common, src/python/toolchain/pants/external, src/python/toolchain/pants/internal, src/python/toolchain/pants/rules, src/python/toolchain/pants/rules/mypy, src/python/toolchain/pants/rules/mypy:integration, src/python/toolchain/pants/rules:tests, src/python/toolchain/pants/util.",
+            "end_usecs": 1588870461650198
+        },
+        {
+            "workunit_id": "eda55a6169bc21de",
+            "name": "remove_platform_information",
+            "version": 3,
+            "parent_id": "e7d3da16d0a89112",
+            "last_update": 1588870461,
+            "start_usecs": 1588870458726138,
+            "description": "",
+            "end_usecs": 1588870461650432
+        },
+        {
+            "workunit_id": "e7d3da16d0a89112",
+            "name": "docformatter_lint",
+            "version": 3,
+            "parent_id": "1a3efdafbab3cad6",
+            "last_update": 1588870461,
+            "start_usecs": 1588870458646101,
+            "description": "",
+            "end_usecs": 1588870461650518
+        },
+        {
+            "workunit_id": "14cb5bf2cc5f492d",
+            "name": "bandit",
+            "version": 4,
+            "parent_id": "ce63ae1a6334efa3",
+            "last_update": 1588870462,
+            "start_usecs": 1588870458725360,
+            "description": "14 targets: src/python/toolchain/pants/auth, src/python/toolchain/pants/auth:tests, src/python/toolchain/pants/buildgen, src/python/toolchain/pants/buildgen:tests, src/python/toolchain/pants/buildsense, src/python/toolchain/pants/buildsense:tests, src/python/toolchain/pants/common, src/python/toolchain/pants/external, src/python/toolchain/pants/internal, src/python/toolchain/pants/rules, src/python/toolchain/pants/rules/mypy, src/python/toolchain/pants/rules/mypy:integration, src/python/toolchain/pants/rules:tests, src/python/toolchain/pants/util.",
+            "end_usecs": 1588870462230293
+        },
+        {
+            "workunit_id": "ce63ae1a6334efa3",
+            "name": "remove_platform_information",
+            "version": 4,
+            "parent_id": "31cf045f2636160f",
+            "last_update": 1588870462,
+            "start_usecs": 1588870458724207,
+            "description": "",
+            "end_usecs": 1588870462230514
+        },
+        {
+            "workunit_id": "31cf045f2636160f",
+            "name": "bandit_lint",
+            "version": 4,
+            "parent_id": "1a3efdafbab3cad6",
+            "last_update": 1588870462,
+            "start_usecs": 1588870458645587,
+            "description": "",
+            "end_usecs": 1588870462230615
+        },
+        {
+            "workunit_id": "a40901d93a08c0d2",
+            "name": "flake8",
+            "version": 5,
+            "parent_id": "dcef659e80b62740",
+            "last_update": 1588870463,
+            "start_usecs": 1588870458723232,
+            "description": "14 targets: src/python/toolchain/pants/auth, src/python/toolchain/pants/auth:tests, src/python/toolchain/pants/buildgen, src/python/toolchain/pants/buildgen:tests, src/python/toolchain/pants/buildsense, src/python/toolchain/pants/buildsense:tests, src/python/toolchain/pants/common, src/python/toolchain/pants/external, src/python/toolchain/pants/internal, src/python/toolchain/pants/rules, src/python/toolchain/pants/rules/mypy, src/python/toolchain/pants/rules/mypy:integration, src/python/toolchain/pants/rules:tests, src/python/toolchain/pants/util.",
+            "end_usecs": 1588870463443619
+        },
+        {
+            "workunit_id": "dcef659e80b62740",
+            "name": "remove_platform_information",
+            "version": 5,
+            "parent_id": "d56d66c9cf830db5",
+            "last_update": 1588870463,
+            "start_usecs": 1588870458722180,
+            "description": "",
+            "end_usecs": 1588870463443864
+        },
+        {
+            "workunit_id": "d56d66c9cf830db5",
+            "name": "flake8_lint",
+            "version": 5,
+            "parent_id": "1a3efdafbab3cad6",
+            "last_update": 1588870463,
+            "start_usecs": 1588870458646378,
+            "description": "",
+            "end_usecs": 1588870463444017
+        },
+        {
+            "workunit_id": "5515dc4161f80b53",
+            "name": "black",
+            "version": 26,
+            "parent_id": "fdb5484ea1da7730",
+            "last_update": 1588870484,
+            "start_usecs": 1588870458722192,
+            "description": "14 targets: src/python/toolchain/pants/auth, src/python/toolchain/pants/auth:tests, src/python/toolchain/pants/buildgen, src/python/toolchain/pants/buildgen:tests, src/python/toolchain/pants/buildsense, src/python/toolchain/pants/buildsense:tests, src/python/toolchain/pants/common, src/python/toolchain/pants/external, src/python/toolchain/pants/internal, src/python/toolchain/pants/rules, src/python/toolchain/pants/rules/mypy, src/python/toolchain/pants/rules/mypy:integration, src/python/toolchain/pants/rules:tests, src/python/toolchain/pants/util.",
+            "end_usecs": 1588870484753258
+        },
+        {
+            "workunit_id": "fdb5484ea1da7730",
+            "name": "remove_platform_information",
+            "version": 26,
+            "parent_id": "8d45843e928bb8a3",
+            "last_update": 1588870484,
+            "start_usecs": 1588870458718154,
+            "description": "",
+            "end_usecs": 1588870484753419
+        },
+        {
+            "workunit_id": "8d45843e928bb8a3",
+            "name": "black_lint",
+            "version": 26,
+            "parent_id": "1a3efdafbab3cad6",
+            "last_update": 1588870484,
+            "start_usecs": 1588870458644894,
+            "description": "",
+            "end_usecs": 1588870484753484
+        },
+        {
+            "workunit_id": "1a3efdafbab3cad6",
+            "name": "lint",
+            "version": 26,
+            "parent_id": null,
+            "last_update": 1588870484,
+            "start_usecs": 1588870458568958,
+            "description": "",
+            "end_usecs": 1588870484753707
+        }
+    ]
+}

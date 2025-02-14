@@ -1,0 +1,29 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{- $influxdb_url := required "You must set influxdb rl!"  .Values.influxdb.url  }}
+
+apiVersion: v1
+kind: Secret
+type: Opaque
+metadata:
+  name: grafana-prometheus-datasources
+  labels:
+    grafana_datasource: "1"
+    app: grafana
+stringData:
+  influxdb.yaml: |
+    apiVersion: 1
+    datasources:
+    {{- range .Values.influxdb.tokens }}
+    - type: influxdb
+      name: InfluxDB-{{ .org }}
+      access: proxy
+      secureJsonData:
+        token: {{ .token }}
+      url: {{ $influxdb_url }}
+      jsonData:
+        version: Flux
+        organization: {{ .org }}
+        defaultBucket: {{ .defaultBucket }}
+{{- end -}}

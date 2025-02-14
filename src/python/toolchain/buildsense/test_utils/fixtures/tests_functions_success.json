@@ -1,0 +1,66 @@
+[
+    {
+        "tests": [
+            {
+                "name": "src.python.toolchain.collections.frozendict_test",
+                "test_file_path": "tests_functions_success.py",
+                "time": 0.01,
+                "tests": [
+                    {
+                        "name": "test_empty",
+                        "time": 0.001,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_empty_from_mapping",
+                        "time": 0.001,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_empty_from_tuples",
+                        "time": 0.001,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_nominal",
+                        "time": 0.001,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_create",
+                        "time": 0.001,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_freeze",
+                        "time": 0.001,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_freeze_error",
+                        "time": 0.001,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_freeze_json_empty",
+                        "time": 0.001,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_freeze_json",
+                        "time": 0.001,
+                        "outcome": "pass"
+                    }
+                ]
+            }
+        ],
+        "timing": {
+            "total": 0.01
+        },
+        "target": "tests_functions_success.py",
+        "outputs": {
+            "stdout": "He stopped short?",
+            "stderr": "Three squares? You can\u2019t spare three squares?"
+        }
+    }
+]

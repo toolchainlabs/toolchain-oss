@@ -1,0 +1,29 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+appVersion: v0.63.0
+description: Prometheus operator and other components for Toolchain production cluster
+  monitoring.
+name: monitoring
+version: 3.13.0
+dependencies:
+- name: kube-prometheus-stack
+  # prometheus-operator app version: 0.61.1 (https://github.com/coreos/prometheus-operator/)
+  version: 45.25.0
+  repository: https://prometheus-community.github.io/helm-charts
+- name: prometheus-cloudwatch-exporter
+  # prometheus-cloudwatch-exporter app version: 0.15.1 (https://github.com/prometheus/cloudwatch_exporter)
+  version: 0.25.0
+  repository: https://prometheus-community.github.io/helm-charts
+  condition: features.cloudwatchExporter
+- name: prometheus-pushgateway
+  # prometheus-pushgateway app version: 1.5.1 (http://github.com/prometheus/pushgateway)
+  version: 2.1.3
+  repository: https://prometheus-community.github.io/helm-charts
+  condition: features.pushGateway
+- name: prometheus-adapter
+  # prometheus-adapter app version: 0.10.0 https://github.com/kubernetes-sigs/prometheus-adapter)
+  version: 4.2.0
+  repository: https://prometheus-community.github.io/helm-charts
+  condition: features.prometheusAdapter

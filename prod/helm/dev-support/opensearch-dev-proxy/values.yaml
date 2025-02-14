@@ -1,0 +1,7 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+es_host: "https://vpc-es-dev-1-rk4lyznh7j3ckq2gp7impmend4.us-east-1.es.amazonaws.com"
+image: 283194185447.dkr.ecr.us-east-1.amazonaws.com/aws-es-proxy:2020-08-03.17-41-44-76309b3c0d1e
+iam_service_role_arn: arn:aws:iam::283194185447:role/k8s.dev-e1-1. z.service
+service_port: 9200

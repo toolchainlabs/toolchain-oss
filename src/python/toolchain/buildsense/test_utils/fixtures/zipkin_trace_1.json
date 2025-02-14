@@ -1,0 +1,2201 @@
+[
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "ad8250ac9e9f12d1",
+        "timestamp": 1588870458571042,
+        "duration": 184,
+        "localEndpoint": {
+            "serviceName": "union_membership_singleton"
+        },
+        "parentId": "1a3efdafbab3cad6"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "a24ef850a868012c",
+        "timestamp": 1588870458572567,
+        "duration": 43,
+        "localEndpoint": {
+            "serviceName": "address_mapper_singleton"
+        },
+        "parentId": "a4a93702b5b545b1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "a85720ad99f9e7d2",
+        "timestamp": 1588870458572832,
+        "duration": 18363,
+        "localEndpoint": {
+            "serviceName": "parse_options"
+        },
+        "parentId": "8a4edbf31020385d"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "8a4edbf31020385d",
+        "timestamp": 1588870458572579,
+        "duration": 18745,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "1a3efdafbab3cad6"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/**/BUILD', 'src/python/toolchain/pants/**/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "750081d09b0ae86d",
+        "timestamp": 1588870458584673,
+        "duration": 11727,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "a4a93702b5b545b1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=(), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "1aec555400067ff8",
+        "timestamp": 1588870458598049,
+        "duration": 142,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "2b27cdce9638d8f9"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "2b27cdce9638d8f9",
+        "timestamp": 1588870458597578,
+        "duration": 843,
+        "localEndpoint": {
+            "serviceName": "evalute_preludes"
+        },
+        "parentId": "4f10345cdc996bb3"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/auth/BUILD', 'src/python/toolchain/pants/auth/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "34c305dc6e1d520a",
+        "timestamp": 1588870458599860,
+        "duration": 1066,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "69c15ef534f2d19a"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/util/BUILD', 'src/python/toolchain/pants/util/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "ed4fc9c1fd21fb0d",
+        "timestamp": 1588870458599842,
+        "duration": 1201,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "1c65678a90e2397e"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/BUILD', 'src/python/toolchain/pants/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "7e5792344471060b",
+        "timestamp": 1588870458599881,
+        "duration": 1281,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "4f10345cdc996bb3"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/buildgen/BUILD', 'src/python/toolchain/pants/buildgen/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "81cdc4e3ffc776ca",
+        "timestamp": 1588870458599670,
+        "duration": 1629,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "2b0d1bd4a485f202"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/rules/BUILD', 'src/python/toolchain/pants/rules/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "ec434188a53e53e8",
+        "timestamp": 1588870458599833,
+        "duration": 1900,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "a8119a130c7ed8d7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/external/BUILD', 'src/python/toolchain/pants/external/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "84cf340c01830a78",
+        "timestamp": 1588870458599814,
+        "duration": 2136,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "5128b25212c1aa2a"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/buildsense/BUILD', 'src/python/toolchain/pants/buildsense/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "e0ad67af2073523b",
+        "timestamp": 1588870458600351,
+        "duration": 1998,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "47b97ac2fa18a255"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/common/BUILD', 'src/python/toolchain/pants/common/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "b82dfce0a6480db5",
+        "timestamp": 1588870458600756,
+        "duration": 1714,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "9cd292e8d8fb51bb"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/internal/BUILD', 'src/python/toolchain/pants/internal/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "4da1787d59a557ff",
+        "timestamp": 1588870458600930,
+        "duration": 1769,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "a0d9c5d0923ff28d"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/pants/rules/mypy/BUILD', 'src/python/toolchain/pants/rules/mypy/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "f21f5ad26579846b",
+        "timestamp": 1588870458601928,
+        "duration": 1423,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "03f7f24291ad5a04"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "69c15ef534f2d19a",
+        "timestamp": 1588870458597955,
+        "duration": 5598,
+        "localEndpoint": {
+            "serviceName": "parse_address_family"
+        },
+        "parentId": "a4a93702b5b545b1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "4f10345cdc996bb3",
+        "timestamp": 1588870458597036,
+        "duration": 6712,
+        "localEndpoint": {
+            "serviceName": "parse_address_family"
+        },
+        "parentId": "a4a93702b5b545b1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "1c65678a90e2397e",
+        "timestamp": 1588870458597826,
+        "duration": 6743,
+        "localEndpoint": {
+            "serviceName": "parse_address_family"
+        },
+        "parentId": "a4a93702b5b545b1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "2b0d1bd4a485f202",
+        "timestamp": 1588870458597208,
+        "duration": 7578,
+        "localEndpoint": {
+            "serviceName": "parse_address_family"
+        },
+        "parentId": "a4a93702b5b545b1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "a8119a130c7ed8d7",
+        "timestamp": 1588870458598006,
+        "duration": 7414,
+        "localEndpoint": {
+            "serviceName": "parse_address_family"
+        },
+        "parentId": "a4a93702b5b545b1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "47b97ac2fa18a255",
+        "timestamp": 1588870458597544,
+        "duration": 8140,
+        "localEndpoint": {
+            "serviceName": "parse_address_family"
+        },
+        "parentId": "a4a93702b5b545b1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "03f7f24291ad5a04",
+        "timestamp": 1588870458597447,
+        "duration": 8539,
+        "localEndpoint": {
+            "serviceName": "parse_address_family"
+        },
+        "parentId": "a4a93702b5b545b1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "5128b25212c1aa2a",
+        "timestamp": 1588870458597852,
+        "duration": 8448,
+        "localEndpoint": {
+            "serviceName": "parse_address_family"
+        },
+        "parentId": "a4a93702b5b545b1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "9cd292e8d8fb51bb",
+        "timestamp": 1588870458597780,
+        "duration": 8652,
+        "localEndpoint": {
+            "serviceName": "parse_address_family"
+        },
+        "parentId": "a4a93702b5b545b1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "a0d9c5d0923ff28d",
+        "timestamp": 1588870458597939,
+        "duration": 8753,
+        "localEndpoint": {
+            "serviceName": "parse_address_family"
+        },
+        "parentId": "a4a93702b5b545b1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "a4a93702b5b545b1",
+        "timestamp": 1588870458572082,
+        "duration": 35215,
+        "localEndpoint": {
+            "serviceName": "addresses_with_origins_from_address_families"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "cec091bb370568f8",
+        "timestamp": 1588870458610363,
+        "duration": 310,
+        "localEndpoint": {
+            "serviceName": "registered_target_types_singleton"
+        },
+        "parentId": "49b48649ff00bdcf"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "117d3d30e782e06d",
+        "timestamp": 1588870458610304,
+        "duration": 1114,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "eb664c3c9c9c0c9b"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "fd6945665bbe7e81",
+        "timestamp": 1588870458610559,
+        "duration": 1310,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "7806be777c1498dc"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "9cf87b95cb0fcee1",
+        "timestamp": 1588870458610829,
+        "duration": 2101,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "e2437482222305e2"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "b82662b8ecc27aab",
+        "timestamp": 1588870458612169,
+        "duration": 1062,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "11aa6c930e0f3b4c"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "43d60fa43309e87b",
+        "timestamp": 1588870458612517,
+        "duration": 1210,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "dbb499e16f1019a2"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "82d2daa0cf612c28",
+        "timestamp": 1588870458612108,
+        "duration": 1860,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "d845c14e57bc2f42"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "11aa6c930e0f3b4c",
+        "timestamp": 1588870458611148,
+        "duration": 3233,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "b6f3d9d55e54c5d3"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "dbb499e16f1019a2",
+        "timestamp": 1588870458612356,
+        "duration": 2185,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "dc80ea16007308ab"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "969177449b23d94d",
+        "timestamp": 1588870458612218,
+        "duration": 2692,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "adcaf8d8f64a0a49"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "fa1cf9ab65bd99ea",
+        "timestamp": 1588870458611162,
+        "duration": 3859,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "203009bbfa81cc6b"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "315c84bf4ee7710c",
+        "timestamp": 1588870458611965,
+        "duration": 3246,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "33dde02c76e55ddc"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "b6f3d9d55e54c5d3",
+        "timestamp": 1588870458609628,
+        "duration": 5686,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "adcaf8d8f64a0a49",
+        "timestamp": 1588870458610506,
+        "duration": 5312,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "5badb8a1ee468ff0"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "33dde02c76e55ddc",
+        "timestamp": 1588870458611625,
+        "duration": 4496,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "37b1ada2b75f680b"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "37b1ada2b75f680b",
+        "timestamp": 1588870458607988,
+        "duration": 8173,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "dc80ea16007308ab",
+        "timestamp": 1588870458611465,
+        "duration": 4715,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "5badb8a1ee468ff0",
+        "timestamp": 1588870458608898,
+        "duration": 7374,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "257548a943829f0e",
+        "timestamp": 1588870458613795,
+        "duration": 3080,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "c82ef888ac135f44"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "7806be777c1498dc",
+        "timestamp": 1588870458610124,
+        "duration": 7059,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "8618f6844a336ca7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "203009bbfa81cc6b",
+        "timestamp": 1588870458610315,
+        "duration": 7359,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "3e166a8d6df494ca"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "3e166a8d6df494ca",
+        "timestamp": 1588870458608505,
+        "duration": 9201,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "c82ef888ac135f44",
+        "timestamp": 1588870458613036,
+        "duration": 5187,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "86deb4cb80f2a5e8"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "86deb4cb80f2a5e8",
+        "timestamp": 1588870458612118,
+        "duration": 6137,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "8618f6844a336ca7",
+        "timestamp": 1588870458609855,
+        "duration": 8451,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "cadcbe3293b617c7",
+        "timestamp": 1588870458614407,
+        "duration": 4079,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "a2cd9e08b3749b68"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "d845c14e57bc2f42",
+        "timestamp": 1588870458610495,
+        "duration": 8222,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "21e1d70c5e871334"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "21e1d70c5e871334",
+        "timestamp": 1588870458608515,
+        "duration": 10250,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "e2437482222305e2",
+        "timestamp": 1588870458610167,
+        "duration": 9159,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "59ccf675cb2e230d"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "f315a8b77cd9dbbc",
+        "timestamp": 1588870458618931,
+        "duration": 761,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "49b48649ff00bdcf"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "49b48649ff00bdcf",
+        "timestamp": 1588870458608864,
+        "duration": 11015,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "449a70b6bcab2b29"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "eb664c3c9c9c0c9b",
+        "timestamp": 1588870458609401,
+        "duration": 10643,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "ba1fa272210d6ac8"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "84af52bdf07abbae",
+        "timestamp": 1588870458615280,
+        "duration": 4938,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "282cc210b70ebd86"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "9057cd2b83a5b222",
+        "timestamp": 1588870458617186,
+        "duration": 3214,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "e1b6664793b8d254"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "ba1fa272210d6ac8",
+        "timestamp": 1588870458609089,
+        "duration": 11339,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "a2cd9e08b3749b68",
+        "timestamp": 1588870458612178,
+        "duration": 8757,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "0ed73cd21ed8d1b1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "e1b6664793b8d254",
+        "timestamp": 1588870458613635,
+        "duration": 7471,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "435486fd7ba80c4c"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "449a70b6bcab2b29",
+        "timestamp": 1588870458608260,
+        "duration": 12887,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "59ccf675cb2e230d",
+        "timestamp": 1588870458609232,
+        "duration": 12160,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "0ed73cd21ed8d1b1",
+        "timestamp": 1588870458610342,
+        "duration": 11088,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "282cc210b70ebd86",
+        "timestamp": 1588870458613439,
+        "duration": 8337,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "53f6760146a48fc9"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "435486fd7ba80c4c",
+        "timestamp": 1588870458612473,
+        "duration": 9403,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "7a1544e2fabec537",
+        "timestamp": 1588870458620635,
+        "duration": 1617,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "79383a71151286f1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "79383a71151286f1",
+        "timestamp": 1588870458618786,
+        "duration": 3692,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "ad49223b0efd3ba4"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "ad49223b0efd3ba4",
+        "timestamp": 1588870458616458,
+        "duration": 6044,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "da9dd7957299c666",
+        "timestamp": 1588870458621192,
+        "duration": 1517,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "530e2946dd70ccf7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "530e2946dd70ccf7",
+        "timestamp": 1588870458620313,
+        "duration": 2573,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "d92b6532c25e9427"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "d92b6532c25e9427",
+        "timestamp": 1588870458617436,
+        "duration": 5475,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "53f6760146a48fc9",
+        "timestamp": 1588870458610918,
+        "duration": 12118,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "d5823238f570df57",
+        "timestamp": 1588870458621587,
+        "duration": 1632,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "99fc656cddb6d011"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "99fc656cddb6d011",
+        "timestamp": 1588870458619424,
+        "duration": 3927,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "7f175b19818c5d40"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "7f175b19818c5d40",
+        "timestamp": 1588870458616480,
+        "duration": 6894,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "1de61a57eaa0c313",
+        "timestamp": 1588870458620611,
+        "duration": 2989,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "4f496978c8303d81"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "1c0b69041fc96674",
+        "timestamp": 1588870458623122,
+        "duration": 730,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "e1aabcfcf0dc2cfc"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "4f496978c8303d81",
+        "timestamp": 1588870458617458,
+        "duration": 6576,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "424cd5dcda4b7a92"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "424cd5dcda4b7a92",
+        "timestamp": 1588870458616143,
+        "duration": 7946,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "e1aabcfcf0dc2cfc",
+        "timestamp": 1588870458622041,
+        "duration": 2227,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "54cf784dce4a5c93"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "54cf784dce4a5c93",
+        "timestamp": 1588870458620585,
+        "duration": 3702,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "827fdfaec26b73b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "827fdfaec26b73b7",
+        "timestamp": 1588870458571535,
+        "duration": 52797,
+        "localEndpoint": {
+            "serviceName": "resolve_targets_with_origins"
+        },
+        "parentId": "1a3efdafbab3cad6"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "97073ef611dae642",
+        "timestamp": 1588870458632904,
+        "duration": 31,
+        "localEndpoint": {
+            "serviceName": "glob_match_error_behavior_singleton"
+        },
+        "parentId": "ab3e615699d8287b"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "c317a1dce17ea379",
+        "timestamp": 1588870458632331,
+        "duration": 1615,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=(), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.all_match: 'all_match'>, description_of_origin=\"src/python/toolchain/pants:pants's `sources` field\"))",
+        "id": "18d9c3251fac8cbb",
+        "timestamp": 1588870458636026,
+        "duration": 2477,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "ef8c785683d21483"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/auth/*_test.py', '!src/python/toolchain/pants/auth/conftest.py', '!src/python/toolchain/pants/auth/test_*.py', 'src/python/toolchain/pants/auth/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/auth:auth's `sources` field\"))",
+        "id": "f9b1f78009ed1129",
+        "timestamp": 1588870458636370,
+        "duration": 3680,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "bc530058b9759783"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/buildgen/*_test.py', '!src/python/toolchain/pants/buildgen/conftest.py', '!src/python/toolchain/pants/buildgen/test_*.py', 'src/python/toolchain/pants/buildgen/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/buildgen:buildgen's `sources` field\"))",
+        "id": "5d666367279e8527",
+        "timestamp": 1588870458635864,
+        "duration": 4555,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "1c4e3eb908336545"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/internal/*_test.py', '!src/python/toolchain/pants/internal/conftest.py', '!src/python/toolchain/pants/internal/test_*.py', 'src/python/toolchain/pants/internal/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/internal:internal's `sources` field\"))",
+        "id": "6f30f61ea3f97719",
+        "timestamp": 1588870458635932,
+        "duration": 4839,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "e3f579909b206591"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "1c4e3eb908336545",
+        "timestamp": 1588870458632856,
+        "duration": 7956,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/rules/mypy/*_test.py', '!src/python/toolchain/pants/rules/mypy/conftest.py', '!src/python/toolchain/pants/rules/mypy/test_*.py', 'src/python/toolchain/pants/rules/mypy/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/rules/mypy:mypy's `sources` field\"))",
+        "id": "d59a12f14ab9c76f",
+        "timestamp": 1588870458636217,
+        "duration": 4713,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "90eb0a9f300aa83f"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('src/python/toolchain/pants/buildgen/*_test.py', 'src/python/toolchain/pants/buildgen/conftest.py', 'src/python/toolchain/pants/buildgen/test_*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/buildgen:tests's `sources` field\"))",
+        "id": "e3f556e8c5e4983b",
+        "timestamp": 1588870458636344,
+        "duration": 4630,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "5a6c78da541a77b7"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/common/*_test.py', '!src/python/toolchain/pants/common/conftest.py', '!src/python/toolchain/pants/common/test_*.py', 'src/python/toolchain/pants/common/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/common:common's `sources` field\"))",
+        "id": "2337571729c1590b",
+        "timestamp": 1588870458636280,
+        "duration": 4740,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "652a0916155afbd4"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "5a6c78da541a77b7",
+        "timestamp": 1588870458632211,
+        "duration": 9020,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('src/python/toolchain/pants/auth/*_test.py', 'src/python/toolchain/pants/auth/conftest.py', 'src/python/toolchain/pants/auth/test_*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/auth:tests's `sources` field\"))",
+        "id": "40db00db67b82e66",
+        "timestamp": 1588870458639395,
+        "duration": 2007,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "482137471983193e"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/rules/*_test.py', '!src/python/toolchain/pants/rules/conftest.py', '!src/python/toolchain/pants/rules/test_*.py', 'src/python/toolchain/pants/rules/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/rules:rules's `sources` field\"))",
+        "id": "2733d10aa2918070",
+        "timestamp": 1588870458636153,
+        "duration": 5544,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "611a8c2073a8ec74"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/external/*_test.py', '!src/python/toolchain/pants/external/conftest.py', '!src/python/toolchain/pants/external/test_*.py', 'src/python/toolchain/pants/external/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/external:external's `sources` field\"))",
+        "id": "0a36618b953783fe",
+        "timestamp": 1588870458637441,
+        "duration": 4341,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "be29a17a949c7dfc"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/util/*_test.py', '!src/python/toolchain/pants/util/conftest.py', '!src/python/toolchain/pants/util/test_*.py', 'src/python/toolchain/pants/util/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/util:util's `sources` field\"))",
+        "id": "771cc42ff797b6b6",
+        "timestamp": 1588870458637162,
+        "duration": 4686,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "dad1a249e91a9c85"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "bc530058b9759783",
+        "timestamp": 1588870458631618,
+        "duration": 10250,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('!src/python/toolchain/pants/buildsense/*_test.py', '!src/python/toolchain/pants/buildsense/conftest.py', '!src/python/toolchain/pants/buildsense/test_*.py', 'src/python/toolchain/pants/buildsense/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/buildsense:buildsense's `sources` field\"))",
+        "id": "0207cd89ca503e71",
+        "timestamp": 1588870458637056,
+        "duration": 4827,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "92aaf8fcef8d01f3"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('src/python/toolchain/pants/rules/mypy/*_integration_test.py',), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.all_match: 'all_match'>, description_of_origin=\"src/python/toolchain/pants/rules/mypy:integration's `sources` field\"))",
+        "id": "8ad1355d2fd347ca",
+        "timestamp": 1588870458639874,
+        "duration": 2032,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "ab3e615699d8287b"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('src/python/toolchain/pants/buildsense/*_test.py', 'src/python/toolchain/pants/buildsense/conftest.py', 'src/python/toolchain/pants/buildsense/test_*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/buildsense:tests's `sources` field\"))",
+        "id": "5b994ab2ecbef23a",
+        "timestamp": 1588870458637001,
+        "duration": 5032,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "eb9228b66cb3e4e2"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('src/python/toolchain/pants/rules/*_test.py', 'src/python/toolchain/pants/rules/conftest.py', 'src/python/toolchain/pants/rules/test_*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/pants/rules:tests's `sources` field\"))",
+        "id": "d23143a7c18e6b84",
+        "timestamp": 1588870458639830,
+        "duration": 2293,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "39466a8038186501"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "ef8c785683d21483",
+        "timestamp": 1588870458632101,
+        "duration": 10076,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "652a0916155afbd4",
+        "timestamp": 1588870458632558,
+        "duration": 9979,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "dad1a249e91a9c85",
+        "timestamp": 1588870458631638,
+        "duration": 11018,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "eb9228b66cb3e4e2",
+        "timestamp": 1588870458632431,
+        "duration": 10298,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "482137471983193e",
+        "timestamp": 1588870458632471,
+        "duration": 10354,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "ab3e615699d8287b",
+        "timestamp": 1588870458630985,
+        "duration": 11925,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "90eb0a9f300aa83f",
+        "timestamp": 1588870458632269,
+        "duration": 10901,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "92aaf8fcef8d01f3",
+        "timestamp": 1588870458632762,
+        "duration": 10564,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "e3f579909b206591",
+        "timestamp": 1588870458630843,
+        "duration": 12651,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "39466a8038186501",
+        "timestamp": 1588870458632627,
+        "duration": 11018,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "611a8c2073a8ec74",
+        "timestamp": 1588870458632682,
+        "duration": 11105,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "be29a17a949c7dfc",
+        "timestamp": 1588870458632008,
+        "duration": 11867,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "9acaef665c5f2353"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "6d9903980a3ca371",
+        "timestamp": 1588870458628886,
+        "duration": 15067,
+        "localEndpoint": {
+            "serviceName": "determine_field_sets_with_sources"
+        },
+        "parentId": "1a3efdafbab3cad6"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "f653243ac838798d",
+        "timestamp": 1588870458627870,
+        "duration": 16146,
+        "localEndpoint": {
+            "serviceName": "determine_field_sets_with_sources"
+        },
+        "parentId": "1a3efdafbab3cad6"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "b58b1c2ed736d605",
+        "timestamp": 1588870458628612,
+        "duration": 15463,
+        "localEndpoint": {
+            "serviceName": "determine_field_sets_with_sources"
+        },
+        "parentId": "1a3efdafbab3cad6"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "9acaef665c5f2353",
+        "timestamp": 1588870458628195,
+        "duration": 15930,
+        "localEndpoint": {
+            "serviceName": "determine_field_sets_with_sources"
+        },
+        "parentId": "1a3efdafbab3cad6"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "f1f4f3b58ec48396",
+        "timestamp": 1588870458629067,
+        "duration": 15107,
+        "localEndpoint": {
+            "serviceName": "determine_field_sets_with_sources"
+        },
+        "parentId": "1a3efdafbab3cad6"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "351fec75eca9aced",
+        "timestamp": 1588870458647527,
+        "duration": 3701,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "2ab4e52d868f0f95"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "28be2e321d817d4c",
+        "timestamp": 1588870458650861,
+        "duration": 5665,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "8d45843e928bb8a3"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "b9ba46b72de6a755",
+        "timestamp": 1588870458653984,
+        "duration": 6104,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "d56d66c9cf830db5"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "e4d4be376f5c741c",
+        "timestamp": 1588870458658568,
+        "duration": 3869,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "31cf045f2636160f"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "5b46e76f31a34995",
+        "timestamp": 1588870458662496,
+        "duration": 2350,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "e7d3da16d0a89112"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "9572554d08f62d13",
+        "timestamp": 1588870458650564,
+        "duration": 14723,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "31cf045f2636160f"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "35316163d937a6eb",
+        "timestamp": 1588870458665047,
+        "duration": 2287,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "21f68f428a212967"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "21f68f428a212967",
+        "timestamp": 1588870458647241,
+        "duration": 20512,
+        "localEndpoint": {
+            "serviceName": "create_subprocess_encoding_environment"
+        },
+        "parentId": "31cf045f2636160f"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "8789e6a0c3c7492e",
+        "timestamp": 1588870458671925,
+        "duration": 1853,
+        "localEndpoint": {
+            "serviceName": "materialize_platform"
+        },
+        "parentId": "004e2e99afbb1b4d"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "facc978c62f889e0",
+        "timestamp": 1588870458675217,
+        "duration": 1398,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "484e10058284c836"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "2ef7fedc7545d5bc",
+        "timestamp": 1588870458676710,
+        "duration": 355,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "a084fc92b13386d9"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "b83ae5934bc33abf",
+        "timestamp": 1588870458677235,
+        "duration": 1656,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "bbc2bb11de142761"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "bbc2bb11de142761",
+        "timestamp": 1588870458673202,
+        "duration": 5811,
+        "localEndpoint": {
+            "serviceName": "create_pex_native_build_environment"
+        },
+        "parentId": "004e2e99afbb1b4d"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "820e2a572a8a4800",
+        "timestamp": 1588870458680328,
+        "duration": 1097,
+        "localEndpoint": {
+            "serviceName": "provide_binary_util"
+        },
+        "parentId": "37ac7785e6077d72"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "a084fc92b13386d9",
+        "timestamp": 1588870458672544,
+        "duration": 8937,
+        "localEndpoint": {
+            "serviceName": "log_level"
+        },
+        "parentId": "004e2e99afbb1b4d"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "f89802edb3c0dacd",
+        "timestamp": 1588870458674545,
+        "duration": 8469,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "0ca14f40d6814698"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "3d3864ab0f708e4b",
+        "timestamp": 1588870458683506,
+        "duration": 126,
+        "localEndpoint": {
+            "serviceName": "translate_host_platform"
+        },
+        "parentId": "37ac7785e6077d72"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "37ac7785e6077d72",
+        "timestamp": 1588870458680233,
+        "duration": 3436,
+        "localEndpoint": {
+            "serviceName": "get_binary_tool_urls"
+        },
+        "parentId": "82947b8b19e9765c"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "82947b8b19e9765c",
+        "timestamp": 1588870458679781,
+        "duration": 7114,
+        "localEndpoint": {
+            "serviceName": "fetch_binary_tool"
+        },
+        "parentId": "484e10058284c836"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "484e10058284c836",
+        "timestamp": 1588870458672610,
+        "duration": 14354,
+        "localEndpoint": {
+            "serviceName": "download_pex_bin"
+        },
+        "parentId": "0ca14f40d6814698"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('3rdparty/python/constraints.txt',), glob_match_error_behavior=<GlobMatchErrorBehavior.error: 'error'>, conjunction=<GlobExpansionConjunction.all_match: 'all_match'>, description_of_origin='the option `--python-setup-requirement-constraints`'))",
+        "id": "1e4c2a6f66e3e2a1",
+        "timestamp": 1588870458688025,
+        "duration": 1241,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "a441c780a85defbf"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "bf2495657a9e59e3",
+        "timestamp": 1588870458695991,
+        "duration": 281,
+        "localEndpoint": {
+            "serviceName": "get_multi_platform_request_description"
+        },
+        "parentId": "69703f3035eb6cf2"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "84a60dec55dc70ef",
+        "timestamp": 1588870458696045,
+        "duration": 354,
+        "localEndpoint": {
+            "serviceName": "get_multi_platform_request_description"
+        },
+        "parentId": "0798231fc6e02464"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "1d0f4596b3be81e9",
+        "timestamp": 1588870458696617,
+        "duration": 1246,
+        "localEndpoint": {
+            "serviceName": "get_multi_platform_request_description"
+        },
+        "parentId": "2c6f7f3694f61a3d"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "isort.pex (isort>=4.3.21,<4.4, setuptools<45)",
+        "id": "cc8163edea0bc8aa",
+        "timestamp": 1588870458698182,
+        "duration": 558,
+        "localEndpoint": {
+            "serviceName": "build_pex"
+        },
+        "parentId": "3d967589ebfc7ae1"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "docformatter.pex (docformatter>=1.3.1,<1.4)",
+        "id": "31b1e50e01f06e60",
+        "timestamp": 1588870458698748,
+        "duration": 417,
+        "localEndpoint": {
+            "serviceName": "build_pex"
+        },
+        "parentId": "89af47e4ffdb6987"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "89af47e4ffdb6987",
+        "timestamp": 1588870458695010,
+        "duration": 4589,
+        "localEndpoint": {
+            "serviceName": "remove_platform_information"
+        },
+        "parentId": "2c6f7f3694f61a3d"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "3d967589ebfc7ae1",
+        "timestamp": 1588870458695277,
+        "duration": 4405,
+        "localEndpoint": {
+            "serviceName": "remove_platform_information"
+        },
+        "parentId": "0798231fc6e02464"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "c2a604fa017741d0",
+        "timestamp": 1588870458699618,
+        "duration": 162,
+        "localEndpoint": {
+            "serviceName": "get_multi_platform_request_description"
+        },
+        "parentId": "fbdd7c68bbc40eca"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "2c6f7f3694f61a3d",
+        "timestamp": 1588870458694766,
+        "duration": 5278,
+        "localEndpoint": {
+            "serviceName": "fallible_to_exec_result_or_raise"
+        },
+        "parentId": "904bcaed74719780"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "0798231fc6e02464",
+        "timestamp": 1588870458694180,
+        "duration": 5935,
+        "localEndpoint": {
+            "serviceName": "fallible_to_exec_result_or_raise"
+        },
+        "parentId": "004e2e99afbb1b4d"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "004e2e99afbb1b4d",
+        "timestamp": 1588870458671094,
+        "duration": 29069,
+        "localEndpoint": {
+            "serviceName": "create_pex"
+        },
+        "parentId": "d4d43fc01679369c"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "73adc6de8e62d008",
+        "timestamp": 1588870458699862,
+        "duration": 434,
+        "localEndpoint": {
+            "serviceName": "get_multi_platform_request_description"
+        },
+        "parentId": "0be0e66a220b10f2"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "904bcaed74719780",
+        "timestamp": 1588870458673723,
+        "duration": 27184,
+        "localEndpoint": {
+            "serviceName": "create_pex"
+        },
+        "parentId": "1f74503d6a2a4e17"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('.isort.cfg',), glob_match_error_behavior=<GlobMatchErrorBehavior.error: 'error'>, conjunction=<GlobExpansionConjunction.all_match: 'all_match'>, description_of_origin='the option `--isort-config`'))",
+        "id": "90345c9674622283",
+        "timestamp": 1588870458700464,
+        "duration": 505,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "d4d43fc01679369c"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "flake8.pex (flake8-2020, flake8-absolute-import, flake8-bugbear, flake8-comprehensions, flake8-debugger, flake8-django==0.0.4, flake8-executable, flake8-mutable, flake8-os-walk==0.4.0, flake8-pytest-style==0.5.0, flake8>=3.7.9,<3.8, setuptools<45)",
+        "id": "4b5a851c17f681b3",
+        "timestamp": 1588870458700881,
+        "duration": 1414,
+        "localEndpoint": {
+            "serviceName": "build_pex"
+        },
+        "parentId": "01024df160ea0301"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "black.pex (black==19.10b0, setuptools)",
+        "id": "89ebc09fc80c755c",
+        "timestamp": 1588870458702522,
+        "duration": 334,
+        "localEndpoint": {
+            "serviceName": "build_pex"
+        },
+        "parentId": "33af2d47c1cd2769"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "01024df160ea0301",
+        "timestamp": 1588870458696547,
+        "duration": 6753,
+        "localEndpoint": {
+            "serviceName": "remove_platform_information"
+        },
+        "parentId": "69703f3035eb6cf2"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "33af2d47c1cd2769",
+        "timestamp": 1588870458699894,
+        "duration": 3454,
+        "localEndpoint": {
+            "serviceName": "remove_platform_information"
+        },
+        "parentId": "0be0e66a220b10f2"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "69703f3035eb6cf2",
+        "timestamp": 1588870458695487,
+        "duration": 7890,
+        "localEndpoint": {
+            "serviceName": "fallible_to_exec_result_or_raise"
+        },
+        "parentId": "e46bcf29e5281d31"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "0be0e66a220b10f2",
+        "timestamp": 1588870458696532,
+        "duration": 6872,
+        "localEndpoint": {
+            "serviceName": "fallible_to_exec_result_or_raise"
+        },
+        "parentId": "a441c780a85defbf"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "e46bcf29e5281d31",
+        "timestamp": 1588870458672596,
+        "duration": 30889,
+        "localEndpoint": {
+            "serviceName": "create_pex"
+        },
+        "parentId": "d56d66c9cf830db5"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "a441c780a85defbf",
+        "timestamp": 1588870458672462,
+        "duration": 31142,
+        "localEndpoint": {
+            "serviceName": "create_pex"
+        },
+        "parentId": "45dc352a93020742"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=(), glob_match_error_behavior=<GlobMatchErrorBehavior.error: 'error'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin='the option `--black-config`'))",
+        "id": "6700ef4bfd73fc1e",
+        "timestamp": 1588870458703939,
+        "duration": 352,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "45dc352a93020742"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "bandit.pex (bandit>=1.6.2,<1.7, setuptools)",
+        "id": "b398e5a0962e80d9",
+        "timestamp": 1588870458703006,
+        "duration": 1347,
+        "localEndpoint": {
+            "serviceName": "build_pex"
+        },
+        "parentId": "acfdf2b8abaab165"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "acfdf2b8abaab165",
+        "timestamp": 1588870458698592,
+        "duration": 6430,
+        "localEndpoint": {
+            "serviceName": "remove_platform_information"
+        },
+        "parentId": "fbdd7c68bbc40eca"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "fbdd7c68bbc40eca",
+        "timestamp": 1588870458697304,
+        "duration": 7753,
+        "localEndpoint": {
+            "serviceName": "fallible_to_exec_result_or_raise"
+        },
+        "parentId": "0ca14f40d6814698"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "0ca14f40d6814698",
+        "timestamp": 1588870458671075,
+        "duration": 34029,
+        "localEndpoint": {
+            "serviceName": "create_pex"
+        },
+        "parentId": "31cf045f2636160f"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('build-support/flake8/.flake8',), glob_match_error_behavior=<GlobMatchErrorBehavior.error: 'error'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin='the option `--flake8-config`'))",
+        "id": "a99dcbff88e7445d",
+        "timestamp": 1588870458704020,
+        "duration": 2956,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "d56d66c9cf830db5"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "80322615820e75c7",
+        "timestamp": 1588870458701662,
+        "duration": 5911,
+        "localEndpoint": {
+            "serviceName": "determine_all_source_files"
+        },
+        "parentId": "1f74503d6a2a4e17"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "Snapshot(PathGlobs(globs=('build-support/bandit/bandit.yaml',), glob_match_error_behavior=<GlobMatchErrorBehavior.error: 'error'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin='the option `--bandit-config`'))",
+        "id": "ff5872ad1fb60ad8",
+        "timestamp": 1588870458705304,
+        "duration": 2541,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "31cf045f2636160f"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "f07bdbfdc48552be",
+        "timestamp": 1588870458708546,
+        "duration": 3425,
+        "localEndpoint": {
+            "serviceName": "determine_specified_source_files"
+        },
+        "parentId": "d56d66c9cf830db5"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "d4d43fc01679369c",
+        "timestamp": 1588870458666102,
+        "duration": 47718,
+        "localEndpoint": {
+            "serviceName": "setup"
+        },
+        "parentId": "2ab4e52d868f0f95"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "bd816525924fdadc",
+        "timestamp": 1588870458714310,
+        "duration": 67,
+        "localEndpoint": {
+            "serviceName": "upcast_process"
+        },
+        "parentId": "9271743886a2177c"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "45dc352a93020742",
+        "timestamp": 1588870458666128,
+        "duration": 51413,
+        "localEndpoint": {
+            "serviceName": "setup"
+        },
+        "parentId": "8d45843e928bb8a3"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "1f74503d6a2a4e17",
+        "timestamp": 1588870458669574,
+        "duration": 48213,
+        "localEndpoint": {
+            "serviceName": "setup"
+        },
+        "parentId": "e7d3da16d0a89112"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "42567af24d1b06e1",
+        "timestamp": 1588870458718336,
+        "duration": 69,
+        "localEndpoint": {
+            "serviceName": "upcast_process"
+        },
+        "parentId": "fdb5484ea1da7730"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "fe9a60c1dd4f545e",
+        "timestamp": 1588870458722302,
+        "duration": 163,
+        "localEndpoint": {
+            "serviceName": "upcast_process"
+        },
+        "parentId": "dcef659e80b62740"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "653a5627bc9a95a1",
+        "timestamp": 1588870458724346,
+        "duration": 78,
+        "localEndpoint": {
+            "serviceName": "upcast_process"
+        },
+        "parentId": "ce63ae1a6334efa3"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "77c0ba2a6ecd1453",
+        "timestamp": 1588870458726280,
+        "duration": 95,
+        "localEndpoint": {
+            "serviceName": "upcast_process"
+        },
+        "parentId": "eda55a6169bc21de"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "14 targets: src/python/toolchain/pants/auth, src/python/toolchain/pants/auth:tests, src/python/toolchain/pants/buildgen, src/python/toolchain/pants/buildgen:tests, src/python/toolchain/pants/buildsense, src/python/toolchain/pants/buildsense:tests, src/python/toolchain/pants/common, src/python/toolchain/pants/external, src/python/toolchain/pants/internal, src/python/toolchain/pants/rules, src/python/toolchain/pants/rules/mypy, src/python/toolchain/pants/rules/mypy:integration, src/python/toolchain/pants/rules:tests, src/python/toolchain/pants/util.",
+        "id": "ef43ecd98c565bcb",
+        "timestamp": 1588870458715836,
+        "duration": 1708747,
+        "localEndpoint": {
+            "serviceName": "isort"
+        },
+        "parentId": "9271743886a2177c"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "9271743886a2177c",
+        "timestamp": 1588870458714167,
+        "duration": 1710767,
+        "localEndpoint": {
+            "serviceName": "remove_platform_information"
+        },
+        "parentId": "2ab4e52d868f0f95"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "2ab4e52d868f0f95",
+        "timestamp": 1588870458645144,
+        "duration": 1779913,
+        "localEndpoint": {
+            "serviceName": "isort_lint"
+        },
+        "parentId": "1a3efdafbab3cad6"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "14 targets: src/python/toolchain/pants/auth, src/python/toolchain/pants/auth:tests, src/python/toolchain/pants/buildgen, src/python/toolchain/pants/buildgen:tests, src/python/toolchain/pants/buildsense, src/python/toolchain/pants/buildsense:tests, src/python/toolchain/pants/common, src/python/toolchain/pants/external, src/python/toolchain/pants/internal, src/python/toolchain/pants/rules, src/python/toolchain/pants/rules/mypy, src/python/toolchain/pants/rules/mypy:integration, src/python/toolchain/pants/rules:tests, src/python/toolchain/pants/util.",
+        "id": "793e44674ef7833b",
+        "timestamp": 1588870458728772,
+        "duration": 2921426,
+        "localEndpoint": {
+            "serviceName": "docformatter"
+        },
+        "parentId": "eda55a6169bc21de"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "eda55a6169bc21de",
+        "timestamp": 1588870458726138,
+        "duration": 2924294,
+        "localEndpoint": {
+            "serviceName": "remove_platform_information"
+        },
+        "parentId": "e7d3da16d0a89112"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "e7d3da16d0a89112",
+        "timestamp": 1588870458646101,
+        "duration": 3004417,
+        "localEndpoint": {
+            "serviceName": "docformatter_lint"
+        },
+        "parentId": "1a3efdafbab3cad6"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "14 targets: src/python/toolchain/pants/auth, src/python/toolchain/pants/auth:tests, src/python/toolchain/pants/buildgen, src/python/toolchain/pants/buildgen:tests, src/python/toolchain/pants/buildsense, src/python/toolchain/pants/buildsense:tests, src/python/toolchain/pants/common, src/python/toolchain/pants/external, src/python/toolchain/pants/internal, src/python/toolchain/pants/rules, src/python/toolchain/pants/rules/mypy, src/python/toolchain/pants/rules/mypy:integration, src/python/toolchain/pants/rules:tests, src/python/toolchain/pants/util.",
+        "id": "14cb5bf2cc5f492d",
+        "timestamp": 1588870458725360,
+        "duration": 3504933,
+        "localEndpoint": {
+            "serviceName": "bandit"
+        },
+        "parentId": "ce63ae1a6334efa3"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "ce63ae1a6334efa3",
+        "timestamp": 1588870458724207,
+        "duration": 3506307,
+        "localEndpoint": {
+            "serviceName": "remove_platform_information"
+        },
+        "parentId": "31cf045f2636160f"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "31cf045f2636160f",
+        "timestamp": 1588870458645587,
+        "duration": 3585028,
+        "localEndpoint": {
+            "serviceName": "bandit_lint"
+        },
+        "parentId": "1a3efdafbab3cad6"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "14 targets: src/python/toolchain/pants/auth, src/python/toolchain/pants/auth:tests, src/python/toolchain/pants/buildgen, src/python/toolchain/pants/buildgen:tests, src/python/toolchain/pants/buildsense, src/python/toolchain/pants/buildsense:tests, src/python/toolchain/pants/common, src/python/toolchain/pants/external, src/python/toolchain/pants/internal, src/python/toolchain/pants/rules, src/python/toolchain/pants/rules/mypy, src/python/toolchain/pants/rules/mypy:integration, src/python/toolchain/pants/rules:tests, src/python/toolchain/pants/util.",
+        "id": "a40901d93a08c0d2",
+        "timestamp": 1588870458723232,
+        "duration": 4720387,
+        "localEndpoint": {
+            "serviceName": "flake8"
+        },
+        "parentId": "dcef659e80b62740"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "dcef659e80b62740",
+        "timestamp": 1588870458722180,
+        "duration": 4721684,
+        "localEndpoint": {
+            "serviceName": "remove_platform_information"
+        },
+        "parentId": "d56d66c9cf830db5"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "d56d66c9cf830db5",
+        "timestamp": 1588870458646378,
+        "duration": 4797639,
+        "localEndpoint": {
+            "serviceName": "flake8_lint"
+        },
+        "parentId": "1a3efdafbab3cad6"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "14 targets: src/python/toolchain/pants/auth, src/python/toolchain/pants/auth:tests, src/python/toolchain/pants/buildgen, src/python/toolchain/pants/buildgen:tests, src/python/toolchain/pants/buildsense, src/python/toolchain/pants/buildsense:tests, src/python/toolchain/pants/common, src/python/toolchain/pants/external, src/python/toolchain/pants/internal, src/python/toolchain/pants/rules, src/python/toolchain/pants/rules/mypy, src/python/toolchain/pants/rules/mypy:integration, src/python/toolchain/pants/rules:tests, src/python/toolchain/pants/util.",
+        "id": "5515dc4161f80b53",
+        "timestamp": 1588870458722192,
+        "duration": 26031066,
+        "localEndpoint": {
+            "serviceName": "black"
+        },
+        "parentId": "fdb5484ea1da7730"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "fdb5484ea1da7730",
+        "timestamp": 1588870458718154,
+        "duration": 26035265,
+        "localEndpoint": {
+            "serviceName": "remove_platform_information"
+        },
+        "parentId": "8d45843e928bb8a3"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "8d45843e928bb8a3",
+        "timestamp": 1588870458644894,
+        "duration": 26108590,
+        "localEndpoint": {
+            "serviceName": "black_lint"
+        },
+        "parentId": "1a3efdafbab3cad6"
+    },
+    {
+        "traceId": "pants_run_2020_05_07_09_54_18_542_e2204cccbe534499befbc04c8da2f886",
+        "name": "",
+        "id": "1a3efdafbab3cad6",
+        "timestamp": 1588870458568958,
+        "duration": 26184749,
+        "localEndpoint": {
+            "serviceName": "lint"
+        }
+    }
+]

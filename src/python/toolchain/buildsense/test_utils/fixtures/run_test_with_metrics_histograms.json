@@ -1,0 +1,1941 @@
+{
+    "ci_env": {
+        "CIRCLECI": "true",
+        "CIRCLE_BRANCH": "pull/8622",
+        "CIRCLE_BUILD_NUM": "62356",
+        "CIRCLE_BUILD_URL": "https://circleci.com/gh/toolchainlabs/toolchain/62356",
+        "CIRCLE_COMPARE_URL": "",
+        "CIRCLE_INTERNAL_CONFIG": "/.circleci-runner-config.json",
+        "CIRCLE_INTERNAL_SCRATCH": "/tmp/circleci-115341533",
+        "CIRCLE_INTERNAL_TASK_DATA": "/tmp/.circleci-task-data-603ee5ea03a84342b0f690af-0-build",
+        "CIRCLE_JOB": "build-with-pants",
+        "CIRCLE_NODE_INDEX": "0",
+        "CIRCLE_NODE_TOTAL": "1",
+        "CIRCLE_PREVIOUS_BUILD_NUM": "62355",
+        "CIRCLE_PROJECT_REPONAME": "toolchain",
+        "CIRCLE_PROJECT_USERNAME": "toolchainlabs",
+        "CIRCLE_PR_NUMBER": "8622",
+        "CIRCLE_PR_REPONAME": "toolchain",
+        "CIRCLE_PR_USERNAME": "asherf",
+        "CIRCLE_PULL_REQUEST": "https://github.com/toolchainlabs/toolchain/pull/8622",
+        "CIRCLE_PULL_REQUESTS": "https://github.com/toolchainlabs/toolchain/pull/8622",
+        "CIRCLE_REPOSITORY_URL": "git@github.com:toolchainlabs/toolchain.git",
+        "CIRCLE_SHA1": "41b3f11b69771cff90bc43dab523df9f485ed0cd",
+        "CIRCLE_SHELL_ENV": "/tmp/.bash_env-603ee5ea03a84342b0f690af-0-build",
+        "CIRCLE_STAGE": "build-with-pants",
+        "CIRCLE_USERNAME": "asherf",
+        "CIRCLE_WORKFLOW_ID": "d4bc51f0-9f73-4f98-b139-36d0b511ebd7",
+        "CIRCLE_WORKFLOW_JOB_ID": "5927b742-019b-4181-b966-b3b87e7edcab",
+        "CIRCLE_WORKFLOW_UPSTREAM_JOB_IDS": "2daabb9c-22e1-4f89-ad82-985a17f0a1d9",
+        "CIRCLE_WORKFLOW_WORKSPACE_ID": "d4bc51f0-9f73-4f98-b139-36d0b511ebd7",
+        "CIRCLE_WORKING_DIRECTORY": "~/project"
+    },
+    "counter_names": [
+        "local_cache_requests",
+        "local_cache_requests_cached",
+        "local_cache_requests_uncached",
+        "local_cache_read_errors",
+        "local_cache_write_errors",
+        "local_cache_total_time_saved_ms",
+        "local_execution_requests",
+        "remote_cache_requests",
+        "remote_cache_requests_cached",
+        "remote_cache_requests_uncached",
+        "remote_cache_read_errors",
+        "remote_cache_write_errors",
+        "remote_cache_write_started",
+        "remote_cache_write_finished",
+        "remote_cache_speculation_local_completed_first",
+        "remote_cache_speculation_remote_completed_first",
+        "remote_cache_total_time_saved_ms",
+        "remote_execution_errors",
+        "remote_execution_requests",
+        "remote_execution_rpc_errors",
+        "remote_execution_rpc_execute",
+        "remote_execution_rpc_retries",
+        "remote_execution_rpc_wait_execution",
+        "remote_execution_success",
+        "remote_execution_timeouts"
+    ],
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 13.01941728591919
+        }
+    ],
+    "observation_histograms": {
+        "histograms": {
+            "local_store_read_blob_size": "HISTFAAAAmR4nC1Sv2sUQRidefPN7O+sm/XmzkvMccQYYy6EICQECUcQlaASLMRSEKys0gTExl+FCNHC0phGxD9BQQQhVbCysrETLEWNVoLxzZ07y8y337557+2bHX/wtFbKLKjhZf6vOkzRwcFB//uwcSONMHUPO+OPq22zPXMn/pw87GzLG/tT/9Jf9fXNR/qb3tHv9cXN44vtv3pxYrE3Mt6Gyw1UXolTMKMtxIqDndjERc96E48e9sqp1PS88tarXuTnkOWjhLnYFc6idF61lK+cK3wF633Z84nMy5SPMOmv+o7vt87l0kSCRI6NOKcmEm8ltRiTuAEDr5BBcZjBACyUiBGVKwyvyFUoCEAkKAPEhtsQQyjEEijqcMRe2BpIEkQEK66KvYhzFAeJGkEpLwV2sHtIa9pKspx1AuMNN2SDupRIShJCirwiXcG+QQNNoG4xI0YW2HxBgdAvT4h1KV+IlSAWkwWFsCqYRVCyLki4hACiMmRSQYwvyeMMK4owJRqo6LTGksPAe/eQDQI00OFzjcw1xcRNhPQWpJAx7ud0Ci6IROjy/GjYZbJORAenMUZsjVXgAo5ihd8xTdAReuoCPzRDrbEcrGG61c1rGlklZsV/0FwGIQbaBP10DXOsn2vcRB/SCOn1ya+wzo+5Td/T1JvFJOkK3GJ/jVQRzmM+VRKCmkIlVxD3sZEmWGKjYs4JzvL37dDRGczLa41rg0OYxRbSfY09TZFlvNIywzeXscEgG4hDGL81CSq81PiksQu80/iicd/gmZE/Fh8dtuKTL7zc1fKkne4m7u1Ivl+7vUvpP8UiSkg=",
+            "remote_cache_time_saved_ms": "HISTFAAAAE54nC3GsQ2AIBQA0e8hMZbG1sTGPZzBYaxs3cA4iTUTOAKhpIYNoPhc8265n1lENtFMs1PWsme9byCMuImzj5AgWn7LwYUHB6+hAo6GDU0=",
+            "remote_store_time_to_first_byte": "HISTFAAAAHJ4nC2KsQmDYBgFv3emCSFVSJWAZQgpAwmpHCGV44gILiCOYGXlENZi7QCWghvoL7/vFXfF3fPyYmax+QU75ZEu0eyt+XClEgGdaDc+6cXPSUItXpwZxInoEPLgS+j+54gxws1FBSxQiEyufTOJFRAKEe0="
+        },
+        "version": 0
+    },
+    "pantsd_stats": {
+        "affected_file_count": 1090,
+        "preceding_graph_size": 39026,
+        "resulting_graph_size": 39475
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "backend_packages": [
+                "toolchain.pants.auth",
+                "toolchain.pants.buildsense",
+                "toolchain.pants.common",
+                "toolchain.pants.rules",
+                "toolchain.pants.rules.golang",
+                "pants.backend.awslambda.python",
+                "pants.backend.project_info",
+                "pants.backend.python",
+                "pants.backend.python.lint.bandit",
+                "pants.backend.python.lint.black",
+                "pants.backend.python.lint.docformatter",
+                "pants.backend.python.lint.flake8",
+                "pants.backend.python.lint.pylint",
+                "pants.backend.python.lint.isort",
+                "pants.backend.python.typecheck.mypy",
+                "pants.backend.python.mixed_interpreter_constraints"
+            ],
+            "build_file_prelude_globs": [],
+            "build_ignore": [
+                "3rdparty/jvm",
+                "3rdparty/go",
+                "prod/java",
+                "src/go/src/toolchain/cmd",
+                "src/go/src/toolchain/codex",
+                "src/go/src/toolchain/graph",
+                "src/go/src/toolchain/rename",
+                "src/go/src/toolchain/util",
+                "src/java",
+                "src/node",
+                "testdata/java"
+            ],
+            "build_patterns": [
+                "BUILD",
+                "BUILD.*"
+            ],
+            "ca_certs_path": null,
+            "colors": false,
+            "concurrent": false,
+            "dynamic_ui": false,
+            "exclude_target_regexp": [],
+            "files_not_found_behavior": "warn",
+            "ignore_pants_warnings": [],
+            "level": "info",
+            "local_execution_root_dir": "/tmp",
+            "local_store_dir": "/home/toolchain/.cache/pants/lmdb_store",
+            "log_levels_by_target": {},
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "named_caches_dir": "/home/toolchain/.cache/pants/named_caches",
+            "native_engine_visualize_to": null,
+            "owners_not_found_behavior": "error",
+            "pants_bin_name": "./pants",
+            "pants_config_files": [
+                "/home/toolchain/project/pants.toml",
+                "/home/toolchain/project/pants.ci.toml",
+                "/home/toolchain/project/pants.remote-cache.toml"
+            ],
+            "pants_distdir": "/home/toolchain/project/dist",
+            "pants_ignore": [
+                ".*/",
+                "/dist/"
+            ],
+            "pants_ignore_use_gitignore": true,
+            "pants_physical_workdir_base": null,
+            "pants_subprocessdir": "/home/toolchain/project/.pids",
+            "pants_supportdir": "/home/toolchain/project/build-support",
+            "pants_version": "2.4.0.dev0",
+            "pants_workdir": "/home/toolchain/project/.pants.d",
+            "pantsd": true,
+            "pantsd_invalidation_globs": [
+                "!/src/python/curator/",
+                "!/src/python/toolchain/codebrowser/",
+                "!/src/python/toolchain/crawler/",
+                "!/src/python/toolchain/dependency/",
+                "!/src/python/toolchain/github_integration/",
+                "!/src/python/toolchain/infosite/",
+                "!/src/python/toolchain/kythebrowser/",
+                "!/src/python/toolchain/packagerepo/",
+                "!/src/python/toolchain/prod/",
+                "!/src/python/toolchain/remoting/",
+                "!/src/python/toolchain/satresolver/",
+                "!/src/python/toolchain/service/",
+                "!/src/python/toolchain/servicerouter/",
+                "!/src/python/toolchain/toolshed/",
+                "!/src/python/toolchain/users/",
+                "!/src/python/toolchain/webhooks/",
+                "!*_test.py",
+                "!BUILD"
+            ],
+            "pantsd_max_memory_usage": 2147483648,
+            "pantsd_pailgun_port": 0,
+            "pantsd_timeout_when_multiple_invocations": 60,
+            "pantsrc": true,
+            "pantsrc_files": [
+                "/etc/pantsrc",
+                "~/.pants.rc"
+            ],
+            "plugin_cache_dir": "/home/toolchain/.cache/pants/plugins",
+            "plugins": [
+                "python-dateutil>=2.8.1,<3.0.0",
+                "networkx==2.5",
+                "requests==2.25.0"
+            ],
+            "plugins_force_resolve": false,
+            "print_stacktrace": true,
+            "process_execution_cache_namespace": null,
+            "process_execution_cleanup_local_dirs": true,
+            "process_execution_local_enable_nailgun": false,
+            "process_execution_local_parallelism": 4,
+            "process_execution_remote_parallelism": 128,
+            "process_execution_use_local_cache": true,
+            "pythonpath": [
+                "/home/toolchain/project/src/python"
+            ],
+            "remote_auth_plugin": "toolchain.pants.auth.plugin:toolchain_auth_plugin",
+            "remote_ca_certs_path": null,
+            "remote_cache_eager_fetch": true,
+            "remote_cache_read": true,
+            "remote_cache_write": true,
+            "remote_execution": false,
+            "remote_execution_address": null,
+            "remote_execution_extra_platform_properties": [
+                "execution-policy=network",
+                "execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-12-10.00-20-20-60b76b4527d9"
+            ],
+            "remote_execution_headers": {},
+            "remote_execution_overall_deadline_secs": 3600,
+            "remote_instance_name": "main",
+            "remote_oauth_bearer_token_path": null,
+            "remote_store_address": "grpcs://build.toolchain.com:443",
+            "remote_store_chunk_bytes": 1048576,
+            "remote_store_chunk_upload_timeout_seconds": 60,
+            "remote_store_headers": {},
+            "remote_store_rpc_retries": 2,
+            "rule_threads_core": 18,
+            "rule_threads_max": null,
+            "show_log_target": false,
+            "spec_files": [],
+            "stats_record_option_scopes": [
+                "*"
+            ],
+            "streaming_workunits_report_interval": 1,
+            "subproject_roots": [],
+            "tag": [
+                "exclude_from_remoting"
+            ],
+            "verify_config": true
+        },
+        "auth": {
+            "auth_file": null,
+            "base_url": "https://app.toolchain.com/api/v1",
+            "ci_env_variables": [],
+            "from_env_var": "TOOLCHAIN_AUTH_TOKEN",
+            "org": null
+        },
+        "auth-acquire": {
+            "headless": false,
+            "local_port": null,
+            "output": "file"
+        },
+        "bandit": {
+            "args": [
+                "--exclude",
+                "*_test.py,**/test_*.py,conftest.py"
+            ],
+            "config": "build-support/python/bandit.yaml",
+            "entry_point": "bandit",
+            "extra_requirements": [
+                "setuptools",
+                "stevedore>=2.0.1,<3"
+            ],
+            "skip": false,
+            "version": "bandit==1.6.2"
+        },
+        "black": {
+            "args": [],
+            "config": "pyproject.toml",
+            "entry_point": "black:patched_main",
+            "extra_requirements": [
+                "regex>=2020.9.27"
+            ],
+            "interpreter_constraints": [
+                "CPython>=3.6"
+            ],
+            "skip": false,
+            "version": "black==20.8b1"
+        },
+        "buildsense": {
+            "base_url": "https://app.toolchain.com/api/v1/repos/",
+            "ci_env_var_pattern": null,
+            "dry_run": false,
+            "enable": true,
+            "local_build_store": true,
+            "local_store_base": ".pants.d/toolchain/buildsense",
+            "max_batch_size_mb": 20,
+            "timeout": 10
+        },
+        "changed": {
+            "dependees": "none",
+            "diffspec": null,
+            "since": null
+        },
+        "count-loc": {},
+        "coverage-py": {
+            "config": null,
+            "entry_point": "coverage",
+            "extra_requirements": [],
+            "filter": [],
+            "interpreter_constraints": [
+                "CPython>=3.8,<4"
+            ],
+            "output_dir": "dist/coverage/python",
+            "report": [
+                "xml",
+                "raw"
+            ],
+            "version": "coverage>=5.0.3,<5.1"
+        },
+        "dependees": {
+            "closed": false,
+            "output_file": null,
+            "output_format": "text",
+            "sep": "\\n",
+            "transitive": false
+        },
+        "dependencies": {
+            "output_file": null,
+            "sep": "\\n",
+            "transitive": false,
+            "type": "source"
+        },
+        "depgraph": {
+            "granularity": "target",
+            "num_cycles": 0,
+            "output_file": null
+        },
+        "docformatter": {
+            "args": [
+                "--wrap-summaries=120",
+                "--wrap-descriptions=120"
+            ],
+            "entry_point": "docformatter",
+            "extra_requirements": [],
+            "interpreter_constraints": [
+                "CPython==2.7.*",
+                "CPython>=3.4,<3.9"
+            ],
+            "skip": false,
+            "version": "docformatter>=1.3.1,<1.4"
+        },
+        "download-pex-bin": {
+            "known_versions": [
+                "v2.1.32|darwin|9cea86ae4338943ab347a5e2b3a71e3c27b9835cdd5c115c52d1a328fdb61160|3071734",
+                "v2.1.32|linux|9cea86ae4338943ab347a5e2b3a71e3c27b9835cdd5c115c52d1a328fdb61160|3071734"
+            ],
+            "url_platform_mapping": {},
+            "url_template": "https://github.com/pantsbuild/pex/releases/download/{version}/pex",
+            "version": "v2.1.32"
+        },
+        "filedeps": {
+            "absolute": false,
+            "globs": false,
+            "output_file": null,
+            "sep": "\\n",
+            "transitive": false
+        },
+        "filter": {
+            "address_regex": [],
+            "granularity": "all",
+            "output_file": null,
+            "sep": "\\n",
+            "tag_regex": [],
+            "target_type": []
+        },
+        "flake8": {
+            "args": [],
+            "config": "build-support/python/flake8",
+            "entry_point": "flake8",
+            "extra_requirements": [
+                "setuptools<45; python_full_version == '2.7.*'",
+                "setuptools; python_version > '2.7'",
+                "flake8-debugger",
+                "flake8-2020",
+                "flake8-mutable",
+                "flake8-comprehensions",
+                "flake8-bugbear",
+                "flake8-django>=1.0.0",
+                "flake8-executable",
+                "flake8-pytest-style>=1.1.1",
+                "flake8-os-walk==0.4.0",
+                "flake8-absolute-import",
+                "flake8-simplify==0.12.0"
+            ],
+            "skip": false,
+            "version": "flake8==3.8.4"
+        },
+        "fmt": {
+            "per_file_caching": false
+        },
+        "go-build": {},
+        "gofmt": {
+            "skip": false
+        },
+        "golang": {
+            "known_versions": [
+                "1.15.5|darwin|359a4334b8c8f5e3067e5a76f16419791ac3fef4613d8e8e1eac0b9719915f6d|122217003",
+                "1.15.5|linux |9a58494e8da722c3aef248c9227b0e9c528c7318309827780f16220998180a0d|120900442"
+            ],
+            "url_platform_mapping": {
+                "darwin": "darwin",
+                "linux": "linux"
+            },
+            "url_template": "https://golang.org/dl/go{version}.{platform}-amd64.tar.gz",
+            "version": "1.15.5"
+        },
+        "ipython": {
+            "entry_point": "IPython:start_ipython",
+            "extra_requirements": [],
+            "ignore_cwd": true,
+            "version": "ipython==7.16.1"
+        },
+        "isort": {
+            "args": [],
+            "config": [
+                "pyproject.toml"
+            ],
+            "entry_point": "isort.main",
+            "extra_requirements": [
+                "setuptools"
+            ],
+            "interpreter_constraints": [
+                "CPython>=3.8,<4"
+            ],
+            "skip": false,
+            "version": "isort[pyproject]==5.7.0"
+        },
+        "lambdex": {
+            "entry_point": "lambdex.bin.lambdex",
+            "extra_requirements": [
+                "setuptools>=50.3.0,<50.4"
+            ],
+            "interpreter_constraints": [
+                "CPython>=3.5"
+            ],
+            "version": "lambdex==0.1.3"
+        },
+        "lint": {
+            "per_file_caching": false,
+            "reports_dir": null
+        },
+        "list": {
+            "documented": false,
+            "output_file": null,
+            "provides": false,
+            "sep": "\\n"
+        },
+        "mypy": {
+            "args": [],
+            "config": "build-support/python/mypy.ini",
+            "entry_point": "mypy",
+            "extra_requirements": [],
+            "interpreter_constraints": [
+                "CPython>=3.6"
+            ],
+            "skip": false,
+            "source_plugins": [],
+            "version": "mypy==0.812"
+        },
+        "package": {},
+        "pex": {
+            "bootstrap_interpreter_names": [
+                "python",
+                "python3",
+                "python2"
+            ],
+            "executable_search_paths": [
+                "/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin",
+                "/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin"
+            ],
+            "verbosity": 0
+        },
+        "pex-binary-defaults": {
+            "emit_warnings": true
+        },
+        "py-constraints": {
+            "output_file": null,
+            "summary": false
+        },
+        "pylint": {
+            "args": [],
+            "config": "build-support/python/pylintrc",
+            "entry_point": "pylint",
+            "extra_requirements": [
+                "pylint-django[with_django]==2.3.0"
+            ],
+            "skip": false,
+            "source_plugins": [],
+            "version": "pylint==2.6.0"
+        },
+        "pytest": {
+            "args": [
+                "-vv"
+            ],
+            "execution_slot_var": null,
+            "junit_family": "xunit2",
+            "junit_xml_dir": "dist/test-results/",
+            "pytest_plugins": [
+                "pytest-cov>=2.11.1"
+            ],
+            "timeout_default": null,
+            "timeout_maximum": null,
+            "timeouts": true,
+            "version": "pytest==6.2.2"
+        },
+        "python-infer": {
+            "conftests": true,
+            "entry_points": true,
+            "imports": true,
+            "inits": false,
+            "string_imports": false
+        },
+        "python-native-code": {
+            "cpp_flags": [],
+            "ld_flags": []
+        },
+        "python-repos": {
+            "indexes": [
+                "https://pypi.org/simple/"
+            ],
+            "repos": []
+        },
+        "python-setup": {
+            "interpreter_constraints": [
+                "CPython>=3.8,<4"
+            ],
+            "interpreter_search_paths": [
+                "/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin",
+                "<PATH>"
+            ],
+            "requirement_constraints": "3rdparty/python/constraints.txt",
+            "resolve_all_constraints": "nondeployables",
+            "resolver_http_cache_ttl": 0,
+            "resolver_jobs": 1,
+            "resolver_manylinux": "manylinux2014",
+            "resolver_version": "pip-2020-resolver"
+        },
+        "repl": {
+            "shell": null
+        },
+        "roots": {
+            "output_file": null,
+            "sep": "\\n"
+        },
+        "run": {
+            "args": []
+        },
+        "scc": {
+            "args": [],
+            "known_versions": [
+                "2.12.0|darwin|70b7002cd1e4541cb37b7b9cbc0eeedd13ceacb49628e82ab46332bb2e65a5a6|1842530",
+                "2.12.0|linux|8eca3e98fe8a78d417d3779a51724515ac4459760d3ec256295f80954a0da044|1753059"
+            ],
+            "url_platform_mapping": {
+                "darwin": "apple-darwin",
+                "linux": "unknown-linux"
+            },
+            "url_template": "https://github.com/boyter/scc/releases/download/v{version}/scc-{version}-x86_64-{platform}.zip",
+            "version": "2.12.0"
+        },
+        "setup-py-generation": {
+            "first_party_dependency_version_scheme": "exact"
+        },
+        "setuptools": {
+            "entry_point": null,
+            "extra_requirements": [
+                "wheel>=0.35.1,<0.37"
+            ],
+            "interpreter_constraints": [],
+            "version": "setuptools>=50.3.0,<54.0"
+        },
+        "source": {
+            "marker_filenames": [],
+            "root_patterns": [
+                "/3rdparty",
+                "/src/go/src/toolchain/pants_test",
+                "/src/python",
+                "/prod/python/toolchain_prod",
+                "/prod/helm",
+                "/prod/terraform"
+            ]
+        },
+        "sourcefile-validation": {
+            "config": {
+                "content_patterns": [
+                    {
+                        "name": "css_header",
+                        "pattern": "^/\\*\\!?\nCopyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n.{0}\nToolchain Labs, Inc\\. CONFIDENTIAL\n.{0}\nThis file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\nThe copyright notice above does not evidence any actual or intended publication of such source code\\.\nDisclosure of this source code or any related proprietary information is strictly prohibited without\nthe express written permission of Toolchain Labs, Inc\\.\n\\*/"
+                    },
+                    {
+                        "name": "go_header",
+                        "pattern": "^// Copyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n//\n// Toolchain Labs, Inc\\. CONFIDENTIAL\n//\n// This file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\n// The copyright notice above does not evidence any actual or intended publication of such source code\\.\n// Disclosure of this source code or any related proprietary information is strictly prohibited without\n// the express written permission of Toolchain Labs, Inc\\."
+                    },
+                    {
+                        "name": "java_header",
+                        "pattern": "^// Copyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n//\n// Toolchain Labs, Inc\\. CONFIDENTIAL\n//\n// This file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\n// The copyright notice above does not evidence any actual or intended publication of such source code\\.\n// Disclosure of this source code or any related proprietary information is strictly prohibited without\n// the express written permission of Toolchain Labs, Inc\\."
+                    },
+                    {
+                        "name": "js_header",
+                        "pattern": "^/\\*\\!?\nCopyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n.{0}\nToolchain Labs, Inc\\. CONFIDENTIAL\n.{0}\nThis file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\nThe copyright notice above does not evidence any actual or intended publication of such source code\\.\nDisclosure of this source code or any related proprietary information is strictly prohibited without\nthe express written permission of Toolchain Labs, Inc\\.\n\\*/"
+                    },
+                    {
+                        "name": "python_header",
+                        "pattern": "^(#![^\\n]+\n)?# Copyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n#\n# Toolchain Labs, Inc\\. CONFIDENTIAL\n#\n# This file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\n# The copyright notice above does not evidence any actual or intended publication of such source code\\.\n# Disclosure of this source code or any related proprietary information is strictly prohibited without\n# the express written permission of Toolchain Labs, Inc\\."
+                    },
+                    {
+                        "name": "rust_header",
+                        "pattern": "^// Copyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n//\n// Toolchain Labs, Inc\\. CONFIDENTIAL\n//\n// This file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\n// The copyright notice above does not evidence any actual or intended publication of such source code\\.\n// Disclosure of this source code or any related proprietary information is strictly prohibited without\n// the express written permission of Toolchain Labs, Inc\\."
+                    },
+                    {
+                        "name": "shell_header",
+                        "pattern": "^(#![^\\n]+\n)?# Copyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n#\n# Toolchain Labs, Inc\\. CONFIDENTIAL\n#\n# This file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\n# The copyright notice above does not evidence any actual or intended publication of such source code\\.\n# Disclosure of this source code or any related proprietary information is strictly prohibited without\n# the express written permission of Toolchain Labs, Inc\\."
+                    },
+                    {
+                        "name": "terraform_header",
+                        "pattern": "^# Copyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n#\n# Toolchain Labs, Inc\\. CONFIDENTIAL\n#\n# This file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\n# The copyright notice above does not evidence any actual or intended publication of such source code\\.\n# Disclosure of this source code or any related proprietary information is strictly prohibited without\n# the express written permission of Toolchain Labs, Inc\\."
+                    }
+                ],
+                "path_patterns": [
+                    {
+                        "content_encoding": "utf8",
+                        "name": "css_source",
+                        "pattern": "\\.css$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "go_source",
+                        "pattern": "\\.go$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "java_source",
+                        "pattern": "\\.java$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "rust_source",
+                        "pattern": "\\.rs$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "terraform_source",
+                        "pattern": "\\.tf?$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "python_prod",
+                        "pattern": "prod/.+(?<!__init__)\\.py$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "python_source",
+                        "pattern": "src/python/toolchain/.+(?<!__init__)\\.py$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "python_test",
+                        "pattern": "test/.+(?<!__init__)\\.py$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "js_node_toolchain_source",
+                        "pattern": "src/node/toolchain/.+[jt]sx?$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "js_python_toolchain_source",
+                        "pattern": "src/python/toolchain/.+js$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "shell_source",
+                        "pattern": "\\.(ba)?sh$"
+                    }
+                ],
+                "required_matches": {
+                    "css_source": [
+                        "css_header"
+                    ],
+                    "go_source": [
+                        "go_header"
+                    ],
+                    "java_source": [
+                        "java_header"
+                    ],
+                    "js_node_toolchain_source": [
+                        "js_header"
+                    ],
+                    "python_prod": [
+                        "python_header"
+                    ],
+                    "python_source": [
+                        "python_header"
+                    ],
+                    "python_test": [
+                        "python_header"
+                    ],
+                    "shell_source": [
+                        "shell_header"
+                    ],
+                    "terraform_source": [
+                        "terraform_header"
+                    ]
+                },
+                "x-path-pattern": {
+                    "content_encoding": "utf8"
+                }
+            }
+        },
+        "stats": {
+            "log": false
+        },
+        "subprocess-environment": {
+            "env_vars": [
+                "LANG",
+                "LC_CTYPE",
+                "LC_ALL"
+            ]
+        },
+        "tailor": {
+            "build_file_indent": "    "
+        },
+        "test": {
+            "debug": false,
+            "extra_env_vars": [],
+            "force": false,
+            "open_coverage": false,
+            "output": "failed",
+            "use_coverage": true
+        },
+        "toolchain-dependency-api": {
+            "poll_interval": 1,
+            "timeout": 90,
+            "url": "https://app.toolchain.com/api/v1/"
+        },
+        "toolchain-resolve": {
+            "abis": [],
+            "output_file": null,
+            "python_version": "3.8",
+            "sep": "\\n"
+        },
+        "toolchain-setup": {
+            "repo": "toolchain"
+        },
+        "typecheck": {},
+        "validate": {
+            "detail_level": "nonmatching"
+        }
+    },
+    "run_info": {
+        "branch": "pull/8622",
+        "buildroot": "/home/toolchain/project",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.4.0.dev0 --tag=exclude_from_remoting --no-remote-execution test src/python::",
+        "computed_goals": [
+            "test"
+        ],
+        "datetime": "Wednesday Mar 03, 2021 01:33:16",
+        "id": "pants_run_2021_03_03_01_33_16_256_db427ffef54a45baa8a601c29aa2a93a",
+        "machine": "6bffdd48f95a [docker]",
+        "outcome": "SUCCESS",
+        "path": "/home/toolchain/project",
+        "revision": "41b3f11b69771cff90bc43dab523df9f485ed0cd",
+        "specs_from_command_line": [
+            "src/python::"
+        ],
+        "timestamp": 1614735196.1241224,
+        "user": "toolchain",
+        "version": "2.4.0.dev0"
+    },
+    "targets": {
+        "src/python/toolchain/crawler/pypi:tests": [
+            {
+                "filename": "src/python/toolchain/crawler/pypi/conftest.py"
+            },
+            {
+                "filename": "src/python/toolchain/crawler/pypi/data_dump_sharding_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/crawler/pypi/json_api_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/crawler/pypi/models_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/crawler/pypi/xmlrpc_api_test.py"
+            }
+        ],
+        "src/python/toolchain/pants/auth:tests": [
+            {
+                "filename": "src/python/toolchain/pants/auth/client_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/pants/auth/plugin_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/pants/auth/rules_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/pants/auth/server_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/pants/auth/store_test.py"
+            }
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "7f3067b06063d742",
+            "name": "select",
+            "state": "finished",
+            "version": 13,
+            "parent_id": null,
+            "last_update": 1614735209,
+            "start_usecs": 1614735196323827,
+            "end_usecs": 1614735209117705
+        },
+        {
+            "workunit_id": "7145375d7bde4528",
+            "name": "pants.core.goals.test.run_tests",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7f3067b06063d742",
+            "last_update": 1614735209,
+            "start_usecs": 1614735196354306,
+            "description": "`test` goal",
+            "end_usecs": 1614735209117579
+        },
+        {
+            "workunit_id": "3dd581436e5e01fe",
+            "name": "pants.core.goals.test.enrich_test_result",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7145375d7bde4528",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113448,
+            "description": "test",
+            "end_usecs": 1614735208795749,
+            "artifacts": {
+                "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.8.6, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /home/toolchain/.cache/pants/named_caches/pex_root/venvs/short/b232cf98/bin/python3.8\ncachedir: .pytest_cache\nrootdir: /tmp/process-executionQ8qP5S\nplugins: cov-2.11.1, django-4.1.0\ncollecting ... collected 35 items\n\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards[1-1-expected_seed_shards0] PASSED [  2%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards[16-1-expected_seed_shards1] PASSED [  5%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards[16-2-expected_seed_shards2] PASSED [  8%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards[16-4-expected_seed_shards3] PASSED [ 11%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards[16-8-expected_seed_shards4] PASSED [ 14%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards[256-1-expected_seed_shards5] PASSED [ 17%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards[256-2-expected_seed_shards6] PASSED [ 20%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards[256-4-expected_seed_shards7] PASSED [ 22%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards[256-8-expected_seed_shards8] PASSED [ 25%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_num_shards[15] PASSED [ 28%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_num_shards[17] PASSED [ 31%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_num_shards[32] PASSED [ 34%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_num_shards[64] PASSED [ 37%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_num_shards[255] PASSED [ 40%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_num_shards[0] PASSED [ 42%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_num_shards[-1] PASSED [ 45%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[1-0] PASSED [ 48%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[1-2] PASSED [ 51%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[1--1] PASSED [ 54%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[16-0] PASSED [ 57%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[16-3] PASSED [ 60%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[16-7] PASSED [ 62%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[16-10] PASSED [ 65%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[16-17] PASSED [ 68%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[16-32] PASSED [ 71%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[16-64] PASSED [ 74%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[16--1] PASSED [ 77%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[256-0] PASSED [ 80%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[256-3] PASSED [ 82%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[256-10] PASSED [ 85%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[256-65] PASSED [ 88%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[256-255] PASSED [ 91%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[256-257] PASSED [ 94%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[256-512] PASSED [ 97%]\nsrc/python/toolchain/crawler/pypi/data_dump_sharding_test.py::test_compute_seed_shards_invalid_concurrency[256--1] PASSED [100%]\n\n- generated xml file: /tmp/process-executionQ8qP5S/src.python.toolchain.crawler.pypi.data_dump_sharding_test.py.tests.xml -\n\n\n============================== 35 passed in 0.51s ==============================\n",
+                "xml_results": {
+                    "dist/test-results/src.python.toolchain.crawler.pypi.data_dump_sharding_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"35\" time=\"0.521\" timestamp=\"2021-03-01T17:26:01.436428\" hostname=\"b1542b7b83ef\"><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards[1-1-expected_seed_shards0]\" time=\"0.007\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards[16-1-expected_seed_shards1]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards[16-2-expected_seed_shards2]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards[16-4-expected_seed_shards3]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards[16-8-expected_seed_shards4]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards[256-1-expected_seed_shards5]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards[256-2-expected_seed_shards6]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards[256-4-expected_seed_shards7]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards[256-8-expected_seed_shards8]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_num_shards[15]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_num_shards[17]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_num_shards[32]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_num_shards[64]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_num_shards[255]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_num_shards[0]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_num_shards[-1]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[1-0]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[1-2]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[1--1]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[16-0]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[16-3]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[16-7]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[16-10]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[16-17]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[16-32]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[16-64]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[16--1]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[256-0]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[256-3]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[256-10]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[256-65]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[256-255]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[256-257]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[256-512]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.crawler.pypi.data_dump_sharding_test\" name=\"test_compute_seed_shards_invalid_concurrency[256--1]\" time=\"0.005\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "d539eab102916ab1",
+            "name": "pants.core.goals.test.enrich_test_result",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7145375d7bde4528",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113478,
+            "description": "test",
+            "end_usecs": 1614735208798078,
+            "artifacts": {
+                "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.8.6, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /home/toolchain/.cache/pants/named_caches/pex_root/venvs/short/b232cf98/bin/python3.8\ncachedir: .pytest_cache\nrootdir: /tmp/process-executiongnHR2J\nplugins: cov-2.11.1, django-4.1.0\ncollecting ... collected 9 items\n\nsrc/python/toolchain/crawler/pypi/json_api_test.py::test_get_project_data PASSED [ 11%]\nsrc/python/toolchain/crawler/pypi/json_api_test.py::test_purge_ok PASSED [ 22%]\nsrc/python/toolchain/crawler/pypi/json_api_test.py::test_purge_http_failure PASSED [ 33%]\nsrc/python/toolchain/crawler/pypi/json_api_test.py::test_purge_connection_failure PASSED [ 44%]\nsrc/python/toolchain/crawler/pypi/json_api_test.py::TestGetProjectData::test_no_project_datas PASSED [ 55%]\nsrc/python/toolchain/crawler/pypi/json_api_test.py::TestGetProjectData::test_stale_response PASSED [ 66%]\nsrc/python/toolchain/crawler/pypi/json_api_test.py::TestGetProjectData::test_missing_last_serial_response PASSED [ 77%]\nsrc/python/toolchain/crawler/pypi/json_api_test.py::TestGetProjectData::test_request_error[ConnectionError] PASSED [ 88%]\nsrc/python/toolchain/crawler/pypi/json_api_test.py::TestGetProjectData::test_request_error[TooManyRedirects] PASSED [100%]\n\n- generated xml file: /tmp/process-executiongnHR2J/src.python.toolchain.crawler.pypi.json_api_test.py.tests.xml -\n\n\n============================== 9 passed in 0.74s ===============================\n",
+                "xml_results": {
+                    "dist/test-results/src.python.toolchain.crawler.pypi.json_api_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"9\" time=\"0.747\" timestamp=\"2021-03-01T17:26:04.552552\" hostname=\"b1542b7b83ef\"><testcase classname=\"src.python.toolchain.crawler.pypi.json_api_test\" name=\"test_get_project_data\" time=\"0.027\" /><testcase classname=\"src.python.toolchain.crawler.pypi.json_api_test\" name=\"test_purge_ok\" time=\"0.006\" /><testcase classname=\"src.python.toolchain.crawler.pypi.json_api_test\" name=\"test_purge_http_failure\" time=\"0.005\" /><testcase classname=\"src.python.toolchain.crawler.pypi.json_api_test\" name=\"test_purge_connection_failure\" time=\"0.006\" /><testcase classname=\"src.python.toolchain.crawler.pypi.json_api_test.TestGetProjectData\" name=\"test_no_project_datas\" time=\"0.006\" /><testcase classname=\"src.python.toolchain.crawler.pypi.json_api_test.TestGetProjectData\" name=\"test_stale_response\" time=\"0.007\" /><testcase classname=\"src.python.toolchain.crawler.pypi.json_api_test.TestGetProjectData\" name=\"test_missing_last_serial_response\" time=\"0.006\" /><testcase classname=\"src.python.toolchain.crawler.pypi.json_api_test.TestGetProjectData\" name=\"test_request_error[ConnectionError]\" time=\"0.006\" /><testcase classname=\"src.python.toolchain.crawler.pypi.json_api_test.TestGetProjectData\" name=\"test_request_error[TooManyRedirects]\" time=\"0.007\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "1401cbd928811db3",
+            "name": "pants.core.goals.test.enrich_test_result",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7145375d7bde4528",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113507,
+            "description": "test",
+            "end_usecs": 1614735208798931,
+            "artifacts": {
+                "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.8.6, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /home/toolchain/.cache/pants/named_caches/pex_root/venvs/short/b232cf98/bin/python3.8\ncachedir: .pytest_cache\nrootdir: /tmp/process-executionk5EVNk\nplugins: cov-2.11.1, django-4.1.0\ncollecting ... collected 4 items\n\nsrc/python/toolchain/crawler/pypi/models_test.py::TestProcessChangelog::test_create PASSED [ 25%]\nsrc/python/toolchain/crawler/pypi/models_test.py::TestProcessChangelog::test_update_processed_dists PASSED [ 50%]\nsrc/python/toolchain/crawler/pypi/models_test.py::TestDumpDistributionData::test_trigger_incremental_defaults PASSED [ 75%]\nsrc/python/toolchain/crawler/pypi/models_test.py::TestDumpDistributionData::test_trigger_incremental_with_values PASSED [100%]\n\n- generated xml file: /tmp/process-executionk5EVNk/src.python.toolchain.crawler.pypi.models_test.py.tests.xml -\n\n\n============================== 4 passed in 1.69s ===============================\n",
+                "stderr": "/usr/local/lib/python3.8/subprocess.py:942: ResourceWarning: subprocess 2981 is still running\n  _warn(\"subprocess %s is still running\" % self.pid,\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n",
+                "xml_results": {
+                    "dist/test-results/src.python.toolchain.crawler.pypi.models_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"4\" time=\"1.703\" timestamp=\"2021-03-01T17:26:01.435727\" hostname=\"b1542b7b83ef\"><testcase classname=\"src.python.toolchain.crawler.pypi.models_test.TestProcessChangelog\" name=\"test_create\" time=\"1.014\" /><testcase classname=\"src.python.toolchain.crawler.pypi.models_test.TestProcessChangelog\" name=\"test_update_processed_dists\" time=\"0.047\" /><testcase classname=\"src.python.toolchain.crawler.pypi.models_test.TestDumpDistributionData\" name=\"test_trigger_incremental_defaults\" time=\"0.083\" /><testcase classname=\"src.python.toolchain.crawler.pypi.models_test.TestDumpDistributionData\" name=\"test_trigger_incremental_with_values\" time=\"0.144\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "50507fbee9a80d22",
+            "name": "pants.core.goals.test.enrich_test_result",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7145375d7bde4528",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113646,
+            "description": "test",
+            "end_usecs": 1614735208798110,
+            "artifacts": {
+                "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.8.6, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /home/toolchain/.cache/pants/named_caches/pex_root/venvs/short/b232cf98/bin/python3.8\ncachedir: .pytest_cache\nrootdir: /tmp/process-executionRVnSWj\nplugins: cov-2.11.1, django-4.1.0\ncollecting ... collected 2 items\n\nsrc/python/toolchain/crawler/pypi/xmlrpc_api_test.py::test_get_last_serial SKIPPED [ 50%]\nsrc/python/toolchain/crawler/pypi/xmlrpc_api_test.py::test_get_changed_packages SKIPPED [100%]\n\n- generated xml file: /tmp/process-executionRVnSWj/src.python.toolchain.crawler.pypi.xmlrpc_api_test.py.tests.xml -\n\n\n============================== 2 skipped in 0.29s ==============================\n",
+                "stderr": "/usr/local/lib/python3.8/subprocess.py:942: ResourceWarning: subprocess 1380 is still running\n  _warn(\"subprocess %s is still running\" % self.pid,\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n",
+                "xml_results": {
+                    "dist/test-results/src.python.toolchain.crawler.pypi.xmlrpc_api_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"2\" tests=\"2\" time=\"0.294\" timestamp=\"2021-03-02T19:49:57.904232\" hostname=\"654ee14d1365\"><testcase classname=\"src.python.toolchain.crawler.pypi.xmlrpc_api_test\" name=\"test_get_last_serial\" time=\"0.001\"><skipped type=\"pytest.skip\" message=\"pypi has disabled XML RPC APIs\">/tmp/process-executionRVnSWj/src/python/toolchain/crawler/pypi/xmlrpc_api_test.py:21: pypi has disabled XML RPC APIs</skipped></testcase><testcase classname=\"src.python.toolchain.crawler.pypi.xmlrpc_api_test\" name=\"test_get_changed_packages\" time=\"0.000\"><skipped type=\"pytest.skip\" message=\"pypi has disabled XML RPC APIs\">/tmp/process-executionRVnSWj/src/python/toolchain/crawler/pypi/xmlrpc_api_test.py:26: pypi has disabled XML RPC APIs</skipped></testcase></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "b0b2a44830dc582b",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "3dd581436e5e01fe",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113668,
+            "description": "Run Pytest",
+            "end_usecs": 1614735208795621
+        },
+        {
+            "workunit_id": "2d08686a1ce4e8b0",
+            "name": "pants.core.goals.test.enrich_test_result",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7145375d7bde4528",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113691,
+            "description": "test",
+            "end_usecs": 1614735208805413,
+            "artifacts": {
+                "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.8.6, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /home/toolchain/.cache/pants/named_caches/pex_root/venvs/short/b232cf98/bin/python3.8\ncachedir: .pytest_cache\nrootdir: /tmp/process-executionnwrbfi\nplugins: cov-2.11.1, django-4.1.0\ncollecting ... collected 24 items\n\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_with_file PASSED [  4%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_with_file_extra_keys PASSED [  8%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_with_env_var PASSED [ 12%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_with_env_var_expires_soon PASSED [ 16%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_with_env_var_expired_token PASSED [ 20%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_with_env_variables PASSED [ 25%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_with_default_env_var PASSED [ 29%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_with_file_missing PASSED [ 33%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_with_invalid_env_var PASSED [ 37%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_with_repo_and_no_env_vars PASSED [ 41%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_acquire_restricted PASSED [ 45%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_acquire_restricted_no_env_variables PASSED [ 50%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_with_empty_env_var PASSED [ 54%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_with_invalid_file PASSED [ 58%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_server_reject_token PASSED [ 62%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_server_temporary_error PASSED [ 66%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_server_error PASSED [ 70%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_server_bad_request PASSED [ 75%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthClient::test_network_error PASSED [ 79%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthToken::test_from_json_dict PASSED [ 83%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthToken::test_from_json_dict_with_ids PASSED [ 87%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthToken::test_from_json_dict_with_unknown_keys PASSED [ 91%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthToken::test_from_access_token_string PASSED [ 95%]\nsrc/python/toolchain/pants/auth/client_test.py::TestAuthToken::test_get_headers PASSED [100%]\n\n- generated xml file: /tmp/process-executionnwrbfi/src.python.toolchain.pants.auth.client_test.py.tests.xml -\n\n\n============================== 24 passed in 0.76s ==============================\n",
+                "xml_results": {
+                    "dist/test-results/src.python.toolchain.pants.auth.client_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"24\" time=\"0.771\" timestamp=\"2021-03-01T21:20:49.379820\" hostname=\"6a12923f5cac\"><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_with_file\" time=\"0.008\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_with_file_extra_keys\" time=\"0.004\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_with_env_var\" time=\"0.100\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_with_env_var_expires_soon\" time=\"0.014\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_with_env_var_expired_token\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_with_env_variables\" time=\"0.013\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_with_default_env_var\" time=\"0.013\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_with_file_missing\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_with_invalid_env_var\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_with_repo_and_no_env_vars\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_acquire_restricted\" time=\"0.004\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_acquire_restricted_no_env_variables\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_with_empty_env_var\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_with_invalid_file\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_server_reject_token\" time=\"0.004\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_server_temporary_error\" time=\"0.004\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_server_error\" time=\"0.004\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_server_bad_request\" time=\"0.004\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthClient\" name=\"test_network_error\" time=\"0.004\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthToken\" name=\"test_from_json_dict\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthToken\" name=\"test_from_json_dict_with_ids\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthToken\" name=\"test_from_json_dict_with_unknown_keys\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthToken\" name=\"test_from_access_token_string\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.pants.auth.client_test.TestAuthToken\" name=\"test_get_headers\" time=\"0.004\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "3a86a315f485cb5f",
+            "name": "pants.core.goals.test.enrich_test_result",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7145375d7bde4528",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113761,
+            "description": "test",
+            "end_usecs": 1614735208807088,
+            "artifacts": {
+                "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.8.6, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /home/toolchain/.cache/pants/named_caches/pex_root/venvs/short/b232cf98/bin/python3.8\ncachedir: .pytest_cache\nrootdir: /tmp/process-executionRc4qqI\nplugins: cov-2.11.1, django-4.1.0\ncollecting ... collected 4 items\n\nsrc/python/toolchain/pants/auth/rules_test.py::TestRules::test_acquire_access_token_console PASSED [ 25%]\nsrc/python/toolchain/pants/auth/rules_test.py::TestRules::test_acquire_access_token_server_error PASSED [ 50%]\nsrc/python/toolchain/pants/auth/rules_test.py::TestRules::test_acquire_access_token_headless PASSED [ 75%]\nsrc/python/toolchain/pants/auth/rules_test.py::TestRules::test_acquire_access_token_headless_to_file PASSED [100%]\n\n- generated xml file: /tmp/process-executionRc4qqI/src.python.toolchain.pants.auth.rules_test.py.tests.xml -\n\n\n============================== 4 passed in 2.45s ===============================\n",
+                "xml_results": {
+                    "dist/test-results/src.python.toolchain.pants.auth.rules_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"4\" time=\"2.465\" timestamp=\"2021-03-01T21:20:49.390772\" hostname=\"6a12923f5cac\"><testcase classname=\"src.python.toolchain.pants.auth.rules_test.TestRules\" name=\"test_acquire_access_token_console\" time=\"0.719\" /><testcase classname=\"src.python.toolchain.pants.auth.rules_test.TestRules\" name=\"test_acquire_access_token_server_error\" time=\"0.410\" /><testcase classname=\"src.python.toolchain.pants.auth.rules_test.TestRules\" name=\"test_acquire_access_token_headless\" time=\"0.126\" /><testcase classname=\"src.python.toolchain.pants.auth.rules_test.TestRules\" name=\"test_acquire_access_token_headless_to_file\" time=\"0.087\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "4b950cedf05a4989",
+            "name": "pants.core.goals.test.enrich_test_result",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7145375d7bde4528",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113808,
+            "description": "test",
+            "end_usecs": 1614735208805706,
+            "artifacts": {
+                "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.8.6, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /home/toolchain/.cache/pants/named_caches/pex_root/venvs/short/b232cf98/bin/python3.8\ncachedir: .pytest_cache\nrootdir: /tmp/process-executionbi5A0J\nplugins: cov-2.11.1, django-4.1.0\ncollecting ... collected 5 items\n\nsrc/python/toolchain/pants/auth/server_test.py::test_server_skip_used_ports[used_ports0-8000] PASSED [ 20%]\nsrc/python/toolchain/pants/auth/server_test.py::test_server_skip_used_ports[used_ports1-8003] PASSED [ 40%]\nsrc/python/toolchain/pants/auth/server_test.py::test_server_skip_used_ports[used_ports2-8007] PASSED [ 60%]\nsrc/python/toolchain/pants/auth/server_test.py::test_server_all_ports_busy PASSED [ 80%]\nsrc/python/toolchain/pants/auth/server_test.py::test_server_success PASSED [100%]\n\n- generated xml file: /tmp/process-executionbi5A0J/src.python.toolchain.pants.auth.server_test.py.tests.xml -\n\n\n============================== 5 passed in 0.84s ===============================\n",
+                "xml_results": {
+                    "dist/test-results/src.python.toolchain.pants.auth.server_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"5\" time=\"0.854\" timestamp=\"2021-03-01T17:25:58.480676\" hostname=\"b1542b7b83ef\"><testcase classname=\"src.python.toolchain.pants.auth.server_test\" name=\"test_server_skip_used_ports[used_ports0-8000]\" time=\"0.004\" /><testcase classname=\"src.python.toolchain.pants.auth.server_test\" name=\"test_server_skip_used_ports[used_ports1-8003]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.pants.auth.server_test\" name=\"test_server_skip_used_ports[used_ports2-8007]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.pants.auth.server_test\" name=\"test_server_all_ports_busy\" time=\"0.013\" /><testcase classname=\"src.python.toolchain.pants.auth.server_test\" name=\"test_server_success\" time=\"0.207\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "243736064293b4fe",
+            "name": "pants.core.goals.test.enrich_test_result",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7145375d7bde4528",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113820,
+            "description": "test",
+            "end_usecs": 1614735208786417,
+            "artifacts": {
+                "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.8.6, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /home/toolchain/.cache/pants/named_caches/pex_root/venvs/short/b232cf98/bin/python3.8\ncachedir: .pytest_cache\nrootdir: /tmp/process-executionU57uxr\nplugins: cov-2.11.1, django-4.1.0\ncollecting ... collected 5 items\n\nsrc/python/toolchain/pants/auth/store_test.py::TestAutStore::test_get_access_token PASSED [ 20%]\nsrc/python/toolchain/pants/auth/store_test.py::TestAutStore::test_get_auth_state PASSED [ 40%]\nsrc/python/toolchain/pants/auth/store_test.py::TestAutStore::test_get_auth_state_fail PASSED [ 60%]\nsrc/python/toolchain/pants/auth/store_test.py::TestAutStore::test_get_auth_state_transient_and_success PASSED [ 80%]\nsrc/python/toolchain/pants/auth/store_test.py::TestAutStore::test_get_token_after_expiration PASSED [100%]\n\n- generated xml file: /tmp/process-executionU57uxr/src.python.toolchain.pants.auth.store_test.py.tests.xml -\n\n\n============================== 5 passed in 1.10s ===============================\n",
+                "xml_results": {
+                    "dist/test-results/src.python.toolchain.pants.auth.store_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"5\" time=\"1.110\" timestamp=\"2021-03-01T21:20:49.379635\" hostname=\"6a12923f5cac\"><testcase classname=\"src.python.toolchain.pants.auth.store_test.TestAutStore\" name=\"test_get_access_token\" time=\"0.008\" /><testcase classname=\"src.python.toolchain.pants.auth.store_test.TestAutStore\" name=\"test_get_auth_state\" time=\"0.005\" /><testcase classname=\"src.python.toolchain.pants.auth.store_test.TestAutStore\" name=\"test_get_auth_state_fail\" time=\"0.004\" /><testcase classname=\"src.python.toolchain.pants.auth.store_test.TestAutStore\" name=\"test_get_auth_state_transient_and_success\" time=\"0.006\" /><testcase classname=\"src.python.toolchain.pants.auth.store_test.TestAutStore\" name=\"test_get_token_after_expiration\" time=\"0.006\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "11731b03b09e333d",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "2d08686a1ce4e8b0",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113838,
+            "description": "Run Pytest",
+            "end_usecs": 1614735208805298
+        },
+        {
+            "workunit_id": "abb3654c52afce17",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "50507fbee9a80d22",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113861,
+            "description": "Run Pytest",
+            "end_usecs": 1614735208797789
+        },
+        {
+            "workunit_id": "cd29a50581b8fdc3",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "4b950cedf05a4989",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113910,
+            "description": "Run Pytest",
+            "end_usecs": 1614735208805606
+        },
+        {
+            "workunit_id": "1da7283b814764a6",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "243736064293b4fe",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113937,
+            "description": "Run Pytest",
+            "end_usecs": 1614735208786194
+        },
+        {
+            "workunit_id": "702e0aeb1306d83d",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "1401cbd928811db3",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113942,
+            "description": "Run Pytest",
+            "end_usecs": 1614735208798810
+        },
+        {
+            "workunit_id": "0da874d9ee06c117",
+            "name": "pants.core.goals.test.enrich_test_result",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7145375d7bde4528",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197113965,
+            "description": "test",
+            "end_usecs": 1614735208804568,
+            "artifacts": {
+                "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.8.6, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /home/toolchain/.cache/pants/named_caches/pex_root/venvs/short/b232cf98/bin/python3.8\ncachedir: .pytest_cache\nrootdir: /tmp/process-executionwgA53y\nplugins: cov-2.11.1, django-4.1.0\ncollecting ... collected 5 items\n\nsrc/python/toolchain/pants/auth/plugin_test.py::test_auth_plugin PASSED  [ 20%]\nsrc/python/toolchain/pants/auth/plugin_test.py::test_auth_plugin_http_error PASSED [ 40%]\nsrc/python/toolchain/pants/auth/plugin_test.py::test_auth_plugin_network_error PASSED [ 60%]\nsrc/python/toolchain/pants/auth/plugin_test.py::test_auth_plugin_no_repo PASSED [ 80%]\nsrc/python/toolchain/pants/auth/plugin_test.py::test_ignore_headers PASSED [100%]\n\n- generated xml file: /tmp/process-executionwgA53y/src.python.toolchain.pants.auth.plugin_test.py.tests.xml -\n\n\n============================== 5 passed in 0.94s ===============================\n",
+                "xml_results": {
+                    "dist/test-results/src.python.toolchain.pants.auth.plugin_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"5\" time=\"0.948\" timestamp=\"2021-03-01T21:20:49.382324\" hostname=\"6a12923f5cac\"><testcase classname=\"src.python.toolchain.pants.auth.plugin_test\" name=\"test_auth_plugin\" time=\"0.010\" /><testcase classname=\"src.python.toolchain.pants.auth.plugin_test\" name=\"test_auth_plugin_http_error\" time=\"0.006\" /><testcase classname=\"src.python.toolchain.pants.auth.plugin_test\" name=\"test_auth_plugin_network_error\" time=\"0.006\" /><testcase classname=\"src.python.toolchain.pants.auth.plugin_test\" name=\"test_auth_plugin_no_repo\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.pants.auth.plugin_test\" name=\"test_ignore_headers\" time=\"0.007\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "6cab07e4147ae90c",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "3a86a315f485cb5f",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197114056,
+            "description": "Run Pytest",
+            "end_usecs": 1614735208806992
+        },
+        {
+            "workunit_id": "b2681c325c50f6c3",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "d539eab102916ab1",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197114086,
+            "description": "Run Pytest",
+            "end_usecs": 1614735208797535
+        },
+        {
+            "workunit_id": "03d6a8bd783626fc",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "0da874d9ee06c117",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197114105,
+            "description": "Run Pytest",
+            "end_usecs": 1614735208804417
+        },
+        {
+            "workunit_id": "7649ced39ef32f6e",
+            "name": "pants.backend.python.goals.pytest_runner.setup_pytest_for_target",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "cd29a50581b8fdc3",
+            "last_update": 1614735209,
+            "start_usecs": 1614735197117888,
+            "end_usecs": 1614735208751262
+        },
+        {
+            "workunit_id": "16895661b9fd1c08",
+            "name": "pants.backend.python.util_rules.pex.create_pex",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7649ced39ef32f6e",
+            "last_update": 1614735209,
+            "start_usecs": 1614735207909341,
+            "end_usecs": 1614735208558265
+        },
+        {
+            "workunit_id": "68605d37298d3cef",
+            "name": "pants.backend.python.util_rules.pex.build_pex",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "16895661b9fd1c08",
+            "last_update": 1614735209,
+            "start_usecs": 1614735207912913,
+            "end_usecs": 1614735208557199
+        },
+        {
+            "workunit_id": "5d056b1175a1046d",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "68605d37298d3cef",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208431483,
+            "end_usecs": 1614735208555294
+        },
+        {
+            "workunit_id": "0a72a41bd5ec007b",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "5d056b1175a1046d",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208431697,
+            "end_usecs": 1614735208553674
+        },
+        {
+            "workunit_id": "50fef7db22b2de68",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "0a72a41bd5ec007b",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208437301,
+            "description": "Building pytest.pex with 2 requirements: pytest-cov>=2.11.1, pytest==6.2.2",
+            "end_usecs": 1614735208543111
+        },
+        {
+            "workunit_id": "64197f5e89bddf16",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "50fef7db22b2de68",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208437329,
+            "end_usecs": 1614735208543094,
+            "counters": {
+                "remote_cache_total_time_saved_ms": 3982,
+                "local_cache_requests": 1,
+                "remote_cache_speculation_remote_completed_first": 1,
+                "local_cache_requests_uncached": 1
+            }
+        },
+        {
+            "workunit_id": "264db90c850624a6",
+            "name": "check_action_cache",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "64197f5e89bddf16",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208437691,
+            "end_usecs": 1614735208541101,
+            "counters": {
+                "remote_cache_requests_cached": 1,
+                "remote_cache_requests": 1
+            }
+        },
+        {
+            "workunit_id": "0cfc95afd489958c",
+            "name": "pants.backend.python.util_rules.pex.create_venv_pex",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7649ced39ef32f6e",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208559662,
+            "end_usecs": 1614735208745885
+        },
+        {
+            "workunit_id": "80b343511460e916",
+            "name": "pants.backend.python.util_rules.pex.build_pex",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "0cfc95afd489958c",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208563034,
+            "end_usecs": 1614735208742636
+        },
+        {
+            "workunit_id": "5709340f1ecdee8a",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "80b343511460e916",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208611826,
+            "end_usecs": 1614735208741947
+        },
+        {
+            "workunit_id": "632c05f59907f25f",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "5709340f1ecdee8a",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208611936,
+            "end_usecs": 1614735208741791
+        },
+        {
+            "workunit_id": "b13b1500aa4a6153",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "632c05f59907f25f",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208615490,
+            "description": "Building pytest_runner.pex",
+            "end_usecs": 1614735208717091
+        },
+        {
+            "workunit_id": "b28a08769a9ec2ba",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "b13b1500aa4a6153",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208615540,
+            "end_usecs": 1614735208717075,
+            "counters": {
+                "local_cache_requests_uncached": 1,
+                "local_cache_requests": 1,
+                "remote_cache_speculation_remote_completed_first": 1,
+                "remote_cache_total_time_saved_ms": 2868
+            }
+        },
+        {
+            "workunit_id": "d13f052986234ede",
+            "name": "check_action_cache",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "b28a08769a9ec2ba",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208616322,
+            "end_usecs": 1614735208706574,
+            "counters": {
+                "remote_cache_requests": 1,
+                "remote_cache_requests_cached": 1
+            }
+        },
+        {
+            "workunit_id": "a5831017a7ad999d",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "03d6a8bd783626fc",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208751531,
+            "end_usecs": 1614735208802939
+        },
+        {
+            "workunit_id": "bdd7348c6232e68c",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "11731b03b09e333d",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208751888,
+            "end_usecs": 1614735208803841
+        },
+        {
+            "workunit_id": "4f4d1d0c2b3f8551",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "6cab07e4147ae90c",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208751897,
+            "end_usecs": 1614735208806015
+        },
+        {
+            "workunit_id": "079adbad33a5926d",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "cd29a50581b8fdc3",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208751932,
+            "end_usecs": 1614735208804130
+        },
+        {
+            "workunit_id": "0faaf0944239b52b",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "1da7283b814764a6",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208752026,
+            "end_usecs": 1614735208784414
+        },
+        {
+            "workunit_id": "a09afa23375928bb",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "a5831017a7ad999d",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208754254,
+            "description": "Run Pytest for src/python/toolchain/pants/auth/plugin_test.py:tests",
+            "end_usecs": 1614735208802739
+        },
+        {
+            "workunit_id": "bfee3f2dabee5ed4",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "a09afa23375928bb",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208754271,
+            "end_usecs": 1614735208802728,
+            "counters": {
+                "local_cache_requests_uncached": 1,
+                "local_cache_requests": 1,
+                "remote_cache_speculation_remote_completed_first": 1,
+                "remote_cache_total_time_saved_ms": 5472
+            }
+        },
+        {
+            "workunit_id": "1e6be397e11d9bb9",
+            "name": "check_action_cache",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "bfee3f2dabee5ed4",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208754682,
+            "end_usecs": 1614735208775554,
+            "counters": {
+                "remote_cache_requests_cached": 1,
+                "remote_cache_requests": 1
+            }
+        },
+        {
+            "workunit_id": "6e76555ba703b6f7",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "079adbad33a5926d",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208755224,
+            "description": "Run Pytest for src/python/toolchain/pants/auth/server_test.py:tests",
+            "end_usecs": 1614735208803961
+        },
+        {
+            "workunit_id": "c6a0437679acf8c9",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "6e76555ba703b6f7",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208755257,
+            "end_usecs": 1614735208803951,
+            "counters": {
+                "local_cache_requests_uncached": 1,
+                "remote_cache_speculation_remote_completed_first": 1,
+                "local_cache_requests": 1,
+                "remote_cache_total_time_saved_ms": 2508
+            }
+        },
+        {
+            "workunit_id": "f3d94b7ed1bc2c50",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "4f4d1d0c2b3f8551",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208755260,
+            "description": "Run Pytest for src/python/toolchain/pants/auth/rules_test.py:tests",
+            "end_usecs": 1614735208805870
+        },
+        {
+            "workunit_id": "e762695da5077d8a",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "bdd7348c6232e68c",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208755277,
+            "description": "Run Pytest for src/python/toolchain/pants/auth/client_test.py:tests",
+            "end_usecs": 1614735208803570
+        },
+        {
+            "workunit_id": "9d7be08b7670c1f7",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "f3d94b7ed1bc2c50",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208755295,
+            "end_usecs": 1614735208805858,
+            "counters": {
+                "local_cache_requests": 1,
+                "remote_cache_speculation_remote_completed_first": 1,
+                "local_cache_requests_uncached": 1,
+                "remote_cache_total_time_saved_ms": 7066
+            }
+        },
+        {
+            "workunit_id": "84e8d3769d953c0c",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "e762695da5077d8a",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208755296,
+            "end_usecs": 1614735208803560,
+            "counters": {
+                "remote_cache_total_time_saved_ms": 5307,
+                "local_cache_requests": 1,
+                "remote_cache_speculation_remote_completed_first": 1,
+                "local_cache_requests_uncached": 1
+            }
+        },
+        {
+            "workunit_id": "720c388e5abbcba4",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "0faaf0944239b52b",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208755881,
+            "description": "Run Pytest for src/python/toolchain/pants/auth/store_test.py:tests",
+            "end_usecs": 1614735208784167
+        },
+        {
+            "workunit_id": "05ac5cad4738377b",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "720c388e5abbcba4",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208755908,
+            "end_usecs": 1614735208784154,
+            "counters": {
+                "remote_cache_speculation_remote_completed_first": 1,
+                "local_cache_requests_uncached": 1,
+                "remote_cache_total_time_saved_ms": 5727,
+                "local_cache_requests": 1
+            }
+        },
+        {
+            "workunit_id": "a8472687ef63c1cf",
+            "name": "check_action_cache",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "9d7be08b7670c1f7",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208755942,
+            "end_usecs": 1614735208783602,
+            "counters": {
+                "remote_cache_requests": 1,
+                "remote_cache_requests_cached": 1
+            }
+        },
+        {
+            "workunit_id": "d4d00d024988ed00",
+            "name": "check_action_cache",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "84e8d3769d953c0c",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208756153,
+            "end_usecs": 1614735208784729,
+            "counters": {
+                "remote_cache_requests_cached": 1,
+                "remote_cache_requests": 1
+            }
+        },
+        {
+            "workunit_id": "b79fd116b958a3ce",
+            "name": "check_action_cache",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "c6a0437679acf8c9",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208756225,
+            "end_usecs": 1614735208783510,
+            "counters": {
+                "remote_cache_requests_cached": 1,
+                "remote_cache_requests": 1
+            }
+        },
+        {
+            "workunit_id": "bff27e461244ad03",
+            "name": "check_action_cache",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "05ac5cad4738377b",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208756470,
+            "end_usecs": 1614735208783993,
+            "counters": {
+                "remote_cache_requests": 1,
+                "remote_cache_requests_cached": 1
+            }
+        },
+        {
+            "workunit_id": "7b2bb6f2fac3685e",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "abb3654c52afce17",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208772411,
+            "end_usecs": 1614735208796324
+        },
+        {
+            "workunit_id": "1db4e34552ed64dc",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7b2bb6f2fac3685e",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208773504,
+            "description": "Run Pytest for src/python/toolchain/crawler/pypi/xmlrpc_api_test.py:tests",
+            "end_usecs": 1614735208795965
+        },
+        {
+            "workunit_id": "6d9c28b48eb0038d",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "1db4e34552ed64dc",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208773526,
+            "end_usecs": 1614735208795954,
+            "counters": {
+                "local_cache_requests_uncached": 1,
+                "local_cache_requests": 1,
+                "remote_cache_speculation_remote_completed_first": 1,
+                "remote_cache_total_time_saved_ms": 7882
+            }
+        },
+        {
+            "workunit_id": "36e1899bbbf51b19",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "b2681c325c50f6c3",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208773664,
+            "end_usecs": 1614735208796083
+        },
+        {
+            "workunit_id": "028dff6aca8fecc0",
+            "name": "check_action_cache",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "6d9c28b48eb0038d",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208773894,
+            "end_usecs": 1614735208795758,
+            "counters": {
+                "remote_cache_requests": 1,
+                "remote_cache_requests_cached": 1
+            }
+        },
+        {
+            "workunit_id": "230a6b9d68a93041",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "b0b2a44830dc582b",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208774287,
+            "end_usecs": 1614735208793870
+        },
+        {
+            "workunit_id": "9685623b07538d1b",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "702e0aeb1306d83d",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208774292,
+            "end_usecs": 1614735208797247
+        },
+        {
+            "workunit_id": "79bde2384a232e4c",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "36e1899bbbf51b19",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208774370,
+            "description": "Run Pytest for src/python/toolchain/crawler/pypi/json_api_test.py:tests",
+            "end_usecs": 1614735208795864
+        },
+        {
+            "workunit_id": "b3aaf994376c304e",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "79bde2384a232e4c",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208774407,
+            "end_usecs": 1614735208795819,
+            "counters": {
+                "remote_cache_speculation_remote_completed_first": 1,
+                "remote_cache_total_time_saved_ms": 2508,
+                "local_cache_requests": 1,
+                "local_cache_requests_uncached": 1
+            }
+        },
+        {
+            "workunit_id": "fba79549c9c6a291",
+            "name": "check_action_cache",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "b3aaf994376c304e",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208774758,
+            "end_usecs": 1614735208795690,
+            "counters": {
+                "remote_cache_requests_cached": 1,
+                "remote_cache_requests": 1
+            }
+        },
+        {
+            "workunit_id": "45e3a13119100c75",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "230a6b9d68a93041",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208774817,
+            "description": "Run Pytest for src/python/toolchain/crawler/pypi/data_dump_sharding_test.py:tests",
+            "end_usecs": 1614735208793585
+        },
+        {
+            "workunit_id": "1110de6af1effb15",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "9685623b07538d1b",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208774828,
+            "description": "Run Pytest for src/python/toolchain/crawler/pypi/models_test.py:tests",
+            "end_usecs": 1614735208797008
+        },
+        {
+            "workunit_id": "e526a0bd4ee20375",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "45e3a13119100c75",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208774848,
+            "end_usecs": 1614735208793575,
+            "counters": {
+                "remote_cache_total_time_saved_ms": 2389,
+                "remote_cache_speculation_remote_completed_first": 1,
+                "local_cache_requests": 1,
+                "local_cache_requests_uncached": 1
+            }
+        },
+        {
+            "workunit_id": "649b3a410414cd42",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "1110de6af1effb15",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208774863,
+            "end_usecs": 1614735208796993,
+            "counters": {
+                "local_cache_requests_uncached": 1,
+                "remote_cache_speculation_remote_completed_first": 1,
+                "remote_cache_total_time_saved_ms": 6426,
+                "local_cache_requests": 1
+            }
+        },
+        {
+            "workunit_id": "a26ab161023f1a40",
+            "name": "check_action_cache",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "649b3a410414cd42",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208775242,
+            "end_usecs": 1614735208796878,
+            "counters": {
+                "remote_cache_requests_cached": 1,
+                "remote_cache_requests": 1
+            }
+        },
+        {
+            "workunit_id": "9aead353eafc32d2",
+            "name": "check_action_cache",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "e526a0bd4ee20375",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208775289,
+            "end_usecs": 1614735208793440,
+            "counters": {
+                "remote_cache_requests_cached": 1,
+                "remote_cache_requests": 1
+            }
+        },
+        {
+            "workunit_id": "757a7ce46d251ef8",
+            "name": "pants.backend.python.goals.coverage_py.generate_coverage_reports",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7145375d7bde4528",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208809923,
+            "description": "Generate Pytest coverage reports",
+            "end_usecs": 1614735209116578
+        },
+        {
+            "workunit_id": "96b672da6012a975",
+            "name": "pants.backend.python.goals.coverage_py.setup_coverage",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "757a7ce46d251ef8",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208810050,
+            "end_usecs": 1614735208907472
+        },
+        {
+            "workunit_id": "b55705cd4f023183",
+            "name": "pants.backend.python.goals.coverage_py.merge_coverage_data",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "757a7ce46d251ef8",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208810053,
+            "description": "Merge Pytest coverage data",
+            "end_usecs": 1614735208973180
+        },
+        {
+            "workunit_id": "c92c8487418c330c",
+            "name": "pants.backend.python.util_rules.pex.create_venv_pex",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "96b672da6012a975",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208811030,
+            "end_usecs": 1614735208907402
+        },
+        {
+            "workunit_id": "5cb384a7dddfa709",
+            "name": "pants.backend.python.util_rules.pex.build_pex",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "c92c8487418c330c",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208811211,
+            "end_usecs": 1614735208903856
+        },
+        {
+            "workunit_id": "0c36ee1c277cff0e",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "5cb384a7dddfa709",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208812952,
+            "end_usecs": 1614735208903635
+        },
+        {
+            "workunit_id": "68ad1461744f995d",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "0c36ee1c277cff0e",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208813024,
+            "end_usecs": 1614735208903534
+        },
+        {
+            "workunit_id": "2391aacb521a80b3",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "68ad1461744f995d",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208813137,
+            "description": "Building coverage.pex with 1 requirement: coverage>=5.0.3,<5.1",
+            "end_usecs": 1614735208903171
+        },
+        {
+            "workunit_id": "f8fc53820c47d4c7",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "2391aacb521a80b3",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208813151,
+            "end_usecs": 1614735208903147,
+            "counters": {
+                "local_cache_requests_uncached": 1,
+                "local_cache_requests": 1,
+                "remote_cache_speculation_remote_completed_first": 1,
+                "remote_cache_total_time_saved_ms": 3238
+            }
+        },
+        {
+            "workunit_id": "f2286054e4b040ab",
+            "name": "check_action_cache",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "f8fc53820c47d4c7",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208813484,
+            "end_usecs": 1614735208902391,
+            "counters": {
+                "remote_cache_requests_cached": 1,
+                "remote_cache_requests": 1
+            }
+        },
+        {
+            "workunit_id": "f165f632e53d6cb6",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "b55705cd4f023183",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208909218,
+            "end_usecs": 1614735208973045
+        },
+        {
+            "workunit_id": "66df5a45ef5dfe74",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "f165f632e53d6cb6",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208909327,
+            "end_usecs": 1614735208972970
+        },
+        {
+            "workunit_id": "7867ba1777096ec7",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "66df5a45ef5dfe74",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208910196,
+            "description": "Merge 9 Pytest coverage reports.",
+            "end_usecs": 1614735208972695
+        },
+        {
+            "workunit_id": "45eb2f42ec91f62f",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "7867ba1777096ec7",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208910215,
+            "end_usecs": 1614735208972675,
+            "counters": {
+                "local_cache_requests": 1,
+                "remote_cache_speculation_remote_completed_first": 1,
+                "local_cache_requests_uncached": 1,
+                "remote_cache_total_time_saved_ms": 1098
+            }
+        },
+        {
+            "workunit_id": "6e7a75f781d2c279",
+            "name": "check_action_cache",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "45eb2f42ec91f62f",
+            "last_update": 1614735209,
+            "start_usecs": 1614735208910856,
+            "end_usecs": 1614735208971576,
+            "counters": {
+                "remote_cache_requests": 1,
+                "remote_cache_requests_cached": 1
+            }
+        },
+        {
+            "workunit_id": "8e0ab488d6788ce8",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "757a7ce46d251ef8",
+            "last_update": 1614735209,
+            "start_usecs": 1614735209042113,
+            "end_usecs": 1614735209115861
+        },
+        {
+            "workunit_id": "dac79b8acd228c06",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "8e0ab488d6788ce8",
+            "last_update": 1614735209,
+            "start_usecs": 1614735209042182,
+            "end_usecs": 1614735209115803
+        },
+        {
+            "workunit_id": "f3f008d9aec06e86",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "dac79b8acd228c06",
+            "last_update": 1614735209,
+            "start_usecs": 1614735209042870,
+            "description": "Generate Pytest xml coverage report.",
+            "end_usecs": 1614735209115523
+        },
+        {
+            "workunit_id": "467407319fa2feef",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "f3f008d9aec06e86",
+            "last_update": 1614735209,
+            "start_usecs": 1614735209042883,
+            "end_usecs": 1614735209115501,
+            "counters": {
+                "local_cache_requests_uncached": 1,
+                "remote_cache_speculation_remote_completed_first": 1,
+                "local_cache_requests": 1,
+                "remote_cache_total_time_saved_ms": 474
+            }
+        },
+        {
+            "workunit_id": "6571179b7de7ce9b",
+            "name": "check_action_cache",
+            "state": "finished",
+            "version": 13,
+            "parent_id": "467407319fa2feef",
+            "last_update": 1614735209,
+            "start_usecs": 1614735209043388,
+            "end_usecs": 1614735209108989,
+            "counters": {
+                "remote_cache_requests": 1,
+                "remote_cache_requests_cached": 1
+            }
+        }
+    ]
+}

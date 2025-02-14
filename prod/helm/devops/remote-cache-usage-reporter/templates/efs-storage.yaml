@@ -1,0 +1,39 @@
+# Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{- $volume_handle := printf "%s::%s" .Values.localStorage.efsFileSystemId .Values.localStorage.efsAccessPointId }}
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{.Release.Namespace }}-remote-cache-efs-storage-usage
+  labels:
+    chart: {{ .Chart.Name  }}
+    heritage: {{ .Release.Service }}
+    toolchain_product: "remote-cache"
+spec:
+  capacity:
+    storage: 9999Gi # Somewhat meaningless in this context since we only read. but the k8s API requires it.
+  volumeMode: Filesystem
+  accessModes:
+    - ReadOnlyMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: efs-remote-cache-sc
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: {{ $volume_handle }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: remote-cache-usage-efs-storage-claim
+  labels:
+    chart: {{ .Chart.Name  }}
+    heritage: {{ .Release.Service }}
+    toolchain_product: "remote-cache"
+spec:
+  accessModes:
+    - ReadOnlyMany
+  storageClassName: efs-remote-cache-sc  # defined in prod/helm/aws/aws-efs-csi-driver
+  resources:
+    requests:
+      storage: 9999Gi # Somewhat meaningless in this context since we only read. but the k8s API requires it.

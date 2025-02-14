@@ -1,0 +1,76 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{ if .Values.curator.enabled }}
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  # prod/terraform/resources/us-east-1/kubernetes/dev-e1-1/service_role_policies/es_logging.tf
+  name: curator
+  labels:
+      app: es-logs-curator
+  annotations:
+     eks.amazonaws.com/role-arn: {{ .Values.curator.iam_role_arn }}
+
+---
+
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: es-logs-curator
+  namespace: logging
+spec:
+  schedule: "15 1 * * *"  # Every day at at 1:15am UTC (6:15pm PST)
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 2
+  suspend: false
+  jobTemplate:
+    spec:
+      parallelism: 1
+      completions: 1
+      backoffLimit: 1
+      # this doesn't actually work right now. https://github.com/aws/containers-roadmap/issues/255
+      ttlSecondsAfterFinished: 900
+      template:
+        metadata:
+         name: es-logs-curator
+         labels:
+           app: es-logs-curator
+        spec:
+          serviceAccountName: curator
+          restartPolicy: Never
+          nodeSelector:
+            toolchain.instance_category: service
+          containers:
+          - name: es-logs-curator
+            image: {{ .Values.curator.image }}
+            imagePullPolicy: IfNotPresent
+            args:
+             - "--days"
+             - "{{ .Values.curator.max_age }} "
+            env:
+              - name: ELASTICSEARCH_HOST
+                value: {{ required "You must set logging_opensearch_host" .Values.logging_opensearch_host }}
+              - name: TOOLCHAIN_ENV
+                value:  {{ required "You must set toolchain_env" .Values.toolchain_env }}
+              - name: AWS_REGION
+                value: {{ required "You must set aws_region!" .Values.aws_region }}
+            {{- if  .Values.curator.push_gateway_url }}
+              - name: PUSH_GATEWAY_URL
+                value: {{ .Values.curator.push_gateway_url }}
+            {{- end }}
+              - name: K8S_POD_NAMESPACE
+                valueFrom:
+                  fieldRef:
+                    fieldPath: metadata.namespace
+              - name: K8S_NODE_NAME
+                valueFrom:
+                  fieldRef:
+                    fieldPath: spec.nodeName
+              - name: K8S_POD_NAME
+                valueFrom:
+                  fieldRef:
+                    fieldPath: metadata.name
+{{ end }}

@@ -1,0 +1,23 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-prometheus-datasources
+  labels:
+    grafana_datasource: "1"
+    app: grafana
+data:
+  prometheus.yaml: |
+    apiVersion: 1
+    datasources:
+    - name: "prod-cluster"
+      access: "proxy"
+      type: "prometheus"
+      isDefault: true
+      url: "http://prod-monitoring-prometheus-prometheus:80"
+    - name: "remoting-cluster"
+      access: "proxy"
+      type: "prometheus"
+      url: "http://prometheus.remoting-prod-e1-1.toolchain.private:80"

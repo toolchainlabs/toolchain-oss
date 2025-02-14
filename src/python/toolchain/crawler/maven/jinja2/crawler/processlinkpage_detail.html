@@ -1,0 +1,22 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "crawler/workunit_detail_base.html" %}
+
+{% block successful_workunit_detail_content_trs %}
+  {{ super() }}
+  <tr>
+    <td>Links discovered:</td>
+    <td>
+      <ul class="processlinkpage-links-list">
+        {% for link in object.web_resource.links_from.all() %}
+          <li>
+            <a href="{{ link.target }}" target="_blank">{{ link.target }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </td>
+  </tr>
+{% endblock successful_workunit_detail_content_trs %}

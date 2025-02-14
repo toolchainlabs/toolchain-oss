@@ -1,0 +1,41 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aws-auth
+  namespace: kube-system
+# This configmap is used by aws-iam-authenticator.
+# See https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html for details.
+data:
+  mapRoles: |
+    - rolearn: arn:aws:iam::283194185447:role/k8s.dev-e1-1.nodes
+      username: system:node:{{EC2PrivateDNSName}}
+      groups:
+        - system:bootstrappers
+        - system:nodes
+  mapUsers: |
+    - userarn: arn:aws:iam::283194185447:user/benjy
+      username: benjy
+      groups:
+        - system:masters
+    - userarn: arn:aws:iam::283194185447:user/jsirois
+      username: jsirois
+      groups:
+        - system:masters
+    - userarn: arn:aws:iam::283194185447:user/asher
+      username: asher
+      groups:
+        - system:masters
+    - userarn: arn:aws:iam::283194185447:user/npervic
+      username: npervic
+      groups:
+        - system:masters
+    - userarn: arn:aws:iam::283194185447:user/chrisjrn
+      username: chrisjrn
+      groups:
+        - system:masters
+    - userarn: arn:aws:iam::283194185447:user/stuhood
+      username: stuhood
+      groups:
+        - system:masters

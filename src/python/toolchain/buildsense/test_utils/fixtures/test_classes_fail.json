@@ -1,0 +1,998 @@
+[
+    {
+        "tests": [
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.batched_builds_queue_test.TestBatchedBuildsQueue",
+                "test_file_path": "test_classes_fail.py",
+                "time": 1.42,
+                "tests": [
+                    {
+                        "name": "test_queue_builds",
+                        "time": 1.132,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_builds_invalid_path",
+                        "time": 0.07,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_builds",
+                        "time": 0.154,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_str",
+                        "time": 0.067,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.models_test.TestProcessPantsRun",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.22,
+                "tests": [
+                    {
+                        "name": "test_create",
+                        "time": 0.222,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.models_test.TestProcessQueuedBuilds",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.04,
+                "tests": [
+                    {
+                        "name": "test_create",
+                        "time": 0.041,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.processor_test.TestProcessPantsRuns.test_set_run_time",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.05,
+                "tests": [
+                    {
+                        "name": "sample1-expected_run_time0",
+                        "time": 0.009,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "sample2-expected_run_time1",
+                        "time": 0.009,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "sample3-expected_run_time2",
+                        "time": 0.009,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "sample4-expected_run_time3",
+                        "time": 0.008,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "sample5-expected_run_time4",
+                        "time": 0.009,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "sample6-expected_run_time5",
+                        "time": 0.008,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.processor_test.TestProcessPantsRuns",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.05,
+                "tests": [
+                    {
+                        "name": "test_create_zipkin_trace_files",
+                        "time": 0.011,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_create_zipkin_trace_files_empty_workunit",
+                        "time": 0.008,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_update_ci_info_pr",
+                        "time": 0.011,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_update_ci_info_missing_pr_info",
+                        "time": 0.01,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_update_ci_info_branch",
+                        "time": 0.008,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.run_info_raw_store_test.TestRawInfoStore",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.69,
+                "tests": [
+                    {
+                        "name": "test_str",
+                        "time": 0.069,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_save_final_build_stats",
+                        "time": 0.098,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_load",
+                        "time": 0.078,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_load_mismatch",
+                        "time": 0.102,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_save_data_file",
+                        "time": 0.09,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_named_data_missing",
+                        "time": 0.177,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_named_data",
+                        "time": 0.079,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.run_info_table_test.TestRunInfoTableGetData",
+                "test_file_path": "test_classes_fail.py",
+                "time": 1.21,
+                "tests": [
+                    {
+                        "name": "test_str",
+                        "time": 0.079,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_bad_queries",
+                        "time": 0.017,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_build_with_ci_info",
+                        "time": 0.5,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_build",
+                        "time": 0.077,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_bad_gets_builds",
+                        "time": 0.014,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_user_builds_with_limit",
+                        "time": 0.062,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_user_builds_default_time_ranges",
+                        "time": 0.05,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_paginate_user_builds",
+                        "time": 0.076,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_paginate_repo_builds",
+                        "time": 0.119,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_corrupt_cursor_not_b64",
+                        "time": 0.036,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_batch_get_items_error",
+                        "time": 0.017,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_batch_get_items",
+                        "time": 0.087,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_batch_get_items_multiple_repos",
+                        "time": 0.079,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.run_info_table_test.TestRunInfoTableGetData.test_corrupt_cursor_get_repos",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.32,
+                "tests": [
+                    {
+                        "name": "not-json-jerry[]-Failed to decode cursor",
+                        "time": 0.041,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "[]-Invalid json in cursor",
+                        "time": 0.041,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "{}-Invalid or missing keys in cursor",
+                        "time": 0.048,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "{\"run_id\": \"abc\", \"ovaltine\": \"gold\"}-Invalid or missing keys in cursor",
+                        "time": 0.041,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "{\"run_id\": \"abc\", \"user_api_id\": \"ZZ\", \"run_timestamp\": \"77\", \"ovaltine\": \"gold\"}-Invalid or missing keys in cursor",
+                        "time": 0.037,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "{\"run_id\": \"abc\", \"user_api_id\": \"ZZ\", \"run_timestamp\": \"gold\"}-Invalid run_timestamp: gold",
+                        "time": 0.038,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "{\"run_id\": \"abc\", \"user_api_id\": \"ZZ\", \"run_timestamp\": 8888}-Invalid values in cursor",
+                        "time": 0.036,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "{\"run_id\": \"abc\", \"run_timestamp\": 888}-Invalid or missing keys in cursor",
+                        "time": 0.04,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.run_info_table_test.TestRunInfoTableGetData.test_corrupt_cursor_get_user_repo_buillds",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.31,
+                "tests": [
+                    {
+                        "name": "not-json-jerry[]-Failed to decode cursor",
+                        "time": 0.043,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "[]-Invalid json in cursor",
+                        "time": 0.039,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "{}-Invalid or missing keys in cursor",
+                        "time": 0.039,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "{\"run_id\": \"abc\", \"ovaltine\": \"gold\"}-Invalid or missing keys in cursor",
+                        "time": 0.037,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "{\"run_id\": \"abc\", \"user_api_id\": \"ZZ\", \"run_timestamp\": \"77\", \"ovaltine\": \"gold\"}-Invalid or missing keys in cursor",
+                        "time": 0.036,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "{\"run_id\": \"abc\", \"user_api_id\": \"ZZ\", \"run_timestamp\": \"gold\"}-Invalid or missing keys in cursor",
+                        "time": 0.043,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "{\"run_id\": \"abc\", \"user_api_id\": \"ZZ\", \"run_timestamp\": 8888}-Invalid or missing keys in cursor",
+                        "time": 0.038,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "{\"run_id\": \"abc\", \"run_timestamp\": 888}-Invalid or missing keys in cursor",
+                        "time": 0.038,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.run_info_table_test.TestRunInfoTableGetData.test_corrupt_cursor_invalid_run_id",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.25,
+                "tests": [
+                    {
+                        "name": "bad_run_id0",
+                        "time": 0.047,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "88",
+                        "time": 0.042,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "True",
+                        "time": 0.042,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "None",
+                        "time": 0.039,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "bad_run_id4",
+                        "time": 0.039,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "bad_run_id5",
+                        "time": 0.042,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.run_info_table_test.TestRunInfoTableWriteData",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.2,
+                "tests": [
+                    {
+                        "name": "test_save_run",
+                        "time": 0.022,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_save_run_with_ci_info",
+                        "time": 0.021,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_save_run_existing",
+                        "time": 0.025,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_update_or_insert_run",
+                        "time": 0.029,
+                        "outcome": "pass"
+                    },
+                    {
+                        "results": [
+                            {
+                                "message": "toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.",
+                                "text": "self = <ingestion.run_info_table_test.TestRunInfoTableWriteData object at 0x10761af10>\ntable = <toolchain.buildsense.ingestion.run_info_table.RunInfoTable object at 0x10a5583a0>\nrepo = <Repo: Jerry Seinfeld is a funny guy>, user = <ToolchainUser: elaine>\n\n    def test_update_work_units(self, table: RunInfoTable, repo: Repo, user: ToolchainUser) -> None:\n        start_time = utcnow() - datetime.timedelta(minutes=30)\n        run_id = self._save_run(\"sample_9_start\", start_time, table, repo, user)\n        loaded_run_info = table.get_by_run_id(repo_id=repo.pk, user_api_id=user.api_id, run_id=run_id)\n        assert loaded_run_info.server_info.accept_time == start_time\n        update_time = utcnow() - datetime.timedelta(minutes=3)\n>       updated = table.update_workunits(\n            repo_id=repo.pk, user_api_id=user.api_id, run_id=run_id, last_update=update_time, workunits=[]\n        )\n\nsrc/python/toolchain/buildsense/ingestion/run_info_table_test.py:829: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nsrc/python/toolchain/buildsense/ingestion/run_info_table.py:199: in update_workunits\n    return table.update_dict_in_item(key=key, map_name=\"work_units\", update_items=update_items)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <toolchain.aws.dynamodb.DynamoDBTable object at 0x105e30310>\nkey = {'EnvCustomerRepoUser': 'test:YXuFcpzA2LmdiqPgKjWpi5:MDEQZvEXEVetLjRSLgv68G:3vmgFtdCdNnU38TpiYXDPu', 'run_id': 'pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c'}\nmap_name = 'work_units', update_items = {}\n\n    def update_dict_in_item(self, key: dict, map_name, update_items: Dict[str, Tuple[int, dict]]) -> bool:\n        if not update_items:\n>           raise ToolchainAssertion(\"update_items can't be empty.\")\nE           toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.\n\nsrc/python/toolchain/aws/dynamodb.py:207: ToolchainAssertion"
+                            }
+                        ],
+                        "name": "test_update_work_units",
+                        "time": 0.031,
+                        "outcome": "fail"
+                    },
+                    {
+                        "results": [
+                            {
+                                "message": "toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.",
+                                "text": "self = <ingestion.run_info_table_test.TestRunInfoTableWriteData object at 0x10811d400>\ntable = <toolchain.buildsense.ingestion.run_info_table.RunInfoTable object at 0x109e32370>\nrepo = <Repo: Jerry Seinfeld is a funny guy>, user = <ToolchainUser: elaine>\n\n    def test_update_work_units_dont_update_finished_build(\n        self, table: RunInfoTable, repo: Repo, user: ToolchainUser\n    ) -> None:\n        accept_time = utcnow() - datetime.timedelta(minutes=13)\n        run_id = self._save_run(\"sample_9_end\", accept_time, table, repo, user)\n        update_time = utcnow() - datetime.timedelta(minutes=3)\n>       updated = table.update_workunits(\n            repo_id=repo.pk, user_api_id=user.api_id, run_id=run_id, last_update=update_time, workunits=[]\n        )\n\nsrc/python/toolchain/buildsense/ingestion/run_info_table_test.py:843: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nsrc/python/toolchain/buildsense/ingestion/run_info_table.py:199: in update_workunits\n    return table.update_dict_in_item(key=key, map_name=\"work_units\", update_items=update_items)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <toolchain.aws.dynamodb.DynamoDBTable object at 0x105e30310>\nkey = {'EnvCustomerRepoUser': 'test:hDrzh8htTanwEKxKhdYt4D:WCEeuznEmohxGeruBr7xSQ:RzxmenSnafqVBSdE8SRvnz', 'run_id': 'pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c'}\nmap_name = 'work_units', update_items = {}\n\n    def update_dict_in_item(self, key: dict, map_name, update_items: Dict[str, Tuple[int, dict]]) -> bool:\n        if not update_items:\n>           raise ToolchainAssertion(\"update_items can't be empty.\")\nE           toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.\n\nsrc/python/toolchain/aws/dynamodb.py:207: ToolchainAssertion"
+                            }
+                        ],
+                        "name": "test_update_work_units_dont_update_finished_build",
+                        "time": 0.032,
+                        "outcome": "fail"
+                    },
+                    {
+                        "results": [
+                            {
+                                "message": "toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.",
+                                "text": "self = <ingestion.run_info_table_test.TestRunInfoTableWriteData object at 0x1072dfbe0>\ntable = <toolchain.buildsense.ingestion.run_info_table.RunInfoTable object at 0x1075d3550>\nrepo = <Repo: Jerry Seinfeld is a funny guy>, user = <ToolchainUser: elaine>\n\n    def test_update_work_units_dont_create_non_existing(\n        self, table: RunInfoTable, repo: Repo, user: ToolchainUser\n    ) -> None:\n        update_time = utcnow() - datetime.timedelta(minutes=3)\n>       updated = table.update_workunits(\n            repo_id=repo.pk, user_api_id=user.api_id, run_id=\"some_run_id\", last_update=update_time, workunits=[]\n        )\n\nsrc/python/toolchain/buildsense/ingestion/run_info_table_test.py:854: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nsrc/python/toolchain/buildsense/ingestion/run_info_table.py:199: in update_workunits\n    return table.update_dict_in_item(key=key, map_name=\"work_units\", update_items=update_items)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <toolchain.aws.dynamodb.DynamoDBTable object at 0x105e30310>\nkey = {'EnvCustomerRepoUser': 'test:7c7zWnEinwoKSz5qJjSbd4:7cSvjtxzgvrANUF8hTk9Yz:QvoTaMeGAjDyZHa458WT3Q', 'run_id': 'some_run_id'}\nmap_name = 'work_units', update_items = {}\n\n    def update_dict_in_item(self, key: dict, map_name, update_items: Dict[str, Tuple[int, dict]]) -> bool:\n        if not update_items:\n>           raise ToolchainAssertion(\"update_items can't be empty.\")\nE           toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.\n\nsrc/python/toolchain/aws/dynamodb.py:207: ToolchainAssertion"
+                            }
+                        ],
+                        "name": "test_update_work_units_dont_create_non_existing",
+                        "time": 0.018,
+                        "outcome": "fail"
+                    },
+                    {
+                        "results": [
+                            {
+                                "message": "TypeError: update_workunits() missing 1 required keyword-only argument: 'last_update'",
+                                "text": "self = <ingestion.run_info_table_test.TestRunInfoTableWriteData object at 0x1072c1fa0>\nrepo = <Repo: Jerry Seinfeld is a funny guy>, user = <ToolchainUser: elaine>\n\n    def test_update_workunit(self, repo, user):\n        now = utcnow()\n        server_info = ServerInfo(\n            request_id=\"test-save-run\",\n            accept_time=utcnow(),\n            stats_version=\"2\",\n            environment=\"low-flow\",\n            s3_bucket=\"chicken\",\n            s3_key=\"little-jerry-seinfeld\",\n        )\n        run_id, run_info_json = self._load_run_info_fixture(\"sample8\")\n        # Due to moto limitations we can't insert new workunits.\n        # https://github.com/spulec/moto/pull/2295\n        run_info_json[\"work_units\"] = [\n            {\n                \"workunit_id\": \"speechless\",\n                \"name\": \"feats of strength\",\n                \"state\": \"pending\",\n                \"version\": 1,\n                \"start\": 300.228,\n                \"last_update\": 303.4,\n            }\n        ]\n        run_info = from_post_data(\n            run_id=run_id, run_info_json=run_info_json, repo=repo, user=user, server_info=server_info\n        )\n        table = RunInfoTable.for_customer_id(repo.customer_id)\n        table.save_run(run_info)\n        start = now - datetime.timedelta(seconds=10)\n        last_update = start + datetime.timedelta(seconds=2)\n        wu1_updated = WorkUnit(\n            workunit_id=\"speechless\",\n            name=\"feats of strength\",\n            state=\"yield\",\n            version=2,\n            start=start,\n            last_update=last_update,\n        )\n>       updated = table.update_workunits(\n            repo_id=repo.pk, user_api_id=user.api_id, run_id=run_id, workunits=[wu1_updated]\n        )\nE       TypeError: update_workunits() missing 1 required keyword-only argument: 'last_update'\n\nsrc/python/toolchain/buildsense/ingestion/run_info_table_test.py:917: TypeError"
+                            }
+                        ],
+                        "name": "test_update_workunit",
+                        "time": 0.022,
+                        "outcome": "fail"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.utils_test.TestResolveCIUser",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.1,
+                "tests": [
+                    {
+                        "name": "test_resolve_username_no_user",
+                        "time": 0.013,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_resolve_username_dont_use_username",
+                        "time": 0.022,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_resolve_username_inactive_user",
+                        "time": 0.023,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_resolve_username",
+                        "time": 0.022,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_resolve_username_not_associated_with_customer",
+                        "time": 0.022,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseIngestionViewAuth",
+                "test_file_path": "test_classes_fail.py",
+                "time": 1.02,
+                "tests": [
+                    {
+                        "name": "test_invalid_audience",
+                        "time": 0.757,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_claims_no_user",
+                        "time": 0.159,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_no_auth",
+                        "time": 0.099,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseIngestionView.test_post_bad_data",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.31,
+                "tests": [
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-True",
+                        "time": 0.089,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-False",
+                        "time": 0.074,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-True",
+                        "time": 0.07,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-False",
+                        "time": 0.075,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseIngestionView.test_patch_bad_data",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.4,
+                "tests": [
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-True",
+                        "time": 0.082,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-False",
+                        "time": 0.171,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-True",
+                        "time": 0.074,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-False",
+                        "time": 0.077,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseIngestionView.test_post_start_report",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.37,
+                "tests": [
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-True",
+                        "time": 0.092,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-False",
+                        "time": 0.093,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-True",
+                        "time": 0.092,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-False",
+                        "time": 0.096,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseIngestionView.test_post_start_report_with_ci_unknown_user",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.51,
+                "tests": [
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-True",
+                        "time": 0.195,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-False",
+                        "time": 0.101,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-True",
+                        "time": 0.11,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-False",
+                        "time": 0.099,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseIngestionView.test_post_start_report_with_ci_impersonation_denied",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.54,
+                "tests": [
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-True",
+                        "time": 0.108,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-False",
+                        "time": 0.107,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-True",
+                        "time": 0.22,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-False",
+                        "time": 0.107,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseIngestionView.test_post_start_report_with_ci",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.43,
+                "tests": [
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-True",
+                        "time": 0.107,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-False",
+                        "time": 0.118,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-True",
+                        "time": 0.106,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-False",
+                        "time": 0.099,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseIngestionView.test_post_end_report",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.65,
+                "tests": [
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-True",
+                        "time": 0.249,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-False",
+                        "time": 0.13,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-True",
+                        "time": 0.131,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-False",
+                        "time": 0.143,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseIngestionView.test_post_start_and_end_reports",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.79,
+                "tests": [
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-True",
+                        "time": 0.169,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-False",
+                        "time": 0.269,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-True",
+                        "time": 0.173,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-False",
+                        "time": 0.176,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseIngestionView.test_post_start_and_end_reports_with_ci_impersonation",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.84,
+                "tests": [
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-True",
+                        "time": 0.174,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-False",
+                        "time": 0.165,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-True",
+                        "time": 0.276,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-False",
+                        "time": 0.224,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseIngestionView.test_post_start_and_end_reports_with_ci_empty_username",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.81,
+                "tests": [
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-True",
+                        "time": 0.185,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-False",
+                        "time": 0.18,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-True",
+                        "time": 0.174,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-False",
+                        "time": 0.274,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseIngestionView.test_ingest_workunits",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.5,
+                "tests": [
+                    {
+                        "results": [
+                            {
+                                "message": "toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.",
+                                "text": "self = <ingestion.views_api_test.TestBuildsenseIngestionView object at 0x107592550>\nclient = <ingestion.views_api_test.CompressibleAPIClient object at 0x107d57e50>\nuser = <ToolchainUser: kramer>, repo = <Repo: acmebot>\n\n    def test_ingest_workunits(self, client, user: ToolchainUser, repo: Repo) -> None:\n        response = self._post_data(fixture=\"sample_9_start\", client=client, repo_slug=repo.slug)\n        assert response.status_code == 201\n        run_id = \"pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c\"\n        run_id = self._push_initial_run_info(repo, client)\n        url = f\"/api/v1/repos/{repo.slug}/buildsense/{run_id}/workunits/\"\n        work_unit = {\n            \"name\": \"chicken\",\n            \"workunit_id\": \"little-jerry-seinfeld\",\n            \"start\": 1569262804.8273,\n            \"last_update\": 1569262818.825,\n            \"version\": 2,\n            \"state\": \"running\",\n        }\n        post_data = json.dumps({\"workunits\": [work_unit]})\n>       response = client.post(url, data=post_data, content_type=\"application/json\")\n\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:293: in post\n    response = super().post(\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:207: in post\n    return self.generic('POST', path, data, content_type, **extra)\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:42: in generic\n    return super().generic(method, path, data, content_type, **extra)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:231: in generic\n    return super().generic(\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:421: in generic\n    return self.request(**r)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:283: in request\n    return super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:235: in request\n    request = super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:496: in request\n    raise exc_value\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/exception.py:34: in inner\n    response = get_response(request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:115: in _get_response\n    response = self.process_exception_by_middleware(e, request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:113: in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/decorators/csrf.py:54: in wrapped_view\n    return view_func(*args, **kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/generic/base.py:71: in view\n    return self.dispatch(request, *args, **kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:505: in dispatch\n    response = self.handle_exception(exc)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:72: in handle_exception\n    return super().handle_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:465: in handle_exception\n    self.raise_uncaught_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:476: in raise_uncaught_exception\n    raise exc\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:502: in dispatch\n    response = handler(request, *args, **kwargs)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:130: in post\n    updated = ingestor.ingest_work_units(\nsrc/python/toolchain/buildsense/ingestion/pants_data_ingestion.py:197: in ingest_work_units\n    return self._table.update_workunits(\nsrc/python/toolchain/buildsense/ingestion/run_info_table.py:199: in update_workunits\n    return table.update_dict_in_item(key=key, map_name=\"work_units\", update_items=update_items)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <toolchain.aws.dynamodb.DynamoDBTable object at 0x105e30310>\nkey = {'EnvCustomerRepoUser': 'test:UQWfdQt6VSV4EqJq4TBfdK:dJkfGcyNpZtiRarHzwKjWW:E5rPNc9wHagzufmpHsWkBm', 'run_id': 'pants_run_2020_01_28_17_50_13_106_c4c0a8c0235447a49facd0f338cce581'}\nmap_name = 'work_units', update_items = {}\n\n    def update_dict_in_item(self, key: dict, map_name, update_items: Dict[str, Tuple[int, dict]]) -> bool:\n        if not update_items:\n>           raise ToolchainAssertion(\"update_items can't be empty.\")\nE           toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.\n\nsrc/python/toolchain/aws/dynamodb.py:207: ToolchainAssertion"
+                            }
+                        ],
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-True",
+                        "time": 0.135,
+                        "outcome": "fail"
+                    },
+                    {
+                        "results": [
+                            {
+                                "message": "toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.",
+                                "text": "self = <ingestion.views_api_test.TestBuildsenseIngestionView object at 0x107f97100>\nclient = <ingestion.views_api_test.CompressibleAPIClient object at 0x109ebc5b0>\nuser = <ToolchainUser: kramer>, repo = <Repo: acmebot>\n\n    def test_ingest_workunits(self, client, user: ToolchainUser, repo: Repo) -> None:\n        response = self._post_data(fixture=\"sample_9_start\", client=client, repo_slug=repo.slug)\n        assert response.status_code == 201\n        run_id = \"pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c\"\n        run_id = self._push_initial_run_info(repo, client)\n        url = f\"/api/v1/repos/{repo.slug}/buildsense/{run_id}/workunits/\"\n        work_unit = {\n            \"name\": \"chicken\",\n            \"workunit_id\": \"little-jerry-seinfeld\",\n            \"start\": 1569262804.8273,\n            \"last_update\": 1569262818.825,\n            \"version\": 2,\n            \"state\": \"running\",\n        }\n        post_data = json.dumps({\"workunits\": [work_unit]})\n>       response = client.post(url, data=post_data, content_type=\"application/json\")\n\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:293: in post\n    response = super().post(\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:207: in post\n    return self.generic('POST', path, data, content_type, **extra)\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:42: in generic\n    return super().generic(method, path, data, content_type, **extra)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:231: in generic\n    return super().generic(\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:421: in generic\n    return self.request(**r)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:283: in request\n    return super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:235: in request\n    request = super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:496: in request\n    raise exc_value\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/exception.py:34: in inner\n    response = get_response(request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:115: in _get_response\n    response = self.process_exception_by_middleware(e, request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:113: in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/decorators/csrf.py:54: in wrapped_view\n    return view_func(*args, **kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/generic/base.py:71: in view\n    return self.dispatch(request, *args, **kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:505: in dispatch\n    response = self.handle_exception(exc)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:72: in handle_exception\n    return super().handle_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:465: in handle_exception\n    self.raise_uncaught_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:476: in raise_uncaught_exception\n    raise exc\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:502: in dispatch\n    response = handler(request, *args, **kwargs)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:130: in post\n    updated = ingestor.ingest_work_units(\nsrc/python/toolchain/buildsense/ingestion/pants_data_ingestion.py:197: in ingest_work_units\n    return self._table.update_workunits(\nsrc/python/toolchain/buildsense/ingestion/run_info_table.py:199: in update_workunits\n    return table.update_dict_in_item(key=key, map_name=\"work_units\", update_items=update_items)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <toolchain.aws.dynamodb.DynamoDBTable object at 0x105e30310>\nkey = {'EnvCustomerRepoUser': 'test:Ci9GDsi3eXZ9QfrpH6SXSM:WbQG7B3VMfFAcJgJ8KCv2R:ivyLqw93CTAhoXMEUVAQLt', 'run_id': 'pants_run_2020_01_28_17_50_13_106_c4c0a8c0235447a49facd0f338cce581'}\nmap_name = 'work_units', update_items = {}\n\n    def update_dict_in_item(self, key: dict, map_name, update_items: Dict[str, Tuple[int, dict]]) -> bool:\n        if not update_items:\n>           raise ToolchainAssertion(\"update_items can't be empty.\")\nE           toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.\n\nsrc/python/toolchain/aws/dynamodb.py:207: ToolchainAssertion"
+                            }
+                        ],
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-False",
+                        "time": 0.131,
+                        "outcome": "fail"
+                    },
+                    {
+                        "results": [
+                            {
+                                "message": "toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.",
+                                "text": "self = <ingestion.views_api_test.TestBuildsenseIngestionView object at 0x1075ea3a0>\nclient = <ingestion.views_api_test.CompressibleAPIClient object at 0x10724b0d0>\nuser = <ToolchainUser: kramer>, repo = <Repo: acmebot>\n\n    def test_ingest_workunits(self, client, user: ToolchainUser, repo: Repo) -> None:\n        response = self._post_data(fixture=\"sample_9_start\", client=client, repo_slug=repo.slug)\n        assert response.status_code == 201\n        run_id = \"pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c\"\n        run_id = self._push_initial_run_info(repo, client)\n        url = f\"/api/v1/repos/{repo.slug}/buildsense/{run_id}/workunits/\"\n        work_unit = {\n            \"name\": \"chicken\",\n            \"workunit_id\": \"little-jerry-seinfeld\",\n            \"start\": 1569262804.8273,\n            \"last_update\": 1569262818.825,\n            \"version\": 2,\n            \"state\": \"running\",\n        }\n        post_data = json.dumps({\"workunits\": [work_unit]})\n>       response = client.post(url, data=post_data, content_type=\"application/json\")\n\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:293: in post\n    response = super().post(\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:207: in post\n    return self.generic('POST', path, data, content_type, **extra)\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:42: in generic\n    return super().generic(method, path, data, content_type, **extra)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:231: in generic\n    return super().generic(\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:421: in generic\n    return self.request(**r)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:283: in request\n    return super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:235: in request\n    request = super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:496: in request\n    raise exc_value\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/exception.py:34: in inner\n    response = get_response(request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:115: in _get_response\n    response = self.process_exception_by_middleware(e, request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:113: in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/decorators/csrf.py:54: in wrapped_view\n    return view_func(*args, **kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/generic/base.py:71: in view\n    return self.dispatch(request, *args, **kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:505: in dispatch\n    response = self.handle_exception(exc)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:72: in handle_exception\n    return super().handle_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:465: in handle_exception\n    self.raise_uncaught_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:476: in raise_uncaught_exception\n    raise exc\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:502: in dispatch\n    response = handler(request, *args, **kwargs)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:130: in post\n    updated = ingestor.ingest_work_units(\nsrc/python/toolchain/buildsense/ingestion/pants_data_ingestion.py:197: in ingest_work_units\n    return self._table.update_workunits(\nsrc/python/toolchain/buildsense/ingestion/run_info_table.py:199: in update_workunits\n    return table.update_dict_in_item(key=key, map_name=\"work_units\", update_items=update_items)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <toolchain.aws.dynamodb.DynamoDBTable object at 0x105e30310>\nkey = {'EnvCustomerRepoUser': 'test:SnxHgkyJziPHRrXytkwsRK:NWcwunmq5KRUFQUNtXyiNF:aoJoToxQ5Z6CsCn82CkGUH', 'run_id': 'pants_run_2020_01_28_17_50_13_106_c4c0a8c0235447a49facd0f338cce581'}\nmap_name = 'work_units', update_items = {}\n\n    def update_dict_in_item(self, key: dict, map_name, update_items: Dict[str, Tuple[int, dict]]) -> bool:\n        if not update_items:\n>           raise ToolchainAssertion(\"update_items can't be empty.\")\nE           toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.\n\nsrc/python/toolchain/aws/dynamodb.py:207: ToolchainAssertion"
+                            }
+                        ],
+                        "name": "AccessTokenAudience.BUILDSENSE_API-True",
+                        "time": 0.121,
+                        "outcome": "fail"
+                    },
+                    {
+                        "results": [
+                            {
+                                "message": "toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.",
+                                "text": "self = <ingestion.views_api_test.TestBuildsenseIngestionView object at 0x107ceebb0>\nclient = <ingestion.views_api_test.CompressibleAPIClient object at 0x1070b8130>\nuser = <ToolchainUser: kramer>, repo = <Repo: acmebot>\n\n    def test_ingest_workunits(self, client, user: ToolchainUser, repo: Repo) -> None:\n        response = self._post_data(fixture=\"sample_9_start\", client=client, repo_slug=repo.slug)\n        assert response.status_code == 201\n        run_id = \"pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c\"\n        run_id = self._push_initial_run_info(repo, client)\n        url = f\"/api/v1/repos/{repo.slug}/buildsense/{run_id}/workunits/\"\n        work_unit = {\n            \"name\": \"chicken\",\n            \"workunit_id\": \"little-jerry-seinfeld\",\n            \"start\": 1569262804.8273,\n            \"last_update\": 1569262818.825,\n            \"version\": 2,\n            \"state\": \"running\",\n        }\n        post_data = json.dumps({\"workunits\": [work_unit]})\n>       response = client.post(url, data=post_data, content_type=\"application/json\")\n\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:293: in post\n    response = super().post(\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:207: in post\n    return self.generic('POST', path, data, content_type, **extra)\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:42: in generic\n    return super().generic(method, path, data, content_type, **extra)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:231: in generic\n    return super().generic(\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:421: in generic\n    return self.request(**r)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:283: in request\n    return super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:235: in request\n    request = super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:496: in request\n    raise exc_value\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/exception.py:34: in inner\n    response = get_response(request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:115: in _get_response\n    response = self.process_exception_by_middleware(e, request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:113: in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/decorators/csrf.py:54: in wrapped_view\n    return view_func(*args, **kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/generic/base.py:71: in view\n    return self.dispatch(request, *args, **kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:505: in dispatch\n    response = self.handle_exception(exc)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:72: in handle_exception\n    return super().handle_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:465: in handle_exception\n    self.raise_uncaught_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:476: in raise_uncaught_exception\n    raise exc\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:502: in dispatch\n    response = handler(request, *args, **kwargs)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:130: in post\n    updated = ingestor.ingest_work_units(\nsrc/python/toolchain/buildsense/ingestion/pants_data_ingestion.py:197: in ingest_work_units\n    return self._table.update_workunits(\nsrc/python/toolchain/buildsense/ingestion/run_info_table.py:199: in update_workunits\n    return table.update_dict_in_item(key=key, map_name=\"work_units\", update_items=update_items)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <toolchain.aws.dynamodb.DynamoDBTable object at 0x105e30310>\nkey = {'EnvCustomerRepoUser': 'test:bTc6ccMse8pyRSMTeN862t:VqQJ2fK6SXomYnhWY2XAcx:5C2phhZbiuBZmny53T9sSW', 'run_id': 'pants_run_2020_01_28_17_50_13_106_c4c0a8c0235447a49facd0f338cce581'}\nmap_name = 'work_units', update_items = {}\n\n    def update_dict_in_item(self, key: dict, map_name, update_items: Dict[str, Tuple[int, dict]]) -> bool:\n        if not update_items:\n>           raise ToolchainAssertion(\"update_items can't be empty.\")\nE           toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.\n\nsrc/python/toolchain/aws/dynamodb.py:207: ToolchainAssertion"
+                            }
+                        ],
+                        "name": "AccessTokenAudience.BUILDSENSE_API-False",
+                        "time": 0.115,
+                        "outcome": "fail"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseIngestionView.test_ingest_workunits_no_table_entry",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.36,
+                "tests": [
+                    {
+                        "results": [
+                            {
+                                "message": "toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.",
+                                "text": "self = <ingestion.views_api_test.TestBuildsenseIngestionView object at 0x1080e09a0>\nclient = <ingestion.views_api_test.CompressibleAPIClient object at 0x106ff74c0>\nuser = <ToolchainUser: kramer>, repo = <Repo: acmebot>\n\n    def test_ingest_workunits_no_table_entry(self, client, user: ToolchainUser, repo: Repo) -> None:\n        run_id = \"pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c\"\n        url = f\"/api/v1/repos/{repo.slug}/buildsense/{run_id}/workunits/\"\n        work_unit = {\n            \"name\": \"chicken\",\n            \"workunit_id\": \"little-jerry-seinfeld\",\n            \"start\": 1569262804.8273,\n            \"last_update\": 1569262818.825,\n            \"version\": 2,\n            \"state\": \"running\",\n        }\n        post_data = json.dumps({\"workunits\": [work_unit]})\n>       response = client.post(url, data=post_data, content_type=\"application/json\")\n\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:495: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:293: in post\n    response = super().post(\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:207: in post\n    return self.generic('POST', path, data, content_type, **extra)\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:42: in generic\n    return super().generic(method, path, data, content_type, **extra)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:231: in generic\n    return super().generic(\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:421: in generic\n    return self.request(**r)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:283: in request\n    return super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:235: in request\n    request = super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:496: in request\n    raise exc_value\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/exception.py:34: in inner\n    response = get_response(request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:115: in _get_response\n    response = self.process_exception_by_middleware(e, request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:113: in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/decorators/csrf.py:54: in wrapped_view\n    return view_func(*args, **kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/generic/base.py:71: in view\n    return self.dispatch(request, *args, **kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:505: in dispatch\n    response = self.handle_exception(exc)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:72: in handle_exception\n    return super().handle_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:465: in handle_exception\n    self.raise_uncaught_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:476: in raise_uncaught_exception\n    raise exc\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:502: in dispatch\n    response = handler(request, *args, **kwargs)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:130: in post\n    updated = ingestor.ingest_work_units(\nsrc/python/toolchain/buildsense/ingestion/pants_data_ingestion.py:197: in ingest_work_units\n    return self._table.update_workunits(\nsrc/python/toolchain/buildsense/ingestion/run_info_table.py:199: in update_workunits\n    return table.update_dict_in_item(key=key, map_name=\"work_units\", update_items=update_items)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <toolchain.aws.dynamodb.DynamoDBTable object at 0x105e30310>\nkey = {'EnvCustomerRepoUser': 'test:dZ6hPNrLEHmrhCysAuzfph:DjMpgL82maQavMH9zFvu98:jF4UEdkNFfosYmYZK4ZsSn', 'run_id': 'pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c'}\nmap_name = 'work_units', update_items = {}\n\n    def update_dict_in_item(self, key: dict, map_name, update_items: Dict[str, Tuple[int, dict]]) -> bool:\n        if not update_items:\n>           raise ToolchainAssertion(\"update_items can't be empty.\")\nE           toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.\n\nsrc/python/toolchain/aws/dynamodb.py:207: ToolchainAssertion"
+                            }
+                        ],
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-True",
+                        "time": 0.094,
+                        "outcome": "fail"
+                    },
+                    {
+                        "results": [
+                            {
+                                "message": "toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.",
+                                "text": "self = <ingestion.views_api_test.TestBuildsenseIngestionView object at 0x1080fa820>\nclient = <ingestion.views_api_test.CompressibleAPIClient object at 0x10810d520>\nuser = <ToolchainUser: kramer>, repo = <Repo: acmebot>\n\n    def test_ingest_workunits_no_table_entry(self, client, user: ToolchainUser, repo: Repo) -> None:\n        run_id = \"pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c\"\n        url = f\"/api/v1/repos/{repo.slug}/buildsense/{run_id}/workunits/\"\n        work_unit = {\n            \"name\": \"chicken\",\n            \"workunit_id\": \"little-jerry-seinfeld\",\n            \"start\": 1569262804.8273,\n            \"last_update\": 1569262818.825,\n            \"version\": 2,\n            \"state\": \"running\",\n        }\n        post_data = json.dumps({\"workunits\": [work_unit]})\n>       response = client.post(url, data=post_data, content_type=\"application/json\")\n\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:495: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:293: in post\n    response = super().post(\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:207: in post\n    return self.generic('POST', path, data, content_type, **extra)\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:42: in generic\n    return super().generic(method, path, data, content_type, **extra)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:231: in generic\n    return super().generic(\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:421: in generic\n    return self.request(**r)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:283: in request\n    return super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:235: in request\n    request = super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:496: in request\n    raise exc_value\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/exception.py:34: in inner\n    response = get_response(request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:115: in _get_response\n    response = self.process_exception_by_middleware(e, request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:113: in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/decorators/csrf.py:54: in wrapped_view\n    return view_func(*args, **kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/generic/base.py:71: in view\n    return self.dispatch(request, *args, **kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:505: in dispatch\n    response = self.handle_exception(exc)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:72: in handle_exception\n    return super().handle_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:465: in handle_exception\n    self.raise_uncaught_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:476: in raise_uncaught_exception\n    raise exc\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:502: in dispatch\n    response = handler(request, *args, **kwargs)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:130: in post\n    updated = ingestor.ingest_work_units(\nsrc/python/toolchain/buildsense/ingestion/pants_data_ingestion.py:197: in ingest_work_units\n    return self._table.update_workunits(\nsrc/python/toolchain/buildsense/ingestion/run_info_table.py:199: in update_workunits\n    return table.update_dict_in_item(key=key, map_name=\"work_units\", update_items=update_items)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <toolchain.aws.dynamodb.DynamoDBTable object at 0x105e30310>\nkey = {'EnvCustomerRepoUser': 'test:AHrkY4RZhew8xfr7H6q23G:YAwkTeYA8dUnHy58QE8Vks:REWSkHWVisw42G2G86zk65', 'run_id': 'pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c'}\nmap_name = 'work_units', update_items = {}\n\n    def update_dict_in_item(self, key: dict, map_name, update_items: Dict[str, Tuple[int, dict]]) -> bool:\n        if not update_items:\n>           raise ToolchainAssertion(\"update_items can't be empty.\")\nE           toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.\n\nsrc/python/toolchain/aws/dynamodb.py:207: ToolchainAssertion"
+                            }
+                        ],
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-False",
+                        "time": 0.088,
+                        "outcome": "fail"
+                    },
+                    {
+                        "results": [
+                            {
+                                "message": "toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.",
+                                "text": "self = <ingestion.views_api_test.TestBuildsenseIngestionView object at 0x107d15100>\nclient = <ingestion.views_api_test.CompressibleAPIClient object at 0x10759c940>\nuser = <ToolchainUser: kramer>, repo = <Repo: acmebot>\n\n    def test_ingest_workunits_no_table_entry(self, client, user: ToolchainUser, repo: Repo) -> None:\n        run_id = \"pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c\"\n        url = f\"/api/v1/repos/{repo.slug}/buildsense/{run_id}/workunits/\"\n        work_unit = {\n            \"name\": \"chicken\",\n            \"workunit_id\": \"little-jerry-seinfeld\",\n            \"start\": 1569262804.8273,\n            \"last_update\": 1569262818.825,\n            \"version\": 2,\n            \"state\": \"running\",\n        }\n        post_data = json.dumps({\"workunits\": [work_unit]})\n>       response = client.post(url, data=post_data, content_type=\"application/json\")\n\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:495: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:293: in post\n    response = super().post(\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:207: in post\n    return self.generic('POST', path, data, content_type, **extra)\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:42: in generic\n    return super().generic(method, path, data, content_type, **extra)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:231: in generic\n    return super().generic(\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:421: in generic\n    return self.request(**r)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:283: in request\n    return super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:235: in request\n    request = super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:496: in request\n    raise exc_value\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/exception.py:34: in inner\n    response = get_response(request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:115: in _get_response\n    response = self.process_exception_by_middleware(e, request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:113: in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/decorators/csrf.py:54: in wrapped_view\n    return view_func(*args, **kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/generic/base.py:71: in view\n    return self.dispatch(request, *args, **kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:505: in dispatch\n    response = self.handle_exception(exc)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:72: in handle_exception\n    return super().handle_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:465: in handle_exception\n    self.raise_uncaught_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:476: in raise_uncaught_exception\n    raise exc\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:502: in dispatch\n    response = handler(request, *args, **kwargs)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:130: in post\n    updated = ingestor.ingest_work_units(\nsrc/python/toolchain/buildsense/ingestion/pants_data_ingestion.py:197: in ingest_work_units\n    return self._table.update_workunits(\nsrc/python/toolchain/buildsense/ingestion/run_info_table.py:199: in update_workunits\n    return table.update_dict_in_item(key=key, map_name=\"work_units\", update_items=update_items)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <toolchain.aws.dynamodb.DynamoDBTable object at 0x105e30310>\nkey = {'EnvCustomerRepoUser': 'test:Cri9iM8hfE9C6XrdaXzYg4:9UyHicw3LPsuCCrZhboCCq:Vj6ZNVFhjM4oMg4VnsCtPs', 'run_id': 'pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c'}\nmap_name = 'work_units', update_items = {}\n\n    def update_dict_in_item(self, key: dict, map_name, update_items: Dict[str, Tuple[int, dict]]) -> bool:\n        if not update_items:\n>           raise ToolchainAssertion(\"update_items can't be empty.\")\nE           toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.\n\nsrc/python/toolchain/aws/dynamodb.py:207: ToolchainAssertion"
+                            }
+                        ],
+                        "name": "AccessTokenAudience.BUILDSENSE_API-True",
+                        "time": 0.089,
+                        "outcome": "fail"
+                    },
+                    {
+                        "results": [
+                            {
+                                "message": "toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.",
+                                "text": "self = <ingestion.views_api_test.TestBuildsenseIngestionView object at 0x10a54e280>\nclient = <ingestion.views_api_test.CompressibleAPIClient object at 0x1074bc4f0>\nuser = <ToolchainUser: kramer>, repo = <Repo: acmebot>\n\n    def test_ingest_workunits_no_table_entry(self, client, user: ToolchainUser, repo: Repo) -> None:\n        run_id = \"pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c\"\n        url = f\"/api/v1/repos/{repo.slug}/buildsense/{run_id}/workunits/\"\n        work_unit = {\n            \"name\": \"chicken\",\n            \"workunit_id\": \"little-jerry-seinfeld\",\n            \"start\": 1569262804.8273,\n            \"last_update\": 1569262818.825,\n            \"version\": 2,\n            \"state\": \"running\",\n        }\n        post_data = json.dumps({\"workunits\": [work_unit]})\n>       response = client.post(url, data=post_data, content_type=\"application/json\")\n\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:495: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:293: in post\n    response = super().post(\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:207: in post\n    return self.generic('POST', path, data, content_type, **extra)\nsrc/python/toolchain/buildsense/ingestion/views_api_test.py:42: in generic\n    return super().generic(method, path, data, content_type, **extra)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:231: in generic\n    return super().generic(\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:421: in generic\n    return self.request(**r)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:283: in request\n    return super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/test.py:235: in request\n    request = super().request(**kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/test/client.py:496: in request\n    raise exc_value\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/exception.py:34: in inner\n    response = get_response(request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:115: in _get_response\n    response = self.process_exception_by_middleware(e, request)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/core/handlers/base.py:113: in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/decorators/csrf.py:54: in wrapped_view\n    return view_func(*args, **kwargs)\n/Users/asher/.pex/installed_wheels/e6a293451faa0ef58754e0c7b3b8f2462dfa6a5c/Django-3.0.8-py3-none-any.whl/django/views/generic/base.py:71: in view\n    return self.dispatch(request, *args, **kwargs)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:505: in dispatch\n    response = self.handle_exception(exc)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:72: in handle_exception\n    return super().handle_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:465: in handle_exception\n    self.raise_uncaught_exception(exc)\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:476: in raise_uncaught_exception\n    raise exc\n/Users/asher/.pex/installed_wheels/30bb7c01c0834ad40238f3777bddda8fc50a153e/djangorestframework-3.11.0-py3-none-any.whl/rest_framework/views.py:502: in dispatch\n    response = handler(request, *args, **kwargs)\nsrc/python/toolchain/buildsense/ingestion/views_api.py:130: in post\n    updated = ingestor.ingest_work_units(\nsrc/python/toolchain/buildsense/ingestion/pants_data_ingestion.py:197: in ingest_work_units\n    return self._table.update_workunits(\nsrc/python/toolchain/buildsense/ingestion/run_info_table.py:199: in update_workunits\n    return table.update_dict_in_item(key=key, map_name=\"work_units\", update_items=update_items)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <toolchain.aws.dynamodb.DynamoDBTable object at 0x105e30310>\nkey = {'EnvCustomerRepoUser': 'test:VegHjmtwCdnJetQfFq2zjB:eahbRFWcbr2xCogvDTokpN:W4UfSEW9gZr2a5YSSHiLLA', 'run_id': 'pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c'}\nmap_name = 'work_units', update_items = {}\n\n    def update_dict_in_item(self, key: dict, map_name, update_items: Dict[str, Tuple[int, dict]]) -> bool:\n        if not update_items:\n>           raise ToolchainAssertion(\"update_items can't be empty.\")\nE           toolchain.base.toolchain_error.ToolchainAssertion: update_items can't be empty.\n\nsrc/python/toolchain/aws/dynamodb.py:207: ToolchainAssertion"
+                            }
+                        ],
+                        "name": "AccessTokenAudience.BUILDSENSE_API-False",
+                        "time": 0.092,
+                        "outcome": "fail"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseBatchIngestionView.test_post_empty_batch",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.35,
+                "tests": [
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-True",
+                        "time": 0.078,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-False",
+                        "time": 0.088,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-True",
+                        "time": 0.094,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-False",
+                        "time": 0.086,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.views_api_test.TestBuildsenseBatchIngestionView.test_post_batch",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.67,
+                "tests": [
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-True",
+                        "time": 0.141,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.DEPENDENCY_API|BUILDSENSE_API-False",
+                        "time": 0.145,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-True",
+                        "time": 0.244,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "AccessTokenAudience.BUILDSENSE_API-False",
+                        "time": 0.143,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.workers_test.TestPantsRunProcessor.test_test_calculate_run_time",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.96,
+                "tests": [
+                    {
+                        "name": "sample3-2.814",
+                        "time": 0.303,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "sample4-3.291",
+                        "time": 0.332,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "sample5-4.729",
+                        "time": 0.324,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.workers_test.TestPantsRunProcessor",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.34,
+                "tests": [
+                    {
+                        "name": "test_create_zipkin_trace_files",
+                        "time": 0.342,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.workers_test.TestQueuedBuildsProcessor",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.79,
+                "tests": [
+                    {
+                        "name": "test_invalid_repo_id",
+                        "time": 0.343,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_process_queue_builds",
+                        "time": 0.443,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.buildsense.ingestion.zipkin_trace_test",
+                "test_file_path": "test_classes_fail.py",
+                "time": 0.17,
+                "tests": [
+                    {
+                        "name": "test_create_zipkin_trace_files",
+                        "time": 0.005,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_create_zipkin_trace_files_missing_duration",
+                        "time": 0.166,
+                        "outcome": "pass"
+                    }
+                ]
+            }
+        ],
+        "timing": {
+            "total": 15.67
+        },
+        "target": "test_classes_fail.py",
+        "outputs": {
+            "stdout": "He stopped short?",
+            "stderr": "Three squares? You can\u2019t spare three squares?"
+        }
+    }
+]

@@ -1,0 +1,54 @@
+[package]
+name = "storage"
+version = "0.0.1"
+edition = "2021"
+publish = false
+
+[dependencies]
+async-channel = "1.8.0"
+async-stream = "0.3"
+async-trait = "0.1"
+bytes = "1.4"
+clap = "4"
+consistent_hash_ring = "0.8"
+digest = { path = "../digest" }
+futures = "0.3"
+grpc_util = { path = "../grpc_util" }
+hex = "0.4"
+http = "0.2"
+http-body = "0.4"
+hyper = "0.14"
+itertools = "0.10.5"
+lasso = { version = "0.7", features = ["multi-threaded"] }
+log = "0.4"
+lru = "0.10"
+metrics = "0.21"
+parking_lot = "0.12"
+prost = "0.11"
+protos = { path = "../protos" }
+rand = "0.8"
+redis = { version = "0.21.5", features = ["tokio-comp", "connection-manager"] }
+reqwest = { version = "0.11", default-features = false, features = ["json", "rustls-tls-native-roots"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.10"
+static_assertions = "1"
+tokio = { version = "1.27", features = ["fs", "macros", "net", "rt-multi-thread", "sync", "time"] }
+tokio-stream = { version = "0.1" }
+tonic = { version = "0.9", features = ["transport", "codegen", "tls", "tls-roots"] }
+tower = "0.4"
+tower-http = { version = "0.4", features = ["metrics", "sensitive-headers"] }
+tower-layer = "0.3"
+tower-service = "0.3"
+tracing = "0.1"
+uuid = "1.3"
+
+[dev-dependencies]
+axum = "0.6"
+tempfile = "3.5"
+grpc_util = { path = "../grpc_util" }
+walkdir = "2"
+tryfuture = { git = "https://github.com/pantsbuild/pants", rev = "d1f5693615b8ee291e99bd2e35b95a894c14e0dc" }
+
+[build-dependencies]
+prost-build = "0.11"

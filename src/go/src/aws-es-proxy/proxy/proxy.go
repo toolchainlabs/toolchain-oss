@@ -1,0 +1,337 @@
+package proxy
+
+import (
+	"bytes"
+	"encoding/json"
+	"fmt"
+	"io"
+	"io/ioutil"
+	"log"
+	"net/http"
+	"net/http/httputil"
+	"net/url"
+	"os"
+	"path"
+	"regexp"
+	"strings"
+	"time"
+
+	"github.com/aws/aws-sdk-go/aws/credentials"
+	"github.com/aws/aws-sdk-go/aws/credentials/stscreds"
+	"github.com/aws/aws-sdk-go/aws/session"
+	v4 "github.com/aws/aws-sdk-go/aws/signer/v4"
+
+	uuid "github.com/satori/go.uuid"
+)
+
+type requestStruct struct {
+	Requestid  string
+	Datetime   string
+	Remoteaddr string
+	Requesturi string
+	Method     string
+	Statuscode int
+	Elapsed    float64
+	Body       string
+}
+
+type responseStruct struct {
+	Requestid string
+	Body      string
+}
+
+type proxy struct {
+	scheme       string
+	host         string
+	region       string
+	service      string
+	endpoint     string
+	verbose      bool
+	prettify     bool
+	logtofile    bool
+	nosignreq    bool
+	assumeRole   string
+	fileRequest  *os.File
+	fileResponse *os.File
+	credentials  *credentials.Credentials
+}
+
+func NewProxy(args ...interface{}) *proxy {
+	return &proxy{
+		endpoint:   args[0].(string),
+		verbose:    args[1].(bool),
+		prettify:   args[2].(bool),
+		logtofile:  args[3].(bool),
+		nosignreq:  args[4].(bool),
+		assumeRole: args[5].(string),
+	}
+}
+
+func (p *proxy) InitLog(fileRequest *os.File, fileResponse *os.File) {
+
+	if !p.logtofile {
+		return
+	}
+	var err error
+	u1 := uuid.NewV4()
+	u2 := uuid.NewV4()
+	requestFname := fmt.Sprintf("request-%s.log", u1.String())
+	responseFname := fmt.Sprintf("response-%s.log", u2.String())
+
+	if fileRequest, err = os.Create(requestFname); err != nil {
+		log.Fatalln(err.Error())
+	}
+	if fileResponse, err = os.Create(responseFname); err != nil {
+		log.Fatalln(err.Error())
+	}
+
+	defer fileRequest.Close()
+	defer fileResponse.Close()
+
+	p.fileRequest = fileRequest
+	p.fileResponse = fileResponse
+
+}
+func (p *proxy) ParseEndpoint() error {
+	var link *url.URL
+	var err error
+
+	if link, err = url.Parse(p.endpoint); err != nil {
+		return fmt.Errorf("error: failure while parsing endpoint: %s. Error: %s",
+			p.endpoint, err.Error())
+	}
+
+	// Only http/https are supported schemes
+	switch link.Scheme {
+	case "http", "https":
+	default:
+		link.Scheme = "https"
+	}
+
+	// Unknown schemes sometimes result in empty host value
+	if link.Host == "" {
+		return fmt.Errorf("error: empty host or protocol information in submitted endpoint (%s)",
+			p.endpoint)
+	}
+
+	// AWS SignV4 enabled, extract required parts for signing process
+	if !p.nosignreq {
+		// Extract region and service from link
+		parts := strings.Split(link.Host, ".")
+
+		if len(parts) == 5 {
+			p.region, p.service = parts[1], parts[2]
+		} else {
+			return fmt.Errorf("error: submitted endpoint is not a valid Amazon ElasticSearch Endpoint")
+		}
+	}
+
+	// Update proxy struct
+	p.scheme = link.Scheme
+	p.host = link.Host
+
+	return nil
+}
+
+func (p *proxy) getSigner() *v4.Signer {
+	// Refresh credentials after expiration. Required for STS
+	if p.credentials == nil || p.credentials.IsExpired() {
+		sess := session.Must(session.NewSession())
+		if p.assumeRole != "" {
+			p.credentials = stscreds.NewCredentials(sess, p.assumeRole)
+		} else {
+			p.credentials = sess.Config.Credentials
+		}
+
+		log.Println("Generated fresh AWS Credentials object")
+	}
+	return v4.NewSigner(p.credentials)
+}
+
+func (p *proxy) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	status, err := p.handleRequest(w, r)
+	if err != nil {
+		log.Fatalln(err.Error())
+		http.Error(w, err.Error(), status)
+		return
+	}
+	reportRequest(status, r)
+}
+
+func (p *proxy) handleRequest(w http.ResponseWriter, r *http.Request) (int, error) {
+	requestStarted := time.Now()
+	dump, err := httputil.DumpRequest(r, true)
+	if err != nil {
+		log.Println("error while dumping request. Error: ", err.Error())
+		return http.StatusInternalServerError, fmt.Errorf("error while dumping request: %s", err)
+	}
+	defer r.Body.Close()
+
+	ep := *r.URL
+	ep.Host = p.host
+	ep.Scheme = p.scheme
+	ep.Path = path.Clean(ep.Path)
+
+	req, err := http.NewRequest(r.Method, ep.String(), r.Body)
+	if err != nil {
+		log.Println("error creating new request. ", err.Error())
+		return http.StatusBadRequest, fmt.Errorf("error creating new request: %s", err)
+	}
+
+	addHeaders(r.Header, req.Header)
+
+	// Make signV4 optional
+	if !p.nosignreq {
+		// Start AWS session from ENV, Shared Creds or EC2Role
+		signer := p.getSigner()
+
+		// Sign the request with AWSv4
+		payload := bytes.NewReader(replaceBody(req))
+		if _, err := signer.Sign(req, payload, p.service, p.region, time.Now()); err != nil {
+			p.credentials = nil
+			log.Println("Failed to sign", err)
+			http.Error(w, "Failed to sign", http.StatusForbidden)
+			return http.StatusBadRequest, fmt.Errorf("error signing request: %s", err)
+		}
+	}
+
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+
+		log.Println(err.Error())
+		return http.StatusBadRequest, err
+	}
+	defer resp.Body.Close()
+
+	if !p.nosignreq {
+		// AWS credentials expired, need to generate fresh ones
+		if resp.StatusCode == 403 {
+			p.credentials = nil
+			http.Error(w, "Credentials expired", http.StatusForbidden)
+			return resp.StatusCode, nil
+		}
+	}
+
+	// Write back headers to requesting client
+	copyHeaders(w.Header(), resp.Header)
+
+	// Send response back to requesting client
+	body := bytes.Buffer{}
+	if _, err := io.Copy(&body, resp.Body); err != nil {
+		log.Println(err.Error())
+		return http.StatusInternalServerError, err
+	}
+	w.WriteHeader(resp.StatusCode)
+	respBody := body.Bytes()
+	if n, err := w.Write(respBody); err != nil {
+		log.Printf("Failed to write response body to response (%v/%v bytes). error: %v ", n, len(respBody), err.Error())
+		return http.StatusGone, nil
+	}
+
+	requestEnded := time.Since(requestStarted)
+
+	/*############################
+	## Logging
+	############################*/
+
+	rawQuery := string(dump)
+	rawQuery = strings.Replace(rawQuery, "\n", " ", -1)
+	regex, _ := regexp.Compile("{.*}")
+	regEx, _ := regexp.Compile("_msearch|_bulk")
+	queryEx := regEx.FindString(rawQuery)
+
+	var query string
+
+	if len(queryEx) == 0 {
+		query = regex.FindString(rawQuery)
+	} else {
+		query = ""
+	}
+
+	if p.verbose {
+		if p.prettify {
+			var prettyBody bytes.Buffer
+			json.Indent(&prettyBody, []byte(query), "", "  ")
+			t := time.Now()
+
+			fmt.Println()
+			fmt.Println("========================")
+			fmt.Println(t.Format("2006/01/02 15:04:05"))
+			fmt.Println("Remote Address: ", r.RemoteAddr)
+			fmt.Println("Request URI: ", ep.RequestURI())
+			fmt.Println("Method: ", r.Method)
+			fmt.Println("Status: ", resp.StatusCode)
+			fmt.Printf("Took: %.3fs\n", requestEnded.Seconds())
+			fmt.Println("Body: ")
+			fmt.Println(string(prettyBody.Bytes()))
+		} else {
+			log.Printf(" -> %s; %s; %s; %s; %d; %.3fs\n",
+				r.Method, r.RemoteAddr,
+				ep.RequestURI(), query,
+				resp.StatusCode, requestEnded.Seconds())
+		}
+	}
+
+	if p.logtofile {
+
+		requestID := uuid.NewV4()
+
+		reqStruct := &requestStruct{
+			Requestid:  requestID.String(),
+			Datetime:   time.Now().Format("2006/01/02 15:04:05"),
+			Remoteaddr: r.RemoteAddr,
+			Requesturi: ep.RequestURI(),
+			Method:     r.Method,
+			Statuscode: resp.StatusCode,
+			Elapsed:    requestEnded.Seconds(),
+			Body:       query,
+		}
+
+		respStruct := &responseStruct{
+			Requestid: requestID.String(),
+			Body:      string(body.Bytes()),
+		}
+
+		y, _ := json.Marshal(reqStruct)
+		z, _ := json.Marshal(respStruct)
+		p.fileRequest.Write(y)
+		p.fileRequest.WriteString("\n")
+		p.fileResponse.Write(z)
+		p.fileResponse.WriteString("\n")
+
+	}
+	return resp.StatusCode, nil
+
+}
+
+// Recent versions of ES/Kibana require
+// "kbn-version" and "content-type: application/json"
+// headers to exist in the request.
+// If missing requests fails.
+func addHeaders(src, dest http.Header) {
+	if val, ok := src["Kbn-Version"]; ok {
+		dest.Add("Kbn-Version", val[0])
+	}
+
+	if val, ok := src["Content-Type"]; ok {
+		dest.Add("Content-Type", val[0])
+	}
+}
+
+// Signer.Sign requires a "seekable" body to sum body's sha256
+func replaceBody(req *http.Request) []byte {
+	if req.Body == nil {
+		return []byte{}
+	}
+	payload, _ := ioutil.ReadAll(req.Body)
+	req.Body = ioutil.NopCloser(bytes.NewReader(payload))
+	return payload
+}
+
+func copyHeaders(dst, src http.Header) {
+	for k, vals := range src {
+		for _, v := range vals {
+			dst.Add(k, v)
+		}
+	}
+}

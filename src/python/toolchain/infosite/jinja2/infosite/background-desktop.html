@@ -1,0 +1,21 @@
+{#
+Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+<div class="d-none d-md-block">
+    <div class="d-inline-block position-relative">
+        {% if request.path == url('home') %}
+            <a href="https://app.toolchain.com" class="launch-container d-flex align-items-center app-link">
+                <svg class="launch-polygon" width="36" height="40" viewBox="0 0 36 40" fill="none">
+                    <path d="M18 40L0.679489 30L0.679489 10L18 0L35.3205 10L35.3205 30L18 40Z" fill="#00A9B7"/>
+                </svg>
+                <div class="button3 launch-text palette-primary">START FREE</div>
+            </a>
+        {% endif %}
+        <div class="triangle"></div>
+    </div>
+    <div class="gradient-container">
+        <div class="gradient"></div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+image: null  # set by build_install_iam_watcher.py
+iam_role_arn: arn:aws:iam::283194185447:role/k8s.dev-e1-1.iam-keys-watcher.job
+notify_days: 60
+delete_days: 74

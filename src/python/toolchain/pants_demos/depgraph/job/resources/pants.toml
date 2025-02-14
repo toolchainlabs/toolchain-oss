@@ -1,0 +1,43 @@
+[GLOBAL]
+# Pants version must match prod/docker/pants/Dockerfile:PANTS_VERSION
+pants_version = "2.15.0"
+backend_packages = [
+  "pants.backend.python",
+  "pants.backend.experimental.go",
+  "pants.backend.experimental.java",
+  "pants.backend.experimental.scala",
+]
+pantsd = false
+dynamic_ui = false
+print_stacktrace = true
+watch_filesystem = false
+build_patterns = ["BUILD.pants."]
+pantsrc = false
+
+[anonymous-telemetry]
+enabled = false
+
+[python]
+interpreter_constraints = ["CPython>3.10"]
+
+[python-bootstrap]
+search_path = ["<PYENV>"]
+
+[python-infer]
+string_imports = true
+string_imports_min_dots = 1
+
+
+[source]
+marker_filenames = ["pyproject.toml", "setup.py", "tox.ini", "setup.cfg"]
+
+[tailor]
+build_file_name = "BUILD.pants."
+
+[golang]
+go_search_paths = ["/usr/local/go1.18.3/bin"]
+minimum_expected_version = "1.18"
+
+[scala.version_for_resolve]
+# NB: Should match the version in `//:scala_library`.
+"jvm-default" = "2.13.8"

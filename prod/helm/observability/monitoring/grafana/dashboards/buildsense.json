@@ -1,0 +1,271 @@
+{
+    "annotations": {
+        "list": [
+            {
+                "builtIn": 1,
+                "datasource": "-- Grafana --",
+                "enable": true,
+                "hide": true,
+                "iconColor": "rgba(0, 211, 255, 1)",
+                "name": "Annotations & Alerts",
+                "target": {
+                    "limit": 100,
+                    "matchAny": false,
+                    "tags": [],
+                    "type": "dashboard"
+                },
+                "type": "dashboard"
+            }
+        ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 22,
+    "iteration": 1643653518262,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+        {
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "palette-classic"
+                    },
+                    "custom": {
+                        "axisLabel": "",
+                        "axisPlacement": "auto",
+                        "barAlignment": 0,
+                        "drawStyle": "line",
+                        "fillOpacity": 0,
+                        "gradientMode": "none",
+                        "hideFrom": {
+                            "legend": false,
+                            "tooltip": false,
+                            "viz": false
+                        },
+                        "lineInterpolation": "linear",
+                        "lineWidth": 1,
+                        "pointSize": 5,
+                        "scaleDistribution": {
+                            "type": "linear"
+                        },
+                        "showPoints": "auto",
+                        "spanNulls": false,
+                        "stacking": {
+                            "group": "A",
+                            "mode": "none"
+                        },
+                        "thresholdsStyle": {
+                            "mode": "off"
+                        }
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "red",
+                                "value": 80
+                            }
+                        ]
+                    }
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 0,
+                "y": 0
+            },
+            "id": 4,
+            "options": {
+                "legend": {
+                    "calcs": [],
+                    "displayMode": "list",
+                    "placement": "bottom"
+                },
+                "tooltip": {
+                    "mode": "single"
+                }
+            },
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "prometheus",
+                        "uid": "P0FAB1E32C5564C26"
+                    },
+                    "exemplar": true,
+                    "expr": "sum(irate(toolchain_buildsense_ingestion_sumbitted_builds_total{customer=~\"$customer\"}[1m])) by(repo, pants_version)",
+                    "interval": "",
+                    "legendFormat": "",
+                    "refId": "A"
+                }
+            ],
+            "title": "Submitted Builds",
+            "type": "timeseries"
+        },
+        {
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "palette-classic"
+                    },
+                    "custom": {
+                        "axisLabel": "",
+                        "axisPlacement": "auto",
+                        "barAlignment": 0,
+                        "drawStyle": "line",
+                        "fillOpacity": 0,
+                        "gradientMode": "none",
+                        "hideFrom": {
+                            "legend": false,
+                            "tooltip": false,
+                            "viz": false
+                        },
+                        "lineInterpolation": "linear",
+                        "lineWidth": 1,
+                        "pointSize": 5,
+                        "scaleDistribution": {
+                            "type": "linear"
+                        },
+                        "showPoints": "auto",
+                        "spanNulls": false,
+                        "stacking": {
+                            "group": "A",
+                            "mode": "none"
+                        },
+                        "thresholdsStyle": {
+                            "mode": "off"
+                        }
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "red",
+                                "value": 80
+                            }
+                        ]
+                    }
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 12,
+                "y": 0
+            },
+            "id": 2,
+            "options": {
+                "legend": {
+                    "calcs": [],
+                    "displayMode": "list",
+                    "placement": "bottom"
+                },
+                "tooltip": {
+                    "mode": "single"
+                }
+            },
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "prometheus",
+                        "uid": "P0FAB1E32C5564C26"
+                    },
+                    "exemplar": true,
+                    "expr": "histogram_quantile(0.90, sum by (repo,customer,ci,le) (rate(toolchain_buildsense_ingestion_build_size_kilobytes_bucket{customer=~\"$customer\"}[1h])))",
+                    "interval": "",
+                    "legendFormat": "",
+                    "refId": "A"
+                },
+                {
+                    "datasource": {
+                        "type": "prometheus",
+                        "uid": "P0FAB1E32C5564C26"
+                    },
+                    "exemplar": true,
+                    "expr": "histogram_quantile(0.80, sum by (repo,customer,ci,le) (rate(toolchain_buildsense_ingestion_build_size_kilobytes_bucket{customer=~\"$customer\"}[1h])))",
+                    "hide": false,
+                    "interval": "",
+                    "legendFormat": "",
+                    "refId": "B"
+                },
+                {
+                    "datasource": {
+                        "type": "prometheus",
+                        "uid": "P0FAB1E32C5564C26"
+                    },
+                    "exemplar": true,
+                    "expr": "histogram_quantile(0.50, sum by (repo,customer,ci,le) (rate(toolchain_buildsense_ingestion_build_size_kilobytes_bucket{customer=~\"$customer\"}[1h])))",
+                    "hide": false,
+                    "interval": "",
+                    "legendFormat": "",
+                    "refId": "C"
+                },
+                {
+                    "datasource": {
+                        "type": "prometheus",
+                        "uid": "P0FAB1E32C5564C26"
+                    },
+                    "exemplar": true,
+                    "expr": "histogram_quantile(0.30, sum by (repo,customer,ci,le) (rate(toolchain_buildsense_ingestion_build_size_kilobytes_bucket{customer=~\"$customer\"}[1h])))",
+                    "hide": false,
+                    "interval": "",
+                    "legendFormat": "",
+                    "refId": "D"
+                }
+            ],
+            "title": "Submitted builds size (kb)",
+            "type": "timeseries"
+        }
+    ],
+    "refresh": false,
+    "schemaVersion": 34,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+        "list": [
+            {
+                "allValue": "all",
+                "definition": "label_values(toolchain_buildsense_ingestion_build_size_kilobytes_sum, customer)",
+                "hide": 0,
+                "includeAll": true,
+                "label": "customer",
+                "multi": true,
+                "name": "customer",
+                "options": [],
+                "query": {
+                    "query": "label_values(toolchain_buildsense_ingestion_build_size_kilobytes_sum, customer)",
+                    "refId": "StandardVariableQuery"
+                },
+                "refresh": 1,
+                "regex": "",
+                "skipUrlSync": false,
+                "sort": 0,
+                "type": "query"
+            }
+        ]
+    },
+    "time": {
+        "from": "now-24h",
+        "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "Buildsense By Customers",
+    "uid": "5EIAFEbnk",
+    "version": 1,
+    "weekStart": ""
+}

@@ -1,0 +1,111 @@
+{
+  "run_info": {
+    "id": "pants_run_2019_07_22_15_01_17_10_917f4b304e354a6baaceff913520b926",
+    "timestamp": "1563832877.010004",
+    "datetime": "Monday Jul 22, 2019 15:01:17",
+    "user": "schmitt",
+    "machine": "schmitt.local",
+    "path": "/Users/schmitt/Workspace/toolchain",
+    "buildroot": "/Users/schmitt/Workspace/toolchain",
+    "version": "1.18.0.dev1",
+    "cmd_line": "pants login --to=toolchainlocal --basicauth-allow-insecure-urls=True",
+    "default_report": "/Users/schmitt/Workspace/toolchain/.pants.d/reports/pants_run_2019_07_22_15_01_17_10_917f4b304e354a6baaceff913520b926/html/build.html",
+    "revision": "0f279261dce29ce7aa26f995da0d6a040e1e4997",
+    "branch": "0f279261dce29ce7aa26f995da0d6a040e1e4997",
+    "specs_from_command_line": [],
+    "outcome": "SUCCESS"
+  },
+  "cumulative_timings": [
+    {
+      "label": "main",
+      "timing": 4.729442834854126,
+      "is_tool": false
+    },
+    {
+      "label": "main:login",
+      "timing": 4.175513982772827,
+      "is_tool": false
+    },
+    {
+      "label": "main:login:login",
+      "timing": 4.1703338623046875,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup",
+      "timing": 0.034188032150268555,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup:parse",
+      "timing": 0.0004780292510986328,
+      "is_tool": false
+    },
+    {
+      "label": "main:complete",
+      "timing": 0.0004239082336425781,
+      "is_tool": false
+    }
+  ],
+  "self_timings": [
+    {
+      "label": "main:login:login",
+      "timing": 4.1703338623046875,
+      "is_tool": false
+    },
+    {
+      "label": "main",
+      "timing": 0.5193169116973877,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup",
+      "timing": 0.03371000289916992,
+      "is_tool": false
+    },
+    {
+      "label": "main:login",
+      "timing": 0.0051801204681396484,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup:parse",
+      "timing": 0.0004780292510986328,
+      "is_tool": false
+    },
+    {
+      "label": "main:complete",
+      "timing": 0.0004239082336425781,
+      "is_tool": false
+    }
+  ],
+  "critical_path_timings": [
+    {
+      "label": "main:login",
+      "timing": 4.209702014923096,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup",
+      "timing": 0.034188032150268555,
+      "is_tool": false
+    }
+  ],
+  "artifact_cache_stats": [],
+  "pantsd_stats": {
+    "affected_file_count": 0,
+    "affected_targets_size": 0,
+    "preceding_graph_size": 2287,
+    "resulting_graph_size": 2287,
+    "target_root_size": 0
+  },
+  "outcomes": {
+    "main": "SUCCESS",
+    "main:complete": "SUCCESS",
+    "main:login": "SUCCESS",
+    "main:login:login": "SUCCESS",
+    "main:setup": "SUCCESS",
+    "main:setup:parse": "SUCCESS"
+  },
+  "recorded_options": {}
+}

@@ -1,0 +1,249 @@
+{
+    "pagelen": 10,
+    "values": [
+        {
+            "scm": "git",
+            "website": null,
+            "has_wiki": false,
+            "uuid": "{73f69cff-bb55-4331-baa6-c62ed7cc01c2}",
+            "links": {
+                "watchers": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/example-python/watchers"
+                },
+                "branches": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/example-python/refs/branches"
+                },
+                "tags": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/example-python/refs/tags"
+                },
+                "commits": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/example-python/commits"
+                },
+                "clone": [
+                    {
+                        "href": "https://festivus-miracle@bitbucket.org/festivus-miracle/example-python.git",
+                        "name": "https"
+                    },
+                    {
+                        "href": "git@bitbucket.org:festivus-miracle/example-python.git",
+                        "name": "ssh"
+                    }
+                ],
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/example-python"
+                },
+                "source": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/example-python/src"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/festivus-miracle/example-python"
+                },
+                "avatar": {
+                    "href": "https://bytebucket.org/ravatar/%7B73f69cff-bb55-4331-baa6-c62ed7cc01c2%7D?ts=2778099"
+                },
+                "hooks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/example-python/hooks"
+                },
+                "forks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/example-python/forks"
+                },
+                "downloads": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/example-python/downloads"
+                },
+                "pullrequests": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/example-python/pullrequests"
+                }
+            },
+            "fork_policy": "allow_forks",
+            "full_name": "festivus-miracle/example-python",
+            "name": "example-python",
+            "project": {
+                "links": {
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/workspaces/festivus-miracle/projects/EX"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/festivus-miracle/workspace/projects/EX"
+                    },
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/user/festivus-miracle/projects/EX/avatar/32?ts=1616553975"
+                    }
+                },
+                "type": "project",
+                "name": "examples",
+                "key": "EX",
+                "uuid": "{c317bcc0-da61-4301-a5ba-fe15f49b6f23}"
+            },
+            "language": "python",
+            "created_on": "2021-03-24T02:46:15.317329+00:00",
+            "mainbranch": {
+                "type": "branch",
+                "name": "main"
+            },
+            "workspace": {
+                "slug": "festivus-miracle",
+                "type": "workspace",
+                "name": "festivus miracle",
+                "links": {
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/workspaces/festivus-miracle"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/festivus-miracle/"
+                    },
+                    "avatar": {
+                        "href": "https://bitbucket.org/workspaces/festivus-miracle/avatar/?ts=1616554926"
+                    }
+                },
+                "uuid": "{acf54878-51be-473e-bf0b-0fbb12e011ad}"
+            },
+            "has_issues": false,
+            "owner": {
+                "username": "festivus-miracle",
+                "display_name": "festivus miracle",
+                "type": "team",
+                "uuid": "{acf54878-51be-473e-bf0b-0fbb12e011ad}",
+                "links": {
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/teams/%7Bacf54878-51be-473e-bf0b-0fbb12e011ad%7D"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/%7Bacf54878-51be-473e-bf0b-0fbb12e011ad%7D/"
+                    },
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/festivus-miracle/avatar/"
+                    }
+                }
+            },
+            "updated_on": "2021-03-24T16:16:21.870844+00:00",
+            "size": 283503,
+            "type": "repository",
+            "slug": "example-python",
+            "is_private": false,
+            "description": ""
+        },
+        {
+            "scm": "git",
+            "website": null,
+            "has_wiki": false,
+            "uuid": "{c389eba6-ca13-49c5-8dec-4e617d39dffe}",
+            "links": {
+                "watchers": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/watchers"
+                },
+                "branches": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/refs/branches"
+                },
+                "tags": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/refs/tags"
+                },
+                "commits": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/commits"
+                },
+                "clone": [
+                    {
+                        "href": "https://festivus-miracle@bitbucket.org/festivus-miracle/minimal-pants.git",
+                        "name": "https"
+                    },
+                    {
+                        "href": "git@bitbucket.org:festivus-miracle/minimal-pants.git",
+                        "name": "ssh"
+                    }
+                ],
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants"
+                },
+                "source": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/src"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/festivus-miracle/minimal-pants"
+                },
+                "avatar": {
+                    "href": "https://bytebucket.org/ravatar/%7Bc389eba6-ca13-49c5-8dec-4e617d39dffe%7D?ts=default"
+                },
+                "hooks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/hooks"
+                },
+                "forks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/forks"
+                },
+                "downloads": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/downloads"
+                },
+                "pullrequests": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/pullrequests"
+                }
+            },
+            "fork_policy": "allow_forks",
+            "full_name": "festivus-miracle/minimal-pants",
+            "name": "minimal-pants",
+            "project": {
+                "links": {
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/workspaces/festivus-miracle/projects/EX"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/festivus-miracle/workspace/projects/EX"
+                    },
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/user/festivus-miracle/projects/EX/avatar/32?ts=1616553975"
+                    }
+                },
+                "type": "project",
+                "name": "examples",
+                "key": "EX",
+                "uuid": "{c317bcc0-da61-4301-a5ba-fe15f49b6f23}"
+            },
+            "language": "",
+            "created_on": "2021-05-05T21:02:46.422936+00:00",
+            "mainbranch": {
+                "type": "branch",
+                "name": "main"
+            },
+            "workspace": {
+                "slug": "festivus-miracle",
+                "type": "workspace",
+                "name": "festivus miracle",
+                "links": {
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/workspaces/festivus-miracle"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/festivus-miracle/"
+                    },
+                    "avatar": {
+                        "href": "https://bitbucket.org/workspaces/festivus-miracle/avatar/?ts=1616554926"
+                    }
+                },
+                "uuid": "{acf54878-51be-473e-bf0b-0fbb12e011ad}"
+            },
+            "has_issues": false,
+            "owner": {
+                "username": "festivus-miracle",
+                "display_name": "festivus miracle",
+                "type": "team",
+                "uuid": "{acf54878-51be-473e-bf0b-0fbb12e011ad}",
+                "links": {
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/teams/%7Bacf54878-51be-473e-bf0b-0fbb12e011ad%7D"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/%7Bacf54878-51be-473e-bf0b-0fbb12e011ad%7D/"
+                    },
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/festivus-miracle/avatar/"
+                    }
+                }
+            },
+            "updated_on": "2021-07-16T03:16:40.470242+00:00",
+            "size": 374285,
+            "type": "repository",
+            "slug": "minimal-pants",
+            "is_private": false,
+            "description": ""
+        }
+    ],
+    "page": 1,
+    "size": 2
+}

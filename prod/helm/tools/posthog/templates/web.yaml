@@ -1,0 +1,116 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: posthog-web
+  labels:
+    app: posthog
+    chart: {{ .Chart.Name  }}
+spec:
+  selector:
+    matchLabels:
+        app: posthog
+        chart: {{ .Chart.Name  }}
+        release: {{ .Release.Name }}
+        role: web
+  replicas: {{ .Values.web.replicacount }}
+  template:
+    metadata:
+      labels:
+        app: posthog
+        chart: {{ .Chart.Name  }}
+        release: {{ .Release.Name }}
+        role: web
+    spec:
+      nodeSelector:
+        toolchain.instance_category: service
+      containers:
+      - name: posthog-web
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        command: 
+          - "./bin/docker-server"
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DISABLE_SECURE_SSL_REDIRECT
+          value: "1"
+        - name: SECURE_COOKIES 
+          value: "0"
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: posthog-django-secret-key
+              key: secret_string
+        - name: POSTHOG_DB_USER
+          value: "posthog"
+        - name: POSTHOG_DB_NAME
+          value: posthog
+        - name: POSTHOG_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Release.Namespace }}-db-posthog-password
+              key: postgres-password
+        - name: POSTHOG_POSTGRES_HOST
+          value: {{ .Release.Namespace }}-db-postgresql.{{ .Release.Namespace }}
+        - name: POSTHOG_REDIS_HOST
+          value: {{ .Values.redis.host }}
+        - name: SOCIAL_AUTH_GITHUB_KEY
+          valueFrom:
+            secretKeyRef:
+              name: posthog-github-auth
+              key: GITHUB_KEY
+        - name: SOCIAL_AUTH_GITHUB_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: posthog-github-auth
+              key: GITHUB_SECRET
+        livenessProbe:
+          failureThreshold: 5
+          httpGet:
+            path: /_health/
+            port: 8000
+            scheme: HTTP
+          initialDelaySeconds: 50
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 2
+        readinessProbe:
+          failureThreshold: 10
+          httpGet:
+            path: /_health/
+            port: 8000
+            scheme: HTTP
+          initialDelaySeconds: 50
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 2
+        resources:
+          requests:
+            cpu: "50m"
+            memory: "512Mi"
+          limits:
+            cpu: "350m"
+            memory: "1Gi"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: posthog
+  labels:
+    app: posthog
+    chart: {{ .Chart.Name  }}
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8000
+    protocol: TCP
+    name: http
+  selector:
+    app: posthog
+    role: web
+

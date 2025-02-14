@@ -1,0 +1,32 @@
+[
+    {
+        "tests": [
+            {
+                "name": "test_errors.py",
+                "test_file_path": "test_errors.py",
+                "time": 0.0,
+                "tests": [
+                    {
+                        "results": [
+                            {
+                                "message": "collection failure",
+                                "text": "\n\t\t\t\tImportError while importing test module '/private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionYOyzjq/src/python/toolchain/lang/python/modules/module_distribution_map_test.py'.\n\t\t\t\tHint: make sure your test modules/packages have valid Python names.\n\t\t\t\tTraceback:\n\t\t\t\t/Users/asher/.pyenv/versions/3.8.6/lib/python3.8/importlib/__init__.py:127: in import_module\n\t\t\t\treturn _bootstrap._gcd_import(name[level:], package, level)\n\t\t\t\tsrc/python/toolchain/lang/python/modules/module_distribution_map_test.py:12: in <module>\n\t\t\t\tfrom toolchain.lang.python.test_helpers.utils import ModulesMap1, create_fake_modules_map\n\t\t\t\tsrc/python/toolchain/lang/python/test_helpers/utils.py:14: in <module>\n\t\t\t\tfrom toolchain.lang.python.modules.module_distribution_map import ModuleDistributionMap\n\t\t\t\tsrc/python/toolchain/lang/python/modules/module_distribution_map.py:15: in <module>\n\t\t\t\tfrom toolchain.util.leveldb.dataset import Dataset\n\t\t\t\tsrc/python/toolchain/util/leveldb/dataset.py:19: in <module>\n\t\t\t\timport plyvel\n\t\t\t\t/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/54e9731e/lib/python3.8/site-packages/plyvel/__init__.py:6: in <module>\n\t\t\t\tfrom ._plyvel import (  # noqa\n\t\t\t\tE   ImportError: dlopen(/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/54e9731e/lib/python3.8/site-packages/plyvel/_plyvel.cpython-38-darwin.so, 2): Symbol not found: __ZTIN7leveldb10ComparatorE\n\t\t\t\tE     Referenced from: /Users/asher/.cache/pants/named_caches/pex_root/venvs/short/54e9731e/lib/python3.8/site-packages/plyvel/_plyvel.cpython-38-darwin.so\n\t\t\t\tE     Expected in: flat namespace\n\t\t\t\tE    in /Users/asher/.cache/pants/named_caches/pex_root/venvs/short/54e9731e/lib/python3.8/site-packages/plyvel/_plyvel.cpython-38-darwin.so\n\t\t\t"
+                            }
+                        ],
+                        "name": "src.python.toolchain.lang.python.modules.module_distribution_map_test",
+                        "time": 0.0,
+                        "outcome": "error"
+                    }
+                ]
+            }
+        ],
+        "timing": {
+            "total": 0.0
+        },
+        "target": "test_errors.py",
+        "outputs": {
+            "stdout": "He stopped short?",
+            "stderr": "Three squares? You can\u2019t spare three squares?"
+        }
+    }
+]

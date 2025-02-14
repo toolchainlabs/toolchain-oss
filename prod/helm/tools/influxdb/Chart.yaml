@@ -1,0 +1,12 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+appVersion: 2.3.0
+description: InfluxDB install for toolchain
+name: influxdb
+version: 0.10.0
+dependencies:
+- name: influxdb2
+  version: 2.1.1
+  repository: https://helm.influxdata.com/

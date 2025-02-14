@@ -1,0 +1,235 @@
+/*
+Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+*/
+
+body {
+  background: #f5f5f5;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-family: Fira Sans;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: inherit;
+}
+
+h3 {
+  font-family: Fira Sans;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: inherit;
+}
+
+p.body1 {
+  font-family: Fira Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: inherit;
+}
+
+p.body2 {
+  font-family: Fira Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+
+p.subtitle1 {
+  font-family: Fira Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: inherit;
+}
+
+.logo {
+  margin-bottom: 40px;
+}
+
+.paper {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 40px 40px 96px 40px;
+  width: 792px;
+  height: 90vh;
+  margin: 5vh auto;
+  overflow-y: auto;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.paper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.paper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.tbl {
+  margin: 24px 0px;
+}
+
+.grey-200 {
+  background: #eeeeee;
+}
+
+.grey-300 {
+  border: 1px solid rgba(224, 224, 224, 1);
+}
+
+.body-background {
+  background: #f5f5f5;
+}
+
+.accept-button {
+  height: 48px;
+  min-width: 200px;
+  border-radius: 4px;
+  padding: 8px 22px 8px 22px;
+  background-color: rgba(0, 169, 183, 1);
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+.accept-form-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  bottom: 0;
+  max-width: 793px;
+  border-radius: 8px;
+  background-color: white;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.end-of-paper-gradient {
+  bottom: 96px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 793px;
+  width: 100%;
+  height: 53px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+}
+
+/* no organization */
+
+.no-org-paper {
+  margin-top: 19vh;
+  width: 588px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 80px 40px;
+}
+
+.no-org-subtitle {
+  margin: 16px 0 40px 0;
+}
+
+.no-org-body {
+  margin-bottom: 24px;
+}
+
+.github-icon {
+  margin-right: 8px;
+}
+
+.link-an-organization-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+
+  width: 299px;
+  height: 72px;
+
+  background: #000000;
+  border-radius: 4px;
+
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.button3 {
+  font-family: Fira Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: inherit;
+}
+
+.white {
+  color: white !important;
+}
+
+.primary {
+  color: rgba(0, 169, 183, 1);
+}
+
+.link:hover {
+  color: rgba(0, 169, 183, 1);
+}
+
+.text-secondary {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.having-trouble-text {
+  margin-top: 24px;
+}
+
+.make-sure-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  gap: 10px;
+  background: rgba(0, 169, 183, 0.08);
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.link-margin {
+  margin-left: -4px;
+}

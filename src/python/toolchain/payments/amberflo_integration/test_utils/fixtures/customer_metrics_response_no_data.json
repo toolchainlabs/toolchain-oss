@@ -1,0 +1,102 @@
+[
+    {
+        "metadata": {
+            "account": "406",
+            "meterApiName": "cache-write-bytes",
+            "aggregation": "sum",
+            "timeRange": {
+                "startTimeInSeconds": 1625097600,
+                "endTimeInSeconds": 1625270400
+            },
+            "filter": {
+                "customerId": [
+                    "festivus_customer_id"
+                ]
+            },
+            "groupBy": null,
+            "take": null,
+            "timeGroupingInterval": "day",
+            "valuesTimeGroupingInterval": "day"
+        },
+        "secondsSinceEpochIntervals": [
+            1625097600,
+            1625184000
+        ],
+        "clientMeters": []
+    },
+    {
+        "metadata": {
+            "account": "406",
+            "meterApiName": "cache-read-bytes",
+            "aggregation": "sum",
+            "timeRange": {
+                "startTimeInSeconds": 1625097600,
+                "endTimeInSeconds": 1625270400
+            },
+            "filter": {
+                "customerId": [
+                    "festivus_customer_id"
+                ]
+            },
+            "groupBy": null,
+            "take": null,
+            "timeGroupingInterval": "day",
+            "valuesTimeGroupingInterval": "day"
+        },
+        "secondsSinceEpochIntervals": [
+            1625097600,
+            1625184000
+        ],
+        "clientMeters": []
+    },
+    {
+        "metadata": {
+            "account": "406",
+            "meterApiName": "cache-num-write-blobs",
+            "aggregation": "sum",
+            "timeRange": {
+                "startTimeInSeconds": 1625097600,
+                "endTimeInSeconds": 1625270400
+            },
+            "filter": {
+                "customerId": [
+                    "festivus_customer_id"
+                ]
+            },
+            "groupBy": null,
+            "take": null,
+            "timeGroupingInterval": "day",
+            "valuesTimeGroupingInterval": "day"
+        },
+        "secondsSinceEpochIntervals": [
+            1625097600,
+            1625184000
+        ],
+        "clientMeters": []
+    },
+    {
+        "metadata": {
+            "account": "406",
+            "meterApiName": "cache-num-read-blobs",
+            "aggregation": "sum",
+            "timeRange": {
+                "startTimeInSeconds": 1625097600,
+                "endTimeInSeconds": 1625270400
+            },
+            "filter": {
+                "customerId": [
+                    "festivus_customer_id"
+                ]
+            },
+            "groupBy": null,
+            "take": null,
+            "timeGroupingInterval": "day",
+            "valuesTimeGroupingInterval": "day"
+        },
+        "secondsSinceEpochIntervals": [
+            1625097600,
+            1625184000
+        ],
+        "clientMeters": []
+    }
+]

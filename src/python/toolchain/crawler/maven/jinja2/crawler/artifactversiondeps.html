@@ -1,0 +1,43 @@
+{#
+Copyright 2018 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "maven/base.html" %}
+{% from 'kythebrowser/macros.template' import node_link %}
+
+{% block content %}
+  <h3>Dependencies of <a href="{{ artifact.get_absolute_url() }}">{{ artifact }}</a></h3>
+  <table class=table>
+    <tr>
+      <th>Dependency</th>
+      <th>Version Spec</th>
+      <th>Valid Versions</th>
+      <th colspan="2">Symbols Used</th>
+    </tr>
+    {% for dep_name, data in dep_data.items() %}
+      <tr>
+        <td><a href="{{dep_name.get_absolute_url() }}">{{ dep_name }}</a></td>
+        <td>{{ data['version_spec'] }}</td>
+        <td>
+          <ul class=nobullets>
+            {% for version in data['valid_versions'] %}
+              <li><a href="{{ version.get_absolute_url() }}">{{ version.version }}</a></li>
+            {% endfor %}
+          </ul>
+        </td>
+        <td colspan="2">
+          <table class=table>
+            {% for node in data['nodes'] %}
+            <tr>
+              <td>{{ node.kind }}</td>
+              <td>{{ node_link(node) }}</td>
+            </tr>
+            {% endfor %}
+          </table>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock content %}
+

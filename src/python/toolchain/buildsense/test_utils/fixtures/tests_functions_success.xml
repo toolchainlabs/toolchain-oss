@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" failures="0" hostname="Ashers-MacBook-Pro.local" name="pytest" skipped="0" tests="9" time="0.064" timestamp="2020-07-16T16:41:08.331178">
+		<testcase classname="src.python.toolchain.collections.frozendict_test" name="test_empty" time="0.001"/>
+		<testcase classname="src.python.toolchain.collections.frozendict_test" name="test_empty_from_mapping" time="0.001"/>
+		<testcase classname="src.python.toolchain.collections.frozendict_test" name="test_empty_from_tuples" time="0.001"/>
+		<testcase classname="src.python.toolchain.collections.frozendict_test" name="test_nominal" time="0.001"/>
+		<testcase classname="src.python.toolchain.collections.frozendict_test" name="test_create" time="0.001"/>
+		<testcase classname="src.python.toolchain.collections.frozendict_test" name="test_freeze" time="0.001"/>
+		<testcase classname="src.python.toolchain.collections.frozendict_test" name="test_freeze_error" time="0.001"/>
+		<testcase classname="src.python.toolchain.collections.frozendict_test" name="test_freeze_json_empty" time="0.001"/>
+		<testcase classname="src.python.toolchain.collections.frozendict_test" name="test_freeze_json" time="0.001"/>
+	</testsuite>
+</testsuites>

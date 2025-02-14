@@ -1,0 +1,15 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+description: infosite service
+name: infosite
+version: 0.57.0
+kubeVersion: '>=v1.23.0-0,<v1.27-0'
+dependencies:
+- name: django
+  version: '*'
+  repository: file://../../../base/django/
+- name: ingress
+  version: '*'
+  repository: file://../../../base/ingress/

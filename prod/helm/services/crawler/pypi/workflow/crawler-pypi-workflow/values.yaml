@@ -1,0 +1,52 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: crawler-pypi-workflow
+toolchain_product_name: crawler-pypi
+dbs: [pypi]
+workflow_server_rev:
+  us-east-1: prod-2022-05-18.14-45-20-9f18271cad1e
+workflow_maintenance_image_rev:
+  us-east-1: prod-2022-05-18.14-45-20-9f18271cad1e
+workers:
+  fetcher_values:
+    iam_service_role_arn: null  # set by deploy script
+    worker_deployment_name: crawler-pypi-fetcher
+    resources:
+      worker:
+        requests:
+          cpu: 30m
+          memory: 1Gi
+          ephemeral_storage: 512Mi
+        limits:
+          cpu: 950m
+          memory: 3Gi
+          ephemeral_storage: 3Gi
+    replicas: 1
+    extra_config:
+      WEBRESOURCE_BUCKET: null # Resolved in resources_resolver.py
+      WORKFLOW:
+        batch_size: 50
+        num_executor_threads: 4
+        class_names: [PypiURLFetcher]
+      INLINE_SMALL_WEBRESOURCE_TEXT_CONTENT: '1'
+  processor_values:
+    iam_service_role_arn: null  # set by deploy script
+    worker_deployment_name: crawler-pypi-processor
+    resources:
+      worker:
+        requests:
+          cpu: 30m
+          memory: 1Gi
+          ephemeral_storage: 3Gi
+        limits:
+          cpu: 800m
+          memory: 3Gi
+          ephemeral_storage: 6Gi
+    replicas: 0
+    extra_config:
+      WEBRESOURCE_BUCKET: null # Resolved in resources_resolver.py
+      WORKFLOW:
+        batch_size: 5
+        num_executor_threads: 1
+        class_names: [-PypiURLFetcher]

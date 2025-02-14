@@ -1,0 +1,36 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: buildsense-workflow
+toolchain_product_name: buildsense
+workflow_server_rev:
+  us-east-1: prod-2023-04-18.16-21-24-372e1f29cb9d
+workflow_maintenance_image_rev:
+  us-east-1: prod-2023-04-18.16-21-24-372e1f29cb9d
+dbs: [buildsense, users]
+workers:
+  buildsense_worker_values:
+    worker_deployment_name: buildsense-worker
+    iam_service_role_arn: null
+    secrets:
+    - influxdb-buildsense-token
+    resources:
+      worker:
+        requests:
+          cpu: 400m
+          memory: 1Gi
+          ephemeral_storage: 4Gi
+        limits:
+          cpu: 1800m
+          memory: 3Gi
+          ephemeral_storage: 20Gi
+    replicas: 1
+    extra_config:
+      INFLUXDB_CONFIG:
+        # Resolved in resources_resolver.py
+        host: null
+      WORKFLOW:
+        batch_size: 4
+        num_executor_threads: 3
+      BUILDSENSE_ELASTICSEARCH_HOST: null
+      BUILDSENSE_BUCKET: null

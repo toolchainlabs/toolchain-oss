@@ -1,0 +1,18 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+image_rev: 
+  us-east-1: ovaltine
+toolchain_env: toolchain_dev
+ingress:
+  enabled: false
+iam_service_role_arn: arn::moles::jerry.nbc-seinfeld.cosmo
+request_log:
+  deliver_stream_name: latex
+tests:
+  enabled: true
+  setup_jwt_keys:
+    image_rev: 
+      us-east-1: riverside
+  casload:
+    tag: lopper

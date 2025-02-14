@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserAvatar /> renders large avatar 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiAvatar-root MuiAvatar-rounded css-1qczawd-MuiAvatar-root"
+  >
+    <img
+      alt="Test User"
+      class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+      src="https://avatars1.githubusercontent.com/u/35751794?s=200&v=4"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<UserAvatar /> renders small avatar 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiAvatar-root MuiAvatar-rounded css-gchap1-MuiAvatar-root"
+  >
+    <img
+      alt="Test User"
+      class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+      src="https://avatars1.githubusercontent.com/u/35751794?s=200&v=4"
+    />
+  </div>
+</DocumentFragment>
+`;

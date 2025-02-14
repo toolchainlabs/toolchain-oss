@@ -1,0 +1,19 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# null values may (and sometimes must) be provided in the dependent chart's values.
+
+global:
+  region: null
+rules: null
+# Disabled by default so we don't create an ingress (and possibly provision ELB) by mistake. This needs to be explicitly enabled by the using chart.
+enabled: false
+scheme: internet-facing
+backend_protocol_version: null
+extra_attributes: null
+ssl_redirect_enabled: true
+listen_ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
+# Filled by install scripts in toolchain/prod/installs
+logs_prefix: null
+healthcheck_success_codes: "200"
+

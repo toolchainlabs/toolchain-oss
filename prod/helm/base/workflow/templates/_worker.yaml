@@ -1,0 +1,164 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{- /* A named template containing kubernetes resources for a django-based background worker. */ -}}
+{{- define "workflow.worker.resources" -}}
+
+{{- /* See README.md for explanation of this incantation. */ -}}
+{{- $workflow := dict "Values" .Values.workflow -}}
+{{- $noWorkflow := omit .Values "workflow" -}}
+{{- $overrides := dict "Values" $noWorkflow -}}
+{{- $noValues := omit . "Values" -}}
+{{- with merge $noValues $overrides $workflow -}}
+
+{{- $name := .Values.name }}
+{{- $deployment_name := or .Values.worker_deployment_name $name }}
+{{- $service_name := default ($name | replace "-" "/") .Values.service_name }}
+{{- $ecr_repo_base := .Values.ecr_repo_base | default $service_name }}
+
+{{- $product_name := required "You must set toolchain_product_name!" .Values.toolchain_product_name }}
+{{- $region := required "You must set global.region!" .Values.global.region }}
+{{- $toolchain_env := required "You must set $toolchain_env!" .Values.toolchain_env }}
+{{- $worker_image := printf "%s/%s:%s" .Values.image_registry $ecr_repo_base (index .Values.workflow_server_rev $region) }}
+{{- $secrets := (include "workflow.secrets" . | splitList "+") }}
+{{- $add_dev_prometheus_annotations := eq $toolchain_env "toolchain_dev" }}
+
+# If iam_service_role_arn is specified, then we must set service_account_name, it will be either .Values.service_account_name (if provided) or $name if .Values.service_account_name is not set.
+# It is also assumed that if .Values.service_account_name is provided then the upstream chart is responsible for the creation of the ServiceAccount object and the proper annotations of it (if needed)
+{{- $service_account_name := ternary .Values.service_account_name (default $name .Values.service_account_name)  (empty .Values.iam_service_role_arn ) }}
+
+# If the upstream chart defines a .Values.service_account_name it is assume that it also defines the ServiceAccount object and properly annotates it.
+{{- if and .Values.iam_service_role_arn (not .Values.service_account_name) -}}
+
+---
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ $service_account_name }}
+  labels:
+    name: {{ $deployment_name }}
+    chart: {{ .Chart.Name  }}
+    toolchain_product: {{ $product_name }}
+  annotations:
+     eks.amazonaws.com/role-arn: {{ .Values.iam_service_role_arn }}
+
+---
+{{- end -}}
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ $deployment_name }}
+  labels:
+    name: {{ $deployment_name }}
+    chart: {{ .Chart.Name  }}
+    toolchain_product: {{ $product_name }}
+data:
+  service_config.json: |-
+    {
+      "common": {
+        "toolchain_service_type": "worker",
+        "server_sentry_dsn": "{{ .Values.server_sentry_dsn }}",
+        "toolchain_env": "{{ $toolchain_env }}"
+      },
+      "app": {{ tpl (.Values.config | merge .Values.extra_config | toJson ) . }}
+    }
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $deployment_name }}
+  labels:
+    app: {{ $deployment_name }}
+    chart: {{ .Chart.Name  }}
+    toolchain_product: {{ $product_name }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: {{ $deployment_name }}
+  template:
+    metadata:
+      name: {{ $deployment_name }}
+      labels:
+        services: "toolchain"
+        toolchain_product:  {{ $product_name }}
+        app: {{ $deployment_name }}
+        toolchain_service_type: worker
+        monitor: "true"
+        chart: {{ .Chart.Name  }}
+      annotations:
+        toolchain.com/databases: {{ .Values.dbs | join "," }}
+        {{- if $add_dev_prometheus_annotations  }}
+        prometheus.io/scrape: "true"
+        prometheus.io/path: "/metricsz"
+        prometheus.io/port: "8001"
+        {{ end }}
+    spec:
+      volumes:
+      {{- if .Values.workerExtraVolumes  }}{{ toYaml .Values.workerExtraVolumes | trim | nindent 6 }}{{ end }}
+      - name: config-volume
+        configMap:
+          name: {{ $deployment_name }}
+      # A volume for each secret.
+      {{- range $secrets }}
+      - name: {{ . }}
+        secret:
+          secretName: {{ . }}
+      {{- end }}
+      nodeSelector:
+        {{ .Values.node_selector }}
+      {{- if $service_account_name }}
+      serviceAccountName: {{ $service_account_name }}
+      {{ end }}
+      containers:
+      - name: worker
+        image: {{ $worker_image }}
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 8001
+            name: http
+        resources:
+          requests:
+            cpu: {{ .Values.resources.worker.requests.cpu }}
+            memory: {{ .Values.resources.worker.requests.memory }}
+            ephemeral-storage: {{ .Values.resources.worker.requests.ephemeral_storage }}
+          limits:
+            cpu: {{ .Values.resources.worker.limits.cpu }}
+            memory: {{ .Values.resources.worker.limits.memory }}
+            ephemeral-storage: {{ .Values.resources.worker.limits.ephemeral_storage }}
+        volumeMounts:
+        {{- if .Values.workerExtraVolumeMounts }}{{ toYaml .Values.workerExtraVolumeMounts | trim | nindent 8 }}{{ end }}
+        - name: config-volume
+          mountPath: /etc/config
+        # Mount every secret at /secrets/<name_of_secret>.
+        {{- range $secrets }}
+        - name: {{ . }}
+          mountPath: /secrets/{{ . }}
+          readOnly: true
+        {{- end }}
+        env:
+        - name: TOOLCHAIN_ENV
+          value: {{ $toolchain_env }}
+        - name: K8S_NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: K8S_POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: K8S_POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: K8S_POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+{{- end -}}
+{{- end -}}

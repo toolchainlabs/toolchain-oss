@@ -1,0 +1,8 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+name: toolchain-remote-exec-workers
+description: Remote execution workers for the Toolchain monorepo.
+version: 0.12.0
+kubeVersion: '>=v1.24.0-0,<v1.28-0'

@@ -1,0 +1,30 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+external-dns:
+  serviceMonitor:
+    enabled: true
+    additionalLabels:
+      services: toolchain-monitoring
+      monitor: "true"
+  serviceAccount:
+    name: "external-dns"
+    annotations:
+      eks.amazonaws.com/role-arn: null # To be filled by install_external_dns_prod.py
+  txtOwnerId: # will have the cluster ID, filled by install_external_dns_prod
+  domainFilters:
+    - toolchain.com
+  provider: aws
+  policy: upsert-only
+  registry: txt
+  txtPrefix: tcextdns
+  sources:
+    - service
+    - ingress
+  resources:
+    requests:
+      cpu: 20m
+      memory: 64Mi
+    limits:
+      cpu: 100m
+      memory: 256Mi

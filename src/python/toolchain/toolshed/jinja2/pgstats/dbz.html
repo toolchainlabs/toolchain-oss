@@ -1,0 +1,15 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'toolshed/base.html' %}
+
+{% block content %}
+  <h2>DB State</h2>
+  <h5><a href="{{ views_links.dbz_backends }}">Connections</a></h5>
+  <h5><a href="{{ views_links.dbz_locks }}">Locks</a></h5>
+  <h5><a href="{{ views_links.dbz_blocked_locks }}">Blocked Locks</a></h5>
+  <h5><a href="{{ views_links.dbz_bgwriter }}">Background Writer Stats</a></h5>
+  <h5><a href="{{ views_links.dbz_explain }}">Explain</a></h5>
+{% endblock content %}

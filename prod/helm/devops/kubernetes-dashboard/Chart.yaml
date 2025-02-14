@@ -1,0 +1,13 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+appVersion: v2.7.0
+description: General-purpose web UI for Kubernetes clusters
+name: kubernetes-dashboard
+version: 1.6.0
+home: https://github.com/kubernetes/dashboard
+dependencies:
+- name: kubernetes-dashboard
+  version: 6.0.7
+  repository: https://kubernetes.github.io/dashboard/

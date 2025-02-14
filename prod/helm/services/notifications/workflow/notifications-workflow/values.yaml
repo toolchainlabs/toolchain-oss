@@ -1,0 +1,19 @@
+# Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: notifications-workflow
+service_name: notifications/workflow
+toolchain_product_name: notifications
+workflow_server_rev:
+  us-east-1: null
+workflow_maintenance_image_rev:
+  us-east-1: null
+dbs: [users, notifications]
+workers:
+  notifications_worker_values:
+    iam_service_role_arn: null  # set by deploy script
+    worker_deployment_name: notifications-worker
+    replicas: 1
+    secrets: []
+    extra_config: # set by deploy script
+      RENDER_EMAIL_BUCKET: null

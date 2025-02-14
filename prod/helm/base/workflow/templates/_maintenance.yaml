@@ -1,0 +1,129 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{- define "workflow.maintenance.resources" -}}
+{{- $workflow := dict "Values" .Values.workflow -}}
+{{- $noWorkflow := omit .Values "workflow" -}}
+{{- $overrides := dict "Values" $noWorkflow -}}
+{{- $noValues := omit . "Values" -}}
+{{- with merge $noValues $overrides $workflow -}}
+
+{{- $product_name := required "You must set toolchain_product_name!" .Values.toolchain_product_name }}
+{{- $region := required "You must set global.region!" .Values.global.region }}
+{{- $toolchain_env := required "You must set $toolchain_env!" .Values.toolchain_env }}
+{{- $deployment_name := printf "%s-maintenance" .Values.name }}
+{{- $service_name := default (.Values.name | replace "-" "/") .Values.service_name }}
+{{- $ecr_repo_base := .Values.ecr_repo_base | default $service_name }}
+{{- $image := printf "%s/%s/maintenance:%s" .Values.image_registry $ecr_repo_base (index .Values.workflow_maintenance_image_rev $region) }}
+{{- $secrets := (include "workflow.secrets" . | splitList "+") }}
+{{- $add_dev_prometheus_annotations := eq $toolchain_env "toolchain_dev" }}
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ $deployment_name }}
+  labels:
+    name: {{ $deployment_name }}
+    chart: {{ .Chart.Name  }}
+    toolchain_product: {{ $product_name }}
+data:
+  service_config.json: |-
+    {
+      "common": {
+        "toolchain_service_type": "worker-maintenance",
+        "server_sentry_dsn": {{ .Values.server_sentry_dsn | quote }},
+        "toolchain_env": {{ $toolchain_env | quote }}
+      },
+      "app": {{ tpl (.Values.config | merge .Values.extra_config | toJson ) . }}
+    }
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  {{ $deployment_name }}
+  labels:
+    app: {{ $deployment_name }}
+    chart: {{ .Chart.Name  }}
+    toolchain_product: {{ $product_name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ $deployment_name }}
+  template:
+    metadata:
+      name: {{ $deployment_name }}
+      labels:
+        services: "toolchain"
+        toolchain_product:  {{ $product_name }}
+        app: {{ $deployment_name }}
+        chart: {{ .Chart.Name  }}
+        toolchain_service_type: worker-maintenance
+        monitor: "true"
+      annotations:
+        toolchain.com/databases: {{ .Values.dbs | join "," }}
+        {{- if $add_dev_prometheus_annotations  }}
+        prometheus.io/scrape: "true"
+        prometheus.io/path: "/metricsz"
+        prometheus.io/port: "8001"
+        {{ end }}
+    spec:
+      volumes:
+      - name: config-volume
+        configMap:
+          name: {{ $deployment_name }}
+      - name: prometheus-metrics-volume
+        emptyDir: {}
+      # A volume for each secret.
+      {{- range $secrets }}
+      - name: {{ . }}
+        secret:
+          secretName: {{ . }}
+      {{- end }}
+      nodeSelector:
+        {{ .Values.node_selector }}
+      containers:
+      - name: worker
+        image: {{ $image }}
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 8001
+            name: http
+        resources:
+          requests:
+            cpu: "25m"
+            memory: "256Mi"
+            ephemeral-storage: "1Gi"
+          limits:
+            cpu: "150m"
+            memory: "1024Mi"
+            ephemeral-storage: "2Gi"
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/config
+        # Mount every secret at /secrets/<name_of_secret>.
+        {{- range $secrets }}
+        - name: {{ . }}
+          mountPath: /secrets/{{ . }}
+          readOnly: true
+        {{- end }}
+        env:
+        - name: K8S_NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: K8S_POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: K8S_POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: K8S_POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+{{- end -}}
+{{- end -}}

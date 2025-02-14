@@ -1,0 +1,12 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+description: Dependency API service
+name: dependency-api
+version: 0.62.0
+kubeVersion: '>=v1.20.0-0,<v1.25-0'
+dependencies:
+- name: django
+  version: '*'
+  repository: file://../../../../base/django/

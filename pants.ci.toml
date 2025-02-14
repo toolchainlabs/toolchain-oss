@@ -1,0 +1,24 @@
+[GLOBAL]
+process_execution_local_parallelism = 4
+dynamic_ui = false
+colors = false
+pantsd_max_memory_usage = 1073741824 # 1GB
+streaming_workunits_report_interval = 5 # 5 seconds
+ignore_warnings = [
+  "$regex$DEPRECATED: option 'lockfile' in scope\\s*",
+]
+
+
+[test]
+use_coverage = true
+report = true
+
+[coverage-py]
+report = ["xml", "raw"]
+
+[pytest]
+args.add = [
+  "-vv",
+  # Unlike normal pants.toml, we don't use pytest-icdiff because colorizing doesn't work in CI.
+  "-p no:icdiff"
+]

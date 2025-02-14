@@ -1,0 +1,30 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "workflow/base.html" %}
+{% block title %}{{ super() }}Exceptions{% endblock title %}
+{% block content %}
+  <h2>WorkExceptions</h2>
+
+<div class="workexceptionlog-table-container">
+  <table id="workexceptionlog-table" class="table table-condensed table-hover workexceptionlog-table">
+  </table>
+</div>
+
+{% endblock content %}
+
+{% block js %}
+  {{ super() }}
+  <script src="{{ static('workflow/js/workunit_list_table.js') }}"></script>
+  <script src="{{ static('workflow/js/mark_as_feasible.js') }}"></script>
+  {{ csrf_input }}
+  <script>
+    $(function() {
+      toolchain.workflow.setMarkSelectedUrl('{{ views_links.mark_as_feasible }}');      
+      toolchain.workflow.initWorkExceptionLogTable('#workexceptionlog-table',
+          '{{ views_links.workexceptionlog_data }}');
+    });
+  </script>
+{% endblock js %}

@@ -1,0 +1,1783 @@
+[
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "405df15bcd979569",
+        "timestamp": 1589576151496719,
+        "duration": 98,
+        "localEndpoint": {
+            "serviceName": "union_membership_singleton"
+        },
+        "parentId": "5007432b60c5b942"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "135b2d218e032633",
+        "timestamp": 1589576151497142,
+        "duration": 13769,
+        "localEndpoint": {
+            "serviceName": "parse_options"
+        },
+        "parentId": "c69108685755d498"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "c69108685755d498",
+        "timestamp": 1589576151497130,
+        "duration": 13811,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "d0ee77b48659c424"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Task(pants.core.goals.test:160:construct_scope_test(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), TestOptions, true)",
+        "id": "d0ee77b48659c424",
+        "timestamp": 1589576151497036,
+        "duration": 13940,
+        "localEndpoint": {
+            "serviceName": "task"
+        },
+        "parentId": "5007432b60c5b942"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "2058a2e27da6c35b",
+        "timestamp": 1589576151511098,
+        "duration": 1560,
+        "localEndpoint": {
+            "serviceName": "registered_target_types_singleton"
+        },
+        "parentId": "4f8d990eda45d950"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "ce2ebf6b2cd7b8ed",
+        "timestamp": 1589576151511202,
+        "duration": 1540,
+        "localEndpoint": {
+            "serviceName": "address_mapper_singleton"
+        },
+        "parentId": "a758352ca680ebe0"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Scandir(Dir(\"\"))",
+        "id": "1aab35aeaa713126",
+        "timestamp": 1589576151513190,
+        "duration": 5048,
+        "localEndpoint": {
+            "serviceName": "scandir"
+        },
+        "parentId": "149e590485bcbe54"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Scandir(Dir(\"src\"))",
+        "id": "3ec6f4b48a0c20a6",
+        "timestamp": 1589576151518294,
+        "duration": 467,
+        "localEndpoint": {
+            "serviceName": "scandir"
+        },
+        "parentId": "149e590485bcbe54"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Scandir(Dir(\"src/python\"))",
+        "id": "498c34f403700f47",
+        "timestamp": 1589576151518807,
+        "duration": 355,
+        "localEndpoint": {
+            "serviceName": "scandir"
+        },
+        "parentId": "149e590485bcbe54"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Scandir(Dir(\"src/python/toolchain\"))",
+        "id": "84f8c9263ca76e35",
+        "timestamp": 1589576151519191,
+        "duration": 868,
+        "localEndpoint": {
+            "serviceName": "scandir"
+        },
+        "parentId": "149e590485bcbe54"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Scandir(Dir(\"src/python/toolchain/base\"))",
+        "id": "c3f247af5d3463d4",
+        "timestamp": 1589576151520101,
+        "duration": 1113,
+        "localEndpoint": {
+            "serviceName": "scandir"
+        },
+        "parentId": "149e590485bcbe54"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/BUILD\", is_executable: false })",
+        "id": "bdefd73dd6c37978",
+        "timestamp": 1589576151521308,
+        "duration": 888,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "149e590485bcbe54"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/base/**/BUILD', 'src/python/toolchain/base/**/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "149e590485bcbe54",
+        "timestamp": 1589576151512999,
+        "duration": 9554,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "a758352ca680ebe0"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Snapshot(PathGlobs(globs=(), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "9d25b2e6ef16e014",
+        "timestamp": 1589576151522810,
+        "duration": 72,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "ee9188457148743e"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "ee9188457148743e",
+        "timestamp": 1589576151522718,
+        "duration": 309,
+        "localEndpoint": {
+            "serviceName": "evalute_preludes"
+        },
+        "parentId": "d1d447d43c7c07d0"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/base/BUILD', 'src/python/toolchain/base/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "bbeb17944cef34e5",
+        "timestamp": 1589576151523127,
+        "duration": 539,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "d1d447d43c7c07d0"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "d1d447d43c7c07d0",
+        "timestamp": 1589576151522691,
+        "duration": 1604,
+        "localEndpoint": {
+            "serviceName": "parse_address_family"
+        },
+        "parentId": "a758352ca680ebe0"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "a758352ca680ebe0",
+        "timestamp": 1589576151511191,
+        "duration": 13340,
+        "localEndpoint": {
+            "serviceName": "addresses_with_origins_from_address_families"
+        },
+        "parentId": "f575fafdde67a752"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "4298bb128307f0d6",
+        "timestamp": 1589576151524665,
+        "duration": 322,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "6495bff8306d5d29"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "6495bff8306d5d29",
+        "timestamp": 1589576151524654,
+        "duration": 491,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "f54ba2dc7152c952"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "f54ba2dc7152c952",
+        "timestamp": 1589576151524612,
+        "duration": 552,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "f575fafdde67a752"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "20aab0c123d54d17",
+        "timestamp": 1589576151524731,
+        "duration": 616,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "2080114a99ed3464"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "2080114a99ed3464",
+        "timestamp": 1589576151524720,
+        "duration": 767,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "a6bafdc568445383"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "a6bafdc568445383",
+        "timestamp": 1589576151524628,
+        "duration": 873,
+        "localEndpoint": {
+            "serviceName": "resolve_target_with_origin"
+        },
+        "parentId": "f575fafdde67a752"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "f575fafdde67a752",
+        "timestamp": 1589576151511173,
+        "duration": 14347,
+        "localEndpoint": {
+            "serviceName": "resolve_targets_with_origins"
+        },
+        "parentId": "4f8d990eda45d950"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "4f8d990eda45d950",
+        "timestamp": 1589576151511068,
+        "duration": 14758,
+        "localEndpoint": {
+            "serviceName": "find_valid_field_sets"
+        },
+        "parentId": "5007432b60c5b942"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "c367d215e1dc1510",
+        "timestamp": 1589576151525990,
+        "duration": 11,
+        "localEndpoint": {
+            "serviceName": "glob_match_error_behavior_singleton"
+        },
+        "parentId": "84ca65c415527436"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/strutil_test.py\", is_executable: false })",
+        "id": "eae992f47ed279e3",
+        "timestamp": 1589576151526329,
+        "duration": 1582,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "0bf4885eced22408"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/email_test.py\", is_executable: false })",
+        "id": "0cb28bc8521758d5",
+        "timestamp": 1589576151526350,
+        "duration": 1572,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "0bf4885eced22408"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/password_test.py\", is_executable: false })",
+        "id": "b1b22e2ba3b3cf72",
+        "timestamp": 1589576151526340,
+        "duration": 1685,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "0bf4885eced22408"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/fileutil_test.py\", is_executable: false })",
+        "id": "47dc169303418406",
+        "timestamp": 1589576151526357,
+        "duration": 1949,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "0bf4885eced22408"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Snapshot(PathGlobs(globs=('src/python/toolchain/base/*_test.py', 'src/python/toolchain/base/conftest.py', 'src/python/toolchain/base/test_*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/base:tests's `sources` field\"))",
+        "id": "0bf4885eced22408",
+        "timestamp": 1589576151526139,
+        "duration": 2439,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "84ca65c415527436"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "84ca65c415527436",
+        "timestamp": 1589576151525979,
+        "duration": 2758,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "a9e0f189d38a2e1e"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "a9e0f189d38a2e1e",
+        "timestamp": 1589576151525905,
+        "duration": 2864,
+        "localEndpoint": {
+            "serviceName": "determine_field_sets_with_sources"
+        },
+        "parentId": "5007432b60c5b942"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "35631d367d5adb11",
+        "timestamp": 1589576151530885,
+        "duration": 1905,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "79f9a2060dc818ad"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Task(pants.backend.python.subsystems.pytest:10:construct_scope_pytest(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), PyTest, true)",
+        "id": "79f9a2060dc818ad",
+        "timestamp": 1589576151530563,
+        "duration": 2301,
+        "localEndpoint": {
+            "serviceName": "task"
+        },
+        "parentId": "42985d735b3a0dc3"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "e5756f2740ff1055",
+        "timestamp": 1589576151530703,
+        "duration": 2652,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "ccf0559bb1161fa1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "b6cdd7220156d8b2",
+        "timestamp": 1589576151533497,
+        "duration": 1103,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "3ff97699bebfc40f"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Task(pants.backend.python.subsystems.subprocess_environment:12:construct_scope_subprocess_environment(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), SubprocessEnvironment, true)",
+        "id": "3ff97699bebfc40f",
+        "timestamp": 1589576151533107,
+        "duration": 1529,
+        "localEndpoint": {
+            "serviceName": "task"
+        },
+        "parentId": "92c83a6fc3e09ac7"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "92c83a6fc3e09ac7",
+        "timestamp": 1589576151529548,
+        "duration": 5204,
+        "localEndpoint": {
+            "serviceName": "create_subprocess_encoding_environment"
+        },
+        "parentId": "ba9137483b8cc950"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Task(pants.option.global_options:159:construct_scope_(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), GlobalOptions, true)",
+        "id": "ccf0559bb1161fa1",
+        "timestamp": 1589576151529948,
+        "duration": 5770,
+        "localEndpoint": {
+            "serviceName": "task"
+        },
+        "parentId": "ba9137483b8cc950"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "e0dc8614b9da1564",
+        "timestamp": 1589576151533335,
+        "duration": 3672,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "e52e2daedbef29ef"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Task(pants.python.python_setup:20:construct_scope_python_setup(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), PythonSetup, true)",
+        "id": "e52e2daedbef29ef",
+        "timestamp": 1589576151529764,
+        "duration": 7265,
+        "localEndpoint": {
+            "serviceName": "task"
+        },
+        "parentId": "ba9137483b8cc950"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Scandir(Dir(\"3rdparty\"))",
+        "id": "83f34e768ec86d86",
+        "timestamp": 1589576151538102,
+        "duration": 414,
+        "localEndpoint": {
+            "serviceName": "scandir"
+        },
+        "parentId": "daf31fdd64298632"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Scandir(Dir(\"3rdparty/python\"))",
+        "id": "47c827acd1632728",
+        "timestamp": 1589576151538547,
+        "duration": 730,
+        "localEndpoint": {
+            "serviceName": "scandir"
+        },
+        "parentId": "daf31fdd64298632"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"3rdparty/python/BUILD\", is_executable: false })",
+        "id": "83abe8cc6262c983",
+        "timestamp": 1589576151539311,
+        "duration": 813,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "daf31fdd64298632"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', '3rdparty/python/BUILD', '3rdparty/python/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+        "id": "daf31fdd64298632",
+        "timestamp": 1589576151537887,
+        "duration": 2451,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "3b593e65b4b42f84"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "3b593e65b4b42f84",
+        "timestamp": 1589576151537569,
+        "duration": 23135,
+        "localEndpoint": {
+            "serviceName": "parse_address_family"
+        },
+        "parentId": "3c8357fd52f9c46e"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "5a3a735676a5dea0",
+        "timestamp": 1589576151537497,
+        "duration": 23659,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "b5a872c4bf66ceba"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "3d4bd74fb5f7a1a9",
+        "timestamp": 1589576151537478,
+        "duration": 24388,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "b4493d99640cf039"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "b4493d99640cf039",
+        "timestamp": 1589576151537453,
+        "duration": 24547,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "e87af9be6b8f6a3b"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "b5a872c4bf66ceba",
+        "timestamp": 1589576151537456,
+        "duration": 25090,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "af58503aa7423331"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "3c8357fd52f9c46e",
+        "timestamp": 1589576151537376,
+        "duration": 25616,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "1a2cd1763a3c0a5f"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "1a2cd1763a3c0a5f",
+        "timestamp": 1589576151537365,
+        "duration": 25734,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "65c058718efcf810"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "07e3186eae1d05b5",
+        "timestamp": 1589576151562159,
+        "duration": 1152,
+        "localEndpoint": {
+            "serviceName": "hydrate_struct"
+        },
+        "parentId": "33db58b40143038e"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "33db58b40143038e",
+        "timestamp": 1589576151562147,
+        "duration": 1281,
+        "localEndpoint": {
+            "serviceName": "resolve_target"
+        },
+        "parentId": "6075c2bd9817047e"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "6075c2bd9817047e",
+        "timestamp": 1589576151562133,
+        "duration": 1327,
+        "localEndpoint": {
+            "serviceName": "transitive_target"
+        },
+        "parentId": "e87af9be6b8f6a3b"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "65c058718efcf810",
+        "timestamp": 1589576151537294,
+        "duration": 26193,
+        "localEndpoint": {
+            "serviceName": "transitive_target"
+        },
+        "parentId": "7f8fe2bb48dab06f"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "e87af9be6b8f6a3b",
+        "timestamp": 1589576151537422,
+        "duration": 26082,
+        "localEndpoint": {
+            "serviceName": "transitive_target"
+        },
+        "parentId": "f518b7b67ec6fd63"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "af58503aa7423331",
+        "timestamp": 1589576151537441,
+        "duration": 26077,
+        "localEndpoint": {
+            "serviceName": "transitive_target"
+        },
+        "parentId": "f518b7b67ec6fd63"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "f518b7b67ec6fd63",
+        "timestamp": 1589576151537254,
+        "duration": 26277,
+        "localEndpoint": {
+            "serviceName": "transitive_target"
+        },
+        "parentId": "7f8fe2bb48dab06f"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "7f8fe2bb48dab06f",
+        "timestamp": 1589576151537150,
+        "duration": 26394,
+        "localEndpoint": {
+            "serviceName": "transitive_target"
+        },
+        "parentId": "de2e9f3145584d72"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "de2e9f3145584d72",
+        "timestamp": 1589576151537095,
+        "duration": 26495,
+        "localEndpoint": {
+            "serviceName": "transitive_targets"
+        },
+        "parentId": "42985d735b3a0dc3"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "b7440e705e7644f3",
+        "timestamp": 1589576151564504,
+        "duration": 100,
+        "localEndpoint": {
+            "serviceName": "log_level"
+        },
+        "parentId": "5dded94699242ffb"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "fda861f7a934f179",
+        "timestamp": 1589576151565222,
+        "duration": 448,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "b0d568ae9fd58a3f"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "b0d568ae9fd58a3f",
+        "timestamp": 1589576151564987,
+        "duration": 709,
+        "localEndpoint": {
+            "serviceName": "strip_source_roots_from_sources_field"
+        },
+        "parentId": "6cff1071a0959c06"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "432774e62408aec1",
+        "timestamp": 1589576151565803,
+        "duration": 224,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "a7c6f61cd7237de2"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "548f26112b86ed48",
+        "timestamp": 1589576151566281,
+        "duration": 485,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "499c52750758247d"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "499c52750758247d",
+        "timestamp": 1589576151566161,
+        "duration": 622,
+        "localEndpoint": {
+            "serviceName": "strip_source_roots_from_sources_field"
+        },
+        "parentId": "6cff1071a0959c06"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "a69799a8fb113dd9",
+        "timestamp": 1589576151566659,
+        "duration": 2173,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "048887520082f6ae"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Task(pants.source.source_root:111:construct_scope_source(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), SourceRootConfig, true)",
+        "id": "048887520082f6ae",
+        "timestamp": 1589576151566545,
+        "duration": 2354,
+        "localEndpoint": {
+            "serviceName": "task"
+        },
+        "parentId": "5b9f70c905edae19"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "13c4ac5843665b66",
+        "timestamp": 1589576151569637,
+        "duration": 973,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "86d985fd6e767673"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Task(pants.python.python_repos:9:construct_scope_python_repos(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), PythonRepos, true)",
+        "id": "86d985fd6e767673",
+        "timestamp": 1589576151569537,
+        "duration": 1557,
+        "localEndpoint": {
+            "serviceName": "task"
+        },
+        "parentId": "5dded94699242ffb"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "d1555673967e5bf3",
+        "timestamp": 1589576151569065,
+        "duration": 2086,
+        "localEndpoint": {
+            "serviceName": "materialize_platform"
+        },
+        "parentId": "5dded94699242ffb"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "c324e26427fbf368",
+        "timestamp": 1589576151571559,
+        "duration": 838,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "2e38d6ae1e3bc660"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "06289e3abf6c1762",
+        "timestamp": 1589576151571647,
+        "duration": 858,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "6e61ea19bf3c52aa"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "6e61ea19bf3c52aa",
+        "timestamp": 1589576151571554,
+        "duration": 1092,
+        "localEndpoint": {
+            "serviceName": "strip_source_roots_from_sources_field"
+        },
+        "parentId": "6cff1071a0959c06"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Task(pants.backend.python.subsystems.python_native_code:25:construct_scope_python_native_code(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), PythonNativeCode, true)",
+        "id": "2e38d6ae1e3bc660",
+        "timestamp": 1589576151571418,
+        "duration": 1308,
+        "localEndpoint": {
+            "serviceName": "task"
+        },
+        "parentId": "08a268471e1f4707"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "08a268471e1f4707",
+        "timestamp": 1589576151571162,
+        "duration": 1597,
+        "localEndpoint": {
+            "serviceName": "create_pex_native_build_environment"
+        },
+        "parentId": "5dded94699242ffb"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "ad976415f660455d",
+        "timestamp": 1589576151571274,
+        "duration": 1778,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "df9b8d1a8a351c5e"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "df9b8d1a8a351c5e",
+        "timestamp": 1589576151571125,
+        "duration": 1968,
+        "localEndpoint": {
+            "serviceName": "strip_source_roots_from_sources_field"
+        },
+        "parentId": "6cff1071a0959c06"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "a17d7b4657b6f4d1",
+        "timestamp": 1589576151573705,
+        "duration": 1651,
+        "localEndpoint": {
+            "serviceName": "pex_from_targets"
+        },
+        "parentId": "5dded94699242ffb"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "4947f24b89f9a54d",
+        "timestamp": 1589576151573250,
+        "duration": 2120,
+        "localEndpoint": {
+            "serviceName": "scope_options"
+        },
+        "parentId": "a49e355fb276e031"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Task(pants.backend.python.rules.download_pex_bin:23:construct_scope_download_pex_bin(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), PexBin, true)",
+        "id": "a49e355fb276e031",
+        "timestamp": 1589576151572976,
+        "duration": 2950,
+        "localEndpoint": {
+            "serviceName": "task"
+        },
+        "parentId": "917c6b11456031e2"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/__init__.py\", is_executable: false })",
+        "id": "d41928a3ec2e44c6",
+        "timestamp": 1589576151572659,
+        "duration": 5777,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/toolchain_error.py\", is_executable: false })",
+        "id": "3de32e9e23a52f28",
+        "timestamp": 1589576151571547,
+        "duration": 6890,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/email.py\", is_executable: false })",
+        "id": "daf6a499b7eb0061",
+        "timestamp": 1589576151572681,
+        "duration": 5761,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/ansi_colors_mixin.py\", is_executable: false })",
+        "id": "d413cd3ee09ff98c",
+        "timestamp": 1589576151572669,
+        "duration": 5776,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/datetime_tools.py\", is_executable: false })",
+        "id": "ef491d7328b131f7",
+        "timestamp": 1589576151572674,
+        "duration": 5776,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/password.py\", is_executable: false })",
+        "id": "885079cbfb5077a7",
+        "timestamp": 1589576151573135,
+        "duration": 5327,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "5b9f70c905edae19",
+        "timestamp": 1589576151565144,
+        "duration": 13394,
+        "localEndpoint": {
+            "serviceName": "strip_source_roots_from_snapshot"
+        },
+        "parentId": "129c194245052ee2"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "a7c6f61cd7237de2",
+        "timestamp": 1589576151565703,
+        "duration": 12848,
+        "localEndpoint": {
+            "serviceName": "strip_source_roots_from_sources_field"
+        },
+        "parentId": "6cff1071a0959c06"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "129c194245052ee2",
+        "timestamp": 1589576151564533,
+        "duration": 14028,
+        "localEndpoint": {
+            "serviceName": "strip_source_roots_from_sources_field"
+        },
+        "parentId": "c3c5fb916b3cf1f6"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/hashutil.py\", is_executable: false })",
+        "id": "80f305c5bcb26580",
+        "timestamp": 1589576151573024,
+        "duration": 5740,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "c3c5fb916b3cf1f6",
+        "timestamp": 1589576151564406,
+        "duration": 14484,
+        "localEndpoint": {
+            "serviceName": "determine_specified_source_files"
+        },
+        "parentId": "42985d735b3a0dc3"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/env_args.py\", is_executable: false })",
+        "id": "3da4c7ca5a0e210e",
+        "timestamp": 1589576151572854,
+        "duration": 6264,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/timer.py\", is_executable: false })",
+        "id": "e984e9f12cd0da17",
+        "timestamp": 1589576151573399,
+        "duration": 6658,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/meta.py\", is_executable: false })",
+        "id": "6ca0c2a9d6fa9b53",
+        "timestamp": 1589576151573511,
+        "duration": 6557,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/strutil.py\", is_executable: false })",
+        "id": "e09eca6314fcb181",
+        "timestamp": 1589576151573218,
+        "duration": 6852,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/memo.py\", is_executable: false })",
+        "id": "bc1a12b4a36d0513",
+        "timestamp": 1589576151573359,
+        "duration": 6716,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/fileutil.py\", is_executable: false })",
+        "id": "02db0adb5d7ce347",
+        "timestamp": 1589576151573010,
+        "duration": 7154,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/node_id.py\", is_executable: false })",
+        "id": "299699227c256cba",
+        "timestamp": 1589576151573663,
+        "duration": 6948,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"src/python/toolchain/base/toolchain_binary.py\", is_executable: false })",
+        "id": "c2b3154237d0d30c",
+        "timestamp": 1589576151573533,
+        "duration": 7109,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "a1fedd66b0427bd1"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Snapshot(PathGlobs(globs=('!src/python/toolchain/base/*_test.py', '!src/python/toolchain/base/conftest.py', '!src/python/toolchain/base/test_*.py', 'src/python/toolchain/base/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/base:base's `sources` field\"))",
+        "id": "a1fedd66b0427bd1",
+        "timestamp": 1589576151570871,
+        "duration": 10869,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "e3f989a8d92958b9"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "e3f989a8d92958b9",
+        "timestamp": 1589576151569172,
+        "duration": 12796,
+        "localEndpoint": {
+            "serviceName": "hydrate_sources"
+        },
+        "parentId": "0b314b1a7b37c018"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "113543cfe903c32b",
+        "timestamp": 1589576151582080,
+        "duration": 1650,
+        "localEndpoint": {
+            "serviceName": "strip_source_roots_from_snapshot"
+        },
+        "parentId": "0b314b1a7b37c018"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "0b314b1a7b37c018",
+        "timestamp": 1589576151566791,
+        "duration": 16960,
+        "localEndpoint": {
+            "serviceName": "strip_source_roots_from_sources_field"
+        },
+        "parentId": "6cff1071a0959c06"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "88ff27202b99eb83",
+        "timestamp": 1589576151585158,
+        "duration": 303,
+        "localEndpoint": {
+            "serviceName": "maybe_extract"
+        },
+        "parentId": "9980c3a494bf3766"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "9980c3a494bf3766",
+        "timestamp": 1589576151576089,
+        "duration": 9453,
+        "localEndpoint": {
+            "serviceName": "download_external_tool"
+        },
+        "parentId": "917c6b11456031e2"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "917c6b11456031e2",
+        "timestamp": 1589576151564570,
+        "duration": 21003,
+        "localEndpoint": {
+            "serviceName": "download_pex_bin"
+        },
+        "parentId": "5dded94699242ffb"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "6cff1071a0959c06",
+        "timestamp": 1589576151564848,
+        "duration": 21723,
+        "localEndpoint": {
+            "serviceName": "determine_all_source_files"
+        },
+        "parentId": "d3116fb53a8dfccc"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "DigestFile(File { path: \"3rdparty/python/constraints.txt\", is_executable: false })",
+        "id": "8a2ad1b448608677",
+        "timestamp": 1589576151586317,
+        "duration": 979,
+        "localEndpoint": {
+            "serviceName": "digestfile"
+        },
+        "parentId": "5e1c16e5bb390696"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "Snapshot(PathGlobs(globs=('3rdparty/python/constraints.txt',), glob_match_error_behavior=<GlobMatchErrorBehavior.error: 'error'>, conjunction=<GlobExpansionConjunction.all_match: 'all_match'>, description_of_origin='the option `--python-setup-requirement-constraints`'))",
+        "id": "5e1c16e5bb390696",
+        "timestamp": 1589576151586096,
+        "duration": 1498,
+        "localEndpoint": {
+            "serviceName": "snapshot"
+        },
+        "parentId": "5dded94699242ffb"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "e6575a9a70dc1828",
+        "timestamp": 1589576151586628,
+        "duration": 1449,
+        "localEndpoint": {
+            "serviceName": "inject_missing_init_files"
+        },
+        "parentId": "d3116fb53a8dfccc"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "d3116fb53a8dfccc",
+        "timestamp": 1589576151564560,
+        "duration": 23711,
+        "localEndpoint": {
+            "serviceName": "prepare_python_sources"
+        },
+        "parentId": "42985d735b3a0dc3"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "c99433ea0f989163",
+        "timestamp": 1589576151589431,
+        "duration": 27,
+        "localEndpoint": {
+            "serviceName": "get_multi_platform_request_description"
+        },
+        "parentId": "44a0290cab5c152a"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "08e6e66ef9a2428e",
+        "timestamp": 1589576151589756,
+        "duration": 223,
+        "localEndpoint": {
+            "serviceName": "get_multi_platform_request_description"
+        },
+        "parentId": "6a3972cd56daf356"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "946a1b646d5ad8f9",
+        "timestamp": 1589576151589921,
+        "duration": 544,
+        "localEndpoint": {
+            "serviceName": "get_multi_platform_request_description"
+        },
+        "parentId": "800d87ecd31ab0b9"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "2244a3dba16582d2",
+        "timestamp": 1589576151592480,
+        "duration": 35871,
+        "localEndpoint": {
+            "serviceName": "list_missing_digests()"
+        },
+        "parentId": "4a57545d55f81e57"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "26dd2ef01dbd3aa0",
+        "timestamp": 1589576151592588,
+        "duration": 35846,
+        "localEndpoint": {
+            "serviceName": "list_missing_digests()"
+        },
+        "parentId": "54a6eeae4c236214"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "15826bea4bb916e3",
+        "timestamp": 1589576151592193,
+        "duration": 36314,
+        "localEndpoint": {
+            "serviceName": "list_missing_digests()"
+        },
+        "parentId": "cc54288722428e9f"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "622e87452bb4a5f1",
+        "timestamp": 1589576151630415,
+        "duration": 119131,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/8864ca82-33d0-42a9-b48b-f5c046b162a3/blobs/7bcab8e1b966a0db5c45437af6f5f36f8d92279a6ebc46706e3aae4782ae232d/919)"
+        },
+        "parentId": "cc54288722428e9f"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "61429c1a0ff49cbd",
+        "timestamp": 1589576151652077,
+        "duration": 97480,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/929c2294-d8e1-435d-a61e-d3b736eb00a3/blobs/fc5ec4015acfe25f43106bea2e42f7eedfbd8e88b88bdd226eaf694a570e03e3/89)"
+        },
+        "parentId": "cc54288722428e9f"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "3b5980444deff446",
+        "timestamp": 1589576151652130,
+        "duration": 97430,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/6961e0f9-0074-490b-966a-549e07bd77b1/blobs/c2b02cf0ec969932d8913cbff90c20b2aa8edb7835d030b5476d3dddde98f6e4/142)"
+        },
+        "parentId": "cc54288722428e9f"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "a31c5c21e13452d4",
+        "timestamp": 1589576151652184,
+        "duration": 97381,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/1e864ef7-18bb-4cc2-8edd-b467f094563a/blobs/4b00000be7d246de031fea00c441edca373b5fb8383f84e6b0b56865cd0aeb69/40)"
+        },
+        "parentId": "cc54288722428e9f"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "b2350c920efef673",
+        "timestamp": 1589576151652203,
+        "duration": 97365,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/c017766e-728d-4b50-9d0a-af6ca4fc5f3b/blobs/77e739b0154ac585c7af6cbd1b2af7a18cc68a3c06a6bfc88ea5fab5e0c9664c/248)"
+        },
+        "parentId": "cc54288722428e9f"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "69b8fc40b889fa9f",
+        "timestamp": 1589576151630597,
+        "duration": 118979,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/c63b4d5f-d992-4f90-b174-671be6db9349/blobs/7adf19dd54828e297665912c5e12535b6ac85fd61f7b132d0f6cc251328a3e60/923)"
+        },
+        "parentId": "54a6eeae4c236214"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "3b8f1838aacde6bc",
+        "timestamp": 1589576151630790,
+        "duration": 118788,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/2c08d862-182d-4dfa-94e7-31d38474037b/blobs/77e739b0154ac585c7af6cbd1b2af7a18cc68a3c06a6bfc88ea5fab5e0c9664c/248)"
+        },
+        "parentId": "4a57545d55f81e57"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "0cd1cc25fd22bb2b",
+        "timestamp": 1589576151630706,
+        "duration": 118877,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/5596ba4c-edea-4669-a496-2d7d8013f850/blobs/e870fffed414624b04992e450d2f538964ef0614d8d1dab051610ed9a7ee5a5c/142)"
+        },
+        "parentId": "54a6eeae4c236214"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "df267819110986f9",
+        "timestamp": 1589576151630895,
+        "duration": 118691,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/57cc10e0-1780-4658-8360-ad1f76454852/blobs/fc5ec4015acfe25f43106bea2e42f7eedfbd8e88b88bdd226eaf694a570e03e3/89)"
+        },
+        "parentId": "4a57545d55f81e57"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "28b1bbb4ccbf00f2",
+        "timestamp": 1589576151630759,
+        "duration": 118829,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/36828223-f652-4714-a5a7-bbcd767ac858/blobs/8757101ca8dcda845ed4f8973e1e5a04eba46fd798fd8375f1b038d3fb4457ba/80)"
+        },
+        "parentId": "54a6eeae4c236214"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "c7705ff981f092ef",
+        "timestamp": 1589576151630915,
+        "duration": 118673,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/54ed0417-af73-41be-a3c6-46f397ac050d/blobs/4b00000be7d246de031fea00c441edca373b5fb8383f84e6b0b56865cd0aeb69/40)"
+        },
+        "parentId": "4a57545d55f81e57"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "684ef7c0cba85de1",
+        "timestamp": 1589576151630799,
+        "duration": 118791,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/ce5d2a11-737a-4b69-b257-e40c985f7eca/blobs/fc5ec4015acfe25f43106bea2e42f7eedfbd8e88b88bdd226eaf694a570e03e3/89)"
+        },
+        "parentId": "54a6eeae4c236214"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "7684617809ac8b2c",
+        "timestamp": 1589576151630961,
+        "duration": 118631,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/359d7e83-13cc-424b-9cbe-b3bdbabbec97/blobs/0b45d6961d3f70ff8073e15c358a4500efb9fb064b9cf01964c3c33a78589f57/965)"
+        },
+        "parentId": "4a57545d55f81e57"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "d5837a0802ad4323",
+        "timestamp": 1589576151630889,
+        "duration": 118704,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/87b8e8a6-92c4-4ec8-a375-ecad1be1c772/blobs/77e739b0154ac585c7af6cbd1b2af7a18cc68a3c06a6bfc88ea5fab5e0c9664c/248)"
+        },
+        "parentId": "54a6eeae4c236214"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "42560acec3df61ca",
+        "timestamp": 1589576151631214,
+        "duration": 118382,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/02d32882-eaee-41ec-b254-bac2ee8265a0/blobs/4b00000be7d246de031fea00c441edca373b5fb8383f84e6b0b56865cd0aeb69/40)"
+        },
+        "parentId": "54a6eeae4c236214"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "d30d2efd137b43e9",
+        "timestamp": 1589576151645718,
+        "duration": 103879,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/08bf1c9f-e7fe-4d26-b6fb-b2c054828e93/blobs/698a3f0211636d8d8ba1b8e3170cd8b91bd283c7cdf987b3a07823ea41e8266e/142)"
+        },
+        "parentId": "4a57545d55f81e57"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "0acc25689bafc161",
+        "timestamp": 1589576151645749,
+        "duration": 103850,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/5f34a552-6427-4a37-98c2-b6e1d6324539/blobs/8757101ca8dcda845ed4f8973e1e5a04eba46fd798fd8375f1b038d3fb4457ba/80)"
+        },
+        "parentId": "4a57545d55f81e57"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "cdce3b5f256abd6e",
+        "timestamp": 1589576151652163,
+        "duration": 125667,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/75c7551c-be6a-409e-a411-c275be4d7bd5/blobs/8757101ca8dcda845ed4f8973e1e5a04eba46fd798fd8375f1b038d3fb4457ba/80)"
+        },
+        "parentId": "cc54288722428e9f"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "c4b8f70151b4c1e0",
+        "timestamp": 1589576151631016,
+        "duration": 214327,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/29f2c6b8-111d-485f-b0e9-8a1168786818/blobs/a9b5eb55ec4d7babc11279fc070c066565915c8b8a7b009a4eaceb41149a5f03/2631051)"
+        },
+        "parentId": "4a57545d55f81e57"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "2e8ebf3da0ddf547",
+        "timestamp": 1589576151630532,
+        "duration": 237324,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/8d9b5288-e867-4b71-8b47-cbe81d9fd1ac/blobs/a9b5eb55ec4d7babc11279fc070c066565915c8b8a7b009a4eaceb41149a5f03/2631051)"
+        },
+        "parentId": "cc54288722428e9f"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "0605ddf9029f445e",
+        "timestamp": 1589576151631274,
+        "duration": 238617,
+        "localEndpoint": {
+            "serviceName": "store_bytes(/uploads/711786af-f38e-4985-b3b6-a6a44d4c9ec3/blobs/a9b5eb55ec4d7babc11279fc070c066565915c8b8a7b009a4eaceb41149a5f03/2631051)"
+        },
+        "parentId": "54a6eeae4c236214"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "66e43057db1f10d4",
+        "timestamp": 0,
+        "duration": 1589576152022000,
+        "localEndpoint": {
+            "serviceName": "remote execution action scheduling"
+        },
+        "parentId": "4a57545d55f81e57"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "552f2cafac1ecce6",
+        "timestamp": 1589576152050000,
+        "duration": 170000,
+        "localEndpoint": {
+            "serviceName": "remote execution worker input fetching"
+        },
+        "parentId": "4a57545d55f81e57"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "636d791e763bc3b5",
+        "timestamp": 1589576152265000,
+        "duration": 15634000,
+        "localEndpoint": {
+            "serviceName": "remote execution worker command executing"
+        },
+        "parentId": "4a57545d55f81e57"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "1867502e132fa996",
+        "timestamp": 1589576167904000,
+        "duration": 4000,
+        "localEndpoint": {
+            "serviceName": "remote execution worker output uploading"
+        },
+        "parentId": "4a57545d55f81e57"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "4a57545d55f81e57",
+        "timestamp": 1589576151591408,
+        "duration": 18390165,
+        "localEndpoint": {
+            "serviceName": "MultiPlatformProcess"
+        },
+        "parentId": "b7a6bb478f0b0c94"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "b7a6bb478f0b0c94",
+        "timestamp": 1589576151589434,
+        "duration": 18392299,
+        "localEndpoint": {
+            "serviceName": "remove_platform_information"
+        },
+        "parentId": "44a0290cab5c152a"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "44a0290cab5c152a",
+        "timestamp": 1589576151589397,
+        "duration": 18394624,
+        "localEndpoint": {
+            "serviceName": "fallible_to_exec_result_or_raise"
+        },
+        "parentId": "357a589b1132cc64"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "357a589b1132cc64",
+        "timestamp": 1589576151573664,
+        "duration": 18410373,
+        "localEndpoint": {
+            "serviceName": "create_pex"
+        },
+        "parentId": "42985d735b3a0dc3"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "42985d735b3a0dc3",
+        "timestamp": 1589576151529483,
+        "duration": 18454563,
+        "localEndpoint": {
+            "serviceName": "setup_pytest_for_target"
+        },
+        "parentId": "ba9137483b8cc950"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "ba9137483b8cc950",
+        "timestamp": 1589576151529273,
+        "duration": 18454779,
+        "localEndpoint": {
+            "serviceName": "run_python_test"
+        },
+        "parentId": "4197ad0ca997bfe5"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "4197ad0ca997bfe5",
+        "timestamp": 1589576151528846,
+        "duration": 18455213,
+        "localEndpoint": {
+            "serviceName": "coordinator_of_tests"
+        },
+        "parentId": "5007432b60c5b942"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "5007432b60c5b942",
+        "timestamp": 1589576151496688,
+        "duration": 18487378,
+        "localEndpoint": {
+            "serviceName": "test"
+        }
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "97f282a3a4c8e265",
+        "timestamp": 0,
+        "duration": 1589576152231000,
+        "localEndpoint": {
+            "serviceName": "remote execution action scheduling"
+        },
+        "parentId": "54a6eeae4c236214"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "f744bab9cf2d5703",
+        "timestamp": 1589576152234000,
+        "duration": 28000,
+        "localEndpoint": {
+            "serviceName": "remote execution worker input fetching"
+        },
+        "parentId": "54a6eeae4c236214"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "57669f3194109540",
+        "timestamp": 1589576167915000,
+        "duration": 1777000,
+        "localEndpoint": {
+            "serviceName": "remote execution worker command executing"
+        },
+        "parentId": "54a6eeae4c236214"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "7d66e97f6367b978",
+        "timestamp": 1589576169695000,
+        "duration": 0,
+        "localEndpoint": {
+            "serviceName": "remote execution worker output uploading"
+        },
+        "parentId": "54a6eeae4c236214"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "54a6eeae4c236214",
+        "timestamp": 1589576151591206,
+        "duration": 18406369,
+        "localEndpoint": {
+            "serviceName": "MultiPlatformProcess"
+        },
+        "parentId": "34fa2d4596640daf"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "34fa2d4596640daf",
+        "timestamp": 1589576151589990,
+        "duration": 18410045,
+        "localEndpoint": {
+            "serviceName": "remove_platform_information"
+        },
+        "parentId": "800d87ecd31ab0b9"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "800d87ecd31ab0b9",
+        "timestamp": 1589576151589908,
+        "duration": 18410316,
+        "localEndpoint": {
+            "serviceName": "fallible_to_exec_result_or_raise"
+        },
+        "parentId": "d810b5ae321bb752"
+    },
+    {
+        "traceId": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "name": "",
+        "id": "d810b5ae321bb752",
+        "timestamp": 1589576151564534,
+        "duration": 18435701,
+        "localEndpoint": {
+            "serviceName": "create_pex"
+        },
+        "parentId": "42985d735b3a0dc3"
+    }
+]

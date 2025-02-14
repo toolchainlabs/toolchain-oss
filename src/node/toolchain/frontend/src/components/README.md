@@ -1,0 +1,1 @@
+This directory contains our components - which are independent, reusable pieces of code for composing UIs. It also contains our router, components for displaying errors, wrappers over MUI components to make them more custom, and more.

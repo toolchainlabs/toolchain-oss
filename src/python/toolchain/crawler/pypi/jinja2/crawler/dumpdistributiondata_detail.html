@@ -1,0 +1,22 @@
+{#
+Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "workflow/workunit_detail_base.html" %}
+
+{% block all_workunit_detail_content_pre_trs %}
+  {{ super() }}
+    <tr>
+      <td>Shard:</td>
+      <td>{{ object.shard }}/{{ object.num_shards }}</td>
+    </tr>
+  <tr>
+    <td>Bucket:</td>
+    <td>{{ object.bucket }}</td>
+  </tr>
+  <tr>
+    <td>Key prefix:</td>
+    <td>{{ object.key_prefix }}</td>
+  </tr>
+{% endblock all_workunit_detail_content_pre_trs %}

@@ -1,0 +1,4 @@
+{{#ctx.results.0.hits.hits}}
+via {{{_source.kubernetes.labels.toolchain_product}}}
+{{{_source.log}}}
+{{/ctx.results.0.hits.hits}}

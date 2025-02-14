@@ -1,0 +1,77 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{- if .Values.tests.enabled  }}
+{{- $region := required "You must set global.region!" .Values.global.region }}
+{{- $jwtSetupImage := (printf "%s/e2e_tests/setup_jwt_keys:%s" .Values.image_registry (index .Values.tests.setup_jwt_keys.image_rev $region) ) }}
+{{- $casLoadImage := (printf "%s:%s" .Values.tests.casload.repo .Values.tests.casload.tag ) }}
+{{- $secrets := required "You must set jwtSecrets!" .Values.jwtSecrets}}
+{{- $secret :=  index $secrets 0 }}
+# Using a constant instance name while we still use buildbarn storage backend. will use a random value once that is gone.
+#{{- $instance_name := printf "casload-test-%s" (randAlphaNum 10) }}
+{{- $instance_name := "toolchain-e2e-tests" }}
+{{- $tokens_dir := "/access_tokens" }}
+{{- $token_full_path := printf "%s/token.jwt" $tokens_dir }}
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: proxy-server-casload-check
+  labels:
+    app: proxy-server-casload-check
+    chart: {{ .Chart.Name  }}
+    heritage: {{ .Release.Service }}
+    toolchain_product: "remote-cache"
+  annotations:
+    "helm.sh/hook-delete-policy": "hook-succeeded,hook-failed"
+    "helm.sh/hook": test-success
+spec:
+  restartPolicy: Never
+  volumes:
+    - name: jwk-access-token-keys
+      secret:
+        secretName: jwk-access-token-keys
+    - name: access-tokens
+      emptyDir: {}
+  initContainers:
+    - name: jwt-setup
+      image: {{ $jwtSetupImage }}
+      imagePullPolicy: IfNotPresent
+      args:
+        - --path
+        - {{ $token_full_path }}
+        - --audience
+        - cache_rw
+        - --customer
+        - {{ $instance_name }}
+      volumeMounts:
+        - name: jwk-access-token-keys
+          mountPath: /secrets/{{ $secret }}
+          readOnly: true
+        - name: access-tokens
+          mountPath: {{ $tokens_dir }}
+  containers:
+    - name: e2e-tests
+      image: {{ $casLoadImage }}
+      imagePullPolicy: Always # since we currently use the nighly tag and there is no versioning/releases for casload yet.
+      env:
+        # Enable debug logging from the gRPC library.
+        # Note: There are no "debug" or "trace" levels in the gRPC Go library, so this configures "info".
+        - name: GRPC_GO_LOG_SEVERITY_LEVEL
+          value: info
+        - name: GRPC_GO_LOG_VERBOSITY_LEVEL
+          value: "99"
+      args: 
+        - --allow-insecure-auth
+        - -vv
+        - "--remote=remoting-proxy-server.{{ .Release.Namespace }}.svc.cluster.local:8980"
+        - "--auth-token-file={{ $token_full_path }}"
+        - "--instance-name={{ $instance_name }}"
+        - generate:5:1000:10000  # Generate 5 digests between 1,000 and 10,000 bytes in size
+        - read:5:1  # Read back 5 digests
+      volumeMounts:
+        - name: access-tokens
+          mountPath: {{ $tokens_dir }}
+          readOnly: true
+{{- end }}

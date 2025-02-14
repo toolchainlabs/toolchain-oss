@@ -1,0 +1,32 @@
+[package]
+name = "execution"
+version = "0.0.1"
+edition = "2021"
+publish = false
+
+[dependencies]
+async-stream = "0.3"
+async-trait = "0.1"
+bytes = "1.4"
+digest = { path = "../digest" }
+execution_util = { path = "../execution_util" }
+futures = "0.3"
+ginepro = "0.6"
+grpc_util = { path = "../grpc_util" }
+http = "0.2"
+log = "0.4"
+metrics = "0.21"
+parking_lot = "0.12"
+prost = "0.11"
+prost-types = "0.11"
+protos = { path = "../protos" }
+tokio = { version = "1.27", features = ["fs", "macros", "net", "rt-multi-thread", "sync", "time"] }
+tonic = { version = "0.9", features = ["transport", "codegen", "tls", "tls-roots"] }
+tower = "0.4"
+tower-http = { version = "0.4", features = ["metrics", "sensitive-headers"] }
+tower-layer = "0.3"
+tower-service = "0.3"
+tracing = "0.1"
+
+[dev-dependencies]
+env_logger = "0.10"

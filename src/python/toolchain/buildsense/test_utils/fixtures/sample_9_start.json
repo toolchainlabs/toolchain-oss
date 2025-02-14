@@ -1,0 +1,199 @@
+{
+    "recorded_options": {
+        "GLOBAL": {
+            "allow_external_binary_tool_downloads": true,
+            "backend_packages": [
+                "pants.backend.graph_info",
+                "pants.backend.python",
+                "pants.backend.jvm",
+                "pants.backend.native",
+                "pants.backend.codegen.grpcio.python",
+                "pants.backend.project_info",
+                "toolchain.pants.internal"
+            ],
+            "backend_packages2": [
+                "toolchain.pants.auth",
+                "toolchain.pants.buildsense",
+                "toolchain.pants.internal",
+                "toolchain.pants.external",
+                "toolchain.pants.rules.mypy",
+                "pants.backend.project_info",
+                "pants.backend.python",
+                "pants.backend.python.lint.flake8",
+                "pants.backend.python.lint.isort"
+            ],
+            "binaries_baseurls": [
+                "https://binaries.pantsbuild.org",
+                "https://github.com/toolchainlabs/binhost/raw/master/"
+            ],
+            "binaries_fetch_timeout_secs": 30,
+            "binaries_path_by_id": {},
+            "build_file_imports": "warn",
+            "build_ignore": [
+                ".*/",
+                "bower_components/",
+                "node_modules/",
+                "*.egg-info/"
+            ],
+            "cache_key_gen_version": "200",
+            "colors": true,
+            "concurrent": false,
+            "enable_pantsd": false,
+            "exclude_target_regexp": [],
+            "explain": false,
+            "fail_fast": false,
+            "glob_expansion_failure": "warn",
+            "ignore_pants_warnings": [],
+            "kill_nailguns": false,
+            "level": "info",
+            "local_store_dir": "/Users/asher/.cache/pants/lmdb_store",
+            "lock": true,
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "max_subprocess_args": 100,
+            "native_engine_visualize_to": null,
+            "option_name_check_distance": 2,
+            "owner_of": [],
+            "pants_bin_name": "./tc",
+            "pants_bootstrapdir": "/Users/asher/.cache/pants",
+            "pants_config_files": [
+                "/Users/asher/projects/toolchain/pants.ini",
+                "/Users/asher/projects/toolchain/toolchain.ini"
+            ],
+            "pants_configdir": "/Users/asher/.config/pants",
+            "pants_distdir": "/Users/asher/projects/toolchain/dist",
+            "pants_ignore": [
+                ".*/",
+                "/dist/"
+            ],
+            "pants_physical_workdir_base": null,
+            "pants_subprocessdir": "/Users/asher/projects/toolchain/.pids",
+            "pants_supportdir": "/Users/asher/projects/toolchain/build-support",
+            "pants_version": "1.25.0.dev1",
+            "pants_workdir": "/Users/asher/projects/toolchain/.pants.d",
+            "pantsd_invalidation_globs": [],
+            "pantsd_log_dir": null,
+            "pantsd_pailgun_host": "127.0.0.1",
+            "pantsd_pailgun_port": 0,
+            "pantsd_pailgun_quit_timeout": 5,
+            "pantsd_timeout_when_multiple_invocations": 60,
+            "pantsrc": true,
+            "pantsrc_files": [
+                "/etc/pantsrc",
+                "~/.pants.rc"
+            ],
+            "parent_build_id": null,
+            "plugin_cache_dir": "/Users/asher/.cache/pants/plugins",
+            "plugins": [
+                "pantsbuild.pants.contrib.awslambda-python==1.25.0.dev1",
+                "pantsbuild.pants.contrib.codeanalysis==1.25.0.dev1",
+                "pantsbuild.pants.contrib.go==1.25.0.dev1",
+                "pantsbuild.pants.contrib.mypy==1.25.0.dev1",
+                "pantsbuild.pants.contrib.node==1.25.0.dev1",
+                "pantsbuild.pants.contrib.python.checks==1.25.0.dev1",
+                "gitpython==3.0.5",
+                "boto3==1.11.3",
+                "isort==4.3.21",
+                "networkx==2.4",
+                "pkginfo==1.5.0.1",
+                "plyvel==1.1.0",
+                "protobuf==3.9.0",
+                "setuptools==40.6.3"
+            ],
+            "plugins2": [],
+            "plugins_force_resolve": false,
+            "print_exception_stacktrace": false,
+            "process_execution_cleanup_local_dirs": true,
+            "process_execution_local_enable_nailgun": false,
+            "process_execution_local_parallelism": 4,
+            "process_execution_remote_parallelism": 128,
+            "process_execution_speculation_delay": 1,
+            "process_execution_speculation_strategy": "local_first",
+            "process_execution_use_local_cache": true,
+            "pythonpath": [
+                "/Users/asher/projects/toolchain/src/python"
+            ],
+            "quiet": false,
+            "remote_ca_certs_path": null,
+            "remote_execution": false,
+            "remote_execution_extra_platform_properties": [
+                "execution-policy=network",
+                "execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-01-18.01-03-41-cc89accd0ea0"
+            ],
+            "remote_execution_headers": {},
+            "remote_execution_process_cache_namespace": null,
+            "remote_execution_server": null,
+            "remote_instance_name": null,
+            "remote_oauth_bearer_token_path": null,
+            "remote_store_chunk_bytes": 1048576,
+            "remote_store_chunk_upload_timeout_seconds": 60,
+            "remote_store_connection_limit": 5,
+            "remote_store_rpc_retries": 2,
+            "remote_store_server": [],
+            "remote_store_thread_count": 1,
+            "shutdown_pantsd_after_run": false,
+            "spec_files": [],
+            "streaming_workunits_handlers": [
+                "toolchain.pants.buildsense.reporter.Reporter"
+            ],
+            "streaming_workunits_report_interval": 10,
+            "subproject_roots": [],
+            "tag": [],
+            "time": false,
+            "timeout": null,
+            "v1": false,
+            "v2": true,
+            "v2_ui": false,
+            "verify_config": true,
+            "watchman_socket_path": null,
+            "watchman_socket_timeout": 0.1,
+            "watchman_startup_timeout": 60,
+            "watchman_supportdir": "bin/watchman",
+            "watchman_version": "4.9.0-pants1",
+            "workdir_max_build_entries": 8
+        }
+    },
+    "run_info": {
+        "id": "pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c",
+        "timestamp": "1579808515.931905",
+        "datetime": "Thursday Jan 23, 2020 11:41:55",
+        "user": "asher",
+        "machine": "Ashers-MacBook-Pro.local",
+        "path": "/Users/asher/projects/toolchain",
+        "buildroot": "/Users/asher/projects/toolchain",
+        "version": "1.25.0.dev1",
+        "cmd_line": "pants --pants-config-files=+[\"/Users/asher/projects/toolchain/toolchain.ini\"] --pants-bin-name=./tc typecheck src/python/toolchain/buildsense/::",
+        "default_report": "/Users/asher/projects/toolchain/.pants.d/reports/pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c/html/build.html",
+        "report_url": "http://localhost:64298/run/pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c",
+        "specs_from_command_line": [
+            "src/python/toolchain/buildsense::"
+        ],
+        "outcome": "NOT_AVAILABLE"
+    },
+    "workunits": {
+        "50cc9c4c-fe66-49e1-8563-edacb2d83890": {
+            "children": [],
+            "cmd": "",
+            "id": "50cc9c4c-fe66-49e1-8563-edacb2d83890",
+            "labels": [],
+            "log_entries": [
+                {
+                    "level": "INFO",
+                    "messages": [
+                        {
+                            "text": "See a report at: http://localhost:64298/run/pants_run_2020_01_23_11_41_55_931_68189fba67f94d7ebd9b119f4966124c",
+                            "detail": null
+                        }
+                    ]
+                }
+            ],
+            "name": "main",
+            "outputs": {},
+            "parent_id": "",
+            "parent_name": "",
+            "start_time": 1579808513.510784
+        }
+    }
+}

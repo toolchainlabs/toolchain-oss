@@ -1,0 +1,89 @@
+{
+    "ci_env": {
+        "CIRCLECI": "true",
+        "CIRCLE_BRANCH": "pull/8027",
+        "CIRCLE_BUILD_NUM": "48925",
+        "CIRCLE_BUILD_URL": "https://circleci.com/gh/toolchainlabs/toolchain/48925",
+        "CIRCLE_COMPARE_URL": "",
+        "CIRCLE_INTERNAL_CONFIG": "/.circleci-runner-config.json",
+        "CIRCLE_INTERNAL_SCRATCH": "/tmp/circleci-938846040",
+        "CIRCLE_INTERNAL_TASK_DATA": "/tmp/.circleci-task-data-5ffc73d93890bc490b74b2a1-0-build",
+        "CIRCLE_JOB": "build-with-pants",
+        "CIRCLE_NODE_INDEX": "0",
+        "CIRCLE_NODE_TOTAL": "1",
+        "CIRCLE_PREVIOUS_BUILD_NUM": "48924",
+        "CIRCLE_PROJECT_REPONAME": "toolchain",
+        "CIRCLE_PROJECT_USERNAME": "toolchainlabs",
+        "CIRCLE_PR_NUMBER": "8027",
+        "CIRCLE_PR_REPONAME": "toolchain",
+        "CIRCLE_PR_USERNAME": "asherf",
+        "CIRCLE_PULL_REQUEST": "https://github.com/toolchainlabs/toolchain/pull/8027",
+        "CIRCLE_PULL_REQUESTS": "https://github.com/toolchainlabs/toolchain/pull/8027",
+        "CIRCLE_REPOSITORY_URL": "git@github.com:toolchainlabs/toolchain.git",
+        "CIRCLE_SHA1": "422588c3899dad7abe56cf6e96e015cdae2737e8",
+        "CIRCLE_SHELL_ENV": "/tmp/.bash_env-5ffc73d93890bc490b74b2a1-0-build",
+        "CIRCLE_STAGE": "build-with-pants",
+        "CIRCLE_USERNAME": "asherf",
+        "CIRCLE_WORKFLOW_ID": "c7ade71c-1274-4a78-be7a-cebc714a0cc1",
+        "CIRCLE_WORKFLOW_JOB_ID": "c98c4c77-4aaa-4229-a96f-fe0d8f51d803",
+        "CIRCLE_WORKFLOW_UPSTREAM_JOB_IDS": "5ab1c819-775e-46e8-a098-d058324fe813",
+        "CIRCLE_WORKFLOW_WORKSPACE_ID": "c7ade71c-1274-4a78-be7a-cebc714a0cc1",
+        "CIRCLE_WORKING_DIRECTORY": "~/project"
+    },
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 17.342432737350464,
+            "is_tool": false
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 1243,
+        "preceding_graph_size": 38263,
+        "resulting_graph_size": 38287
+    },
+    "recorded_options": {
+        "GLOBAL": {
+          
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "named_caches_dir": "/home/toolchain/.cache/pants/named_caches",
+            "native_engine_visualize_to": null
+        },
+        "toolchain-resolve": {
+            "abis": [],
+            "output_file": null,
+            "python_version": "3.8",
+            "sep": "\\n"
+        },
+        "toolchain-setup": {
+            "repo": "toolchain"
+        },
+        "typecheck": {},
+        "validate": {
+            "detail_level": "nonmatching"
+        }
+    },
+    "run_info": {
+        "id": "pants_run_2021_01_11_16_00_51_486_9f76c21503d64df18aea5a596e057448",
+        "timestamp": "1610380851.4868808",
+        "datetime": "Monday Jan 11, 2021 16:00:51",
+        "user": "toolchain",
+        "machine": "a97e923e5586 [docker]",
+        "path": "/home/toolchain/project",
+        "buildroot": "/home/toolchain/project",
+        "version": "2.2.0rc1",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.2.0rc1 run src/python/toolchain/service/toolshed:toolshed-manage -- migrate_all",
+        "specs_from_command_line": [
+            "src/python/toolchain/service/toolshed:toolshed-manage"
+        ],
+        "outcome": "SUCCESS",
+        "revision": "422588c3899dad7abe56cf6e96e015cdae2737e8",
+        "branch": "pull/8027",
+        "computed_goals": [
+            "run"
+        ]
+    }
+ 
+}

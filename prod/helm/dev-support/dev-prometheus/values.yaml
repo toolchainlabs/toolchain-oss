@@ -1,0 +1,113 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# We disable a bunch of component that get installed by default with this chart 
+# since we don't want or need them in dev.
+prometheus:
+  alertmanager:
+    enabled: false
+  prometheus-node-exporter:
+    enabled: false
+  prometheus-pushgateway:
+    enabled: false
+  networkPolicy:
+    enabled: false
+  server:
+    retention: "6d"
+    persistentVolume:
+      size: 20Gi
+    resources:
+      limits:
+        cpu: 700m
+        memory: 512Mi
+      requests:
+        cpu: 100m
+        memory: 512Mi
+  serverFiles:
+      # We override the scrape config because in dev we only want to scrape toolchain's services and pods. not other components.
+      prometheus.yml:
+        scrape_configs:
+          - job_name: 'kubernetes-service-endpoints'
+            honor_labels: true
+            kubernetes_sd_configs:
+              - role: endpoints
+            relabel_configs:
+              - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_scrape]
+                action: keep
+                regex: true
+              - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_scrape_slow]
+                action: drop
+                regex: true
+              - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_scheme]
+                action: replace
+                target_label: __scheme__
+                regex: (https?)
+              - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_path]
+                action: replace
+                target_label: __metrics_path__
+                regex: (.+)
+              - source_labels: [__address__, __meta_kubernetes_service_annotation_prometheus_io_port]
+                action: replace
+                target_label: __address__
+                regex: (.+?)(?::\d+)?;(\d+)
+                replacement: $1:$2
+              - action: labelmap
+                regex: __meta_kubernetes_service_annotation_prometheus_io_param_(.+)
+                replacement: __param_$1
+              - action: labelmap
+                regex: __meta_kubernetes_service_label_(.+)
+              - source_labels: [__meta_kubernetes_namespace]
+                action: replace
+                target_label: namespace
+              - source_labels: [__meta_kubernetes_service_name]
+                action: replace
+                target_label: service
+              - source_labels: [__meta_kubernetes_pod_node_name]
+                action: replace
+                target_label: node
+          - job_name: 'kubernetes-pods'
+            honor_labels: true
+            kubernetes_sd_configs:
+              - role: pod
+            relabel_configs:
+              - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
+                action: keep
+                regex: true
+              - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape_slow]
+                action: drop
+                regex: true
+              - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scheme]
+                action: replace
+                regex: (https?)
+                target_label: __scheme__
+              - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_path]
+                action: replace
+                target_label: __metrics_path__
+                regex: (.+)
+              - source_labels: [__address__, __meta_kubernetes_pod_annotation_prometheus_io_port]
+                action: replace
+                regex: (.+?)(?::\d+)?;(\d+)
+                replacement: $1:$2
+                target_label: __address__
+              - action: labelmap
+                regex: __meta_kubernetes_pod_annotation_prometheus_io_param_(.+)
+                replacement: __param_$1
+              - action: labelmap
+                regex: __meta_kubernetes_pod_label_(.+)
+              - source_labels: [__meta_kubernetes_namespace]
+                action: replace
+                target_label: namespace
+              - source_labels: [__meta_kubernetes_pod_name]
+                action: replace
+                target_label: pod
+              - source_labels: [__meta_kubernetes_pod_phase]
+                regex: Pending|Succeeded|Failed|Completed
+                action: drop
+prometheus-adapter:
+  logLevel: 2
+  prometheus:
+    url: http://dev-prometheus-server.monitoring.svc.cluster.local
+    port: 80
+  rules:   
+    default: true # must be enabled so rbac objects and APIService are created. default rules won't actually be created since `existing` is used.
+    existing: buildsense-workflow-hpa-rules

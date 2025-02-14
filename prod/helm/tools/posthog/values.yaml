@@ -1,0 +1,11 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+image:
+    repository: posthog/posthog
+    tag: release-1.29.1
+web:
+  replicacount: 1
+redis:
+  host: null # filled by install script
+

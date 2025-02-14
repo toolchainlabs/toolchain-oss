@@ -1,0 +1,53 @@
+{#
+Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/webp" href="{{ static('favicon.webp') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ static('styles.css') }}"
+    />
+    <title>Pants dependency inference in action</title>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HE7GWGBHB"></script>
+  </head>
+  {% block linked_scripts %} {% endblock linked_scripts %}
+  <body>
+    <div class="base-container">
+      {% include "pants_demo/header.html" %}
+      <div class="page-content">
+        {% block main %} {% endblock main %} {% include "pants_demo/footer.html"
+        %}
+      </div>
+    </div>
+
+    {% block script %} {% endblock script%}
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+      crossorigin="anonymous"
+    ></script>
+    {% script type="application/javascript" async=False %}
+    <script type="text/javascript">
+      var submitUrl = "{{submit_url}}";
+    </script>
+    {% endscript %}
+    <script
+      type="text/javascript"
+      src="{{ static('select-repo.js') }}"
+    ></script>
+  </body>
+</html>

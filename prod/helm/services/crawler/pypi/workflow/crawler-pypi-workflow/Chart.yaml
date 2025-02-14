@@ -1,0 +1,12 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+description: The PyPI crawler worker service
+name: crawler-pypi-workflow
+version: 1.0.0
+kubeVersion: '>=v1.24.0-0,<v1.28-0'
+dependencies:
+- name: workflow
+  version: '*'
+  repository: file://../../../../../base/workflow/

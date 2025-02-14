@@ -1,0 +1,182 @@
+[
+    {
+        "name": "select",
+        "span_id": "361237e016cd751a",
+        "level": "TRACE",
+        "start_secs": 1604376191,
+        "start_nanos": 621557000,
+        "duration_secs": 28,
+        "duration_nanos": 321887000,
+        "metadata": {},
+        "artifacts": {}
+    },
+    {
+        "name": "pants.core.goals.typecheck.typecheck",
+        "span_id": "974befcc26e04859",
+        "level": "DEBUG",
+        "parent_id": "361237e016cd751a",
+        "start_secs": 1604376191,
+        "start_nanos": 622014000,
+        "duration_secs": 28,
+        "duration_nanos": 321330000,
+        "description": "`typecheck` goal",
+        "metadata": {},
+        "artifacts": {}
+    },
+    {
+        "name": "pants.backend.python.typecheck.mypy.rules.mypy_typecheck",
+        "span_id": "16874e1c59cc33df",
+        "level": "INFO",
+        "parent_id": "974befcc26e04859",
+        "start_secs": 1604376191,
+        "start_nanos": 723074000,
+        "duration_secs": 28,
+        "duration_nanos": 217653000,
+        "description": "Typecheck using MyPy",
+        "metadata": {},
+        "artifacts": {}
+    },
+    {
+        "name": "pants.backend.python.typecheck.mypy.rules.mypy_typecheck_partition",
+        "span_id": "fbd896a2fc7eebe1",
+        "level": "TRACE",
+        "parent_id": "16874e1c59cc33df",
+        "start_secs": 1604376197,
+        "start_nanos": 338629000,
+        "duration_secs": 13,
+        "duration_nanos": 223538000,
+        "metadata": {},
+        "artifacts": {}
+    },
+    {
+        "name": "pants.backend.python.typecheck.mypy.rules.mypy_typecheck_partition",
+        "span_id": "5fc686e320986e27",
+        "level": "TRACE",
+        "parent_id": "16874e1c59cc33df",
+        "start_secs": 1604376197,
+        "start_nanos": 338653000,
+        "duration_secs": 22,
+        "duration_nanos": 601830000,
+        "metadata": {},
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.remove_platform_information",
+        "span_id": "5554e20dce6b97f9",
+        "level": "TRACE",
+        "parent_id": "5fc686e320986e27",
+        "start_secs": 1604376201,
+        "start_nanos": 338321000,
+        "duration_secs": 18,
+        "duration_nanos": 602009000,
+        "metadata": {},
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process",
+        "span_id": "9882df892d3c71e1",
+        "level": "TRACE",
+        "parent_id": "5554e20dce6b97f9",
+        "start_secs": 1604376201,
+        "start_nanos": 338595000,
+        "duration_secs": 18,
+        "duration_nanos": 601545000,
+        "description": "Run MyPy on 38 files.",
+        "metadata": {},
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.remove_platform_information",
+        "span_id": "c64112af063b5d3f",
+        "level": "TRACE",
+        "parent_id": "fbd896a2fc7eebe1",
+        "start_secs": 1604376201,
+        "start_nanos": 339101000,
+        "duration_secs": 9,
+        "duration_nanos": 222632000,
+        "metadata": {},
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process",
+        "span_id": "72f4c4fb7706c65f",
+        "level": "TRACE",
+        "parent_id": "c64112af063b5d3f",
+        "start_secs": 1604376201,
+        "start_nanos": 339340000,
+        "duration_secs": 9,
+        "duration_nanos": 222054000,
+        "description": "Run MyPy on 6 files.",
+        "metadata": {},
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-waiting",
+        "span_id": "9ccd28609a415393",
+        "level": "DEBUG",
+        "parent_id": "9882df892d3c71e1",
+        "start_secs": 1604376201,
+        "start_nanos": 339376000,
+        "duration_secs": 18,
+        "duration_nanos": 600247000,
+        "description": "(Waiting) Run MyPy on 38 files.",
+        "metadata": {},
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-running",
+        "span_id": "cc2408c9f8c990c8",
+        "level": "DEBUG",
+        "parent_id": "9ccd28609a415393",
+        "start_secs": 1604376201,
+        "start_nanos": 339386000,
+        "duration_secs": 18,
+        "duration_nanos": 600224000,
+        "description": "Run MyPy on 38 files.",
+        "metadata": {
+            "exit_code": 0
+        },
+        "counters": {
+            "local_execution_requests": 1
+        },
+        "artifacts": {
+            "stdout": "Success: no issues found in 38 source files\n"
+        }
+    },
+    {
+        "name": "multi_platform_process-waiting",
+        "span_id": "ca26d462bc968fcd",
+        "level": "DEBUG",
+        "parent_id": "72f4c4fb7706c65f",
+        "start_secs": 1604376201,
+        "start_nanos": 340020000,
+        "duration_secs": 9,
+        "duration_nanos": 220788000,
+        "description": "(Waiting) Run MyPy on 6 files.",
+        "metadata": {},
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-running",
+        "span_id": "cae4a85f92c7050c",
+        "level": "DEBUG",
+        "parent_id": "ca26d462bc968fcd",
+        "start_secs": 1604376201,
+        "start_nanos": 340028000,
+        "duration_secs": 9,
+        "duration_nanos": 220753000,
+        "description": "Run MyPy on 6 files.",
+        "metadata": {
+            "exit_code": 0,
+            "completely": "irrelevant",
+            "definition": "{\"argv\":[\".\/example\"]}",
+            "source": "HitLocally"
+        },
+        "counters": {
+            "local_execution_requests": 1
+        },
+        "artifacts": {
+            "stdout": "Success: no issues found in 6 source files\n"
+        }
+    }
+]

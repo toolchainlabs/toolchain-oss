@@ -1,0 +1,28 @@
+{
+    "headers": {
+        "X-GitHub-Event": "github_app_authorization"
+    },
+    "payload": {
+        "action": "revoked",
+        "sender": {
+            "login": "ivanguerreroroman",
+            "id": 83615998,
+            "node_id": "MDQ6VXNlcjgzNjE1OTk4",
+            "avatar_url": "https://avatars.githubusercontent.com/u/83615998?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ivanguerreroroman",
+            "html_url": "https://github.com/ivanguerreroroman",
+            "followers_url": "https://api.github.com/users/ivanguerreroroman/followers",
+            "following_url": "https://api.github.com/users/ivanguerreroroman/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ivanguerreroroman/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ivanguerreroroman/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ivanguerreroroman/subscriptions",
+            "organizations_url": "https://api.github.com/users/ivanguerreroroman/orgs",
+            "repos_url": "https://api.github.com/users/ivanguerreroroman/repos",
+            "events_url": "https://api.github.com/users/ivanguerreroroman/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ivanguerreroroman/received_events",
+            "type": "User",
+            "site_admin": false
+        }
+    }
+}

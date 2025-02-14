@@ -1,0 +1,54 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+---
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  # see: prod/terraform/resources/us-east-1/kubernetes/dev-e1-1/service_role_policies/es_logging.tf
+  name: opensearch-dev-proxy
+  labels:
+    name: {{  .Chart.Name  }}
+    chart: {{ .Chart.Name  }}
+  annotations:
+     eks.amazonaws.com/role-arn: {{ .Values.iam_service_role_arn }}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{  .Chart.Name  }}
+  labels:
+    app: {{  .Chart.Name  }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{  .Chart.Name  }}
+  template:
+    metadata:
+      labels:
+        app: {{  .Chart.Name  }}
+        release: {{ .Release.Name }}
+    spec:
+      restartPolicy: Always
+      serviceAccountName: opensearch-dev-proxy
+      nodeSelector:
+        toolchain.instance_category: service
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ .Values.image }}
+          imagePullPolicy: IfNotPresent
+          args:
+            - "-endpoint"
+            - {{ .Values.es_host }}
+          resources:
+            requests:
+              cpu: "20m"
+              memory: "128Mi"
+              ephemeral-storage: "512Mi"
+            limits:
+              cpu: "100m"
+              memory: "512Mi"
+              ephemeral-storage: "1Gi"

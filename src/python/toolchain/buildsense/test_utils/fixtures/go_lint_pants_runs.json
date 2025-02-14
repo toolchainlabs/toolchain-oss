@@ -1,0 +1,3445 @@
+{
+    "counter_names": [
+        "local_process_total_time_run_ms",
+        "remote_store_blob_bytes_uploaded"
+    ],
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 6.433490037918091
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 1022,
+        "preceding_graph_size": 261,
+        "resulting_graph_size": 9040
+    },
+    "platform": {
+        "architecture": "x86_64",
+        "cpu_count": 12,
+        "mem_bytes": 17179869184,
+        "os": "Darwin",
+        "os_release": "21.3.0",
+        "processor": "i386",
+        "python_implementation": "CPython",
+        "python_version": "3.8.12"
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "use_deprecated_python_macros": false,
+            "verify_config": true,
+            "watch_filesystem": true
+        },
+        "gofmt": {
+            "skip": false
+        },
+        "version": {}
+    },
+    "run_info": {
+        "branch": "benes",
+        "buildroot": "/Users/asher/projects/toolchain",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.10.0rc1 lint src/go/src/toolchain/::",
+        "computed_goals": [
+            "lint"
+        ],
+        "datetime": "Tuesday Feb 15, 2022 15:16:09",
+        "id": "pants_run_2022_02_15_15_16_10_407_d5d72bb53df54f389f3a216d4ff0826f",
+        "machine": "Ashers-MacBook-Pro.local",
+        "outcome": "FAILURE",
+        "path": "/Users/asher/projects/toolchain",
+        "revision": "97351335d19736b2a6e09327a1ae3844e69da940",
+        "specs_from_command_line": [
+            "src/go/src/toolchain::"
+        ],
+        "timestamp": 1644956169.184509,
+        "user": "asher",
+        "version": "2.10.0rc1"
+    },
+    "targets": {
+        "src/go/src/toolchain/remoting#cloud.google.com/go": [
+            {
+                "filename": "src/go/src/toolchain/remoting#cloud.google.com/go"
+            }
+        ],
+        "src/go/src/toolchain/remoting:remoting0": [
+            {
+                "filename": "src/go/src/toolchain/remoting/build.sh"
+            }
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "dfac02e07d59b16e",
+            "name": "select",
+            "state": "finished",
+            "version": 5,
+            "parent_id": null,
+            "last_update": 1644956180,
+            "start_usecs": 1644956170480766,
+            "end_usecs": 1644956175615100
+        },
+        {
+            "workunit_id": "999483310f049521",
+            "name": "pants.core.goals.lint.lint",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "dfac02e07d59b16e",
+            "last_update": 1644956180,
+            "start_usecs": 1644956170485678,
+            "description": "`lint` goal",
+            "end_usecs": 1644956175614988
+        },
+        {
+            "workunit_id": "60c37fb4b7f6543a",
+            "name": "pants.engine.internals.graph.resolve_targets",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "999483310f049521",
+            "last_update": 1644956180,
+            "start_usecs": 1644956170491806,
+            "end_usecs": 1644956173223827
+        },
+        {
+            "workunit_id": "e9a04b172d1028bf",
+            "name": "pants.engine.internals.graph.resolve_unexpanded_targets",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "60c37fb4b7f6543a",
+            "last_update": 1644956180,
+            "start_usecs": 1644956170493547,
+            "end_usecs": 1644956173208235
+        },
+        {
+            "workunit_id": "c2ac09dcb00d8f60",
+            "name": "pants.engine.internals.graph.resolve_addresses_from_specs",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "e9a04b172d1028bf",
+            "last_update": 1644956180,
+            "start_usecs": 1644956170495935,
+            "description": "Find targets from input specs",
+            "end_usecs": 1644956172893062
+        },
+        {
+            "workunit_id": "e2f130fab5224a55",
+            "name": "pants.engine.internals.build_files.addresses_from_address_specs",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "c2ac09dcb00d8f60",
+            "last_update": 1644956180,
+            "start_usecs": 1644956170497375,
+            "end_usecs": 1644956172877583
+        },
+        {
+            "workunit_id": "f2727df3d63ada36",
+            "name": "pants.engine.internals.graph.resolve_targets",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "e2f130fab5224a55",
+            "last_update": 1644956180,
+            "start_usecs": 1644956170514993,
+            "end_usecs": 1644956172868347
+        },
+        {
+            "workunit_id": "5247d2962c84ae9a",
+            "name": "pants.backend.go.target_type_rules.generate_targets_from_go_mod",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "f2727df3d63ada36",
+            "last_update": 1644956180,
+            "start_usecs": 1644956170529449,
+            "description": "Generate `go_third_party_package` targets from `go_mod` target",
+            "end_usecs": 1644956172866412
+        },
+        {
+            "workunit_id": "f280c25a794e1d62",
+            "name": "pants.backend.go.util_rules.go_mod.determine_go_mod_info",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "5247d2962c84ae9a",
+            "last_update": 1644956180,
+            "start_usecs": 1644956170530471,
+            "end_usecs": 1644956171621999
+        },
+        {
+            "workunit_id": "bb683ef99ae9a8d2",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "f280c25a794e1d62",
+            "last_update": 1644956180,
+            "start_usecs": 1644956170548698,
+            "end_usecs": 1644956171621767
+        },
+        {
+            "workunit_id": "b014b70d39390fe1",
+            "name": "pants.backend.go.util_rules.sdk.setup_go_sdk_process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "bb683ef99ae9a8d2",
+            "last_update": 1644956180,
+            "start_usecs": 1644956170548972,
+            "end_usecs": 1644956171621289
+        },
+        {
+            "workunit_id": "26c67e486df16a8d",
+            "name": "pants.backend.go.util_rules.sdk.go_sdk_invoke_setup",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "b014b70d39390fe1",
+            "last_update": 1644956180,
+            "start_usecs": 1644956170550024,
+            "end_usecs": 1644956171620450
+        },
+        {
+            "workunit_id": "6d8ad63e81ea7e8b",
+            "name": "pants.backend.go.subsystems.golang.setup_goroot",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "26c67e486df16a8d",
+            "last_update": 1644956180,
+            "start_usecs": 1644956170550129,
+            "description": "Find Go binary",
+            "end_usecs": 1644956171608591
+        },
+        {
+            "workunit_id": "7a5a2cbc52d54a0e",
+            "name": "pants.engine.process.find_binary",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "6d8ad63e81ea7e8b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956170554522,
+            "end_usecs": 1644956171525324
+        },
+        {
+            "workunit_id": "1d68a337dfd7a167",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "7a5a2cbc52d54a0e",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171020065,
+            "end_usecs": 1644956171424555
+        },
+        {
+            "workunit_id": "4c92252c305a3551",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "1d68a337dfd7a167",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171020430,
+            "description": "Scheduling: Searching for `go` on PATH=/Users/asher/.pyenv/versions/3.8.12/bin:/Users/asher/.toolchain/homebrew/bin:/Users/asher/.gem/ruby/2.6.0/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/asher/.cargo/bin:/Users/asher/go/bin/:/Users/asher/.poetry/bin:/Users/asher/.krew/bin:/Users/asher/.local/bin",
+            "end_usecs": 1644956171423807,
+            "counters": {
+                "local_process_total_time_run_ms": 399
+            },
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/Users/asher/.toolchain/homebrew/bin/go\n/usr/local/go/bin/go\n",
+                "stderr": "+ CHECK_FILE_ENTRIES=\n+ for path in '${PATH//:/ }'\n+ [[ -d /Users/asher/.pyenv/versions/3.8.12/bin ]]\n+ maybe_exe=/Users/asher/.pyenv/versions/3.8.12/bin/go\n+ [[ go == \\g\\o ]]\n+ [[ -f /Users/asher/.pyenv/versions/3.8.12/bin/go ]]\n+ for path in '${PATH//:/ }'\n+ [[ -d /Users/asher/.toolchain/homebrew/bin ]]\n+ maybe_exe=/Users/asher/.toolchain/homebrew/bin/go\n+ [[ go == \\g\\o ]]\n+ [[ -f /Users/asher/.toolchain/homebrew/bin/go ]]\n+ [[ -x /Users/asher/.toolchain/homebrew/bin/go ]]\n+ echo /Users/asher/.toolchain/homebrew/bin/go\n+ for path in '${PATH//:/ }'\n+ [[ -d /Users/asher/.gem/ruby/2.6.0/bin/ ]]\n+ maybe_exe=/Users/asher/.gem/ruby/2.6.0/bin//go\n+ [[ go == \\g\\o ]]\n+ [[ -f /Users/asher/.gem/ruby/2.6.0/bin//go ]]\n+ for path in '${PATH//:/ }'\n+ [[ -d /usr/local/bin ]]\n+ maybe_exe=/usr/local/bin/go\n+ [[ go == \\g\\o ]]\n+ [[ -f /usr/local/bin/go ]]\n+ for path in '${PATH//:/ }'\n+ [[ -d /usr/bin ]]\n+ maybe_exe=/usr/bin/go\n+ [[ go == \\g\\o ]]\n+ [[ -f /usr/bin/go ]]\n+ for path in '${PATH//:/ }'\n+ [[ -d /bin ]]\n+ maybe_exe=/bin/go\n+ [[ go == \\g\\o ]]\n+ [[ -f /bin/go ]]\n+ for path in '${PATH//:/ }'\n+ [[ -d /usr/sbin ]]\n+ maybe_exe=/usr/sbin/go\n+ [[ go == \\g\\o ]]\n+ [[ -f /usr/sbin/go ]]\n+ for path in '${PATH//:/ }'\n+ [[ -d /sbin ]]\n+ maybe_exe=/sbin/go\n+ [[ go == \\g\\o ]]\n+ [[ -f /sbin/go ]]\n+ for path in '${PATH//:/ }'\n+ [[ -d /usr/local/go/bin ]]\n+ maybe_exe=/usr/local/go/bin/go\n+ [[ go == \\g\\o ]]\n+ [[ -f /usr/local/go/bin/go ]]\n+ [[ -x /usr/local/go/bin/go ]]\n+ echo /usr/local/go/bin/go\n+ for path in '${PATH//:/ }'\n+ [[ -d /Library/Apple/usr/bin ]]\n+ [[ -n '' ]]\n+ maybe_exe=\n+ [[ go == '' ]]\n+ for path in '${PATH//:/ }'\n+ [[ -d /Users/asher/.cargo/bin ]]\n+ maybe_exe=/Users/asher/.cargo/bin/go\n+ [[ go == \\g\\o ]]\n+ [[ -f /Users/asher/.cargo/bin/go ]]\n+ for path in '${PATH//:/ }'\n+ [[ -d /Users/asher/go/bin/ ]]\n+ maybe_exe=/Users/asher/go/bin//go\n+ [[ go == \\g\\o ]]\n+ [[ -f /Users/asher/go/bin//go ]]\n+ for path in '${PATH//:/ }'\n+ [[ -d /Users/asher/.poetry/bin ]]\n+ maybe_exe=/Users/asher/.poetry/bin/go\n+ [[ go == \\g\\o ]]\n+ [[ -f /Users/asher/.poetry/bin/go ]]\n+ for path in '${PATH//:/ }'\n+ [[ -d /Users/asher/.krew/bin ]]\n+ maybe_exe=/Users/asher/.krew/bin/go\n+ [[ go == \\g\\o ]]\n+ [[ -f /Users/asher/.krew/bin/go ]]\n+ for path in '${PATH//:/ }'\n+ [[ -d /Users/asher/.local/bin ]]\n+ maybe_exe=/Users/asher/.local/bin/go\n+ [[ go == \\g\\o ]]\n+ [[ -f /Users/asher/.local/bin/go ]]\n"
+            }
+        },
+        {
+            "workunit_id": "0f40c81378c94874",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "7a5a2cbc52d54a0e",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171425824,
+            "description": "Scheduling: Test binary /usr/local/go/bin/go.",
+            "end_usecs": 1644956171524190,
+            "counters": {
+                "local_process_total_time_run_ms": 87
+            },
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "go version go1.17.2 darwin/amd64\n"
+            }
+        },
+        {
+            "workunit_id": "21e9841c2aa74a86",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "7a5a2cbc52d54a0e",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171425885,
+            "description": "Scheduling: Test binary /Users/asher/.toolchain/homebrew/bin/go.",
+            "end_usecs": 1644956171511147,
+            "counters": {
+                "local_process_total_time_run_ms": 82
+            },
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "go version go1.16.4 darwin/amd64\n"
+            }
+        },
+        {
+            "workunit_id": "9c5547bf97b1e5a0",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "6d8ad63e81ea7e8b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171526129,
+            "end_usecs": 1644956171573020
+        },
+        {
+            "workunit_id": "c96ec4b681340c16",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "6d8ad63e81ea7e8b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171526177,
+            "end_usecs": 1644956171572957
+        },
+        {
+            "workunit_id": "23ed98c2475d9dd4",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "c96ec4b681340c16",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171526384,
+            "description": "Scheduling: Determine Go version for /Users/asher/.toolchain/homebrew/bin/go",
+            "end_usecs": 1644956171555243,
+            "counters": {
+                "local_process_total_time_run_ms": 23
+            },
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "go version go1.16.4 darwin/amd64\n"
+            }
+        },
+        {
+            "workunit_id": "d11199ccb9c5135c",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "9c5547bf97b1e5a0",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171526433,
+            "description": "Scheduling: Determine Go version for /usr/local/go/bin/go",
+            "end_usecs": 1644956171557692,
+            "counters": {
+                "local_process_total_time_run_ms": 19
+            },
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "go version go1.17.2 darwin/amd64\n"
+            }
+        },
+        {
+            "workunit_id": "a8ab67a19e0c5766",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "6d8ad63e81ea7e8b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171575932,
+            "end_usecs": 1644956171607846
+        },
+        {
+            "workunit_id": "01c138ed9329e5a6",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a8ab67a19e0c5766",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171576352,
+            "description": "Scheduling: Determine Go version and GOROOT for /Users/asher/.toolchain/homebrew/bin/go",
+            "end_usecs": 1644956171606078,
+            "counters": {
+                "local_process_total_time_run_ms": 26
+            },
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/Users/asher/.toolchain/homebrew/Cellar/go/1.16.4/libexec\n"
+            }
+        },
+        {
+            "workunit_id": "1ae9509b2d95e04a",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "bb683ef99ae9a8d2",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171621444,
+            "description": "Scheduling: Parse src/go/src/toolchain/remoting/go.mod",
+            "end_usecs": 1644956171621663,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "a7729064a1964811",
+            "name": "pants.backend.go.util_rules.third_party_pkg.download_and_analyze_third_party_packages",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "5247d2962c84ae9a",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171622240,
+            "description": "Download and analyze all third-party Go packages",
+            "end_usecs": 1644956172771151
+        },
+        {
+            "workunit_id": "9a3041c6e5072a9a",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_module_dependencies",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171622407,
+            "end_usecs": 1644956171629800
+        },
+        {
+            "workunit_id": "ff2b08254cc1fc4b",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "9a3041c6e5072a9a",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171622588,
+            "end_usecs": 1644956171629022
+        },
+        {
+            "workunit_id": "46573f8eae282dd5",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "ff2b08254cc1fc4b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171623292,
+            "description": "Scheduling: Analyze Go module dependencies.",
+            "end_usecs": 1644956171628251,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "06fe8b58c793ddbf",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171631061,
+            "end_usecs": 1644956172625748
+        },
+        {
+            "workunit_id": "b963c4a40c711815",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171631105,
+            "end_usecs": 1644956172718716
+        },
+        {
+            "workunit_id": "0bbae683bc6f28d8",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171631118,
+            "end_usecs": 1644956172723880
+        },
+        {
+            "workunit_id": "44ce541c0d2fd917",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171631180,
+            "end_usecs": 1644956172710472
+        },
+        {
+            "workunit_id": "1068a13468b8ce37",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171631230,
+            "end_usecs": 1644956172756754
+        },
+        {
+            "workunit_id": "9120baa0d0293cd9",
+            "name": "pants.backend.go.util_rules.pkg_analyzer.setup_go_package_analyzer",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "06fe8b58c793ddbf",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171631268,
+            "end_usecs": 1644956171649808
+        },
+        {
+            "workunit_id": "6127b85cafb8f7ab",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171631273,
+            "end_usecs": 1644956172625634
+        },
+        {
+            "workunit_id": "073e22632f05dd52",
+            "name": "pants.backend.go.go_sources.load_go_binary.setup_go_binary",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "9120baa0d0293cd9",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171631464,
+            "end_usecs": 1644956171649771
+        },
+        {
+            "workunit_id": "a45e16a6e9237712",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632197,
+            "end_usecs": 1644956172576746
+        },
+        {
+            "workunit_id": "b59bfddc3ead902c",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632219,
+            "end_usecs": 1644956172768530
+        },
+        {
+            "workunit_id": "acf3525cfbf30f3a",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632242,
+            "end_usecs": 1644956172586841
+        },
+        {
+            "workunit_id": "d7b530480fdd59b3",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632271,
+            "end_usecs": 1644956172586177
+        },
+        {
+            "workunit_id": "1187767a381fb9f4",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632299,
+            "end_usecs": 1644956172699804
+        },
+        {
+            "workunit_id": "1bbcb7b480a8b8a4",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632311,
+            "end_usecs": 1644956172616943
+        },
+        {
+            "workunit_id": "630a585a039e98bb",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632319,
+            "end_usecs": 1644956172707574
+        },
+        {
+            "workunit_id": "87d2f30fbf385623",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632343,
+            "end_usecs": 1644956172685343
+        },
+        {
+            "workunit_id": "824fee7c4a49774b",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632384,
+            "end_usecs": 1644956172565759
+        },
+        {
+            "workunit_id": "c8696762be549f15",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632403,
+            "end_usecs": 1644956172578675
+        },
+        {
+            "workunit_id": "973d3639f5f3bffd",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632415,
+            "end_usecs": 1644956172568716
+        },
+        {
+            "workunit_id": "206a062b64b36a25",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632428,
+            "end_usecs": 1644956172727396
+        },
+        {
+            "workunit_id": "5038d1987c25b4b0",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632438,
+            "end_usecs": 1644956172589943
+        },
+        {
+            "workunit_id": "57d7b0897d20cb89",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632445,
+            "end_usecs": 1644956172564920
+        },
+        {
+            "workunit_id": "7f1365f4e9814e5c",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632457,
+            "end_usecs": 1644956172760466
+        },
+        {
+            "workunit_id": "df9064429f829cf9",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632467,
+            "end_usecs": 1644956172613204
+        },
+        {
+            "workunit_id": "3cde7cbb768023cf",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632481,
+            "end_usecs": 1644956172540540
+        },
+        {
+            "workunit_id": "9b957edc9974d02d",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632507,
+            "end_usecs": 1644956172594322
+        },
+        {
+            "workunit_id": "ff3ba79a06cbf201",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632518,
+            "end_usecs": 1644956172714918
+        },
+        {
+            "workunit_id": "cd34401fae381d67",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632533,
+            "end_usecs": 1644956172706987
+        },
+        {
+            "workunit_id": "c2c7600f3685ae85",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632555,
+            "end_usecs": 1644956172726175
+        },
+        {
+            "workunit_id": "aa179b85869167b2",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632564,
+            "end_usecs": 1644956172609410
+        },
+        {
+            "workunit_id": "afebafedc5ca1aac",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632573,
+            "end_usecs": 1644956172702150
+        },
+        {
+            "workunit_id": "622b2da353378f1d",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632585,
+            "end_usecs": 1644956172702537
+        },
+        {
+            "workunit_id": "89dc0447325ff3f2",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632599,
+            "end_usecs": 1644956172766948
+        },
+        {
+            "workunit_id": "7dee547dd7bb082b",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632602,
+            "end_usecs": 1644956172600997
+        },
+        {
+            "workunit_id": "90b0759a974073f9",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632607,
+            "end_usecs": 1644956172746116
+        },
+        {
+            "workunit_id": "70adf71c7cd36a4c",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632615,
+            "end_usecs": 1644956172767791
+        },
+        {
+            "workunit_id": "c68069ef7e488bb8",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632654,
+            "end_usecs": 1644956172700632
+        },
+        {
+            "workunit_id": "697aea688dbde488",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632669,
+            "end_usecs": 1644956172752023
+        },
+        {
+            "workunit_id": "ccc82b7853e488ef",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632683,
+            "end_usecs": 1644956172590144
+        },
+        {
+            "workunit_id": "fe904406c27725dc",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632685,
+            "end_usecs": 1644956172577996
+        },
+        {
+            "workunit_id": "b7d02a77227d8cfa",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632695,
+            "end_usecs": 1644956172614775
+        },
+        {
+            "workunit_id": "f7d56134810cd24a",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632706,
+            "end_usecs": 1644956172709748
+        },
+        {
+            "workunit_id": "9d3d0d9c32ebc8bd",
+            "name": "pants.backend.go.util_rules.third_party_pkg.analyze_go_third_party_module",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a7729064a1964811",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171632716,
+            "end_usecs": 1644956172764878
+        },
+        {
+            "workunit_id": "2e85df8e3027da96",
+            "name": "pants.backend.go.util_rules.import_analysis.generate_import_config",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "073e22632f05dd52",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171635773,
+            "end_usecs": 1644956171644888
+        },
+        {
+            "workunit_id": "b8b779b75cf245c9",
+            "name": "pants.backend.go.util_rules.import_analysis.determine_go_std_lib_imports",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "2e85df8e3027da96",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171635881,
+            "description": "Determine Go std lib's imports",
+            "end_usecs": 1644956171643349
+        },
+        {
+            "workunit_id": "4c418eacca13ea46",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "b8b779b75cf245c9",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171636155,
+            "end_usecs": 1644956171637336
+        },
+        {
+            "workunit_id": "68349a08cdfbf6f8",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "4c418eacca13ea46",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171636731,
+            "description": "Scheduling: Ask Go for its available import paths",
+            "end_usecs": 1644956171636922,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "0fd7ef3087bb324e",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "df9064429f829cf9",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171650751,
+            "end_usecs": 1644956171759409
+        },
+        {
+            "workunit_id": "466c86d8ac733997",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "630a585a039e98bb",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171651382,
+            "end_usecs": 1644956171717016
+        },
+        {
+            "workunit_id": "afac87419ed859b1",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "70adf71c7cd36a4c",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171651404,
+            "end_usecs": 1644956171760104
+        },
+        {
+            "workunit_id": "161525f5180fdf49",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "b59bfddc3ead902c",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171651419,
+            "end_usecs": 1644956171715682
+        },
+        {
+            "workunit_id": "384505f9f7e13211",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "206a062b64b36a25",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171651499,
+            "end_usecs": 1644956171723050
+        },
+        {
+            "workunit_id": "2747034fafa8d2b0",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "b963c4a40c711815",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171651530,
+            "end_usecs": 1644956171711740
+        },
+        {
+            "workunit_id": "d08e2c31f0e7a80c",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "90b0759a974073f9",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171652102,
+            "end_usecs": 1644956171761993
+        },
+        {
+            "workunit_id": "586c16d0a5e328a2",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "3cde7cbb768023cf",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171652266,
+            "end_usecs": 1644956171703224
+        },
+        {
+            "workunit_id": "1bfaa9f80d76e215",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a45e16a6e9237712",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171652460,
+            "end_usecs": 1644956171702161
+        },
+        {
+            "workunit_id": "272d567607cc37b8",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "0bbae683bc6f28d8",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171652475,
+            "end_usecs": 1644956171763690
+        },
+        {
+            "workunit_id": "fd8fbc4a696002fa",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "973d3639f5f3bffd",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171652506,
+            "end_usecs": 1644956171714500
+        },
+        {
+            "workunit_id": "6b5fbec9a3e1b45b",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "1bbcb7b480a8b8a4",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171652889,
+            "end_usecs": 1644956171703604
+        },
+        {
+            "workunit_id": "0127ed6ed1ba6a68",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "06fe8b58c793ddbf",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171653026,
+            "end_usecs": 1644956171758628
+        },
+        {
+            "workunit_id": "9222cff1cb406bec",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "6127b85cafb8f7ab",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171653048,
+            "end_usecs": 1644956171709256
+        },
+        {
+            "workunit_id": "490923172cb3f905",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "7dee547dd7bb082b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171654266,
+            "end_usecs": 1644956171726052
+        },
+        {
+            "workunit_id": "c62fb1ea2fc5cecd",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "1187767a381fb9f4",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171654394,
+            "end_usecs": 1644956171702789
+        },
+        {
+            "workunit_id": "d7d97fed6733aa4e",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "7f1365f4e9814e5c",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171654922,
+            "end_usecs": 1644956171710830
+        },
+        {
+            "workunit_id": "2350640ce77dce93",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "1068a13468b8ce37",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171654959,
+            "end_usecs": 1644956171715250
+        },
+        {
+            "workunit_id": "11c5ef1db15396a1",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "89dc0447325ff3f2",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171654971,
+            "end_usecs": 1644956171764473
+        },
+        {
+            "workunit_id": "795199034f587b28",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "c8696762be549f15",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171655277,
+            "end_usecs": 1644956171706794
+        },
+        {
+            "workunit_id": "e132b09fbe0ba41f",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "aa179b85869167b2",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171655294,
+            "end_usecs": 1644956171757780
+        },
+        {
+            "workunit_id": "ac04fc96b1f7f871",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "d7b530480fdd59b3",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171655488,
+            "end_usecs": 1644956171707216
+        },
+        {
+            "workunit_id": "733df53dd298f7d9",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "622b2da353378f1d",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171655686,
+            "end_usecs": 1644956171759999
+        },
+        {
+            "workunit_id": "83cbe854e6f40712",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "acf3525cfbf30f3a",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171656008,
+            "end_usecs": 1644956171707580
+        },
+        {
+            "workunit_id": "f3c84603c1fb4831",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "57d7b0897d20cb89",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171656108,
+            "end_usecs": 1644956171722670
+        },
+        {
+            "workunit_id": "87c82a3dc0960409",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "44ce541c0d2fd917",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171656127,
+            "end_usecs": 1644956171719097
+        },
+        {
+            "workunit_id": "c968aa78236ddb2b",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "b7d02a77227d8cfa",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171656168,
+            "end_usecs": 1644956171739428
+        },
+        {
+            "workunit_id": "a6d0fdc0029ef69a",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "824fee7c4a49774b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171656267,
+            "end_usecs": 1644956171708418
+        },
+        {
+            "workunit_id": "5142f03e74248d5b",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "afebafedc5ca1aac",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171656371,
+            "end_usecs": 1644956171759084
+        },
+        {
+            "workunit_id": "f82b83ca593975d1",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "9d3d0d9c32ebc8bd",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171657076,
+            "end_usecs": 1644956171762827
+        },
+        {
+            "workunit_id": "8a99ddcb7f320663",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "5038d1987c25b4b0",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171657423,
+            "end_usecs": 1644956171726857
+        },
+        {
+            "workunit_id": "5881ffefbdc6666b",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "c2c7600f3685ae85",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171657454,
+            "end_usecs": 1644956171762803
+        },
+        {
+            "workunit_id": "10b4e209320e38c0",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "87d2f30fbf385623",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171657585,
+            "end_usecs": 1644956171708782
+        },
+        {
+            "workunit_id": "76aa66ba214a0eae",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "f7d56134810cd24a",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171657782,
+            "end_usecs": 1644956171761497
+        },
+        {
+            "workunit_id": "8377310623f4049d",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "cd34401fae381d67",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171658130,
+            "end_usecs": 1644956171760032
+        },
+        {
+            "workunit_id": "dfa030c6ed5e8203",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "fe904406c27725dc",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171658670,
+            "end_usecs": 1644956171761644
+        },
+        {
+            "workunit_id": "1d1333511caa47cb",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "ff3ba79a06cbf201",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171659187,
+            "end_usecs": 1644956171763485
+        },
+        {
+            "workunit_id": "86b25c5f4221e122",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "ccc82b7853e488ef",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171659411,
+            "end_usecs": 1644956171759974
+        },
+        {
+            "workunit_id": "9059a9e44be5db1f",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "697aea688dbde488",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171660188,
+            "end_usecs": 1644956171761403
+        },
+        {
+            "workunit_id": "fae59be8d3835448",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "9b957edc9974d02d",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171660212,
+            "end_usecs": 1644956171722271
+        },
+        {
+            "workunit_id": "639a789f22db2146",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "c68069ef7e488bb8",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171660709,
+            "end_usecs": 1644956171763332
+        },
+        {
+            "workunit_id": "9ffb3406117c6787",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "161525f5180fdf49",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171662458,
+            "description": "Scheduling: Download Go module github.com/envoyproxy/go-control-plane@v0.9.4.",
+            "end_usecs": 1644956171712155,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "6f344993d6215294",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "6b5fbec9a3e1b45b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171662616,
+            "description": "Scheduling: Download Go module github.com/google/go-cmp@v0.4.0.",
+            "end_usecs": 1644956171694961,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "795eee584d808807",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "c62fb1ea2fc5cecd",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171662645,
+            "description": "Scheduling: Download Go module golang.org/x/crypto@v0.0.0-20190308221718-c2843e01d9a2.",
+            "end_usecs": 1644956171693682,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "7190d57ff6c9a260",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "2747034fafa8d2b0",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171663334,
+            "description": "Scheduling: Download Go module cloud.google.com/go@v0.26.0.",
+            "end_usecs": 1644956171708506,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "7a0f54ed21df4582",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "1bfaa9f80d76e215",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171663658,
+            "description": "Scheduling: Download Go module github.com/davecgh/go-spew@v1.1.1.",
+            "end_usecs": 1644956171686268,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "970eaf0f8eddb307",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "83cbe854e6f40712",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171663667,
+            "description": "Scheduling: Download Go module github.com/golang/glog@v0.0.0-20160126235308-23def4e6c14b.",
+            "end_usecs": 1644956171702228,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "8a74f5ffea4d1467",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "ac04fc96b1f7f871",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171663882,
+            "description": "Scheduling: Download Go module github.com/kr/text@v0.1.0.",
+            "end_usecs": 1644956171701872,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "067f4063824753c2",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "d7d97fed6733aa4e",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171664366,
+            "description": "Scheduling: Download Go module github.com/golang/mock@v1.1.1.",
+            "end_usecs": 1644956171708071,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "65a47c5ff9cad203",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "466c86d8ac733997",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171664445,
+            "description": "Scheduling: Download Go module github.com/envoyproxy/protoc-gen-validate@v0.1.0.",
+            "end_usecs": 1644956171713321,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "ed111a5f5f052097",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "9222cff1cb406bec",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171664495,
+            "description": "Scheduling: Download Go module github.com/census-instrumentation/opencensus-proto@v0.2.1.",
+            "end_usecs": 1644956171707388,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "3dc3397e0f169c37",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "87c82a3dc0960409",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171665313,
+            "description": "Scheduling: Download Go module github.com/bazelbuild/remote-apis@v0.0.0-20200624085034-0afc3700d177.",
+            "end_usecs": 1644956171713544,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "a536ec9f1525b5fb",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "2350640ce77dce93",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171665320,
+            "description": "Scheduling: Download Go module github.com/cncf/udpa/go@v0.0.0-20191209042840-269d4d468f6f.",
+            "end_usecs": 1644956171712065,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "13ead35260947b6a",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a6d0fdc0029ef69a",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171665463,
+            "description": "Scheduling: Download Go module github.com/konsorten/go-windows-terminal-sequences@v1.0.3.",
+            "end_usecs": 1644956171708295,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "83ddba8b0afeff49",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "fd8fbc4a696002fa",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171665956,
+            "description": "Scheduling: Download Go module github.com/opencontainers/runtime-spec@v1.0.2.",
+            "end_usecs": 1644956171710688,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "86e369be136580ca",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "795199034f587b28",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171666044,
+            "description": "Scheduling: Download Go module github.com/sirupsen/logrus@v1.6.0.",
+            "end_usecs": 1644956171701878,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "20c401a69363eb9f",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "10b4e209320e38c0",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171666052,
+            "description": "Scheduling: Download Go module honnef.co/go/tools@v0.0.0-20190523083050-ea95bdfd59fc.",
+            "end_usecs": 1644956171705805,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "e566193ded31c2af",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "384505f9f7e13211",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171667360,
+            "description": "Scheduling: Download Go module golang.org/x/exp@v0.0.0-20190121172915-509febef88a4.",
+            "end_usecs": 1644956171720100,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "715ad60f94a31bce",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "586c16d0a5e328a2",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171667583,
+            "description": "Scheduling: Download Go module golang.org/x/lint@v0.0.0-20190313153728-d0100b6bd8b3.",
+            "end_usecs": 1644956171694825,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "907cec5ad6041e9b",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "8a99ddcb7f320663",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171667730,
+            "description": "Scheduling: Download Go module github.com/pmezard/go-difflib@v1.0.0.",
+            "end_usecs": 1644956171722556,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "bd6eade3b91d8b57",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "f3c84603c1fb4831",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171667996,
+            "description": "Scheduling: Download Go module github.com/kr/pretty@v0.1.0.",
+            "end_usecs": 1644956171719176,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "55a008df8867f053",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "0fd7ef3087bb324e",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171668834,
+            "description": "Scheduling: Download Go module github.com/spf13/pflag@v1.0.5.",
+            "end_usecs": 1644956171753212,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "772d8b23bb800d22",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "d08e2c31f0e7a80c",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171669878,
+            "description": "Scheduling: Download Go module golang.org/x/text@v0.3.0.",
+            "end_usecs": 1644956171758484,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "b3c91569a2dd051a",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "490923172cb3f905",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171670141,
+            "description": "Scheduling: Download Go module google.golang.org/appengine@v1.4.0.",
+            "end_usecs": 1644956171722479,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "47e127b7d5146240",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "11c5ef1db15396a1",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171670225,
+            "description": "Scheduling: Download Go module google.golang.org/genproto@v0.0.0-20190819201941-24fa4b261c55.",
+            "end_usecs": 1644956171764088,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "5553449a21c64eae",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "733df53dd298f7d9",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171671306,
+            "description": "Scheduling: Download Go module github.com/stretchr/testify@v1.5.1.",
+            "end_usecs": 1644956171756384,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "9da2bae7625628f8",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "5142f03e74248d5b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171673394,
+            "description": "Scheduling: Download Go module golang.org/x/oauth2@v0.0.0-20180821212333-d2e6202438be.",
+            "end_usecs": 1644956171753629,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "062a3a45d9e27cc5",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "8377310623f4049d",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171673587,
+            "description": "Scheduling: Download Go module github.com/kr/pty@v1.1.1.",
+            "end_usecs": 1644956171756257,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "b4dfb73f2dc8546a",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "5881ffefbdc6666b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171673606,
+            "description": "Scheduling: Download Go module github.com/golang/protobuf@v1.4.2.",
+            "end_usecs": 1644956171758976,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "5c6e6ce7aa5d3633",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "1d1333511caa47cb",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171674145,
+            "description": "Scheduling: Download Go module golang.org/x/net@v0.0.0-20190613194153-d28f0bde5980.",
+            "end_usecs": 1644956171760792,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "c51156b5da0d95dd",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "fae59be8d3835448",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171674172,
+            "description": "Scheduling: Download Go module github.com/prometheus/client_model@v0.0.0-20190812154241-14fe0d1b01d4.",
+            "end_usecs": 1644956171716904,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "f85735f789fe0439",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "afac87419ed859b1",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171674420,
+            "description": "Scheduling: Download Go module golang.org/x/tools@v0.0.0-20190524140312-2c0ae7006135.",
+            "end_usecs": 1644956171757404,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "703ad7a035f9eafe",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "e132b09fbe0ba41f",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171674643,
+            "description": "Scheduling: Download Go module github.com/stretchr/objx@v0.1.0.",
+            "end_usecs": 1644956171751636,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "86b43ab8d47e6c75",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "272d567607cc37b8",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171677773,
+            "description": "Scheduling: Download Go module github.com/client9/misspell@v0.3.4.",
+            "end_usecs": 1644956171760659,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "bf569f3582656779",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "0127ed6ed1ba6a68",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171677802,
+            "description": "Scheduling: Download Go module github.com/BurntSushi/toml@v0.3.1.",
+            "end_usecs": 1644956171753211,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "fe388cc5ce873dc9",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "c968aa78236ddb2b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171677833,
+            "description": "Scheduling: Download Go module golang.org/x/sync@v0.0.0-20190423024810-112230192c58.",
+            "end_usecs": 1644956171725984,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "4ddc3e778e468361",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "f82b83ca593975d1",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171678829,
+            "description": "Scheduling: Download Go module google.golang.org/protobuf@v1.23.0.",
+            "end_usecs": 1644956171759671,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "346f956208ed3986",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "76aa66ba214a0eae",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171679569,
+            "description": "Scheduling: Download Go module golang.org/x/sys@v0.0.0-20200420163511-1957bb5e6d1f.",
+            "end_usecs": 1644956171758964,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "d2748dadf2474123",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "dfa030c6ed5e8203",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171679989,
+            "description": "Scheduling: Download Go module gopkg.in/check.v1@v1.0.0-20190902080502-41f04d3bba15.",
+            "end_usecs": 1644956171757567,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "31c086f10f35576a",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "86b25c5f4221e122",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171680314,
+            "description": "Scheduling: Download Go module gopkg.in/yaml.v2@v2.2.5.",
+            "end_usecs": 1644956171756416,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "de120acba137a271",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "9059a9e44be5db1f",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171680629,
+            "description": "Scheduling: Download Go module google.golang.org/grpc@v1.32.0.",
+            "end_usecs": 1644956171758687,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "e750f69d4f5ed4d1",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "639a789f22db2146",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171681042,
+            "description": "Scheduling: Download Go module golang.org/x/xerrors@v0.0.0-20191204190536-9bdfabe68543.",
+            "end_usecs": 1644956171759908,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "76c245b7ca9c16cd",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "d7b530480fdd59b3",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171770704,
+            "end_usecs": 1644956171802889
+        },
+        {
+            "workunit_id": "94e42b6d8f093be8",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a45e16a6e9237712",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171772820,
+            "end_usecs": 1644956171818901
+        },
+        {
+            "workunit_id": "e915cd9e5993d0c6",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "c8696762be549f15",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171774523,
+            "end_usecs": 1644956171796649
+        },
+        {
+            "workunit_id": "be1a80d9f49ac548",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "6127b85cafb8f7ab",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171775305,
+            "end_usecs": 1644956171803669
+        },
+        {
+            "workunit_id": "e9d9e37573dc3065",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "1bbcb7b480a8b8a4",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171777608,
+            "end_usecs": 1644956171806246
+        },
+        {
+            "workunit_id": "3179ab1531bcf048",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "3cde7cbb768023cf",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171778179,
+            "end_usecs": 1644956171793942
+        },
+        {
+            "workunit_id": "d1316fb179daf34e",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "87d2f30fbf385623",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171778222,
+            "end_usecs": 1644956171809421
+        },
+        {
+            "workunit_id": "df302fa3c092cdb4",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "3179ab1531bcf048",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171779787,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/lint@v0.0.0-20190313153728-d0100b6bd8b3",
+            "end_usecs": 1644956171787066,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "62cbee03f2b842b8",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "7dee547dd7bb082b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171779838,
+            "end_usecs": 1644956171819792
+        },
+        {
+            "workunit_id": "7d3ce25dd3a2d127",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "973d3639f5f3bffd",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171781938,
+            "end_usecs": 1644956171808606
+        },
+        {
+            "workunit_id": "a97dc88130042c6e",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "1187767a381fb9f4",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171782008,
+            "end_usecs": 1644956171839765
+        },
+        {
+            "workunit_id": "92c62d095777b4d1",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "57d7b0897d20cb89",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171782256,
+            "end_usecs": 1644956171835692
+        },
+        {
+            "workunit_id": "94265d19a48c1567",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "b963c4a40c711815",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171785421,
+            "end_usecs": 1644956171829042
+        },
+        {
+            "workunit_id": "f358c73b0ea0ab15",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "824fee7c4a49774b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171785928,
+            "end_usecs": 1644956171838686
+        },
+        {
+            "workunit_id": "9ad82d7c958294a8",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "44ce541c0d2fd917",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171786408,
+            "end_usecs": 1644956171839217
+        },
+        {
+            "workunit_id": "41bd75223683ec8d",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "e915cd9e5993d0c6",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171786467,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/sirupsen/logrus@v1.6.0",
+            "end_usecs": 1644956171787264,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "94415e976289862d",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "76c245b7ca9c16cd",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171786483,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/kr/text@v0.1.0",
+            "end_usecs": 1644956171794690,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "1fa54d2598963231",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "d1316fb179daf34e",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171786999,
+            "description": "Scheduling: Analyze metadata for Go third-party module: honnef.co/go/tools@v0.0.0-20190523083050-ea95bdfd59fc",
+            "end_usecs": 1644956171801899,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "cefc02eb76193e81",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "e9d9e37573dc3065",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171787013,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/google/go-cmp@v0.4.0",
+            "end_usecs": 1644956171801638,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "6685cc7d5b0e6b3a",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "be1a80d9f49ac548",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171787276,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/census-instrumentation/opencensus-proto@v0.2.1",
+            "end_usecs": 1644956171796923,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "ec241ee1a2475b9a",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "94e42b6d8f093be8",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171787264,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/davecgh/go-spew@v1.1.1",
+            "end_usecs": 1644956171805862,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "2d7b91949157a761",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "7d3ce25dd3a2d127",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171787665,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/opencontainers/runtime-spec@v1.0.2",
+            "end_usecs": 1644956171801730,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "1cad58fdbac0e834",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "7f1365f4e9814e5c",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171788696,
+            "end_usecs": 1644956171905418
+        },
+        {
+            "workunit_id": "48fdb1070afcef37",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "b59bfddc3ead902c",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171794058,
+            "end_usecs": 1644956171844806
+        },
+        {
+            "workunit_id": "5c119b70b3ddcd3f",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "62cbee03f2b842b8",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171794069,
+            "description": "Scheduling: Analyze metadata for Go third-party module: google.golang.org/appengine@v1.4.0",
+            "end_usecs": 1644956171807824,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "5ad2a7d5a3759b04",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "acf3525cfbf30f3a",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171794097,
+            "end_usecs": 1644956171908293
+        },
+        {
+            "workunit_id": "bb054585573c2891",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "630a585a039e98bb",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171795575,
+            "end_usecs": 1644956171884987
+        },
+        {
+            "workunit_id": "1e096f6113e4eb6f",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "94265d19a48c1567",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171796693,
+            "description": "Scheduling: Analyze metadata for Go third-party module: cloud.google.com/go@v0.26.0",
+            "end_usecs": 1644956171812053,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "38fbec6d477ec6dc",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "9b957edc9974d02d",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171798304,
+            "end_usecs": 1644956171902889
+        },
+        {
+            "workunit_id": "077089b5c175add9",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "b7d02a77227d8cfa",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171798565,
+            "end_usecs": 1644956171915219
+        },
+        {
+            "workunit_id": "b0c0413f9ca61e21",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "92c62d095777b4d1",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171798588,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/kr/pretty@v0.1.0",
+            "end_usecs": 1644956171818198,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "8aa44f36fef87e5a",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "697aea688dbde488",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171800526,
+            "end_usecs": 1644956171916009
+        },
+        {
+            "workunit_id": "037775a118dbe331",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "f358c73b0ea0ab15",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171800757,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/konsorten/go-windows-terminal-sequences@v1.0.3",
+            "end_usecs": 1644956171818339,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"sequences\",\"GoFiles\":[\"sequences_dummy.go\"],\"IgnoredGoFiles\":[\"sequences.go\",\"sequences_test.go\"],\"Imports\":[\"fmt\"]}"
+            }
+        },
+        {
+            "workunit_id": "c52318be5cd14ef5",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "9ad82d7c958294a8",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171801557,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/bazelbuild/remote-apis@v0.0.0-20200624085034-0afc3700d177",
+            "end_usecs": 1644956171818613,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "6be3c740612424aa",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "06fe8b58c793ddbf",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171801585,
+            "end_usecs": 1644956171909001
+        },
+        {
+            "workunit_id": "1486cc0d274e9783",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "a97dc88130042c6e",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171801810,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/crypto@v0.0.0-20190308221718-c2843e01d9a2",
+            "end_usecs": 1644956171819601,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "23a39bf00bf35451",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "fe904406c27725dc",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171802171,
+            "end_usecs": 1644956171927342
+        },
+        {
+            "workunit_id": "f2dff852d24c41ae",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "5038d1987c25b4b0",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171802928,
+            "end_usecs": 1644956171888257
+        },
+        {
+            "workunit_id": "8bd4ac300dad0756",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "48fdb1070afcef37",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171803554,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/envoyproxy/go-control-plane@v0.9.4",
+            "end_usecs": 1644956171828608,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "53d48bc6df2c5037",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "206a062b64b36a25",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171809131,
+            "end_usecs": 1644956171938106
+        },
+        {
+            "workunit_id": "1b2eb8297a409619",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "bb054585573c2891",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171812701,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/envoyproxy/protoc-gen-validate@v0.1.0",
+            "end_usecs": 1644956171852483,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "94fc260d59165d22",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "f2dff852d24c41ae",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171812713,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/pmezard/go-difflib@v1.0.0",
+            "end_usecs": 1644956171852537,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"difflib\",\"GoFiles\":[\"difflib.go\"],\"TestGoFiles\":[\"difflib_test.go\"],\"Imports\":[\"bufio\",\"bytes\",\"fmt\",\"io\",\"strings\"],\"TestImports\":[\"bytes\",\"fmt\",\"math\",\"reflect\",\"strings\",\"testing\"]}"
+            }
+        },
+        {
+            "workunit_id": "cd8e09b3041c787b",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "c2c7600f3685ae85",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171814077,
+            "end_usecs": 1644956171941634
+        },
+        {
+            "workunit_id": "bffaade40081cb0d",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "df9064429f829cf9",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171815615,
+            "end_usecs": 1644956171973309
+        },
+        {
+            "workunit_id": "da5fbbcbf1800964",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "90b0759a974073f9",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171817425,
+            "end_usecs": 1644956171975863
+        },
+        {
+            "workunit_id": "af7efe2962287e2a",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "38fbec6d477ec6dc",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171818474,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/prometheus/client_model@v0.0.0-20190812154241-14fe0d1b01d4",
+            "end_usecs": 1644956171863378,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"io_prometheus_client\",\"GoFiles\":[\"metrics.pb.go\"],\"Imports\":[\"fmt\",\"github.com/golang/protobuf/proto\",\"math\"]}"
+            }
+        },
+        {
+            "workunit_id": "e7cedc9a216a7785",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "1cad58fdbac0e834",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171819428,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/golang/mock@v1.1.1",
+            "end_usecs": 1644956171871394,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "7f117c7ce65434b0",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "5ad2a7d5a3759b04",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171819523,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/golang/glog@v0.0.0-20160126235308-23def4e6c14b",
+            "end_usecs": 1644956171871442,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "cce89f84718a81d2",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "6be3c740612424aa",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171822938,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/BurntSushi/toml@v0.3.1",
+            "end_usecs": 1644956171875304,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "c9b4304312456ef4",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "89dc0447325ff3f2",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171827696,
+            "end_usecs": 1644956171993138
+        },
+        {
+            "workunit_id": "4c8169612842c7c5",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "aa179b85869167b2",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171828649,
+            "end_usecs": 1644956172000323
+        },
+        {
+            "workunit_id": "2b31b2dd1cfa2f2b",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "ccc82b7853e488ef",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171828672,
+            "end_usecs": 1644956171998570
+        },
+        {
+            "workunit_id": "27b253f3d1307610",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "afebafedc5ca1aac",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171830327,
+            "end_usecs": 1644956172006782
+        },
+        {
+            "workunit_id": "8f1f0e7420d3f9db",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "077089b5c175add9",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171838217,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/sync@v0.0.0-20190423024810-112230192c58",
+            "end_usecs": 1644956171900723,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "593776bcdce03021",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "8aa44f36fef87e5a",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171838665,
+            "description": "Scheduling: Analyze metadata for Go third-party module: google.golang.org/grpc@v1.32.0",
+            "end_usecs": 1644956171904185,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "5d613698a1df5e60",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "23a39bf00bf35451",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171843383,
+            "description": "Scheduling: Analyze metadata for Go third-party module: gopkg.in/check.v1@v1.0.0-20190902080502-41f04d3bba15",
+            "end_usecs": 1644956171910203,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "7974b3dd0fef9785",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "ff3ba79a06cbf201",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171862050,
+            "end_usecs": 1644956171951815
+        },
+        {
+            "workunit_id": "8982275a3f91e44d",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "70adf71c7cd36a4c",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171869939,
+            "end_usecs": 1644956172040733
+        },
+        {
+            "workunit_id": "2451caa86564b300",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "53d48bc6df2c5037",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171872218,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/exp@v0.0.0-20190121172915-509febef88a4",
+            "end_usecs": 1644956171926037,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "d1f43dbc12ecab97",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "f7d56134810cd24a",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171874399,
+            "end_usecs": 1644956172010865
+        },
+        {
+            "workunit_id": "ec776272bcdfe055",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "9d3d0d9c32ebc8bd",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171881258,
+            "end_usecs": 1644956172446158
+        },
+        {
+            "workunit_id": "8241390476e3c72b",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "cd8e09b3041c787b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171898015,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/golang/protobuf@v1.4.2",
+            "end_usecs": 1644956171930743,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "d1b98a49aee6c7fe",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "1068a13468b8ce37",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171898827,
+            "end_usecs": 1644956172029867
+        },
+        {
+            "workunit_id": "b39eb94c564384da",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "bffaade40081cb0d",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171900073,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/spf13/pflag@v1.0.5",
+            "end_usecs": 1644956171931917,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "793ec4d0eab42de0",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "da5fbbcbf1800964",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171900518,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/text@v0.3.0",
+            "end_usecs": 1644956171932038,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "f7f491797b682266",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "c68069ef7e488bb8",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171901912,
+            "end_usecs": 1644956172036562
+        },
+        {
+            "workunit_id": "b158e680abc6ff08",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "622b2da353378f1d",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171906744,
+            "end_usecs": 1644956172040625
+        },
+        {
+            "workunit_id": "dbb66e69d000d849",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "c9b4304312456ef4",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171911425,
+            "description": "Scheduling: Analyze metadata for Go third-party module: google.golang.org/genproto@v0.0.0-20190819201941-24fa4b261c55",
+            "end_usecs": 1644956171938544,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "5c4fd44e100ade8e",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "4c8169612842c7c5",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171912131,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/stretchr/objx@v0.1.0",
+            "end_usecs": 1644956171938792,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "a269da3350732d1a",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "2b31b2dd1cfa2f2b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171913122,
+            "description": "Scheduling: Analyze metadata for Go third-party module: gopkg.in/yaml.v2@v2.2.5",
+            "end_usecs": 1644956171939482,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "af54e66a88e82b1e",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "7974b3dd0fef9785",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171914350,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/net@v0.0.0-20190613194153-d28f0bde5980",
+            "end_usecs": 1644956171930893,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "9a95b701db835bed",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "27b253f3d1307610",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171914907,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/oauth2@v0.0.0-20180821212333-d2e6202438be",
+            "end_usecs": 1644956171987790,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "992e5ba3e671a70d",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "d1f43dbc12ecab97",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171927769,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/sys@v0.0.0-20200420163511-1957bb5e6d1f",
+            "end_usecs": 1644956171991865,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "1b88f1418f3298f5",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "cd34401fae381d67",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171931281,
+            "end_usecs": 1644956172497888
+        },
+        {
+            "workunit_id": "7ac053385cdd6baf",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "d1b98a49aee6c7fe",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171931590,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/cncf/udpa/go@v0.0.0-20191209042840-269d4d468f6f",
+            "end_usecs": 1644956172005524,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "506e9f23cc83e776",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "f7f491797b682266",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171933026,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/xerrors@v0.0.0-20191204190536-9bdfabe68543",
+            "end_usecs": 1644956172007575,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "e7283c6e188e9554",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "8982275a3f91e44d",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171934467,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/tools@v0.0.0-20190524140312-2c0ae7006135",
+            "end_usecs": 1644956172009039,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "a79e4aed8a79b855",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "b158e680abc6ff08",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171934502,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/stretchr/testify@v1.5.1",
+            "end_usecs": 1644956172008897,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "2ec3586b258945c0",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "ec776272bcdfe055",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171938189,
+            "description": "Scheduling: Analyze metadata for Go third-party module: google.golang.org/protobuf@v1.23.0",
+            "end_usecs": 1644956172021285,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "6598c9c88894c390",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "0bbae683bc6f28d8",
+            "last_update": 1644956180,
+            "start_usecs": 1644956171992733,
+            "end_usecs": 1644956172506493
+        },
+        {
+            "workunit_id": "6f95e8bf7d3b2c4c",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "1b88f1418f3298f5",
+            "last_update": 1644956180,
+            "start_usecs": 1644956172029045,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/kr/pty@v1.1.1",
+            "end_usecs": 1644956172482138,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "a2ad5883233cbbc6",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "6598c9c88894c390",
+            "last_update": 1644956180,
+            "start_usecs": 1644956172451279,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/client9/misspell@v0.3.4",
+            "end_usecs": 1644956172491813,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        },
+        {
+            "workunit_id": "194767a1464a7bee",
+            "name": "pants.backend.go.lint.gofmt.rules.gofmt_lint",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "999483310f049521",
+            "last_update": 1644956180,
+            "start_usecs": 1644956173316648,
+            "description": "Lint with gofmt",
+            "end_usecs": 1644956173510367,
+            "metadata": {
+                "addresses": [
+                    "src/go/src/toolchain/remoting/buildbarn/proto:proto",
+                    "src/go/src/toolchain/remoting/buildbarn:buildbarn",
+                    "src/go/src/toolchain/remoting/buildbox:buildbox",
+                    "src/go/src/toolchain/remoting/cmd/bb_runner:bb_runner",
+                    "src/go/src/toolchain/remoting/cmd/buildbox_run:buildbox_run",
+                    "src/go/src/toolchain/remoting/cmd/prepare_oci_bundle:prepare_oci_bundle",
+                    "src/go/src/toolchain/remoting/cmd/run_oci_bundle:run_oci_bundle",
+                    "src/go/src/toolchain/remoting/cmd/smoketest:smoketest",
+                    "src/go/src/toolchain/remoting/internal/testutil:testutil",
+                    "src/go/src/toolchain/remoting/pkg/casutil:casutil",
+                    "src/go/src/toolchain/remoting/pkg:pkg",
+                    "src/go/src/toolchain/remoting/protos/build/bazel/remote/execution/v2:v2",
+                    "src/go/src/toolchain/remoting/protos/build/bazel/semver:semver",
+                    "src/go/src/toolchain/remoting/protos/build/buildgrid:buildgrid"
+                ]
+            }
+        },
+        {
+            "workunit_id": "77245e436068e2c1",
+            "name": "pants.backend.shell.lint.shellcheck.rules.run_shellcheck",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "999483310f049521",
+            "last_update": 1644956180,
+            "start_usecs": 1644956173316807,
+            "description": "Lint with Shellcheck",
+            "end_usecs": 1644956175613039,
+            "metadata": {
+                "addresses": [
+                    "src/go/src/toolchain/remoting/build.sh:remoting0"
+                ]
+            }
+        },
+        {
+            "workunit_id": "29c12c09702f337e",
+            "name": "pants.engine.internals.graph.resolve_targets",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "77245e436068e2c1",
+            "last_update": 1644956180,
+            "start_usecs": 1644956173322135,
+            "end_usecs": 1644956175607951
+        },
+        {
+            "workunit_id": "3ebea6b8ec99f318",
+            "name": "pants.engine.internals.graph.resolve_unexpanded_targets",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "29c12c09702f337e",
+            "last_update": 1644956180,
+            "start_usecs": 1644956173322480,
+            "end_usecs": 1644956175607782
+        },
+        {
+            "workunit_id": "5c976fa2c4b94928",
+            "name": "pants.engine.internals.graph.resolve_dependencies",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "3ebea6b8ec99f318",
+            "last_update": 1644956180,
+            "start_usecs": 1644956173322555,
+            "description": "Resolve direct dependencies",
+            "end_usecs": 1644956175607561
+        },
+        {
+            "workunit_id": "e34f4a3f727e58a8",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "194767a1464a7bee",
+            "last_update": 1644956180,
+            "start_usecs": 1644956173338817,
+            "description": "Scheduling: Run gofmt on 30 files.",
+            "end_usecs": 1644956173509210,
+            "counters": {
+                "local_process_total_time_run_ms": 162
+            },
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "src/go/src/toolchain/remoting/pkg/tools.go\n"
+            }
+        },
+        {
+            "workunit_id": "9e5ce0f2da4d27e7",
+            "name": "pants.backend.shell.dependency_inference.infer_shell_dependencies",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "5c976fa2c4b94928",
+            "last_update": 1644956180,
+            "start_usecs": 1644956173338845,
+            "description": "Inferring Shell dependencies by analyzing imports",
+            "end_usecs": 1644956175606640
+        },
+        {
+            "workunit_id": "4f4057ac75a6dbb0",
+            "name": "pants.backend.shell.dependency_inference.parse_shell_imports",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "9e5ce0f2da4d27e7",
+            "last_update": 1644956180,
+            "start_usecs": 1644956175299924,
+            "end_usecs": 1644956175606462
+        },
+        {
+            "workunit_id": "4e9e66bde09d073c",
+            "name": "pants.core.util_rules.external_tool.download_external_tool",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "4f4057ac75a6dbb0",
+            "last_update": 1644956180,
+            "start_usecs": 1644956175300097,
+            "end_usecs": 1644956175605464
+        },
+        {
+            "workunit_id": "4a2e036a3ea3db7b",
+            "name": "pants.core.util_rules.archive.maybe_extract_archive",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "4e9e66bde09d073c",
+            "last_update": 1644956180,
+            "start_usecs": 1644956175300453,
+            "description": "Extracting an archive file",
+            "end_usecs": 1644956175605111
+        },
+        {
+            "workunit_id": "5876afed77a39fd3",
+            "name": "pants.core.util_rules.archive.find_tar_wrapper",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "4a2e036a3ea3db7b",
+            "last_update": 1644956180,
+            "start_usecs": 1644956175300786,
+            "end_usecs": 1644956175602138
+        },
+        {
+            "workunit_id": "be59138d7b3998b4",
+            "name": "pants.core.util_rules.archive.find_tar",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "5876afed77a39fd3",
+            "last_update": 1644956180,
+            "start_usecs": 1644956175300801,
+            "description": "Finding the `tar` binary",
+            "end_usecs": 1644956175602003
+        },
+        {
+            "workunit_id": "e8ed4c578c1eb797",
+            "name": "pants.engine.process.find_binary",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "be59138d7b3998b4",
+            "last_update": 1644956180,
+            "start_usecs": 1644956175300907,
+            "end_usecs": 1644956175601424
+        },
+        {
+            "workunit_id": "f195e2d0799a7b70",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "e8ed4c578c1eb797",
+            "last_update": 1644956180,
+            "start_usecs": 1644956175301390,
+            "end_usecs": 1644956175574536
+        },
+        {
+            "workunit_id": "22ac130224794465",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "f195e2d0799a7b70",
+            "last_update": 1644956180,
+            "start_usecs": 1644956175301484,
+            "description": "Scheduling: Searching for `tar` on PATH=/usr/bin:/bin:/usr/local/bin",
+            "end_usecs": 1644956175573178,
+            "counters": {
+                "local_process_total_time_run_ms": 268
+            },
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/usr/bin/tar\n",
+                "stderr": "+ CHECK_FILE_ENTRIES=\n+ for path in '${PATH//:/ }'\n+ [[ -d /usr/bin ]]\n+ maybe_exe=/usr/bin/tar\n+ [[ tar == \\t\\a\\r ]]\n+ [[ -f /usr/bin/tar ]]\n+ [[ -x /usr/bin/tar ]]\n+ echo /usr/bin/tar\n+ for path in '${PATH//:/ }'\n+ [[ -d /bin ]]\n+ maybe_exe=/bin/tar\n+ [[ tar == \\t\\a\\r ]]\n+ [[ -f /bin/tar ]]\n+ for path in '${PATH//:/ }'\n+ [[ -d /usr/local/bin ]]\n+ maybe_exe=/usr/local/bin/tar\n+ [[ tar == \\t\\a\\r ]]\n+ [[ -f /usr/local/bin/tar ]]\n"
+            }
+        },
+        {
+            "workunit_id": "65433cdd0b8b37e3",
+            "name": "process",
+            "state": "finished",
+            "version": 5,
+            "parent_id": "4f4057ac75a6dbb0",
+            "last_update": 1644956180,
+            "start_usecs": 1644956175606039,
+            "description": "Scheduling: Detect Shell imports for src/go/src/toolchain/remoting/build.sh",
+            "end_usecs": 1644956175606230,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "[]\n"
+            }
+        }
+    ]
+}

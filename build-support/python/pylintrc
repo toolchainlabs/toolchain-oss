@@ -1,0 +1,65 @@
+[MASTER]
+# disabled pylint-django due to https://github.com/PyCQA/pylint-django/issues/105 which started showing up in CI.
+# load-plugins=pylint_django
+extension-pkg-allow-list=pants.engine.internals.native_engine
+
+[MESSAGES CONTROL]
+
+disable=
+    #disabled due to not using pylint_django
+    bad-option-value,
+    invalid-str-returned,
+    # not needed:
+    bad-indentation,
+    line-too-long,
+    logging-format-interpolation,
+    missing-function-docstring,
+    invalid-name,
+    missing-module-docstring,
+    missing-class-docstring,
+    too-few-public-methods,
+    no-member,
+    too-many-public-methods,
+    C0330,
+    fixme,
+    similarities,
+    too-many-lines,
+    unsubscriptable-object,
+    unused-wildcard-import,
+    wildcard-import,
+    abstract-method,
+    import-outside-toplevel,
+    logging-fstring-interpolation,
+    # TODO: Enable
+    unsupported-binary-operation, # https://github.com/PyCQA/pylint/issues/7381
+    cache-max-size-none,
+    missing-timeout, 
+    arguments-renamed,
+    unspecified-encoding,
+    use-dict-literal,
+    raise-missing-from,
+    no-self-use,
+    unused-argument,
+    cell-var-from-loop,
+    unused-variable,
+    no-self-argument,
+    too-many-nested-blocks,
+    # TODO: maybe enable:
+    redefined-builtin,
+    undefined-variable,
+    no-name-in-module,
+    logging-too-many-args,
+    redefined-outer-name,
+    arguments-differ,
+    too-many-locals,
+    too-many-arguments,
+    too-many-branches,
+    no-else-return,
+    protected-access,
+    too-many-statements,
+    attribute-defined-outside-init,
+    broad-except,
+    too-many-instance-attributes,
+    too-many-ancestors,
+    blacklisted-name,
+    too-many-return-statements,

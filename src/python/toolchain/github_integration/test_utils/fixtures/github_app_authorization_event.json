@@ -1,0 +1,28 @@
+{
+    "headers": {
+        "X-GitHub-Event": "github_app_authorization"
+    },
+    "payload": {
+        "action": "revoked",
+        "sender": {
+            "login": "chrisjrn-tcob",
+            "id": 108428330,
+            "node_id": "U_kgDOBnZ8Kg",
+            "avatar_url": "https://avatars.githubusercontent.com/u/108428330?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/chrisjrn-tcob",
+            "html_url": "https://github.com/chrisjrn-tcob",
+            "followers_url": "https://api.github.com/users/chrisjrn-tcob/followers",
+            "following_url": "https://api.github.com/users/chrisjrn-tcob/following{/other_user}",
+            "gists_url": "https://api.github.com/users/chrisjrn-tcob/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/chrisjrn-tcob/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/chrisjrn-tcob/subscriptions",
+            "organizations_url": "https://api.github.com/users/chrisjrn-tcob/orgs",
+            "repos_url": "https://api.github.com/users/chrisjrn-tcob/repos",
+            "events_url": "https://api.github.com/users/chrisjrn-tcob/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/chrisjrn-tcob/received_events",
+            "type": "User",
+            "site_admin": false
+        }
+    }
+}

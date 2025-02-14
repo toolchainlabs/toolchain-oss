@@ -1,0 +1,67 @@
+{
+    "info": {
+        "author": "Zenoss, Inc.",
+        "author_email": "dev@zenoss.com",
+        "bugtrack_url": null,
+        "classifiers": [
+            "Development Status :: 3 - Alpha"
+        ],
+        "description": "# OpenCensus Zenossn",
+        "description_content_type": "text/markdown",
+        "docs_url": null,
+        "download_url": "",
+        "downloads": {
+            "last_day": -1,
+            "last_month": -1,
+            "last_week": -1
+        },
+        "home_page": "https://github.com/zenoss/opencensus-python-exporter",
+        "keywords": "",
+        "license": "Apache-2.0",
+        "maintainer": "",
+        "maintainer_email": "",
+        "name": "opencensus-ext-zenoss",
+        "package_url": "https://pypi.org/project/opencensus-ext-zenoss/",
+        "platform": "",
+        "project_url": "https://pypi.org/project/opencensus-ext-zenoss/",
+        "project_urls": {
+            "Homepage": "https://github.com/zenoss/opencensus-python-exporter"
+        },
+        "release_url": "https://pypi.org/project/opencensus-ext-zenoss/0.0.1/",
+        "requires_dist": [
+            "google-cloud-monitoring (<1.0.0,>=0.30.0)",
+            "opencensus (<1.0.0,>=0.7)",
+            "requests",
+            "urllib3"
+        ],
+        "requires_python": ">=2.7",
+        "summary": "OpenCensus Zenoss Exporter",
+        "version": "0.0.1",
+        "yanked": false
+    },
+    "last_serial": 7200243,
+    "releases": {
+        "0.0.1": [
+            {
+                "comment_text": "",
+                "digests": {
+                    "md5": "053eae567b77635bac06500a049b5e14",
+                    "sha256": "fbd3845de550edcd3164c6c7f6097c0e22e9ce9536a7d83507330f5c5094335b"
+                },
+                "downloads": -1,
+                "filename": "opencensus_ext_zenoss-0.0.1-py2.py3-none-any.whl",
+                "has_sig": false,
+                "md5_digest": "053eae567b77635bac06500a049b5e14",
+                "packagetype": "jambalaya",
+                "python_version": "py2.py3",
+                "requires_python": ">=2.7",
+                "size": 10138,
+                "upload_time": "2020-05-08T20:36:05",
+                "upload_time_iso_8601": "2020-05-08T20:36:05.003684Z",
+                "url": "https://files.pythonhosted.org/packages/86/43/6b1cfd4fdc9f7aeaf1e46aec4df6a027461d9afa65c8b5f2641cabd3f722/opencensus_ext_zenoss-0.0.1-py2.py3-none-any.whl",
+                "yanked": false
+            }
+        ]
+    },
+    "urls": []
+}

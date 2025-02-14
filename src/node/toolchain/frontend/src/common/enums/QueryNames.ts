@@ -1,0 +1,29 @@
+/*
+Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+*/
+
+enum QueryNames {
+  ME = 'ME',
+  BUILDS = 'BUILDS',
+  BUILDS_OPTIONS = 'BUILDS_OPTIONS',
+  REPOS = 'REPOS',
+  ACTIVATE_REPO = 'ACTIVATE_REPO',
+  DEACTIVATE_REPO = 'DEACTIVATE_REPO',
+  ORGS = 'ORGS',
+  ORG = 'ORG',
+  ALL_USER_REPOS = 'ALL_USER_REPOS',
+  TITLE_SUGGEST = 'TITLE_SUGGEST',
+  EMAILS = 'EMAILS',
+  PATCH_USER = 'PATCH_USER',
+  EDIT_ORG = 'EDIT_ORG',
+  BILLING = 'BILLING',
+  TOKENS = 'TOKENS',
+  INDICATORS = 'INDICATORS',
+  POST_REFRESH_TOKEN = 'POST_REFRESH_TOKEN',
+  ORG_PLAN = 'ORG_PLAN',
+  WORKER_TOKENS = 'WORKER_TOKENS',
+  WORKER_TOKEN = 'WORKER_TOKEN',
+}
+
+export default QueryNames;

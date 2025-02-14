@@ -1,0 +1,145 @@
+{
+    "ci_env": {
+        "BITBUCKET_BRANCH": "main",
+        "BITBUCKET_BUILD_NUMBER": "30",
+        "BITBUCKET_CLONE_DIR": "/opt/atlassian/pipelines/agent/build",
+        "BITBUCKET_COMMIT": "2a28689353cf6f6dc72f03942c906ca6347d6dfe",
+        "BITBUCKET_DOCKER_HOST_INTERNAL": "10.36.202.132",
+        "BITBUCKET_GIT_HTTP_ORIGIN": "http://bitbucket.org/festivus-miracle/minimal-pants",
+        "BITBUCKET_GIT_SSH_ORIGIN": "git@bitbucket.org:festivus-miracle/minimal-pants.git",
+        "BITBUCKET_PIPELINE_UUID": "{24203d4a-5815-418c-964b-84b32244a9c5}",
+        "BITBUCKET_PROJECT_KEY": "EX",
+        "BITBUCKET_PROJECT_UUID": "{8454e8bb-7290-4396-9eb9-6c0d77556bc5}",
+        "BITBUCKET_REPO_FULL_NAME": "festivus-miracle/minimal-pants",
+        "BITBUCKET_REPO_IS_PRIVATE": "false",
+        "BITBUCKET_REPO_OWNER": "festivus-miracle",
+        "BITBUCKET_REPO_OWNER_UUID": "{acf54878-51be-473e-bf0b-0fbb12e011ad}",
+        "BITBUCKET_REPO_SLUG": "minimal-pants",
+        "BITBUCKET_REPO_UUID": "{c389eba6-ca13-49c5-8dec-4e617d39dffe}",
+        "BITBUCKET_STEP_RUN_NUMBER": "1",
+        "BITBUCKET_STEP_TRIGGERER_UUID": "{6ae3c307-ae59-4135-9c72-bdd06eb2010a}",
+        "BITBUCKET_STEP_UUID": "{1c6865a9-a4a3-49e1-8187-1f6e67013e38}",
+        "BITBUCKET_WORKSPACE": "festivus-miracle"
+    },
+    "counter_names": [
+        "local_cache_requests",
+        "local_cache_requests_cached",
+        "local_cache_requests_uncached",
+        "local_cache_read_errors",
+        "local_cache_write_errors",
+        "local_cache_total_time_saved_ms",
+        "local_execution_requests",
+        "remote_cache_requests",
+        "remote_cache_requests_cached",
+        "remote_cache_requests_uncached",
+        "remote_cache_read_errors",
+        "remote_cache_write_attempts",
+        "remote_cache_write_successes",
+        "remote_cache_write_errors",
+        "remote_cache_speculation_local_completed_first",
+        "remote_cache_speculation_remote_completed_first",
+        "remote_cache_total_time_saved_ms",
+        "remote_execution_errors",
+        "remote_execution_requests",
+        "remote_execution_rpc_errors",
+        "remote_execution_rpc_execute",
+        "remote_execution_rpc_retries",
+        "remote_execution_rpc_wait_execution",
+        "remote_execution_success",
+        "remote_execution_timeouts",
+        "remote_store_missing_digest"
+    ],
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 11.027090072631836
+        }
+    ],
+    "observation_histograms": {
+        "histograms": {
+            "local_cache_time_saved_ms": "HISTFAAAADZ4nC3GsREAEBBE0b1FJpOakehDczpQggZlInOCu5+8X+cqADKs4IrRdBy7m/iEu1MjP43xB3A=",
+            "local_store_read_blob_size": "HISTFAAAAIh4nC1LPQrCUBj7mi/vez/UoRSRoqLg0BM4d/QYnsITKDiLBxBXb+JtBEeH+mpNSAIhWZyutYgcZIT+s/h51/fdaywqwEPQZi2RbWBinSBJ1ykorQylgI4GT2yhaYIZHSqKTbmiILJltJ3Nh3+DiA2OwE3to3nXYM+z4vIo8Cxw93i78AX0dw8f"
+        },
+        "version": 0
+    },
+    "pantsd_stats": {
+        "affected_file_count": 9,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 249
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "local_store_directories_max_size_bytes": 16000000000,
+            "local_store_files_max_size_bytes": 256000000000,
+            "local_store_processes_max_size_bytes": 16000000000,
+            "local_store_shard_count": 16,
+            "remote_auth_plugin": null,
+            "remote_ca_certs_path": null,
+            "remote_cache_eager_fetch": true,
+            "remote_cache_read": false,
+            "remote_cache_warnings": "first_only",
+            "remote_cache_write": false,
+            "verify_config": true,
+            "watch_filesystem": true
+        },
+        "toolchain-setup": {
+            "base_url": "https://app.toolchain.com",
+            "repo": "minimal-pants"
+        },
+        "typecheck": {},
+        "validate": {
+            "detail_level": "nonmatching"
+        }
+    },
+    "run_info": {
+        "branch": "main",
+        "buildroot": "/opt/atlassian/pipelines/agent/build",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.6.0 lint ::",
+        "computed_goals": [
+            "lint"
+        ],
+        "datetime": "Wednesday Aug 11, 2021 00:14:48",
+        "id": "pants_run_2021_08_11_00_14_51_48_c840708568b44cf48d76d42491978efb",
+        "machine": "1c6865a9-a4a3-49e1-8187-1f6e67013e38-rhm82",
+        "outcome": "SUCCESS",
+        "path": "/opt/atlassian/pipelines/agent/build",
+        "revision": "2a28689353cf6f6dc72f03942c906ca6347d6dfe",
+        "specs_from_command_line": [
+            "::"
+        ],
+        "timestamp": 1628640888.2337852,
+        "user": "root",
+        "version": "2.6.0"
+    },
+    "targets": {
+        "//:ansicolors": [
+            {
+                "filename": "//:ansicolors"
+            }
+        ],
+        "//:requirements.txt": [
+            {
+                "filename": "//:requirements.txt"
+            }
+        ],
+        "seinfeld": [
+            {
+                "filename": "seinfeld/main.py"
+            },
+            {
+                "filename": "seinfeld/quote_of_the_day.py"
+            }
+        ],
+        "seinfeld:main": [
+            {
+                "filename": "seinfeld:main"
+            }
+        ],
+        "seinfeld:tests": [
+            {
+                "filename": "seinfeld/quote_of_the_day_test.py"
+            }
+        ]
+    },
+    "workunits": []
+}

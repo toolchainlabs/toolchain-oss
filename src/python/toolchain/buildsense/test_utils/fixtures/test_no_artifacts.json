@@ -1,0 +1,742 @@
+{
+    "ci_env": {
+        "CIRCLECI": "true",
+        "CIRCLE_BRANCH": "master",
+        "CIRCLE_BUILD_NUM": "24161",
+        "CIRCLE_BUILD_URL": "https://circleci.com/gh/toolchainlabs/toolchain/24161",
+        "CIRCLE_COMPARE_URL": "",
+        "CIRCLE_INTERNAL_CONFIG": "/.circleci-runner-config.json",
+        "CIRCLE_INTERNAL_SCRATCH": "/tmp/circleci-138188619",
+        "CIRCLE_INTERNAL_TASK_DATA": "/.circleci-task-data",
+        "CIRCLE_JOB": "build",
+        "CIRCLE_NODE_INDEX": "0",
+        "CIRCLE_NODE_TOTAL": "1",
+        "CIRCLE_PREVIOUS_BUILD_NUM": "24157",
+        "CIRCLE_PROJECT_REPONAME": "toolchain",
+        "CIRCLE_PROJECT_USERNAME": "toolchainlabs",
+        "CIRCLE_REPOSITORY_URL": "git@github.com:toolchainlabs/toolchain.git",
+        "CIRCLE_SHA1": "ccc7519fcf606b2d7f719e55649706edc683c5c5",
+        "CIRCLE_SHELL_ENV": "/tmp/.bash_env-5f6d28daf02ad625613e256b-0-build",
+        "CIRCLE_STAGE": "build",
+        "CIRCLE_USERNAME": "stuhood",
+        "CIRCLE_WORKFLOW_ID": "2ef36e88-4042-4a02-a4a3-1c6a88fad202",
+        "CIRCLE_WORKFLOW_JOB_ID": "28037c31-6822-4c4e-8bd2-ce8ce2674ccc",
+        "CIRCLE_WORKFLOW_UPSTREAM_JOB_IDS": "",
+        "CIRCLE_WORKFLOW_WORKSPACE_ID": "2ef36e88-4042-4a02-a4a3-1c6a88fad202",
+        "CIRCLE_WORKING_DIRECTORY": "~/project"
+    },
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 35.42889952659607,
+            "is_tool": false
+        },
+        {
+            "label": "main:complete",
+            "timing": 3.4332275390625e-05,
+            "is_tool": false
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 2118,
+        "affected_targets_size": 0,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 29221,
+        "target_root_size": 0
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "allow_external_binary_tool_downloads": true,
+            "pantsd_log_dir": null,
+            "pantsd_max_memory_usage": 1073741824,
+            "pantsd_pailgun_port": 0,
+            "pantsd_pailgun_quit_timeout": 5,
+            "pantsd_timeout_when_multiple_invocations": 60,
+            "pantsrc": true,
+            "pantsrc_files": [
+                "/etc/pantsrc",
+                "~/.pants.rc"
+            ],
+            "parent_build_id": null,
+            "plugin_cache_dir": "/home/toolchain/.cache/pants/plugins",
+            "plugins": [
+                "python-dateutil",
+                "networkx==2.4"
+            ]
+        }
+    },
+    "run_info": {
+        "id": "pants_run_2020_09_24_23_21_05_978_e7ae7e687ade4ea293368c26c374a22f",
+        "timestamp": "1600989665.9781535",
+        "datetime": "Thursday Sep 24, 2020 23:21:05",
+        "user": "toolchain",
+        "machine": "c6330736e0c6",
+        "path": "/home/toolchain/project",
+        "buildroot": "/home/toolchain/project",
+        "version": "2.0.0b0",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.0.0b0 --tag=-exclude_from_remoting test src/python::",
+        "specs_from_command_line": [
+            "src/python::"
+        ],
+        "outcome": "SUCCESS",
+        "revision": "ccc7519fcf606b2d7f719e55649706edc683c5c5",
+        "branch": "master",
+        "computed_goals": [
+            "test"
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "abb7fb48b5c9d7a3",
+            "name": "select",
+            "state": "finished",
+            "version": 9,
+            "parent_id": null,
+            "last_update": 1600989700,
+            "start_usecs": 1600989665992280,
+            "end_usecs": 1600989700347430
+        },
+        {
+            "workunit_id": "4188ba377876092a",
+            "name": "test",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "abb7fb48b5c9d7a3",
+            "last_update": 1600989700,
+            "start_usecs": 1600989665992648,
+            "description": "`test` goal",
+            "end_usecs": 1600989700347294
+        },
+        {
+            "workunit_id": "191aca918a955731",
+            "name": "pants.core.goals.test.enrich_test_result",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "4188ba377876092a",
+            "last_update": 1600989700,
+            "start_usecs": 1600989667986011,
+            "description": "Run tests",
+            "end_usecs": 1600989695810636
+        },
+        {
+            "workunit_id": "98fcff0506343839",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "191aca918a955731",
+            "last_update": 1600989700,
+            "start_usecs": 1600989667987193,
+            "description": "Run Pytest",
+            "end_usecs": 1600989695809241
+        },
+        {
+            "workunit_id": "5a86018cb6ad749e",
+            "name": "pants.backend.python.goals.pytest_runner.setup_pytest_for_target",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "98fcff0506343839",
+            "last_update": 1600989700,
+            "start_usecs": 1600989667989555,
+            "end_usecs": 1600989695326049
+        },
+        {
+            "workunit_id": "2fd2a7c348f3fc9b",
+            "name": "pants.backend.python.util_rules.pex.create_pex",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "5a86018cb6ad749e",
+            "last_update": 1600989700,
+            "start_usecs": 1600989678492994,
+            "end_usecs": 1600989695144967
+        },
+        {
+            "workunit_id": "fa2ce99699493f9a",
+            "name": "pants.backend.python.util_rules.pex.find_interpreter",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "2fd2a7c348f3fc9b",
+            "last_update": 1600989700,
+            "start_usecs": 1600989678499514,
+            "description": "Find Python interpreter for constraints",
+            "end_usecs": 1600989694965005
+        },
+        {
+            "workunit_id": "a084180d52815f36",
+            "name": "pants.backend.python.util_rules.pex_cli.setup_pex_cli_process",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "fa2ce99699493f9a",
+            "last_update": 1600989700,
+            "start_usecs": 1600989678511620,
+            "end_usecs": 1600989691764104
+        },
+        {
+            "workunit_id": "41885278c6ef7aad",
+            "name": "pants.backend.python.util_rules.pex_environment.find_pex_python",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "a084180d52815f36",
+            "last_update": 1600989700,
+            "start_usecs": 1600989681690866,
+            "description": "Find PEX Python",
+            "end_usecs": 1600989691710619
+        },
+        {
+            "workunit_id": "c9c63716df43f1c1",
+            "name": "pants.engine.process.find_binary",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "41885278c6ef7aad",
+            "last_update": 1600989700,
+            "start_usecs": 1600989681745114,
+            "description": "Find binary path",
+            "end_usecs": 1600989691424913
+        },
+        {
+            "workunit_id": "8d5263ac0cf54444",
+            "name": "pants.engine.process.find_binary",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "41885278c6ef7aad",
+            "last_update": 1600989700,
+            "start_usecs": 1600989681800823,
+            "description": "Find binary path",
+            "end_usecs": 1600989691588996
+        },
+        {
+            "workunit_id": "da36cb711f436c94",
+            "name": "pants.engine.process.find_binary",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "41885278c6ef7aad",
+            "last_update": 1600989700,
+            "start_usecs": 1600989681962419,
+            "description": "Find binary path",
+            "end_usecs": 1600989691709464
+        },
+        {
+            "workunit_id": "ae307c861a7c821d",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "c9c63716df43f1c1",
+            "last_update": 1600989700,
+            "start_usecs": 1600989686989986,
+            "end_usecs": 1600989690497389
+        },
+        {
+            "workunit_id": "e166a89879237e58",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "8d5263ac0cf54444",
+            "last_update": 1600989700,
+            "start_usecs": 1600989687186318,
+            "end_usecs": 1600989690418179
+        },
+        {
+            "workunit_id": "3b500b418061e0db",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "da36cb711f436c94",
+            "last_update": 1600989700,
+            "start_usecs": 1600989687186688,
+            "end_usecs": 1600989690523266
+        },
+        {
+            "workunit_id": "4562f9bda529fa0f",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "ae307c861a7c821d",
+            "last_update": 1600989700,
+            "start_usecs": 1600989687239412,
+            "description": "Searching for `python2` on PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin/",
+            "end_usecs": 1600989690494016
+        },
+        {
+            "workunit_id": "edaa43a075291b0f",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "3b500b418061e0db",
+            "last_update": 1600989700,
+            "start_usecs": 1600989687318958,
+            "description": "Searching for `python3` on PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin/",
+            "end_usecs": 1600989690505222
+        },
+        {
+            "workunit_id": "1638ce88f7043d27",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "e166a89879237e58",
+            "last_update": 1600989700,
+            "start_usecs": 1600989687319751,
+            "description": "Searching for `python` on PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin/",
+            "end_usecs": 1600989690413468
+        },
+        {
+            "workunit_id": "946b823a2320fabc",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "4562f9bda529fa0f",
+            "last_update": 1600989700,
+            "start_usecs": 1600989688273201,
+            "description": "Searching for `python2` on PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin/",
+            "end_usecs": 1600989690479790
+        },
+        {
+            "workunit_id": "8da1f6726ab352ca",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "946b823a2320fabc",
+            "last_update": 1600989700,
+            "start_usecs": 1600989688273219,
+            "description": "Searching for `python2` on PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin/",
+            "end_usecs": 1600989690479780,
+            "artifacts": {
+                "stdout": "/usr/bin/python2\n/usr/bin/python2\n"
+            }
+        },
+        {
+            "workunit_id": "f69fc54939bfe26e",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "edaa43a075291b0f",
+            "last_update": 1600989700,
+            "start_usecs": 1600989688273505,
+            "description": "Searching for `python3` on PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin/",
+            "end_usecs": 1600989690494088
+        },
+        {
+            "workunit_id": "d08e35c7254be122",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "f69fc54939bfe26e",
+            "last_update": 1600989700,
+            "start_usecs": 1600989688273513,
+            "description": "Searching for `python3` on PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin/",
+            "end_usecs": 1600989690494083,
+            "artifacts": {
+                "stdout": "/usr/local/bin/python3\n/usr/bin/python3\n/usr/local/bin/python3\n/usr/bin/python3\n"
+            }
+        },
+        {
+            "workunit_id": "797245e07ce50b13",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "1638ce88f7043d27",
+            "last_update": 1600989700,
+            "start_usecs": 1600989688273636,
+            "description": "Searching for `python` on PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin/",
+            "end_usecs": 1600989690413309
+        },
+        {
+            "workunit_id": "c5666cfd761a5372",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "797245e07ce50b13",
+            "last_update": 1600989700,
+            "start_usecs": 1600989688273642,
+            "description": "Searching for `python` on PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin/",
+            "end_usecs": 1600989690413303,
+            "artifacts": {
+                "stdout": "/usr/local/bin/python\n/usr/bin/python\n/usr/local/bin/python\n/usr/bin/python\n"
+            }
+        },
+        {
+            "workunit_id": "f642fe6f269c519f",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "8d5263ac0cf54444",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690419647,
+            "end_usecs": 1600989691587530
+        },
+        {
+            "workunit_id": "488443277bea6363",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "f642fe6f269c519f",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690426493,
+            "description": "Test binary /usr/bin/python.",
+            "end_usecs": 1600989691572949
+        },
+        {
+            "workunit_id": "74d690e58641fcd3",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "8d5263ac0cf54444",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690426966,
+            "end_usecs": 1600989691584112
+        },
+        {
+            "workunit_id": "c9215944a2afdf2d",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "74d690e58641fcd3",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690435085,
+            "description": "Test binary /usr/local/bin/python.",
+            "end_usecs": 1600989691565441
+        },
+        {
+            "workunit_id": "a800b3c3509b9484",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "488443277bea6363",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690471553,
+            "description": "Test binary /usr/bin/python.",
+            "end_usecs": 1600989691565568
+        },
+        {
+            "workunit_id": "88baa22930c236af",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "a800b3c3509b9484",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690471560,
+            "description": "Test binary /usr/bin/python.",
+            "end_usecs": 1600989691565565,
+            "artifacts": {
+                "stdout": "4e73a0202c1abea6e09ee72ff49f0678a161fdb80c1519dd4000f78ddfe4bbc1"
+            }
+        },
+        {
+            "workunit_id": "6ff085e9c74ae96f",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "c9215944a2afdf2d",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690471630,
+            "description": "Test binary /usr/local/bin/python.",
+            "end_usecs": 1600989691543638
+        },
+        {
+            "workunit_id": "8d04d0ed812f0fc2",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "6ff085e9c74ae96f",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690471633,
+            "description": "Test binary /usr/local/bin/python.",
+            "end_usecs": 1600989691543633,
+            "artifacts": {
+                "stdout": "7c5c73f2729bb3fb109157afe81dc7c34b1b746dc36e5340e7814172f2504a7c"
+            }
+        },
+        {
+            "workunit_id": "b085732750f79223",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "c9c63716df43f1c1",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690498283,
+            "end_usecs": 1600989691424378
+        },
+        {
+            "workunit_id": "3da6bd27726fc733",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "b085732750f79223",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690504335,
+            "description": "Test binary /usr/bin/python2.",
+            "end_usecs": 1600989691417631
+        },
+        {
+            "workunit_id": "23091d69cb144020",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "3da6bd27726fc733",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690512187,
+            "description": "Test binary /usr/bin/python2.",
+            "end_usecs": 1600989691416001
+        },
+        {
+            "workunit_id": "23e523ecb0a3b9ad",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "23091d69cb144020",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690512194,
+            "description": "Test binary /usr/bin/python2.",
+            "end_usecs": 1600989691415998,
+            "artifacts": {
+                "stdout": "4e73a0202c1abea6e09ee72ff49f0678a161fdb80c1519dd4000f78ddfe4bbc1"
+            }
+        },
+        {
+            "workunit_id": "cc8a5aaca1556feb",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "da36cb711f436c94",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690523973,
+            "end_usecs": 1600989691708337
+        },
+        {
+            "workunit_id": "ac92b49ecfa4da9b",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "cc8a5aaca1556feb",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690531796,
+            "description": "Test binary /usr/bin/python3.",
+            "end_usecs": 1600989691704836
+        },
+        {
+            "workunit_id": "c2d971b4176864cb",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "da36cb711f436c94",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690532830,
+            "end_usecs": 1600989691705718
+        },
+        {
+            "workunit_id": "71bccdb4b2310c1d",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "c2d971b4176864cb",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690548811,
+            "description": "Test binary /usr/local/bin/python3.",
+            "end_usecs": 1600989691673560
+        },
+        {
+            "workunit_id": "b33a98a7f00932bf",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "ac92b49ecfa4da9b",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690552385,
+            "description": "Test binary /usr/bin/python3.",
+            "end_usecs": 1600989691685216
+        },
+        {
+            "workunit_id": "e139b407ab34f5b5",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "b33a98a7f00932bf",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690552393,
+            "description": "Test binary /usr/bin/python3.",
+            "end_usecs": 1600989691685213,
+            "artifacts": {
+                "stdout": "5f8e8a5d1e023e5a01236b137b5ca07f40f6a7988f458530746dff8657089386"
+            }
+        },
+        {
+            "workunit_id": "fc7b3cbdebbf7c05",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "71bccdb4b2310c1d",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690552675,
+            "description": "Test binary /usr/local/bin/python3.",
+            "end_usecs": 1600989691670519
+        },
+        {
+            "workunit_id": "18b6ceebd5179f28",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "fc7b3cbdebbf7c05",
+            "last_update": 1600989700,
+            "start_usecs": 1600989690552681,
+            "description": "Test binary /usr/local/bin/python3.",
+            "end_usecs": 1600989691670516,
+            "artifacts": {
+                "stdout": "7c5c73f2729bb3fb109157afe81dc7c34b1b746dc36e5340e7814172f2504a7c"
+            }
+        },
+        {
+            "workunit_id": "416382957cb50c88",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "fa2ce99699493f9a",
+            "last_update": 1600989700,
+            "start_usecs": 1600989691764777,
+            "end_usecs": 1600989694964935
+        },
+        {
+            "workunit_id": "f9143d29e3a53d60",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "416382957cb50c88",
+            "last_update": 1600989700,
+            "start_usecs": 1600989691778380,
+            "end_usecs": 1600989694964908
+        },
+        {
+            "workunit_id": "9e2f1b05bb45f1ee",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "f9143d29e3a53d60",
+            "last_update": 1600989700,
+            "start_usecs": 1600989691781797,
+            "description": "Find interpreter for constraints: PexInterpreterConstraints([Requirement.parse('CPython<3.9,<4,>=3.7,>=3.8')])",
+            "end_usecs": 1600989694960904
+        },
+        {
+            "workunit_id": "f8cb6d7f89943d1d",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "9e2f1b05bb45f1ee",
+            "last_update": 1600989700,
+            "start_usecs": 1600989691781929,
+            "description": "Find interpreter for constraints: PexInterpreterConstraints([Requirement.parse('CPython<3.9,<4,>=3.7,>=3.8')])",
+            "end_usecs": 1600989694960790
+        },
+        {
+            "workunit_id": "1835ecce8ef4dfc9",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "f8cb6d7f89943d1d",
+            "last_update": 1600989700,
+            "start_usecs": 1600989691781936,
+            "description": "Find interpreter for constraints: PexInterpreterConstraints([Requirement.parse('CPython<3.9,<4,>=3.7,>=3.8')])",
+            "end_usecs": 1600989694960786,
+            "artifacts": {
+                "stdout": "/usr/local/bin/python3.8\n7c5c73f2729bb3fb109157afe81dc7c34b1b746dc36e5340e7814172f2504a7c\n",
+                "stderr": "/toolchain/operations/pex/.bootstrap/pex/pex_info.py:324: PEXWarning: PEX_ROOT is configured as /home/toolchain/.pex but that path is un-writeable, falling back to a temporary PEX_ROOT of /toolchain/operations/._tc_tmp/tmpfsj9caov which will hurt performance.\n/toolchain/operations/._tc_tmp/tmpfsj9caov/unzipped_pexes/49b4b32295a60a0a4dfc0659c3a44f93560c4a81/.deps/pex-2.1.16-py2.py3-none-any.whl/pex/variables.py:321: PEXWarning: PEX_ROOT is configured as /home/toolchain/.pex but that path is un-writeable, falling back to a temporary PEX_ROOT of /toolchain/operations/._tc_tmp/tmpeno607wz which will hurt performance.\n  pex_warnings.warn(\n"
+            }
+        },
+        {
+            "workunit_id": "81d2e0c508bf8717",
+            "name": "pants.backend.python.goals.coverage_py.generate_coverage_reports",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "4188ba377876092a",
+            "last_update": 1600989700,
+            "start_usecs": 1600989695931307,
+            "description": "Generate Pytest coverage reports",
+            "end_usecs": 1600989700218426
+        },
+        {
+            "workunit_id": "a001906927a349c4",
+            "name": "pants.backend.python.goals.coverage_py.setup_coverage",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "81d2e0c508bf8717",
+            "last_update": 1600989700,
+            "start_usecs": 1600989695931533,
+            "end_usecs": 1600989698958781
+        },
+        {
+            "workunit_id": "bae7540cb4655722",
+            "name": "pants.backend.python.util_rules.pex.create_pex",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "a001906927a349c4",
+            "last_update": 1600989700,
+            "start_usecs": 1600989695935051,
+            "end_usecs": 1600989698958755
+        },
+        {
+            "workunit_id": "4837040187a4d8e5",
+            "name": "pants.backend.python.util_rules.pex.find_interpreter",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "bae7540cb4655722",
+            "last_update": 1600989700,
+            "start_usecs": 1600989695935409,
+            "description": "Find Python interpreter for constraints",
+            "end_usecs": 1600989698956448
+        },
+        {
+            "workunit_id": "6b22520b5433e213",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "4837040187a4d8e5",
+            "last_update": 1600989700,
+            "start_usecs": 1600989695938609,
+            "end_usecs": 1600989698956376
+        },
+        {
+            "workunit_id": "014bdcddfd538808",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "6b22520b5433e213",
+            "last_update": 1600989700,
+            "start_usecs": 1600989695938791,
+            "end_usecs": 1600989698956350
+        },
+        {
+            "workunit_id": "d47128e2441a6525",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "014bdcddfd538808",
+            "last_update": 1600989700,
+            "start_usecs": 1600989695939009,
+            "description": "Find interpreter for constraints: PexInterpreterConstraints([Requirement.parse('CPython>=3.6')])",
+            "end_usecs": 1600989698953009
+        },
+        {
+            "workunit_id": "8a1f975e5e492781",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "d47128e2441a6525",
+            "last_update": 1600989700,
+            "start_usecs": 1600989695939116,
+            "description": "Find interpreter for constraints: PexInterpreterConstraints([Requirement.parse('CPython>=3.6')])",
+            "end_usecs": 1600989698952909
+        },
+        {
+            "workunit_id": "fa34233a2833621a",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 9,
+            "parent_id": "8a1f975e5e492781",
+            "last_update": 1600989700,
+            "start_usecs": 1600989695939123,
+            "description": "Find interpreter for constraints: PexInterpreterConstraints([Requirement.parse('CPython>=3.6')])",
+            "end_usecs": 1600989698952905,
+            "artifacts": {
+                "stdout": "/usr/bin/python3.7\n5f8e8a5d1e023e5a01236b137b5ca07f40f6a7988f458530746dff8657089386\n",
+                "stderr": "/toolchain/operations/pex/.bootstrap/pex/pex_info.py:324: PEXWarning: PEX_ROOT is configured as /home/toolchain/.pex but that path is un-writeable, falling back to a temporary PEX_ROOT of /toolchain/operations/._tc_tmp/tmp6a5hyks3 which will hurt performance.\n/toolchain/operations/._tc_tmp/tmp6a5hyks3/unzipped_pexes/49b4b32295a60a0a4dfc0659c3a44f93560c4a81/.deps/pex-2.1.16-py2.py3-none-any.whl/pex/variables.py:321: PEXWarning: PEX_ROOT is configured as /home/toolchain/.pex but that path is un-writeable, falling back to a temporary PEX_ROOT of /toolchain/operations/._tc_tmp/tmpl4r3s2z7 which will hurt performance.\n  pex_warnings.warn(\n"
+            }
+        }
+    ]
+}

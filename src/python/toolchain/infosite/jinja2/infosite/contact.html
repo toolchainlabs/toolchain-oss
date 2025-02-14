@@ -1,0 +1,48 @@
+{#
+Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'infosite/base.html' %}
+{% set description = 'We\'d love to hear how we can help you achieve fast, stable builds and other developer workflows, on laptops and in CI. Email us at info@toolchain.com for more information.' %}
+{% block body_class %}contact{% endblock body_class %}
+{% block active_menu_item %}contact{% endblock %}
+
+{% block meta_tags %}
+<meta name="description" content="{{ description }}" />
+<meta name="description" property="og:description" content="{{ description }}" />
+<meta name="twitter:description" content="{{ description }}">
+{% endblock meta_tags %}
+
+{% block main %}
+{% include "infosite/header.html" %}
+<section class="contact-section">
+  <div class="container text-center">
+      <h1 class="col-xs-12 contact-title">
+          Contact us
+      </h1>
+      <div class="column">
+          <div class="col-xs-12 body3 contact-paragraph">
+            We'd love to hear how we can help you achieve fast, stable builds and improve developer productivity.
+          </div>
+          <div class="col-xs-12">
+ <a href="https://app.toolchain.com/" class="link-button button button3" target="_blank" rel="noopener">
+              START FREE
+            </a>
+          </div>
+          <div class="col-xs-12 body3 contact-paragraph">
+            To learn more about Toolchain, email us at <a class="primary" href="mailto:info@toolchain.com" rel="noopener">info@toolchain.com</a>.
+          </div>
+          <div class="col-xs-12 body3 contact-paragraph">
+            For existing customers, <a class="primary" href="https://app.toolchain.com/" target="_blank" rel="noopener"> log in</a>.
+          </div>
+          <div class="col-xs-12 body3 contact-paragraph">
+            To connect with the Pants OSS project <a type="external" class="primary" target="_blank" href="https://www.pantsbuild.org/" rel="noopener">here</a>.
+          </div>
+          <div class="col-xs-12 body3 contact-paragraph">
+            Or, chat with us on the <a type="external" class="primary" target="_blank" href="https://www.pantsbuild.org/docs/getting-help" rel="noopener">Pants Slack workspace</a>.
+          </div>
+      </div>
+  </div>
+</section>
+{% endblock main %}

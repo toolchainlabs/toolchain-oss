@@ -1,0 +1,848 @@
+{
+  "run_info": {
+    "id": "pants_run_2019_07_19_12_11_26_410_3daadd52871f457bad18712f2579f585",
+    "timestamp": "1563563486.4102778",
+    "datetime": "Friday Jul 19, 2019 12:11:26",
+    "user": "asher",
+    "machine": "Ashers-MacBook-Pro.local",
+    "path": "/Users/asher/projects/toolchain",
+    "buildroot": "/Users/asher/projects/toolchain",
+    "version": "1.18.0rc0",
+    "cmd_line": "pants --no-verify-config test src/python/toolchain/util/::",
+    "default_report": "/Users/asher/projects/toolchain/.pants.d/reports/pants_run_2019_07_19_12_11_26_410_3daadd52871f457bad18712f2579f585/html/build.html",
+    "report_url": "http://localhost:50609/run/pants_run_2019_07_19_12_11_26_410_3daadd52871f457bad18712f2579f585",
+    "revision": "d45a94b63dedb8666a45ac2258c3afe5306be95a",
+    "branch": "vandelay",
+    "specs_from_command_line": [],
+    "outcome": "SUCCESS"
+  },
+  "cumulative_timings": [
+    {
+      "label": "main",
+      "timing": 2.814958095550537,
+      "is_tool": false
+    },
+    {
+      "label": "main:background",
+      "timing": 1.3579137325286865,
+      "is_tool": false
+    },
+    {
+      "label": "main:pyprep",
+      "timing": 0.323915958404541,
+      "is_tool": false
+    },
+    {
+      "label": "main:test",
+      "timing": 0.2677419185638428,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile",
+      "timing": 0.2601010799407959,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap",
+      "timing": 0.20878291130065918,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:pytest-prep",
+      "timing": 0.19528985023498535,
+      "is_tool": false
+    },
+    {
+      "label": "main:pyprep:requirements",
+      "timing": 0.14918279647827148,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:cpp-for-ctypes",
+      "timing": 0.1347661018371582,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile",
+      "timing": 0.13360309600830078,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup",
+      "timing": 0.12490606307983398,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:c-for-ctypes",
+      "timing": 0.11403965950012207,
+      "is_tool": false
+    },
+    {
+      "label": "main:link",
+      "timing": 0.11092209815979004,
+      "is_tool": false
+    },
+    {
+      "label": "main:pyprep:interpreter",
+      "timing": 0.11060190200805664,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-wheels",
+      "timing": 0.10615825653076172,
+      "is_tool": false
+    },
+    {
+      "label": "main:link:shared-libraries",
+      "timing": 0.1061391830444336,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-wheels:unpack-wheels",
+      "timing": 0.10347390174865723,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:node",
+      "timing": 0.06134390830993652,
+      "is_tool": false
+    },
+    {
+      "label": "main:pyprep:sources",
+      "timing": 0.04766106605529785,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:provide-tools-jar",
+      "timing": 0.04612421989440918,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:go",
+      "timing": 0.04289388656616211,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:pytest",
+      "timing": 0.04059290885925293,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-jars",
+      "timing": 0.031100988388061523,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-jars:unpack-jars",
+      "timing": 0.028699874877929688,
+      "is_tool": false
+    },
+    {
+      "label": "main:jvm-platform-validate",
+      "timing": 0.026185035705566406,
+      "is_tool": false
+    },
+    {
+      "label": "main:jvm-platform-validate:jvm-platform-validate",
+      "timing": 0.023826122283935547,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen",
+      "timing": 0.011484146118164062,
+      "is_tool": false
+    },
+    {
+      "label": "main:resolve",
+      "timing": 0.011271953582763672,
+      "is_tool": false
+    },
+    {
+      "label": "main:background:workdir_build_cleanup",
+      "timing": 0.007833719253540039,
+      "is_tool": false
+    },
+    {
+      "label": "main:resources",
+      "timing": 0.006490945816040039,
+      "is_tool": false
+    },
+    {
+      "label": "main:imports",
+      "timing": 0.0035469532012939453,
+      "is_tool": false
+    },
+    {
+      "label": "main:deferred-sources",
+      "timing": 0.0029709339141845703,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:compile-jvm-prep-command",
+      "timing": 0.002839803695678711,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:bootstrap-jvm-tools",
+      "timing": 0.0016093254089355469,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:test-jvm-prep-command",
+      "timing": 0.0014841556549072266,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:rsc",
+      "timing": 0.0014522075653076172,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:substitute-aliased-targets",
+      "timing": 0.0009050369262695312,
+      "is_tool": false
+    },
+    {
+      "label": "main:resolve:ivy",
+      "timing": 0.0008862018585205078,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:jar-dependency-management",
+      "timing": 0.0008146762847900391,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:node",
+      "timing": 0.0008070468902587891,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup:parse",
+      "timing": 0.0005958080291748047,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:javac",
+      "timing": 0.0005221366882324219,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:compile-prep-command",
+      "timing": 0.0004851818084716797,
+      "is_tool": false
+    },
+    {
+      "label": "main:pyprep:build-local-dists",
+      "timing": 0.0004360675811767578,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:go",
+      "timing": 0.00041484832763671875,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:go-thrift",
+      "timing": 0.0003478527069091797,
+      "is_tool": false
+    },
+    {
+      "label": "main:deferred-sources:deferred-sources",
+      "timing": 0.00033092498779296875,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:test-prep-command",
+      "timing": 0.00032806396484375,
+      "is_tool": false
+    },
+    {
+      "label": "main:resources:prepare",
+      "timing": 0.0003249645233154297,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:junit",
+      "timing": 0.00030493736267089844,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:grpcio-prep",
+      "timing": 0.00028896331787109375,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:zinc",
+      "timing": 0.00028204917907714844,
+      "is_tool": false
+    },
+    {
+      "label": "main:imports:ivy-imports",
+      "timing": 0.00026607513427734375,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:conan-prep",
+      "timing": 0.0002491474151611328,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:grpcio-run",
+      "timing": 0.00024318695068359375,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:compile-jvm-prep-command:jvm_prep_command",
+      "timing": 0.00024080276489257812,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:go-protobuf",
+      "timing": 0.00023293495178222656,
+      "is_tool": false
+    },
+    {
+      "label": "main:resolve:go",
+      "timing": 0.00023031234741210938,
+      "is_tool": false
+    },
+    {
+      "label": "main:resolve:node",
+      "timing": 0.0002300739288330078,
+      "is_tool": false
+    },
+    {
+      "label": "main:resources:services",
+      "timing": 0.00022459030151367188,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:conan-fetch",
+      "timing": 0.0002219676971435547,
+      "is_tool": false
+    },
+    {
+      "label": "main:resolve:coursier",
+      "timing": 0.0002079010009765625,
+      "is_tool": false
+    },
+    {
+      "label": "main:complete",
+      "timing": 0.00017881393432617188,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:test-jvm-prep-command:jvm_prep_command",
+      "timing": 0.0001690387725830078,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:compile",
+      "timing": 0.0001652240753173828,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:add-target-bags",
+      "timing": 0.00016307830810546875,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:legacy",
+      "timing": 0.0001437664031982422,
+      "is_tool": false
+    }
+  ],
+  "self_timings": [
+    {
+      "label": "main:background",
+      "timing": 1.3500800132751465,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:pytest-prep",
+      "timing": 0.19528985023498535,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap",
+      "timing": 0.15932965278625488,
+      "is_tool": false
+    },
+    {
+      "label": "main:pyprep:requirements",
+      "timing": 0.14918279647827148,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:cpp-for-ctypes",
+      "timing": 0.1347661018371582,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup",
+      "timing": 0.12431025505065918,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:c-for-ctypes",
+      "timing": 0.11403965950012207,
+      "is_tool": false
+    },
+    {
+      "label": "main:pyprep:interpreter",
+      "timing": 0.11060190200805664,
+      "is_tool": false
+    },
+    {
+      "label": "main:link:shared-libraries",
+      "timing": 0.1061391830444336,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-wheels:unpack-wheels",
+      "timing": 0.10347390174865723,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:node",
+      "timing": 0.06134390830993652,
+      "is_tool": false
+    },
+    {
+      "label": "main:pyprep:sources",
+      "timing": 0.04766106605529785,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:provide-tools-jar",
+      "timing": 0.04612421989440918,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:go",
+      "timing": 0.04289388656616211,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:pytest",
+      "timing": 0.04059290885925293,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-jars:unpack-jars",
+      "timing": 0.028699874877929688,
+      "is_tool": false
+    },
+    {
+      "label": "main:test",
+      "timing": 0.0282132625579834,
+      "is_tool": false
+    },
+    {
+      "label": "main:jvm-platform-validate:jvm-platform-validate",
+      "timing": 0.023826122283935547,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile",
+      "timing": 0.023618698120117188,
+      "is_tool": false
+    },
+    {
+      "label": "main:pyprep",
+      "timing": 0.01603412628173828,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile",
+      "timing": 0.010824203491210938,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen",
+      "timing": 0.010371208190917969,
+      "is_tool": false
+    },
+    {
+      "label": "main:resolve",
+      "timing": 0.009717464447021484,
+      "is_tool": false
+    },
+    {
+      "label": "main:background:workdir_build_cleanup",
+      "timing": 0.007833719253540039,
+      "is_tool": false
+    },
+    {
+      "label": "main:resources",
+      "timing": 0.0059413909912109375,
+      "is_tool": false
+    },
+    {
+      "label": "main:link",
+      "timing": 0.004782915115356445,
+      "is_tool": false
+    },
+    {
+      "label": "main:imports",
+      "timing": 0.0032808780670166016,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-wheels",
+      "timing": 0.002684354782104492,
+      "is_tool": false
+    },
+    {
+      "label": "main:deferred-sources",
+      "timing": 0.0026400089263916016,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:compile-jvm-prep-command",
+      "timing": 0.002599000930786133,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-jars",
+      "timing": 0.002401113510131836,
+      "is_tool": false
+    },
+    {
+      "label": "main:jvm-platform-validate",
+      "timing": 0.0023589134216308594,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:bootstrap-jvm-tools",
+      "timing": 0.0016093254089355469,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:rsc",
+      "timing": 0.0014522075653076172,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:test-jvm-prep-command",
+      "timing": 0.0013151168823242188,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:substitute-aliased-targets",
+      "timing": 0.0009050369262695312,
+      "is_tool": false
+    },
+    {
+      "label": "main:resolve:ivy",
+      "timing": 0.0008862018585205078,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:jar-dependency-management",
+      "timing": 0.0008146762847900391,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:node",
+      "timing": 0.0008070468902587891,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup:parse",
+      "timing": 0.0005958080291748047,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:javac",
+      "timing": 0.0005221366882324219,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:compile-prep-command",
+      "timing": 0.0004851818084716797,
+      "is_tool": false
+    },
+    {
+      "label": "main:pyprep:build-local-dists",
+      "timing": 0.0004360675811767578,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:go",
+      "timing": 0.00041484832763671875,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:go-thrift",
+      "timing": 0.0003478527069091797,
+      "is_tool": false
+    },
+    {
+      "label": "main:deferred-sources:deferred-sources",
+      "timing": 0.00033092498779296875,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:test-prep-command",
+      "timing": 0.00032806396484375,
+      "is_tool": false
+    },
+    {
+      "label": "main:resources:prepare",
+      "timing": 0.0003249645233154297,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:junit",
+      "timing": 0.00030493736267089844,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:grpcio-prep",
+      "timing": 0.00028896331787109375,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:zinc",
+      "timing": 0.00028204917907714844,
+      "is_tool": false
+    },
+    {
+      "label": "main:imports:ivy-imports",
+      "timing": 0.00026607513427734375,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:conan-prep",
+      "timing": 0.0002491474151611328,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:grpcio-run",
+      "timing": 0.00024318695068359375,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:compile-jvm-prep-command:jvm_prep_command",
+      "timing": 0.00024080276489257812,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:go-protobuf",
+      "timing": 0.00023293495178222656,
+      "is_tool": false
+    },
+    {
+      "label": "main:resolve:go",
+      "timing": 0.00023031234741210938,
+      "is_tool": false
+    },
+    {
+      "label": "main:resolve:node",
+      "timing": 0.0002300739288330078,
+      "is_tool": false
+    },
+    {
+      "label": "main:resources:services",
+      "timing": 0.00022459030151367188,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:conan-fetch",
+      "timing": 0.0002219676971435547,
+      "is_tool": false
+    },
+    {
+      "label": "main:resolve:coursier",
+      "timing": 0.0002079010009765625,
+      "is_tool": false
+    },
+    {
+      "label": "main:complete",
+      "timing": 0.00017881393432617188,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:test-jvm-prep-command:jvm_prep_command",
+      "timing": 0.0001690387725830078,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile:compile",
+      "timing": 0.0001652240753173828,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:add-target-bags",
+      "timing": 0.00016307830810546875,
+      "is_tool": false
+    },
+    {
+      "label": "main:test:legacy",
+      "timing": 0.0001437664031982422,
+      "is_tool": false
+    },
+    {
+      "label": "main",
+      "timing": -0.1723167896270752,
+      "is_tool": false
+    }
+  ],
+  "critical_path_timings": [
+    {
+      "label": "main:test",
+      "timing": 1.6291823387145996,
+      "is_tool": false
+    },
+    {
+      "label": "main:pyprep",
+      "timing": 1.183889389038086,
+      "is_tool": false
+    },
+    {
+      "label": "main:compile",
+      "timing": 0.9201114177703857,
+      "is_tool": false
+    },
+    {
+      "label": "main:link",
+      "timing": 0.8484892845153809,
+      "is_tool": false
+    },
+    {
+      "label": "main:resources",
+      "timing": 0.792999267578125,
+      "is_tool": false
+    },
+    {
+      "label": "main:resolve",
+      "timing": 0.786508321762085,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile",
+      "timing": 0.7375671863555908,
+      "is_tool": false
+    },
+    {
+      "label": "main:deferred-sources",
+      "timing": 0.4774661064147949,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-jars",
+      "timing": 0.36833691596984863,
+      "is_tool": false
+    },
+    {
+      "label": "main:imports",
+      "timing": 0.3372359275817871,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap",
+      "timing": 0.33368897438049316,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-wheels",
+      "timing": 0.2310643196105957,
+      "is_tool": false
+    },
+    {
+      "label": "main:jvm-platform-validate",
+      "timing": 0.1510910987854004,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen",
+      "timing": 0.13639020919799805,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup",
+      "timing": 0.12490606307983398,
+      "is_tool": false
+    }
+  ],
+  "artifact_cache_stats": [],
+  "pantsd_stats": {
+    "affected_file_count": 64,
+    "affected_targets_size": 0,
+    "preceding_graph_size": 0,
+    "resulting_graph_size": 384,
+    "target_root_size": 0
+  },
+  "outcomes": {
+    "main": "SUCCESS",
+    "main:background": "SUCCESS",
+    "main:background:workdir_build_cleanup": "SUCCESS",
+    "main:bootstrap": "SUCCESS",
+    "main:bootstrap:bootstrap-jvm-tools": "SUCCESS",
+    "main:bootstrap:jar-dependency-management": "SUCCESS",
+    "main:bootstrap:provide-tools-jar": "SUCCESS",
+    "main:bootstrap:substitute-aliased-targets": "SUCCESS",
+    "main:compile": "SUCCESS",
+    "main:compile:compile": "SUCCESS",
+    "main:compile:compile-jvm-prep-command": "SUCCESS",
+    "main:compile:compile-jvm-prep-command:jvm_prep_command": "SUCCESS",
+    "main:compile:compile-prep-command": "SUCCESS",
+    "main:compile:go": "SUCCESS",
+    "main:compile:javac": "SUCCESS",
+    "main:compile:node": "SUCCESS",
+    "main:compile:rsc": "SUCCESS",
+    "main:compile:zinc": "SUCCESS",
+    "main:complete": "SUCCESS",
+    "main:deferred-sources": "SUCCESS",
+    "main:deferred-sources:deferred-sources": "SUCCESS",
+    "main:gen": "SUCCESS",
+    "main:gen:go-protobuf": "SUCCESS",
+    "main:gen:go-thrift": "SUCCESS",
+    "main:gen:grpcio-prep": "SUCCESS",
+    "main:gen:grpcio-run": "SUCCESS",
+    "main:imports": "SUCCESS",
+    "main:imports:ivy-imports": "SUCCESS",
+    "main:jvm-platform-validate": "SUCCESS",
+    "main:jvm-platform-validate:jvm-platform-validate": "SUCCESS",
+    "main:link": "SUCCESS",
+    "main:link:shared-libraries": "SUCCESS",
+    "main:native-compile": "SUCCESS",
+    "main:native-compile:c-for-ctypes": "SUCCESS",
+    "main:native-compile:conan-fetch": "SUCCESS",
+    "main:native-compile:conan-prep": "SUCCESS",
+    "main:native-compile:cpp-for-ctypes": "SUCCESS",
+    "main:pyprep": "SUCCESS",
+    "main:pyprep:build-local-dists": "SUCCESS",
+    "main:pyprep:interpreter": "SUCCESS",
+    "main:pyprep:requirements": "SUCCESS",
+    "main:pyprep:sources": "SUCCESS",
+    "main:resolve": "SUCCESS",
+    "main:resolve:coursier": "SUCCESS",
+    "main:resolve:go": "SUCCESS",
+    "main:resolve:ivy": "SUCCESS",
+    "main:resolve:node": "SUCCESS",
+    "main:resources": "SUCCESS",
+    "main:resources:prepare": "SUCCESS",
+    "main:resources:services": "SUCCESS",
+    "main:setup": "SUCCESS",
+    "main:setup:parse": "SUCCESS",
+    "main:test": "SUCCESS",
+    "main:test:add-target-bags": "SUCCESS",
+    "main:test:go": "SUCCESS",
+    "main:test:junit": "SUCCESS",
+    "main:test:legacy": "SUCCESS",
+    "main:test:node": "SUCCESS",
+    "main:test:pytest": "SUCCESS",
+    "main:test:pytest-prep": "SUCCESS",
+    "main:test:test-jvm-prep-command": "SUCCESS",
+    "main:test:test-jvm-prep-command:jvm_prep_command": "SUCCESS",
+    "main:test:test-prep-command": "SUCCESS",
+    "main:unpack-jars": "SUCCESS",
+    "main:unpack-jars:unpack-jars": "SUCCESS",
+    "main:unpack-wheels": "SUCCESS",
+    "main:unpack-wheels:unpack-wheels": "SUCCESS"
+  },
+  "recorded_options": {}
+}

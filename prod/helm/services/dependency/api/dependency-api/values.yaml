@@ -1,0 +1,63 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: dependency-api
+toolchain_product_name: dependency
+dbs: [users, pypi, dependency]
+service_type: api
+iam_service_role_arn: null  # set by deploy script
+secrets:
+- django-secret-key
+- jwt-auth-secret-key
+has_static_files: false
+resources:
+  gunicorn:
+    requests:
+      cpu: 20m
+      memory: 256Mi
+      ephemeral_storage: 10Gi
+    limits:
+      ephemeral_storage: 30Gi
+gunicorn_image_rev:
+  us-east-1: prod-2022-05-09.16-53-00-27a2bc643157
+extra_config:
+  # Base dir is specified in gunicornExtraVolumeMounts.mountPath
+  DEPGRAPH_BASE_DIR_URL: file:///data/leveldb/depgraph/
+  MODULE_DATA_BASE_DIR_URL: file:///data/leveldb/modules/
+
+gunicornExtraVolumeMounts:
+- name: leveldb-data
+  mountPath: /data/leveldb/
+
+serviceExtraVolumes:
+- name: leveldb-data
+  emptyDir: {}
+
+extraContainers:
+- name: leveldb-watcher
+    # TODO: This need to be set from the installer (dev/prod).
+  image: 283194185447.dkr.ecr.us-east-1.amazonaws.com/leveldb-watcher:2022-02-24.02-42-16-4eac776204fb
+  volumeMounts:
+  - name: leveldb-data
+    mountPath: /data/leveldb-download/
+  env:
+  - name: PUSH_GATEWAY_URL
+    value: null   # Resolved in resources_resolver.py
+  - name: PERIOD_SECS
+    value: '300'
+  - name: REMOTE_BASEDIR_URLS
+    value: null  # Resolved in resources_resolver.py
+  - name: LOCAL_BASEDIR_URLS
+    value: file:///data/leveldb-download/depgraph/;file:///data/leveldb-download/modules/
+  - name: K8S_POD_NAMESPACE
+    valueFrom:
+      fieldRef:
+        fieldPath: metadata.namespace
+  - name: K8S_NODE_NAME
+    valueFrom:
+      fieldRef:
+        fieldPath: spec.nodeName
+  - name: K8S_POD_NAME
+    valueFrom:
+      fieldRef:
+        fieldPath: metadata.name

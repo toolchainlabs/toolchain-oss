@@ -1,0 +1,36 @@
+{#
+Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+{% extends 'users/base.html' %}
+{% block content %}
+<div class="token-form">
+    <span>Your token exchange code is</span>
+    <div type="text" class="token-code" id="token-code">
+        {{ access_code_data }}
+    </div>
+    <div class="token-copy-button" id="copy-button">
+        copy
+    </div>
+</div>
+{% endblock content %}
+{% block js %}
+{{ super() }}
+{% script type="application/javascript" async=False %}
+<script>
+    function copyToClipboard() {
+        var textarea = document.createElement('textarea')
+        textarea.id = 'temp_element'
+        textarea.style.height = 0
+        document.body.appendChild(textarea)
+        textarea.value = document.getElementById('token-code').innerText
+        const selector = document.querySelector('#temp_element')
+        selector.select()
+        document.execCommand('copy')
+        document.body.removeChild(textarea)
+    }
+
+    document.querySelector("#copy-button").addEventListener("click", copyToClipboard);
+</script>
+{% endscript %}
+{% endblock js %}

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Copyright 2016 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+set -euo pipefail
+
+cd "$(git rev-parse --show-toplevel)"
+
+# Run a hermetically contained python3 interpreter with all our 3rdparty dependencies in its site-packages.
+# Note that this is possible because we have no conflicting 3rdparty dependencies.
+VENV_DIR="$(./src/sh/setup/ensure_env.sh | tail -n1)"
+
+PYTHON="${VENV_DIR}/bin/python"
+
+if [[ "${TOOLCHAIN_INSTALL_IPYTHON:-}" = "yes" ]] && [ $# -eq 0 ]; then
+  PYTHON="${VENV_DIR}/bin/ipython"
+fi
+
+PYTHONPATH=src/python:${PYTHONPATH:-} "${PYTHON}" $@

@@ -1,0 +1,14 @@
+[
+    {
+        "email": "jerry@nbc.com",
+        "primary": true,
+        "verified": true,
+        "visibility": "public"
+    },
+    {
+        "email": "12688+jerry@users.noreply.github.com",
+        "primary": false,
+        "verified": true,
+        "visibility": null
+    }
+]

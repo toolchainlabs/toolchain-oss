@@ -1,0 +1,52 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  # prod/terraform/resources/us-east-1/kubernetes/dev-e1-1/service_role_policies/iam_keys_watcher.tf
+  name: iam-keys-watcher
+  labels:
+      app: iam-keys-checker
+  annotations:
+     eks.amazonaws.com/role-arn: {{ .Values.iam_role_arn }}
+
+---
+
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: iam-keys-checker
+spec:
+  schedule: "0 13 * * *"  # Mon-Friday, at 13:00 UTC (6am PST)
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 2
+  suspend: false
+  jobTemplate:
+    spec:
+      parallelism: 1
+      completions: 1
+      backoffLimit: 1
+      # this doesn't actually work right now. https://github.com/aws/containers-roadmap/issues/255
+      ttlSecondsAfterFinished: 900
+      template:
+        metadata:
+          name: iam-keys-checker
+          labels:
+            app: iam-keys-checker
+        spec:
+         serviceAccountName: iam-keys-watcher
+         restartPolicy: Never
+         nodeSelector:
+           toolchain.instance_category: worker
+         containers:
+         - name: iam-keys-checker
+           image: {{ .Values.image }}
+           imagePullPolicy: IfNotPresent
+           args:
+            - "--notify-days"
+            - "{{ .Values.notify_days }} "
+            - "--delete-days"
+            - "{{ .Values.delete_days }} "
+

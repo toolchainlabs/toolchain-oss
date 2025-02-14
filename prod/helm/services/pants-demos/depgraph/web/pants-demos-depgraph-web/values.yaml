@@ -1,0 +1,50 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: pants-demos-depgraph-web
+toolchain_product_name: pants-demos
+ecr_repo_base: pants-demos/depgraph/web
+dbs: [pants-demos]
+service_type: web-ui-marketing
+service_location: edge
+has_static_files: false
+iam_service_role_arn: null  # set by deploy script
+gunicorn_image_rev:
+  us-east-1: prod-2023-05-19.15-03-05-c19985e0b1e1
+resources:
+  gunicorn:
+    requests:
+      cpu: 50m
+      memory: 256Mi
+extra_config: {} # set by deploy script
+ingress:
+  name: pants-depgraph-demo-ingress
+  # Disable ingress by default so it doesn't get enabled in dev. the install prod script will enable it and insert the security group and cert ARN
+  enabled: false
+  external_ingress_sg_id:  # Gets overwritten by install_service_prod.py
+    us-east-1: null
+  ssl_certificate_arn:  # Gets overwritten by install_service_prod.py
+    us-east-1: null
+  healthcheck_path: /healthz
+  rules:
+  - host: www.graphmyrepo.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: pants-demos-depgraph-web
+            port:
+              number: 80
+  - host: graphmyrepo.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: pants-demos-depgraph-web
+            port:
+              number: 80
+

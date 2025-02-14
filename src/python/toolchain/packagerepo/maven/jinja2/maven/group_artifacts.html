@@ -1,0 +1,28 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "maven/base.html" %}
+
+{% block content %}
+  <h2>Details for Group <code>{{ group_id }}</code></h2>
+  <table class="table">
+    <tr><td>Group ID:</td><td>{{ group_id }}</td></tr>
+    <tr><td>Artifacts</td><td>{{ stats.num_artifacts }}</td></tr>
+    <tr><td>Artifact Versions</td><td>{{ stats.num_versions }}</td></tr>
+    <tr><td>Binary Jars</td><td>{{ stats.num_binary_jars }}</td></tr>
+    <tr><td>Source Jars</td><td>{{ stats.num_source_jars }}</td></tr>
+    <tr><td>Javadoc Jars</td><td>{{ stats.num_javadoc_jars }}</td></tr>
+
+    <tr><td>Artifacts:</td>
+      <td>
+        <ul class="artifact-list">
+          {% for artifact in artifacts %}
+            <li><a href="{{ artifact.get_absolute_url() }}">{{ artifact }}</a></li>
+          {% endfor %}
+        </ul>
+      </td>
+    </tr>
+  </table>
+{% endblock content %}

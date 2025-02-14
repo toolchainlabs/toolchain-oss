@@ -1,0 +1,699 @@
+{
+  "run_info": {
+    "id": "pants_run_2019_09_18_13_23_26_11_454abc7b5ac5497486a1b42c9affc9d4",
+    "timestamp": "1568838206.0117362",
+    "datetime": "Wednesday Sep 18, 2019 13:23:26",
+    "user": "asher",
+    "machine": "Ashers-MacBook-Pro.local",
+    "path": "/Users/asher/projects/toolchain",
+    "buildroot": "/Users/asher/projects/toolchain",
+    "version": "1.21.0.dev1",
+    "cmd_line": "pants --no-verify-config bg",
+    "default_report": "/Users/asher/projects/toolchain/.pants.d/reports/pants_run_2019_09_18_13_23_26_11_454abc7b5ac5497486a1b42c9affc9d4/html/build.html",
+    "specs_from_command_line": [],
+    "revision": "2d29888a7c864da0acb98346eaaa3a2a930d8edb",
+    "branch": "mandelbaum",
+    "outcome": "SUCCESS",
+    "computed_goals": [
+      "jvm-platform-validate",
+      "bootstrap",
+      "imports",
+      "unpack-jars",
+      "unpack-wheels",
+      "deferred-sources",
+      "gen",
+      "native-compile",
+      "map-python-exported-symbols",
+      "map-derived-targets",
+      "map-sources-to-addresses-mapper",
+      "bg"
+    ]
+  },
+  "cumulative_timings": [
+    {
+      "label": "main",
+      "timing": 4.998564004898071,
+      "is_tool": false
+    },
+    {
+      "label": "main:background",
+      "timing": 2.6652610301971436,
+      "is_tool": false
+    },
+    {
+      "label": "main:bg",
+      "timing": 2.030488967895508,
+      "is_tool": false
+    },
+    {
+      "label": "main:bg:python-buildgen",
+      "timing": 1.9774057865142822,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile",
+      "timing": 0.19675588607788086,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap",
+      "timing": 0.19617629051208496,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:cpp-for-ctypes",
+      "timing": 0.09498190879821777,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:c-for-ctypes",
+      "timing": 0.09194588661193848,
+      "is_tool": false
+    },
+    {
+      "label": "main:jvm-platform-validate",
+      "timing": 0.04929614067077637,
+      "is_tool": false
+    },
+    {
+      "label": "main:bg:bg",
+      "timing": 0.047601938247680664,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup",
+      "timing": 0.04713177680969238,
+      "is_tool": false
+    },
+    {
+      "label": "main:jvm-platform-validate:jvm-platform-validate",
+      "timing": 0.046282052993774414,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-wheels",
+      "timing": 0.045446157455444336,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-wheels:unpack-wheels",
+      "timing": 0.04316592216491699,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:provide-tools-jar",
+      "timing": 0.03669905662536621,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-python-exported-symbols",
+      "timing": 0.032446861267089844,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-python-exported-symbols:map-python-exported-symbols",
+      "timing": 0.030636072158813477,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-jars",
+      "timing": 0.024885892868041992,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-jars:unpack-jars",
+      "timing": 0.02256488800048828,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-sources-to-addresses-mapper",
+      "timing": 0.010793924331665039,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen",
+      "timing": 0.008919954299926758,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-sources-to-addresses-mapper:map-sources-to-addresses-mapper",
+      "timing": 0.008864879608154297,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:substitute-aliased-targets",
+      "timing": 0.007501125335693359,
+      "is_tool": false
+    },
+    {
+      "label": "main:imports",
+      "timing": 0.0037698745727539062,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-derived-targets",
+      "timing": 0.0030510425567626953,
+      "is_tool": false
+    },
+    {
+      "label": "main:deferred-sources",
+      "timing": 0.0023009777069091797,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:bootstrap-jvm-tools",
+      "timing": 0.0014829635620117188,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:jar-dependency-management",
+      "timing": 0.0010302066802978516,
+      "is_tool": false
+    },
+    {
+      "label": "main:background:workdir_build_cleanup",
+      "timing": 0.0010063648223876953,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-derived-targets:map-derived-targets",
+      "timing": 0.0008289813995361328,
+      "is_tool": false
+    },
+    {
+      "label": "main:imports:ivy-imports",
+      "timing": 0.0005424022674560547,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup:parse",
+      "timing": 0.00045800209045410156,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:conan-prep",
+      "timing": 0.0003781318664550781,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:grpcio-run",
+      "timing": 0.0003750324249267578,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:conan-fetch",
+      "timing": 0.0003657341003417969,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:go-protobuf",
+      "timing": 0.00031113624572753906,
+      "is_tool": false
+    },
+    {
+      "label": "main:deferred-sources:deferred-sources",
+      "timing": 0.00030994415283203125,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:grpcio-prep",
+      "timing": 0.00030994415283203125,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:go-thrift",
+      "timing": 0.0003001689910888672,
+      "is_tool": false
+    },
+    {
+      "label": "main:complete",
+      "timing": 0.0001990795135498047,
+      "is_tool": false
+    },
+    {
+      "label": "main:bg:aggregate-targets",
+      "timing": 0.00016379356384277344,
+      "is_tool": false
+    }
+  ],
+  "self_timings": [
+    {
+      "label": "main:background",
+      "timing": 2.664254665374756,
+      "is_tool": false
+    },
+    {
+      "label": "main:bg:python-buildgen",
+      "timing": 1.9774057865142822,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap",
+      "timing": 0.14946293830871582,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:cpp-for-ctypes",
+      "timing": 0.09498190879821777,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:c-for-ctypes",
+      "timing": 0.09194588661193848,
+      "is_tool": false
+    },
+    {
+      "label": "main:bg:bg",
+      "timing": 0.047601938247680664,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup",
+      "timing": 0.04667377471923828,
+      "is_tool": false
+    },
+    {
+      "label": "main:jvm-platform-validate:jvm-platform-validate",
+      "timing": 0.046282052993774414,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-wheels:unpack-wheels",
+      "timing": 0.04316592216491699,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:provide-tools-jar",
+      "timing": 0.03669905662536621,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-python-exported-symbols:map-python-exported-symbols",
+      "timing": 0.030636072158813477,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-jars:unpack-jars",
+      "timing": 0.02256488800048828,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile",
+      "timing": 0.009084224700927734,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-sources-to-addresses-mapper:map-sources-to-addresses-mapper",
+      "timing": 0.008864879608154297,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen",
+      "timing": 0.0076236724853515625,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:substitute-aliased-targets",
+      "timing": 0.007501125335693359,
+      "is_tool": false
+    },
+    {
+      "label": "main:bg",
+      "timing": 0.0053174495697021484,
+      "is_tool": false
+    },
+    {
+      "label": "main:imports",
+      "timing": 0.0032274723052978516,
+      "is_tool": false
+    },
+    {
+      "label": "main:jvm-platform-validate",
+      "timing": 0.003014087677001953,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-jars",
+      "timing": 0.002321004867553711,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-wheels",
+      "timing": 0.0022802352905273438,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-derived-targets",
+      "timing": 0.0022220611572265625,
+      "is_tool": false
+    },
+    {
+      "label": "main:deferred-sources",
+      "timing": 0.0019910335540771484,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-sources-to-addresses-mapper",
+      "timing": 0.0019290447235107422,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-python-exported-symbols",
+      "timing": 0.0018107891082763672,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:bootstrap-jvm-tools",
+      "timing": 0.0014829635620117188,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap:jar-dependency-management",
+      "timing": 0.0010302066802978516,
+      "is_tool": false
+    },
+    {
+      "label": "main:background:workdir_build_cleanup",
+      "timing": 0.0010063648223876953,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-derived-targets:map-derived-targets",
+      "timing": 0.0008289813995361328,
+      "is_tool": false
+    },
+    {
+      "label": "main:imports:ivy-imports",
+      "timing": 0.0005424022674560547,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup:parse",
+      "timing": 0.00045800209045410156,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:conan-prep",
+      "timing": 0.0003781318664550781,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:grpcio-run",
+      "timing": 0.0003750324249267578,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile:conan-fetch",
+      "timing": 0.0003657341003417969,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:go-protobuf",
+      "timing": 0.00031113624572753906,
+      "is_tool": false
+    },
+    {
+      "label": "main:deferred-sources:deferred-sources",
+      "timing": 0.00030994415283203125,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:grpcio-prep",
+      "timing": 0.00030994415283203125,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen:go-thrift",
+      "timing": 0.0003001689910888672,
+      "is_tool": false
+    },
+    {
+      "label": "main:complete",
+      "timing": 0.0001990795135498047,
+      "is_tool": false
+    },
+    {
+      "label": "main:bg:aggregate-targets",
+      "timing": 0.00016379356384277344,
+      "is_tool": false
+    },
+    {
+      "label": "main",
+      "timing": -0.3183598518371582,
+      "is_tool": false
+    }
+  ],
+  "critical_path_timings": [
+    {
+      "label": "main:bg",
+      "timing": 2.651463747024536,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-sources-to-addresses-mapper",
+      "timing": 0.5854768753051758,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-derived-targets",
+      "timing": 0.5777339935302734,
+      "is_tool": false
+    },
+    {
+      "label": "main:map-python-exported-symbols",
+      "timing": 0.5578336715698242,
+      "is_tool": false
+    },
+    {
+      "label": "main:native-compile",
+      "timing": 0.5164668560028076,
+      "is_tool": false
+    },
+    {
+      "label": "main:deferred-sources",
+      "timing": 0.31971096992492676,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-jars",
+      "timing": 0.27196383476257324,
+      "is_tool": false
+    },
+    {
+      "label": "main:imports",
+      "timing": 0.24707794189453125,
+      "is_tool": false
+    },
+    {
+      "label": "main:bootstrap",
+      "timing": 0.24330806732177734,
+      "is_tool": false
+    },
+    {
+      "label": "main:jvm-platform-validate",
+      "timing": 0.09642791748046875,
+      "is_tool": false
+    },
+    {
+      "label": "main:unpack-wheels",
+      "timing": 0.09257793426513672,
+      "is_tool": false
+    },
+    {
+      "label": "main:gen",
+      "timing": 0.05605173110961914,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup",
+      "timing": 0.04713177680969238,
+      "is_tool": false
+    }
+  ],
+  "artifact_cache_stats": [],
+  "pantsd_stats": {
+    "affected_file_count": 1137,
+    "affected_targets_size": 0,
+    "preceding_graph_size": 0,
+    "resulting_graph_size": 4018,
+    "target_root_size": 0
+  },
+  "outcomes": {
+    "main": "SUCCESS",
+    "main:background": "SUCCESS",
+    "main:background:workdir_build_cleanup": "SUCCESS",
+    "main:bg": "SUCCESS",
+    "main:bg:aggregate-targets": "SUCCESS",
+    "main:bg:bg": "SUCCESS",
+    "main:bg:python-buildgen": "SUCCESS",
+    "main:bootstrap": "SUCCESS",
+    "main:bootstrap:bootstrap-jvm-tools": "SUCCESS",
+    "main:bootstrap:jar-dependency-management": "SUCCESS",
+    "main:bootstrap:provide-tools-jar": "SUCCESS",
+    "main:bootstrap:substitute-aliased-targets": "SUCCESS",
+    "main:complete": "SUCCESS",
+    "main:deferred-sources": "SUCCESS",
+    "main:deferred-sources:deferred-sources": "SUCCESS",
+    "main:gen": "SUCCESS",
+    "main:gen:go-protobuf": "SUCCESS",
+    "main:gen:go-thrift": "SUCCESS",
+    "main:gen:grpcio-prep": "SUCCESS",
+    "main:gen:grpcio-run": "SUCCESS",
+    "main:imports": "SUCCESS",
+    "main:imports:ivy-imports": "SUCCESS",
+    "main:jvm-platform-validate": "SUCCESS",
+    "main:jvm-platform-validate:jvm-platform-validate": "SUCCESS",
+    "main:map-derived-targets": "SUCCESS",
+    "main:map-derived-targets:map-derived-targets": "SUCCESS",
+    "main:map-python-exported-symbols": "SUCCESS",
+    "main:map-python-exported-symbols:map-python-exported-symbols": "SUCCESS",
+    "main:map-sources-to-addresses-mapper": "SUCCESS",
+    "main:map-sources-to-addresses-mapper:map-sources-to-addresses-mapper": "SUCCESS",
+    "main:native-compile": "SUCCESS",
+    "main:native-compile:c-for-ctypes": "SUCCESS",
+    "main:native-compile:conan-fetch": "SUCCESS",
+    "main:native-compile:conan-prep": "SUCCESS",
+    "main:native-compile:cpp-for-ctypes": "SUCCESS",
+    "main:setup": "SUCCESS",
+    "main:setup:parse": "SUCCESS",
+    "main:unpack-jars": "SUCCESS",
+    "main:unpack-jars:unpack-jars": "SUCCESS",
+    "main:unpack-wheels": "SUCCESS",
+    "main:unpack-wheels:unpack-wheels": "SUCCESS"
+  },
+  "recorded_options": {
+    "GLOBAL": {
+      "allow_external_binary_tool_downloads": true,
+      "backend_packages": [
+        "pants.backend.graph_info",
+        "pants.backend.python",
+        "pants.backend.jvm",
+        "pants.backend.native",
+        "pants.backend.codegen.grpcio.python",
+        "pants.backend.project_info",
+        "toolchain.pants",
+        "pants.contrib.awslambda.python",
+        "pants.contrib.codeanalysis",
+        "pants.contrib.go",
+        "pants.contrib.mypy",
+        "pants.contrib.node",
+        "pants.contrib.python.checks"
+      ],
+      "binaries_baseurls": [
+        "https://binaries.pantsbuild.org",
+        "https://github.com/toolchainlabs/binhost/raw/master/"
+      ],
+      "binaries_fetch_timeout_secs": 30,
+      "binaries_path_by_id": {},
+      "build_file_imports": "warn",
+      "build_ignore": [
+        ".*/",
+        "bower_components/",
+        "node_modules/",
+        "*.egg-info/"
+      ],
+      "cache_key_gen_version": "200",
+      "colors": true,
+      "concurrent": false,
+      "enable_pantsd": false,
+      "exclude_target_regexp": [],
+      "explain": false,
+      "fail_fast": false,
+      "glob_expansion_failure": "GlobMatchErrorBehavior(value='warn')",
+      "ignore_pants_warnings": [],
+      "kill_nailguns": false,
+      "level": "info",
+      "local_store_dir": "/Users/asher/.cache/pants/lmdb_store",
+      "lock": true,
+      "log_show_rust_3rdparty": false,
+      "logdir": null,
+      "loop": false,
+      "loop_max": 4294967296,
+      "max_subprocess_args": 100,
+      "native_engine_visualize_to": null,
+      "option_name_check_distance": 2,
+      "owner_of": [],
+      "pants_bootstrapdir": "/Users/asher/.cache/pants",
+      "pants_config_files": [
+        "/Users/asher/projects/toolchain/pants.ini"
+      ],
+      "pants_configdir": "/Users/asher/.config/pants",
+      "pants_distdir": "/Users/asher/projects/toolchain/dist",
+      "pants_ignore": [
+        ".*/",
+        "/dist/"
+      ],
+      "pants_physical_workdir_base": null,
+      "pants_subprocessdir": "/Users/asher/projects/toolchain/.pids",
+      "pants_supportdir": "/Users/asher/projects/toolchain/build-support",
+      "pants_version": "1.21.0.dev1",
+      "pants_workdir": "/Users/asher/projects/toolchain/.pants.d",
+      "pantsd_invalidation_globs": [],
+      "pantsd_log_dir": null,
+      "pantsd_pailgun_host": "127.0.0.1",
+      "pantsd_pailgun_port": 0,
+      "pantsd_pailgun_quit_timeout": 5,
+      "pantsd_timeout_when_multiple_invocations": 60,
+      "pantsrc": true,
+      "pantsrc_files": [
+        "/etc/pantsrc",
+        "~/.pants.rc"
+      ],
+      "plugin_cache_dir": "/Users/asher/.cache/pants/plugins",
+      "plugins": [
+        "boto3==1.9.217",
+        "isort==4.3.21",
+        "pkginfo==1.5.0.1",
+        "plyvel==1.1.0",
+        "protobuf==3.9.0",
+        "setuptools==40.6.3"
+      ],
+      "print_exception_stacktrace": true,
+      "process_execution_cleanup_local_dirs": true,
+      "process_execution_local_parallelism": 24,
+      "process_execution_remote_parallelism": 128,
+      "process_execution_speculation_delay": 0.1,
+      "process_execution_speculation_strategy": "local_first",
+      "process_execution_use_local_cache": true,
+      "pythonpath": [
+        "/Users/asher/projects/toolchain/src/python",
+        "../pants/contrib/awslambda/python/src/python",
+        "../pants/contrib/codeanalysis/src/python",
+        "../pants/contrib/go/src/python",
+        "../pants/contrib/mypy/src/python",
+        "../pants/contrib/node/src/python",
+        "../pants/contrib/python/src/python"
+      ],
+      "quiet": false,
+      "remote_ca_certs_path": null,
+      "remote_execution": false,
+      "remote_execution_extra_platform_properties": [],
+      "remote_execution_process_cache_namespace": null,
+      "remote_execution_server": null,
+      "remote_instance_name": null,
+      "remote_oauth_bearer_token_path": null,
+      "remote_store_chunk_bytes": 1048576,
+      "remote_store_chunk_upload_timeout_seconds": 60,
+      "remote_store_connection_limit": 5,
+      "remote_store_rpc_retries": 2,
+      "remote_store_server": [],
+      "remote_store_thread_count": 1,
+      "shutdown_pantsd_after_run": false,
+      "subproject_roots": [],
+      "tag": [],
+      "target_spec_files": [],
+      "time": false,
+      "timeout": null,
+      "v1": true,
+      "v2": false,
+      "v2_ui": false,
+      "verify_config": false,
+      "watchman_socket_path": null,
+      "watchman_socket_timeout": 0.1,
+      "watchman_startup_timeout": 30,
+      "watchman_supportdir": "bin/watchman",
+      "watchman_version": "4.9.0-pants1",
+      "workdir_max_build_entries": 8
+    }
+  }
+}

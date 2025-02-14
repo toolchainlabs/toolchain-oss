@@ -1,0 +1,9 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+appVersion: '1.0'
+name: aws-cost-reporter
+description: Calculate daily AWS costs and post to slack.
+version: 1.4.0
+kubeVersion: '>=v1.23.0-0,<v1.27-0'

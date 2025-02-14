@@ -1,0 +1,22 @@
+{
+    "BITBUCKET_BUILD_NUMBER": "33",
+    "BITBUCKET_CLONE_DIR": "/opt/atlassian/pipelines/agent/build",
+    "BITBUCKET_COMMIT": "113feb0671944c44d274fc4d7c32c681427f9011",
+    "BITBUCKET_DOCKER_HOST_INTERNAL": "10.36.202.130",
+    "BITBUCKET_GIT_HTTP_ORIGIN": "http://bitbucket.org/festivus-miracle/minimal-pants",
+    "BITBUCKET_GIT_SSH_ORIGIN": "git@bitbucket.org:festivus-miracle/minimal-pants.git",
+    "BITBUCKET_PIPELINE_UUID": "{49cad2bc-a237-4916-9e1b-0cb11ccb81db}",
+    "BITBUCKET_PROJECT_KEY": "EX",
+    "BITBUCKET_PROJECT_UUID": "{8454e8bb-7290-4396-9eb9-6c0d77556bc5}",
+    "BITBUCKET_REPO_FULL_NAME": "festivus-miracle/minimal-pants",
+    "BITBUCKET_REPO_IS_PRIVATE": "false",
+    "BITBUCKET_REPO_OWNER": "festivus-miracle",
+    "BITBUCKET_REPO_OWNER_UUID": "{acf54878-51be-473e-bf0b-0fbb12e011ad}",
+    "BITBUCKET_REPO_SLUG": "minimal-pants",
+    "BITBUCKET_REPO_UUID": "{c389eba6-ca13-49c5-8dec-4e617d39dffe}",
+    "BITBUCKET_STEP_RUN_NUMBER": "1",
+    "BITBUCKET_STEP_TRIGGERER_UUID": "{6ae3c307-ae59-4135-9c72-bdd06eb2010a}",
+    "BITBUCKET_STEP_UUID": "{f987bb55-e706-49f5-9a2d-6ade1f16ee5f}",
+    "BITBUCKET_TAG": "h&h-bagles",
+    "BITBUCKET_WORKSPACE": "festivus-miracle"
+}

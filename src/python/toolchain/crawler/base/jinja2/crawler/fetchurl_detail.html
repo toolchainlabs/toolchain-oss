@@ -1,0 +1,31 @@
+{#
+Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "crawler/workunit_detail_base.html" %}
+
+{% block successful_workunit_detail_content_trs %}
+{{ super() }}
+<tr>
+  <td>URL:</td>
+  <td><a href="{{ object.url }}" target="_blank">{{ object.url }}</a></td>
+</tr>
+<tr>
+  <td>Last HTTP Status:</td>
+  <td>{{ object.last_http_status }}</td>
+</tr>
+<tr>
+  <td>Encoding:</td>
+  <td>{{ web_resource.encoding }}</td>
+</tr>
+<tr>
+  <td>Compression:</td>
+  <td>{{ web_resource.compression }}</td>
+</tr>
+<tr>
+  <td colspan="2">
+    <pre style="white-space:pre-wrap; width:800px">{{ text_content }}</pre>
+  </td>
+</tr>
+{% endblock successful_workunit_detail_content_trs %}

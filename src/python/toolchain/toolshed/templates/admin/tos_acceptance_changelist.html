@@ -1,0 +1,18 @@
+{#
+Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+{% extends "admin/change_list.html" %}
+{% load i18n admin_urls static admin_list %}
+
+{% block result_list %}
+  {% if action_form and actions_on_top and cl.full_result_count %}{% admin_actions %}{% endif %}
+  {% result_list cl %}
+  {% if action_form and actions_on_bottom and cl.full_result_count %}{% admin_actions %}{% endif %}
+{% endblock %}
+{% block object-tools %}
+
+{{ block.super }} 
+<p>TOS Compliance is {{ compliance }} ({{ tos_accepted_count }} out of {{ users_count }} active users)</p>
+<p>TOS Version: {{ tos_version }}</p>
+{% endblock %}

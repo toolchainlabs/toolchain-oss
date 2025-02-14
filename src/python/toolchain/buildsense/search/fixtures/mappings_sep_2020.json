@@ -1,0 +1,170 @@
+{
+    "buildsense": {
+        "mappings": {
+            "run_info": {
+                "properties": {
+                    "branch": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword",
+                                "ignore_above": 256
+                            }
+                        }
+                    },
+                    "buildroot": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword",
+                                "ignore_above": 256
+                            }
+                        }
+                    },
+                    "ci_info": {
+                        "properties": {
+                            "build_num": {
+                                "type": "integer"
+                            },
+                            "build_url": {
+                                "type": "text"
+                            },
+                            "job_name": {
+                                "type": "keyword"
+                            },
+                            "pull_request": {
+                                "type": "integer"
+                            },
+                            "run_type": {
+                                "type": "keyword"
+                            },
+                            "username": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "cmd_line": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword",
+                                "ignore_above": 256
+                            }
+                        }
+                    },
+                    "computed_goals": {
+                        "type": "keyword"
+                    },
+                    "customer_id": {
+                        "type": "keyword"
+                    },
+                    "default_report": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword",
+                                "ignore_above": 256
+                            }
+                        }
+                    },
+                    "machine": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword",
+                                "ignore_above": 256
+                            }
+                        }
+                    },
+                    "outcome": {
+                        "type": "keyword"
+                    },
+                    "path": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword",
+                                "ignore_above": 256
+                            }
+                        }
+                    },
+                    "repo_id": {
+                        "type": "keyword"
+                    },
+                    "report_url": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword",
+                                "ignore_above": 256
+                            }
+                        }
+                    },
+                    "revision": {
+                        "type": "keyword"
+                    },
+                    "run_id": {
+                        "type": "keyword"
+                    },
+                    "run_time": {
+                        "type": "integer"
+                    },
+                    "server_info": {
+                        "properties": {
+                            "accept_time": {
+                                "type": "date",
+                                "format": "epoch_second"
+                            },
+                            "environment": {
+                                "type": "keyword"
+                            },
+                            "request_id": {
+                                "type": "keyword"
+                            },
+                            "s3_bucket": {
+                                "type": "keyword"
+                            },
+                            "s3_key": {
+                                "type": "text",
+                                "fields": {
+                                    "keyword": {
+                                        "type": "keyword",
+                                        "ignore_above": 256
+                                    }
+                                }
+                            },
+                            "stats_version": {
+                                "type": "text",
+                                "fields": {
+                                    "keyword": {
+                                        "type": "keyword",
+                                        "ignore_above": 256
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "specs_from_command_line": {
+                        "type": "keyword"
+                    },
+                    "timestamp": {
+                        "type": "date",
+                        "format": "epoch_second"
+                    },
+                    "user_api_id": {
+                        "type": "keyword"
+                    },
+                    "version": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword",
+                                "ignore_above": 256
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

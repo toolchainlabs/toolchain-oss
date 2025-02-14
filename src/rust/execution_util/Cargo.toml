@@ -1,0 +1,9 @@
+[package]
+name = "execution_util"
+version = "0.0.1"
+edition = "2021"
+publish = false
+
+[dependencies]
+rand = "0.8"
+uuid = "1.3"

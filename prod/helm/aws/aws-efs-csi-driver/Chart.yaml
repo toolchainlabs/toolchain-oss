@@ -1,0 +1,12 @@
+# Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+appVersion: 1.5.4
+description: Configure Amazon EFS driver
+name: aws-efs-csi-driver
+version: 1.9.0
+dependencies:
+- name: aws-efs-csi-driver
+  version: 2.4.1
+  repository: https://kubernetes-sigs.github.io/aws-efs-csi-driver/

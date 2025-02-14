@@ -1,0 +1,22 @@
+{
+    "metadata": {
+        "totalRowCount": 3,
+        "filteredRowCount": 1,
+        "limit": 10,
+        "page": 1,
+        "totalFilteredPages": 1,
+        "isAscending": true,
+        "sort": "id",
+        "search": "dev_asher_jerry_123"
+    },
+    "items": [
+        {
+            "customerName": "No soup for you",
+            "enabled": true,
+            "updateTime": 1654621177938,
+            "createTime": 1654621177938,
+            "id": "dev_asher_jerry_123",
+            "customerId": "dev_asher_jerry_123"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+### COPY OF prod/helm/observability/monitoring/monitoring/templates/buildsense-workflow-hpa-rules.yaml ####
+
+# Configuration for promethus adapter. For now we use it to be able to scale up buildsense workflow workers based on the number builds that are queued to be processed.
+# queued builda are ProcessPantsRun work units in 'ready' state.
+# This config is based on https://ryanbaker.io/2019-10-07-scaling-rabbitmq-on-k8s/ and https://github.com/ryan-a-baker/k8s-scaling-demo
+
+# Hard coding those here for now. but we may want to move those elsewhere at some point.
+{{- $buildsense_namespace := "asher" }}
+{{- $payload_model := "processpantsrun" }}
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: buildsense-workflow-hpa-rules
+  labels:
+    name: buildsense-workflow-hpa-rules
+    chart: {{ .Chart.Name  }}
+data:
+  config.yaml: |
+    rules:
+      - seriesQuery: 'toolchain_workflow_workunit_state{namespace!="",pod!="",app!=""}'
+        metricsQuery: sum(<<.Series>>{<<.LabelMatchers>>,namespace="{{ $buildsense_namespace }}",payload_model="{{ $payload_model }}",state="ready"}) by (<<.GroupBy>>)
+        resources:
+          overrides:
+            app: 
+              resource: "deployment"
+            namespace: 
+              resource: "namespace"
+        name:
+          matches: "^toolchain_workflow_workunit_state"
+          as: "buildsense_queue_length"
+

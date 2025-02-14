@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withExternalLink should render a link 1`] = `
+<DocumentFragment>
+  <a
+    href="www.google.com"
+    rel="noopener noreferrer"
+    target="_blank"
+    type="external"
+  >
+    <div
+      class="MuiAvatar-root MuiAvatar-circular css-t8ibnv-MuiAvatar-root"
+    >
+      <img
+        alt="External link icon"
+        class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+        src="test-file-stub"
+      />
+    </div>
+    <div>
+      google link
+    </div>
+  </a>
+</DocumentFragment>
+`;

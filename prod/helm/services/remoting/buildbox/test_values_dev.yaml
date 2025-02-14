@@ -1,0 +1,9 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+customer: costanza
+mainInstanceName: "FOO"
+
+workersPerPod: 1
+nodeType: bobby
+
+image: foo:1.2.3

@@ -1,0 +1,36 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{  .Chart.Name  }}
+spec:
+  schedule: "40 13 * * 1,3"  # Monday & Wednesday, at 13:40 UTC (6:40am PST)
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 2
+  suspend: false
+  jobTemplate:
+    spec:
+      parallelism: 1
+      completions: 1
+      backoffLimit: 0
+      # this doesn't actually work right now. https://github.com/aws/containers-roadmap/issues/255
+      ttlSecondsAfterFinished: 900
+      template:
+        metadata:
+         name: {{  .Chart.Name  }}
+         labels:
+           app: pypi-db-snapshot-copier
+         annotations:
+           iam.amazonaws.com/role: {{ .Values.iam_role }}
+        spec:
+          restartPolicy: Never
+          nodeSelector:
+             toolchain.instance_category: worker
+          containers:
+          - name: {{  .Chart.Name  }}
+            image: {{ .Values.image }}
+            imagePullPolicy: IfNotPresent
+

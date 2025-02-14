@@ -1,0 +1,370 @@
+{
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 20.379087924957275,
+            "is_tool": false
+        },
+        {
+            "label": "main:complete",
+            "timing": 5.793571472167969e-05,
+            "is_tool": false
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 24,
+        "affected_targets_size": 0,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 222,
+        "target_root_size": 0
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "allow_external_binary_tool_downloads": true,
+            "backend_packages": [
+                "toolchain.pants.auth",
+                "toolchain.pants.buildsense",
+                "toolchain.pants.common",
+                "toolchain.pants.rules",
+                "pants.backend.awslambda.python",
+                "pants.backend.project_info",
+                "pants.backend.python",
+                "pants.backend.python.lint.bandit",
+                "pants.backend.python.lint.black",
+                "pants.backend.python.lint.docformatter",
+                "pants.backend.python.lint.flake8",
+                "pants.backend.python.lint.pylint",
+                "pants.backend.python.lint.isort",
+                "pants.backend.python.typecheck.mypy"
+            ],
+            "backend_packages2": [],
+            "binaries_baseurls": [
+                "https://binaries.pantsbuild.org"
+            ],
+            "binaries_fetch_timeout_secs": 30,
+            "binaries_path_by_id": {},
+            "build_file_prelude_globs": [],
+            "build_ignore": [
+                "3rdparty/jvm",
+                "3rdparty/go",
+                "prod/java",
+                "src/java",
+                "src/go",
+                "src/node",
+                "testdata/java"
+            ],
+            "build_patterns": [
+                "BUILD",
+                "BUILD.*"
+            ],
+            "ca_certs_path": null,
+            "colors": true,
+            "concurrent": false,
+            "dependency_inference": false,
+            "dynamic_ui": false,
+            "exclude_target_regexp": [],
+            "files_not_found_behavior": "warn",
+            "ignore_pants_warnings": [],
+            "level": "debug",
+            "local_execution_root_dir": "/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T",
+            "local_store_dir": "/Users/asher/.cache/pants/lmdb_store",
+            "lock": true,
+            "log_levels_by_target": {},
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "named_caches_dir": "/Users/asher/.cache/pants/named_caches",
+            "native_engine_visualize_to": null,
+            "option_name_check_distance": 2,
+            "owners_not_found_behavior": "error",
+            "pants_bin_name": "./pants",
+            "pants_bootstrapdir": "/Users/asher/.cache/pants",
+            "pants_config_files": [
+                "/Users/asher/projects/toolchain/pants.toml"
+            ],
+            "pants_configdir": "/Users/asher/.config/pants",
+            "pants_distdir": "/Users/asher/projects/toolchain/dist",
+            "pants_distdir_legacy_paths": false,
+            "pants_ignore": [
+                ".*/",
+                "/dist/"
+            ],
+            "pants_ignore_use_gitignore": true,
+            "pants_physical_workdir_base": null,
+            "pants_subprocessdir": "/Users/asher/projects/toolchain/.pids",
+            "pants_supportdir": "/Users/asher/projects/toolchain/build-support",
+            "pants_version": "2.0.0rc0",
+            "pants_workdir": "/Users/asher/projects/toolchain/.pants.d",
+            "pantsd": false,
+            "pantsd_invalidation_globs": [
+                "!/src/python/curator/",
+                "!/src/python/toolchain/codebrowser/",
+                "!/src/python/toolchain/crawler/",
+                "!/src/python/toolchain/dependency/",
+                "!/src/python/toolchain/github_integration/",
+                "!/src/python/toolchain/infosite/",
+                "!/src/python/toolchain/kythebrowser/",
+                "!/src/python/toolchain/packagerepo/",
+                "!/src/python/toolchain/prod/",
+                "!/src/python/toolchain/remoting/",
+                "!/src/python/toolchain/satresolver/",
+                "!/src/python/toolchain/service/",
+                "!/src/python/toolchain/servicerouter/",
+                "!/src/python/toolchain/toolshed/",
+                "!/src/python/toolchain/users/",
+                "!/src/python/toolchain/webhooks/",
+                "!*_test.py",
+                "!BUILD"
+            ],
+            "pantsd_log_dir": null,
+            "pantsd_max_memory_usage": 1073741824,
+            "pantsd_pailgun_port": 0,
+            "pantsd_pailgun_quit_timeout": 5,
+            "pantsd_timeout_when_multiple_invocations": 60,
+            "pantsrc": true,
+            "pantsrc_files": [
+                "/etc/pantsrc",
+                "~/.pants.rc"
+            ],
+            "plugin_cache_dir": "/Users/asher/.cache/pants/plugins",
+            "plugins": [
+                "python-dateutil>=2.8.1,<3.0.0",
+                "networkx==2.5"
+            ],
+            "plugins2": [],
+            "plugins_force_resolve": false,
+            "print_exception_stacktrace": false,
+            "print_stacktrace": true,
+            "process_execution_cleanup_local_dirs": true,
+            "process_execution_local_enable_nailgun": false,
+            "process_execution_local_parallelism": 12,
+            "process_execution_remote_parallelism": 128,
+            "process_execution_speculation_delay": 1,
+            "process_execution_speculation_strategy": "none",
+            "process_execution_use_local_cache": true,
+            "pythonpath": [
+                "/Users/asher/projects/toolchain/src/python"
+            ],
+            "show_log_target": false,
+            "spec_file": [],
+            "spec_files": [],
+            "streaming_workunits_handlers": [
+                "toolchain.pants.buildsense.reporter.Reporter"
+            ],
+            "streaming_workunits_report_interval": 1,
+            "subproject_roots": [],
+            "tag": [],
+            "v1": false,
+            "v2": true,
+            "verify_config": true
+        }
+    },
+    "run_info": {
+        "id": "pants_run_2020_10_13_10_45_53_495_c60f37108a5f4b709312649ced9cca2a",
+        "timestamp": "1602611153.4959848",
+        "datetime": "Tuesday Oct 13, 2020 10:45:53",
+        "user": "asher",
+        "machine": "Ashers-MacBook-Pro.local",
+        "path": "/Users/asher/projects/toolchain",
+        "buildroot": "/Users/asher/projects/toolchain",
+        "version": "2.0.0rc0",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.0.0rc0 --no-dynamic-ui -ldebug fmt src/python/toolchain/pants/buildsense/::",
+        "specs_from_command_line": [
+            "src/python/toolchain/pants/buildsense::"
+        ],
+        "outcome": "FAILURE",
+        "revision": "6eacca50bc43357c16d43c9aba9eba59aaa5509f",
+        "branch": "mulva",
+        "computed_goals": [
+            "fmt"
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "04fbe303d1ff1ce7",
+            "name": "select",
+            "state": "finished",
+            "version": 19,
+            "parent_id": null,
+            "last_update": 1602611172,
+            "start_usecs": 1602611153558101,
+            "end_usecs": 1602611172180539
+        },
+        {
+            "workunit_id": "f11d000201436267",
+            "name": "pants.core.goals.fmt.fmt",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "04fbe303d1ff1ce7",
+            "last_update": 1602611172,
+            "start_usecs": 1602611153558174,
+            "description": "`fmt` goal",
+            "end_usecs": 1602611172180514
+        },
+        {
+            "workunit_id": "6a8ebc885f823543",
+            "name": "pants.backend.python.lint.python_fmt.format_python_target",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "f11d000201436267",
+            "last_update": 1602611172,
+            "start_usecs": 1602611153614525,
+            "end_usecs": 1602611172180471
+        },
+        {
+            "workunit_id": "432aa47630344a06",
+            "name": "pants.backend.python.lint.black.rules.black_fmt",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "6a8ebc885f823543",
+            "last_update": 1602611172,
+            "start_usecs": 1602611153618614,
+            "description": "Format with Black",
+            "end_usecs": 1602611172180433
+        },
+        {
+            "workunit_id": "43e42f0ab52d6e97",
+            "name": "pants.backend.python.lint.black.rules.setup_black",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "432aa47630344a06",
+            "last_update": 1602611172,
+            "start_usecs": 1602611153618888,
+            "end_usecs": 1602611172180391
+        },
+        {
+            "workunit_id": "f121799e7ecfe24b",
+            "name": "pants.backend.python.util_rules.pex.create_pex",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "43e42f0ab52d6e97",
+            "last_update": 1602611172,
+            "start_usecs": 1602611153623140,
+            "end_usecs": 1602611172180280
+        },
+        {
+            "workunit_id": "174746583ef41b57",
+            "name": "pants.backend.python.util_rules.pex.find_interpreter",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "f121799e7ecfe24b",
+            "last_update": 1602611172,
+            "start_usecs": 1602611153624970,
+            "description": "Find Python interpreter for constraints",
+            "end_usecs": 1602611156255991
+        },
+        {
+            "workunit_id": "167fe5689ede2db8",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "174746583ef41b57",
+            "last_update": 1602611172,
+            "start_usecs": 1602611154910701,
+            "end_usecs": 1602611156255869
+        },
+        {
+            "workunit_id": "eb54627b4f3f1af3",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "167fe5689ede2db8",
+            "last_update": 1602611172,
+            "start_usecs": 1602611154910851,
+            "end_usecs": 1602611156255831
+        },
+        {
+            "workunit_id": "1cd7ea1066471b92",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "eb54627b4f3f1af3",
+            "last_update": 1602611172,
+            "start_usecs": 1602611154911280,
+            "description": "Find interpreter for constraints: CPython>=3.8",
+            "end_usecs": 1602611156255609
+        },
+        {
+            "workunit_id": "2692d4c32986f79f",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "1cd7ea1066471b92",
+            "last_update": 1602611172,
+            "start_usecs": 1602611154911792,
+            "description": "(Waiting) Find interpreter for constraints: CPython>=3.8",
+            "end_usecs": 1602611156255350
+        },
+        {
+            "workunit_id": "8d4adbb0a65501a9",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "2692d4c32986f79f",
+            "last_update": 1602611172,
+            "start_usecs": 1602611154911835,
+            "description": "Find interpreter for constraints: CPython>=3.8",
+            "end_usecs": 1602611156255312,
+            "artifacts": {
+                "stdout": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/bin/python3.8\n171e0bfe7560e2b359f109d4351818e3e8a214fa3917ee6d42f0f2c636e7c8f4\n"
+            }
+        },
+        {
+            "workunit_id": "963fa8bcbcc1126e",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "f121799e7ecfe24b",
+            "last_update": 1602611172,
+            "start_usecs": 1602611156261783,
+            "end_usecs": 1602611172180196
+        },
+        {
+            "workunit_id": "d3d147d5448b7f0a",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "963fa8bcbcc1126e",
+            "last_update": 1602611172,
+            "start_usecs": 1602611156261856,
+            "end_usecs": 1602611172179415
+        },
+        {
+            "workunit_id": "eb9693914f6cbdc3",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "d3d147d5448b7f0a",
+            "last_update": 1602611172,
+            "start_usecs": 1602611156261998,
+            "description": "Building black.pex with 2 requirements: black==20.8b1, regex>=2020.9.27",
+            "end_usecs": 1602611172179163
+        },
+        {
+            "workunit_id": "da47786555b8a330",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "eb9693914f6cbdc3",
+            "last_update": 1602611172,
+            "start_usecs": 1602611156262133,
+            "description": "(Waiting) Building black.pex with 2 requirements: black==20.8b1, regex>=2020.9.27",
+            "end_usecs": 1602611172179131
+        },
+        {
+            "workunit_id": "803f7f68f2694df4",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 19,
+            "parent_id": "da47786555b8a330",
+            "last_update": 1602611172,
+            "start_usecs": 1602611156262175,
+            "description": "Building black.pex with 2 requirements: black==20.8b1, regex>=2020.9.27",
+            "end_usecs": 1602611172179095,
+            "artifacts": {
+                "stderr": "  ERROR: Command errored out with exit status 1:\n   command: /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/bin/python3.8 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '\"'\"'/private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionOS6aHG/.tmp/pip-req-build-o4r9x3v1/setup.py'\"'\"'; __file__='\"'\"'/private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionOS6aHG/.tmp/pip-req-build-o4r9x3v1/setup.py'\"'\"';f=getattr(tokenize, '\"'\"'open'\"'\"', open)(__file__);code=f.read().replace('\"'\"'\\r\\n'\"'\"', '\"'\"'\\n'\"'\"');f.close();exec(compile(code, __file__, '\"'\"'exec'\"'\"'))' bdist_wheel -d /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionOS6aHG/.tmp/pip-wheel-8c8fwn4e\n       cwd: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionOS6aHG/.tmp/pip-req-build-o4r9x3v1/\n  Complete output (116 lines):\n  running bdist_wheel\n  running build\n  running build_py\n  creating build\n  creating build/lib.macosx-10.14.6-x86_64-3.8\n  creating build/lib.macosx-10.14.6-x86_64-3.8/regex\n  copying regex_3/__init__.py -> build/lib.macosx-10.14.6-x86_64-3.8/regex\n  copying regex_3/regex.py -> build/lib.macosx-10.14.6-x86_64-3.8/regex\n  copying regex_3/_regex_core.py -> build/lib.macosx-10.14.6-x86_64-3.8/regex\n  copying regex_3/test_regex.py -> build/lib.macosx-10.14.6-x86_64-3.8/regex\n  warning: build_py: byte-compiling is disabled, skipping.\n  \n  running build_ext\n  building 'regex._regex' extension\n  creating build/temp.macosx-10.14.6-x86_64-3.8\n  creating build/temp.macosx-10.14.6-x86_64-3.8/regex_3\n  xcrun -sdk macosx clang -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -iwithsysroot/System/Library/Frameworks/System.framework/PrivateHeaders -iwithsysroot/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/Headers -arch arm64 -arch x86_64 -I/Users/asher/.toolchain/homebrew/opt/openssl@1.1/include -I/Users/asher/.toolchain/homebrew/Cellar/zlib/1.2.11/include -I/Users/asher/.toolchain/homebrew/opt/sqlite/include -I/Users/asher/.toolchain/homebrew/Cellar/leveldb/1.22/include -I/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/include/python3.8 -c regex_3/_regex.c -o build/temp.macosx-10.14.6-x86_64-3.8/regex_3/_regex.o\n  In file included from regex_3/_regex.c:48:\n  In file included from /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/include/python3.8/Python.h:11:\n  In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/limits.h:21:\n  In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/limits.h:63:\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/cdefs.h:807:2: error: Unsupported architecture\n  #error Unsupported architecture\n   ^\n  In file included from regex_3/_regex.c:48:\n  In file included from /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/include/python3.8/Python.h:11:\n  In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/limits.h:21:\n  In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/limits.h:64:\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/machine/limits.h:8:2: error: architecture not supported\n  #error architecture not supported\n   ^\n  In file included from regex_3/_regex.c:48:\n  In file included from /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/include/python3.8/Python.h:25:\n  In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/stdio.h:64:\n  In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/_stdio.h:71:\n  In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/_types.h:27:\n  In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:33:\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/machine/_types.h:34:2: error: architecture not supported\n  #error architecture not supported\n   ^\n  In file included from regex_3/_regex.c:48:\n  In file included from /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/include/python3.8/Python.h:25:\n  In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/stdio.h:64:\n  In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/_stdio.h:71:\n  In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/_types.h:27:\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:55:9: error: unknown type name '__int64_t'\n  typedef __int64_t       __darwin_blkcnt_t;      /* total blocks */\n          ^\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:56:9: error: unknown type name '__int32_t'; did you mean '__int128_t'?\n  typedef __int32_t       __darwin_blksize_t;     /* preferred block size */\n          ^\n  note: '__int128_t' declared here\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:57:9: error: unknown type name '__int32_t'; did you mean '__int128_t'?\n  typedef __int32_t       __darwin_dev_t;         /* dev_t */\n          ^\n  note: '__int128_t' declared here\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:60:9: error: unknown type name '__uint32_t'; did you mean '__uint128_t'?\n  typedef __uint32_t      __darwin_gid_t;         /* [???] process and group IDs */\n          ^\n  note: '__uint128_t' declared here\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:61:9: error: unknown type name '__uint32_t'; did you mean '__uint128_t'?\n  typedef __uint32_t      __darwin_id_t;          /* [XSI] pid_t, uid_t, or gid_t*/\n          ^\n  note: '__uint128_t' declared here\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:62:9: error: unknown type name '__uint64_t'\n  typedef __uint64_t      __darwin_ino64_t;       /* [???] Used for 64 bit inodes */\n          ^\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:68:9: error: unknown type name '__darwin_natural_t'\n  typedef __darwin_natural_t __darwin_mach_port_name_t; /* Used by mach */\n          ^\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:70:9: error: unknown type name '__uint16_t'; did you mean '__uint128_t'?\n  typedef __uint16_t      __darwin_mode_t;        /* [???] Some file attributes */\n          ^\n  note: '__uint128_t' declared here\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:71:9: error: unknown type name '__int64_t'\n  typedef __int64_t       __darwin_off_t;         /* [???] Used for file sizes */\n          ^\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:72:9: error: unknown type name '__int32_t'; did you mean '__int128_t'?\n  typedef __int32_t       __darwin_pid_t;         /* [???] process and group IDs */\n          ^\n  note: '__int128_t' declared here\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:73:9: error: unknown type name '__uint32_t'; did you mean '__uint128_t'?\n  typedef __uint32_t      __darwin_sigset_t;      /* [???] signal set */\n          ^\n  note: '__uint128_t' declared here\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:74:9: error: unknown type name '__int32_t'; did you mean '__int128_t'?\n  typedef __int32_t       __darwin_suseconds_t;   /* [???] microseconds */\n          ^\n  note: '__int128_t' declared here\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:75:9: error: unknown type name '__uint32_t'; did you mean '__uint128_t'?\n  typedef __uint32_t      __darwin_uid_t;         /* [???] user IDs */\n          ^\n  note: '__uint128_t' declared here\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h:76:9: error: unknown type name '__uint32_t'; did you mean '__uint128_t'?\n  typedef __uint32_t      __darwin_useconds_t;    /* [???] microseconds */\n          ^\n  note: '__uint128_t' declared here\n  In file included from regex_3/_regex.c:48:\n  In file included from /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/include/python3.8/Python.h:25:\n  In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/stdio.h:64:\n  In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/_stdio.h:71:\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/_types.h:43:9: error: unknown type name '__uint32_t'; did you mean '__uint128_t'?\n  typedef __uint32_t      __darwin_wctype_t;\n          ^\n  note: '__uint128_t' declared here\n  In file included from regex_3/_regex.c:48:\n  In file included from /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/include/python3.8/Python.h:25:\n  In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/stdio.h:64:\n  In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/_stdio.h:75:\n  In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_va_list.h:31:\n  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/machine/types.h:37:2: error: architecture not supported\n  #error architecture not supported\n   ^\n  fatal error: too many errors emitted, stopping now [-ferror-limit=]\n  20 errors generated.\n  error: command 'xcrun' failed with exit status 1\n  ----------------------------------------\n  ERROR: Failed building wheel for regex\nERROR: Failed to build one or more wheels\nTraceback (most recent call last):\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.deps/pex-2.1.18-py2.py3-none-any.whl/pex/jobs.py\", line 359, in execute_parallel\n    yield spawn_result.spawned_job.await_result()\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.deps/pex-2.1.18-py2.py3-none-any.whl/pex/jobs.py\", line 165, in await_result\n    return self._result_func()\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.deps/pex-2.1.18-py2.py3-none-any.whl/pex/jobs.py\", line 133, in wait_result_func\n    job.wait()\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.deps/pex-2.1.18-py2.py3-none-any.whl/pex/jobs.py\", line 47, in wait\n    self._check_returncode()\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.deps/pex-2.1.18-py2.py3-none-any.whl/pex/jobs.py\", line 80, in _check_returncode\n    raise self.Error(\npex.jobs.Error: Executing /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/bin/python3.8 /Users/asher/.cache/pants/named_caches/pex_root/pip.pex/ec72136824dd8e0092f4a7408698f15949f8668d --disable-pip-version-check --no-python-version-warning --exists-action a --isolated -q --cache-dir /Users/asher/.cache/pants/named_caches/pex_root wheel --no-deps --wheel-dir /Users/asher/.cache/pants/named_caches/pex_root/built_wheels/sdists/regex-2020.10.11.tar.gz/db2392430c01658978f4aaae3d868501a1dac4e9/cp38-cp38.86e7bc0bc1f5436582150d5d90e3b223 /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionOS6aHG/.tmp/tmp4job833z/Applications.Xcode.app.Contents.Developer.Library.Frameworks.Python3.framework.Versions.3.8.bin.python3.8/regex-2020.10.11.tar.gz --index-url https://pypi.org/simple/ --header Cache-Control:max-age=3600 --retries 5 --timeout 15 failed with 1\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.bootstrap/pex/pex.py\", line 423, in execute\n    exit_code = self._wrap_coverage(self._wrap_profiling, self._execute)\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.bootstrap/pex/pex.py\", line 356, in _wrap_coverage\n    return runner(*args)\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.bootstrap/pex/pex.py\", line 387, in _wrap_profiling\n    return runner(*args)\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.bootstrap/pex/pex.py\", line 474, in _execute\n    return self.execute_entry(self._pex_info.entry_point)\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.bootstrap/pex/pex.py\", line 576, in execute_entry\n    return runner(entry_point)\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.bootstrap/pex/pex.py\", line 592, in execute_pkg_resources\n    return runner()\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.deps/pex-2.1.18-py2.py3-none-any.whl/pex/bin/pex.py\", line 1001, in main\n    pex_builder = build_pex(reqs, options, cache=ENV.PEX_ROOT)\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.deps/pex-2.1.18-py2.py3-none-any.whl/pex/bin/pex.py\", line 884, in build_pex\n    resolveds = resolve_multi(\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.deps/pex-2.1.18-py2.py3-none-any.whl/pex/resolver.py\", line 932, in resolve_multi\n    build_and_install_request.install_distributions(\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.deps/pex-2.1.18-py2.py3-none-any.whl/pex/resolver.py\", line 576, in install_distributions\n    for build_result in execute_parallel(\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.deps/pex-2.1.18-py2.py3-none-any.whl/pex/jobs.py\", line 340, in execute_parallel\n    raise error\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.deps/pex-2.1.18-py2.py3-none-any.whl/pex/jobs.py\", line 362, in execute_parallel\n    result = error_handler.handle_job_error(spawn_result.item, e)\n  File \"/Users/asher/.pex/unzipped_pexes/d8bfff1518d5d211d4ec95cf18305ff3939eef68/.deps/pex-2.1.18-py2.py3-none-any.whl/pex/jobs.py\", line 250, in handle_job_error\n    raise self._raise_type(self.job_error_message(item, job_error))\npex.resolver.Untranslatable: pid 66370 -> /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/bin/python3.8 /Users/asher/.cache/pants/named_caches/pex_root/pip.pex/ec72136824dd8e0092f4a7408698f15949f8668d --disable-pip-version-check --no-python-version-warning --exists-action a --isolated -q --cache-dir /Users/asher/.cache/pants/named_caches/pex_root wheel --no-deps --wheel-dir /Users/asher/.cache/pants/named_caches/pex_root/built_wheels/sdists/regex-2020.10.11.tar.gz/db2392430c01658978f4aaae3d868501a1dac4e9/cp38-cp38.86e7bc0bc1f5436582150d5d90e3b223 /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionOS6aHG/.tmp/tmp4job833z/Applications.Xcode.app.Contents.Developer.Library.Frameworks.Python3.framework.Versions.3.8.bin.python3.8/regex-2020.10.11.tar.gz --index-url https://pypi.org/simple/ --header Cache-Control:max-age=3600 --retries 5 --timeout 15 exited with 1 and STDERR:\nNone\n"
+            }
+        }
+    ]
+}

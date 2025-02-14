@@ -1,0 +1,32 @@
+{#
+Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "crawler/workunit_detail_base.html" %}
+
+{% block successful_workunit_detail_content_trs %}
+  {{ super() }}
+  <table>
+    <tr>
+      <td>Created at:</td>
+      <td>{{ object.created_at|datetime_fmt_std() }}</td>
+    </tr>
+    <tr>
+      <td>Serial:</td>
+      <td>{{ object.serial }}</td>
+    </tr>
+    <tr>
+      <td>Shards:</td>
+      <td>
+        <table>
+          {% for shard in shards %}
+            <tr>
+              <td><a href="{{ shard.process_by_shard_link }}">Shard {{ shard.shard_number }}</a></td>
+            </tr>
+          {% endfor %}
+        </table>
+      </td>
+    </tr>
+  </table>
+{% endblock successful_workunit_detail_content_trs %}

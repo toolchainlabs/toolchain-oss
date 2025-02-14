@@ -1,0 +1,266 @@
+{
+    "entries": [
+        {
+            "project": "timecast-nightly",
+            "version": "0.2.7.dev20200424182309",
+            "filename": "timecast_nightly-0.2.7.dev20200424182309-py3-none-any.whl",
+            "serial": 7095083
+        },
+        {
+            "project": "timecast-nightly",
+            "version": "0.2.7.dev20200424182309",
+            "filename": "timecast-nightly-0.2.7.dev20200424182309.tar.gz",
+            "serial": 7095084
+        },
+        {
+            "project": "kintyre-splunk-conf",
+            "version": "0.8b1",
+            "filename": "kintyre_splunk_conf-0.8b1-py2.py3-none-any.whl",
+            "serial": 7095088
+        },
+        {
+            "project": "kintyre-splunk-conf",
+            "version": "0.8b1",
+            "filename": "kintyre-splunk-conf-0.8b1.tar.gz",
+            "serial": 7095089
+        },
+        {
+            "project": "code42cli",
+            "version": "0.5.0",
+            "filename": "code42cli-0.5.0-py3-none-any.whl",
+            "serial": 7095091
+        },
+        {
+            "project": "code42cli",
+            "version": "0.5.0",
+            "filename": "code42cli-0.5.0.tar.gz",
+            "serial": 7095092
+        },
+        {
+            "project": "ccxt",
+            "version": "1.26.96",
+            "filename": "ccxt-1.26.96-py2.py3-none-any.whl",
+            "serial": 7095094
+        },
+        {
+            "project": "ccxt",
+            "version": "1.26.96",
+            "filename": "ccxt-1.26.96.tar.gz",
+            "serial": 7095095
+        },
+        {
+            "project": "temmeta",
+            "version": "0.0.3",
+            "filename": "temmeta-0.0.3-py3-none-any.whl",
+            "serial": 7095098
+        },
+        {
+            "project": "temmeta",
+            "version": "0.0.3",
+            "filename": "temmeta-0.0.3.tar.gz",
+            "serial": 7095099
+        }
+    ],
+    "distributions": [
+        {
+            "comment_text": "",
+            "digests": {
+                "md5": "e2223d2aa751f0ecc36324bc8b35b624",
+                "sha256": "8cf726af2a4841f25d62ec4d62c5947d391e798ed62c5b6a6f333ef0ed710cde"
+            },
+            "downloads": -1,
+            "filename": "timecast_nightly-0.2.7.dev20200424182309-py3-none-any.whl",
+            "has_sig": false,
+            "md5_digest": "e2223d2aa751f0ecc36324bc8b35b624",
+            "packagetype": "bdist_wheel",
+            "python_version": "py3",
+            "requires_python": ">=3.6",
+            "size": 40566,
+            "upload_time": "2020-04-24T18:23:10",
+            "upload_time_iso_8601": "2020-04-24T18:23:10.464808Z",
+            "url": "https://files.pythonhosted.org/packages/6e/22/2260272cc401d3881421ba0571dd4d5044f25d3b65ba65c464e0e283167e/timecast_nightly-0.2.7.dev20200424182309-py3-none-any.whl",
+            "yanked": false,
+            "dist_type": "WHEEL"
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "md5": "dd3ca27cf5cdf188f6967895be9eb00c",
+                "sha256": "85e8cc48861f576d3ec4df36a715c3862721b5e464f417fec278613904a20442"
+            },
+            "downloads": -1,
+            "filename": "timecast-nightly-0.2.7.dev20200424182309.tar.gz",
+            "has_sig": false,
+            "md5_digest": "dd3ca27cf5cdf188f6967895be9eb00c",
+            "packagetype": "sdist",
+            "python_version": "source",
+            "requires_python": ">=3.6",
+            "size": 24755,
+            "upload_time": "2020-04-24T18:23:11",
+            "upload_time_iso_8601": "2020-04-24T18:23:11.744195Z",
+            "url": "https://files.pythonhosted.org/packages/13/ff/0ed897f5a0ba32ffb9c0af99ebd6c4510441c8ed07089e617cbd420176d3/timecast-nightly-0.2.7.dev20200424182309.tar.gz",
+            "yanked": false,
+            "dist_type": "SDIST"
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "md5": "1def59a315d0543bacd7381477e0b482",
+                "sha256": "34074c3a011c604d405742c545a93d5a7f2015e5c2127f8536b461b40bec3c16"
+            },
+            "downloads": -1,
+            "filename": "kintyre_splunk_conf-0.8b1-py2.py3-none-any.whl",
+            "has_sig": false,
+            "md5_digest": "1def59a315d0543bacd7381477e0b482",
+            "packagetype": "bdist_wheel",
+            "python_version": "py2.py3",
+            "requires_python": ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*",
+            "size": 102098,
+            "upload_time": "2020-04-24T18:24:05",
+            "upload_time_iso_8601": "2020-04-24T18:24:05.799675Z",
+            "url": "https://files.pythonhosted.org/packages/6f/ab/4bfc6d75aaf7b4dac9bf2e3acc33f2f40af2f7184cfb83c2e2f2e8afa5be/kintyre_splunk_conf-0.8b1-py2.py3-none-any.whl",
+            "yanked": false,
+            "dist_type": "WHEEL"
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "md5": "1997cd8b93fd26d4719fc5327231ac87",
+                "sha256": "63891306f84fb15925fc263000e59dc6d3ac9e98dff4b46763b390ae8a8da680"
+            },
+            "downloads": -1,
+            "filename": "kintyre-splunk-conf-0.8b1.tar.gz",
+            "has_sig": false,
+            "md5_digest": "1997cd8b93fd26d4719fc5327231ac87",
+            "packagetype": "sdist",
+            "python_version": "source",
+            "requires_python": ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*",
+            "size": 81348,
+            "upload_time": "2020-04-24T18:24:07",
+            "upload_time_iso_8601": "2020-04-24T18:24:07.165820Z",
+            "url": "https://files.pythonhosted.org/packages/7e/af/9a92b643ff1740566168790a5ba6e0ff6f4161b56d90892eb6a0182471f9/kintyre-splunk-conf-0.8b1.tar.gz",
+            "yanked": false,
+            "dist_type": "SDIST"
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "md5": "5dd7e9ca9b0117fdb7ab1dfa2c0344de",
+                "sha256": "9b007320ee6e8dc27f244fa83672cda64cf0094816b201424a7b87a4c4c11a1c"
+            },
+            "downloads": -1,
+            "filename": "code42cli-0.5.0-py3-none-any.whl",
+            "has_sig": false,
+            "md5_digest": "5dd7e9ca9b0117fdb7ab1dfa2c0344de",
+            "packagetype": "bdist_wheel",
+            "python_version": "py3",
+            "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4",
+            "size": 39764,
+            "upload_time": "2020-04-24T18:24:19",
+            "upload_time_iso_8601": "2020-04-24T18:24:19.504630Z",
+            "url": "https://files.pythonhosted.org/packages/7c/f3/9c5ef9ab3c26b6938fe9593c1bd861fd7e1cc498481ca7cd841989d4ad61/code42cli-0.5.0-py3-none-any.whl",
+            "yanked": false,
+            "dist_type": "WHEEL"
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "md5": "70a1e02a14147eb9a588b41e7ec193b5",
+                "sha256": "b43cf512c0b9a41f8b81c61b1cf2657fb03eca736343925c8b0836b0f4fac155"
+            },
+            "downloads": -1,
+            "filename": "code42cli-0.5.0.tar.gz",
+            "has_sig": false,
+            "md5_digest": "70a1e02a14147eb9a588b41e7ec193b5",
+            "packagetype": "sdist",
+            "python_version": "source",
+            "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4",
+            "size": 33868,
+            "upload_time": "2020-04-24T18:24:20",
+            "upload_time_iso_8601": "2020-04-24T18:24:20.309451Z",
+            "url": "https://files.pythonhosted.org/packages/9e/20/32209e9619fe2026b7b8de4600ffdd54c70828c255b093c1052de3a22463/code42cli-0.5.0.tar.gz",
+            "yanked": false,
+            "dist_type": "SDIST"
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "md5": "c70fcaa4abba16c1874c65a643e525f9",
+                "sha256": "f10a501c38326e114814c1af7a0b6bbc9bdeb7a5f014b96a6aff4a962252639f"
+            },
+            "downloads": -1,
+            "filename": "ccxt-1.26.96-py2.py3-none-any.whl",
+            "has_sig": false,
+            "md5_digest": "c70fcaa4abba16c1874c65a643e525f9",
+            "packagetype": "bdist_wheel",
+            "python_version": "py2.py3",
+            "requires_python": null,
+            "size": 1521996,
+            "upload_time": "2020-04-24T18:25:42",
+            "upload_time_iso_8601": "2020-04-24T18:25:42.001565Z",
+            "url": "https://files.pythonhosted.org/packages/1d/14/bb52426206469ad3acbc64d5ee753558d2598beb96386565789d4c02b424/ccxt-1.26.96-py2.py3-none-any.whl",
+            "yanked": false,
+            "dist_type": "WHEEL"
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "md5": "9b39634540f294de6b2f1c406e8b0164",
+                "sha256": "0b35e177bfd5b4e37e512811359d5ead26524980da7199cc707b3e109df2caa6"
+            },
+            "downloads": -1,
+            "filename": "ccxt-1.26.96.tar.gz",
+            "has_sig": false,
+            "md5_digest": "9b39634540f294de6b2f1c406e8b0164",
+            "packagetype": "sdist",
+            "python_version": "source",
+            "requires_python": null,
+            "size": 1291222,
+            "upload_time": "2020-04-24T18:25:46",
+            "upload_time_iso_8601": "2020-04-24T18:25:46.082470Z",
+            "url": "https://files.pythonhosted.org/packages/07/dd/2e37e604bb89bac7fd895cc9c0fd1a4ceda37899763a579d50a77778ae5a/ccxt-1.26.96.tar.gz",
+            "yanked": false,
+            "dist_type": "SDIST"
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "md5": "4c98c4f871f9e350a88fd0367e1d2e52",
+                "sha256": "4fd7dd03acb6845b096cd6fe3dc75c2acf8ee2691df1cb2b4442b70d299f2247"
+            },
+            "downloads": -1,
+            "filename": "temmeta-0.0.3-py3-none-any.whl",
+            "has_sig": false,
+            "md5_digest": "4c98c4f871f9e350a88fd0367e1d2e52",
+            "packagetype": "bdist_wheel",
+            "python_version": "py3",
+            "requires_python": null,
+            "size": 142708,
+            "upload_time": "2020-04-24T18:26:01",
+            "upload_time_iso_8601": "2020-04-24T18:26:01.567182Z",
+            "url": "https://files.pythonhosted.org/packages/8a/f2/c2f9a72a2d8643b28d765e4255ee6e835a29fa84c3062a565bee15b5ed28/temmeta-0.0.3-py3-none-any.whl",
+            "yanked": false,
+            "dist_type": "WHEEL"
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "md5": "18a24eb22c6a340bdfd04bd772fc3c4c",
+                "sha256": "97f76879bcc6b5ae9f06413dcb759e44cae824ef6384813c3bfe882449b4d35e"
+            },
+            "downloads": -1,
+            "filename": "temmeta-0.0.3.tar.gz",
+            "has_sig": false,
+            "md5_digest": "18a24eb22c6a340bdfd04bd772fc3c4c",
+            "packagetype": "sdist",
+            "python_version": "source",
+            "requires_python": null,
+            "size": 64137,
+            "upload_time": "2020-04-24T18:26:03",
+            "upload_time_iso_8601": "2020-04-24T18:26:03.386510Z",
+            "url": "https://files.pythonhosted.org/packages/9e/f0/d0d6cf4c8a30d8af06a4bb5d22f081bcd648218d88e16a14faf6f5d18543/temmeta-0.0.3.tar.gz",
+            "yanked": false,
+            "dist_type": "SDIST"
+        }
+    ]
+}

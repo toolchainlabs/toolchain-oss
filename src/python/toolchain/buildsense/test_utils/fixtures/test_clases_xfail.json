@@ -1,0 +1,56 @@
+[
+    {
+        "tests": [
+            {
+                "name": "src.python.toolchain.aws.dynamodb_test",
+                "test_file_path": "test_clases_xfail.py",
+                "time": 2.89,
+                "tests": [
+                    {
+                        "name": "test_create_table",
+                        "time": 1.492,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_put_item",
+                        "time": 1.054,
+                        "outcome": "pass"
+                    },
+                    {
+                        "results": [
+                            {
+                                "message": "Not supported, see https://github.com/spulec/moto/blob/1db617a5309d2ac2fa3e6adc9fb3b90ed43c810a/moto/dynamodb2/models.py#L365"
+                            }
+                        ],
+                        "name": "test_update_item_no_map",
+                        "time": 0.137,
+                        "outcome": "xfail"
+                    },
+                    {
+                        "name": "test_update_item_empty_map",
+                        "time": 0.065,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_update_item_existing_with_new_version",
+                        "time": 0.069,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_update_item_existing_with_older_version",
+                        "time": 0.071,
+                        "outcome": "pass"
+                    }
+                ]
+            }
+        ],
+        "timing": {
+            "total": 2.89
+        },
+        "target": "test_clases_xfail.py",
+        "outputs": {
+            "stdout": "He stopped short?",
+            "stderr": "Three squares? You can\u2019t spare three squares?"
+        }
+    }
+]

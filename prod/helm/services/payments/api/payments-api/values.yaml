@@ -1,0 +1,14 @@
+# Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: payments-api
+toolchain_product_name: payments
+service_name: payments/api
+gunicorn_image_rev:
+  us-east-1: prod-2023-04-10.12-32-01-4608ef798597
+dbs: [users, payments]
+has_static_files: false
+service_type: api
+iam_service_role_arn: null  # set by deploy script
+secrets:
+- stripe-integration

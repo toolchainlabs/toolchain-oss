@@ -1,0 +1,353 @@
+{
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 31.09601616859436,
+            "is_tool": false
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 1164,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 11899
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "log_levels_by_target": {},
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "tag": [],
+            "verify_config": true
+        },
+        "coverage-py": {
+            "config": null,
+            "entry_point": "coverage",
+            "extra_requirements": [],
+            "filter": [],
+            "interpreter_constraints": [
+                "CPython>=3.8,<4"
+            ],
+            "output_dir": "dist/coverage/python",
+            "report": [
+                "xml"
+            ],
+            "version": "coverage>=5.0.3,<5.1"
+        },
+        "pytest": {
+            "args": [],
+            "execution_slot_var": null,
+            "junit_family": "xunit2",
+            "junit_xml_dir": null,
+            "pytest_plugins": [
+                "pytest-cov>=2.10.1,<2.11",
+                "zipp==2.1.0",
+                "pygments",
+                "pytest-icdiff"
+            ],
+            "timeout_default": null,
+            "timeout_maximum": null,
+            "timeouts": true,
+            "version": "pytest==6.1.2"
+        },
+        "python-setup": {
+            "interpreter_constraints": [
+                "CPython>=3.8,<4"
+            ],
+            "interpreter_search_paths": [
+                "<PYENV>",
+                "<PATH>"
+            ],
+            "requirement_constraints": "3rdparty/python/constraints.txt",
+            "resolve_all_constraints": "nondeployables",
+            "resolver_http_cache_ttl": 3600,
+            "resolver_jobs": 1,
+            "resolver_manylinux": "manylinux2014"
+        },
+        "test": {
+            "debug": false,
+            "extra_env_vars": [],
+            "force": false,
+            "open_coverage": false,
+            "output": "failed",
+            "use_coverage": true
+        }
+    },
+    "run_info": {
+        "id": "pants_run_2020_11_24_13_29_28_407_1beb88f3e63d44c9b715847d8914a6eb",
+        "timestamp": "1606253368.4070442",
+        "datetime": "Tuesday Nov 24, 2020 13:29:28",
+        "user": "asher",
+        "machine": "Ashers-MacBook-Pro.local",
+        "path": "/Users/asher/projects/toolchain",
+        "buildroot": "/Users/asher/projects/toolchain",
+        "version": "2.1.0rc3",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.1.0rc3 test --use-coverage --coverage-py-report=['xml'] src/python/toolchain/servicerouter/::",
+        "specs_from_command_line": [
+            "src/python/toolchain/servicerouter::"
+        ],
+        "outcome": "SUCCESS",
+        "revision": "dc94db8da7f22ec79142b30eb0a647053d7a48a3",
+        "branch": "yev",
+        "computed_goals": [
+            "test"
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "87749510b979eede",
+            "name": "select",
+            "state": "finished",
+            "version": 24,
+            "parent_id": null,
+            "last_update": 1606253398,
+            "start_usecs": 1606253368499239,
+            "end_usecs": 1606253398024011
+        },
+        {
+            "workunit_id": "4853aaad5cae3659",
+            "name": "pants.core.goals.test.run_tests",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "87749510b979eede",
+            "last_update": 1606253398,
+            "start_usecs": 1606253368500364,
+            "description": "`test` goal",
+            "end_usecs": 1606253398023851
+        },
+        {
+            "workunit_id": "55e6c6e2aaa6e6ed",
+            "name": "pants.core.goals.test.enrich_test_result",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "4853aaad5cae3659",
+            "last_update": 1606253398,
+            "start_usecs": 1606253368563036,
+            "description": "test",
+            "end_usecs": 1606253388158864
+        },
+        {
+            "workunit_id": "cb662b29a5b46d6e",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "55e6c6e2aaa6e6ed",
+            "last_update": 1606253398,
+            "start_usecs": 1606253368563084,
+            "description": "Run Pytest",
+            "end_usecs": 1606253388158448
+        },
+        {
+            "workunit_id": "48c3f3f3af0f8f12",
+            "name": "pants.core.goals.test.enrich_test_result",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "4853aaad5cae3659",
+            "last_update": 1606253398,
+            "start_usecs": 1606253368563181,
+            "description": "test",
+            "end_usecs": 1606253388976008
+        },
+        {
+            "workunit_id": "9533c6eabe1d9908",
+            "name": "pants.core.goals.test.enrich_test_result",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "4853aaad5cae3659",
+            "last_update": 1606253398,
+            "start_usecs": 1606253368563268,
+            "description": "test",
+            "end_usecs": 1606253389338035
+        },
+        {
+            "workunit_id": "4a532c452df67ab8",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "48c3f3f3af0f8f12",
+            "last_update": 1606253398,
+            "start_usecs": 1606253368563308,
+            "description": "Run Pytest",
+            "end_usecs": 1606253388975874
+        },
+        {
+            "workunit_id": "a6feb0daf43b4e7f",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "9533c6eabe1d9908",
+            "last_update": 1606253398,
+            "start_usecs": 1606253368563408,
+            "description": "Run Pytest",
+            "end_usecs": 1606253389337945
+        },
+        {
+            "workunit_id": "96f6a7db93c17036",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "a6feb0daf43b4e7f",
+            "last_update": 1606253398,
+            "start_usecs": 1606253378296970,
+            "end_usecs": 1606253389337458
+        },
+        {
+            "workunit_id": "1fff595656b8be03",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "cb662b29a5b46d6e",
+            "last_update": 1606253398,
+            "start_usecs": 1606253378296978,
+            "end_usecs": 1606253388155709
+        },
+        {
+            "workunit_id": "cdb3d7622a4cd451",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "4a532c452df67ab8",
+            "last_update": 1606253398,
+            "start_usecs": 1606253378297125,
+            "end_usecs": 1606253388975150
+        },
+        {
+            "workunit_id": "8b2508663e482d8a",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "1fff595656b8be03",
+            "last_update": 1606253398,
+            "start_usecs": 1606253378298003,
+            "description": "Run Pytest for src/python/toolchain/servicerouter/views_test.py:tests",
+            "end_usecs": 1606253388155283
+        },
+        {
+            "workunit_id": "73f3ab42ee7ebc58",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "96f6a7db93c17036",
+            "last_update": 1606253398,
+            "start_usecs": 1606253378298025,
+            "description": "Run Pytest for src/python/toolchain/servicerouter/config_test.py:tests",
+            "end_usecs": 1606253389337237
+        },
+        {
+            "workunit_id": "04a4019340a76318",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "cdb3d7622a4cd451",
+            "last_update": 1606253398,
+            "start_usecs": 1606253378298046,
+            "description": "Run Pytest for src/python/toolchain/servicerouter/services_router_test.py:tests",
+            "end_usecs": 1606253388974784
+        },
+        {
+            "workunit_id": "8c3402b4edfe1c55",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "8b2508663e482d8a",
+            "last_update": 1606253398,
+            "start_usecs": 1606253378298128,
+            "description": "(Waiting) Run Pytest for src/python/toolchain/servicerouter/views_test.py:tests",
+            "end_usecs": 1606253388154967
+        },
+        {
+            "workunit_id": "40d98c268f308564",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "8c3402b4edfe1c55",
+            "last_update": 1606253398,
+            "start_usecs": 1606253378298139,
+            "description": "Run Pytest for src/python/toolchain/servicerouter/views_test.py:tests",
+            "end_usecs": 1606253388154919,
+            "counters": {
+                "local_execution_requests": 1
+            },
+            "metadata": {
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.5, pytest-6.1.2, py-1.9.0, pluggy-0.13.1\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionfJGXzP\nplugins: cov-2.10.1, icdiff-0.5, django-4.1.0\ncollected 5 items\n\nsrc/python/toolchain/servicerouter/views_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                   [100%]\u001b[0m\n\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m5 passed\u001b[0m\u001b[32m in 3.38s\u001b[0m\u001b[32m ===============================\u001b[0m\n"
+            }
+        },
+        {
+            "workunit_id": "11589335cd7d315e",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "73f3ab42ee7ebc58",
+            "last_update": 1606253398,
+            "start_usecs": 1606253378298672,
+            "description": "(Waiting) Run Pytest for src/python/toolchain/servicerouter/config_test.py:tests",
+            "end_usecs": 1606253389336799
+        },
+        {
+            "workunit_id": "e68dea812b5eeceb",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "11589335cd7d315e",
+            "last_update": 1606253398,
+            "start_usecs": 1606253378298681,
+            "description": "Run Pytest for src/python/toolchain/servicerouter/config_test.py:tests",
+            "end_usecs": 1606253389336782,
+            "counters": {
+                "local_execution_requests": 1
+            },
+            "metadata": {
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.5, pytest-6.1.2, py-1.9.0, pluggy-0.13.1\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionC34dVV\nplugins: cov-2.10.1, icdiff-0.5, django-4.1.0\ncollected 11 items\n\nsrc/python/toolchain/servicerouter/config_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m            [100%]\u001b[0m\n\n\u001b[33m=============================== warnings summary ===============================\u001b[0m\nsrc/python/toolchain/servicerouter/config_test.py::TestStaticContentConfig::test_for_prod\n  /Users/asher/.cache/pants/named_caches/pex_root/installed_wheels/83a24cae78f4e371354f9197c4c7a337be93fd41/boto-2.49.0-py2.py3-none-any.whl/boto/plugin.py:40: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses\n    import imp\n\n-- Docs: https://docs.pytest.org/en/stable/warnings.html\n\n\n\u001b[33m======================== \u001b[32m11 passed\u001b[0m, \u001b[33m\u001b[1m1 warning\u001b[0m\u001b[33m in 4.67s\u001b[0m\u001b[33m =========================\u001b[0m\n"
+            }
+        },
+        {
+            "workunit_id": "bbd6564213c31106",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "04a4019340a76318",
+            "last_update": 1606253398,
+            "start_usecs": 1606253378298878,
+            "description": "(Waiting) Run Pytest for src/python/toolchain/servicerouter/services_router_test.py:tests",
+            "end_usecs": 1606253388974080
+        },
+        {
+            "workunit_id": "6108eaaea0ebd806",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "bbd6564213c31106",
+            "last_update": 1606253398,
+            "start_usecs": 1606253378298891,
+            "description": "Run Pytest for src/python/toolchain/servicerouter/services_router_test.py:tests",
+            "end_usecs": 1606253388974061,
+            "counters": {
+                "local_execution_requests": 1
+            },
+            "metadata": {
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.5, pytest-6.1.2, py-1.9.0, pluggy-0.13.1\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionmtFVWj\nplugins: cov-2.10.1, icdiff-0.5, django-4.1.0\ncollected 9 items\n\nsrc/python/toolchain/servicerouter/services_router_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m     [100%]\u001b[0m\n\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m9 passed\u001b[0m\u001b[32m in 4.21s\u001b[0m\u001b[32m ===============================\u001b[0m\n"
+            }
+        },
+        {
+            "workunit_id": "8b186f5d508be631",
+            "name": "pants.backend.python.goals.coverage_py.generate_coverage_reports",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "4853aaad5cae3659",
+            "last_update": 1606253398,
+            "start_usecs": 1606253389341195,
+            "description": "Generate Pytest coverage reports",
+            "end_usecs": 1606253398022540
+        }
+    ]
+}

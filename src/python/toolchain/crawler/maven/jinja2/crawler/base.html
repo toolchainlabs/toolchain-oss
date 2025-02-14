@@ -1,0 +1,19 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'maven/base.html' %}
+
+{% block navbar_left %}
+  {{ super() }}
+  <li id="nav-maven" class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    Indexer
+  </a>
+    <ul class="dropdown-menu">
+{#      <li><a href="{{ url('crawler:invoke_indexer') }}">Invoke</a></li>#}
+{#      <li><a href="{{ url('crawler:browse') }}">Browse</a></li>#}
+    </ul>
+  </li>
+{% endblock navbar_left %}

@@ -1,0 +1,615 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TestResultsWithStdout /> should render component 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1z0dvx8-MuiGrid-root"
+    >
+      <div
+        class="MuiBox-root css-uib1a"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root css-1lrgk0g-MuiFormControl-root-MuiTextField-root"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-clbu77-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="false"
+              for="search-file"
+              id="search-file-label"
+            >
+              Search file
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-gdz92u-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                id="search-file"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1tsghma-MuiGrid-root"
+    >
+      <div
+        class="MuiBox-root css-4vupcw"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-cgaf1q-MuiTypography-root"
+            >
+              Total: 1 Target
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1tsghma-MuiGrid-root"
+    >
+      <div
+        class="MuiBox-root css-1nymdl2"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-sv7hz0-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-66ekzl-MuiSvgIcon-root"
+                  data-testid="SortIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTypography-root MuiTypography-button3 css-2goe5j-MuiTypography-root"
+              >
+                SORT: FAILED FIRST
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-label="grid"
+    aria-readonly="true"
+    class="ReactVirtualized__Grid ReactVirtualized__List"
+    role="grid"
+    style="box-sizing: border-box; direction: ltr; height: auto; position: relative; width: 850px; will-change: transform; overflow-x: hidden; overflow-y: hidden;"
+    tabindex="0"
+  >
+    <div
+      class="ReactVirtualized__Grid__innerScrollContainer"
+      role="rowgroup"
+      style="width: auto; height: 24px; max-width: 850px; max-height: 24px; overflow: hidden; position: relative;"
+    >
+      <div
+        style="height: 24px; left: 0px; position: absolute; top: 0px; width: 100%;"
+      >
+        <div
+          style="opacity: 1;"
+        >
+          <div
+            class="MuiBox-root css-0"
+          >
+            <div
+              class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qhl3v6-MuiCollapse-root"
+              style="min-height: 0px;"
+            >
+              <div
+                class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+              >
+                <div
+                  class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                >
+                  <div
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-cqph87-MuiPaper-root-MuiCard-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-x9mjaw-MuiGrid-root"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                          >
+                            <div
+                              class="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-outlinedDefault css-14bs0sr-MuiChip-root"
+                            >
+                              <svg
+                                class="MuiSvgIcon-root MuiSvgIcon-colorError MuiSvgIcon-fontSizeMedium css-1jdtjv1-MuiSvgIcon-root"
+                                data-testid="ErrorOutlineIcon"
+                                focusable="false"
+                                role="img"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                                />
+                                <title>
+                                  FAILURE
+                                </title>
+                              </svg>
+                              <span
+                                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                              >
+                                <p
+                                  class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+                                >
+                                  Failed
+                                </p>
+                              </span>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid-root MuiGrid-item css-1g4wkug-MuiGrid-root"
+                          >
+                            <h6
+                              class="MuiTypography-root MuiTypography-subtitle1 css-mzn4b3-MuiTypography-root"
+                            >
+                              first/target
+                            </h6>
+                          </div>
+                          <div
+                            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                          >
+                            <div
+                              class="MuiBox-root css-1714fjk"
+                            >
+                              <span
+                                class="MuiTypography-root MuiTypography-caption css-1yn6huv-MuiTypography-root"
+                                data-testid="timing"
+                              >
+                                1.20s
+                              </span>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                          >
+                            <button
+                              aria-label="Copy direct link"
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeLarge css-ql2c-MuiButtonBase-root-MuiIconButton-root"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1pe1w7m-MuiSvgIcon-root"
+                                data-testid="LinkIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"
+                                />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                      >
+                        <div
+                          class="MuiTableContainer-root css-rorn0c-MuiTableContainer-root"
+                        >
+                          <table
+                            aria-label="table"
+                            class="MuiTable-root css-31ecur-MuiTable-root"
+                            role="grid"
+                          >
+                            <thead
+                              class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+                            >
+                              <tr
+                                class="MuiTableRow-root MuiTableRow-head css-a9ccr5-MuiTableRow-root"
+                              >
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-15b2l11-MuiTableCell-root"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-overline css-lje11y-MuiTypography-root"
+                                  >
+                                    TEST NAME
+                                  </span>
+                                </td>
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-15b2l11-MuiTableCell-root"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-overline css-lje11y-MuiTypography-root"
+                                  >
+                                    OUTCOME
+                                  </span>
+                                </td>
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-15b2l11-MuiTableCell-root"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-overline css-lje11y-MuiTypography-root"
+                                  >
+                                    DURATION
+                                  </span>
+                                </td>
+                              </tr>
+                            </thead>
+                            <tbody
+                              class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+                            >
+                              <tr
+                                class="MuiTableRow-root css-a9ccr5-MuiTableRow-root"
+                              >
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1wjrcoi-MuiTableCell-root"
+                                >
+                                  first/first test
+                                </td>
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1wjrcoi-MuiTableCell-root"
+                                >
+                                  <div
+                                    class="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-outlinedDefault css-ia8xr3-MuiChip-root"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-colorSuccess MuiSvgIcon-fontSizeMedium pass css-fdba4v-MuiSvgIcon-root"
+                                      data-testid="DoneAllIcon"
+                                      focusable="false"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 7-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41 6 19l1.41-1.41L1.83 12 .41 13.41z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                                    >
+                                      <p
+                                        class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+                                      >
+                                        Passed
+                                      </p>
+                                    </span>
+                                  </div>
+                                </td>
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1wjrcoi-MuiTableCell-root"
+                                >
+                                  0.88s
+                                </td>
+                              </tr>
+                              <tr
+                                class="MuiTableRow-root css-a9ccr5-MuiTableRow-root"
+                              >
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1wjrcoi-MuiTableCell-root"
+                                >
+                                  first/second test
+                                </td>
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1wjrcoi-MuiTableCell-root"
+                                >
+                                  <div
+                                    class="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-outlinedDefault css-ia8xr3-MuiChip-root"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-colorWarning MuiSvgIcon-fontSizeMedium xfail css-17qdulj-MuiSvgIcon-root"
+                                      data-testid="RadioButtonUncheckedIcon"
+                                      focusable="false"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                                    >
+                                      <p
+                                        class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+                                      >
+                                        Xfailed
+                                      </p>
+                                    </span>
+                                  </div>
+                                </td>
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1wjrcoi-MuiTableCell-root"
+                                >
+                                  0.4s
+                                </td>
+                              </tr>
+                              <tr
+                                class="MuiTableRow-root css-a9ccr5-MuiTableRow-root"
+                              >
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1wjrcoi-MuiTableCell-root"
+                                  colspan="3"
+                                >
+                                  <div
+                                    class="MuiBox-root css-79elbk"
+                                  >
+                                    <div>
+                                      <div
+                                        class="MuiBox-root css-ahvjxf"
+                                      >
+                                        <div
+                                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                                        >
+                                          <div
+                                            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                          >
+                                            <h6
+                                              class="MuiTypography-root MuiTypography-subtitle2 css-1rteddc-MuiTypography-root"
+                                            >
+                                              random message
+                                            </h6>
+                                          </div>
+                                          <div
+                                            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                          >
+                                            <p
+                                              class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+                                            >
+                                              random text
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr
+                                class="MuiTableRow-root css-a9ccr5-MuiTableRow-root"
+                              >
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1wjrcoi-MuiTableCell-root"
+                                >
+                                  first/third test
+                                </td>
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1wjrcoi-MuiTableCell-root"
+                                >
+                                  <div
+                                    class="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-outlinedDefault css-ia8xr3-MuiChip-root"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-colorError MuiSvgIcon-fontSizeMedium error css-1jdtjv1-MuiSvgIcon-root"
+                                      data-testid="CancelIcon"
+                                      focusable="false"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                                      />
+                                    </svg>
+                                    <span
+                                      class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                                    >
+                                      <p
+                                        class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+                                      >
+                                        Error
+                                      </p>
+                                    </span>
+                                  </div>
+                                </td>
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1wjrcoi-MuiTableCell-root"
+                                >
+                                  0.1s
+                                </td>
+                              </tr>
+                              <tr
+                                class="MuiTableRow-root css-a9ccr5-MuiTableRow-root"
+                              >
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1wjrcoi-MuiTableCell-root"
+                                  colspan="3"
+                                >
+                                  <div
+                                    class="MuiBox-root css-79elbk"
+                                  >
+                                    <div>
+                                      <div
+                                        class="MuiBox-root css-ahvjxf"
+                                      >
+                                        <div
+                                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                                        >
+                                          <div
+                                            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                          >
+                                            <h6
+                                              class="MuiTypography-root MuiTypography-subtitle2 css-1rteddc-MuiTypography-root"
+                                            >
+                                              some random message three
+                                            </h6>
+                                          </div>
+                                          <div
+                                            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                          >
+                                            <p
+                                              class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+                                            >
+                                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iste autem porro ullam culpa dolorem, nobis quae? Repellat eius fugit labore ipsum esse laudantium! A, expedita! Explicabo repellat vero, id dolores quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iste autem porro ullam culpa dolorem, nobis quae? Repellat eius fugit labore ipsum esse laudantium! A, expedita! Explicabo repellat vero, id dolores quo ,Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iste autem porro ullam culpa dolorem, nobis quae? Repellat eius fugit labore ipsum esse laudantium! A, expedita! Explicabo repellat vero, id dolores quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iste autem porro ullam culpa dolorem, nobis quae? Repellat eius fugit labore ipsum esse laudantium! A, expedita! Explicabo repellat vero, id dolores quo, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iste autem porro ullam culpa dolorem, nobis quae? Repellat eius fugit labore ipsum esse laudantium! A, expedita! Explicabo repellat vero, id dolores quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iste autem porro ullam culpa dolorem, nobis quae? Repellat eius fugit labore ipsum esse laudantium! A, expedita! Explicabo repellat vero, id dolores quo, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iste autem porro ullam culpa dolorem, nobis quae? Repellat eius fugit labore ipsum esse laudantium! A, expedita! Explicabo repellat vero, id dolores quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iste autem porro ullam culpa dolorem, nobis quae? Repellat eius fugit labore ipsum esse laudantium! A, expedita! Explicabo repellat vero, id dolores quo, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iste autem porro ullam culpa dolorem, nobis quae? Repellat eius fugit labore ipsum esse laudantium! A, expedita! Explicabo repellat vero, id dolores quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iste autem porro ullam culpa dolorem, nobis quae? Repellat eius fugit labore ipsum esse laudantium! A, expedita! Explicabo repellat vero, id dolores quo, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iste autem porro ullam culpa dolorem, nobis quae? Repellat eius fugit labore ipsum esse laudantium! A, expedita! Explicabo repellat vero, id dolores quo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iste autem porro ullam culpa dolorem, nobis quae? Repellat eius fugit labore ipsum esse laudantium! A, expedita! Explicabo repellat vero, id dolores quo
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr
+                                class="MuiTableRow-root css-a9ccr5-MuiTableRow-root"
+                              >
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1wjrcoi-MuiTableCell-root"
+                                >
+                                  first/random11
+                                </td>
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1wjrcoi-MuiTableCell-root"
+                                />
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1wjrcoi-MuiTableCell-root"
+                                >
+                                  0.7s
+                                </td>
+                              </tr>
+                            </tbody>
+                            <tfoot
+                              class="MuiTableFooter-root css-9cgc89-MuiTableFooter-root"
+                            >
+                              <tr
+                                class="MuiTableRow-root MuiTableRow-footer css-pkh10g-MuiTableRow-root"
+                              >
+                                <td
+                                  class="MuiTableCell-root MuiTableCell-footer MuiTableCell-sizeMedium css-tpx2nb-MuiTableCell-root"
+                                  colspan="3"
+                                >
+                                  <div
+                                    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                                  >
+                                    <p
+                                      class="MuiTypography-root MuiTypography-body2 error css-z3z6ku-MuiTypography-root"
+                                    >
+                                      1 Error
+                                    </p>
+                                    <p
+                                      class="MuiTypography-root MuiTypography-body2 css-mmiln5-MuiTypography-root"
+                                    >
+                                      ,
+                                    </p>
+                                    <p
+                                      class="MuiTypography-root MuiTypography-body2 xfail css-z3z6ku-MuiTypography-root"
+                                    >
+                                      1 Xfailed
+                                    </p>
+                                    <p
+                                      class="MuiTypography-root MuiTypography-body2 css-mmiln5-MuiTypography-root"
+                                    >
+                                      ,
+                                    </p>
+                                    <p
+                                      class="MuiTypography-root MuiTypography-body2 css-mmiln5-MuiTypography-root"
+                                    >
+                                      and
+                                    </p>
+                                    <p
+                                      class="MuiTypography-root MuiTypography-body2 pass css-z3z6ku-MuiTypography-root"
+                                    >
+                                      1 Passed
+                                    </p>
+                                    <p
+                                      class="MuiTypography-root MuiTypography-body2 css-1016g6e-MuiTypography-root"
+                                    >
+                                      tests
+                                    </p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                        </div>
+                        <div
+                          class="MuiBox-root css-1ebprri"
+                        >
+                          <div
+                            class="MuiBox-root css-79elbk"
+                          >
+                            <div>
+                              <div
+                                class="MuiBox-root css-12apzzu"
+                              >
+                                <code>
+                                  <span>
+                                    output-1
+                                  </span>
+                                </code>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-container css-12b495a-MuiGrid-root"
+                          >
+                            <button
+                              aria-label="Collapse text"
+                              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-15zi2l3-MuiButtonBase-root-MuiButton-root"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1pe1w7m-MuiSvgIcon-root"
+                                data-testid="KeyboardArrowUpIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                                />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

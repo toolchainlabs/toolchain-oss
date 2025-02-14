@@ -1,0 +1,13 @@
+[GLOBAL]
+remote_cache_read = true
+remote_cache_write = true
+
+[auth]
+auth_file = ".pants.d/toolchain_auth/auth-dev.json"
+
+[toolchain-setup]
+org = "seinfeld"
+base_url = "http://localhost:9500"
+
+[buildsense]
+timeout = 20

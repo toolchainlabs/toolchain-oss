@@ -1,0 +1,25 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "crawler/workunit_detail_base.html" %}
+
+{% block successful_workunit_detail_content_trs %}
+  {{ super() }}
+  <tr>
+    <td>Parent POM:</td>
+    <td>
+      {% if object.web_resource.pom.parent %}
+        <a href="{{ view.locateparentpom_detail_url(object.web_resource.pom.parent) }}">
+          {{ object.web_resource.pom.parent.web_resource.url }}
+        </a>
+      {% else %}
+        -
+      {% endif %}
+    </td>
+  </tr>
+  <tr>
+    <td></td><td><a href="{{ url('maven:pom_detail', kwargs={'pk': object.web_resource.pom.pk}) }}">POM Details</a></td>
+  </tr>
+{% endblock successful_workunit_detail_content_trs %}

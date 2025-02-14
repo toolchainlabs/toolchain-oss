@@ -1,0 +1,135 @@
+[
+    {
+        "name": "pants.engine.process.remove_platform_information",
+        "span_id": "215556a93bfa3137",
+        "level": "DEBUG",
+        "parent_id": "9d8469f373ddddba",
+        "start_secs": 1597097290,
+        "start_nanos": 788494000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.upcast_process",
+        "span_id": "ddb15dc2e6b1d1e9",
+        "level": "DEBUG",
+        "parent_id": "215556a93bfa3137",
+        "start_secs": 1597097290,
+        "start_nanos": 788536000,
+        "duration_secs": 0,
+        "duration_nanos": 76000,
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process",
+        "span_id": "ecc6e8d28b6dc3cd",
+        "level": "DEBUG",
+        "parent_id": "215556a93bfa3137",
+        "start_secs": 1597097290,
+        "start_nanos": 788774000,
+        "description": "Run Pytest for src/python/toolchain/aws:tests",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-waiting",
+        "span_id": "778331fc8cc15bfe",
+        "level": "DEBUG",
+        "parent_id": "ecc6e8d28b6dc3cd",
+        "start_secs": 1597097290,
+        "start_nanos": 789860000,
+        "description": "Run Pytest for src/python/toolchain/aws:tests",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-running",
+        "span_id": "02ea4d08ed4d0463",
+        "level": "INFO",
+        "parent_id": "778331fc8cc15bfe",
+        "start_secs": 1597097290,
+        "start_nanos": 789867000,
+        "description": "Run Pytest for src/python/toolchain/aws:tests",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-running",
+        "span_id": "e78e0cab2022f3d4",
+        "level": "INFO",
+        "parent_id": "e9dc86fb9244370a",
+        "start_secs": 1597097238,
+        "start_nanos": 741805000,
+        "duration_secs": 52,
+        "duration_nanos": 42666000,
+        "description": "Building requirements.pex with 8 requirements: Django==3.0.9, boto3==1.14.38, botocore==1.17.38, django-prometheus==2.1.0.dev61, fasteners==0.15.0, moto==1.3.15.dev1023, pytest==6.0.1, shortuuid==1.0.1",
+        "artifacts": {
+            "stdout": "",
+            "stderr": ""
+        }
+    },
+    {
+        "name": "multi_platform_process-waiting",
+        "span_id": "e9dc86fb9244370a",
+        "level": "DEBUG",
+        "parent_id": "424378522fc40b37",
+        "start_secs": 1597097238,
+        "start_nanos": 741776000,
+        "duration_secs": 52,
+        "duration_nanos": 42822000,
+        "description": "Building requirements.pex with 8 requirements: Django==3.0.9, boto3==1.14.38, botocore==1.17.38, django-prometheus==2.1.0.dev61, fasteners==0.15.0, moto==1.3.15.dev1023, pytest==6.0.1, shortuuid==1.0.1",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process",
+        "span_id": "424378522fc40b37",
+        "level": "DEBUG",
+        "parent_id": "8627478dfe56f89b",
+        "start_secs": 1597097238,
+        "start_nanos": 737543000,
+        "duration_secs": 52,
+        "duration_nanos": 48254000,
+        "description": "Building requirements.pex with 8 requirements: Django==3.0.9, boto3==1.14.38, botocore==1.17.38, django-prometheus==2.1.0.dev61, fasteners==0.15.0, moto==1.3.15.dev1023, pytest==6.0.1, shortuuid==1.0.1",
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.remove_platform_information",
+        "span_id": "8627478dfe56f89b",
+        "level": "DEBUG",
+        "parent_id": "cf10649a23fddf0c",
+        "start_secs": 1597097238,
+        "start_nanos": 736635000,
+        "duration_secs": 52,
+        "duration_nanos": 49500000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+        "span_id": "cf10649a23fddf0c",
+        "level": "DEBUG",
+        "parent_id": "6467e503890a02b6",
+        "start_secs": 1597097238,
+        "start_nanos": 736522000,
+        "duration_secs": 52,
+        "duration_nanos": 49682000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.backend.python.rules.pex.create_pex",
+        "span_id": "6467e503890a02b6",
+        "level": "DEBUG",
+        "parent_id": "e241453d86ee32cd",
+        "start_secs": 1597097238,
+        "start_nanos": 675090000,
+        "duration_secs": 52,
+        "duration_nanos": 111326000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.backend.python.rules.pytest_runner.setup_pytest_for_target",
+        "span_id": "e241453d86ee32cd",
+        "level": "DEBUG",
+        "parent_id": "9d8469f373ddddba",
+        "start_secs": 1597097236,
+        "start_nanos": 585509000,
+        "duration_secs": 54,
+        "duration_nanos": 202554000,
+        "artifacts": {}
+    }
+]

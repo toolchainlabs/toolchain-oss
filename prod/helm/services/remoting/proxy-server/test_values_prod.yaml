@@ -1,0 +1,60 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+replicas: 1
+image_registry: jerry.com
+toolchain_env: toolchain_prod
+iam_service_role_arn: arn::bob::jerry.nbc-seinfeld.cosmo
+global:
+  region: us-east-1
+image_rev: 
+  us-east-1: seinfeld
+proxy_backends:
+  storage:
+    connections: 1
+    host: "martin.van.nostrand"
+    port: 50051
+  execution:
+    connections: 1
+    host: null
+    port: 50051
+  pothole_execution:
+    connections: 1000
+    host: "burghardt.cluster.local"
+    port: 50051
+proxy_per_instance_backends:
+  abcd1234instance:
+    action_cache: storage
+    cas: storage
+    execution: pothole_execution
+
+workers_ingress:
+  host: bobby.workers.toolchain.com
+  cert_arn: no-soup-for-you
+
+ingress:
+  name: remoting-proxy-server
+  enabled: true
+  logs_prefix: crab-bisque
+  ssl_redirect_enabled: false
+  backend_protocol_version: GRPC
+  scheme: internet-facing
+  listen_ports: '[{"HTTPS": 443}]'
+  extra_attributes: routing.http2.enabled=true,idle_timeout.timeout_seconds=900
+  external_ingress_sg_id: 
+    us-east-1: puffy
+  ssl_certificate_arn:  
+    us-east-1: shirt
+  healthcheck_path: /healthz
+  rules:
+    - host: "jerry.com"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: remoting-proxy-server
+                port: 
+                  number: 8980
+
+   

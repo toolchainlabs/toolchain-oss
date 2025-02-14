@@ -1,0 +1,863 @@
+{
+    "builds": [
+        {
+            "run_info": {
+                "id": "pants_run_2019_09_23_11_10_02_874_7885ef788e2846b3a0c1c06b08190d8c",
+                "timestamp": "1569262202.8749819",
+                "datetime": "Monday Sep 23, 2019 11:10:02",
+                "user": "asher",
+                "machine": "Ashers-MacBook-Pro.local",
+                "path": "/Users/asher/projects/toolchain",
+                "buildroot": "/Users/asher/projects/toolchain",
+                "version": "1.21.0.dev1",
+                "cmd_line": "pants --no-verify-config bg",
+                "default_report": "/Users/asher/projects/toolchain/.pants.d/reports/pants_run_2019_09_23_11_10_02_874_7885ef788e2846b3a0c1c06b08190d8c/html/build.html",
+                "specs_from_command_line": [],
+                "revision": "aecdbd8f62c6fed6dfc19b8784eecd0472a586a0",
+                "branch": "mandelbaum",
+                "outcome": "SUCCESS",
+                "computed_goals": [
+                    "jvm-platform-validate",
+                    "bootstrap",
+                    "imports",
+                    "unpack-jars",
+                    "unpack-wheels",
+                    "deferred-sources",
+                    "native-compile",
+                    "gen",
+                    "map-sources-to-addresses-mapper",
+                    "map-derived-targets",
+                    "map-python-exported-symbols",
+                    "bg"
+                ]
+            },
+            "artifact_cache_stats": [],
+            "pantsd_stats": {
+                "resulting_graph_size": 4053,
+                "preceding_graph_size": 0,
+                "affected_file_count": 1157,
+                "target_root_size": 0,
+                "affected_targets_size": 0
+            },
+            "workunits": {
+                "8aeddb54-c2e7-4c58-acac-d99628a3e847": {
+                    "name": "main",
+                    "id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                    "parent_name": "",
+                    "parent_id": "",
+                    "labels": [],
+                    "cmd": "",
+                    "start_time": 1569262202.131809,
+                    "outputs": {},
+                    "children": [
+                        {
+                            "name": "setup",
+                            "id": "b32bc39f-9a10-4983-aab6-a4d802f34cda",
+                            "parent_name": "main",
+                            "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                            "labels": [
+                                "SETUP"
+                            ],
+                            "cmd": "",
+                            "start_time": 1569262202.884415,
+                            "outputs": {},
+                            "children": [
+                                {
+                                    "name": "parse",
+                                    "id": "d89787b1-456e-4566-8773-eb629dc93185",
+                                    "parent_name": "setup",
+                                    "parent_id": "b32bc39f-9a10-4983-aab6-a4d802f34cda",
+                                    "labels": [
+                                        "SETUP"
+                                    ],
+                                    "cmd": "",
+                                    "start_time": 1569262202.889749,
+                                    "outputs": {},
+                                    "children": [],
+                                    "log_entries": [],
+                                    "outcome": "SUCCESS",
+                                    "end_time": 1569262202.890146,
+                                    "unaccounted_time": 0
+                                }
+                            ],
+                            "log_entries": [],
+                            "outcome": "SUCCESS",
+                            "end_time": 1569262202.922715,
+                            "unaccounted_time": 0.0379030704498291
+                        },
+                        {
+                            "name": "jvm-platform-validate",
+                            "id": "8f345201-0583-4cbc-a35d-28197030b38e",
+                            "parent_name": "main",
+                            "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                            "labels": [
+                                "GOAL"
+                            ],
+                            "cmd": "",
+                            "start_time": 1569262203.915322,
+                            "outputs": {},
+                            "children": [
+                                {
+                                    "name": "jvm-platform-validate",
+                                    "id": "b30d9704-e3e8-4f47-adf3-1827cef4c81b",
+                                    "parent_name": "jvm-platform-validate",
+                                    "parent_id": "8f345201-0583-4cbc-a35d-28197030b38e",
+                                    "labels": [
+                                        "TASK"
+                                    ],
+                                    "cmd": "",
+                                    "start_time": 1569262203.917315,
+                                    "outputs": {},
+                                    "children": [
+                                        {
+                                            "name": "background",
+                                            "id": "33257496-7c4b-499f-bedf-8e911e72c3e8",
+                                            "parent_name": "main",
+                                            "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                                            "labels": [],
+                                            "cmd": "",
+                                            "start_time": 1569262203.9492748,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262203.9511878,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "workdir_build_cleanup",
+                                            "id": "2f5e1cf8-a75f-403a-87a0-b34b0fb4c901",
+                                            "parent_name": "background",
+                                            "parent_id": "33257496-7c4b-499f-bedf-8e911e72c3e8",
+                                            "labels": [],
+                                            "cmd": "",
+                                            "start_time": 1569262203.9513469,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262203.9516969,
+                                            "unaccounted_time": 0
+                                        }
+                                    ],
+                                    "log_entries": [],
+                                    "outcome": "SUCCESS",
+                                    "end_time": 1569262203.951995,
+                                    "unaccounted_time": 0.00279998779296875
+                                },
+                                {
+                                    "name": "bootstrap",
+                                    "id": "1f13fc8d-8b29-49d4-badc-a05b9f133a1a",
+                                    "parent_name": "main",
+                                    "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                                    "labels": [
+                                        "GOAL"
+                                    ],
+                                    "cmd": "",
+                                    "start_time": 1569262203.953012,
+                                    "outputs": {},
+                                    "children": [
+                                        {
+                                            "name": "substitute-aliased-targets",
+                                            "id": "d7257058-0182-486e-bafb-1cbe521ca654",
+                                            "parent_name": "bootstrap",
+                                            "parent_id": "1f13fc8d-8b29-49d4-badc-a05b9f133a1a",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262203.955534,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262203.963725,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "jar-dependency-management",
+                                            "id": "14d04d10-d063-4cd9-8123-12dd35dd8481",
+                                            "parent_name": "bootstrap",
+                                            "parent_id": "1f13fc8d-8b29-49d4-badc-a05b9f133a1a",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262203.9655628,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262203.9665978,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "bootstrap-jvm-tools",
+                                            "id": "19249431-0817-4487-9af1-fc952ec8a5fc",
+                                            "parent_name": "bootstrap",
+                                            "parent_id": "1f13fc8d-8b29-49d4-badc-a05b9f133a1a",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.081955,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.0833569,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "provide-tools-jar",
+                                            "id": "595414eb-9cfd-44d2-bef2-8c86cb282d57",
+                                            "parent_name": "bootstrap",
+                                            "parent_id": "1f13fc8d-8b29-49d4-badc-a05b9f133a1a",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.0856068,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.122607,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "workdir_build_cleanup",
+                                            "id": "868e2ab6-7826-4192-9512-88502663aaab",
+                                            "parent_name": "background",
+                                            "parent_id": "33257496-7c4b-499f-bedf-8e911e72c3e8",
+                                            "labels": [],
+                                            "cmd": "",
+                                            "start_time": 1569262204.123133,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.123326,
+                                            "unaccounted_time": 0
+                                        }
+                                    ],
+                                    "log_entries": [],
+                                    "outcome": "SUCCESS",
+                                    "end_time": 1569262204.123899,
+                                    "unaccounted_time": 0.12325882911682129
+                                },
+                                {
+                                    "name": "imports",
+                                    "id": "9e96957f-8375-454f-b981-e27c0ff1797b",
+                                    "parent_name": "main",
+                                    "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                                    "labels": [
+                                        "GOAL"
+                                    ],
+                                    "cmd": "",
+                                    "start_time": 1569262204.124963,
+                                    "outputs": {},
+                                    "children": [
+                                        {
+                                            "name": "ivy-imports",
+                                            "id": "b81e9a60-b6ee-48c2-8fbb-6e104a2bc293",
+                                            "parent_name": "imports",
+                                            "parent_id": "9e96957f-8375-454f-b981-e27c0ff1797b",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.1274612,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.1280189,
+                                            "unaccounted_time": 0
+                                        }
+                                    ],
+                                    "log_entries": [],
+                                    "outcome": "SUCCESS",
+                                    "end_time": 1569262204.1289139,
+                                    "unaccounted_time": 0.0033931732177734375
+                                },
+                                {
+                                    "name": "unpack-jars",
+                                    "id": "0385b4bb-9eac-4c3f-bc5e-97eec988811a",
+                                    "parent_name": "main",
+                                    "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                                    "labels": [
+                                        "GOAL"
+                                    ],
+                                    "cmd": "",
+                                    "start_time": 1569262204.1297002,
+                                    "outputs": {},
+                                    "children": [
+                                        {
+                                            "name": "unpack-jars",
+                                            "id": "8fc87c3a-0cc2-4a0a-a7ec-3cc08f4bf2da",
+                                            "parent_name": "unpack-jars",
+                                            "parent_id": "0385b4bb-9eac-4c3f-bc5e-97eec988811a",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.131228,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.153879,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "workdir_build_cleanup",
+                                            "id": "91752a28-69d2-41f1-b63e-9e23830a85c8",
+                                            "parent_name": "background",
+                                            "parent_id": "33257496-7c4b-499f-bedf-8e911e72c3e8",
+                                            "labels": [],
+                                            "cmd": "",
+                                            "start_time": 1569262204.15413,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.154285,
+                                            "unaccounted_time": 0
+                                        }
+                                    ],
+                                    "log_entries": [],
+                                    "outcome": "SUCCESS",
+                                    "end_time": 1569262204.154827,
+                                    "unaccounted_time": 0.0024759769439697266
+                                },
+                                {
+                                    "name": "unpack-wheels",
+                                    "id": "ac8d044d-2b36-429c-8b48-01153d35f840",
+                                    "parent_name": "main",
+                                    "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                                    "labels": [
+                                        "GOAL"
+                                    ],
+                                    "cmd": "",
+                                    "start_time": 1569262204.156022,
+                                    "outputs": {},
+                                    "children": [
+                                        {
+                                            "name": "unpack-wheels",
+                                            "id": "703dc29e-9fd6-492f-bd69-19f0ae647ecf",
+                                            "parent_name": "unpack-wheels",
+                                            "parent_id": "ac8d044d-2b36-429c-8b48-01153d35f840",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.157336,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.200963,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "workdir_build_cleanup",
+                                            "id": "0e13ab50-abc9-4aa9-891e-d95a12a7023b",
+                                            "parent_name": "background",
+                                            "parent_id": "33257496-7c4b-499f-bedf-8e911e72c3e8",
+                                            "labels": [],
+                                            "cmd": "",
+                                            "start_time": 1569262204.201254,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.201578,
+                                            "unaccounted_time": 0
+                                        }
+                                    ],
+                                    "log_entries": [],
+                                    "outcome": "SUCCESS",
+                                    "end_time": 1569262204.201971,
+                                    "unaccounted_time": 0.002321958541870117
+                                },
+                                {
+                                    "name": "deferred-sources",
+                                    "id": "7b4eff63-e185-487d-b526-41db5989d74b",
+                                    "parent_name": "main",
+                                    "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                                    "labels": [
+                                        "GOAL"
+                                    ],
+                                    "cmd": "",
+                                    "start_time": 1569262204.203151,
+                                    "outputs": {},
+                                    "children": [
+                                        {
+                                            "name": "deferred-sources",
+                                            "id": "1cb93f84-d571-44ce-aed0-b2939be4229b",
+                                            "parent_name": "deferred-sources",
+                                            "parent_id": "7b4eff63-e185-487d-b526-41db5989d74b",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.204469,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.204837,
+                                            "unaccounted_time": 0
+                                        }
+                                    ],
+                                    "log_entries": [],
+                                    "outcome": "SUCCESS",
+                                    "end_time": 1569262204.205642,
+                                    "unaccounted_time": 0.0021228790283203125
+                                },
+                                {
+                                    "name": "native-compile",
+                                    "id": "cf36c521-016e-4c31-91dc-4db66190881c",
+                                    "parent_name": "main",
+                                    "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                                    "labels": [
+                                        "GOAL"
+                                    ],
+                                    "cmd": "",
+                                    "start_time": 1569262204.206452,
+                                    "outputs": {},
+                                    "children": [
+                                        {
+                                            "name": "conan-prep",
+                                            "id": "4e62edae-0d3d-4576-bf3e-8cb1d4c60819",
+                                            "parent_name": "native-compile",
+                                            "parent_id": "cf36c521-016e-4c31-91dc-4db66190881c",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.208728,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.2090728,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "conan-fetch",
+                                            "id": "b3e4eb2c-5852-42e7-ab87-1492bdd4b003",
+                                            "parent_name": "native-compile",
+                                            "parent_id": "cf36c521-016e-4c31-91dc-4db66190881c",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.210819,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.2112472,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "c-for-ctypes",
+                                            "id": "a9266dc8-dd3c-4600-bbf2-69886d18af5e",
+                                            "parent_name": "native-compile",
+                                            "parent_id": "cf36c521-016e-4c31-91dc-4db66190881c",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.213714,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.310386,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "workdir_build_cleanup",
+                                            "id": "47ff7499-5274-4daf-bfd0-9616773126a6",
+                                            "parent_name": "background",
+                                            "parent_id": "33257496-7c4b-499f-bedf-8e911e72c3e8",
+                                            "labels": [],
+                                            "cmd": "",
+                                            "start_time": 1569262204.3106072,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.3107781,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "cpp-for-ctypes",
+                                            "id": "b518df3a-8bbf-4a14-949e-f258a9ee8efc",
+                                            "parent_name": "native-compile",
+                                            "parent_id": "cf36c521-016e-4c31-91dc-4db66190881c",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.312275,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.405115,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "workdir_build_cleanup",
+                                            "id": "63674d79-c21e-4775-a3b6-799eb5717762",
+                                            "parent_name": "background",
+                                            "parent_id": "33257496-7c4b-499f-bedf-8e911e72c3e8",
+                                            "labels": [],
+                                            "cmd": "",
+                                            "start_time": 1569262204.405333,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.4055,
+                                            "unaccounted_time": 0
+                                        }
+                                    ],
+                                    "log_entries": [],
+                                    "outcome": "SUCCESS",
+                                    "end_time": 1569262204.406007,
+                                    "unaccounted_time": 0.009270191192626953
+                                },
+                                {
+                                    "name": "gen",
+                                    "id": "39504498-6ba0-4780-96cb-858e31becf26",
+                                    "parent_name": "main",
+                                    "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                                    "labels": [
+                                        "GOAL"
+                                    ],
+                                    "cmd": "",
+                                    "start_time": 1569262204.40708,
+                                    "outputs": {},
+                                    "children": [
+                                        {
+                                            "name": "grpcio-prep",
+                                            "id": "95f1b849-de89-4e00-b568-10eb4de2d75f",
+                                            "parent_name": "gen",
+                                            "parent_id": "39504498-6ba0-4780-96cb-858e31becf26",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.409,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.4092999,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "grpcio-run",
+                                            "id": "edb1dc4e-afaa-4585-b05d-e89811bd8c6d",
+                                            "parent_name": "gen",
+                                            "parent_id": "39504498-6ba0-4780-96cb-858e31becf26",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.410957,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.411316,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "go-thrift",
+                                            "id": "35b1d0ad-04ec-4a2a-a056-312c504069ce",
+                                            "parent_name": "gen",
+                                            "parent_id": "39504498-6ba0-4780-96cb-858e31becf26",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.412844,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.413174,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "go-protobuf",
+                                            "id": "21e3a194-c07c-4320-9443-81cafba89c5c",
+                                            "parent_name": "gen",
+                                            "parent_id": "39504498-6ba0-4780-96cb-858e31becf26",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.4147332,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.415089,
+                                            "unaccounted_time": 0
+                                        }
+                                    ],
+                                    "log_entries": [],
+                                    "outcome": "SUCCESS",
+                                    "end_time": 1569262204.415776,
+                                    "unaccounted_time": 0.00735163688659668
+                                },
+                                {
+                                    "name": "map-sources-to-addresses-mapper",
+                                    "id": "ad45d6d6-32a7-4c0c-9b38-4bba690bdf4d",
+                                    "parent_name": "main",
+                                    "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                                    "labels": [
+                                        "GOAL"
+                                    ],
+                                    "cmd": "",
+                                    "start_time": 1569262204.41642,
+                                    "outputs": {},
+                                    "children": [
+                                        {
+                                            "name": "map-sources-to-addresses-mapper",
+                                            "id": "770a18f0-f344-4360-9659-edf7151a173f",
+                                            "parent_name": "map-sources-to-addresses-mapper",
+                                            "parent_id": "ad45d6d6-32a7-4c0c-9b38-4bba690bdf4d",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.417685,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.431423,
+                                            "unaccounted_time": 0
+                                        }
+                                    ],
+                                    "log_entries": [],
+                                    "outcome": "SUCCESS",
+                                    "end_time": 1569262204.432269,
+                                    "unaccounted_time": 0.002111196517944336
+                                },
+                                {
+                                    "name": "map-derived-targets",
+                                    "id": "f7bd37ab-9494-4f74-924e-3bfbcdd69f0d",
+                                    "parent_name": "main",
+                                    "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                                    "labels": [
+                                        "GOAL"
+                                    ],
+                                    "cmd": "",
+                                    "start_time": 1569262204.433001,
+                                    "outputs": {},
+                                    "children": [
+                                        {
+                                            "name": "map-derived-targets",
+                                            "id": "7444fb9f-33ca-4bdf-9104-b5c7c124b248",
+                                            "parent_name": "map-derived-targets",
+                                            "parent_id": "f7bd37ab-9494-4f74-924e-3bfbcdd69f0d",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.434551,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.435561,
+                                            "unaccounted_time": 0
+                                        }
+                                    ],
+                                    "log_entries": [],
+                                    "outcome": "SUCCESS",
+                                    "end_time": 1569262204.4362738,
+                                    "unaccounted_time": 0.0022628307342529297
+                                },
+                                {
+                                    "name": "map-python-exported-symbols",
+                                    "id": "43ae91b1-9bf5-4bf0-9d36-9dc18e151873",
+                                    "parent_name": "main",
+                                    "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                                    "labels": [
+                                        "GOAL"
+                                    ],
+                                    "cmd": "",
+                                    "start_time": 1569262204.437035,
+                                    "outputs": {},
+                                    "children": [
+                                        {
+                                            "name": "map-python-exported-symbols",
+                                            "id": "67a755e9-a80f-4769-9929-40229a15f4c3",
+                                            "parent_name": "map-python-exported-symbols",
+                                            "parent_id": "43ae91b1-9bf5-4bf0-9d36-9dc18e151873",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.43838,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.467414,
+                                            "unaccounted_time": 0
+                                        }
+                                    ],
+                                    "log_entries": [],
+                                    "outcome": "SUCCESS",
+                                    "end_time": 1569262204.4682639,
+                                    "unaccounted_time": 0.0021948814392089844
+                                },
+                                {
+                                    "name": "bg",
+                                    "id": "a56377a9-93fa-49b8-9bfb-f10d8493e2d9",
+                                    "parent_name": "main",
+                                    "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                                    "labels": [
+                                        "GOAL"
+                                    ],
+                                    "cmd": "",
+                                    "start_time": 1569262204.469026,
+                                    "outputs": {},
+                                    "children": [
+                                        {
+                                            "name": "bg",
+                                            "id": "e27b082c-1dfd-405a-a536-577637aaf5c6",
+                                            "parent_name": "bg",
+                                            "parent_id": "a56377a9-93fa-49b8-9bfb-f10d8493e2d9",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.470415,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.523809,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "aggregate-targets",
+                                            "id": "4fc9d87c-ae68-4195-b477-c8298fa3c732",
+                                            "parent_name": "bg",
+                                            "parent_id": "a56377a9-93fa-49b8-9bfb-f10d8493e2d9",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.525929,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262204.526161,
+                                            "unaccounted_time": 0
+                                        },
+                                        {
+                                            "name": "python-buildgen",
+                                            "id": "35f466bc-fb08-4a45-a6f2-58d082e81bbf",
+                                            "parent_name": "bg",
+                                            "parent_id": "a56377a9-93fa-49b8-9bfb-f10d8493e2d9",
+                                            "labels": [
+                                                "TASK"
+                                            ],
+                                            "cmd": "",
+                                            "start_time": 1569262204.528137,
+                                            "outputs": {},
+                                            "children": [],
+                                            "log_entries": [],
+                                            "outcome": "SUCCESS",
+                                            "end_time": 1569262206.506523,
+                                            "unaccounted_time": 0
+                                        }
+                                    ],
+                                    "log_entries": [],
+                                    "outcome": "SUCCESS",
+                                    "end_time": 1569262206.507403,
+                                    "unaccounted_time": 0.006365060806274414
+                                }
+                            ],
+                            "log_entries": [
+                                {
+                                    "level": "INFO",
+                                    "messages": [
+                                        {
+                                            "text": "Waiting for background workers to finish.",
+                                            "detail": null
+                                        }
+                                    ]
+                                }
+                            ],
+                            "outcome": "SUCCESS",
+                            "end_time": 1569262206.547004,
+                            "unaccounted_time": 2.5963692665100098
+                        },
+                        {
+                            "name": "complete",
+                            "id": "bd94892d-a49b-4964-9464-80f647462416",
+                            "parent_name": "main",
+                            "parent_id": "8aeddb54-c2e7-4c58-acac-d99628a3e847",
+                            "labels": [],
+                            "cmd": "",
+                            "start_time": 1569262206.5875258,
+                            "outputs": {},
+                            "children": [],
+                            "log_entries": [],
+                            "outcome": "SUCCESS",
+                            "end_time": 1569262206.587759,
+                            "unaccounted_time": 0
+                        }
+                    ],
+                    "log_entries": [
+                        {
+                            "level": "INFO",
+                            "messages": [
+                                {
+                                    "text": "(To run a reporting server: ./pants server)",
+                                    "detail": null
+                                }
+                            ]
+                        },
+                        {
+                            "level": "INFO",
+                            "messages": [
+                                {
+                                    "text": "Executing tasks in goals: jvm-platform-validate -> bootstrap -> imports -> unpack-jars -> unpack-wheels -> deferred-sources -> native-compile -> gen -> map-sources-to-addresses-mapper -> map-derived-targets -> map-python-exported-symbols -> bg",
+                                    "detail": null
+                                }
+                            ]
+                        },
+                        {
+                            "level": "INFO",
+                            "messages": [
+                                {
+                                    "text": "SUCCESS",
+                                    "detail": null
+                                }
+                            ]
+                        }
+                    ],
+                    "outcome": "SUCCESS",
+                    "end_time": 1569262206.588599,
+                    "unaccounted_time": -0.761528730392456
+                }
+            }
+        }
+    ]
+}

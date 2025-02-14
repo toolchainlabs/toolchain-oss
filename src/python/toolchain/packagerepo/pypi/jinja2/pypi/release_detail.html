@@ -1,0 +1,22 @@
+{#
+Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "pypi/base.html" %}
+
+{% block content %}
+<h2>Details for {{ object.project.name }} {{ object.version }}</h2>
+<table class="table">
+  <thead>
+    <th>Distribution</th>
+  </thead>
+  {% for dist in object.distributions.all().order_by('filename') %}
+  <tr>
+    <td><a href="{{ dist.get_absolute_url() }}">{{ dist.filename }}</a></td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+{% endblock content %}

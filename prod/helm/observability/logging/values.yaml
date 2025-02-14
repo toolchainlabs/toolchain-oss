@@ -1,0 +1,62 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# https://github.com/fluent/fluent-bit-docs/blob/master/configuration/monitoring.md
+fluent-bit:
+  serviceAccount:
+    # prod/terraform/resources/us-east-1/kubernetes/<cluster>/service_role_policies/es_logging.tf
+    name: fluentbit
+    annotations:
+        eks.amazonaws.com/role-arn: # filled by the logic in the install script.
+  resources:
+    requests:
+      cpu: 10m
+      memory: 128Mi
+    limits:
+      cpu: 250m
+      memory: 512Mi
+  serviceMonitor:
+      enabled: true
+      namespace: monitoring
+      interval: 45s
+      scrapeTimeout: 10s
+      selector:
+        services: toolchain-monitoring
+  config:
+    inputs: |
+        [INPUT]
+            Name              tail
+            Path              /var/log/containers/*.log
+            multiline.parser docker, cri
+            Tag               kube.*
+            Mem_Buf_Limit     15MB
+            Skip_Long_Lines   On
+    filters: |
+        [FILTER]
+            Name                kubernetes
+            Match               kube.*
+            Merge_Log           On
+            Merge_Log_Key       logJson
+            K8S-Logging.Exclude On
+    outputs: |
+        [OUTPUT]
+            Name  opensearch
+            Host  FILLED_BY_SCRIPT
+            Port  443
+            Logstash_Format On
+            Suppress_Type_Name On
+            Time_Key @timestamp
+            Replace_Dots On
+            Logstash_Prefix prod-logs
+            tls On
+            AWS_Auth On
+            AWS_Region FILLED_BY_SCRIPT
+# nulls are filled by the logic in the install script.
+logging_opensearch_host: null
+aws_region: us-east-1
+curator:
+  enabled: true
+  image: null
+  iam_role_arn: null
+  max_age: 60
+  push_gateway_url: http://prod-monitoring-prometheus-pushgateway.monitoring.svc.cluster.local:9091

@@ -1,0 +1,22 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ .Release.Name }}-full-health-check"
+  labels:
+    toolchain_product: {{ .Values.toolchain_product_name }}
+    chart: {{ .Chart.Name  }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+  annotations:
+    "helm.sh/hook-delete-policy": "hook-succeeded,hook-failed"
+    "helm.sh/hook": test-success
+spec:
+  containers:
+  - name: e2e-tests
+    image: curlimages/curl:7.81.0@sha256:80f1472556626da54844eb9d0a140b1f9b4f83d575615866325ebca832c087fe
+    command: ['curl']
+    args: ['-f', 'http://buildsense-api:8020/checksz/resourcez']
+  restartPolicy: Never

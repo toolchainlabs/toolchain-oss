@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VisitScmButton /> should render the component 1`] = `
+<DocumentFragment>
+  <a
+    href="https://github.com/toolchainlabs/"
+    rel="noopener noreferrer"
+    target="_blank"
+    type="external"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-hd7mnz-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+      >
+        <div
+          class="MuiAvatar-root MuiAvatar-circular css-1wlk0hk-MuiAvatar-root"
+        >
+          <img
+            alt="GitHub link icon"
+            class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+            src="test-file-stub"
+          />
+        </div>
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-button2 css-1a43zs0-MuiTypography-root"
+      >
+        VIEW ON GITHUB
+      </span>
+    </button>
+  </a>
+</DocumentFragment>
+`;

@@ -1,0 +1,1228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BuildDetailsPage should render component 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-1ld3b9g-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+    >
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-p0slgd-MuiPaper-root"
+        color="primary"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-pc5njo-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item css-15jbcmx-MuiGrid-root"
+          >
+            <img
+              alt="Toolchain logo"
+              class="css-k008qs"
+              src="test-file-stub"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-body3 css-s1qcug-MuiTypography-root"
+            >
+              toolchaindev is in free trial. Upgrade to continue using the service at the end of the trial.
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item css-1snjm19-MuiGrid-root"
+          >
+            <a
+              href="/organizations/toolchaindev/"
+              style="text-decoration: none;"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-akjgsv-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-button1 css-107i9xx-MuiTypography-root"
+                >
+                  SEE PLANS
+                </span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-15hauir-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+        >
+          <nav
+            aria-label="breadcrumb"
+            class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-1g0lp15-MuiTypography-root-MuiBreadcrumbs-root"
+          >
+            <ol
+              class="MuiBreadcrumbs-ol css-4pdmu4-MuiBreadcrumbs-ol"
+            >
+              <li
+                class="MuiBreadcrumbs-li"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  >
+                    <a
+                      color="inherit"
+                      href="/organizations/toolchaindev/"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-x1nkjx-MuiTypography-root"
+                        >
+                          Toolchaindev
+                        </p>
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-a1vg0r-MuiSvgIcon-root"
+                          data-testid="ChevronRightIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                          />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  >
+                    <a
+                      color="inherit"
+                      href="/organizations/toolchaindev/repos/toolchain/builds/?user=me"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-x1nkjx-MuiTypography-root"
+                        >
+                          Toolchain
+                        </p>
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-a1vg0r-MuiSvgIcon-root"
+                          data-testid="ChevronRightIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                          />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-sv7hz0-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeSmall css-1v0lfyk-MuiSvgIcon-root"
+                data-testid="ArrowBackIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTypography-root MuiTypography-button2 css-1a43zs0-MuiTypography-root"
+            >
+              GO BACK
+            </span>
+          </button>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1rty9t5-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-18ksmt-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-1j37yc0-MuiTypography-root"
+              >
+                Build
+              </h2>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <div
+                class="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-outlinedDefault css-7mahsk-MuiChip-root"
+              >
+                <svg
+                  class="MuiSvgIcon-root MuiSvgIcon-colorSuccess MuiSvgIcon-fontSizeMedium css-fdba4v-MuiSvgIcon-root"
+                  data-testid="CheckCircleOutlineIcon"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 7.58 10 14.17l-3.59-3.58L5 12l5 5 8-8zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                  <title>
+                    SUCCESS
+                  </title>
+                </svg>
+                <span
+                  class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+                  >
+                    Success
+                  </p>
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <button
+                aria-haspopup="true"
+                aria-label="Download files"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-sch92q-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1pe1w7m-MuiSvgIcon-root"
+                  data-testid="CloudDownloadIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1rty9t5-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-ofrcno-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle1 css-cvhvq9-MuiTypography-root"
+              >
+                16s
+              </h6>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-akjgsv-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                    data-testid="RefreshIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTypography-root MuiTypography-button css-z1bmeh-MuiTypography-root"
+                >
+                  REFRESH
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-1jj1m7t-MuiTypography-root"
+              >
+                Command
+              </h3>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+            >
+              <div
+                class="MuiBox-root css-79elbk"
+              >
+                <pre
+                  class="MuiBox-root css-20w2bg"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                    >
+                      some command a
+                    </div>
+                    <button
+                      aria-label="Copy text"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-1fx451z-MuiButtonBase-root-MuiIconButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-xcpd0a-MuiSvgIcon-root"
+                        data-testid="FileCopyIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4 6 6v10c0 1.1-.9 2-2 2H7.99C6.89 23 6 22.1 6 21l.01-14c0-1.1.89-2 1.99-2h7zm-1 7h5.5L14 6.5V12z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </pre>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1ridyt-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="ExpandMoreIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                </svg>
+                <h3
+                  class="MuiTypography-root MuiTypography-h3 css-kn6dkz-MuiTypography-root"
+                >
+                  SHOW MORE INFO
+                </h3>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+        >
+          <div
+            class="MuiTabs-root css-whf1dt-MuiTabs-root"
+          >
+            <div
+              class="MuiTabs-scrollableX MuiTabs-hideScrollbar css-agdkjh-MuiTabs-scrollbarSize"
+              style="width: 99px; height: 99px; position: absolute; top: -9999px; overflow: scroll;"
+            />
+            <div
+              class="MuiTabs-scroller MuiTabs-hideScrollbar MuiTabs-scrollableX css-69z67c-MuiTabs-scroller"
+              style="margin-bottom: 0px;"
+            >
+              <div
+                class="MuiTabs-flexContainer css-heg063-MuiTabs-flexContainer"
+                role="tablist"
+              >
+                <a
+                  aria-selected="true"
+                  class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-1pbkt90-MuiButtonBase-root-MuiTab-root"
+                  href="/organizations/toolchaindev/repos/toolchain/builds/run_id_testing/type/goal/"
+                  role="tab"
+                  tabindex="0"
+                  title="Outputs"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h3 css-1jj1m7t-MuiTypography-root"
+                  >
+                    Outputs
+                  </h3>
+                </a>
+                <a
+                  aria-selected="false"
+                  class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-1pbkt90-MuiButtonBase-root-MuiTab-root"
+                  href="/organizations/toolchaindev/repos/toolchain/builds/run_id_testing/type/targets/"
+                  role="tab"
+                  tabindex="-1"
+                  title="Targets"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h3 css-1jj1m7t-MuiTypography-root"
+                  >
+                    Targets
+                  </h3>
+                </a>
+                <a
+                  aria-selected="false"
+                  class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-1pbkt90-MuiButtonBase-root-MuiTab-root"
+                  href="/organizations/toolchaindev/repos/toolchain/builds/run_id_testing/type/run/"
+                  role="tab"
+                  tabindex="-1"
+                  title="Details"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h3 css-1jj1m7t-MuiTypography-root"
+                  >
+                    Details
+                  </h3>
+                </a>
+              </div>
+              <span
+                class="MuiTabs-indicator css-p7n62d-MuiTabs-indicator"
+                style="left: 0px; width: 0px;"
+              >
+                <span />
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+        >
+          <div
+            class="MuiTabs-root css-wk0ubu-MuiTabs-root"
+          >
+            <div
+              class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+              style="overflow: hidden; margin-bottom: 0px;"
+            >
+              <div
+                class="MuiTabs-flexContainer css-heg063-MuiTabs-flexContainer"
+                role="tablist"
+              >
+                <button
+                  aria-selected="true"
+                  class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-u361ww-MuiButtonBase-root-MuiTab-root"
+                  role="tab"
+                  tabindex="0"
+                  title="lint"
+                  type="button"
+                >
+                  lint
+                </button>
+                <button
+                  aria-selected="false"
+                  class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-u361ww-MuiButtonBase-root-MuiTab-root"
+                  role="tab"
+                  tabindex="-1"
+                  title="typecheck"
+                  type="button"
+                >
+                  typecheck
+                </button>
+              </div>
+              <span
+                class="MuiTabs-indicator css-p7n62d-MuiTabs-indicator"
+                style="left: 0px; width: 0px;"
+              >
+                <span />
+              </span>
+            </div>
+          </div>
+          <div
+            aria-labelledby="artifact-tab-lint"
+            id="artifact-tabpanel-lint"
+            role="tabpanel"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-cqph87-MuiPaper-root-MuiCard-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-x9mjaw-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-outlinedDefault css-hrssnj-MuiChip-root"
+                      >
+                        <span
+                          class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                        >
+                          <p
+                            class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+                          >
+                            Not available
+                          </p>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item css-1g4wkug-MuiGrid-root"
+                    >
+                      <h6
+                        class="MuiTypography-root MuiTypography-subtitle1 css-mzn4b3-MuiTypography-root"
+                      >
+                        first lint
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                >
+                  <div
+                    class="MuiBox-root css-79elbk"
+                  >
+                    <pre
+                      class="MuiBox-root css-20w2bg"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                        >
+                          <code>
+                            <span
+                              style="color: rgb(0, 0, 187);"
+                            >
+                              hello world from plain content
+                            </span>
+                          </code>
+                        </div>
+                        <button
+                          aria-label="Copy text"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-1fx451z-MuiButtonBase-root-MuiIconButton-root"
+                          tabindex="0"
+                          type="button"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-xcpd0a-MuiSvgIcon-root"
+                            data-testid="FileCopyIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4 6 6v10c0 1.1-.9 2-2 2H7.99C6.89 23 6 22.1 6 21l.01-14c0-1.1.89-2 1.99-2h7zm-1 7h5.5L14 6.5V12z"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-cqph87-MuiPaper-root-MuiCard-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-x9mjaw-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-outlinedDefault css-hrssnj-MuiChip-root"
+                      >
+                        <span
+                          class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                        >
+                          <p
+                            class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+                          >
+                            Not available
+                          </p>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item css-1g4wkug-MuiGrid-root"
+                    >
+                      <h6
+                        class="MuiTypography-root MuiTypography-subtitle1 css-mzn4b3-MuiTypography-root"
+                      >
+                        second lint
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                >
+                  <div
+                    class="MuiBox-root css-79elbk"
+                  >
+                    <pre
+                      class="MuiBox-root css-20w2bg"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                        >
+                          <code>
+                            <span
+                              style="color: rgb(0, 0, 187);"
+                            >
+                              hello world from plain second content
+                            </span>
+                          </code>
+                        </div>
+                        <button
+                          aria-label="Copy text"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-1fx451z-MuiButtonBase-root-MuiIconButton-root"
+                          tabindex="0"
+                          type="button"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-xcpd0a-MuiSvgIcon-root"
+                            data-testid="FileCopyIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4 6 6v10c0 1.1-.9 2-2 2H7.99C6.89 23 6 22.1 6 21l.01-14c0-1.1.89-2 1.99-2h7zm-1 7h5.5L14 6.5V12z"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-cqph87-MuiPaper-root-MuiCard-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-x9mjaw-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-outlinedDefault css-hrssnj-MuiChip-root"
+                      >
+                        <span
+                          class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                        >
+                          <p
+                            class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+                          >
+                            Not available
+                          </p>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item css-1g4wkug-MuiGrid-root"
+                    >
+                      <h6
+                        class="MuiTypography-root MuiTypography-subtitle1 css-mzn4b3-MuiTypography-root"
+                      >
+                        third lint
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                >
+                  <div
+                    class="MuiBox-root css-79elbk"
+                  >
+                    <pre
+                      class="MuiBox-root css-20w2bg"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                        >
+                          <code>
+                            <span
+                              style="color: rgb(0, 0, 187);"
+                            >
+                              hello world from plain third content
+                            </span>
+                          </code>
+                        </div>
+                        <button
+                          aria-label="Copy text"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-1fx451z-MuiButtonBase-root-MuiIconButton-root"
+                          tabindex="0"
+                          type="button"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-xcpd0a-MuiSvgIcon-root"
+                            data-testid="FileCopyIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4 6 6v10c0 1.1-.9 2-2 2H7.99C6.89 23 6 22.1 6 21l.01-14c0-1.1.89-2 1.99-2h7zm-1 7h5.5L14 6.5V12z"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-labelledby="artifact-tab-typecheck"
+            hidden=""
+            id="artifact-tabpanel-typecheck"
+            role="tabpanel"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BuildDetailsPage should show error 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-1ld3b9g-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+    >
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-p0slgd-MuiPaper-root"
+        color="primary"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-pc5njo-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item css-15jbcmx-MuiGrid-root"
+          >
+            <img
+              alt="Toolchain logo"
+              class="css-k008qs"
+              src="test-file-stub"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-body3 css-s1qcug-MuiTypography-root"
+            >
+              toolchaindev is in free trial. Upgrade to continue using the service at the end of the trial.
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item css-1snjm19-MuiGrid-root"
+          >
+            <a
+              href="/organizations/toolchaindev/"
+              style="text-decoration: none;"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-akjgsv-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-button1 css-107i9xx-MuiTypography-root"
+                >
+                  SEE PLANS
+                </span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-15hauir-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+        >
+          <nav
+            aria-label="breadcrumb"
+            class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-1g0lp15-MuiTypography-root-MuiBreadcrumbs-root"
+          >
+            <ol
+              class="MuiBreadcrumbs-ol css-4pdmu4-MuiBreadcrumbs-ol"
+            >
+              <li
+                class="MuiBreadcrumbs-li"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  >
+                    <a
+                      color="inherit"
+                      href="/organizations/toolchaindev/"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-x1nkjx-MuiTypography-root"
+                        >
+                          Toolchaindev
+                        </p>
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-a1vg0r-MuiSvgIcon-root"
+                          data-testid="ChevronRightIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                          />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  >
+                    <a
+                      color="inherit"
+                      href="/organizations/toolchaindev/repos/toolchain/builds/?user=me"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-x1nkjx-MuiTypography-root"
+                        >
+                          Toolchain
+                        </p>
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-a1vg0r-MuiSvgIcon-root"
+                          data-testid="ChevronRightIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                          />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-sv7hz0-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeSmall css-1v0lfyk-MuiSvgIcon-root"
+                data-testid="ArrowBackIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTypography-root MuiTypography-button2 css-1a43zs0-MuiTypography-root"
+            >
+              GO BACK
+            </span>
+          </button>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1rty9t5-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-18ksmt-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-1j37yc0-MuiTypography-root"
+              >
+                Build
+              </h2>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            />
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1rty9t5-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-ofrcno-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-akjgsv-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                    data-testid="RefreshIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTypography-root MuiTypography-button css-z1bmeh-MuiTypography-root"
+                >
+                  REFRESH
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+    >
+      <div
+        class="MuiSnackbar-root MuiSnackbar-anchorOriginTopCenter css-112zstt-MuiSnackbar-root"
+        role="presentation"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation6 MuiSnackbarContent-root css-mqxpjw-MuiPaper-root-MuiSnackbarContent-root"
+          direction="down"
+          role="alert"
+          style="opacity: 1; transform: scale(1, 1); transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+        >
+          <div
+            class="MuiSnackbarContent-message css-1exqwzz-MuiSnackbarContent-message"
+          >
+            Error handling request.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BuildDetailsPage should show loader 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-1ld3b9g-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-15hauir-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+        >
+          <nav
+            aria-label="breadcrumb"
+            class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-1g0lp15-MuiTypography-root-MuiBreadcrumbs-root"
+          >
+            <ol
+              class="MuiBreadcrumbs-ol css-4pdmu4-MuiBreadcrumbs-ol"
+            >
+              <li
+                class="MuiBreadcrumbs-li"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  >
+                    <a
+                      color="inherit"
+                      href="/organizations/toolchaindev/"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-x1nkjx-MuiTypography-root"
+                        >
+                          Toolchaindev
+                        </p>
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-a1vg0r-MuiSvgIcon-root"
+                          data-testid="ChevronRightIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                          />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  >
+                    <a
+                      color="inherit"
+                      href="/organizations/toolchaindev/repos/toolchain/builds/?user=me"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-x1nkjx-MuiTypography-root"
+                        >
+                          Toolchain
+                        </p>
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-a1vg0r-MuiSvgIcon-root"
+                          data-testid="ChevronRightIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                          />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-sv7hz0-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeSmall css-1v0lfyk-MuiSvgIcon-root"
+                data-testid="ArrowBackIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTypography-root MuiTypography-button2 css-1a43zs0-MuiTypography-root"
+            >
+              GO BACK
+            </span>
+          </button>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1rty9t5-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-18ksmt-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h2 css-1j37yc0-MuiTypography-root"
+              >
+                Build
+              </h2>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            />
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1rty9t5-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-ofrcno-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-akjgsv-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                    data-testid="RefreshIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTypography-root MuiTypography-button css-z1bmeh-MuiTypography-root"
+                >
+                  REFRESH
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+    >
+      <span
+        class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-indeterminate css-1v73c1t-MuiLinearProgress-root"
+        role="progressbar"
+      >
+        <span
+          class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Indeterminate css-scyn4f-MuiLinearProgress-bar1"
+        />
+        <span
+          class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar2Indeterminate css-1gnvkt3-MuiLinearProgress-bar2"
+        />
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

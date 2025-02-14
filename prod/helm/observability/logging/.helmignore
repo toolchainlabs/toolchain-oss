@@ -1,0 +1,15 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# Patterns to ignore when building packages.
+# This supports shell glob matching, relative path matching, and
+# negation (prefixed with !). Only one pattern per line.
+# Pattern syntax is close but not identical to .gitignore.
+# See https://godoc.org/k8s.io/helm/pkg/ignore.
+
+.DS_Store
+*.swp
+*.bak
+*.tmp
+*~
+fake_values.yaml

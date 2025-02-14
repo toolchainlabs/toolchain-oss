@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RepoCard /> should render activate button 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-13i4rnv-MuiGrid-root"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-1i6rrc6-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container css-9cyib4-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1hhgieh-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-1spp0s5-MuiTypography-root"
+              >
+                toolchain
+              </h3>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1g63eyw-MuiTypography-root"
+              >
+                toolchain
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1hhgieh-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-iab9zq-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              ACTIVATE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RepoCard /> should render active repo-card component 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-13i4rnv-MuiGrid-root"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-cm8w31-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container css-9cyib4-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1hhgieh-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-1spp0s5-MuiTypography-root"
+              >
+                toolchain
+              </h3>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1g63eyw-MuiTypography-root"
+              >
+                toolchain
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-73nay0"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RepoCard /> should render deactivate button 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-13i4rnv-MuiGrid-root"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-cm8w31-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container css-9cyib4-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1hhgieh-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-1spp0s5-MuiTypography-root"
+              >
+                toolchain
+              </h3>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1g63eyw-MuiTypography-root"
+              >
+                toolchain
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1hhgieh-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium css-1kfj6pe-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              DEACTIVATE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<RepoCard /> should render inactive repo-card component 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-13i4rnv-MuiGrid-root"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-1i6rrc6-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container css-9cyib4-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1hhgieh-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h3 css-1spp0s5-MuiTypography-root"
+              >
+                toolchain
+              </h3>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1g63eyw-MuiTypography-root"
+              >
+                toolchain
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1hhgieh-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1inrbs9-MuiPaper-root-MuiCard-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter css-k2xxr7-MuiTypography-root"
+              >
+                Inactive 
+                <br />
+                repo
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

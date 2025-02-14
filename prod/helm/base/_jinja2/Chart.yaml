@@ -1,0 +1,13 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+# Copyright {{ copyright_year }} Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+description: {{ service_name }} service
+name: {{ service_name_dashes }}
+version: 0.2.0
+kubeVersion: ">=v1.19.0-0,<v1.25-0"
+dependencies:
+  - name: django
+    repository: file://../../django/

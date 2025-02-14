@@ -1,0 +1,239 @@
+defaults:
+  default_image: &default_image
+    image: 283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2023-02-13.18-21-27-2ff098ecc22f
+version: 2.1
+orbs:
+  aws-cli: circleci/aws-cli@3.1.4
+  # codecov: codecov/codecov@3.2.2
+parameters:
+  run-terraform-checks:
+    type: boolean
+    default: false
+commands:
+  save-pants-cache:
+    description: Save Pants Bootstrap cache
+    steps:
+    - save_cache:
+        name: Save Pants Bootstrap Cache
+        key: pants-bootstrap-v5-{{ checksum "pants_ver.txt" }}
+        paths:
+        - ~/.cache/nce  # pants itself
+        - ~/bin         # pants launcher (pantsup)
+  restore-pants-cache:
+    description: Restore Pants Bootstrap cache
+    steps:
+    - run:
+        name: write pants version into a file
+        command: ./src/sh/ci/get-pants-version.sh > pants_ver.txt
+    - restore_cache:
+        key: pants-bootstrap-v5-{{ checksum "pants_ver.txt" }}
+jobs:
+  build-with-pants:
+    # Note that when using the `circleci` binary to test the ci config locally, the local cwd is mounted
+    # as working_directory in the container, and the checkout step is skipped. Therefore the native local
+    #  .pants.d workdir will contaminate circleci's workdir.
+    # This means that you must clean-all before running a local circleci.  Failure to do so will lead to
+    # a variety of confusing errors, such as Ivy jar symlinks being screwed up.
+    docker:
+    - *default_image
+    steps:
+    - checkout
+    - run:
+        name: env for scie-pants
+        command: |
+          mkdir -p $HOME/bin
+          echo 'export PATH=$HOME/bin:"$PATH"' >> "$BASH_ENV"
+    - restore-pants-cache
+    - run:
+          # NB: circleci does not support interpolation in the `environment` hash so we use
+          # `BASH_ENV` support to setup dynamic environment variables as described here:
+          # https://circleci.com/docs/2.0/env-vars/#using-bash_env-to-set-environment-variables
+        name: Set up dynamic environment variables
+        command: |
+          echo 'export PANTS_CONFIG_FILES="+[\"$(pwd)/pants.ci.toml\"]"' >> "${BASH_ENV}"
+          echo 'export JEST_JUNIT_OUTPUT_DIR=="$(pwd)/dist/test-results"' >> "${BASH_ENV}"
+    - run:
+        name: Bootstrap pants
+         # when changing version flag value, the cache key prefix `pants-bootstrap-vXX` must be updated. 
+        command: |
+            test -f "${HOME}/bin/pants" || ./src/sh/pants/pantsup.sh --bin-dir "${HOME}/bin" --base-name pants --version 0.5.4
+            pants --version
+    - run:
+        name: Check GIT LFS health
+        command: git lfs fsck
+    - run:
+        name: Check requirements files
+        command: |
+          sort 3rdparty/python/requirements.txt --ignore-case --check
+          sort 3rdparty/python/curator/requirements.txt --ignore-case --check
+    - run:
+        name: Check Rust toolchain version consistentency
+        command: |
+          pants run src/python/toolchain/prod/ci_checks/check_rust_versions.py
+    - run:
+        name: Lint
+        no_output_timeout: 20m
+        command: |
+          pants --tag=-nolint lint ::
+    - run:
+        name: Checks (go & mypy)
+        no_output_timeout: 20m
+        command: |
+          pants --tag=-nolint check src/python:: src/go/::
+    - run:
+        name: Run Python and Go tests
+        no_output_timeout: 20m
+        command: |
+          timeout 35m pants test src/python:: src/go::
+    # - codecov/upload:
+    #     flags: python,toolchain
+    #     upload_name: python_upload
+    #     file: dist/coverage/python/coverage.xml
+    - store_test_results:
+        path: dist/test/reports/
+    - run:
+        name: Django checks
+        environment:
+          TOOLCHAIN_ENV: toolchain_collectstatic
+          DEV_ONLY_CONFIGURE_DBS: 'true'
+        command: |
+          if [ -z "${CIRCLE_PR_NUMBER}" ]; then
+            # Branch or Tag (push) build
+            changed_targets=ALWAYS_RUN_OM_BRANCH
+          else
+            # PR Build
+            changed_targets=`pants --changed-since=<< pipeline.git.base_revision >> --changed-dependees=transitive --filter-target-type=pex_binary --filter-address-regex="src/python/toolchain/service.*" list`
+          fi
+          if [ -n "${changed_targets}" ]; then
+            echo "Found changes: ${changed_targets}"
+            ./src/sh/db/local_db_setup.sh  --no-bootstrap
+            ./src/sh/ci/django-checks.sh
+          else
+            echo "No changes to django deployable targets. not running django checks"
+          fi
+    - run:
+        name: Build Sample Binaries
+          # We do that to check both the pants side of things (which is currently not well covered in test) and also make sure it runs properly under
+          # our set of plugins (in src/python/toolchain/pants), specifically buildsense (client/plugin).
+        command: |
+          pants package src/python/toolchain/service/toolshed:toolshed-gunicorn \
+              src/python/toolchain/service/users/api:users-api-gunicorn \
+              src/python/toolchain/buildsense/dynamodb_es_bridge:dynamodb-to-es-lambda
+    - run:
+        name: Build distributions
+        command: pants package src/python/toolchain:toolchain-pants-plugin
+    - store_artifacts:
+        path: .pants.d/pants.log
+        destination: pants-log
+    - run:
+        name: Pants Cache stats
+        command: ./src/sh/ci/log-cache-usage.sh ~/.cache/pants
+    - save-pants-cache
+  build-devops:
+    docker:
+    - image: 283194185447.dkr.ecr.us-east-1.amazonaws.com/ci-devops:2023-03-24.17-00-27-f75ba7c499c5
+    steps:
+    - aws-cli/install # Needed to fetch the image from ECR, and to access terraform remote state.
+    - aws-cli/assume-role-with-web-identity:  # see: prod/terraform/resources/global/iam/circleci_read_tf_read_ecr.tf
+         role-arn: arn:aws:iam::283194185447:role/circleci-jobs-role
+    - checkout
+    - run:
+          # NB: circleci does not support interpolation in the `environment` hash so we use
+          # `BASH_ENV` support to setup dynamic environment variables as described here:
+          # https://circleci.com/docs/2.0/env-vars/#using-bash_env-to-set-environment-variables
+        name: Set up dynamic environment variables
+        command: |
+          echo 'export TF_PLUGIN_CACHE_DIR="/home/toolchain/.cache/terraform/plugins"' >> "${BASH_ENV}"
+          echo 'export HELM_REPOSITORY_CACHE="~/.cache/helm/repository/"' >> "${BASH_ENV}"
+          mkdir -p ~/.cache/terraform/plugins/
+          mkdir -p ~/.cache/helm/repository/
+    - run:
+        name: Lint e2e tests docker files
+        command: find prod/docker/e2e-tests -name "Dockerfile*" | xargs hadolint  --config
+          build-support/docker/hadolint.yaml
+    - run:
+        name: Lint CI jobs docker files
+        command: find prod/docker/ci -name "Dockerfile*" | xargs hadolint  --config
+          build-support/docker/hadolint.yaml
+    - run:
+        name: Lint builders docker files
+        command: find prod/docker/builders -name "Dockerfile*" | xargs hadolint  --config
+          build-support/docker/hadolint.yaml
+    - run:
+        name: Lint python/pex docker files
+        command: |
+          find prod/docker/django -name "Dockerfile*" | xargs hadolint  --config build-support/docker/hadolint.yaml
+          find prod/docker/pex-wrapper -name "Dockerfile*" | xargs hadolint  --config build-support/docker/hadolint.yaml
+          find prod/docker/pants -name "Dockerfile*" | xargs hadolint  --config build-support/docker/hadolint.yaml
+    - run:
+        name: Lint tools docker files
+        command: |
+          find prod/docker/tools -name "Dockerfile*" | xargs hadolint  --config build-support/docker/hadolint.yaml
+    - restore_cache:
+        name: Restore Helm cache
+        key: helm-cache-v0
+    - restore_cache:
+        name: Restore KubeConform cache
+        key: kubeconform-cache-v3
+    - run:
+        name: Helm setup
+        command: ./src/sh/setup/helm_repos_setup.sh
+    - run:
+        name: helm chart testing (version check)
+        command: ct version
+    - run:
+        name: Test helm observability charts
+        command: ./prod/helm/observability/test.sh
+    - run:
+        name: Test helm aws charts
+        command: ./prod/helm/aws/test.sh
+    - run:
+        name: Test helm python services chart
+        command: ./prod/helm/services/test_python_services.sh
+    - run:
+        name: Test helm remoting services charts
+        command: ./prod/helm/services/remoting/test.sh
+    - run:
+        name: Test helm tools charts
+        command: ./prod/helm/tools/test.sh
+    - run:
+        name: Test helm devops charts
+        command: ./prod/helm/devops/test.sh
+    - run:
+        name: Test helm dev-support charts
+        command: ./prod/helm/dev-support/test.sh
+    - run:
+        name: Test packer build files
+        command: ./prod/packer/validate.sh
+    - when:
+        condition: << pipeline.parameters.run-terraform-checks >>
+        steps:
+        - restore_cache:
+            name: Restore Terraform plugin cache
+            key: tf-cache-v4-{{ checksum "prod/terraform/resources/global/.terraform.lock.hcl" }}-{{ checksum "prod/terraform/resources/global/statuscake/.terraform.lock.hcl" }}-{{ checksum "prod/terraform/resources/global/pagerduty/services/.terraform.lock.hcl" }}
+        - run:
+            name: Terraform checks
+            command: prod/terraform/check.sh
+        - save_cache:
+            name: Save Terraform Cache
+            key: tf-cache-v4-{{ checksum "prod/terraform/resources/global/.terraform.lock.hcl" }}-{{ checksum "prod/terraform/resources/global/statuscake/.terraform.lock.hcl" }}-{{ checksum "prod/terraform/resources/global/pagerduty/services/.terraform.lock.hcl" }}
+            paths:
+            - ~/.cache/terraform/
+    - save_cache:
+        name: Save Helm Cache
+        key: helm-cache-v0
+        paths:
+        - ~/.cache/helm/
+    - save_cache:
+        name: Save KubeConform Cache
+        key: kubeconform-cache-v3
+        paths:
+        - ~/.cache/kubeconform/
+workflows:
+  version: 2
+  build_workflow:
+    jobs:
+    - build-with-pants:
+        context: aws
+    - build-devops:
+        context: aws

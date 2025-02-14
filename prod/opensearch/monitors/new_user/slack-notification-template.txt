@@ -1,0 +1,3 @@
+{{#ctx.results.0.hits.hits}}
+{{{_source.log}}}
+{{/ctx.results.0.hits.hits}}

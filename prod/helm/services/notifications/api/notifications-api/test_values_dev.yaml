@@ -1,0 +1,12 @@
+# Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+global:
+  region: us-east-1
+gunicorn_image_rev:
+  us-east-1: forgger
+ingress:
+  enabled: false
+server_sentry_dsn: test
+iam_service_role_arn: aws::arn:jerry-seinfeld.nbc
+toolchain_env: toolchain_dev

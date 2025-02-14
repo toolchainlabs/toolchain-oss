@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ExternalLinkChip /> should render circle-ci link and icon chip 1`] = `
+<DocumentFragment>
+  <a
+    href="www.circleci.com"
+    rel="noopener noreferrer"
+    target="_blank"
+    type="external"
+  >
+    <div
+      class="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-outlinedDefault css-wwrvrk-MuiChip-root"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarSmall MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
+      >
+        <img
+          alt="Circle ci link icon"
+          class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+          src="test-file-stub"
+        />
+      </div>
+      <span
+        class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1wt8dn4-MuiTypography-root"
+        >
+          circleci
+        </p>
+      </span>
+    </div>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`<ExternalLinkChip /> should render github link and icon chip 1`] = `
+<DocumentFragment>
+  <a
+    href="www.github.com"
+    rel="noopener noreferrer"
+    target="_blank"
+    type="external"
+  >
+    <div
+      class="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-outlinedDefault css-wwrvrk-MuiChip-root"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarSmall MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
+      >
+        <img
+          alt="GitHub link icon"
+          class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+          src="test-file-stub"
+        />
+      </div>
+      <span
+        class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1wt8dn4-MuiTypography-root"
+        >
+          github
+        </p>
+      </span>
+    </div>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`<ExternalLinkChip /> should render random link and icon chip 1`] = `
+<DocumentFragment>
+  <a
+    href="www.random.com"
+    rel="noopener noreferrer"
+    target="_blank"
+    type="external"
+  >
+    <div
+      class="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-outlinedDefault css-wwrvrk-MuiChip-root"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarSmall MuiChip-avatarColorDefault css-t8ibnv-MuiAvatar-root"
+      >
+        <img
+          alt="External link icon"
+          class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+          src="test-file-stub"
+        />
+      </div>
+      <span
+        class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1wt8dn4-MuiTypography-root"
+        >
+          random
+        </p>
+      </span>
+    </div>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`<ExternalLinkChip /> should render travis-ci link and icon chip 1`] = `
+<DocumentFragment>
+  <a
+    href="www.travis-ci.com"
+    rel="noopener noreferrer"
+    target="_blank"
+    type="external"
+  >
+    <div
+      class="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-outlinedDefault css-wwrvrk-MuiChip-root"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarSmall MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
+      >
+        <img
+          alt="Travis CI link icon"
+          class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+          src="test-file-stub"
+        />
+      </div>
+      <span
+        class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1wt8dn4-MuiTypography-root"
+        >
+          travis-ci
+        </p>
+      </span>
+    </div>
+  </a>
+</DocumentFragment>
+`;

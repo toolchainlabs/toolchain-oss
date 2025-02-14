@@ -1,0 +1,378 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# Note: Secrets are stored in AWS Secrets Manager (https://us-east-1.console.aws.amazon.com/secretsmanager/home)
+# Under the prod/monitoring secret. We have the Slack webhook and dead-mans-snitch URL there.
+
+global:
+  region: null
+features:
+  # filled in by installer
+  cloudwatchExporter: false
+  monitorToolchainPythonServices: false
+  pushGateway: true
+  remotingRules: false
+  prometheusAdapter: false
+kube-prometheus-stack:
+  nameOverride: "prometheus-operator"  # see https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#zero-downtime
+  fullnameOverride: "prod-monitoring-prometheus"
+  commonLabels:
+    services: toolchain-monitoring
+  # Introduced in: https://github.com/helm/charts/pull/22586 
+  # See: https://github.com/helm/charts/issues/22890
+  kubelet:
+    serviceMonitor:
+      resource: false
+  prometheus:
+    service:
+      port: 80
+    ingress:
+      enabled: false # Enabled by install script on remoting cluster
+      hosts: []  # filled by install script
+      paths: ["/*"]
+      pathType: ImplementationSpecific
+      annotations:
+        kubernetes.io/ingress.class: alb
+        alb.ingress.kubernetes.io/scheme: internal
+        # TODO: Eventually this will be HTTPS/SSL, but start with HTTP for now.
+        alb.ingress.kubernetes.io/listen-ports: >-
+          [{"HTTP": 80}]
+        alb.ingress.kubernetes.io/security-groups: null # filled by install script
+        alb.ingress.kubernetes.io/target-type: ip
+        alb.ingress.kubernetes.io/backend-protocol: HTTP
+        alb.ingress.kubernetes.io/healthcheck-protocol: HTTP
+        alb.ingress.kubernetes.io/healthcheck-port: traffic-port
+        alb.ingress.kubernetes.io/healthcheck-path: "/-/healthy"
+        # Note: these must be quoted strings, or the resource will be ignored by the ingress controller!
+        alb.ingress.kubernetes.io/healthcheck-interval-seconds: "15"
+        alb.ingress.kubernetes.io/healthcheck-timeout-seconds: "5"
+        alb.ingress.kubernetes.io/success-codes: "200"
+        alb.ingress.kubernetes.io/healthy-threshold-count: "2"
+        alb.ingress.kubernetes.io/unhealthy-threshold-count: "2"
+        alb.ingress.kubernetes.io/ip-address-type: ipv4
+        alb.ingress.kubernetes.io/load-balancer-attributes: "access_logs.s3.enabled=true,access_logs.s3.bucket=logs.us-east-1.toolchain.com,access_logs.s3.prefix=elb-access-logs/remoting"
+    prometheusSpec:
+      logFormat: json
+      serviceMonitorSelector:
+        matchLabels:
+          services: toolchain-monitoring
+      externalLabels:
+        cluster: null # updated by install script
+      retention: 16w  # 16 Weeks
+      retentionSize: 150GiB
+      resources:
+        requests:
+          cpu: 300m
+          memory: 1024Mi
+        limits:
+          cpu: 2000m
+          memory: 8Gi
+      storageSpec:
+        volumeClaimTemplate:
+          spec:
+            storageClassName: gp2
+            resources:
+              requests:
+                storage: 200Gi
+  prometheusConfigReloader:
+    resources:
+      requests:
+        cpu: 20m
+        memory: 50Mi
+      limits:
+        cpu: 100m
+        memory: 150Mi
+  grafana:
+    enabled: false
+  alertmanager:
+   config: 
+      global: 
+        slack_api_url: SLACK_API_URL_PLACEHOLDER
+        smtp_smarthost: smtp.sendgrid.net:587
+        smtp_auth_username: apikey
+        smtp_auth_password: SMTP_PASSWORD_PLACEHOLDER
+        smtp_require_tls: true
+        pagerduty_url: PAGERDUTY_URL_PLACEHOLDER
+      route:
+        group_by: ["alertname", "cluster", "service"]
+        group_wait: 30s
+        group_interval: 5m
+        receiver: 'slack-devops'
+        routes: 
+          - receiver: 'dead-mans-snitch'
+            group_wait: 30s
+            repeat_interval: 10m
+            matchers:
+              - alertname = Watchdog
+          - receiver: 'null'
+            matchers:
+              - alertname = InfoInhibitor
+          - receiver: 'slack-alerts-test'
+            group_wait: 90s
+            repeat_interval: 5h
+            matchers:
+              - state = testing
+          - receiver: 'pagerduty'
+            group_wait: 2m
+            repeat_interval: 2h
+            continue: true
+            matchers:
+              - pagerduty = high-severity
+          - receiver: 'slack-devops'
+            group_wait: 30s
+            repeat_interval: 4h
+            continue: true
+            matchers:
+              - alertname =~ CPUThrottlingHigh|KubePodCrashLooping|KubePodNotReady
+          - receiver: 'slack-devops'
+            group_wait: 30s
+            repeat_interval: 4h
+            matchers:
+              - severity = critical
+            continue: true
+          - receiver: 'email'
+            group_wait: 1m
+            repeat_interval: 8h
+      receivers:
+        - name: 'pagerduty'
+          pagerduty_configs:
+            - send_resolved: true
+              routing_key: PAGERDUTY_INTEGRATION_KEY_PLACEHOLDER
+        - name: 'slack-devops'
+          slack_configs:
+            - channel: '#devops'
+              send_resolved: true
+              fields: 
+                - title: cluster
+                  value: '{{ .CommonLabels.cluster }}'
+              icon_emoji: |-
+                  {{- if eq .Status "firing" }}:boom:{{ else }}:white_check_mark:{{ end }}
+              text:  >-
+                  {{ with index .Alerts 0 -}}
+                    {{ .Annotations.message }}
+                  {{ end }}
+        - name: 'slack-alerts-test'
+          slack_configs:
+            - send_resolved: true
+              channel: '#alerts-manager-test'
+              fields: 
+                - title: cluster
+                  value: '{{ .CommonLabels.cluster }}'
+              icon_emoji: |-
+                  {{- if eq .Status "firing" }}:boom:{{ else }}:white_check_mark:{{ end }}
+              text:  >-
+                  {{ with index .Alerts 0 -}}
+                    {{ .Annotations.message }}
+                  {{ end }}
+        - name: 'dead-mans-snitch'
+          webhook_configs:
+            - send_resolved: true
+              url: DEAD_MANS_SNITCH_URL_PLACEHOLDER
+        - name: 'email'
+          email_configs:
+            - to: 'ops-notify@toolchain.com'
+              from: 'prometheus-alerts@toolchain.com'
+        - name: 'null'
+   alertmanagerSpec:
+    logFormat: json
+    replicas: 2
+    resources:
+      requests:
+        cpu: 40m
+        memory: 128Mi
+      limits:
+        cpu: 150m
+        memory: 256Mi
+  # Disable monitoring components managed by EKS
+  # https://github.com/helm/charts/issues/10517#issuecomment-469407481
+  defaultRules:
+    rules:
+      etcd: false
+      kubeScheduler: false
+  kubeControllerManager:
+    enabled: false
+  kubeEtcd:
+    enabled: false
+  kubeScheduler:
+    enabled: false
+  prometheusOperator:
+    resources:
+      requests:
+        cpu: 50m
+        memory: 128Mi
+      limits:
+        cpu: 700m
+        memory: 512Mi
+  prometheus-node-exporter:
+    prometheus:
+      monitor:
+        additionalLabels:
+          services: toolchain-monitoring
+    resources:
+      requests:
+        cpu: 10m
+        memory: 30Mi
+      limits:
+        cpu: 200m
+        memory: 50Mi
+  kube-state-metrics:
+    prometheus:
+      monitor:
+        additionalLabels:
+          services: toolchain-monitoring
+prometheus-pushgateway:
+  resources:
+    requests:
+      cpu: 20m
+      memory: 64Mi
+    limits:
+        cpu: 100m
+        memory: 128Mi
+  serviceMonitor:
+    enabled: true
+    namespace: monitoring
+    additionalLabels:
+      release: prod-monitoring
+      services: toolchain-monitoring
+prometheus-cloudwatch-exporter:
+  serviceAccount:
+    name: cloudwatch-exporter
+    annotations:
+      # See service_role_policies.tf for prod cluster
+      eks.amazonaws.com/role-arn: arn:aws:iam::283194185447:role/k8s.prod-e1-1.monitoring.cloudwatch.service
+  resources:
+    requests:
+      cpu: 30m
+      memory: 256Mi
+    limits:
+        cpu: 250m
+        memory: 512Mi
+  serviceMonitor:
+    enabled: true
+    labels:
+      release: prod-monitoring
+      services: toolchain-monitoring
+    interval: 180s
+    scrapeTimeout: 90s
+  # https://github.com/prometheus/cloudwatch_exporter#configuration
+  config: |-
+    region: us-east-1
+    metrics:
+      # Lambda metrics
+      - aws_dimensions: [FunctionName, Resource]
+        aws_metric_name: Duration
+        aws_namespace: AWS/Lambda
+      - aws_dimensions: [FunctionName, Resource]
+        aws_metric_name: Invocations
+        aws_namespace: AWS/Lambda
+      - aws_dimensions: [FunctionName, Resource]
+        aws_metric_name: Errors
+        aws_namespace: AWS/Lambda
+
+      # Elasticsearch metrics
+      - aws_dimensions: [DomainName, NodeId, ClientId]
+        aws_metric_name: FreeStorageSpace
+        aws_namespace: AWS/ES
+      - aws_dimensions: [DomainName, NodeId, ClientId]
+        aws_metric_name: CPUUtilization
+        aws_namespace: AWS/ES
+      - aws_dimensions: [DomainName, NodeId, ClientId]
+        aws_metric_name: JVMMemoryPressure
+        aws_namespace: AWS/ES
+      - aws_dimensions: [DomainName, ClientId]
+        aws_metric_name: Nodes
+        aws_namespace: AWS/ES
+      - aws_dimensions: [DomainName, ClientId]
+        aws_metric_name: ClusterStatus.red
+        aws_namespace: AWS/ES
+      - aws_dimensions: [DomainName, ClientId]
+        aws_metric_name: ClusterStatus.yellow
+        aws_namespace: AWS/ES
+
+      # DynamoDB metrics (For buildsense prod table)
+      - aws_metric_name: ThrottledRequests
+        aws_namespace: AWS/DynamoDB
+        aws_dimensions: [TableName, Operation]
+        aws_dimension_select:
+          TableName: [prod-runinfo-v1]
+      - aws_metric_name: SystemErrors
+        aws_namespace: AWS/DynamoDB
+        aws_dimensions: [TableName, Operation]
+        aws_dimension_select:
+          TableName: [prod-runinfo-v1]
+      - aws_metric_name: ConsumedWriteCapacityUnits
+        aws_namespace: AWS/DynamoDB
+        aws_dimensions: [TableName]
+        aws_dimension_select:
+          TableName: [prod-runinfo-v1]
+      - aws_metric_name: ConsumedReadCapacityUnits
+        aws_namespace: AWS/DynamoDB
+        aws_dimensions: [TableName]
+        aws_dimension_select:
+          TableName: [prod-runinfo-v1]
+
+      ##
+      ## Remote Cache metrics (ALB, ElastiCache/Redis, EFS)
+      ##
+      # ALB: Request metrics
+      - aws_dimensions: [LoadBalancer, AvailabilityZone]
+        aws_metric_name: HTTPCode_ELB_4XX_Count
+        aws_namespace: AWS/ApplicationELB
+      - aws_dimensions: [LoadBalancer, AvailabilityZone]
+        aws_metric_name: HTTPCode_ELB_5XX_Count
+        aws_namespace: AWS/ApplicationELB
+
+
+      # ElastiCache/Redis: Node utilization metrics
+      - aws_dimensions: [CacheClusterId, CacheNodeId]
+        aws_metric_name: CPUUtilization
+        aws_namespace: AWS/ElastiCache
+      - aws_dimensions: [CacheClusterId, CacheNodeId]
+        aws_metric_name: EngineCPUUtilization
+        aws_namespace: AWS/ElastiCache
+
+      # ElastiCache/Redis: Connection metrics
+      - aws_dimensions: [CacheClusterId, CacheNodeId]
+        aws_metric_name: CurrConnections
+        aws_namespace: AWS/ElastiCache
+
+      # ElastiCache/Redis: Memory usage metrics
+      - aws_dimensions: [CacheClusterId, CacheNodeId]
+        aws_metric_name: DatabaseMemoryUsagePercentage
+        aws_namespace: AWS/ElastiCache
+      - aws_dimensions: [CacheClusterId, CacheNodeId]
+        aws_metric_name: Evictions
+        aws_namespace: AWS/ElastiCache
+
+      # ElastiCache/Redis: Replication metrics
+      - aws_dimensions: [CacheClusterId, CacheNodeId]
+        aws_metric_name: ReplicationLag
+        aws_namespace: AWS/ElastiCache
+
+      # EFS: client connections
+      - aws_dimensions: [FileSystemId]
+        aws_metric_name: ClientConnections
+        aws_namespace: AWS/EFS
+
+      # EFS: Two metrics (MeteredIOBytes, PermittedThroughput) that will be used to calculate and alert on Throughput utilization (%) 
+      - aws_dimensions: [FileSystemId]
+        aws_metric_name: MeteredIOBytes
+        aws_namespace: AWS/EFS
+      - aws_dimensions: [FileSystemId]
+        aws_metric_name: PermittedThroughput
+        aws_namespace: AWS/EFS
+prometheus-adapter: # more info in templates/buildsense-workflow-hpa-rules.yaml
+  logLevel: 2
+  rules:
+    default: true # must be enabled so rbac objects and APIService are created. default rules won't actually be created since `existing` is used.
+    existing: buildsense-workflow-hpa-rules
+  prometheus:
+     url: http://prod-monitoring-prometheus-prometheus.monitoring.svc.cluster.local
+     port: 80
+  resources:
+    limits:
+      cpu: 200m
+      memory: 256Mi
+    requests:
+      cpu: 20m
+      memory: 128Mi

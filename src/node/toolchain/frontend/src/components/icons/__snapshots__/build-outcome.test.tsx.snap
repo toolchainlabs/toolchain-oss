@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BuildOutcome /> should render aborted outcome 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-outlinedDefault css-ehpd0i-MuiChip-root"
+  >
+    <svg
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-hofxd8-MuiSvgIcon-root"
+      data-testid="DeleteOutlineIcon"
+      focusable="false"
+      role="img"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5-1-1h-5l-1 1H5v2h14V4z"
+      />
+      <title>
+        ABORTED
+      </title>
+    </svg>
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+      >
+        Aborted
+      </p>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<BuildOutcome /> should render failed outcome 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-outlinedDefault css-9jsvc4-MuiChip-root"
+  >
+    <svg
+      class="MuiSvgIcon-root MuiSvgIcon-colorError MuiSvgIcon-fontSizeMedium css-1jdtjv1-MuiSvgIcon-root"
+      data-testid="ErrorOutlineIcon"
+      focusable="false"
+      role="img"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+      />
+      <title>
+        FAILURE
+      </title>
+    </svg>
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+      >
+        Failed
+      </p>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<BuildOutcome /> should render not available outcome 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-outlinedDefault css-emld2w-MuiChip-root"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+      >
+        Not available
+      </p>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<BuildOutcome /> should render running outcome 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-outlinedDefault css-flo5p1-MuiChip-root"
+  >
+    <span
+      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorWarning css-9wd0j5-MuiCircularProgress-root"
+      role="circular-progress"
+      style="width: 20px; height: 20px;"
+    >
+      <svg
+        class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20.2"
+          stroke-width="3.6"
+        />
+      </svg>
+    </span>
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+      >
+        Running
+      </p>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<BuildOutcome /> should render success outcome 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-outlinedDefault css-7mahsk-MuiChip-root"
+  >
+    <svg
+      class="MuiSvgIcon-root MuiSvgIcon-colorSuccess MuiSvgIcon-fontSizeMedium css-fdba4v-MuiSvgIcon-root"
+      data-testid="CheckCircleOutlineIcon"
+      focusable="false"
+      role="img"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M16.59 7.58 10 14.17l-3.59-3.58L5 12l5 5 8-8zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+      />
+      <title>
+        SUCCESS
+      </title>
+    </svg>
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+      >
+        Success
+      </p>
+    </span>
+  </div>
+</DocumentFragment>
+`;

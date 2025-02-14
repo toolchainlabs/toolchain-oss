@@ -1,0 +1,25 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "maven/base.html" %}
+
+{% block content %}
+  <h2>Summary</h2>
+
+
+  <div class="maven-summary-table-container">
+    <table id="maven-summary-table" class="table table-condensed table-bordered table-hover">
+      <thead>
+        <tr><td><a href="{{ url('maven:group_list') }}">Groups</a></td><td>{{ num_groups }}</td></tr>
+        <tr><td>Artifacts</td><td>{{ stats.num_artifacts }}</td></tr>
+        <tr><td>Artifact Versions</td><td>{{ stats.num_versions }}</td></tr>
+        <tr><td>POM files</td><td>{{ stats.num_poms }}</td></tr>
+        <tr><td>Binary Jars</td><td>{{ stats.num_binary_jars }}</td></tr>
+        <tr><td>Source Jars</td><td>{{ stats.num_source_jars }}</td></tr>
+        <tr><td>Javadoc Jars</td><td>{{ stats.num_javadoc_jars }}</td></tr>
+    </table>
+  </div>
+
+{% endblock content %}

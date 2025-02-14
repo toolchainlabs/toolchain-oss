@@ -1,0 +1,16 @@
+{#
+Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'users/base.html' %}
+{% block content %}
+<div class="error-container">
+    <div class="error-image-container">
+        <img src="{{ static('servicerouter/images/rejected.svg') }}" alt="ticked" />
+    </div>
+    <span class="error-message">{{ error_message }}</span>
+    <span class="error-message"><a href="{{ contact_page_link }}">Contact us</a> to find out how to integrate Toolchain into your repos.</span>
+    <a class="back-to-login-button" href="/">Back to Login</a>
+</div>
+{% endblock content %}

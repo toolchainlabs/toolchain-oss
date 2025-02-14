@@ -1,0 +1,17 @@
+[flake8]
+ignore:
+  C408,    # Unnecessary dict call - rewrite as a literal
+  E203,    # whitespace before ':' (conflicts with Black)
+  E501,    # line too long (> 79 characters)
+  F405,    # unrecognized symbol, possibly due to star imports
+  B028,    # XXXX  is manually surrounded by quotes, consider using the `!r` conversion flag
+  W503,    # line break before binary operator  (conflicts with Black)
+  SIM106,  # Handle error-cases first
+  SIM111,  # Convert some for loops to all(... generator comprehension ... )
+  NIC002,  # Implicitly concatenated str literals over multiple lines 
+  SIM114,  #  Use logical or 
+  # TODO: Enable
+  DJ05,    # Missing namespace in urls include()
+  SIM113,  # Use enumerate instead of ''
+  B019,    # Use of `functools.lru_cache` or `functools.cache` on methods can lead to memory leaks. The cache may retain instance references, preventing garbage collection
+  

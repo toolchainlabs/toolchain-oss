@@ -1,0 +1,448 @@
+{
+    "counter_names": [
+        "local_cache_requests",
+        "local_cache_requests_cached",
+        "local_cache_requests_uncached",
+        "local_cache_read_errors",
+        "local_cache_write_errors",
+        "local_cache_total_time_saved_ms",
+        "local_execution_requests",
+        "remote_cache_requests",
+        "remote_cache_requests_cached",
+        "remote_cache_requests_uncached",
+        "remote_cache_read_errors",
+        "remote_cache_write_errors",
+        "remote_cache_write_started",
+        "remote_cache_write_finished",
+        "remote_cache_speculation_local_completed_first",
+        "remote_cache_speculation_remote_completed_first",
+        "remote_cache_total_time_saved_ms",
+        "remote_execution_errors",
+        "remote_execution_requests",
+        "remote_execution_rpc_errors",
+        "remote_execution_rpc_execute",
+        "remote_execution_rpc_retries",
+        "remote_execution_rpc_wait_execution",
+        "remote_execution_success",
+        "remote_execution_timeouts"
+    ],
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 19.446475982666016
+        }
+    ],
+    "observation_histograms": {
+        "histograms": {
+            "local_cache_time_saved_ms": "HISTFAAAAGl4nC2Muw1AYBSFr++/IqISEY0dFApRGcNCNjCCWoxgALXKCBob8D/cc5PzSk49zYWIjBLO/BwF977DE4KOGBL3qeYYD0U8jIrNMyqrNcbVGWtESw8lOxwJt+uXkrOwS5fC1tHwAc/rDVU=",
+            "local_store_read_blob_size": "HISTFAAAAX54nC1OP0scQRydeftm9t/t3W6W4zTJEcS7IuRPkyKQJk0CSaGChZ2K+AEsRKwEQcHCwsIPIBZiITa2FmKjIDb2WolY6jc435zu7uy835v3Zz5u7tbG2Fvz+kRvux0Og8Hg9/MrkdMxoiFrVr40wkUSkRAV3pEkZQC99fTazlylt3bdXsQn9t9c72uj/PU94/tmM8kmHZtyBWVpkpjs0GTmXVkmEXKmjSija7R97GMWjFXimErcYgXmMIgw6imyC8Cw4jzH9T+y+JOxgzZ7TQ/WcIJGgkLIoSUtYnmNXHQwnnESuDBrDAKgkMPhs5AXn4avJY8btqpXx59QC/WVlWu5ECV5e1hR44McldiWdkUppSN1FxFTKVL81BrHKLrsZyG3r1VI+VdZ35QYGKNr5FzG6rCpEpvjwMq0hDHcW6zhPxYwgS0o+NCqYcfyB2apK/oxPDjsA1sWNxbbwJP1K5Iv4tjjCy499iw2gCmcT/vTtn/sJncj/qzvXwDWXy2P"
+        },
+        "version": 0
+    },
+    "pantsd_stats": {
+        "affected_file_count": 963,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 9901
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "local_store_shard_count": 16,
+            "log_levels_by_target": {},
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "streaming_workunits_report_interval": 1,
+            "subproject_roots": [],
+            "tag": [],
+            "verify_config": true
+        },
+        "toolchain-setup": {
+            "repo": "toolchain"
+        }
+    },
+    "run_info": {
+        "branch": "dolores",
+        "buildroot": "/Users/asher/projects/toolchain",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.4.0rc1 --no-dynamic-ui -ldebug typecheck src/python/toolchain/aws/::",
+        "computed_goals": [
+            "typecheck"
+        ],
+        "datetime": "Thursday Apr 08, 2021 14:40:49",
+        "id": "pants_run_2021_04_08_14_40_53_187_02aa2b43006646049b34dcb57caca5a5",
+        "machine": "Ashers-MacBook-Pro.local",
+        "outcome": "FAILURE",
+        "path": "/Users/asher/projects/toolchain",
+        "revision": "80ac7be6d2bb87902d8ef38cf34dda1f30f6d66e",
+        "specs_from_command_line": [
+            "src/python/toolchain/aws::"
+        ],
+        "timestamp": 1617918049.905757,
+        "user": "asher",
+        "version": "2.4.0rc1"
+    },
+    "targets": {
+        "src/python/toolchain/aws": [
+            {
+                "filename": "src/python/toolchain/aws/acm.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/auth.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/autoscaling.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/aws_api.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/aws_lambda.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/cloudfront.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/cost_explorer.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/dynamodb.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/ec2.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/ec2_instance_metadata.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/ecr.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/eks.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/elasticsearch.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/elb.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/errors.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/iam.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/kms.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/rds.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/s3.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/secretsmanager.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/ses.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/sns.py"
+            }
+        ],
+        "src/python/toolchain/aws/test_utils": [
+            {
+                "filename": "src/python/toolchain/aws/test_utils/mock_es_client.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/test_utils/s3_utils.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/test_utils/secrets.py"
+            }
+        ],
+        "src/python/toolchain/aws:tests": [
+            {
+                "filename": "src/python/toolchain/aws/acm_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/aws_api_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/dynamodb_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/elasticsearch_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/elb_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/s3_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/aws/secretsmanager_test.py"
+            }
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "6b63a484c9eca90c",
+            "name": "select",
+            "state": "finished",
+            "version": 14,
+            "parent_id": null,
+            "last_update": 1617918069,
+            "start_usecs": 1617918055881949,
+            "end_usecs": 1617918069349383
+        },
+        {
+            "workunit_id": "22ba22b88fe7c396",
+            "name": "pants.core.goals.typecheck.typecheck",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "6b63a484c9eca90c",
+            "last_update": 1617918069,
+            "start_usecs": 1617918055881983,
+            "description": "`typecheck` goal",
+            "end_usecs": 1617918069349329
+        },
+        {
+            "workunit_id": "a9401c2c539a5a7f",
+            "name": "pants.core.goals.typecheck.enrich_typecheck_results",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "22ba22b88fe7c396",
+            "last_update": 1617918069,
+            "start_usecs": 1617918055981088,
+            "description": "typecheck",
+            "end_usecs": 1617918069349184
+        },
+        {
+            "workunit_id": "84cf3608de8b9874",
+            "name": "pants.backend.python.typecheck.mypy.rules.mypy_typecheck",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "a9401c2c539a5a7f",
+            "last_update": 1617918069,
+            "start_usecs": 1617918055981107,
+            "description": "Typecheck using MyPy",
+            "end_usecs": 1617918069349036
+        },
+        {
+            "workunit_id": "c006f0161a88604d",
+            "name": "pants.engine.internals.graph.transitive_targets",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "84cf3608de8b9874",
+            "last_update": 1617918069,
+            "start_usecs": 1617918056042957,
+            "description": "Resolve transitive targets",
+            "end_usecs": 1617918061865963
+        },
+        {
+            "workunit_id": "3bb4e6eeece2ce92",
+            "name": "pants.engine.internals.graph.resolve_targets",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "c006f0161a88604d",
+            "last_update": 1617918069,
+            "start_usecs": 1617918056046685,
+            "end_usecs": 1617918060423947
+        },
+        {
+            "workunit_id": "aba3d048b811c261",
+            "name": "pants.engine.internals.graph.resolve_unexpanded_targets",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "3bb4e6eeece2ce92",
+            "last_update": 1617918069,
+            "start_usecs": 1617918056047090,
+            "end_usecs": 1617918060422920
+        },
+        {
+            "workunit_id": "ccd48da05355076d",
+            "name": "pants.engine.internals.graph.resolve_dependencies",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "aba3d048b811c261",
+            "last_update": 1617918069,
+            "start_usecs": 1617918056047200,
+            "description": "Resolve direct dependencies",
+            "end_usecs": 1617918060422065
+        },
+        {
+            "workunit_id": "3f567d7fc5a1f904",
+            "name": "pants.backend.python.dependency_inference.rules.infer_python_dependencies_via_imports",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "ccd48da05355076d",
+            "last_update": 1617918069,
+            "start_usecs": 1617918056141961,
+            "description": "Inferring Python dependencies by analyzing imports",
+            "end_usecs": 1617918060421872
+        },
+        {
+            "workunit_id": "344e47cfd26c47fe",
+            "name": "pants.backend.python.dependency_inference.import_parser.parse_python_imports",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "3f567d7fc5a1f904",
+            "last_update": 1617918069,
+            "start_usecs": 1617918056148519,
+            "end_usecs": 1617918057917157
+        },
+        {
+            "workunit_id": "b6b7c6bec58701fc",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "344e47cfd26c47fe",
+            "last_update": 1617918069,
+            "start_usecs": 1617918057831831,
+            "end_usecs": 1617918057916705
+        },
+        {
+            "workunit_id": "bdd477d431d6533e",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "b6b7c6bec58701fc",
+            "last_update": 1617918069,
+            "start_usecs": 1617918057832855,
+            "end_usecs": 1617918057916589
+        },
+        {
+            "workunit_id": "d3274c387d7241ca",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "bdd477d431d6533e",
+            "last_update": 1617918069,
+            "start_usecs": 1617918057834321,
+            "description": "Determine Python imports for src/python/toolchain/aws/iam.py",
+            "end_usecs": 1617918057914324
+        },
+        {
+            "workunit_id": "6348f023afa18b2d",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "d3274c387d7241ca",
+            "last_update": 1617918069,
+            "start_usecs": 1617918057834334,
+            "end_usecs": 1617918057914313,
+            "counters": {
+                "local_cache_requests": 1,
+                "local_cache_requests_uncached": 1,
+                "remote_cache_speculation_local_completed_first": 1
+            }
+        },
+        {
+            "workunit_id": "ed73b4bc8a2c8598",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "6348f023afa18b2d",
+            "last_update": 1617918069,
+            "start_usecs": 1617918057849250,
+            "description": "(Waiting) Determine Python imports for src/python/toolchain/aws/iam.py",
+            "end_usecs": 1617918057913768
+        },
+        {
+            "workunit_id": "e8c2f2aeb25e267c",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "ed73b4bc8a2c8598",
+            "last_update": 1617918069,
+            "start_usecs": 1617918057849331,
+            "description": "Determine Python imports for src/python/toolchain/aws/iam.py",
+            "end_usecs": 1617918057913719,
+            "counters": {
+                "local_execution_requests": 1
+            },
+            "metadata": {
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "dataclasses.dataclass\ndatetime\njson\nlogging\ntoolchain.aws.aws_api.AWSService\ntyping.List\n\n--\n\n"
+            }
+        },
+        {
+            "workunit_id": "26eec8731335a30b",
+            "name": "pants.backend.python.typecheck.mypy.rules.mypy_typecheck_partition",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "84cf3608de8b9874",
+            "last_update": 1617918069,
+            "start_usecs": 1617918061936955,
+            "end_usecs": 1617918069348927
+        },
+        {
+            "workunit_id": "1f6c10b3d73f8812",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "26eec8731335a30b",
+            "last_update": 1617918069,
+            "start_usecs": 1617918063367130,
+            "end_usecs": 1617918069348772
+        },
+        {
+            "workunit_id": "6925ccd3ea2d4e76",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "1f6c10b3d73f8812",
+            "last_update": 1617918069,
+            "start_usecs": 1617918063368330,
+            "description": "Run MyPy on 38 files.",
+            "end_usecs": 1617918069348560
+        },
+        {
+            "workunit_id": "acbefc416d8ced53",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "6925ccd3ea2d4e76",
+            "last_update": 1617918069,
+            "start_usecs": 1617918063368348,
+            "end_usecs": 1617918069348551,
+            "counters": {
+                "local_cache_requests": 1,
+                "local_cache_requests_uncached": 1
+            }
+        },
+        {
+            "workunit_id": "7cd6c3cfa48f9180",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "acbefc416d8ced53",
+            "last_update": 1617918069,
+            "start_usecs": 1617918063369688,
+            "description": "(Waiting) Run MyPy on 38 files.",
+            "end_usecs": 1617918069348505
+        },
+        {
+            "workunit_id": "a4e06f5debbc9d96",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 14,
+            "parent_id": "7cd6c3cfa48f9180",
+            "last_update": 1617918069,
+            "start_usecs": 1617918063369750,
+            "description": "Run MyPy on 38 files.",
+            "end_usecs": 1617918069348448,
+            "counters": {
+                "local_execution_requests": 1
+            },
+            "metadata": {
+                "exit_code": 1
+            },
+            "artifacts": {
+                "stdout": "src/python/toolchain/aws/iam.py: note: In member \"get_users_with_old_keys\" of class \"IAM\":\nsrc/python/toolchain/aws/iam.py:76:41: error: Argument \"tags\" to \"IAMUser\" has\nincompatible type \"Dict[str, str]\"; expected \"bool\"  [arg-type]\n                        name=username, tags=self.tags_to_dict(tags), key_i...\n                                            ^\nsrc/python/toolchain/aws/iam.py:79:16: error: Incompatible return value type\n(got \"List[IAMUser]\", expected \"List[str]\")  [return-value]\n            return users\n                   ^\nFound 2 errors in 1 file (checked 38 source files)\n"
+            }
+        }
+    ]
+}

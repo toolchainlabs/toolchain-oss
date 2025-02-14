@@ -1,0 +1,16 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+kubernetes-dashboard:
+    serviceMonitor:
+        # Until https://github.com/kubernetes/dashboard/pull/7688 lands we will control this value from the install script.
+        # enabled: false 
+        labels:
+            services: toolchain-monitoring
+            monitor: "true"
+    nodeSelector:
+        toolchain.instance_category: service
+    metricsScraper:
+        enabled: true
+    metrics-server:
+        enabled: true

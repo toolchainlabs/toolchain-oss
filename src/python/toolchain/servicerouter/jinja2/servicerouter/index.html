@@ -1,0 +1,39 @@
+{#
+Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Toolchain</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="{{ favicon }}" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <base id="app_base" href="/">
+</head>
+
+<body>
+  <noscript>
+    JavaScript must be enabled in order for you to use the Toolchain Web App. However, it seems JavaScript is either disabled or not supported by your browser.
+  </noscript>
+  <div id="app"></div>
+  {% script id="app_init_data" type="text/json" %}
+    <script id="app_init_data" type="text/json">
+      {{ init_data }}
+    </script>
+  {% endscript %}
+  {% script type="application/javascript" async=False %}
+  <script type="text/javascript">
+    window.toolchainBaseAssetsUrl = "{{ scripts_base }}";
+  </script>
+{% endscript %}
+{% for bundle in js_bundles %}
+  <script type="text/javascript" src="{{ bundle }}"></script>
+{% endfor %}
+</body>
+
+</html>

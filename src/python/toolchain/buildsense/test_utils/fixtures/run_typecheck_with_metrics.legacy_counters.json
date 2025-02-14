@@ -1,0 +1,222 @@
+{
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 30.487573862075806,
+            "is_tool": false
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 1843,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 12856
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "build_file_prelude_globs": [],
+            "ca_certs_path": null,
+            "colors": true,
+            "concurrent": false,
+            "dynamic_ui": true,
+            "exclude_target_regexp": [],
+            "files_not_found_behavior": "warn",
+            "ignore_pants_warnings": [
+                "DEPRECATED: option 'stats_version' in scope 'run-tracker'"
+            ],
+            "level": "info",
+            "local_execution_root_dir": "/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T",
+            "local_store_dir": "/Users/asher/.cache/pants/lmdb_store",
+            "log_levels_by_target": {},
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "plugins_force_resolve": false,
+            "print_stacktrace": true,
+            "process_execution_cleanup_local_dirs": true,
+            "process_execution_local_enable_nailgun": false,
+            "process_execution_local_parallelism": 12,
+            "process_execution_remote_parallelism": 128,
+            "process_execution_speculation_delay": 1,
+            "verify_config": true
+        }
+    },
+    "run_info": {
+        "id": "pants_run_2020_11_02_20_24_01_120_31f8258d0ab44329bd00d47c3a79ec88",
+        "timestamp": "1604377441.120658",
+        "datetime": "Monday Nov 02, 2020 20:24:01",
+        "user": "asher",
+        "machine": "Ashers-MacBook-Pro.local",
+        "path": "/Users/asher/projects/toolchain",
+        "buildroot": "/Users/asher/projects/toolchain",
+        "version": "2.1.0.dev0",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.1.0.dev0 typecheck src/python/toolchain/pants/::",
+        "specs_from_command_line": [
+            "src/python/toolchain/pants::"
+        ],
+        "outcome": "SUCCESS",
+        "revision": "422f21d3ae0e7636213450724b00c390170207c6",
+        "branch": "george",
+        "computed_goals": [
+            "typecheck"
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "46bfcd3cc42ad477",
+            "name": "select",
+            "state": "finished",
+            "version": 24,
+            "parent_id": null,
+            "last_update": 1604377470,
+            "start_usecs": 1604377441163747,
+            "end_usecs": 1604377470264437
+        },
+        {
+            "workunit_id": "f09137d9c4b57423",
+            "name": "pants.core.goals.typecheck.typecheck",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "46bfcd3cc42ad477",
+            "last_update": 1604377470,
+            "start_usecs": 1604377441164236,
+            "description": "`typecheck` goal",
+            "end_usecs": 1604377470264360
+        },
+        {
+            "workunit_id": "a5693bb72f1e7735",
+            "name": "pants.backend.python.typecheck.mypy.rules.mypy_typecheck",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "f09137d9c4b57423",
+            "last_update": 1604377470,
+            "start_usecs": 1604377441273408,
+            "description": "Typecheck using MyPy",
+            "end_usecs": 1604377470260427
+        },
+        {
+            "workunit_id": "711474df793baede",
+            "name": "pants.backend.python.typecheck.mypy.rules.mypy_typecheck_partition",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "a5693bb72f1e7735",
+            "last_update": 1604377470,
+            "start_usecs": 1604377447058099,
+            "end_usecs": 1604377470260194
+        },
+        {
+            "workunit_id": "38bc2d89b027d9e7",
+            "name": "pants.backend.python.typecheck.mypy.rules.mypy_typecheck_partition",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "a5693bb72f1e7735",
+            "last_update": 1604377470,
+            "start_usecs": 1604377447058143,
+            "end_usecs": 1604377457896019
+        },
+        {
+            "workunit_id": "7754f1fd671604dc",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "711474df793baede",
+            "last_update": 1604377470,
+            "start_usecs": 1604377450849376,
+            "end_usecs": 1604377470259990
+        },
+        {
+            "workunit_id": "1a2d81c9f043644e",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "7754f1fd671604dc",
+            "last_update": 1604377470,
+            "start_usecs": 1604377450849898,
+            "description": "Run MyPy on 107 files.",
+            "end_usecs": 1604377470259776
+        },
+        {
+            "workunit_id": "3334328fb5db935e",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "1a2d81c9f043644e",
+            "last_update": 1604377470,
+            "start_usecs": 1604377450850436,
+            "description": "(Waiting) Run MyPy on 107 files.",
+            "end_usecs": 1604377470259558
+        },
+        {
+            "workunit_id": "315b5ba2465d4026",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "3334328fb5db935e",
+            "last_update": 1604377470,
+            "start_usecs": 1604377450850447,
+            "description": "Run MyPy on 107 files.",
+            "end_usecs": 1604377470259543,
+            "counters": {
+                "local_execution_requests": 1
+            },
+            "metadata": {
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "Success: no issues found in 51 source files\n"
+            }
+        },
+        {
+            "workunit_id": "cb4ef99df6620911",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "38bc2d89b027d9e7",
+            "last_update": 1604377470,
+            "start_usecs": 1604377451087639,
+            "end_usecs": 1604377457895751
+        },
+        {
+            "workunit_id": "9b930774b823168b",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "cb4ef99df6620911",
+            "last_update": 1604377470,
+            "start_usecs": 1604377451088055,
+            "description": "Run MyPy on 7 files.",
+            "end_usecs": 1604377457895447
+        },
+        {
+            "workunit_id": "7160e91fd4051613",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "9b930774b823168b",
+            "last_update": 1604377470,
+            "start_usecs": 1604377451090236,
+            "description": "(Waiting) Run MyPy on 7 files.",
+            "end_usecs": 1604377457895289
+        },
+        {
+            "workunit_id": "dfa587806fee8f5c",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 24,
+            "parent_id": "7160e91fd4051613",
+            "last_update": 1604377470,
+            "start_usecs": 1604377451090267,
+            "description": "Run MyPy on 7 files.",
+            "end_usecs": 1604377457895274,
+            "counters": {
+                "local_execution_requests": 1
+            },
+            "metadata": {
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "Success: no issues found in 6 source files\n"
+            }
+        }
+    ]
+}

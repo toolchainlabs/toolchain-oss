@@ -1,0 +1,32 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: rotator-job
+spec:
+  backoffLimit: 1
+  template:
+    metadata:
+      labels:
+        app: db-creds-rotator
+    spec:
+      containers:
+      - args:
+        - --namespace
+        - {{ .Release.Namespace }}
+        - --database
+        - {{ .Values.database }}
+        {{- if .Values.new_db_host }}
+        - --db-host
+        - {{ .Values.new_db_host }}
+        {{- end }}
+        - --env
+        - {{ .Values.run_env }}
+        image: {{ .Values.image }}
+        name: rotator-job
+      nodeSelector:
+        toolchain.instance_category: worker
+      restartPolicy: Never
+      serviceAccountName: rotator-job-user

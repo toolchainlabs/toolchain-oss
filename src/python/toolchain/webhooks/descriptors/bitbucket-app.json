@@ -1,0 +1,33 @@
+{
+    "key": null,
+    "name": null,
+    "description": null,
+    "vendor": {
+        "name": "Toolchain Labs",
+        "url": "https://www.toolchain.com/"
+    },
+    "baseUrl": null,
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": null,
+        "uninstalled": null
+    },
+    "modules": {
+        "webhooks": [
+            {
+                "event": "*",
+                "url": null
+            }
+        ]
+    },
+    "scopes": [
+        "account",
+        "repository",
+        "pullrequest"
+    ],
+    "contexts": [
+        "account"
+    ]
+}

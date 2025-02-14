@@ -1,0 +1,5 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+image: null  # set by build_install_pypi_db_copier.py
+iam_role: k8s.dev-e1-1.pypidb_snapshot_copier.job

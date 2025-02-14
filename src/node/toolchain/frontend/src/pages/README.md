@@ -1,0 +1,2 @@
+The Toolchain frontend is organized as a single page application. `pages` are composed of components that render UI specific to the page and reusable components found in `src/components` that make up that page's interface. The pages most often also page data and render dynamic sub components (especially in the case of `src/pages/build/artifact.tsx`). Most of the pages contain test files related to them but there are some where there is a single test file for multiple components. For example the sidebar component is tested in the layout components test file.
+

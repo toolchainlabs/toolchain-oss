@@ -1,0 +1,22 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{- $region := required "You must set global.region!" .Values.global.region }}
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-cloudwatch-datasource
+  labels:
+    grafana_datasource: "1"
+    app: grafana
+data:
+  cloudwatch.yaml: |
+    apiVersion: 1
+    datasources:
+    - name: "cloudwatch-{{ $region }}"
+      type: cloudwatch
+      isDefault: false
+      jsonData:
+        authType: default
+        defaultRegion: {{ $region }}

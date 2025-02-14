@@ -1,0 +1,20 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+influxdb2:
+  fullnameOverride: influxdb
+  nodeSelector:
+     toolchain.instance_category: null # filled by install script
+  persistence:
+    enabled: true
+    storageClassName: gp2
+    size: null # filled by install script
+  ingress:
+    enabled: false
+  pdb:
+    create: false
+  startupProbe:
+    enabled: true
+    initialDelaySeconds: 300
+    failureThreshold: 20
+    periodSeconds: 15

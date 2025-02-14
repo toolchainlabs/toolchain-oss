@@ -1,0 +1,21 @@
+[workspace]
+members = [
+  "digest",
+  "grpc_util",
+  "execution",
+  "execution_util",
+  "execution_server",
+  "protos",
+  "proxy",
+  "proxy_server",
+  "storage",
+  "storage_server",
+  "worker",
+]
+
+[patch.crates-io]
+# Use custom version of Redis in order to support passing in pre-packed command arrays, which is needed in order
+# to support our async Tokio Redis client.
+# See https://github.com/toolchainlabs/redis-rs/pull/1 for the actual change and then see
+# https://github.com/redis-rs/redis-rs/issues/615 for upstream discussion of better solutions for our use case.
+redis = { git = "https://github.com/toolchainlabs/redis-rs", rev = "2306cda3298f2d3a84774539b600925abb3346cd" }

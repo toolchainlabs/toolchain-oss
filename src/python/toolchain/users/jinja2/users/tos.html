@@ -1,0 +1,994 @@
+{#
+Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <title>{% block title %}Toolchain{% endblock title %}</title>
+         <link rel="icon" type="image/png" href="/static/servicerouter/images/favicon.png"/>
+         {% block css %}
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+         <link href="{{ static('servicerouter/css/style.css') }}" rel="stylesheet">
+         <link rel="preconnect" href="https://fonts.gstatic.com">
+         <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet">
+         {% endblock css %}
+   </head>
+   <body>
+         {% block body %}
+        
+         <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="wrapper">
+                  <div class="paper">
+                    <svg
+                      width="200"
+                      height="54"
+                      viewBox="0 0 200 54"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="logo"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M37.976 33.1074V24.519L35.708 23.2113L32.2617 21.2225V16.38L34.843 17.8716V19.7514L36.9952 20.9978L39.1475 22.2373L41.2997 20.9978L43.4519 19.7514V14.7795L41.2997 13.5399L39.1475 12.2935L37.5197 13.2402L34.9384 11.7487L35.708 11.2992L39.1543 9.3172L42.5597 11.2992L46.006 13.2879V21.243L42.5597 23.2317L40.3257 24.519V33.1074L40.6527 33.2981L42.151 34.1631V37.6298L40.6527 38.4948L39.1543 39.3598L37.6491 38.4948L36.1507 37.6298V34.1631L37.6491 33.2981L37.976 33.1074Z"
+                        fill="#00A9B7"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M39.1505 13.7987L37.6521 14.6705L37.3252 14.8544L31.6722 11.592L29.9082 10.5772V7.95505V3.97752L26.4619 1.98876L23.0225 0L19.5762 1.98876L16.1367 3.97752V7.95505V8.84046L18.718 7.34889V5.4691L20.8702 4.22271L23.0225 2.98314L25.1747 4.22271L27.3269 5.4691V7.95505V10.441L25.1747 11.6806L23.0225 12.9201L21.3947 11.9803L18.8066 13.4718L19.5762 13.9145L23.0225 15.9033L26.4619 13.9145L28.7368 12.6068L30.5008 13.6217L36.1537 16.8909V17.2655V19.0022L37.6521 19.8672L39.1505 20.7322L40.6557 19.8672L42.1541 19.0022V17.2655V15.5355L40.6557 14.6705L39.1505 13.7987Z"
+                        fill="#1C2B39"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M6.88575 13.7987L5.38737 14.6705L3.88898 15.5355V17.2654V19.0022L5.38737 19.8672L5.71429 20.0579V26.5826V28.6191L3.44628 29.9336L0 31.9155V35.893V39.8706L3.44628 41.8593L6.88575 43.8481L10.332 41.8593L11.1017 41.4166L8.52035 39.9251L6.88575 40.8649L4.73353 39.6186L2.5813 38.379V35.893V33.4071L4.73353 32.1675L6.88575 30.9279L9.03797 32.1675L11.1902 33.4071V35.2937L13.7783 36.7853V35.893V31.9155L10.332 29.9336L8.06402 28.6191V26.5826V20.0579L8.39094 19.8672L9.88933 19.0022V17.2654V15.5355L8.39094 14.6705L6.88575 13.7987Z"
+                        fill="#1C2B39"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M6.88739 32.4263L5.38901 33.2981L3.89062 34.1631V35.893V37.6298L5.38901 38.4948L6.88739 39.3598L8.39258 38.4948L8.7195 38.3041L14.3657 41.5665L16.1365 42.5881V45.2103V49.1878L19.576 51.1765L23.0222 53.1653L26.4617 51.1765L29.908 49.1878V45.2103V44.318L27.3267 45.8096V47.6962L25.1745 48.9358L23.0222 50.1754L20.87 48.9358L18.7178 47.6962V45.2103V42.7243L20.87 41.4847L23.0222 40.2384L24.65 41.1782L27.2313 39.6867L26.4617 39.244L23.0222 37.2552L19.576 39.244L17.308 40.5585L15.544 39.5368L9.89096 36.2744V35.893V34.1631L8.39258 33.2981L6.88739 32.4263Z"
+                        fill="#00A9B7"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M23.0192 41.7435L21.5208 42.6085L20.0156 43.4734V45.2102V46.9402L21.5208 47.8051L23.0192 48.6769L24.5176 47.8051L26.0228 46.9402V45.2102V44.8288L31.669 41.5664L33.433 40.5448L35.7078 41.8593L39.1472 43.848L42.5935 41.8593L46.0398 39.8705V35.893V31.9155L42.5935 29.9335L41.8239 29.484V32.4671L43.4517 33.407V35.893V38.3789L41.3063 39.6253L39.1472 40.8649L37.0018 39.6253L34.8428 38.3789V35.893V33.407L36.4774 32.4671V29.484L35.7078 29.9335L32.2615 31.9155V35.893V38.5152L30.4975 39.5368L24.8445 42.7992L24.5176 42.6085L23.0192 41.7435Z"
+                        fill="#1C2B39"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M23.0206 4.4884L21.5222 5.35338L20.017 6.21835V7.95512V8.32971L14.364 11.5921L12.6 12.6137L10.332 11.2992L6.88575 9.31728L3.44628 11.2992L0 13.288V17.2655V21.243L3.44628 23.2318L4.2159 23.6745V20.6914L2.5813 19.7515V17.2655V14.7796L4.73353 13.54L6.88575 12.2936L9.03797 13.54L11.1902 14.7796V17.2655V19.7515L9.5624 20.6914V23.6745L10.332 23.2318L13.7783 21.243V17.2655V14.6434L15.5423 13.6217L21.1885 10.3593L21.5222 10.55L23.0206 11.4218L24.519 10.55L26.0242 9.68507V7.95512V6.21835L24.519 5.35338L23.0206 4.4884Z"
+                        fill="#00A9B7"
+                      />
+                      <path
+                        d="M59.8134 14.8476L64.0974 13.2879V19.7514H70.6903V23.3271H64.0974V30.8598C63.9978 31.9667 64.2352 33.0778 64.7785 34.0473C65.0751 34.3871 65.4488 34.6509 65.8682 34.8168C66.2876 34.9827 66.7407 35.0458 67.1895 35.0008C67.8784 35.0083 68.5652 34.9259 69.2328 34.7556C69.654 34.6536 70.0681 34.5239 70.4723 34.3674L71.3782 37.6911C70.7451 37.9621 70.0943 38.1896 69.4303 38.3722C68.5052 38.6105 67.5521 38.7228 66.597 38.7059C65.4861 38.7209 64.3822 38.5292 63.3414 38.1406C62.5105 37.8295 61.7805 37.2972 61.23 36.6014C60.6887 35.8772 60.3142 35.0422 60.1335 34.1563C59.9089 33.079 59.8016 31.9806 59.8134 30.8803V14.8476Z"
+                        fill="#1C2B39"
+                      />
+                      <path
+                        d="M90.211 28.9801C90.2276 30.3412 90.0135 31.6953 89.5776 32.9848C89.1929 34.1338 88.5789 35.1927 87.7728 36.0974C86.9844 36.9509 86.0232 37.6266 84.9531 38.0793C83.803 38.5546 82.567 38.7865 81.3229 38.7604C80.0853 38.7882 78.8556 38.5562 77.7132 38.0793C76.6511 37.6264 75.6988 36.9505 74.9207 36.0974C74.1145 35.2022 73.4941 34.1558 73.0954 33.0189C72.6368 31.7338 72.4063 30.3785 72.4143 29.0141C72.405 27.6563 72.6356 26.3074 73.0954 25.0298C73.4854 23.8828 74.1067 22.8281 74.9207 21.9308C75.7091 21.0854 76.6678 20.4169 77.7336 19.9693C78.8666 19.5011 80.0834 19.2693 81.3093 19.2882C82.5416 19.2707 83.7648 19.5023 84.9054 19.9693C85.9752 20.4095 86.9354 21.0791 87.7183 21.9308C88.5238 22.8214 89.1443 23.8632 89.5436 24.9957C89.9988 26.2742 90.2248 27.623 90.211 28.9801ZM85.8249 28.9801C85.9092 27.4322 85.4911 25.8985 84.633 24.6075C84.2399 24.105 83.7376 23.6985 83.1641 23.419C82.5905 23.1394 81.9609 22.9942 81.3229 22.9942C80.6849 22.9942 80.0553 23.1394 79.4818 23.419C78.9082 23.6985 78.4059 24.105 78.0128 24.6075C77.1602 25.9007 76.7449 27.4333 76.8278 28.9801C76.7427 30.5441 77.1578 32.0947 78.0128 33.4071C78.4036 33.9131 78.9051 34.3229 79.4789 34.6048C80.0527 34.8867 80.6836 35.0333 81.3229 35.0333C81.9622 35.0333 82.5931 34.8867 83.1669 34.6048C83.7407 34.3229 84.2423 33.9131 84.633 33.4071C85.4911 32.0961 85.9065 30.5445 85.8181 28.9801H85.8249Z"
+                        fill="#1C2B39"
+                      />
+                      <path
+                        d="M110.337 28.9801C110.351 30.3416 110.135 31.6957 109.697 32.9849C109.312 34.1355 108.696 35.195 107.885 36.0974C107.099 36.9534 106.137 37.6294 105.065 38.0794C103.915 38.5546 102.679 38.7865 101.435 38.7604C100.198 38.7883 98.9678 38.5562 97.8254 38.0794C96.7609 37.6273 95.8062 36.9513 95.0262 36.0974C94.22 35.2022 93.5995 34.1558 93.2009 33.0189C92.7422 31.7339 92.5117 30.3786 92.5198 29.0142C92.5105 27.6563 92.741 26.3075 93.2009 25.0298C93.6046 23.8949 94.2323 22.8526 95.0466 21.9649C95.835 21.1195 96.7937 20.451 97.8595 20.0034C98.9929 19.5364 100.209 19.3047 101.435 19.3223C102.668 19.3048 103.891 19.5364 105.031 20.0034C106.101 20.4436 107.061 21.1132 107.844 21.9649C108.641 22.8466 109.257 23.8764 109.656 24.9958C110.116 26.2734 110.346 27.6222 110.337 28.9801ZM105.944 28.9801C106.028 27.4322 105.61 25.8985 104.752 24.6075C104.359 24.105 103.857 23.6986 103.283 23.419C102.71 23.1395 102.08 22.9942 101.442 22.9942C100.804 22.9942 100.174 23.1395 99.6008 23.419C99.0273 23.6986 98.525 24.105 98.1319 24.6075C97.2793 25.9008 96.8639 27.4333 96.9468 28.9801C96.8618 30.5442 97.2769 32.0947 98.1319 33.4071C98.5226 33.9132 99.0242 34.3229 99.598 34.6048C100.172 34.8867 100.803 35.0333 101.442 35.0333C102.081 35.0333 102.712 34.8867 103.286 34.6048C103.86 34.3229 104.361 33.9132 104.752 33.4071C105.61 32.0961 106.026 30.5445 105.937 28.9801H105.944Z"
+                        fill="#1C2B39"
+                      />
+                      <path
+                        d="M120.054 38.6174C118.984 38.6189 117.918 38.4746 116.887 38.1883C116.14 37.9816 115.453 37.5986 114.884 37.0713C114.38 36.5742 114.018 35.951 113.836 35.2664C113.626 34.464 113.525 33.637 113.536 32.8077V11.483L117.827 9.92334V32.0109C117.818 32.4526 117.861 32.8939 117.956 33.3254C118.025 33.6578 118.177 33.9672 118.399 34.2244C118.63 34.4883 118.929 34.6838 119.264 34.7897C119.718 34.9387 120.185 35.0414 120.66 35.0962L120.054 38.6174Z"
+                        fill="#1C2B39"
+                      />
+                      <path
+                        d="M121.914 29.0141C121.919 27.7129 122.149 26.4225 122.595 25.2C122.989 24.0561 123.607 23.0024 124.414 22.1011C125.219 21.221 126.204 20.5241 127.301 20.0579C128.511 19.5448 129.815 19.2896 131.129 19.3087C132.829 19.3 134.514 19.6263 136.087 20.269L135.168 23.7766C134.001 23.286 132.749 23.0313 131.483 23.0274C130.767 22.9809 130.05 23.0992 129.386 23.3731C128.723 23.647 128.131 24.0693 127.656 24.6075C126.712 25.8881 126.249 27.4603 126.348 29.0482C126.263 30.5831 126.687 32.1033 127.553 33.373C128.378 34.4423 129.774 34.9804 131.729 34.9804C132.456 34.9825 133.181 34.9117 133.894 34.7693C134.523 34.6497 135.138 34.4718 135.733 34.238L136.333 37.7796C135.65 38.0824 134.931 38.2975 134.194 38.4199C133.22 38.6063 132.23 38.6998 131.238 38.6991C129.828 38.7323 128.426 38.4869 127.111 37.9772C125.997 37.5288 125.002 36.8296 124.203 35.9339C123.42 35.0399 122.835 33.9909 122.486 32.8554C122.103 31.6112 121.91 30.3161 121.914 29.0141Z"
+                        fill="#1C2B39"
+                      />
+                      <path
+                        d="M138.797 38.2632V11.483L143.081 9.92334V19.9489C143.619 19.767 144.17 19.6258 144.729 19.5266C145.342 19.4076 145.964 19.3483 146.588 19.3495C147.85 19.3093 149.107 19.52 150.287 19.9693C151.208 20.3379 152.019 20.9357 152.643 21.7061C153.261 22.4914 153.698 23.4028 153.924 24.3759C154.18 25.5158 154.303 26.6813 154.292 27.8494V38.2632H150.008V28.5237C150.018 27.6749 149.952 26.8269 149.81 25.9901C149.716 25.3856 149.5 24.8064 149.177 24.2874C148.886 23.8577 148.473 23.5255 147.992 23.3339C147.401 23.1157 146.775 23.0139 146.146 23.0342C145.562 23.0337 144.98 23.0931 144.409 23.2113C143.823 23.3271 143.387 23.436 143.101 23.5246V38.2632H138.797Z"
+                        fill="#1C2B39"
+                      />
+                      <path
+                        d="M164.433 19.2747C165.646 19.2431 166.856 19.4228 168.008 19.8059C168.893 20.1056 169.69 20.6178 170.331 21.2975C170.922 21.96 171.347 22.7538 171.57 23.6132C171.824 24.5916 171.948 25.5992 171.938 26.6099V37.8342C171.257 37.9772 170.283 38.1475 168.948 38.3518C167.452 38.5615 165.943 38.6616 164.433 38.6515C163.409 38.6595 162.388 38.5521 161.388 38.3314C160.54 38.154 159.738 37.8039 159.032 37.3029C158.378 36.8264 157.854 36.1943 157.506 35.464C157.119 34.5831 156.932 33.6268 156.961 32.6648C156.924 31.7179 157.138 30.7779 157.581 29.9404C157.986 29.2139 158.564 28.5985 159.263 28.1492C160.016 27.6724 160.849 27.3376 161.722 27.1616C162.682 26.9544 163.662 26.8517 164.644 26.8551C165.142 26.8591 165.64 26.8886 166.135 26.9437C166.695 27.0128 167.25 27.1152 167.797 27.2502V26.5623C167.799 26.0844 167.739 25.6083 167.62 25.1456C167.507 24.7063 167.295 24.2987 167 23.9537C166.681 23.5964 166.279 23.3228 165.829 23.1568C165.244 22.9555 164.628 22.8609 164.01 22.8776C163.098 22.8707 162.187 22.9413 161.286 23.0887C160.592 23.1939 159.908 23.3602 159.243 23.5859L158.712 20.1124C159.487 19.8676 160.279 19.6787 161.082 19.5471C162.188 19.3547 163.31 19.2635 164.433 19.2747ZM164.821 35.2529C165.829 35.2766 166.837 35.2036 167.831 35.0349V30.2673C167.493 30.1729 167.15 30.1001 166.803 30.0494C166.311 29.9784 165.815 29.9443 165.318 29.9472C164.837 29.9476 164.357 29.9818 163.881 30.0494C163.428 30.114 162.987 30.2472 162.573 30.4444C162.194 30.6206 161.869 30.8959 161.633 31.2413C161.385 31.6231 161.261 32.0731 161.279 32.5285C161.235 32.9336 161.299 33.3433 161.467 33.7147C161.635 34.0861 161.899 34.4057 162.233 34.6399C163.024 35.0755 163.919 35.2874 164.821 35.2529Z"
+                        fill="#1C2B39"
+                      />
+                      <path
+                        d="M180.486 11.8644H175.719V16.5912H180.486V11.8644ZM180.309 38.2632H176.025V19.7514H180.309V38.2632Z"
+                        fill="#1C2B39"
+                      />
+                      <path
+                        d="M184.52 20.3371C185.582 20.0504 186.66 19.823 187.748 19.656C189.199 19.4307 190.666 19.3237 192.134 19.3359C193.427 19.2971 194.715 19.5075 195.928 19.9557C196.872 20.316 197.707 20.9142 198.352 21.6925C198.976 22.4809 199.411 23.4009 199.626 24.3827C199.886 25.515 200.012 26.6741 200 27.8358V38.2632H195.716V28.5237C195.727 27.6749 195.661 26.8269 195.519 25.9901C195.426 25.3843 195.208 24.8045 194.879 24.2874C194.588 23.8529 194.169 23.5196 193.68 23.3339C193.085 23.1175 192.454 23.0159 191.821 23.0342C191.252 23.0357 190.683 23.0698 190.118 23.1363C189.525 23.2113 189.09 23.2658 188.81 23.3134V38.2973H184.52V20.3371Z"
+                        fill="#1C2B39"
+                      />
+                    </svg>
+                    <h2>CUSTOMER AGREEMENT</h2>
+                    <h3>Terms and Conditions</h3>
+                    <p class="body1">
+                      This Toolchain Customer Agreement (this “Agreement”) is entered
+                      into by and between Toolchain Labs, Inc., a Delaware corporation
+                      (“Toolchain”), and Customer, and shall apply to Customer's use
+                      of Toolchain’s Software as a Service building tools (the
+                      “Toolchain Tools”) ordered by Customer pursuant to one or more
+                      ordering documents entered into between Customer and Toolchain
+                      or online orders made by Customer that set forth the specific
+                      Toolchain Tools and pricing thereof, and the applicable
+                      subscription term thereof ("Order Form"). This Agreement and
+                      such Order Forms, which are hereby incorporated into, supplement
+                      and form a part of this Agreement, represent the parties' entire
+                      understanding regarding the Toolchain Tools and shall control
+                      over any different or additional terms of any purchase order or
+                      other non-Toolchain ordering document, and no terms included in
+                      any such purchase order or other non- Toolchain ordering
+                      document shall apply to the Toolchain Tools. In the event of a
+                      conflict between this Agreement and an Order Form, the terms of
+                      the Order Form shall control. “Customer” means the company or
+                      other legal entity that entered into an Order Form. You
+                      represent that you have the authority to bind Customer to the
+                      terms of this Agreement. If you do not agree to the terns of
+                      this Agreement, or if you are not authorized to accept this
+                      Agreement on behalf of your organization or entity, do not
+                      access or use any of the Toolchain Tools.
+                    </p>
+                    <p class="subtitle1">1. Definitions</p>
+                    <p class="body1">
+                      1.1. The following terms, when used in this Agreement will have
+                      the following meanings:
+                    </p>
+                    <p class="body1">
+                      “Affiliates” means an entity that directly or indirectly
+                      Controls, is Controlled by, or is under common Control with
+                      another entity, so long as such Control exists. For the purposes
+                      of this definition, “Control” means beneficial ownership of 50%
+                      or more of the voting power or equity in an entity.
+                    </p>
+                    <p class="body1">
+                      “Confidential Information” means any information or data
+                      disclosed by either party that is marked or otherwise designated
+                      as confidential or proprietary or that should otherwise be
+                      reasonably understood to be confidential in light of the nature
+                      of the information and the circumstances surrounding disclosure.
+                      However, “Confidential Information” will not include any
+                      information which (a) is in the public domain through no fault
+                      of receiving party; (b) was properly known to receiving party,
+                      without restriction, prior to disclosure by the disclosing
+                      party; (c) was properly disclosed to receiving party, without
+                      restriction, by another person with the legal authority to do
+                      so; or (d) is independently developed by the receiving party
+                      without use of or reference to the disclosing party’s
+                      Confidential Information.
+                    </p>
+                    <p class="body1">
+                      “Documentation” means the printed and digital instructions,
+                      on-line help files, technical documentation and user manuals
+                      made available by Toolchain for the Toolchain Tools.
+                    </p>
+                    <p class="subtitle1">2. Toolchain Tools</p>
+                    <p class="body1">
+                      2.1. Provision of Toolchain Tools. Subject to the terms and
+                      conditions of this Agreement, Toolchain will make the Toolchain
+                      Tools available to Customer pursuant to this Agreement, the SLA
+                      provided below in Exhibit A and the applicable Order Form, and
+                      hereby grants Customer a non-exclusive right to access and use
+                      the Toolchain Tools for its internal business purposes.
+                    </p>
+                    <p class="body1">
+                      2.2. Data Security. Toolchain will maintain a security program
+                      materially in accordance with industry standards that is
+                      designed to (i) ensure the security and integrity of Customer
+                      data uploaded by or on behalf of Customer to the Toolchain Tools
+                      (“Customer Data”); (ii) protect against threats or hazards to
+                      the security or integrity of Customer Data; and (iii) prevent
+                      unauthorized access to Customer Data. In furtherance of the
+                      foregoing, Toolchain will maintain the administrative, physical
+                      and technical safeguards to protect the security of Customer
+                      Data that are described in the Toolchain security page located
+                      at https://toolchain.com/security (the “Security Page”) posted
+                      as of the date of the initial Order Form hereunder (and as the
+                      Security Page may be updated by Toolchain in a manner that does
+                      not materially decrease the applicable protections).
+                    </p>
+                    <p class="body1">
+                      2.3. Customer Limitations. The rights granted herein are subject
+                      to the following restrictions (the “License Restrictions”).
+                      Customer will not directly or indirectly:
+                    </p>
+                    <p class="body1">
+                      (a) upload any personal data or personally identifiable
+                      information to the Toolchain Tools;
+                    </p>
+                    <p class="body1">
+                      (b) reverse engineer, decompile, disassemble, modify, create
+                      derivative works of or otherwise create, attempt to create or
+                      derive, or permit or assist any third party to create or derive,
+                      the source code underlying the Toolchain Tools;
+                    </p>
+                    <p class="body1">
+                      (c) attempt to probe, scan or test the vulnerability of the
+                      Toolchain Tools, breach the security or authentication measures
+                      of the Toolchain Tools without proper authorization or willfully
+                      render any part of the Toolchain Tools unusable;
+                    </p>
+                    <p class="body1">
+                      (d) use or access the Toolchain Tools to develop a product or
+                      service that is competitive with Toolchain’s products or Product
+                      or engage in competitive analysis or benchmarking;
+                    </p>
+                    <p class="body1">
+                      (e) transfer, distribute, resell, lease, license, or assign any
+                      Toolchain Tool or otherwise offer any Toolchain Tool on a
+                      standalone basis; or
+                    </p>
+                    <p class="body1">
+                      (f) otherwise use the Toolchain Tools in violation of applicable
+                      law or outside the scope expressly permitted hereunder and in
+                      the applicable Order Form.
+                    </p>
+                    <p class="body1">
+                      2.4. Support of Pants. To the extent the Order Form provides for
+                      Toolchain to provide support for the open source project, Pants,
+                      Toolchain will provide such support in accordance with the
+                      support terms set forth in Exhibit B.
+                    </p>
+                    <p class="body1">
+                      2.5. Open Source Software. In connection with Customer’s
+                      subscription to the Toolchain Tools, Toolchain may make certain
+                      open source software available to Customer for download through
+                      the Toolchain Tools or other download location. Unless otherwise
+                      set forth in the applicable Order Form, the open source software
+                      is not part of the Toolchain Tools and is licensed to Customer
+                      free of charge solely under the applicable open source license.
+                    </p>
+                    <p class="body1">2.6. Customer Responsibilities.</p>
+                    <p class="body1">
+                      (a) Customer acknowledges that Toolchain’s provision of the
+                      Toolchain Tools is dependent on Customer providing all
+                      reasonably required cooperation (including the prompt provision
+                      of access to Customer’s systems, personnel, cooperation and
+                      materials as reasonably required and any other access as may be
+                      specified in the applicable Order Form), and Customer will
+                      provide all such cooperation in a diligent and timely manner.
+                    </p>
+                    <p class="body1">
+                      (b) Customer will (i) be responsible for all use of the
+                      Toolchain Tools under its account, (ii) use commercially
+                      reasonable efforts to prevent unauthorized access to or use of
+                      the Toolchain Tools and notify Toolchain promptly of any such
+                      unauthorized access or use and (iii) be responsible for
+                      obtaining and maintaining any equipment, software and ancillary
+                      services needed to connect to, access or otherwise use the
+                      Toolchain Tools, including as set forth in the Documentation.
+                      Customer will be solely responsible for its failure to maintain
+                      such equipment, software and services, and Toolchain will have
+                      no liability for such failure (including under any service level
+                      agreement).
+                    </p>
+                    <p class="body1">
+                      2.7. Affiliates. Any Affiliate of Customer will have the right
+                      to enter into an Order Form executed by such Affiliate and
+                      Toolchain and this Agreement will apply to each such Order Form
+                      as if such Affiliate were a signatory to this Agreement. With
+                      respect to such Order Forms, such Affiliate becomes a party to
+                      this Agreement and references to Customer in this Agreement are
+                      deemed to be references to such Affiliate. Each Order Form is a
+                      separate obligation of the Customer entity that executes such
+                      Order Form, and no other Customer entity has any liability or
+                      obligation under such Order Form.
+                    </p>
+                    <p class="subtitle1">3. Fees</p>
+                    <p class="body1">
+                      3.1. Fees. Customer will pay Toolchain the fees set forth in the
+                      Order Form. Except as otherwise specified herein or in any
+                      applicable Order Form, (a) fees are quoted and payable in United
+                      States dollars and (b) payment obligations are non-cancelable
+                      and non-pro-ratable for partial months, and fees paid are
+                      non-refundable. Notwithstanding any amounts owed to Toolchain
+                      hereunder, TOOLCHAIN DOES NOT PROCESS PAYMENT FOR ANY SERVICES.
+                      To facilitate payment for the Toolchain Tools via bank account,
+                      credit card, or debit card, we use Stripe, Inc. and its
+                      affiliates (“Stripe”), a third-party payment processor, which
+                      use is subject to the Stripe terms available at
+                      https://stripe.com/legal and at: https://stripe.com/privacy. By
+                      agreeing to the Terms of this Agreement, Customer also agrees to
+                      be bound by the Stripe terms, and Customer hereby authorizes
+                      Stripe to store and continue billing your specified payment
+                      method even after such payment.
+                    </p>
+                    <p class="body1">
+                      3.2. Late Payment. Toolchain may suspend access to the Toolchain
+                      Tools immediately upon notice if Customer fails to pay any
+                      amounts hereunder at least five (5) days past the applicable due
+                      date.
+                    </p>
+                    <p class="body1">
+                      3.3. Taxes. All amounts payable hereunder are exclusive of any
+                      sales, use and other taxes or duties, however designated
+                      (collectively “Taxes”). Customer will be solely responsible for
+                      payment of all Taxes, except for those taxes based on the income
+                      of Toolchain. Customer will not withhold any taxes from any
+                      amounts due to Toolchain.
+                    </p>
+                    <p class="subtitle1">4. Proprietary Rights and Confidentiality</p>
+                    <p class="body1">
+                      4.1. Proprietary Rights. As between the parties, Toolchain
+                      exclusively owns all right, title and interest in and to the
+                      Toolchain Tools, System Data and Toolchain’s Confidential
+                      Information, and Customer exclusively owns all right, title and
+                      interest in and to the Customer Data, insights produced
+                      specifically for Customer via the use of the Toolchain Tools by
+                      Customer (which will constitute Customer Data for purposes
+                      hereof) and Customer’s Confidential Information. “System Data”
+                      means data collected by Toolchain regarding the Toolchain Tools
+                      that may be used to generate logs, statistics or reports
+                      regarding the performance, availability, usage, integrity or
+                      security of the Toolchain Tools.
+                    </p>
+                    <p class="body1">
+                      4.2. Feedback. Customer may from time to time provide Toolchain
+                      suggestions or comments for enhancements or improvements, new
+                      features or functionality or other feedback (“Feedback”) with
+                      respect to any Toolchain Tool. Toolchain will have full
+                      discretion to determine whether or not to proceed with the
+                      development of any requested enhancements, new features or
+                      functionality. Toolchain will have the full, unencumbered right,
+                      without any obligation to compensate or reimburse Customer, to
+                      use, incorporate and otherwise fully exercise and exploit any
+                      such Feedback in connection with its products and services.
+                    </p>
+                    <p class="body1">
+                      4.3. Confidentiality. Each party agrees that it will use the
+                      Confidential Information of the other party solely in accordance
+                      with the provisions of this Agreement and it will not disclose
+                      the same directly or indirectly, to any third party without the
+                      other party’s prior written consent, except as otherwise
+                      permitted hereunder. However, either party may disclose
+                      Confidential Information (a) to its employees, officers,
+                      directors, attorneys, auditors, financial advisors and other
+                      representatives who have a need to know and are legally bound to
+                      keep such information confidential by confidentiality
+                      obligations consistent with those of this Agreement; and (b) as
+                      required by law (in which case the receiving party will provide
+                      the disclosing party with prior written notification thereof,
+                      will provide the disclosing party with the opportunity to
+                      contest such disclosure, and will use its reasonable efforts to
+                      minimize such disclosure to the extent permitted by applicable
+                      law. Neither party will disclose the terms of this Agreement to
+                      any third party, except that either party may confidentially
+                      disclose such terms to actual or potential lenders, investors or
+                      acquirers. Each party agrees to exercise due care in protecting
+                      the Confidential Information from unauthorized use and
+                      disclosure. In the event of actual or threatened breach of the
+                      provisions of this Section or the License Restrictions, the
+                      non-breaching party will be entitled to seek immediate
+                      injunctive and other equitable relief, without waiving any other
+                      rights or remedies available to it. Each party will promptly
+                      notify the other in writing if it becomes aware of any
+                      violations of the confidentiality obligations set forth in this
+                      Agreement.
+                    </p>
+                    <p class="subtitle1">5. Warranties and Disclaimers</p>
+                    <p class="body1">
+                      5.1. Toolchain. Toolchain warrants that it will, consistent with
+                      prevailing industry standards, provide the Toolchain Tools and
+                      support for the Pants open source project in a professional and
+                      workmanlike manner and the Toolchain Tools will conform in all
+                      material respects with the Documentation. In the event of a
+                      breach of the foregoing warranty, Toolchain will correct the
+                      deficiency at no additional charge to Customer. Customer will
+                      use commercially reasonable efforts to notify Toolchain in
+                      writing within thirty (30) days of identifying the deficiency,
+                      but Customer’s failure to notify Toolchain within such period
+                      will not affect Customer’s right to receive warranty remedies
+                      unless Toolchain is unable to, or impaired in its ability to,
+                      correct the deficiency due to Customer’s failure to notify. The
+                      remedies set forth in this section will be Customer’s sole
+                      remedy and Toolchain’s sole liability for breach of such
+                      warranty unless the breach of warranty constitutes a material
+                      breach of this Agreement and Customer elects to terminate this
+                      Agreement as set forth below, in which case Toolchain will
+                      provide Customer with a pro rata refund (based on the applicable
+                      termination date) of prepaid subscription fees for breach of
+                      such warranty.
+                    </p>
+                    <p class="body1">
+                      5.2. Customer. Customer warrants that it has all rights
+                      necessary to provide any information, data or other materials
+                      that it provides hereunder, and to permit Toolchain to use the
+                      same as contemplated hereunder.
+                    </p>
+                    <p class="body1">
+                      5.3. DISCLAIMERS. EXCEPT AS EXPRESSLY SET FORTH HEREIN, EACH
+                      PARTY DISCLAIMS ANY AND ALL WARRANTIES, EXPRESS OR IMPLIED,
+                      INCLUDING WARRANTIES OF MERCHANTABILITY, TITLE,
+                      NON-INFRINGEMENT, AND FITNESS FOR A PARTICULAR PURPOSE. CUSTOMER
+                      ACKNOWLEDGES THAT THE TOOLCHAIN PRODUCT IS INTENDED TO AUGMENT
+                      THE EFFICIENCY OF, BUT NOT REPLACE, CUSTOMER’S SOFTWARE
+                      DEVELOPMENT AND BUILD SYSTEMS AND PROCESSES. TOOLCHAIN DOES NOT
+                      REPRESENT OR WARRANT THAT THE TOOLCHAIN PRODUCT WILL NOT BE
+                      ERROR-FREE AND CUSTOMER ACKNOWLEDGES THAT THE INSIGHTS PROVIDED
+                      BY THE TOOLCHAIN PRODUCT DO NOT CONSTITUTE PROFESSIONAL ADVICE
+                      OR COUNSEL.
+                    </p>
+                    <p class="body1">
+                      5.4. BETA PRODUCTS. FROM TIME TO TIME, CUSTOMER MAY HAVE THE
+                      OPTION TO PARTICIPATE IN A PROGRAM WITH Toolchain WHERE CUSTOMER
+                      GETS TO USE ALPHA OR BETA PRODUCTS, FEATURES OR DOCUMENTATION
+                      (COLLECTIVELY, “BETA PRODUCTS”) OFFERED BY TOOLCHAIN. THE BETA
+                      PRODUCTS ARE NOT GENERALLY AVAILABLE AND ARE PROVIDED “AS IS”.
+                      TOOLCHAIN DOES NOT PROVIDE ANY INDEMNITIES, SERVICE LEVEL
+                      COMMITMENTS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING
+                      WARRANTIES OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT, AND
+                      FITNESS FOR A PARTICULAR PURPOSE, IN RELATION THERETO. CUSTOMER
+                      OR TOOLCHAIN MAY TERMINATE CUSTOMER’S ACCESS TO THE BETA
+                      PRODUCTS AT ANY TIME.
+                    </p>
+                    <p class="subtitle1">6. Indemnification</p>
+                    <p class="body1">
+                      6.1. Indemnity by Toolchain. Toolchain will defend Customer
+                      against any claim, demand, suit, or proceeding (“Claim”) made or
+                      brought against Customer by a third party alleging that the use
+                      of the Toolchain Tools as permitted hereunder infringes or
+                      misappropriates a United States patent, copyright or trade
+                      secret and will indemnify Customer for any damages finally
+                      awarded against Customer (or any settlement approved by
+                      Toolchain) in connection with any such Claim; provided that (a)
+                      Customer will promptly notify Toolchain of such Claim, (b)
+                      Toolchain will have the sole and exclusive authority to defend
+                      and/or settle any such Claim (provided that Toolchain may not
+                      settle any Claim without Customer’s prior written consent, which
+                      will not be unreasonably withheld, unless it unconditionally
+                      releases Customer of all related liability) and (c) Customer
+                      reasonably cooperates with Toolchain in connection therewith. If
+                      the use of the Toolchain Tools by Customer has become, or in
+                      Toolchain’s opinion is likely to become, the subject of any
+                      claim of infringement, Toolchain may at its option and expense
+                      (i) procure for Customer the right to continue using and
+                      receiving the Toolchain Tools as set forth hereunder; (ii)
+                      replace or modify the Toolchain Tools to make it non-infringing
+                      (with comparable functionality); or (iii) if the options in
+                      clauses (i) or (ii) are not reasonably practicable, terminate
+                      this Agreement and provide a pro rata refund of any prepaid fees
+                      corresponding to the terminated portion of the applicable
+                      subscription term. Toolchain will have no liability or
+                      obligation with respect to any Claim if such Claim is caused in
+                      whole or in part by (A) compliance with designs, guidelines,
+                      plans or specifications provided by Customer; (B) use of the
+                      Toolchain Tools by Customer not in accordance with this
+                      Agreement; (C) modification of the Toolchain Tools by any party
+                      other than Toolchain without Toolchain’s express consent; (D)
+                      Customer Confidential Information or (E) the combination,
+                      operation or use of the Toolchain Tools with other applications,
+                      portions of applications, product(s) or services where the
+                      Toolchain Tools would not by itself be infringing (clauses (A)
+                      through (E), “Excluded Claims”). This Section states Toolchain’s
+                      sole and exclusive liability and obligation, and Customer’s
+                      exclusive remedy, for any claim of any nature related to
+                      infringement or misappropriation of intellectual property.
+                    </p>
+                    <p class="body1">
+                      6.2. Indemnification by Customer. Customer will defend Toolchain
+                      against any Claim made or brought against Toolchain by a third
+                      party arising out of the Excluded Claims, and Customer will
+                      indemnify Toolchain for any damages finally awarded against
+                      Toolchain (or any settlement approved by Customer) in connection
+                      with any such Claim; provided that (a) Toolchain will promptly
+                      notify Customer of such Claim, (b) Customer will have the sole
+                      and exclusive authority to defend and/or settle any such Claim
+                      (provided that Customer may not settle any Claim without
+                      Toolchain’s prior written consent, which will not be
+                      unreasonably withheld, unless it unconditionally releases
+                      Toolchain of all liability) and (c) Toolchain reasonably
+                      cooperates with Customer in connection therewith.
+                    </p>
+                    <p class="subtitle1">7. Limitation of Liability</p>
+                    <p class="body1">
+                      EXCEPT FOR A PARTY’S INDEMNIFICATION OBLIGATIONS, A BREACH OF
+                      CONFIDENTIALITY OR THE LICENSE RESTRICTIONS OR A PARTY’S
+                      INFRINGEMENT OR MISAPPROPRIATION OF THE OTHER PARTY’S
+                      INTELLECTUAL PROPERTY RIGHTS, UNDER NO LEGAL THEORY, WHETHER IN
+                      TORT, CONTRACT, OR OTHERWISE, WILL EITHER PARTY BE LIABLE TO THE
+                      OTHER UNDER THIS AGREEMENT FOR (A) ANY INDIRECT, SPECIAL,
+                      INCIDENTAL, CONSEQUENTIAL OR PUNITIVE DAMAGES OF ANY CHARACTER,
+                      INCLUDING DAMAGES FOR LOSS OF GOODWILL, LOST PROFITS, LOST SALES
+                      OR BUSINESS, WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION,
+                      LOST CONTENT OR DATA, EVEN IF A REPRESENTATIVE OF SUCH PARTY HAS
+                      BEEN ADVISED, KNEW OR SHOULD HAVE KNOWN OF THE POSSIBILITY OF
+                      SUCH DAMAGES, OR (B) EXCLUDING CUSTOMER’S PAYMENT OBLIGATIONS,
+                      ANY AGGREGATE DAMAGES, COSTS, OR LIABILITIES IN EXCESS OF THE
+                      AMOUNTS PAID BY CUSTOMER UNDER THE APPLICABLE ORDER FORM DURING
+                      THE TWELVE (12) MONTHS PRECEDING THE INCIDENT OR CLAIM.
+                    </p>
+                    <p class="subtitle1">8. Termination</p>
+                    <p class="body1">
+                      8.1. Term. The term of this Agreement will commence on the date
+                      of the initial Order Form and continue until terminated as set
+                      forth below. The initial term of each Order Form will begin on
+                      the Order Form start date indicated in such Order Form and will
+                      continue for the subscription term set forth therein. Except as
+                      set forth in such Order Form, the term of such Order Form will
+                      automatically renew for successive renewal terms equal to the
+                      length of the initial term of such Order Form, unless either
+                      party provides the other party with written notice of
+                      non-renewal at least thirty (30) days prior to the end of the
+                      then-current term.
+                    </p>
+                    <p class="body1">
+                      8.2. Termination. Each party may terminate this Agreement upon
+                      written notice to the other party if there are no Order Forms
+                      then in effect. Each party may also terminate this Agreement or
+                      the applicable Order Form upon written notice in the event (a)
+                      the other party commits any material breach of this Agreement or
+                      the applicable Order Form and fails to remedy such breach within
+                      thirty (30) days after written notice of such breach or (b)
+                      subject to applicable law, upon the other party’s liquidation,
+                      commencement of dissolution proceedings or assignment of
+                      substantially all its assets for the benefit of creditors, or if
+                      the other party become the subject of bankruptcy or similar
+                      proceeding that is not dismissed within sixty (60) days.
+                    </p>
+                    <p class="body1">
+                      8.3. Survival. Upon termination of this Agreement all rights and
+                      obligations will immediately terminate except that any terms or
+                      conditions that by their nature should survive such termination
+                      will survive, including the License Restrictions and terms and
+                      conditions relating to proprietary rights and confidentiality,
+                      disclaimers, indemnification, limitations of liability and
+                      termination and the general provisions below.
+                    </p>
+                    <p class="subtitle1">9. General</p>
+                    <p class="body1">
+                      9.1. Insurance. Toolchain shall, during the term of this
+                      Agreement, maintain in force the following insurance coverage at
+                      its own cost and expense: (a) Commercial General Liability, on
+                      an occurrence basis, including bodily injury or property
+                      damaged, with coverage limits of not less than $1,000,000 per
+                      occurrence and $2,000,000 in the aggregate; and (b) Technology
+                      Errors and Omissions / Cyber Liability, with coverage limits of
+                      not less than $1,000,000 per occurrence and $1,000,000 in the
+                      aggregate.
+                    </p>
+                    <p class="body1">
+                      9.2. Export Compliance. Each party will comply with the export
+                      laws and regulations of the United States, European Union and
+                      other applicable jurisdictions in providing and using the
+                      Toolchain Tools.
+                    </p>
+                    <p class="body1">
+                      9.3. Publicity. Customer agrees that Toolchain may refer to
+                      Customer’s name and trademarks in Toolchain’s marketing
+                      materials and website; however, Toolchain will not use
+                      Customer’s name or trademarks in any other publicity (e.g.,
+                      press releases, customer references and case studies) without
+                      Customer’s prior written consent (which may be by email) not to
+                      be unreasonably delayed. If Customer does not agree to
+                      Toolchain’s use of Customer’s name or trademark in Toolchain’s
+                      marketing materials, Customer may opt-out of such use by
+                      providing written notice to Toolchain within fourteen (14) days
+                      of the date of the initial Order Form.
+                    </p>
+                    <p class="body1">
+                      9.4. Assignment; Delegation. Neither party hereto may assign or
+                      otherwise transfer this Agreement, in whole or in part, without
+                      the other party’s prior written consent, except that either
+                      party may assign this Agreement without consent to a successor
+                      to all or substantially all of its assets or business related to
+                      this Agreement. Any attempted assignment, delegation, or
+                      transfer by either party in violation hereof will be null and
+                      void. Subject to the foregoing, this Agreement will be binding
+                      on the parties and their successors and assigns.
+                    </p>
+                    <p class="body1">
+                      9.5. Amendment; Waiver. Toolchain reserves the right in its sole
+                      discretion and at any time and for any reason to modify these
+                      Terms and Conditions. With respect to each Order Form, any
+                      modifications to these Terms and Conditions shall become
+                      effective upon the date of Customer’s next renewal of such Order
+                      Form. It is Customer’s responsibility to review these Terms and
+                      Conditions from time to time for any changes or modifications.
+                      If Customer does not agree to the modified Terms and Conditions,
+                      Customer may provide notice of Customer’s non-renewal at any
+                      point prior to the Customer’s next renewal. No waiver by either
+                      party of any breach or default hereunder shall be deemed to be a
+                      waiver of any preceding or subsequent breach or default.. Any
+                      such waiver will be only to the specific provision and under the
+                      specific circumstances for which it was given, and will not
+                      apply with respect to any repeated or continued violation of the
+                      same provision or any other provision. Failure or delay by
+                      either party to enforce any provision of this Agreement will not
+                      be deemed a waiver of future enforcement of that or any other
+                      provision. The section headings used herein are for convenience
+                      only and shall not be given any legal import.
+                    </p>
+                    <p class="body1">
+                      9.6. Relationship. Nothing contained herein will in any way
+                      constitute any association, partnership, agency, employment or
+                      joint venture between the parties hereto, or be construed to
+                      evidence the intention of the parties to establish any such
+                      relationship. Neither party will have the authority to obligate
+                      or bind the other in any manner, and nothing herein contained
+                      will give rise or is intended to give rise to any rights of any
+                      kind to any third parties.
+                    </p>
+                    <p class="body1">
+                      9.7. Unenforceability. If a court of competent jurisdiction
+                      determines that any provision of this Agreement is invalid,
+                      illegal, or otherwise unenforceable, such provision will be
+                      enforced as nearly as possible in accordance with the stated
+                      intention of the parties, while the remainder of this Agreement
+                      will remain in full force and effect and bind the parties
+                      according to its terms.
+                    </p>
+                    <p class="body1">
+                      9.8. Governing Law. This Agreement will be governed by the laws
+                      of the State of California, exclusive of its rules governing
+                      choice of law and conflict of laws. This Agreement will not be
+                      governed by the United Nations Convention on Contracts for the
+                      International Sale of Goods.
+                    </p>
+                    <p class="body1">
+                      9.9. Notices. Any notice required or permitted to be given
+                      hereunder will be given in writing by personal delivery,
+                      certified mail, return receipt requested, or by overnight
+                      delivery. Notices to the Customer must be sent to the respective
+                      address set forth in the signature blocks listed on the
+                      Customer’s applicable Order Form, or such other email address
+                      provided by Customer when Customer creates its Toolchain Tools
+                      account. Notices to Toolchain must be sent to the following:
+                    </p>
+                    <p class="body1">Toolchain, Inc.</p>
+                    <p class="body1">584 Castro St #136</p>
+                    <p class="body1">San Francisco, CA 94114</p>
+                    <p class="body1">Attn: Legal</p>
+                    <p class="body1">
+                      9.10. Entire Agreement. This Agreement comprises the entire
+                      agreement between Customer and Toolchain with respect to its
+                      subject matter, and supersedes all prior and contemporaneous
+                      proposals, statements, sales materials or presentations and
+                      agreements (oral and written). No oral or written information or
+                      advice given by Toolchain, its agents or employees will create a
+                      warranty or in any way increase the scope of the warranties in
+                      this Agreement.
+                    </p>
+                    <p class="body1">
+                      9.11. Force Majeure. Neither Party will be deemed in breach
+                      hereunder for any cessation, interruption or delay in the
+                      performance of its obligations due to causes beyond its
+                      reasonable control (“Force Majeure Event”), including
+                      earthquake, flood, or other natural disaster, act of God, labor
+                      controversy, civil disturbance, terrorism, war (whether or not
+                      officially declared), cyber attacks (e.g., denial of service
+                      attacks), or the inability to obtain sufficient supplies,
+                      transportation, or other essential commodity or service required
+                      in the conduct of its business, or any change in or the adoption
+                      of any law, regulation, judgment or decree.
+                    </p>
+                    <p class="body1">
+                      9.12. Government Terms. Toolchain provides the Toolchain Tools,
+                      including related software and technology, for ultimate federal
+                      government end use solely in accordance with the terms of this
+                      Agreement. If Customer is an agency, department, or other entity
+                      of any government, the use, duplication, reproduction, release,
+                      modification, disclosure, or transfer of the Toolchain Tools, or
+                      any related documentation of any kind, including technical data,
+                      software, and manuals, is restricted by the terms of this
+                      Agreement. All other use is prohibited and no rights than those
+                      provided in this Agreement are conferred. The Toolchain Tools
+                      was developed fully at private expense.
+                    </p>
+                    <p class="body1">
+                      9.13. Interpretation. For purposes hereof, “including” means
+                      “including without limitation”.
+                    </p>
+                    <h3>Exhibit A</h3>
+                    <p class="body1">SLA</p>
+                    <p class="subtitle1">Availability Commitment.</p>
+                    <p class="body1">
+                      The Toolchain Tools will be Available 99% of the time,
+                      measuredly on a calendar monthly basis (the “Availability
+                      Commitment”). “Availability” means that the Toolchain Tools are
+                      available to respond correctly to network requests issued by
+                      authorized users. Availability measures will not include
+                      downtime resulting from:
+                    </p>
+                    <ul>
+                      <li>
+                        <p class="body1">
+                          Upgrades: Customer will receive prior notice by email of
+                          Toolchain’s upgrade windows, which will be scheduled between
+                          5pm and midnight Pacific Time to the extent feasible.
+                          Downtime due to upgrades will not exceed 2 hours per month.
+                          Pre-scheduled maintenance periods: Customer will receive at
+                          least 24 hours prior notification by email of pre-scheduled
+                          maintenance periods. Maintenance shall be scheduled between
+                          5pm and midnight Pacific Time. Downtime due to pre-scheduled
+                          maintenance will not exceed 2 hours per month. Emergency
+                          maintenance periods: Customer will receive prior
+                          notification by email on a commercially reasonable efforts
+                          basis. These maintenance periods will involve applying
+                          critical security patches and other emergency repairs to the
+                          Toolchain infrastructure.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="body1">
+                          Pre-scheduled maintenance periods: Customer will receive at
+                          least 24 hours prior notification by email of pre-scheduled
+                          maintenance periods. Maintenance shall be scheduled between
+                          5pm and midnight Pacific Time. Downtime due to pre-scheduled
+                          maintenance will not exceed 2 hours per month.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="body1">
+                          Emergency maintenance periods: Customer will receive prior
+                          notification by email on a commercially reasonable efforts
+                          basis. These maintenance periods will involve applying
+                          critical security patches and other emergency repairs to the
+                          Toolchain infrastructure.
+                        </p>
+                      </li>
+                    </ul>
+                    <p class="body1">
+                      The Availability Commitment does not apply to any downtime of
+                      the Toolchain Tools that results from:
+                    </p>
+                    <ul>
+                      <li>
+                        <div class="body1">
+                          Account suspension or termination due to Customer’s breach
+                          of the Agreement;
+                        </div>
+                      </li>
+                      <li>
+                        <div class="body1">
+                          Disengagement of functionality of the Toolchain Tools due to
+                          Customer’s request;
+                        </div>
+                      </li>
+                      <li><div class="body1">Force Majeure Events; or</div></li>
+                      <li>
+                        <div class="body1">
+                          Customer’s or its service provider’s equipment, software or
+                          other technology.
+                        </div>
+                      </li>
+                    </ul>
+                    <p class="subtitle1">Credit.</p>
+                    <p class="body1">
+                      If Toolchain fails to achieve the above Availability for the
+                      Toolchain Tools, Customer may claim a credit based on the
+                      monthly license fee, as provided below.
+                    </p>
+                    <table class="table tbl">
+                      <thead class="grey-200">
+                        <tr>
+                          <th scope="col" class="grey-300 body-background">
+                            PERCENTAGE AVAILABILITY PER MONTH
+                          </th>
+                          <th scope="col" class="grey-300 body-background">CREDIT</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="grey-300">99.0-100.0</td>
+                          <td class="grey-300">0%</td>
+                        </tr>
+                        <tr>
+                          <td class="grey-300">97.0-98.99</td>
+                          <td class="grey-300">4%</td>
+                        </tr>
+                        <tr>
+                          <td class="grey-300">94.0-97.99</td>
+                          <td class="grey-300">6%</td>
+                        </tr>
+                        <tr>
+                          <td class="grey-300">92.0-93.99</td>
+                          <td class="grey-300">10%</td>
+                        </tr>
+                        <tr>
+                          <td class="grey-300">Below 92.0</td>
+                          <td class="grey-300">50%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p class="body1">
+                      Customer will not be entitled to a credit if it is in breach of
+                      this Agreement, including its payment obligations. To receive a
+                      credit, a Customer must file a claim for such credit within five
+                      (5) days following the end of the month in which the
+                      Availability Commitment was not met by contacting Toolchain at
+                      support@toolchain.com with a complete description of the
+                      downtime, how Customer was adversely affected, and for how long.
+                    </p>
+                    <p class="body1">
+                      The credit remedy set forth in this Service Level Agreement is
+                      Customer’s sole and exclusive remedy for the unavailability of
+                      the Toolchain Tools.
+                    </p>
+                    <p class="body1">
+                      Customer Support for the Toolchain Tools. Toolchain live
+                      technical support business hours will start at 9:00 am Pacific
+                      Time and run until 5:00 pm Pacific Time on weekdays. Technical
+                      support can be contacted via email at support@toolchain.com or
+                      via shared channels in the customer communication platform.
+                    </p>
+                    <p class="body1">Communication Channels:</p>
+                    <table class="table tbl">
+                      <thead class="grey-200">
+                        <tr>
+                          <th scope="col" class="grey-300 body-background">EMAIL</th>
+                          <th scope="col" class="grey-300 body-background">
+                            COMMUNICATION TOOL
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="grey-300">support@toolchain.com</td>
+                          <td class="grey-300">Shared Toolchain Slack channel</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p class="body1">
+                      Live technical support will not be available on Christmas Day
+                      (December 25) and New Year’s Day (January 1). Limited technical
+                      support will be available during the hours listed above during
+                      Toolchain holidays. The current Toolchain holidays are set forth
+                      below:
+                    </p>
+                    <ul>
+                      <li>
+                        <div class="body1">
+                          Martin Luther King Day (third Monday of January)
+                        </div>
+                      </li>
+                      <li>
+                        <div class="body1">
+                          Presidents Day (third Monday of February)
+                        </div>
+                      </li>
+                      <li>
+                        <div class="body1">Memorial Day (last Monday of May)</div>
+                      </li>
+                      <li>
+                        <div class="body1">Independence Day (July 4)</div>
+                      </li>
+                      <li>
+                        <div class="body1">Labor Day (first Monday of September)</div>
+                      </li>
+                      <li>
+                        <div class="body1">Veterans Day (November 11)</div>
+                      </li>
+                      <li>
+                        <div class="body1">
+                          Thanksgiving Day (fourth Thursday in November)
+                        </div>
+                      </li>
+                      <li>
+                        <div class="body1">Day after Thanksgiving Day</div>
+                      </li>
+                      <li>
+                        <div class="body1">Christmas Eve (December 24)</div>
+                      </li>
+                      <li>
+                        <div class="body1">New Year’s Eve (December 31)</div>
+                      </li>
+                    </ul>
+                    <h3>Exhibit B</h3>
+                    <p class="body1">Support for the Pants Open Source Project</p>
+                    <ol>
+                      <li>
+                        <div class="body1">
+                          Toolchain shall provide support for Customer’s adoption and
+                          ongoing use of the Pants open-source build system. Such
+                          support includes: providing technical advice, diagnosing
+                          problems, and fixing bugs in existing functionality.
+                        </div>
+                      </li>
+                      <li>
+                        <div class="body1">
+                          Customer shall make support requests initially on the public
+                          Pants Slack support channel. Urgent or confidential support
+                          requests may be escalated on a dedicated private Slack
+                          channel setup for this purpose.
+                        </div>
+                      </li>
+                      <li>
+                        <div class="body1">
+                          Support requests shall be categorized by Customer, acting
+                          reasonably, into one of the following severity categories:
+                          (a) Severe, (b) Moderate, (c) Minor, based on the degree of
+                          impairment or inconvenience the issue imposes on Customer
+                          software engineers. Toolchain shall respond to issues in
+                          order of severity.
+                        </div>
+                      </li>
+                      <li>
+                        <div class="body1">
+                          Toolchain shall use reasonable endeavors to respond to
+                          support requests by Customer software engineers promptly,
+                          and in any case in accordance with the following time
+                          periods: (a) Severe issues : 1 business day, (b) Moderate
+                          issues: 2 business days, (c) Minor issues: 3 business days.
+                        </div>
+                      </li>
+                      <li>
+                        <div class="body1">
+                          Toolchain shall respond to support requests during normal
+                          business hours, Pacific Time.
+                        </div>
+                      </li>
+                      <li>
+                        <div class="body1">
+                          To facilitate timely resolution of support issues, Customer
+                          shall provide Toolchain with such information as is
+                          requested by Toolchain to assist in diagnosing issues and
+                          verifying their resolution.
+                        </div>
+                      </li>
+                      <li>
+                        <div class="body1">
+                          To facilitate timely and accurate resolution of support
+                          issues, they will be handled in public forums, such as the
+                          Pants Slack support channel and the Pants GitHub issue
+                          tracker, whenever possible. Customer shall be responsible
+                          for redacting or anonymizing any information it posts to
+                          these public forums.
+                        </div>
+                      </li>
+                      <li>
+                        <div class="body1">
+                          In cases where Toolchain must have access to Customer’s
+                          confidential information in order to resolve an issue, such
+                          information shall be communicated privately, in a manner
+                          agreed upon by Customer and by Toolchain, and Toolchain
+                          shall strictly abide by its existing confidentiality
+                          agreement with Customer in handling such information.
+                        </div>
+                      </li>
+                      <li>
+                        <div class="body1">
+                          Implementing new features or adding new functionality to the
+                          Pants build system is not covered by these services, but may
+                          be covered by a separate Statement of Work.
+                        </div>
+                      </li>
+                      <li>
+                        <div class="body1">
+                          Providing support to other teams at Customer is not covered
+                          by these services, but may be covered by a separate
+                          Statement of Work.
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                  <div class="end-of-paper-gradient"></div>
+                  <div class="accept-form-wrapper">
+                    <form action="" method="post">
+                    {{ csrf_input }}
+                      <input
+                        type="hidden"
+                        name="tos-version"
+                        value="{{ tos_version }}"
+                      />
+                      <div>
+                        <input type="submit" value="ACCEPT" class="accept-button" />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         {% block js %}
+         {% endblock js %}
+         {% endblock body %}
+   </body>
+</html>

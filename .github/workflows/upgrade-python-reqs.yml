@@ -1,0 +1,76 @@
+name: Upgrade Python Requirements
+# Based on https://www.oddbird.net/2022/06/01/dependabot-single-pull-request/
+on: 
+  workflow_dispatch: # Allow running on-demand
+jobs:
+  upgrade:
+    name: Upgrade Python Requirements & Open Pull Request
+    runs-on: ubuntu-latest
+    env:
+      BRANCH_NAME: auto-updates/python-reqs
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.9.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9.12"
+      - uses: actions/setup-go@v4
+        with:
+          go-version: '1.19'
+      - name: env for scie-pants
+        run: |
+          mkdir -p $HOME/bin && echo "${HOME}/bin" >> ${GITHUB_PATH}
+      - name: Cache pants
+        uses: actions/cache@v3
+        with:
+          key: ${{ runner.os }}-${{ hashFiles('pants*toml') }}-v5
+          path: |
+             ~/.cache/nce  
+             ~/bin
+      - name: Set env vars
+        run: |
+          echo 'PANTS_CONFIG_FILES=+["${{ github.workspace }}/pants.ci.toml"]' >> ${GITHUB_ENV}
+      - name: Bootstrap Pants
+        run:  |
+          ./src/sh/pants/pantsup.sh --version 0.5.4  # when changing, the cache key version in the cache pants action must be updated.
+          pants version
+      - name: Upgrade reqs
+        run: pants run src/python/toolchain/prod/upgrade_python_reqs.py -- 3rdparty/python/requirements.txt
+      - name: generate lock files
+        run: pants generate-lockfiles --diff >> $GITHUB_STEP_SUMMARY
+      - name: report changes
+        run: echo "Changed files `git status 3rdparty/ 2>/dev/null`" >> $GITHUB_STEP_SUMMARY
+      - name: Detect changes
+        id: changes
+        run:
+          # This output tells us if the dependencies have actually changed
+          echo "CHANGE_COUNT=$(git status --porcelain=v1 3rdparty/ 2>/dev/null | wc -l)" >> $GITHUB_OUTPUT
+      - name: Commit & push changes
+        # Only push if changes exist
+        if: steps.changes.outputs.CHANGE_COUNT > 0
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add 3rdparty/
+          git add pants.toml
+          git commit -m "Automated Python Requirements upgrades"
+          git push -f origin ${{ github.ref_name }}:$BRANCH_NAME
+      - name: Open pull request if needed
+        if: steps.changes.outputs.CHANGE_COUNT > 0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Only open a PR if the branch is not attached to an existing one
+        run: |
+          PR=$(gh pr list --head $BRANCH_NAME --json number -q '.[0].number')
+          if [ -z $PR ]; then
+            printf "Full log: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\n\nThis PR needs to be manually closed and reoopend in order to trigger the Gihub Actions CI jobs. \n see: https://github.com/peter-evans/create-pull-request/issues/48#issuecomment-536184102\n" > pr_body.txt
+            gh pr create \
+            --head $BRANCH_NAME \
+            --assignee asherf \
+            --reviewer asherf \
+            --label dependencies --label python \
+            --title "Automated Python Requirements upgrades" \
+            --body-file pr_body.txt
+          else
+            echo "Pull request already exists, won't create a new one."
+          fi

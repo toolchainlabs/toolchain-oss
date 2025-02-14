@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+        "-//Puppy Crawl//DTD Suppressions 1.1//EN"
+        "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
+
+<!--
+    Checkstyle suppressions.
+ -->
+<suppressions>
+    <!-- Don't check testdata files. -->
+    <suppress files="[\\/]testdata/[\\/]*" checks=".*"/>
+
+    <!-- It's convenient to allow visit method parameters that provide values for fields to
+         use the field names as parameter names, as in constructors. -->
+    <suppress checks="HiddenField" files="ClassHeaderIndexer.java"/>
+    <suppress checks="HiddenField" files="GraphBuilderClassVisitor.java"/>
+    <suppress checks="HiddenField" files=".*AnnotationIndexer.java"/>
+</suppressions>

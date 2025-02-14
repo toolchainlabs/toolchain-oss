@@ -1,0 +1,14 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "maven/mavenartifactversion_detail_base.html" %}
+
+{% block extra_artifact_info_rows %}
+  <tr>
+    <td colspan="2">
+      <a href="{{ url('crawler:artifact_index_status', kwargs=object.coordinates()._asdict()) }}">Index Status</a>
+    </td>
+  </tr>
+{% endblock %}

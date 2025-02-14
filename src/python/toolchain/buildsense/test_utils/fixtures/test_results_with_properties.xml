@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite name="pytest" errors="0" failures="0" skipped="0" tests="7" time="3.957" timestamp="2022-06-19T00:26:08.155211" hostname="ip-10-0-6-189.ec2.internal">
+		<properties>
+			<property name="hypothesis-statistics-src/python/python-proto/python_proto/tests/test_common.py::test_uuid_from_into" value="c3JjL3B5dGhvbi9weXRob24tcHJvdG8vcHl0aG9uX3Byb3RvL3Rlc3RzL3Rlc3RfY29tbW9uLnB5Ojp0ZXN0X3V1aWRfZnJvbV9pbnRvOgoKICAtIGR1cmluZyBnZW5lcmF0ZSBwaGFzZSAoMC4xOCBzZWNvbmRzKToKICAgIC0gVHlwaWNhbCBydW50aW1lczogMC0xIG1zLCB+IDUxJSBpbiBkYXRhIGdlbmVyYXRpb24KICAgIC0gMTAwIHBhc3NpbmcgZXhhbXBsZXMsIDAgZmFpbGluZyBleGFtcGxlcywgMCBpbnZhbGlkIGV4YW1wbGVzCgogIC0gU3RvcHBlZCBiZWNhdXNlIHNldHRpbmdzLm1heF9leGFtcGxlcz0xMDA="/>
+			<property name="hypothesis-statistics-src/python/python-proto/python_proto/tests/test_common.py::test_timestamp_from_into" value="c3JjL3B5dGhvbi9weXRob24tcHJvdG8vcHl0aG9uX3Byb3RvL3Rlc3RzL3Rlc3RfY29tbW9uLnB5Ojp0ZXN0X3RpbWVzdGFtcF9mcm9tX2ludG86CgogIC0gZHVyaW5nIGdlbmVyYXRlIHBoYXNlICgwLjI0IHNlY29uZHMpOgogICAgLSBUeXBpY2FsIHJ1bnRpbWVzOiB+IDFtcywgfiA2MyUgaW4gZGF0YSBnZW5lcmF0aW9uCiAgICAtIDEwMCBwYXNzaW5nIGV4YW1wbGVzLCAwIGZhaWxpbmcgZXhhbXBsZXMsIDAgaW52YWxpZCBleGFtcGxlcwoKICAtIFN0b3BwZWQgYmVjYXVzZSBzZXR0aW5ncy5tYXhfZXhhbXBsZXM9MTAw"/>
+			<property name="hypothesis-statistics-src/python/python-proto/python_proto/tests/test_common.py::test_duration_from_into" value="c3JjL3B5dGhvbi9weXRob24tcHJvdG8vcHl0aG9uX3Byb3RvL3Rlc3RzL3Rlc3RfY29tbW9uLnB5Ojp0ZXN0X2R1cmF0aW9uX2Zyb21faW50bzoKCiAgLSBkdXJpbmcgZ2VuZXJhdGUgcGhhc2UgKDAuMjUgc2Vjb25kcyk6CiAgICAtIFR5cGljYWwgcnVudGltZXM6IDAtMSBtcywgfiA1OCUgaW4gZGF0YSBnZW5lcmF0aW9uCiAgICAtIDEwMCBwYXNzaW5nIGV4YW1wbGVzLCAwIGZhaWxpbmcgZXhhbXBsZXMsIDcgaW52YWxpZCBleGFtcGxlcwoKICAtIFN0b3BwZWQgYmVjYXVzZSBzZXR0aW5ncy5tYXhfZXhhbXBsZXM9MTAw"/>
+		</properties>
+		<testcase classname="src.python.python-proto.python_proto.tests.test_common" name="test_uuid_encode_decode" time="0.488"/>
+		<testcase classname="src.python.python-proto.python_proto.tests.test_common" name="test_uuid_from_into" time="0.189"/>
+		<testcase classname="src.python.python-proto.python_proto.tests.test_common" name="test_timestamp_encode_decode" time="0.467"/>
+		<testcase classname="src.python.python-proto.python_proto.tests.test_common" name="test_timestamp_from_into" time="0.244"/>
+		<testcase classname="src.python.python-proto.python_proto.tests.test_common" name="test_epoch_timestamp_is_since_variant" time="0.001"/>
+		<testcase classname="src.python.python-proto.python_proto.tests.test_common" name="test_duration_encode_decode" time="0.347"/>
+		<testcase classname="src.python.python-proto.python_proto.tests.test_common" name="test_duration_from_into" time="0.260"/>
+	</testsuite>
+</testsuites>

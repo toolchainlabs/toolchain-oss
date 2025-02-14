@@ -1,0 +1,32 @@
+[
+    {
+        "tests": [
+            {
+                "name": "tests_skipped.py",
+                "test_file_path": "tests_skipped.py",
+                "time": 0.0,
+                "tests": [
+                    {
+                        "results": [
+                            {
+                                "message": "collection skipped",
+                                "text": "('/tmp/process-executionhjr7Ry/scan_backend/redacted_test.py', 33, 'no soup for you')"
+                            }
+                        ],
+                        "name": "base_api.api.tests_api.test_blabla_redacted",
+                        "time": 0.0,
+                        "outcome": "skip"
+                    }
+                ]
+            }
+        ],
+        "timing": {
+            "total": 0.0
+        },
+        "target": "tests_skipped.py",
+        "outputs": {
+            "stdout": "He stopped short?",
+            "stderr": "Three squares? You can\u2019t spare three squares?"
+        }
+    }
+]

@@ -1,0 +1,12 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+appVersion: v2.4.7
+description: Configure AWS ALB Ingress controller deployment on prod cluster
+name: aws-alb-ingress-controller
+version: 2.0.1
+dependencies:
+- name: aws-load-balancer-controller
+  version: 1.4.8
+  repository: https://aws.github.io/eks-charts

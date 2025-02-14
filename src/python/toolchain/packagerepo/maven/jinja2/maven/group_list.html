@@ -1,0 +1,26 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "maven/base.html" %}
+
+{% block content %}
+  <h2>Groups</h2>
+  <div class="maven-group-list-table-container">
+    <table id="maven-group-list-table" class="table table-condensed table-hover maven-group-list-table">
+    </table>
+  </div>
+
+{% endblock content %}
+
+{% block js %}
+  {{ super() }}
+  <script src="{{ static('maven/js/group_list_table.js') }}"></script>
+  <script>
+    $(function() {
+      toolchain.packagerepo.maven.setGroupLinkTemplate('{{ url('maven:group_artifacts', kwargs={'group_id': 'XXXXX'}) }}');
+      toolchain.packagerepo.maven.initGroupListTable('#maven-group-list-table', '{{ url('maven:group_list_data') }}');
+    });
+  </script>
+{% endblock js %}

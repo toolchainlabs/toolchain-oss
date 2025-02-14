@@ -1,0 +1,44 @@
+name: Audit reqs
+on: 
+  workflow_dispatch: # Allow running on-demand
+jobs:
+  audit-python:
+    name: Audit python packages
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        python-version: ["3.9"]
+        os: [ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          lfs: false
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+          cache-dependency-path: '3rdparty/python/**/*.txt'
+      - name: Install dependencies
+        run: |
+          pip install -U "pip>=23.0.1"
+          pip install -U "pip-audit>=2.4.14,<3" "pex==2.1.124"
+      - name: generate a pip compatible lock file
+        run: |
+          sed '/^\/\//d' 3rdparty/python/default_toolchain.lock > 3rdparty/python/default_toolchain.json  # remove pants comments from lock file
+          pex3 lock export 3rdparty/python/default_toolchain.json > 3rdparty/python/default_toolchain_lock.txt
+      - name: list reqs
+        run: cat 3rdparty/python/default_toolchain_lock.txt
+      - name: Audit reqs
+        run: pip-audit -r 3rdparty/python/default_toolchain_lock.txt
+      - name: Notify slack on failure
+        if: failure()
+        # rtCamp/action-slack-notify@v2.2.0 - pinned it a git hash for maximum safety
+        # https://github.com/rtCamp/action-slack-notify/releases/tag/v2.2.0
+        uses: rtCamp/action-slack-notify@12e36fc18b0689399306c2e0b3e0f2978b7f1ee7
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_COLOR: red
+          SLACK_TITLE: Python Packages Security Audit FAILED.
+          SLACK_MESSAGE: "There is a security vulnerability in one of the python packages used by Toolchain, See log for details: https://github.com/toolchainlabs/toolchain/actions/workflows/pacakges-audit.yml"
+          SLACK_CHANNEL: "devops"

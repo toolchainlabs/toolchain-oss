@@ -1,0 +1,9 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+description: A Helm chart defining an Ingress resource, intended to be used by other
+  charts.
+name: ingress
+version: 0.15.0
+kubeVersion: '>=v1.19.0-0,<v1.25-0'

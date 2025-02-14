@@ -1,0 +1,14 @@
+[GLOBAL]
+pantsd = false
+plugins = [
+  "toolchain.pants.plugin==0.11.0",
+]
+
+[auth]
+base_url = "http://servicerouter.asher.svc.cluster.local/api/v1"
+
+[buildsense]
+base_url = "http://servicerouter.asher.svc.cluster.local/api/v1/repos/"
+
+[toolchain-setup]
+repo = "jerry"

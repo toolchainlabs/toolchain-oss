@@ -1,0 +1,27 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "crawler/workunit_detail_base.html" %}
+
+{% block fetchurl_details %}
+{% endblock fetchurl_details %}
+
+{% block successful_workunit_detail_content_trs %}
+  {{ super() }}
+  <tr>
+    <td>Maven Artifact:</td>
+    <td>
+      <a href="{{ object.artifact.get_absolute_url() }}"
+      >{{ object.artifact }}</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Latest Maven Artifact Version:</td>
+    <td>
+      <a href="{{ object.artifact.latest_version().get_absolute_url() }}">{{ object.artifact.latest_version() }}</a>
+    </td>
+  </tr>
+  <tr><td colspan="2"><a href="{{ view.artifact_index_status_url() }}">Index Status</a></td></tr>
+{% endblock successful_workunit_detail_content_trs %}

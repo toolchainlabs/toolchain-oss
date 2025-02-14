@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "type": "object",
+
+  "properties": {
+    "backend_protocol_version": {
+      "description": "Optional alternate protocol for the backend service",
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": ["GRPC"]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+
+    "enabled": {
+      "description": "Whether to enable ingress",
+      "type": "boolean"
+    },
+
+    "external_ingress_sg_id": {
+      "description": "Map of AWS region to security group ID for ingress",
+      "type": "object"
+    },
+
+    "extra_attributes": {
+      "description": "Extra comma-separated attributes for the ALB",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+
+    "healthcheck_path": {
+      "description": "Optional path for healthchecks",
+      "type": "string"
+    },
+
+    "healthcheck_success_codes": {
+      "description": "Success codes for AWS ALB healthchecks",
+      "type": "string"
+    },
+
+    "listen_ports": {
+      "description": "Configures ports on which the ALB listens",
+      "type": "string"
+    },
+
+    "logs_prefix": {
+      "description": "Prefix for logs",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+
+    "name": {
+      "description": "Name of the Service resource for this service",
+      "type": "string"
+    },
+
+    "rules": {
+      "description": "Ingress rules",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "host": {
+                "type": "string"
+              },
+              "http": {
+                "type": "object",
+                "properties": {
+                  "paths": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "path": {
+                          "type": "string"
+                        },
+                        "backend": {
+                          "type": "object",
+                          "properties": {
+                            "serviceName": {
+                              "type": "string"
+                            },
+                            "servicePort": {
+                              "type": "number"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+
+    "scheme": {
+      "description": "ALB load balancer scheme",
+      "type": "string",
+      "enum": ["internet-facing", "internal"]
+    },
+
+    "ssl_certificate_arn": {
+      "description": "Map of AWS region to SSL certificate ARN",
+      "type": "object"
+    },
+
+    "ssl_redirect_enabled": {
+      "description": "Whether to redirect HTTP to HTTPS",
+      "type": "boolean"
+    }
+  }
+}

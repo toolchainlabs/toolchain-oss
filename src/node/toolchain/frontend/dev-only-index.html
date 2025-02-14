@@ -1,0 +1,29 @@
+{#
+Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>[DEV] Toolchain</title>
+  <!--
+  IMPORTANT NOTE: when updating the <head> section in this file you must also update servicerouter/jinja2/servicerouter/index.html
+  as that is the file used to serve the SPA in dev (from k8s) and in production.
+
+  If you are adding ***New Domains**: CSP (content security policy) settings must also be updated to allow content from those domains.
+  those settings are defined in toolchain/service/servicerouter/settings.py
+-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <base id="app_base" href="/">
+</head>
+
+<body>
+  <div id="app"></div>
+  <script id="app_init_data" type="text/json"><%= htmlWebpackPlugin.options.appInitData %></script>
+</body>
+
+</html>

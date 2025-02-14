@@ -1,0 +1,23 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: users-ui
+toolchain_product_name: users
+dbs: [users]
+service_type: web-ui
+iam_service_role_arn: null
+resources:
+  gunicorn:
+    requests:
+      cpu: 100m
+      memory: 512Mi
+secrets:
+- django-secret-key
+- github-app-creds
+- bitbucket-oauth-creds
+- jwt-auth-secret-key
+extra_config:
+  LOGIN_URL_HOST: app.toolchain.com
+  TOOLCHAIN_GITHUB_APP_INSTALL_LINK: null # updated by install script
+gunicorn_image_rev:
+  us-east-1: prod-2023-05-08.12-24-16-d0d6683b1814

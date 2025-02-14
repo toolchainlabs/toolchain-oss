@@ -1,0 +1,30 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: buildsense-api
+toolchain_product_name: buildsense
+gunicorn_image_rev:
+  us-east-1: prod-2023-04-18.16-21-24-372e1f29cb9d
+dbs: [users, buildsense]
+secrets:
+- django-secret-key
+- influxdb-buildsense-ro-token
+has_static_files: false
+service_type: api
+iam_service_role_arn: null
+resources:
+  gunicorn:
+    requests:
+      cpu: 150m
+      memory: 1Gi
+      ephemeral_storage: 3Gi
+    limits:
+      cpu: 800m
+      memory: 3Gi
+      ephemeral_storage: 20Gi
+extra_config:
+  # Resolved in resources_resolver.py
+  BUILDSENSE_ELASTICSEARCH_HOST: null
+  BUILDSENSE_BUCKET: null
+  INFLUXDB_CONFIG:
+    host: null

@@ -1,0 +1,35 @@
+{
+  "object": "search_result",
+  "data": [
+    {
+      "id": "prod_LcgVoYRbtZeS7i",
+      "object": "product",
+      "active": true,
+      "attributes": [
+
+      ],
+      "created": 1651605105,
+      "default_price": null,
+      "description": "Basic plan, mostly physical comedy.",
+      "images": [
+        "https://files.stripe.com/links/MDB8YWNjdF8xS282cldFZmJ2M0dTZ1NkfGZsX3Rlc3RfV1A0SkJldWJRekQ5OXBYNHJ4MDdoS2xu00YC43X9dD"
+      ],
+      "livemode": false,
+      "metadata": {
+        "TOOLCHAIN_DEFAULT_PLAN": "True"
+      },
+      "name": "Kramer",
+      "package_dimensions": null,
+      "shippable": null,
+      "statement_descriptor": null,
+      "tax_code": null,
+      "type": "service",
+      "unit_label": null,
+      "updated": 1653336854,
+      "url": null
+    }
+  ],
+  "has_more": false,
+  "next_page": null,
+  "url": "/v1/products/search"
+}

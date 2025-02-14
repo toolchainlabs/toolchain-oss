@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextBlockWithScroll /> should render text block size large and color gray 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-79elbk"
+  >
+    <div>
+      <div
+        class="MuiBox-root css-2gsrs"
+      >
+        <span>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iste autem porro ullam culpa dolorem, nobis quae? Repellat eius fugit labore ipsum esse laudantium! A, expedita! Explicabo repellat vero, id dolores quo
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<TextBlockWithScroll /> should render text block size small and color blue 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-79elbk"
+  >
+    <div>
+      <div
+        class="MuiBox-root css-108tg2t"
+      >
+        <span>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iste autem porro ullam culpa dolorem, nobis quae? Repellat eius fugit labore ipsum esse laudantium! A, expedita! Explicabo repellat vero, id dolores quo
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

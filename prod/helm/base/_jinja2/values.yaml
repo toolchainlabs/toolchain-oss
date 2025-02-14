@@ -1,0 +1,16 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+# Copyright {{ copyright_year }} Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: {{ service_name_dashes }}
+service_type: null # one of api, web-ui, worker,  etc
+service_location: internal
+dbs: []   #### List required databases here. ####
+
+#### Set up required databases here. ####
+
+gunicorn_image_rev:
+  us-east-1: <rev>  #### Specify gunicorn image rev here. ####
+
+#### Specify any extra values here. ####

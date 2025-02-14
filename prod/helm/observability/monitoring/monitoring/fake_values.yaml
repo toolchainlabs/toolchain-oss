@@ -1,0 +1,81 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+features:
+  cloudwatchExporter: true
+  monitorToolchainPythonServices: true
+  pushGateway: true
+  prometheusAdapter: true
+global:
+  region: us-east-1
+prometheus-cloudwatch-exporter:
+  aws:
+    role: k8s.prod-e1-1.monitoring.cloudwatch.service
+kube-prometheus-stack:
+  prometheus:
+    prometheusSpec:
+      externalLabels:
+        cluster: newman-c1-usps
+  alertmanager:
+    config: 
+      global: 
+        slack_api_url:  https://hooks.slack.com/services/
+        smtp_auth_password: SMTP_PASSWORD_PLACEHOLDER
+        smtp_require_tls: true
+        pagerduty_url: https://costanza.com/frank
+      receivers:
+        - name: 'null'
+        - name: 'pagerduty'
+          pagerduty_configs:
+            - send_resolved: true
+              routing_key: no-soup-for-you
+        - name: 'slack-devops'
+          slack_configs:
+            - channel: '#devops'
+              send_resolved: true
+              fields: 
+                - title: cluster
+                  value: '{{ .CommonLabels.cluster }}'
+              icon_emoji: |-
+                  {{- if eq .Status "firing" }}:boom:{{ else }}:white_check_mark:{{ end }}
+              text:  >-
+                  {{ with index .Alerts 0 -}}
+                    {{ .Annotations.message }}
+                  {{ end }}
+        - name: 'slack-remoting'
+          slack_configs:
+            - channel: '#remoting'
+              send_resolved: true
+              fields: 
+                - title: cluster
+                  value: '{{ .CommonLabels.cluster }}'
+              icon_emoji: |-
+                  {{- if eq .Status "firing" }}:boom:{{ else }}:white_check_mark:{{ end }}
+              text:  >-
+                  {{ with index .Alerts 0 -}}
+                    {{ .Annotations.message }}
+                  {{ end }}
+        - name: 'slack-buildsense'
+          slack_configs:
+            - channel: '#buildsense'
+              send_resolved: true
+              fields: 
+                - title: cluster
+                  value: '{{ .CommonLabels.cluster }}'
+              icon_emoji: |-
+                  {{- if eq .Status "firing" }}:boom:{{ else }}:white_check_mark:{{ end }}
+              text:  >-
+                  {{ with index .Alerts 0 -}}
+                    {{ .Annotations.message }}
+                  {{ end }}
+        - name: 'slack-alerts-test'
+          slack_configs:
+            - send_resolved: true
+              channel: '#alerts-manager-test'
+        - name: 'dead-mans-snitch'
+          webhook_configs:
+            - send_resolved: true
+              url: https://nosnch.in/zzzzzzz
+        - name: 'email'
+          email_configs:
+            - to: 'ops-notify@toolchain.com'
+              from: 'prometheus-alerts@toolchain.com'

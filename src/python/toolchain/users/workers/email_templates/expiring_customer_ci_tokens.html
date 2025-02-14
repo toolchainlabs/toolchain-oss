@@ -1,0 +1,21 @@
+{#
+Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h2>Expiring CI tokens for customers</h2>
+  <p>Expiring tokens: </p>
+  <ul>
+    {% for user, msg in notifications.items() %}
+      <li>{{ user.username }} ({{ user.full_name }}) - {{ msg }}</li>
+    {% endfor %}
+  </ul>
+  <br />
+  <p>That is all.</p>
+</body>
+

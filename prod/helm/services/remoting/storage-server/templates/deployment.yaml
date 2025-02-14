@@ -1,0 +1,159 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{- $region := required "You must set global.region!" .Values.global.region }}
+{{- $toolchain_env := required "You must set toolchain_env!" .Values.toolchain_env }}
+{{- $service_image := (printf "%s/remoting/storage_server:%s" .Values.image_registry (index .Values.image_rev $region) ) }}
+{{- $add_dev_prometheus_annotations := eq $toolchain_env "toolchain_dev" }}
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: remoting-storage-server
+  labels:
+    app: remoting-storage-server
+    chart: {{ .Chart.Name  }}
+    heritage: {{ .Release.Service }}
+    toolchain_product: "remote-cache"
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: remoting-storage-server
+  template:
+    metadata:
+      labels:
+        app: remoting-storage-server
+        chart: {{ .Chart.Name  }}
+        heritage: {{ .Release.Service }}
+        toolchain_product: "remote-cache"
+    spec:
+      nodeSelector:
+        toolchain.instance_category: service
+      containers:
+        - name: remoting-storage-server
+          image: {{ $service_image }}
+          args:
+            - -c
+            - /config/storage.yaml
+          env:
+            - name: RUST_LOG
+              value: info
+            - name: K8S_NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+            - name: K8S_POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: K8S_POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: K8S_POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+          ports:
+            - name: grpc
+              containerPort: 8980
+              protocol: TCP
+            - name: checks
+              containerPort: 8000
+              protocol: TCP
+            - name: metrics
+              containerPort: 8010
+              protocol: TCP
+          volumeMounts:
+            - name: config
+              mountPath: /config/
+              readOnly: true
+        {{- if eq (include "storage-server.isEFSEnabledForModel" .Values.storageModel) "true" }}
+            - name: cache-local-storage
+              mountPath: /data
+        {{- end }}
+        {{- if eq (include "storage-server.isAmberfloEnabledForModel" .Values.storageModel) "true" }}
+            - name: amberflo-api-key
+              mountPath: /amberflo-api-key
+              readOnly: true
+        {{- end }}
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "64Mi"
+            limits:
+              cpu: "1000m"
+              memory: "256Mi"
+      volumes:
+        - name: config
+          configMap:
+              name: remoting-storage-server
+        {{- if eq (include "storage-server.isAmberfloEnabledForModel" .Values.storageModel) "true" }}
+        - name: amberflo-api-key
+          secret:
+            secretName: amberflo-api-key
+        {{- end }}
+        {{- if eq (include "storage-server.isEFSEnabledForModel" .Values.storageModel) "true" }}
+        - name: cache-local-storage
+          persistentVolumeClaim:
+            claimName: remote-cache-efs-storage-claim
+        {{- end }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: remoting-storage-server
+  labels:
+    app: remoting-storage-server
+    chart: {{ .Chart.Name  }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    toolchain_product: "remote-cache"
+  {{- if $add_dev_prometheus_annotations  }}
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/path: "/metricsz"
+    prometheus.io/port: "8010"
+  {{ end }}
+spec:
+  ports:
+    - port: 8980
+      protocol: TCP
+      name: grpc
+    - port: 8000
+      protocol: TCP
+      name: checks
+    - name: metrics
+      protocol: TCP
+      port: 8010
+  selector:
+    app: remoting-storage-server
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: remoting-storage-server-headless
+  labels:
+    app: remoting-storage-server
+    chart: {{ .Chart.Name  }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    toolchain_product: "remote-cache"
+spec:
+  # Enable headless service mode. proxy-server instances use client-side load balancing to access storage-server
+  # and need access to all pod IPs when querying the service's DNS address.
+  # See https://kubernetes.io/docs/concepts/services-networking/service/#headless-services.
+  clusterIP: None
+  ports:
+    - port: 8980
+      protocol: TCP
+      name: grpc
+    - port: 8000
+      protocol: TCP
+      name: checks
+    - name: metrics
+      protocol: TCP
+      port: 8010
+  selector:
+    app: remoting-storage-server

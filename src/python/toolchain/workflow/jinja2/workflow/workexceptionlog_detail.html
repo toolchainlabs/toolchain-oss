@@ -1,0 +1,50 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "workflow/base.html" %}
+
+{% block content %}
+  <h2>Details for WorkExceptionLog {{ object.id }}</h2>
+  <table class="table">
+    <tr><td>Timestamp:</td><td>{{ object.timestamp|datetime_fmt_std() }}</td></tr>
+    <tr><td>Category:</td><td>{{ object.category }}</td></tr>
+    <tr>
+      <td>WorkUnit:</td>
+      <td><a href="{{ views_links.workunit_status_url }}">{{ object.work_unit.payload_ctype.model }}
+        {{ object.work_unit.description }}</a></td>
+    </tr>
+    <tr>
+      <td>WorkUnit State:</td>
+      <td><span class="work-unit-state-{{ object.work_unit.pk }}">{{ object.work_unit.state_str() }}</span>
+        {% if object.work_unit.state == object.work_unit.INFEASIBLE %}
+          <a href="#" id="mark-as-feasible" class="mark-as-feasible">mark as feasible</a>
+        {% endif %}
+      </td>
+    </tr>
+    <tr><td>Message:</td><td><pre>{{ object.message|urlize(target="_blank") }}</pre></td></tr>
+    <tr><td>Stacktrace:</td>
+      <td>
+        <ul class="workexceptionlog-detail-stackframes">
+          {% for frame in object.stacktrace_frames() %}
+            <li>{{ frame }}</li>
+          {% endfor %}
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+{% endblock content %}
+
+{% block js %}
+  {{ super() }}
+  <script src="{{ static('workflow/js/mark_as_feasible.js') }}"></script>
+  {{ csrf_input }}
+  <script>
+    $(function() {
+      toolchain.workflow.setMarkSelectedUrl('{{ views_links.mark_as_feasible }}');
+      toolchain.workflow.initMarkAsFeasibleLink('.mark-as-feasible', '{{ object.work_unit.pk }}');
+    });
+  </script>
+{% endblock js %}

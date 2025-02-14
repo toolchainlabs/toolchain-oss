@@ -1,0 +1,239 @@
+[GLOBAL]
+pants_version = "2.16.0rc4"
+print_stacktrace = true
+
+pantsd_invalidation_globs.add = [
+  # TODO: The invalidation globs cover the PYTHONPATH by default, but the pythonpath defined above
+  # is (necessarily) pretty broad. We ignore some entries back out of the globs based loosely on
+  # things _not_ used by `./pants dependencies src/python/toolchain/pants::`. This is definitely not
+  # ideal: see https://github.com/pantsbuild/pants/issues/9902.
+  "!/src/python/curator/",
+  "!/src/python/toolchain/aws/",
+  "!/src/python/toolchain/bitbucket_integration/",
+  "!/src/python/toolchain/buildsense/",
+  "!/src/python/toolchain/config/",
+  "!/src/python/toolchain/crawler/",
+  "!/src/python/toolchain/dependency/",
+  "!/src/python/toolchain/django/",
+  "!/src/python/toolchain/github_integration/",
+  "!/src/python/toolchain/infosite/",
+  "!/src/python/toolchain/kubernetes/",
+  "!/src/python/toolchain/oss_metrics/",
+  "!/src/python/toolchain/packagerepo/",
+  "!/src/python/toolchain/pants_demos/",
+  "!/src/python/toolchain/payments/",
+  "!/src/python/toolchain/prod/",
+  "!/src/python/toolchain/remoting/",
+  "!/src/python/toolchain/satresolver/",
+  "!/src/python/toolchain/service/",
+  "!/src/python/toolchain/servicerouter/",
+  "!/src/python/toolchain/toolshed/",
+  "!/src/python/toolchain/users/",
+  "!/src/python/toolchain/webhooks/",
+  "!/src/python/toolchain/workflow/",
+  # TODO: Both of these should likely be upstreamed.
+  "!*_test.py",
+  "!BUILD",
+]
+
+pythonpath = ["%(buildroot)s/src/python"]
+backend_packages.add = [
+  "pants.backend.awslambda.python",
+  "pants.backend.build_files.fmt.black",
+  "pants.backend.docker",
+  "pants.backend.experimental.go",
+  "pants.backend.python.lint.autoflake",
+  "pants.backend.python.lint.pyupgrade",
+  "pants.backend.plugin_development",
+  "pants.backend.project_info",
+  "pants.backend.python",
+  "pants.backend.python.lint.bandit",
+  "pants.backend.python.lint.black",
+  "pants.backend.python.lint.docformatter",
+  "pants.backend.python.lint.flake8",
+  "pants.backend.python.lint.isort",
+  "pants.backend.python.lint.pylint",
+  "pants.backend.python.mixed_interpreter_constraints",
+  "pants.backend.python.typecheck.mypy",
+  "pants.backend.experimental.python.lint.ruff",
+  "pants.backend.shell",
+  "pants.backend.shell.lint.shellcheck",
+  "pants.backend.shell.lint.shfmt",
+  "pants.backend.tools.preamble",
+  # "toolchain.pants",
+  "toolchain.pants.internal",
+]
+
+plugins = [
+  # NB: When adding or removing a pants plugin from this list, update the `./pants_from_sources`
+  # script's `backend_packages` and `pythonpath` lists in lockstep to prevent mysterious failures
+  # to actually load pants from sources.
+
+  # NB: When adding or removing a local loose-source plugin dependency here, update the
+  # `./pants_from_sources` script's `plugins` list in lockstep.
+  # NB: Used by the buildsense plugin.
+  # "requests>=2.28.1",
+  # "chardet==5.0.0",
+]
+
+# Caching is disabled by default so that desktop builds are not cached. CI caching is enabled in pants.ci.toml.
+remote_cache_read = false
+remote_cache_write = false 
+cache_content_behavior = "fetch"
+process_execution_remote_parallelism = 16
+remote_execution_append_only_caches_base_path = "/toolchain/caches"
+
+
+[anonymous-telemetry]
+enabled = false
+
+[environments-preview.names]
+remote = "//:remote"
+
+[source]
+root_patterns = [
+  "/3rdparty",
+  "/src/go/src/toolchain/pants_test",
+  "/src/python",
+  "/src/sh",
+  "/prod/helm",
+]
+
+[test]
+timeout_default = 60
+
+[shellcheck]
+args = ["-x"]
+
+[python]
+interpreter_constraints = ["CPython>=3.9,<3.10"]
+default_resolve = "default-toolchain"
+enable_resolves = true
+
+[python.resolves]
+default-toolchain = "3rdparty/python/default_toolchain.lock"
+pants-plugin = "3rdparty/python/pants_plugin.lock"
+
+[python.resolves_to_interpreter_constraints]
+# Note that this only impacts the interpreter constraints used to generate the lockfile.
+# Individual targets may still need to set their interpreter constraints.
+default-toolchain = ["CPython>=3.9,<3.10"]
+pants-plugin = ["CPython>=3.7.2,<3.10"]  # should match src/python/toolchain/BUILD - python_distribution.python_requires 
+
+[python-infer]
+string_imports = true
+unowned_dependency_behavior = "error"
+
+[subprocess-environment]
+env_vars.add = [
+  "CPPFLAGS",
+  "CXXFLAGS",
+  "LDFLAGS",
+]
+
+[autoflake]
+install_from_resolve="default-toolchain"
+interpreter_constraints = ["CPython>=3.9,<3.10"]
+
+[black]
+install_from_resolve="default-toolchain"
+interpreter_constraints = ["CPython>=3.9,<3.10"]
+
+[bandit]
+config = "build-support/python/bandit.yaml"
+version = "bandit==1.7.5"
+lockfile = "3rdparty/python/bandit.lock"
+args = ["--exclude '**/*_test.py', '**/test_*.py', 'conftest.py', '**/mock_*.py'"]
+
+[docformatter]
+install_from_resolve="default-toolchain"
+interpreter_constraints = ["CPython>=3.9,<3.10"]
+args = ["--wrap-summaries=120", "--wrap-descriptions=120"]
+
+[ruff]
+install_from_resolve="default-toolchain"
+interpreter_constraints = ["CPython>=3.9,<3.10"]
+
+[flake8]
+lockfile = "3rdparty/python/flake8.lock"
+config = "build-support/python/flake8"
+version = "flake8==5.0.4"
+extra_requirements.add = [
+  "flake8-debugger",
+  "flake8-2020",
+  "flake8-mutable",
+  "flake8-comprehensions",
+  "flake8-bugbear",
+  "flake8-django",
+  "flake8-executable",
+  "flake8-pytest-style",
+  "flake8-os-walk",
+  "flake8-absolute-import",
+  "flake8-simplify",
+  "flake8-datetimez",
+  "flake8-no-implicit-concat",
+]
+
+[isort]
+install_from_resolve="default-toolchain"
+interpreter_constraints = ["CPython>=3.9,<3.10"]
+
+[pyupgrade]
+install_from_resolve="default-toolchain"
+interpreter_constraints = ["CPython>=3.9,<3.10"]
+args = ["--py38-plus"]
+
+[pylint]
+version = "pylint==2.17.4"
+lockfile = "3rdparty/python/pylint.lock"
+config = "build-support/python/pylintrc"
+extra_requirements.add = [
+  "setuptools",
+  "typing-extensions",
+  "pylint-django[with_django]==2.5.3",
+]
+
+[mypy]
+version = "mypy==1.3.0"
+lockfile = "3rdparty/python/mypy.lock"
+config = "build-support/python/mypy.ini"
+extra_type_stubs = [
+  "types-chardet", 
+  "types-python-dateutil", 
+  "types-redis", 
+  "types-requests", 
+  "types-freezegun",
+  "types-pyOpenSSL",
+  "types-PyYAML",
+  "types-setuptools",
+  "types-urllib3",
+]
+
+[pytest]
+version = "pytest==7.3.1"
+lockfile = "3rdparty/python/pytest.lock"
+extra_requirements.add = [
+  "pygments>=2.13.0",
+  "pytest-icdiff"
+]
+
+[coverage-py]
+install_from_resolve="default-toolchain"
+interpreter_constraints = ["CPython>=3.9,<3.10"]
+report = ["html", "console"]
+
+[preamble]
+template_by_globs = "@build-support/preambles/config.yaml"
+
+[shfmt]
+# See https://github.com/mvdan/sh/blob/master/cmd/shfmt/shfmt.1.scd#printer-flags.
+args = ["-i 2", "-ci", "-sr"]
+
+[golang]
+minimum_expected_version = "1.19"
+
+[tailor]
+build_file_header = """
+# Copyright © 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+"""

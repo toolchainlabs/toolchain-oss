@@ -1,0 +1,37 @@
+{#
+Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+
+{% endblock %}
+
+{% block title %}Toolshed Admin Service{% endblock %}
+
+{% block content %}
+<h2>Django Admin</h2>
+<ul>
+  {% for name, page_link in links_data.admin %}
+    <li><a href="{{ page_link }}">{{name}}</a>  </li>
+  {% endfor %}
+</ul>
+
+<h2>Workflow</h2>
+<ul>
+  {% for name, page_link in links_data.workflow %}
+    <li><a href="{{ page_link }}">{{name}}</a>  </li>
+  {% endfor %}
+</ul>
+
+<h2>Database State</h2>
+<ul>
+  {% for name, page_link in links_data.db_state %}
+    <li><a href="{{ page_link }}">{{name}}</a>  </li>
+  {% endfor %}
+</ul>
+
+
+{% endblock %}

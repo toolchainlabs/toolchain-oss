@@ -1,0 +1,88 @@
+{#
+Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'infosite/base.html' %}
+{% set description = "With our remote caching service, work is shared across your entire team. When you pull other people's changes you utilize the results of their build and test work, instead of having to re-run it. This can result in great speedups in both desktop and, especially, CI builds. The remote cache is easy to enable, and requires no knowledge of tool internals, unlike the unwieldy syncing of cache directories to and from CI machines." %}
+{% block body_class %}product{% endblock body_class %}
+{% block active_menu_item %}product{% endblock %}
+
+{% block meta_tags %}
+<meta name="description" content="{{ description }}" />
+<meta name="description" property="og:description" content="{{ description }}" />
+<meta name="twitter:description" content="{{ description }}">
+{% endblock meta_tags %}
+
+{% block main %}
+{% include "infosite/header.html" %}
+<section class="product-page-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 product-page-title">
+                <h1>Products</h1>
+            </div>
+        </div>
+        <div class="row product-row">
+            <div class="product-row-pointer" id="oss"></div>
+            <div class="col-xs-12 col-md-4 product-row-img-wrapper">
+                <img src="{{ static('infosite/images/pants_v2.svg') }}" alt="Product"/>
+            </div>
+            <div class="col-xs-12 col-md-8 product-row-info">
+                <a class="product-row-title" href="{{ url('product') }}#oss">Caching and analytics that accelerate your team’s work</a>
+                <p class="product-row-paragraph body3">
+                    With Toolchain’s remote caching service, work is shared across your team. When you pull other people's changes, you use the results of their builds and test work, versus having to re-run the job.
+                </p>
+                <p class="product-row-paragraph body3">
+                    The result is speedups in your desktop, and especially, CI builds. Unlike the unwieldy syncing of cache directories to and from CI machines, Toolchain’s remote cache is easy to enable and requires no knowledge of internal tools.
+                </p>
+            </div>
+        </div>
+        <div class="row product-row">
+            <div class="product-row-pointer" id="caching"></div>
+            <div class="col-xs-12 col-md-4 product-row-img-wrapper">
+                <img src="{{ static('infosite/images/buildsense_v2.svg') }}" alt="Buildsense"/>
+            </div>
+            <div class="col-xs-12 col-md-8 product-row-info">
+                <a class="product-row-title" href="{{ url('product') }}#caching">An ergonomic, open-source developer workflow system</a>
+                <p class="product-row-paragraph body3">
+                    Toolchain is built on <a type="external" class="primary" target="_blank" href="https://www.pantsbuild.org/" rel="noopener">Pants</a>, our ergonomic, open-source developer workflow system. This  state-of-the-art system installs, orchestrates and runs all your favorite tools, coordinating inputs and outputs as needed.
+                </p>
+                <p class="product-row-paragraph body3">
+                    Pants uses caching and concurrency to speed up your desktop and CI builds. Pants is designed for real-world needs. For example, it infers your code's dependencies automatically, so you don't have to maintain huge amounts of build metadata. And it's easy to add your own custom build steps using a Python 3 plugin API.
+                </p>
+            </div>
+        </div>
+        <div class="row product-row">
+            <div class="product-row-pointer" id="support"></div>
+            <div class="col-xs-12 col-md-4 product-row-img-wrapper">
+                <img src="{{ static('infosite/images/support_v2.svg') }}" alt="Support"/>
+            </div>
+            <div class="col-xs-12 col-md-8 product-row-info">
+                <a class="product-row-title" href="{{ url('product') }}#support">Make your builds and workflows stable and efficient</a>
+                <p class="product-row-paragraph body3">
+                    Take developer productivity to new heights. Toolchain’s web application, BuildSense, allows you to search, filter and browse all your team's workflows. Instead of being lost in your terminal scrollback, software workflow outcomes are now preserved for comparison and analysis.
+                </p>
+                <p class="product-row-paragraph body3">
+                    Drill into issues and analyze performance to make your builds and workflows stable. Toolchain’s remote execution service provides even more performance gains through increased concurrency.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="let-us-help-you">
+    <div class="container d-flex flex-column align-items-center">
+        <h3 class="let-us-help-you-title">
+            Let us help you
+        </h3>
+        <div class="let-us-help-you-description body1">
+            We can help you achieve fast, stable builds and other developer workflows, on laptops and in CI.
+        </div>
+        <a href="{{ url('contact') }}" class="link-button">
+            GET IN TOUCH
+        </a>
+    </div>
+</section>
+
+
+{% endblock main %}

@@ -1,0 +1,25 @@
+/*
+Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+*/
+
+.content {
+  max-width: 1000px;
+}
+
+table.project-list-table {
+  font-size: 12px;
+  text-align: left;
+}
+
+table.project-list-table td {
+  white-space: nowrap;
+}
+
+table.project-list-table .project-name {
+  width: 400px;
+}
+
+table.project-list-table .pypi-url {
+  width: 600px;
+}

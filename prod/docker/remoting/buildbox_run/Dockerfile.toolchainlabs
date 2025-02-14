@@ -1,0 +1,99 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+FROM "ubuntu:jammy-20220801@sha256:42ba2dfce475de1113d55602d40af18415897167d47c2045ec7b6d9746ff148f"
+
+RUN apt-get update && \
+    apt-get install -y \
+      build-essential curl gcc git less \
+      libffi-dev libleveldb-dev libpq-dev libsnappy-dev libssl-dev \
+      lsb-release make procps unzip zip git-lfs \
+      libprotobuf23 libprotobuf-dev libgrpc-dev libgrpc++-dev libsqlite3-dev libbz2-dev liblzma-dev \
+      python3-distutils python3-dev gnupg2 && \
+     apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    git lfs install
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+COPY postgres.asc /tmp/postgres.asc
+RUN apt-key add /tmp/postgres.asc && \
+    echo "deb https://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)"-pgdg main | \
+      tee  /etc/apt/sources.list.d/pgdg.list && \
+    apt-get update && apt-get install --no-install-recommends -y postgresql-14 && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+ENV PATH="${PATH}:/usr/lib/postgresql/14/bin"
+
+
+ENV PYENV_ROOT /pyenv-docker-build
+ENV PYENV_BIN "${PYENV_ROOT}/bin/pyenv"
+# https://github.com/pyenv/pyenv/releases/tag/v2.3.13
+ARG pyenv_commit_sha="0ab9683e58b75fd3ee4f5a8b9f3a33d8e3f701bc"
+# https://github.com/pyenv/pyenv#basic-github-checkout
+RUN git clone --filter=tree:0 https://github.com/pyenv/pyenv ${PYENV_ROOT}
+WORKDIR ${PYENV_ROOT}
+RUN git checkout ${pyenv_commit_sha} && rm -rf .git && \
+    bash -C src/configure && make -C src
+
+ARG PYTHON_3_7_VERSION=3.7.15
+RUN ${PYENV_BIN} install ${PYTHON_3_7_VERSION}
+ARG PYTHON_3_8_VERSION=3.8.14
+RUN ${PYENV_BIN} install ${PYTHON_3_8_VERSION}
+ARG PYTHON_3_9_VERSION=3.9.15
+RUN ${PYENV_BIN} install ${PYTHON_3_9_VERSION}
+
+ENV PATH "${PYENV_ROOT}/versions/${PYTHON_3_7_VERSION}/bin:${PATH}"
+ENV PATH "${PYENV_ROOT}/versions/${PYTHON_3_8_VERSION}/bin:${PATH}"
+ENV PATH "${PYENV_ROOT}/versions/${PYTHON_3_9_VERSION}/bin:${PATH}"
+
+# Go - https://go.dev/dl/
+# Keep in sync with prod/docker/builders/python/builder_image/Dockerfile
+ARG golang_version=1.19.5
+ARG golang_sha256="36519702ae2fd573c9869461990ae550c8c0d955cd28d2827a6b159fda81ff95"
+
+RUN curl --fail -L -o go.tar.gz "https://dl.google.com/go/go${golang_version}.linux-amd64.tar.gz" && \
+  echo "${golang_sha256}  go.tar.gz" | sha256sum -c - && \
+  mkdir /usr/local/go && \
+  tar xzvf go.tar.gz -C /usr/local/go --strip-components=1 && \
+  ln -s "/usr/local/go/bin/go" "/usr/local/bin/go" && \
+  ln -s "/usr/local/go/bin/gofmt" "/usr/local/bin/gofmt" && \
+  rm go.tar.gz
+
+ENV GOROOT=/usr/local/go
+
+RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && /usr/sbin/locale-gen
+
+ENV PYTHONUNBUFFERED 1
+
+ ## End Toolchain software installs
+
+# Base directory for Toolchain usages including append-only caches. Helm chart will use this directory as
+# mount point for a volume. Used to store append-only caches via
+# `--remote-execution-append-only-caches-base-path` option in Pants client.
+
+RUN mkdir -p /toolchain && \
+  adduser \
+    --disabled-password \
+    --disabled-login \
+    --no-create-home \
+    --uid 1000 \
+    --home /toolchain \
+    --shell /bin/false \
+    --gecos 'Toolchain Worker' \
+      toolchain
+# COPY --chown=root:root ./fuse.conf /etc/fuse.conf
+RUN chown toolchain:toolchain /toolchain && chmod 755 /toolchain
+RUN mkdir -p /toolchain && chown -R toolchain:toolchain /toolchain && \
+    mkdir -p /var/buildbox-cache && chown toolchain:toolchain /var/buildbox-cache && \
+    touch /var/buildbox-cache/test-file
+
+ARG worker_version="2023-02-15-1c1d475b00"
+ARG worker_sha256="1e1b6445f235065db6d0490ffb7b5431e670a5ad5a1bdc770c147ce97612fb68"
+RUN curl --fail -L -o worker "https://s3.amazonaws.com/binaries.us-east-1.toolchain.com/remote-workers/alpha/${worker_version}/remote-workers" && \
+  echo "${worker_sha256}  worker" | sha256sum -c - && \
+  mv worker /usr/local/bin/ && \
+  chmod +x /usr/local/bin/worker
+
+USER toolchain
+VOLUME ["/var/buildbox-cache"]
+CMD ["/usr/local/bin/worker"]

@@ -1,0 +1,112 @@
+{#
+Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'pants_demo/base.html'
+%} {% block main %}
+<div id="initial-content">
+  <div class="toolchain-info">
+    <span class="toolchain-info-description body3"
+      >Visualize your repository dependencies and code structure.</span
+    >
+    <span class="toolchain-info-only-public-repo caption"
+      >We currently support public GitHub repos containing Python, Go, Java and Scala code.
+      <br>Check back soon for support for new languages and features.</span
+    >
+    <form class="toolchain-info-form" id="repo-url-form">
+      <input
+        type="text"
+        id="repo-input"
+        name="repo-url"
+        class="body1"
+        placeholder="https://github.com/my_org/..."
+        required
+      />
+      <button class="button3" type="submit">go</button>
+    </form>
+    <span class="toolchain-info-error-message caption"
+      >Please enter a valid GitHub repository link</span
+    >
+  </div>
+  <div class="see-examples-container">
+    <span class="caption">or</span>
+    <button class="button1" id="see-examples">see examples</button>
+  </div>
+</div>
+<div id="examples-content">
+  <button id="go-back" class="caption">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="12"
+      height="13"
+      viewBox="0 0 12 13"
+      fill="none"
+    >
+      <path
+        d="M12 5.75H2.8725L7.065 1.5575L6 0.5L0 6.5L6 12.5L7.0575 11.4425L2.8725 7.25H12V5.75Z"
+        fill="#044EF3"
+      />
+    </svg>
+    go back
+  </button>
+  <h3 class="examples-title">Example repos</h3>
+  <div class="examples-list">
+    <a class="example" href="/app/repo/pantsbuild/pants">
+      <img src="/static/pants-demo-site/images/pantsbuild_pants.webp" alt="" />
+      <div class="example-name body1">/pantsbuild/pants</div>
+    </a>
+    <a class="example" href="/app/repo/django/django">
+      <img src="/static/pants-demo-site/images/django_django.webp" alt="" />
+      <div class="example-name body1">/django/django</div>
+    </a>
+    <a class="example" href="/app/repo/encode/django-rest-framework">
+      <img
+        src="/static/pants-demo-site/images/encode_django-rest-framework.webp"
+        alt=""
+      />
+      <div class="example-name body1">/encode/django-rest-framework</div>
+    </a>
+    <a class="example" href="/app/repo/getsentry/sentry">
+      <img src="/static/pants-demo-site/images/getsentry_sentry.webp" alt="" />
+      <div class="example-name body1">/getsentry/sentry</div>
+    </a>
+    <a class="example" href="/app/repo/pallets/flask">
+      <img src="/static/pants-demo-site/images/pallets_flask.webp" alt="" />
+      <div class="example-name body1">/pallets/flask</div>
+    </a>
+    <a class="example" href="/app/repo/pallets/jinja">
+      <img src="/static/pants-demo-site/images/pallets_jinja.webp" alt="" />
+      <div class="example-name body1">/pallets/jinja</div>
+    </a>
+    <a class="example" href="/app/repo/psf/black">
+      <img src="/static/pants-demo-site/images/psf_black.webp" alt="" />
+      <div class="example-name body1">/psf/black</div>
+    </a>
+    <a class="example" href="/app/repo/psf/requests">
+      <img src="/static/pants-demo-site/images/psf_requests.webp" alt="" />
+      <div class="example-name body1">/psf/requests</div>
+    </a>
+    <a class="example" href="/app/repo/simonw/datasette">
+      <img src="/static/pants-demo-site/images/simonw_datasette.webp" alt="" />
+      <div class="example-name body1">/simonw/datasette</div>
+    </a>
+    <a class="example" href="/app/repo/sqlalchemy/sqlalchemy">
+      <img
+        src="/static/pants-demo-site/images/sqlalchemy_sqlalchemy.webp"
+        alt=""
+      />
+      <div class="example-name body1">/sqlalchemy/sqlalchemy</div>
+    </a>
+    <a class="example" href="/app/repo/lablup/backend.ai">
+      <img src="/static/pants-demo-site/images/backend-ai.webp" alt="" />
+      <div class="example-name body1">/lablup/backend.ai</div>
+    </a>
+  </div>
+</div>
+<div id="mobile-message" class="body3">
+  Thanks for trying out GraphMyRepo.com! The site currently only works on
+  screens with resolution of at least 900x600. Please visit us again from a
+  desktop browser!
+</div>
+{% endblock main %}

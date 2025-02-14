@@ -1,0 +1,14 @@
+# Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: efs-remote-cache-sc
+  labels:
+    chart: {{ .Chart.Name  }}
+    heritage: {{ .Release.Service }}
+provisioner: efs.csi.aws.com
+parameters:
+  provisioningMode: efs-ap
+  fileSystemId: {{ .Values.efsFileSystemId }}

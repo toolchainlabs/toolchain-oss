@@ -1,0 +1,7 @@
+# Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{ $values := merge (dict) .Values.workers.payments_worker_values .Values }}
+{{- with merge (dict "Values" $values) . -}}
+{{- template "workflow.worker.resources" . -}}
+{{- end -}}

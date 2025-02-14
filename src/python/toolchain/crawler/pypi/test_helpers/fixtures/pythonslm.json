@@ -1,0 +1,125 @@
+{
+    "info": {
+        "author": "Luke Parry",
+        "author_email": "dev@lukeparry.uk",
+        "bugtrack_url": null,
+        "classifiers": [
+            "Natural Language :: English",
+            "Programming Language :: Python",
+            "Programming Language :: Python :: 3.5",
+            "Programming Language :: Python :: 3.6",
+            "Programming Language :: Python :: 3.7",
+            "Topic :: Scientific/Engineering"
+        ],
+        "description": "PySLM Python Library for Selective Laser Melting\n==================================================\n\n.. image:: https://github.com/drlukeparry/pyslm/workflows/Python%20application/badge.svg\n    :target: https://github.com/drlukeparry/pyslm/actions\n.. image:: https://readthedocs.org/projects/pyslm/badge/?version=latest\n    :target: https://pyslm.readthedocs.io/en/latest/?badge=latest\n    :alt: Documentation Status\n\n\nPySLM is a python library for processing the input files used on Selective Laser Melting (SLM), Direct Metal Laser Sintering (DMLS)\nplatform typically used in both academia and industry for Additive Manufacturing. The core capabilities aim to include\nslicing, hatching and support generation and providing  an interface to the binary build file formats available for platforms.\nThe library is built of core classes which may provide the basic functionality to generate the scan vectors used on systems\nand also be used as building blocks to prototype and develop new alogirthms.\n\nPySLM is built-upon python libraries `Trimesh <https://github.com/mikedh/trimesh>`_ and based on some custom modifications\nto the `PyClipper <https://pypi.org/project/pyclipper/>`_ libraries which are leveraged to provide the  slicing and\nmanipulation of polygons, such as offsetting and clipping of lines. Additional functionality will be added to provide basic capabilities.\n\nThe aims is this library provides especially for an academic environment, a useful set of tools for prototyping and used\nin-conjunction with simulation and analytic studies.\n\n\nCurrent Features\n******************\n\nPySLM is building up a core feature set aiming to provide the basic blocks for primarily generating the scan paths and\nadditional design features used for AM systems typically (SLM/SLS/SLA) systems which consolidate material using\na single/multi point exposure by generating a series of scan vectors in a region.\n\n**Support Structure Generation**\n* [TODO] A prototype for support structure generation\n\n**Slicing:**\n\n* Slicing of triangular meshes supported via the `Trimesh <https://github.com/mikedh/trimesh>`_ library.\n\n**Hatching:**\n\n* Standard 'alternating' hatching is available\n* Stripe Scan Strategy Available\n\n**Visualisation:**\n\n* The laser scan vectors can be visualised and\n\n**Export to Machine Files:**\n\n* Currently WIP to port previous c++ code and provide generic bindings to platforms (Renishaw MTT, Realizer, EOS CLI formats)\n\nInstallation\n*************\nInstallation is currently supported on Windows and Linux environments. The prerequisties for using PySLM can be installed\nvia PyPi and/or Anaconda distribution.\n\n.. code:: bash\n\n    conda install -c conda-forge shapely, Rtree, networkx, scikit-image\n    pip install trimesh\n\nInstallation of pyslm can then be performed using pre-built python packages using the pypi project.\n\n.. code:: bash\n\n    pip install pyslm\n\nAlternatively, pyslm may be compiled from source. Currently the prerequisites are the cython packagee and a c++ build environment.\n\n.. code:: bash\n\n    git clone https://github.com/drlukeparry/pyslm.git && cd ./pyslm\n    python setup.py install\n\nUsage\n******\nA basic example below, shows how relativly straightforward it is to generate a single layer from a STL mesh which generates\na the hatch infill using a Stripe Scan Strategy typically employed on some commercial systems to limit the maximum scan vector\nlength generated in a region.\n\n.. code:: python\n\n    import pyslm\n    from pyslm import hatching as hatching\n\n    # Imports the part and sets the geometry to  an STL file (frameGuide.stl)\n    solidPart = pyslm.Part('myFrameGuide')\n    solidPart.setGeometry('../models/frameGuide.stl')\n\n    # Set te slice layer position\n    z = 23.\n\n    # Create a StripeHatcher object for performing any hatching operations\n    myHatcher = hatching.StripeHatcher()\n    myHatcher.stripeWidth = 5.0\n\n    # Set the base hatching parameters which are generated within Hatcher\n    myHatcher.hatchAngle = 10\n    myHatcher.volumeOffsetHatch = 0.08\n    myHatcher.spotCompensation = 0.06\n    myHatcher.numInnerContours = 2\n    myHatcher.numOuterContours = 1\n\n    # Slice the object\n    geomSlice = solidPart.getVectorSlice(z, returnCoordPaths = True)\n\n    #Perform the hatching operations\n    layer = myHatcher.hatch(geomSlice)\n\n    # Plot the layer geometries\n    hatching.Hatcher.plot(layer, plot3D=False, plotOrderLine=True) # plotArrows=True)\n\n\nDocumented examples are provided in `examples <https://github.com/drlukeparry/pyslm/tree/master/examples>`_ .",
+        "description_content_type": "text/x-rst",
+        "docs_url": null,
+        "download_url": "",
+        "downloads": {
+            "last_day": -1,
+            "last_month": -1,
+            "last_week": -1
+        },
+        "home_page": "https://github.com/drlukeparry/pyslm",
+        "keywords": "3D Printing,AM,Additive Manufacturing,Geometry,SLM,Selective Laser Melting",
+        "license": "",
+        "maintainer": "",
+        "maintainer_email": "",
+        "name": "PythonSLM",
+        "package_url": "https://pypi.org/project/PythonSLM/",
+        "platform": "",
+        "project_url": "https://pypi.org/project/PythonSLM/",
+        "project_urls": {
+            "Homepage": "https://github.com/drlukeparry/pyslm"
+        },
+        "release_url": "https://pypi.org/project/PythonSLM/0.1/",
+        "requires_dist": null,
+        "requires_python": ">=3.5",
+        "summary": "Python Package for Additive Manufacturing Development",
+        "version": "0.1",
+        "yanked": false
+    },
+    "last_serial": 7198868,
+    "releases": {
+        "0.1": [
+            {
+                "comment_text": "",
+                "digests": {
+                    "md5": "d6743b83631378f765001a2ccf951066",
+                    "sha256": "23d9b81c439a1ca9924246b0b9b6def8d19ad7208bbeebde3c7927b9f77dfef4"
+                },
+                "downloads": -1,
+                "filename": "PythonSLM-0.1-py3.7-linux-x86_64.egg",
+                "has_sig": false,
+                "md5_digest": "d6743b83631378f765001a2ccf951066",
+                "packagetype": "bdist_egg",
+                "python_version": "3.7",
+                "requires_python": ">=3.5",
+                "size": 1688661,
+                "upload_time": "2020-05-08T17:48:30",
+                "upload_time_iso_8601": "2020-05-08T17:48:30.164603Z",
+                "url": "https://files.pythonhosted.org/packages/d3/95/c30c7abf8a3950ab4b7e65fc9f874cc75e2a5e0d24cf59e9aeba7eaecd97/PythonSLM-0.1-py3.7-linux-x86_64.egg",
+                "yanked": false
+            },
+            {
+                "comment_text": "",
+                "digests": {
+                    "md5": "8a70804cc8c476547ada5822776473bf",
+                    "sha256": "ad13a3abf4a23eef689cdcb2c7e0856596cf1cf17771ec6e8a11a11bd97f3c2b"
+                },
+                "downloads": -1,
+                "filename": "PythonSLM-0.1.tar.gz",
+                "has_sig": false,
+                "md5_digest": "8a70804cc8c476547ada5822776473bf",
+                "packagetype": "sdist",
+                "python_version": "source",
+                "requires_python": ">=3.5",
+                "size": 133151,
+                "upload_time": "2020-05-08T17:48:33",
+                "upload_time_iso_8601": "2020-05-08T17:48:33.149979Z",
+                "url": "https://files.pythonhosted.org/packages/3c/34/5d9632c5f314ff290e5a922aac3eb173b00a6cf03d964de61b8e4b864e21/PythonSLM-0.1.tar.gz",
+                "yanked": false
+            }
+        ]
+    },
+    "urls": [
+        {
+            "comment_text": "",
+            "digests": {
+                "md5": "d6743b83631378f765001a2ccf951066",
+                "sha256": "23d9b81c439a1ca9924246b0b9b6def8d19ad7208bbeebde3c7927b9f77dfef4"
+            },
+            "downloads": -1,
+            "filename": "PythonSLM-0.1-py3.7-linux-x86_64.egg",
+            "has_sig": false,
+            "md5_digest": "d6743b83631378f765001a2ccf951066",
+            "packagetype": "bdist_egg",
+            "python_version": "3.7",
+            "requires_python": ">=3.5",
+            "size": 1688661,
+            "upload_time": "2020-05-08T17:48:30",
+            "upload_time_iso_8601": "2020-05-08T17:48:30.164603Z",
+            "url": "https://files.pythonhosted.org/packages/d3/95/c30c7abf8a3950ab4b7e65fc9f874cc75e2a5e0d24cf59e9aeba7eaecd97/PythonSLM-0.1-py3.7-linux-x86_64.egg",
+            "yanked": false
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "md5": "8a70804cc8c476547ada5822776473bf",
+                "sha256": "ad13a3abf4a23eef689cdcb2c7e0856596cf1cf17771ec6e8a11a11bd97f3c2b"
+            },
+            "downloads": -1,
+            "filename": "PythonSLM-0.1.tar.gz",
+            "has_sig": false,
+            "md5_digest": "8a70804cc8c476547ada5822776473bf",
+            "packagetype": "sdist",
+            "python_version": "source",
+            "requires_python": ">=3.5",
+            "size": 133151,
+            "upload_time": "2020-05-08T17:48:33",
+            "upload_time_iso_8601": "2020-05-08T17:48:33.149979Z",
+            "url": "https://files.pythonhosted.org/packages/3c/34/5d9632c5f314ff290e5a922aac3eb173b00a6cf03d964de61b8e4b864e21/PythonSLM-0.1.tar.gz",
+            "yanked": false
+        }
+    ]
+}

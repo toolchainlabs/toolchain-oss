@@ -1,0 +1,17 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+toolchain_env: toolchain_prod
+redis:
+  host: jerry.seinfeld.local
+  read_only_host: newman.seinfeld.local
+  pool_max_size: 32
+  shards_config:
+    alpha: redis.alpha.com
+    beta: redis.beta.com
+storageModel: sharded-redis
+localStorage:
+  enable: true
+  efsFileSystemId: george
+  efsAccessPointId: festivus
+storage:
+  base_path: /data/little-jerry-seinfeld/chicken

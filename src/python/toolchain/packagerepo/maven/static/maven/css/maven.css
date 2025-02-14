@@ -1,0 +1,21 @@
+/*
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+*/
+
+.nobullets {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.maven-summary-table-container {
+  width: 300px;
+}
+
+.maven-data-dumps h4 {
+  margin-top: 20px;
+}
+
+.maven-data-dumps-text {
+  width: 800px;
+}

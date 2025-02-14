@@ -1,0 +1,255 @@
+{
+    "ci_env": {
+        "CIRCLECI": "true",
+        "CIRCLE_BRANCH": "master",
+        "CIRCLE_BUILD_NUM": "22688",
+        "CIRCLE_BUILD_URL": "https://circleci.com/gh/toolchainlabs/toolchain/22688",
+        "CIRCLE_COMPARE_URL": "",
+        "CIRCLE_INTERNAL_CONFIG": "/.circleci-runner-config.json",
+        "CIRCLE_INTERNAL_SCRATCH": "/tmp/circleci-867644756",
+        "CIRCLE_INTERNAL_TASK_DATA": "/.circleci-task-data",
+        "CIRCLE_JOB": "build",
+        "CIRCLE_NODE_INDEX": "0",
+        "CIRCLE_NODE_TOTAL": "1",
+        "CIRCLE_PREVIOUS_BUILD_NUM": "22683",
+        "CIRCLE_PROJECT_REPONAME": "toolchain",
+        "CIRCLE_PROJECT_USERNAME": "toolchainlabs",
+        "CIRCLE_REPOSITORY_URL": "git@github.com:toolchainlabs/toolchain.git",
+        "CIRCLE_SHA1": "3962394f3b3413389c911d3cfb9dbf45fe735a1f",
+        "CIRCLE_SHELL_ENV": "/tmp/.bash_env-5f36c5937581ed2d034b1e2f-0-build",
+        "CIRCLE_STAGE": "build",
+        "CIRCLE_USERNAME": "Eric-Arellano",
+        "CIRCLE_WORKFLOW_ID": "34d4c13a-02f0-49f7-97d4-c49b120cdba7",
+        "CIRCLE_WORKFLOW_JOB_ID": "7fdd9c63-7f92-4e18-8fa5-4d7b9c1d7db2",
+        "CIRCLE_WORKFLOW_UPSTREAM_JOB_IDS": "",
+        "CIRCLE_WORKFLOW_WORKSPACE_ID": "34d4c13a-02f0-49f7-97d4-c49b120cdba7",
+        "CIRCLE_WORKING_DIRECTORY": "~/project"
+    },
+    "ci_info": {
+        "account_name": "toolchainlabs",
+        "branch": "master",
+        "build_num": 22688,
+        "build_url": "https://circleci.com/gh/toolchainlabs/toolchain/22688",
+        "job_name": "build",
+        "pull_request": null,
+        "repo_name": "toolchain",
+        "run_type": "branch",
+        "sha1": "3962394f3b3413389c911d3cfb9dbf45fe735a1f",
+        "username": "Eric-Arellano"
+    },
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 443.0445373058319,
+            "is_tool": false
+        },
+        {
+            "label": "main:complete",
+            "timing": 0.00006103515625,
+            "is_tool": false
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 1962,
+        "affected_targets_size": 0,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 9460,
+        "target_root_size": 0
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "allow_external_binary_tool_downloads": true,
+            "backend_packages": [
+                "toolchain.pants.auth",
+                "toolchain.pants.buildsense",
+                "toolchain.pants.common",
+                "toolchain.pants.rules",
+                "toolchain.pants.internal",
+                "pants.backend.awslambda.python",
+                "pants.backend.project_info",
+                "pants.backend.python",
+                "pants.backend.python.lint.bandit",
+                "pants.backend.python.lint.black",
+                "pants.backend.python.lint.docformatter",
+                "pants.backend.python.lint.flake8",
+                "pants.backend.python.lint.pylint",
+                "pants.backend.python.lint.isort",
+                "pants.backend.python.typecheck.mypy"
+            ],
+            "backend_packages2": [],
+            "binaries_baseurls": [
+                "https://binaries.pantsbuild.org",
+                "https://github.com/toolchainlabs/binhost/raw/master/"
+            ],
+            "binaries_fetch_timeout_secs": 30,
+            "binaries_path_by_id": {},
+            "build_file_prelude_globs": [],
+            "build_ignore": [
+                "3rdparty/jvm",
+                "3rdparty/go",
+                "prod/java",
+                "src/java",
+                "src/go",
+                "src/node",
+                "testdata/java"
+            ],
+            "colors": false,
+            "concurrent": false,
+            "dependency_inference": false,
+            "dynamic_ui": false,
+            "exclude_target_regexp": [],
+            "files_not_found_behavior": "warn",
+            "ignore_pants_warnings": [],
+            "level": "info",
+            "local_execution_root_dir": "/tmp",
+            "local_store_dir": "/home/toolchain/.cache/pants/lmdb_store",
+            "lock": true,
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "named_caches_dir": "/home/toolchain/.cache/pants/named_caches",
+            "native_engine_visualize_to": null,
+            "option_name_check_distance": 2,
+            "owners_not_found_behavior": "error",
+            "pants_bin_name": "./pants",
+            "pants_bootstrapdir": "/home/toolchain/.cache/pants",
+            "pants_config_files": [
+                "/home/toolchain/project/pants.toml",
+                "/home/toolchain/project/pants.ci.toml"
+            ],
+            "pants_configdir": "/home/toolchain/.config/pants",
+            "pants_distdir": "/home/toolchain/project/dist",
+            "pants_ignore": [
+                ".*/",
+                "/dist/"
+            ],
+            "pants_ignore_use_gitignore": true,
+            "pants_physical_workdir_base": null,
+            "pants_subprocessdir": "/home/toolchain/project/.pids",
+            "pants_supportdir": "/home/toolchain/project/build-support",
+            "pants_version": "2.0.0.dev6",
+            "pants_workdir": "/home/toolchain/project/.pants.d",
+            "pantsd": false,
+            "pantsd_invalidation_globs": [
+                "!/src/python/curator/",
+                "!/src/python/toolchain/codebrowser/",
+                "!/src/python/toolchain/crawler/",
+                "!/src/python/toolchain/dependency/",
+                "!/src/python/toolchain/github_integration/",
+                "!/src/python/toolchain/infosite/",
+                "!/src/python/toolchain/kythebrowser/",
+                "!/src/python/toolchain/packagerepo/",
+                "!/src/python/toolchain/prod/",
+                "!/src/python/toolchain/remoting/",
+                "!/src/python/toolchain/satresolver/",
+                "!/src/python/toolchain/service/",
+                "!/src/python/toolchain/servicerouter/",
+                "!/src/python/toolchain/toolshed/",
+                "!/src/python/toolchain/users/",
+                "!/src/python/toolchain/webhooks/",
+                "!*_test.py",
+                "!BUILD"
+            ],
+            "pantsd_log_dir": null,
+            "pantsd_max_memory_usage": 1073741824,
+            "pantsd_pailgun_port": 0,
+            "pantsd_pailgun_quit_timeout": 5,
+            "pantsd_timeout_when_multiple_invocations": 60,
+            "pantsrc": true,
+            "pantsrc_files": [
+                "/etc/pantsrc",
+                "~/.pants.rc"
+            ],
+            "parent_build_id": null,
+            "plugin_cache_dir": "/home/toolchain/.cache/pants/plugins",
+            "plugins": [
+                "python-dateutil",
+                "networkx==2.4"
+            ],
+            "plugins2": [],
+            "plugins_force_resolve": false,
+            "print_exception_stacktrace": true,
+            "process_execution_cleanup_local_dirs": true,
+            "process_execution_local_enable_nailgun": false,
+            "process_execution_local_parallelism": 4,
+            "process_execution_remote_parallelism": 128,
+            "process_execution_speculation_delay": 1,
+            "process_execution_speculation_strategy": "local_first",
+            "process_execution_use_local_cache": true,
+            "pythonpath": [
+                "/home/toolchain/project/src/python"
+            ],
+            "remote_ca_certs_path": null,
+            "remote_execution": false,
+            "remote_execution_enable_streaming": true,
+            "remote_execution_extra_platform_properties": [
+                "execution-policy=network"
+            ],
+            "remote_execution_headers": {},
+            "remote_execution_overall_deadline_secs": 3600,
+            "remote_execution_process_cache_namespace": null,
+            "remote_execution_server": null,
+            "remote_instance_name": null,
+            "remote_oauth_bearer_token_path": null,
+            "remote_store_chunk_bytes": 1048576,
+            "remote_store_chunk_upload_timeout_seconds": 60,
+            "remote_store_connection_limit": 5,
+            "remote_store_rpc_retries": 2,
+            "remote_store_server": [],
+            "remote_store_thread_count": 1,
+            "spec_file": [],
+            "spec_files": [],
+            "streaming_workunits_handlers": [
+                "toolchain.pants.buildsense.reporter.Reporter"
+            ],
+            "streaming_workunits_report_interval": 1,
+            "subproject_roots": [],
+            "tag": [
+                "-nolint"
+            ],
+            "v1": false,
+            "v2": true,
+            "verify_config": true
+        }
+    },
+    "run_info": {
+        "id": "pants_run_2020_08_14_17_17_32_751_5263973c8e154a7fb3d8f98232dd24f2",
+        "timestamp": "1597425452.751786",
+        "datetime": "Friday Aug 14, 2020 17:17:32",
+        "user": "toolchain",
+        "machine": "b78c3c0f4cba",
+        "path": "/home/toolchain/project",
+        "buildroot": "/home/toolchain/project",
+        "version": "2.0.0.dev6",
+        "cmd_line": "pants --pants-bin-name=./pants --tag=-nolint lint prod/python:: src/python::",
+        "specs_from_command_line": [
+            "prod/python::",
+            "src/python::"
+        ],
+        "outcome": "SUCCESS",
+        "revision": "3962394f3b3413389c911d3cfb9dbf45fe735a1f",
+        "branch": "master",
+        "computed_goals": [
+            "lint"
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "dfb2f655d5d0089b",
+            "name": "select",
+            "state": "finished",
+            "version": 428,
+            "parent_id": null,
+            "last_update": 1597425886,
+            "start_usecs": 1597425452770587,
+            "description": "Searching for `tar` on PATH=/usr/bin:/bin:/usr/local/bin",
+            "metadata": {
+              "definition": "{\"argv\":[\"./find_binary.sh\",\"tar\"]}",
+              "source": "RanLocally",
+              "exit_code": 0
+            },
+            "end_usecs": 1597425885915228
+        }
+    ]
+}

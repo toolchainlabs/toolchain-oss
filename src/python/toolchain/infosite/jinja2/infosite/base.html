@@ -1,0 +1,83 @@
+{#
+Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="icon" type="image/webp" href="{{ static('infosite/images/favicon.webp') }}" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/css/bootstrap.min.css" integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="{{ static('infosite/style/styles.css') }}"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+
+    <title>Toolchain Labs | {{ page_name }}</title>
+    {% if add_meta_tags %}
+    <meta property="og:image" content="{{ request.build_absolute_uri(static('infosite/images/preview_logo.png')) }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Toolchain logo" />
+    <meta property="og:url" content="{{ request.build_absolute_uri() }}" />
+    <meta name="twitter:image" content="{{ request.build_absolute_uri(static('infosite/images/preview_logo.png')) }}">
+    <meta property="og:title" content="{{ page_title }}" />
+    <meta property="og:site_name" content="{{ page_title }}">
+    <meta name="twitter:title" content="{{ page_title }}">
+    <meta name="twitter:image:alt" content="Toolchain logo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ToolchainLabs" />
+    <meta name="twitter:creator" content="@ToolchainLabs" />
+        {% block meta_tags %}
+        {% endblock meta_tags %}
+    {% endif %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LNX0WQ3C91"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/js/bootstrap.min.js" integrity="sha512-ewfXo9Gq53e1q1+WDTjaHAGZ8UvCWq0eXONhwDuIoaH8xz2r96uoAYaQCm1oQhnBfRXrvJztNXFsTloJfgbL5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
+    integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ static('infosite/js/main.js') }}"></script>
+</head>
+    {% block linked_scripts %}
+    {% endblock linked_scripts %}
+    <body class="{% block body_class %}{% endblock body_class %}">
+    <div id="backgroundWrapper" class="background-wrapper">
+        {% include 'infosite/background-mobile.html' %}
+        {% include 'infosite/background-desktop.html' %}
+    </div>
+    <div class="main-wrapper">
+        {% block main %}
+        {% endblock main %}
+    </div>
+    <div class="cookie-toast-backdrop">
+        <div class="cookie-toast body2">
+            <p>This website uses cookies to ensure you get the best experience. Learn about our <a href="{{ url('terms') }}">Terms of Use</a> and <a href="{{ url('privacy') }}">Privacy Policy</a>.</p>
+            <button class="button1" id="acceptCookieButton">got it</button>
+        </div>
+    </div>
+   
+    {% block script %}
+    {% endblock script %}
+    </body>
+
+    {% include 'infosite/footer.html' %}
+</html>

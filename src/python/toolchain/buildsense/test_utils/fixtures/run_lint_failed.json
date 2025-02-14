@@ -1,0 +1,1046 @@
+{
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 100.63160133361816,
+            "is_tool": false
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 2112,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 12823
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "backend_packages": [
+                "toolchain.pants.auth",
+                "toolchain.pants.buildsense",
+                "toolchain.pants.common",
+                "toolchain.pants.rules",
+                "pants.backend.awslambda.python",
+                "pants.backend.project_info",
+                "pants.backend.python",
+                "pants.backend.python.lint.bandit",
+                "pants.backend.python.lint.black",
+                "pants.backend.python.lint.docformatter",
+                "pants.backend.python.lint.flake8",
+                "pants.backend.python.lint.pylint",
+                "pants.backend.python.lint.isort",
+                "pants.backend.python.typecheck.mypy",
+                "pants.backend.python.mixed_interpreter_constraints"
+            ],
+            "build_file_prelude_globs": [],
+            "build_ignore": [
+                "3rdparty/jvm",
+                "3rdparty/go",
+                "prod/java",
+                "src/java",
+                "src/go",
+                "src/node",
+                "testdata/java"
+            ],
+            "build_patterns": [
+                "BUILD",
+                "BUILD.*"
+            ],
+            "ca_certs_path": null,
+            "colors": true,
+            "concurrent": false,
+            "dynamic_ui": true,
+            "exclude_target_regexp": [],
+            "files_not_found_behavior": "warn",
+            "ignore_pants_warnings": [
+                "DEPRECATED: option 'stats_version' in scope 'run-tracker'"
+            ],
+            "level": "info",
+            "local_execution_root_dir": "/var/folders/md/0q71p41n0rbgwhnc8npjjzg00000gn/T",
+            "local_store_dir": "/Users/tdyas/.cache/pants/lmdb_store",
+            "log_levels_by_target": {},
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "named_caches_dir": "/Users/tdyas/.cache/pants/named_caches",
+            "native_engine_visualize_to": null,
+            "owners_not_found_behavior": "error",
+            "pants_bin_name": "./pants",
+            "pants_bootstrapdir": "/Users/tdyas/.cache/pants",
+            "pants_config_files": [
+                "/Users/tdyas/TC/toolchain/pants.toml"
+            ],
+            "pants_configdir": "/Users/tdyas/.config/pants",
+            "pants_distdir": "/Users/tdyas/TC/toolchain/dist",
+            "pants_distdir_legacy_paths": false,
+            "pants_ignore": [
+                ".*/",
+                "/dist/"
+            ],
+            "pants_ignore_use_gitignore": true,
+            "pants_physical_workdir_base": null,
+            "pants_subprocessdir": "/Users/tdyas/TC/toolchain/.pids",
+            "pants_supportdir": "/Users/tdyas/TC/toolchain/build-support",
+            "pants_version": "2.1.0.dev0",
+            "pants_workdir": "/Users/tdyas/TC/toolchain/.pants.d",
+            "pantsd": false,
+            "pantsd_invalidation_globs": [
+                "!/src/python/curator/",
+                "!/src/python/toolchain/codebrowser/",
+                "!/src/python/toolchain/crawler/",
+                "!/src/python/toolchain/dependency/",
+                "!/src/python/toolchain/github_integration/",
+                "!/src/python/toolchain/infosite/",
+                "!/src/python/toolchain/kythebrowser/",
+                "!/src/python/toolchain/packagerepo/",
+                "!/src/python/toolchain/prod/",
+                "!/src/python/toolchain/remoting/",
+                "!/src/python/toolchain/satresolver/",
+                "!/src/python/toolchain/service/",
+                "!/src/python/toolchain/servicerouter/",
+                "!/src/python/toolchain/toolshed/",
+                "!/src/python/toolchain/users/",
+                "!/src/python/toolchain/webhooks/",
+                "!*_test.py",
+                "!BUILD"
+            ],
+            "pantsd_max_memory_usage": 1073741824,
+            "pantsd_pailgun_port": 0,
+            "pantsd_pailgun_quit_timeout": 5.0,
+            "pantsd_timeout_when_multiple_invocations": 60.0,
+            "pantsrc": true,
+            "pantsrc_files": [
+                "/etc/pantsrc",
+                "~/.pants.rc"
+            ],
+            "plugin_cache_dir": "/Users/tdyas/.cache/pants/plugins",
+            "plugins": [
+                "python-dateutil>=2.8.1,<3.0.0",
+                "networkx==2.5",
+                "requests==2.24.0"
+            ],
+            "plugins_force_resolve": false,
+            "print_stacktrace": true,
+            "process_execution_cleanup_local_dirs": true,
+            "process_execution_local_enable_nailgun": false,
+            "process_execution_local_parallelism": 16,
+            "process_execution_remote_parallelism": 128,
+            "process_execution_speculation_delay": 1.0,
+            "process_execution_speculation_strategy": "none",
+            "process_execution_use_local_cache": true,
+            "pythonpath": [
+                "/Users/tdyas/TC/toolchain/src/python"
+            ],
+            "remote_ca_certs_path": null,
+            "remote_cache_read": false,
+            "remote_cache_write": false,
+            "remote_execution": false,
+            "remote_execution_extra_platform_properties": [
+                "execution-policy=network",
+                "execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-10-30.18-00-00-d21eae0bb9d2"
+            ],
+            "remote_execution_headers": {},
+            "remote_execution_overall_deadline_secs": 3600,
+            "remote_execution_process_cache_namespace": null,
+            "remote_execution_server": null,
+            "remote_instance_name": null,
+            "remote_oauth_bearer_token_path": null,
+            "remote_store_chunk_bytes": 1048576,
+            "remote_store_chunk_upload_timeout_seconds": 60,
+            "remote_store_connection_limit": 5,
+            "remote_store_rpc_retries": 2,
+            "remote_store_server": [],
+            "remote_store_thread_count": 1,
+            "show_log_target": false,
+            "spec_files": [],
+            "streaming_workunits_handlers": [
+                "toolchain.pants.buildsense.reporter.Reporter"
+            ],
+            "streaming_workunits_report_interval": 1.0,
+            "subproject_roots": [],
+            "tag": [],
+            "verify_config": true
+        },
+        "auth": {
+            "auth_file": null,
+            "base_url": "https://app.toolchain.com/api/v1",
+            "ci_env_variables": [],
+            "customer": null,
+            "from_env_var": null
+        },
+        "auth-acquire": {
+            "local_port": null,
+            "output": "file"
+        },
+        "bandit": {
+            "args": [
+                "--exclude",
+                "*_test.py,**/test_*.py,conftest.py"
+            ],
+            "config": "build-support/python/bandit.yaml",
+            "entry_point": "bandit",
+            "extra_requirements": [
+                "setuptools",
+                "stevedore>=2.0.1,<3"
+            ],
+            "skip": false,
+            "version": "bandit>=1.6.2,<1.7"
+        },
+        "black": {
+            "args": [],
+            "config": "pyproject.toml",
+            "entry_point": "black:patched_main",
+            "extra_requirements": [
+                "regex>=2020.9.27"
+            ],
+            "interpreter_constraints": [
+                "CPython>=3.6"
+            ],
+            "skip": false,
+            "version": "black==20.8b1"
+        },
+        "buildsense": {
+            "artifacts_upload": true,
+            "base_url": "https://app.toolchain.com/api/v1/repos/",
+            "ci_env_var_pattern": null,
+            "compress": true,
+            "dry_run": false,
+            "local_build_store": true,
+            "local_store_base": ".pants.d/toolchain/buildsense",
+            "max_batch_size_mb": 20,
+            "timeout": 5
+        },
+        "changed": {
+            "dependees": "none",
+            "diffspec": null,
+            "since": null
+        },
+        "count-loc": {},
+        "coverage-py": {
+            "config": null,
+            "entry_point": "coverage",
+            "extra_requirements": [],
+            "filter": [],
+            "interpreter_constraints": [
+                "CPython>=3.6"
+            ],
+            "output_dir": "dist/coverage/python",
+            "report": [
+                "console"
+            ],
+            "version": "coverage>=5.0.3,<5.1"
+        },
+        "dependees": {
+            "closed": false,
+            "output_file": null,
+            "output_format": "text",
+            "sep": "\\n",
+            "transitive": false
+        },
+        "dependencies": {
+            "output_file": null,
+            "sep": "\\n",
+            "transitive": false,
+            "type": "source"
+        },
+        "depgraph": {
+            "granularity": "target",
+            "num_cycles": 0,
+            "output_file": null
+        },
+        "docformatter": {
+            "args": [
+                "--wrap-summaries=120",
+                "--wrap-descriptions=120"
+            ],
+            "entry_point": "docformatter:main",
+            "extra_requirements": [],
+            "interpreter_constraints": [
+                "CPython==2.7.*",
+                "CPython>=3.4,<3.9"
+            ],
+            "skip": false,
+            "version": "docformatter>=1.3.1,<1.4"
+        },
+        "download-pex-bin": {
+            "known_versions": [
+                "v2.1.20|darwin|885970ed8dfbbe25abb39eac2b6f1a0feb1f6eefc4d0d5631ac67870f60e9511|2681620",
+                "v2.1.20|linux|885970ed8dfbbe25abb39eac2b6f1a0feb1f6eefc4d0d5631ac67870f60e9511|2681620"
+            ],
+            "url_platform_mapping": {},
+            "url_template": "https://github.com/pantsbuild/pex/releases/download/{version}/pex",
+            "version": "v2.1.20"
+        },
+        "filedeps": {
+            "absolute": false,
+            "globs": false,
+            "output_file": null,
+            "sep": "\\n",
+            "transitive": false
+        },
+        "filter": {
+            "address_regex": [],
+            "output_file": null,
+            "sep": "\\n",
+            "tag_regex": [],
+            "target_type": []
+        },
+        "flake8": {
+            "args": [],
+            "config": "build-support/python/flake8",
+            "entry_point": "flake8",
+            "extra_requirements": [
+                "setuptools<45",
+                "flake8-debugger",
+                "flake8-2020",
+                "flake8-mutable",
+                "flake8-comprehensions",
+                "flake8-bugbear",
+                "flake8-django>=1.0.0",
+                "flake8-executable",
+                "flake8-pytest-style>=1.1.1",
+                "flake8-os-walk==0.4.0",
+                "flake8-absolute-import",
+                "flake8-simplify"
+            ],
+            "skip": false,
+            "version": "flake8==3.8.4"
+        },
+        "fmt": {
+            "per_file_caching": false
+        },
+        "ipython": {
+            "entry_point": "IPython:start_ipython",
+            "extra_requirements": [],
+            "ignore_cwd": true,
+            "version": "ipython==7.16.1"
+        },
+        "isort": {
+            "args": [],
+            "config": [
+                "pyproject.toml"
+            ],
+            "entry_point": "isort.main",
+            "extra_requirements": [
+                "setuptools"
+            ],
+            "interpreter_constraints": [
+                "CPython>=3.6"
+            ],
+            "skip": false,
+            "version": "isort[pyproject]==5.6.4"
+        },
+        "lambdex": {
+            "entry_point": "lambdex.bin.lambdex",
+            "extra_requirements": [
+                "setuptools>=50.3.0,<50.4"
+            ],
+            "interpreter_constraints": [
+                "CPython>=3.5"
+            ],
+            "version": "lambdex==0.1.3"
+        },
+        "lint": {
+            "per_file_caching": false,
+            "reports_dir": null
+        },
+        "list": {
+            "documented": false,
+            "output_file": null,
+            "provides": false,
+            "sep": "\\n"
+        },
+        "mypy": {
+            "args": [],
+            "config": "build-support/python/mypy.ini",
+            "entry_point": "mypy",
+            "extra_requirements": [],
+            "interpreter_constraints": [
+                "CPython>=3.6"
+            ],
+            "skip": false,
+            "source_plugins": [],
+            "version": "mypy==0.790"
+        },
+        "package": {},
+        "pex": {
+            "bootstrap_interpreter_names": [
+                "python",
+                "python3",
+                "python2"
+            ],
+            "executable_search_paths": [
+                "<PATH>"
+            ],
+            "verbosity": 0
+        },
+        "pex-binary-defaults": {
+            "emit_warnings": true
+        },
+        "py-constraints": {},
+        "pylint": {
+            "args": [],
+            "config": "build-support/python/pylintrc",
+            "entry_point": "pylint",
+            "extra_requirements": [
+                "pylint-django[with_django]==2.3.0"
+            ],
+            "skip": false,
+            "source_plugins": [],
+            "version": "pylint==2.6.0"
+        },
+        "pytest": {
+            "args": [],
+            "execution_slot_var": null,
+            "junit_family": "xunit2",
+            "junit_xml_dir": null,
+            "pytest_plugins": [
+                "pytest-cov>=2.10.1,<2.11",
+                "zipp==2.1.0",
+                "pygments",
+                "pytest-icdiff"
+            ],
+            "timeout_default": null,
+            "timeout_maximum": null,
+            "timeouts": true,
+            "version": "pytest==6.1.2"
+        },
+        "python-infer": {
+            "conftests": true,
+            "imports": true,
+            "inits": false,
+            "string_imports": false
+        },
+        "python-native-code": {
+            "cpp_flags": [
+                "-I/Users/tdyas/.toolchain/homebrew/opt/openssl@1.1/include",
+                "-I/Users/tdyas/.toolchain/homebrew/opt/zlib/include",
+                "-I/Users/tdyas/.toolchain/homebrew/opt/sqlite/include",
+                "-I/Users/tdyas/.toolchain/homebrew/opt/leveldb/include"
+            ],
+            "ld_flags": [
+                "-L/Users/tdyas/.toolchain/homebrew/opt/openssl@1.1/lib",
+                "-L/Users/tdyas/.toolchain/homebrew/opt/zlib/lib",
+                "-L/Users/tdyas/.toolchain/homebrew/opt/sqlite/lib",
+                "-L/Users/tdyas/.toolchain/homebrew/opt/leveldb/lib"
+            ]
+        },
+        "python-repos": {
+            "indexes": [
+                "https://pypi.org/simple/"
+            ],
+            "repos": []
+        },
+        "python-setup": {
+            "interpreter_constraints": [
+                "CPython>=3.8,<4"
+            ],
+            "interpreter_search_paths": [
+                "<PYENV>",
+                "<PATH>"
+            ],
+            "requirement_constraints": "3rdparty/python/constraints.txt",
+            "resolve_all_constraints": "nondeployables",
+            "resolver_http_cache_ttl": 3600,
+            "resolver_jobs": 1,
+            "resolver_manylinux": "manylinux2014"
+        },
+        "repl": {
+            "shell": null
+        },
+        "roots": {
+            "output_file": null,
+            "sep": "\\n"
+        },
+        "run": {
+            "args": []
+        },
+        "run-tracker": {
+            "stats_local_json_file": null,
+            "stats_option_scopes_to_record": [
+                "*"
+            ]
+        },
+        "scc": {
+            "args": [],
+            "known_versions": [
+                "2.12.0|darwin|70b7002cd1e4541cb37b7b9cbc0eeedd13ceacb49628e82ab46332bb2e65a5a6|1842530",
+                "2.12.0|linux|8eca3e98fe8a78d417d3779a51724515ac4459760d3ec256295f80954a0da044|1753059"
+            ],
+            "url_platform_mapping": {
+                "darwin": "apple-darwin",
+                "linux": "unknown-linux"
+            },
+            "url_template": "https://github.com/boyter/scc/releases/download/v{version}/scc-{version}-x86_64-{platform}.zip",
+            "version": "2.12.0"
+        },
+        "setup-py-generation": {
+            "first_party_dependency_version_scheme": "exact"
+        },
+        "setuptools": {
+            "entry_point": null,
+            "extra_requirements": [
+                "wheel==0.35.1"
+            ],
+            "interpreter_constraints": [
+                "CPython>=3.5"
+            ],
+            "version": "setuptools>=50.3.0,<50.4"
+        },
+        "source": {
+            "marker_filenames": [],
+            "root_patterns": [
+                "/src/python",
+                "/test/python",
+                "/prod/python/toolchain_prod"
+            ]
+        },
+        "sourcefile-validation": {
+            "config": {
+                "content_patterns": [
+                    {
+                        "name": "css_header",
+                        "pattern": "^/\\*\\!?\nCopyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n.{0}\nToolchain Labs, Inc\\. CONFIDENTIAL\n.{0}\nThis file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\nThe copyright notice above does not evidence any actual or intended publication of such source code\\.\nDisclosure of this source code or any related proprietary information is strictly prohibited without\nthe express written permission of Toolchain Labs, Inc\\.\n\\*/"
+                    },
+                    {
+                        "name": "go_header",
+                        "pattern": "^// Copyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n//\n// Toolchain Labs, Inc\\. CONFIDENTIAL\n//\n// This file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\n// The copyright notice above does not evidence any actual or intended publication of such source code\\.\n// Disclosure of this source code or any related proprietary information is strictly prohibited without\n// the express written permission of Toolchain Labs, Inc\\."
+                    },
+                    {
+                        "name": "java_header",
+                        "pattern": "^// Copyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n//\n// Toolchain Labs, Inc\\. CONFIDENTIAL\n//\n// This file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\n// The copyright notice above does not evidence any actual or intended publication of such source code\\.\n// Disclosure of this source code or any related proprietary information is strictly prohibited without\n// the express written permission of Toolchain Labs, Inc\\."
+                    },
+                    {
+                        "name": "js_header",
+                        "pattern": "^/\\*\\!?\nCopyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n.{0}\nToolchain Labs, Inc\\. CONFIDENTIAL\n.{0}\nThis file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\nThe copyright notice above does not evidence any actual or intended publication of such source code\\.\nDisclosure of this source code or any related proprietary information is strictly prohibited without\nthe express written permission of Toolchain Labs, Inc\\.\n\\*/"
+                    },
+                    {
+                        "name": "python_header",
+                        "pattern": "^(#![^\\n]+\n)?# Copyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n#\n# Toolchain Labs, Inc\\. CONFIDENTIAL\n#\n# This file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\n# The copyright notice above does not evidence any actual or intended publication of such source code\\.\n# Disclosure of this source code or any related proprietary information is strictly prohibited without\n# the express written permission of Toolchain Labs, Inc\\."
+                    },
+                    {
+                        "name": "rust_header",
+                        "pattern": "^// Copyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n//\n// Toolchain Labs, Inc\\. CONFIDENTIAL\n//\n// This file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\n// The copyright notice above does not evidence any actual or intended publication of such source code\\.\n// Disclosure of this source code or any related proprietary information is strictly prohibited without\n// the express written permission of Toolchain Labs, Inc\\."
+                    },
+                    {
+                        "name": "shell_header",
+                        "pattern": "^(#![^\\n]+\n)?# Copyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n#\n# Toolchain Labs, Inc\\. CONFIDENTIAL\n#\n# This file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\n# The copyright notice above does not evidence any actual or intended publication of such source code\\.\n# Disclosure of this source code or any related proprietary information is strictly prohibited without\n# the express written permission of Toolchain Labs, Inc\\."
+                    },
+                    {
+                        "name": "terraform_header",
+                        "pattern": "^# Copyright © 20\\d\\d Toolchain Labs, Inc\\. All rights reserved\\.\n#\n# Toolchain Labs, Inc\\. CONFIDENTIAL\n#\n# This file includes unpublished proprietary source code of Toolchain Labs, Inc\\.\n# The copyright notice above does not evidence any actual or intended publication of such source code\\.\n# Disclosure of this source code or any related proprietary information is strictly prohibited without\n# the express written permission of Toolchain Labs, Inc\\."
+                    }
+                ],
+                "path_patterns": [
+                    {
+                        "content_encoding": "utf8",
+                        "name": "css_source",
+                        "pattern": "\\.css$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "go_source",
+                        "pattern": "\\.go$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "java_source",
+                        "pattern": "\\.java$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "rust_source",
+                        "pattern": "\\.rs$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "terraform_source",
+                        "pattern": "\\.tf?$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "python_prod",
+                        "pattern": "prod/.+(?<!__init__)\\.py$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "python_source",
+                        "pattern": "src/python/toolchain/.+(?<!__init__)\\.py$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "python_test",
+                        "pattern": "test/.+(?<!__init__)\\.py$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "js_node_toolchain_source",
+                        "pattern": "src/node/toolchain/.+[jt]sx?$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "js_python_toolchain_source",
+                        "pattern": "src/python/toolchain/.+js$"
+                    },
+                    {
+                        "content_encoding": "utf8",
+                        "name": "shell_source",
+                        "pattern": "\\.(ba)?sh$"
+                    }
+                ],
+                "required_matches": {
+                    "css_source": [
+                        "css_header"
+                    ],
+                    "go_source": [
+                        "go_header"
+                    ],
+                    "java_source": [
+                        "java_header"
+                    ],
+                    "js_node_toolchain_source": [
+                        "js_header"
+                    ],
+                    "python_prod": [
+                        "python_header"
+                    ],
+                    "python_source": [
+                        "python_header"
+                    ],
+                    "python_test": [
+                        "python_header"
+                    ],
+                    "shell_source": [
+                        "shell_header"
+                    ],
+                    "terraform_source": [
+                        "terraform_header"
+                    ]
+                },
+                "x-path-pattern": {
+                    "content_encoding": "utf8"
+                }
+            }
+        },
+        "subprocess-environment": {
+            "env_vars": [
+                "LANG",
+                "LC_CTYPE",
+                "LC_ALL"
+            ]
+        },
+        "test": {
+            "debug": false,
+            "extra_env_vars": [],
+            "force": false,
+            "open_coverage": false,
+            "output": "failed",
+            "use_coverage": false
+        },
+        "toolchain-dependency-api": {
+            "poll_interval": 1,
+            "timeout": 90,
+            "url": "https://app.toolchain.com/api/v1/"
+        },
+        "toolchain-resolve": {
+            "abis": [],
+            "output_file": null,
+            "python_version": "3.8",
+            "sep": "\\n"
+        },
+        "toolchain-setup": {
+            "repo": "toolchain"
+        },
+        "typecheck": {},
+        "validate": {
+            "detail_level": "nonmatching"
+        }
+    },
+    "run_info": {
+        "id": "pants_run_2020_11_05_12_47_25_317_07c8ef00c0a541f083d3593f2d9a428a",
+        "timestamp": "1604609245.317149",
+        "datetime": "Thursday Nov 05, 2020 12:47:25",
+        "user": "tdyas",
+        "machine": "paradox.local",
+        "path": "/Users/tdyas/TC/toolchain",
+        "buildroot": "/Users/tdyas/TC/toolchain",
+        "version": "2.1.0.dev0",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.1.0.dev0 lint ./src/python/toolchain/prod/installs::",
+        "specs_from_command_line": [
+            "src/python/toolchain/prod/installs::"
+        ],
+        "outcome": "FAILURE",
+        "revision": "e543b3c8b426def3a65965c8b1a8035750f429ac",
+        "branch": "storage_helm_chart",
+        "computed_goals": [
+            "lint"
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "c8b34e97270b6a6b",
+            "name": "select",
+            "state": "finished",
+            "version": 95,
+            "parent_id": null,
+            "last_update": 1604609345,
+            "start_usecs": 1604609245365450,
+            "end_usecs": 1604609344805607
+        },
+        {
+            "workunit_id": "494e6ee1bef228df",
+            "name": "pants.core.goals.lint.lint",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "c8b34e97270b6a6b",
+            "last_update": 1604609345,
+            "start_usecs": 1604609245365972,
+            "description": "`lint` goal",
+            "end_usecs": 1604609344805465
+        },
+        {
+            "workunit_id": "3957c47c811571cc",
+            "name": "pants.backend.python.lint.bandit.rules.bandit_lint",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "494e6ee1bef228df",
+            "last_update": 1604609345,
+            "start_usecs": 1604609245464675,
+            "description": "Lint with Bandit",
+            "end_usecs": 1604609255705397
+        },
+        {
+            "workunit_id": "8ca7cf388b1c4508",
+            "name": "pants.backend.python.lint.black.rules.black_lint",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "494e6ee1bef228df",
+            "last_update": 1604609345,
+            "start_usecs": 1604609245464679,
+            "description": "Lint with Black",
+            "end_usecs": 1604609251399388
+        },
+        {
+            "workunit_id": "14c7c78806e8117e",
+            "name": "pants.backend.python.lint.flake8.rules.flake8_lint",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "494e6ee1bef228df",
+            "last_update": 1604609345,
+            "start_usecs": 1604609245464696,
+            "description": "Lint with Flake8",
+            "end_usecs": 1604609263472488
+        },
+        {
+            "workunit_id": "b385f9d89258c3f7",
+            "name": "pants.backend.python.lint.pylint.rules.pylint_lint",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "494e6ee1bef228df",
+            "last_update": 1604609345,
+            "start_usecs": 1604609245465043,
+            "description": "Lint using Pylint",
+            "end_usecs": 1604609344802310
+        },
+        {
+            "workunit_id": "7ede91e4276125e2",
+            "name": "pants.backend.python.lint.bandit.rules.bandit_lint_partition",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "3957c47c811571cc",
+            "last_update": 1604609345,
+            "start_usecs": 1604609245521186,
+            "end_usecs": 1604609255705156
+        },
+        {
+            "workunit_id": "99d4eaa93df11f2e",
+            "name": "pants.backend.python.lint.flake8.rules.flake8_lint_partition",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "14c7c78806e8117e",
+            "last_update": 1604609345,
+            "start_usecs": 1604609245535138,
+            "end_usecs": 1604609263472140
+        },
+        {
+            "workunit_id": "bb23a4e062b9cb2b",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "8ca7cf388b1c4508",
+            "last_update": 1604609345,
+            "start_usecs": 1604609247813714,
+            "end_usecs": 1604609251395526
+        },
+        {
+            "workunit_id": "0ed3057824546c88",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "bb23a4e062b9cb2b",
+            "last_update": 1604609345,
+            "start_usecs": 1604609247823411,
+            "description": "Run Black on 34 files.",
+            "end_usecs": 1604609251326123
+        },
+        {
+            "workunit_id": "899fd8bbc34a0287",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "0ed3057824546c88",
+            "last_update": 1604609345,
+            "start_usecs": 1604609247825381,
+            "description": "(Waiting) Run Black on 34 files.",
+            "end_usecs": 1604609251306560
+        },
+        {
+            "workunit_id": "b687fcb3e7245dca",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "899fd8bbc34a0287",
+            "last_update": 1604609345,
+            "start_usecs": 1604609247825387,
+            "description": "Run Black on 34 files.",
+            "end_usecs": 1604609251306553,
+            "counters": {
+                "local_execution_requests": 1
+            },
+            "metadata": {
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stderr": "All done! ✨ 🍰 ✨\n34 files would be left unchanged.\n"
+            }
+        },
+        {
+            "workunit_id": "ea99c55626e096c9",
+            "name": "pants.backend.python.lint.pylint.rules.pylint_lint_partition",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "b385f9d89258c3f7",
+            "last_update": 1604609345,
+            "start_usecs": 1604609251717044,
+            "end_usecs": 1604609336504497
+        },
+        {
+            "workunit_id": "3280fdba228a3307",
+            "name": "pants.backend.python.lint.pylint.rules.pylint_lint_partition",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "b385f9d89258c3f7",
+            "last_update": 1604609345,
+            "start_usecs": 1604609251717119,
+            "end_usecs": 1604609344801654
+        },
+        {
+            "workunit_id": "b61c683bc1606923",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "7ede91e4276125e2",
+            "last_update": 1604609345,
+            "start_usecs": 1604609254419043,
+            "end_usecs": 1604609255704871
+        },
+        {
+            "workunit_id": "9cf33a437650a61c",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "b61c683bc1606923",
+            "last_update": 1604609345,
+            "start_usecs": 1604609254419368,
+            "description": "Run Bandit on 34 files.",
+            "end_usecs": 1604609255704494
+        },
+        {
+            "workunit_id": "b74464fd70225f7e",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "9cf33a437650a61c",
+            "last_update": 1604609345,
+            "start_usecs": 1604609254419788,
+            "description": "(Waiting) Run Bandit on 34 files.",
+            "end_usecs": 1604609255704353
+        },
+        {
+            "workunit_id": "6b10cbb0668a3ada",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "b74464fd70225f7e",
+            "last_update": 1604609345,
+            "start_usecs": 1604609254419799,
+            "description": "Run Bandit on 34 files.",
+            "end_usecs": 1604609255704337,
+            "counters": {
+                "local_execution_requests": 1
+            },
+            "metadata": {
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "Run started:2020-11-05 20:47:35.670129\n\nTest results:\n\tNo issues identified.\n\nCode scanned:\n\tTotal lines of code: 2288\n\tTotal lines skipped (#nosec): 0\n\nRun metrics:\n\tTotal issues (by severity):\n\t\tUndefined: 0.0\n\t\tLow: 0.0\n\t\tMedium: 0.0\n\t\tHigh: 0.0\n\tTotal issues (by confidence):\n\t\tUndefined: 0.0\n\t\tLow: 0.0\n\t\tMedium: 0.0\n\t\tHigh: 0.0\nFiles skipped (0):\n",
+                "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: B404,B405,B603,B607,B314,B303,B322\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\tusing config: build-support/python/bandit.yaml\n[main]\tINFO\trunning on Python 3.8.6\n"
+            }
+        },
+        {
+            "workunit_id": "05902e0088355a2f",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "99d4eaa93df11f2e",
+            "last_update": 1604609345,
+            "start_usecs": 1604609260001360,
+            "end_usecs": 1604609263471879
+        },
+        {
+            "workunit_id": "93ce8fa3382a43a0",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "05902e0088355a2f",
+            "last_update": 1604609345,
+            "start_usecs": 1604609260001944,
+            "description": "Run Flake8 on 34 files.",
+            "end_usecs": 1604609263471551
+        },
+        {
+            "workunit_id": "62ef315fc912dbe4",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "93ce8fa3382a43a0",
+            "last_update": 1604609345,
+            "start_usecs": 1604609260002194,
+            "description": "(Waiting) Run Flake8 on 34 files.",
+            "end_usecs": 1604609263471512
+        },
+        {
+            "workunit_id": "03a5453824ac0ce9",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "62ef315fc912dbe4",
+            "last_update": 1604609345,
+            "start_usecs": 1604609260002206,
+            "description": "Run Flake8 on 34 files.",
+            "end_usecs": 1604609263471495,
+            "counters": {
+                "local_execution_requests": 1
+            },
+            "metadata": {
+                "exit_code": 1
+            },
+            "artifacts": {
+                "stdout": "src/python/toolchain/prod/installs/install_buildbarn_storage.py:14:1: F401 'dataclasses.dataclass' imported but unused\nsrc/python/toolchain/prod/installs/install_buildbarn_storage.py:17:1: F401 'toolchain.aws.elasticsearch.ElasticSearch' imported but unused\nsrc/python/toolchain/prod/installs/install_buildbarn_storage.py:20:1: F401 'toolchain.constants.ToolchainEnv' imported but unused\nsrc/python/toolchain/prod/installs/install_buildbarn_storage.py:21:1: F401 'toolchain.prod.builders.build_es_curator.ElasticSearchCuratorBuilder' imported but unused\n"
+            }
+        },
+        {
+            "workunit_id": "c5436754d58aef29",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "3280fdba228a3307",
+            "last_update": 1604609345,
+            "start_usecs": 1604609322649199,
+            "end_usecs": 1604609344801470
+        },
+        {
+            "workunit_id": "3151b3f2f38100a0",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "ea99c55626e096c9",
+            "last_update": 1604609345,
+            "start_usecs": 1604609322649238,
+            "end_usecs": 1604609336504221
+        },
+        {
+            "workunit_id": "8371709f5d2ba432",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "3151b3f2f38100a0",
+            "last_update": 1604609345,
+            "start_usecs": 1604609322650026,
+            "description": "Run Pylint on 5 files.",
+            "end_usecs": 1604609336503896
+        },
+        {
+            "workunit_id": "208195c8871d97af",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "c5436754d58aef29",
+            "last_update": 1604609345,
+            "start_usecs": 1604609322650106,
+            "description": "Run Pylint on 29 files.",
+            "end_usecs": 1604609344801175
+        },
+        {
+            "workunit_id": "2f5e58f35113b2fe",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "8371709f5d2ba432",
+            "last_update": 1604609345,
+            "start_usecs": 1604609322650565,
+            "description": "(Waiting) Run Pylint on 5 files.",
+            "end_usecs": 1604609336503743
+        },
+        {
+            "workunit_id": "035364ff9f8aa3a5",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "2f5e58f35113b2fe",
+            "last_update": 1604609345,
+            "start_usecs": 1604609322650577,
+            "description": "Run Pylint on 5 files.",
+            "end_usecs": 1604609336503723,
+            "counters": {
+                "local_execution_requests": 1
+            },
+            "metadata": {
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\n------------------------------------\nYour code has been rated at 10.00/10\n\n"
+            }
+        },
+        {
+            "workunit_id": "af43cb47377f61f8",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "208195c8871d97af",
+            "last_update": 1604609345,
+            "start_usecs": 1604609322650591,
+            "description": "(Waiting) Run Pylint on 29 files.",
+            "end_usecs": 1604609344801135
+        },
+        {
+            "workunit_id": "46cda90659828c90",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 95,
+            "parent_id": "af43cb47377f61f8",
+            "last_update": 1604609345,
+            "start_usecs": 1604609322650605,
+            "description": "Run Pylint on 29 files.",
+            "end_usecs": 1604609344801118,
+            "counters": {
+                "local_execution_requests": 1
+            },
+            "metadata": {
+                "exit_code": 4
+            },
+            "artifacts": {
+                "stdout": "************* Module install_buildbarn_storage\nsrc/python/toolchain/prod/installs/install_buildbarn_storage.py:14:0: W0611: Unused dataclass imported from dataclasses (unused-import)\nsrc/python/toolchain/prod/installs/install_buildbarn_storage.py:17:0: W0611: Unused ElasticSearch imported from toolchain.aws.elasticsearch (unused-import)\nsrc/python/toolchain/prod/installs/install_buildbarn_storage.py:20:0: W0611: Unused ToolchainEnv imported from toolchain.constants (unused-import)\nsrc/python/toolchain/prod/installs/install_buildbarn_storage.py:21:0: W0611: Unused ElasticSearchCuratorBuilder imported from toolchain.prod.builders.build_es_curator (unused-import)\n\n-----------------------------------\nYour code has been rated at 9.98/10\n\n"
+            }
+        }
+    ]
+}

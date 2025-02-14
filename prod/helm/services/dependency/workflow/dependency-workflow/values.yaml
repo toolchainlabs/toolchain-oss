@@ -1,0 +1,37 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: dependency-workflow
+toolchain_product_name: dependency
+workflow_server_rev:
+  us-east-1: prod-2022-05-09.16-53-00-27a2bc643157
+workflow_maintenance_image_rev:
+  us-east-1: prod-2022-05-09.16-53-00-27a2bc643157
+dbs: [dependency]
+workers:
+  dependency_worker_values:
+    worker_deployment_name: dependency-worker
+    iam_service_role_arn: null # set by deploy script
+    resources:
+      worker:
+        requests:
+          cpu: 80m
+          memory: 512Mi
+          ephemeral_storage: 6Gi
+        limits:
+          cpu: 800m
+          memory: 1Gi
+          ephemeral_storage: 12Gi
+    replicas: 1
+    extra_config:
+      WORKFLOW:
+        num_executor_threads: 8
+      DEPGRAPH_BASE_DIR_URL: null  # filled by resources_resolver.py
+      LOCAL_DEPGRAPH_DIR_URL: file:///sync/depgraph/
+    workerExtraVolumes:
+    - name: depgraph-local
+      emptyDir: {}
+    workerExtraVolumeMounts:
+    - name: depgraph-local
+      mountPath: /sync/depgraph
+

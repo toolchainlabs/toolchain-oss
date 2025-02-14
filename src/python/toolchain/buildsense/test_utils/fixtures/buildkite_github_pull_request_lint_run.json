@@ -1,0 +1,209 @@
+{
+    "ci_env": {
+        "BUILDKITE": "true",
+        "BUILDKITE_AGENT_DEBUG": "true",
+        "BUILDKITE_AGENT_DEBUG_HTTP": "false",
+        "BUILDKITE_AGENT_ENDPOINT": "https://agent.buildkite.com/v3",
+        "BUILDKITE_AGENT_EXPERIMENT": "",
+        "BUILDKITE_AGENT_ID": "fb51526b-00c9-47c4-aba2-7fdf4e3735f6",
+        "BUILDKITE_AGENT_NAME": "05dd66abb691-1",
+        "BUILDKITE_AGENT_PID": "9",
+        "BUILDKITE_ARTIFACT_PATHS": "",
+        "BUILDKITE_BIN_PATH": "/usr/local/bin",
+        "BUILDKITE_BRANCH": "jerry",
+        "BUILDKITE_BUILD_AUTHOR": "Asher Foa",
+        "BUILDKITE_BUILD_AUTHOR_EMAIL": "asher@toolchain.com",
+        "BUILDKITE_BUILD_CHECKOUT_PATH": "/buildkite/builds/05dd66abb691-1/toolchain-labs/minimal-pants-github",
+        "BUILDKITE_BUILD_CREATOR": "Asher Foa",
+        "BUILDKITE_BUILD_CREATOR_EMAIL": "asher@toolchain.com",
+        "BUILDKITE_BUILD_ID": "1cfe5e80-c533-4df8-ab67-cbabb569ef1a",
+        "BUILDKITE_BUILD_NUMBER": "9",
+        "BUILDKITE_BUILD_PATH": "/buildkite/builds",
+        "BUILDKITE_BUILD_URL": "https://buildkite.com/toolchain-labs/minimal-pants-github/builds/9",
+        "BUILDKITE_COMMAND": "./pants lint ::",
+        "BUILDKITE_COMMAND_EVAL": "true",
+        "BUILDKITE_COMMIT": "b3635292e22d7bf19998e9cacf3d31ed4d86c77d",
+        "BUILDKITE_CONFIG_PATH": "/buildkite/buildkite-agent.cfg",
+        "BUILDKITE_ENV_FILE": "/tmp/job-env-d4bbd917-7dca-4f22-a84f-41a049ae4921973713284",
+        "BUILDKITE_GIT_CLEAN_FLAGS": "-ffxdq",
+        "BUILDKITE_GIT_CLONE_FLAGS": "-v",
+        "BUILDKITE_GIT_CLONE_MIRROR_FLAGS": "-v",
+        "BUILDKITE_GIT_FETCH_FLAGS": "-v --prune",
+        "BUILDKITE_GIT_MIRRORS_LOCK_TIMEOUT": "300",
+        "BUILDKITE_GIT_MIRRORS_PATH": "",
+        "BUILDKITE_GIT_SUBMODULES": "true",
+        "BUILDKITE_HOOKS_PATH": "/buildkite/hooks",
+        "BUILDKITE_JOB_ID": "d4bbd917-7dca-4f22-a84f-41a049ae4921",
+        "BUILDKITE_LABEL": "Pants Lint",
+        "BUILDKITE_LAST_HOOK_EXIT_STATUS": "0",
+        "BUILDKITE_LOCAL_HOOKS_ENABLED": "true",
+        "BUILDKITE_MESSAGE": "rename path 2",
+        "BUILDKITE_ORGANIZATION_SLUG": "toolchain-labs",
+        "BUILDKITE_PIPELINE_DEFAULT_BRANCH": "main",
+        "BUILDKITE_PIPELINE_ID": "4a3f1a57-cd37-4b09-b9ae-76b00e94e8f1",
+        "BUILDKITE_PIPELINE_NAME": "Minimal Pants - Github",
+        "BUILDKITE_PIPELINE_PROVIDER": "github",
+        "BUILDKITE_PIPELINE_SLUG": "minimal-pants-github",
+        "BUILDKITE_PLUGINS_ENABLED": "true",
+        "BUILDKITE_PLUGINS_PATH": "/buildkite/plugins",
+        "BUILDKITE_PLUGIN_VALIDATION": "false",
+        "BUILDKITE_PROJECT_PROVIDER": "github",
+        "BUILDKITE_PROJECT_SLUG": "toolchain-labs/minimal-pants-github",
+        "BUILDKITE_PULL_REQUEST": "3",
+        "BUILDKITE_PULL_REQUEST_BASE_BRANCH": "main",
+        "BUILDKITE_PULL_REQUEST_REPO": "git://github.com/hello-newman/minimal-pants.git",
+        "BUILDKITE_REBUILT_FROM_BUILD_ID": "",
+        "BUILDKITE_REBUILT_FROM_BUILD_NUMBER": "",
+        "BUILDKITE_REDACTED_VARS": "*_PASSWORD,*_SECRET,*_TOKEN,*_ACCESS_KEY,*_SECRET_KEY",
+        "BUILDKITE_REPO": "https://github.com/hello-newman/minimal-pants",
+        "BUILDKITE_RETRY_COUNT": "0",
+        "BUILDKITE_SCRIPT_PATH": "./pants lint ::",
+        "BUILDKITE_SHELL": "/bin/bash -e -c",
+        "BUILDKITE_SOURCE": "webhook",
+        "BUILDKITE_SSH_KEYSCAN": "true",
+        "BUILDKITE_STEP_ID": "454cf968-095f-4ec9-af99-b70178a2af34",
+        "BUILDKITE_STEP_KEY": "",
+        "BUILDKITE_TAG": "",
+        "BUILDKITE_TIMEOUT": "false",
+        "BUILDKITE_TRACE_CONTEXT": "Hv-BBAEBDlRleHRNYXBDYXJyaWVyAf-CAAEMAQwAAAT_ggAA",
+        "BUILDKITE_TRIGGERED_FROM_BUILD_ID": "",
+        "BUILDKITE_TRIGGERED_FROM_BUILD_NUMBER": "",
+        "BUILDKITE_TRIGGERED_FROM_BUILD_PIPELINE_SLUG": ""
+    },
+    "counter_names": [
+        "remote_execution_timeouts",
+        "remote_store_missing_digest",
+        "remote_store_blob_bytes_downloaded",
+        "remote_store_blob_bytes_uploaded"
+    ],
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 23.269202947616577
+        }
+    ],
+    "observation_histograms": {
+        "histograms": {
+            "local_process_time_run_ms": "HISTFAAAAEd4nC3JoQ3AIBBA0eNf0zRN3dkmzFHFbE1qqlEMgmYcLBuAgG+e+PcXTUS8zHTpJqGHtsYOF88Wlep4lf/Ek4xi5IMBCOYJLg==",
+            "local_store_read_blob_size": "HISTFAAAAI54nC1LOwoCMRR8O5m8ZJM0soUsK3gAQRArq8VjWVhpa+U5PIVYWHgESysbLyDR/czA/GBmx3MlInsZYEYvem1zbj/DsID8abFCHwzhuh4g3ix9MGCSJMFbKhyxDRY1LayWrHVOwVqnuvFNd2/oWOkBiMC78JeC2eiJ/CpREq8Jr5H3HZ4Gt4hHTD+xRBLM"
+        },
+        "version": 0
+    },
+    "pantsd_stats": {
+        "affected_file_count": 12,
+        "preceding_graph_size": 8,
+        "resulting_graph_size": 260
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "named_caches_dir": "/root/.cache/pants/named_caches",
+            "native_engine_visualize_to": null,
+            "owners_not_found_behavior": "error",
+            "pants_bin_name": "./pants",
+            "remote_cache_write": false,
+            "remote_execution": false,
+            "remote_execution_address": null,
+            "remote_execution_extra_platform_properties": [],
+            "remote_execution_headers": {
+                "user-agent": "pants/2.7.0rc4"
+            },
+            "remote_execution_overall_deadline_secs": 3600,
+            "remote_execution_rpc_concurrency": 128,
+            "remote_instance_name": null,
+            "remote_oauth_bearer_token_path": null,
+            "remote_store_address": null,
+            "remote_store_batch_api_size_limit": 4194304,
+            "remote_store_chunk_bytes": 1048576,
+            "remote_store_chunk_upload_timeout_seconds": 60,
+            "remote_store_headers": {
+                "user-agent": "pants/2.7.0rc4"
+            },
+            "remote_store_rpc_concurrency": 128,
+            "remote_store_rpc_retries": 2,
+            "rule_threads_core": 3,
+            "rule_threads_max": null,
+            "show_log_target": false,
+            "spec_files": [],
+            "stats_record_option_scopes": [
+                "*"
+            ],
+            "streaming_workunits_complete_async": false,
+            "streaming_workunits_report_interval": 1,
+            "subproject_roots": [],
+            "tag": [],
+            "verify_config": true,
+            "watch_filesystem": true
+        },
+        "count-loc": {},
+        "source": {
+            "marker_filenames": [],
+            "root_patterns": [
+                "/"
+            ]
+        },
+        "sourcefile-validation": {
+            "config": {}
+        },
+        "stats": {
+            "log": false
+        },
+        "validate": {
+            "detail_level": "nonmatching"
+        }
+    },
+    "run_info": {
+        "branch": "b3635292e22d7bf19998e9cacf3d31ed4d86c77d",
+        "buildroot": "/buildkite/builds/05dd66abb691-1/toolchain-labs/minimal-pants-github",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.7.0rc4 lint ::",
+        "computed_goals": [
+            "lint"
+        ],
+        "datetime": "Tuesday Sep 21, 2021 23:06:10",
+        "id": "pants_run_2021_09_21_23_06_22_418_68990434198f4bd5b5f8e0aad82d532d",
+        "machine": "05dd66abb691 [docker]",
+        "outcome": "SUCCESS",
+        "path": "/buildkite/builds/05dd66abb691-1/toolchain-labs/minimal-pants-github",
+        "revision": "b3635292e22d7bf19998e9cacf3d31ed4d86c77d",
+        "specs_from_command_line": [
+            "::"
+        ],
+        "timestamp": 1632265570.510271,
+        "user": "root",
+        "version": "2.7.0rc4"
+    },
+    "targets": {
+        "3rdparty:ansicolors": [
+            {
+                "filename": "3rdparty:ansicolors"
+            }
+        ],
+        "3rdparty:requirements.txt": [
+            {
+                "filename": "3rdparty:requirements.txt"
+            }
+        ],
+        "seinfeld": [
+            {
+                "filename": "seinfeld/main.py"
+            },
+            {
+                "filename": "seinfeld/quote_of_the_day.py"
+            }
+        ],
+        "seinfeld:main": [
+            {
+                "filename": "seinfeld:main"
+            }
+        ],
+        "seinfeld:tests": [
+            {
+                "filename": "seinfeld/quote_of_the_day_test.py"
+            }
+        ]
+    },
+    "workunits": []
+}

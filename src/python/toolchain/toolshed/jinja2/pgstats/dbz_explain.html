@@ -1,0 +1,68 @@
+{#
+Copyright 2018 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'toolshed/base.html' %}
+
+{% block content %}
+  <div class="form explain-form-container">
+    <h2>Query Execution Plan</h2>
+    <textarea id="explain-sql" class="form-control" placeholder="Enter SQL query here"></textarea>
+    <div class="form-button-container">
+      <button id="explain" class="btn btn-default btn-primary">Explain</button>
+    </div>
+    <div id="explain-tree-container" class="hidden">
+      <h4>Plan</h4>
+      <div id="explain-tree" class="explain-tree"></div>
+    </div>
+    <div id="explain-error-container" class="hidden">
+      <h4>Error</h4>
+      <div id="explain-error" class="explain-error"></div>
+    </div>
+  </div>
+{% endblock content %}
+
+{% block js %}
+  {{ super() }}
+  <script>
+    function explain() {
+      $('#explain-tree-container').addClass('hidden');
+      $('#explain-error-container').addClass('hidden');
+      $('#explain-tree').empty();
+      $('#explain-error').empty();
+      var sql = $('textarea#explain-sql').val();
+      // See here for this URL munging trick: https://gist.github.com/jlong/2428561.
+      var parser = document.createElement('a');
+      parser.href = window.location.href;
+      parser.search = "sql=" + sql;
+      window.history.pushState(null, null, parser.href);
+      $.ajax({
+        url: '{{ views_links.dbz_explain_data }}',
+        data: { sql: sql },
+        success: function(data, status, jqXHR) {
+          $('#explain-tree').html(data.join('<br>'));
+          $('#explain-tree-container').removeClass('hidden');
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          $('#explain-error').html(jqXHR.responseText);
+          $('#explain-error-container').removeClass('hidden');
+        }
+      });
+    }
+
+    $(function() {
+      var sql = new URLSearchParams(window.location.search).get('sql');
+      $('textarea#explain-sql').val(sql);
+      if (sql) {
+        explain();
+      }
+
+      $('#explain').on('click', function(e) {
+        e.preventDefault();
+        explain();
+        return false;
+      });
+    });
+  </script>
+{% endblock js %}

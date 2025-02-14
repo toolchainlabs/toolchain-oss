@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OrganizationIcon /> should render according to snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="some-org"
+    class="MuiAvatar-root MuiAvatar-rounded  css-1eljufk-MuiAvatar-root"
+    data-mui-internal-clone-element="true"
+  >
+    <img
+      alt="some-org"
+      class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+      src="https://example.com/avatar-icon.jpg"
+    />
+  </div>
+</DocumentFragment>
+`;

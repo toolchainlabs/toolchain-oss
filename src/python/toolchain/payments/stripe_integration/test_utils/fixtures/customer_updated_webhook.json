@@ -1,0 +1,52 @@
+{
+  "id": "evt_1KtbV5Efbv3GSgSdnwJyjm2q",
+  "object": "event",
+  "api_version": "2020-08-27",
+  "created": 1651168295,
+  "data": {
+      "object": {
+          "id": "cus_La460IqvH5UIJa",
+          "object": "customer",
+          "address": null,
+          "balance": 0,
+          "created": 1651000967,
+          "currency": null,
+          "default_source": null,
+          "delinquent": false,
+          "description": null,
+          "discount": null,
+          "email": null,
+          "invoice_prefix": "E13103F5",
+          "invoice_settings": {
+              "custom_fields": null,
+              "default_payment_method": null,
+              "footer": null
+          },
+          "livemode": false,
+          "metadata": {
+              "toolchain_id": "kramerkramer878373",
+              "toolchain_env": "asher_local_test",
+              "test_data": "asher-asher-asher"
+          },
+          "name": "jerry test 2",
+          "next_invoice_sequence": 1,
+          "phone": null,
+          "preferred_locales": [],
+          "shipping": null,
+          "tax_exempt": "none",
+          "test_clock": null
+      },
+      "previous_attributes": {
+          "metadata": {
+              "test_data": null
+          }
+      }
+  },
+  "livemode": false,
+  "pending_webhooks": 1,
+  "request": {
+      "id": "req_jgYnFKJ8DuJkg6",
+      "idempotency_key": "9d8ea90b-1dbc-40e2-978c-63c359a45c0f"
+  },
+  "type": "customer.updated"
+}

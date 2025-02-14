@@ -1,0 +1,421 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PantsOptions> should render the component 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-cqph87-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <form
+              autocomplete="off"
+              novalidate=""
+            >
+              <div
+                class="MuiFormControl-root MuiTextField-root css-83sw5v-MuiFormControl-root-MuiTextField-root"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorSecondary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1szheb4-MuiFormLabel-root-MuiInputLabel-root"
+                  data-shrink="false"
+                  for="search-files"
+                  id="search-files-label"
+                >
+                  Search options
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorSecondary MuiInputBase-formControl css-2ynkuf-MuiInputBase-root-MuiInput-root"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                    id="search-files"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item css-sa2p1a-MuiGrid-root"
+          >
+            <div
+              class="css-1wrg553"
+            >
+              <div
+                class="css-12z0wuy"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="ExpandMoreIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                </svg>
+              </div>
+              <span
+                class="MuiTypography-root MuiTypography-caption css-1vnwcgy-MuiTypography-root"
+              >
+                2 items
+              </span>
+              <div
+                class="css-jb85ns"
+              />
+            </div>
+            <div
+              class="css-6ffh5f"
+            >
+              <div
+                class="css-1wrg553"
+              >
+                <div
+                  class="css-12z0wuy"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                >
+                  "
+                </p>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-7pob25-MuiTypography-root"
+                />
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                >
+                  GLOBAL"
+                </p>
+                <span
+                  class="MuiTypography-root MuiTypography-caption css-1vnwcgy-MuiTypography-root"
+                >
+                  4 items
+                </span>
+                <div
+                  class="css-jb85ns"
+                />
+              </div>
+              <div
+                class="css-6ffh5f"
+              >
+                <div
+                  class="css-1wrg553"
+                >
+                  <div
+                    class="css-12z0wuy"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ChevronRightIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                      />
+                    </svg>
+                  </div>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                  >
+                    "
+                  </p>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-7pob25-MuiTypography-root"
+                  />
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                  >
+                    backend_packages"
+                  </p>
+                  <span
+                    class="MuiTypography-root MuiTypography-caption css-1vnwcgy-MuiTypography-root"
+                  >
+                    2 items
+                  </span>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+                <div
+                  class="css-1wrg553"
+                >
+                  <div
+                    class="css-12z0wuy"
+                  />
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                  >
+                    "
+                  </p>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-7pob25-MuiTypography-root"
+                  />
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                  >
+                    colors"
+                  </p>
+                  <div
+                    class="css-qrukgj"
+                  >
+                    :
+                  </div>
+                   
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-1xoa9as-MuiTypography-root"
+                  />
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-1kxdp2f-MuiTypography-root"
+                  />
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-1xoa9as-MuiTypography-root"
+                  >
+                    true
+                  </span>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+                <div
+                  class="css-1wrg553"
+                >
+                  <div
+                    class="css-12z0wuy"
+                  />
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                  >
+                    "
+                  </p>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-7pob25-MuiTypography-root"
+                  />
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                  >
+                    local_store_shard_count"
+                  </p>
+                  <div
+                    class="css-qrukgj"
+                  >
+                    :
+                  </div>
+                   
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-1xoa9as-MuiTypography-root"
+                  />
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-1kxdp2f-MuiTypography-root"
+                  />
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-1xoa9as-MuiTypography-root"
+                  >
+                    16
+                  </span>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+                <div
+                  class="css-1wrg553"
+                >
+                  <div
+                    class="css-12z0wuy"
+                  />
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                  >
+                    "
+                  </p>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-7pob25-MuiTypography-root"
+                  />
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                  >
+                    log_levels_by_target"
+                  </p>
+                  <div
+                    class="css-qrukgj"
+                  >
+                    :
+                  </div>
+                   
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-cbvp57-MuiTypography-root"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-isadaj-MuiTypography-root"
+                  />
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-cbvp57-MuiTypography-root"
+                  >
+                    {}"
+                  </span>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1wrg553"
+              >
+                <div
+                  class="css-12z0wuy"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                >
+                  "
+                </p>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-7pob25-MuiTypography-root"
+                />
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                >
+                  auth"
+                </p>
+                <span
+                  class="MuiTypography-root MuiTypography-caption css-1vnwcgy-MuiTypography-root"
+                >
+                  2 items
+                </span>
+                <div
+                  class="css-jb85ns"
+                />
+              </div>
+              <div
+                class="css-6ffh5f"
+              >
+                <div
+                  class="css-1wrg553"
+                >
+                  <div
+                    class="css-12z0wuy"
+                  />
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                  >
+                    "
+                  </p>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-7pob25-MuiTypography-root"
+                  />
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                  >
+                    auth_file"
+                  </p>
+                  <div
+                    class="css-qrukgj"
+                  >
+                    :
+                  </div>
+                   
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-cbvp57-MuiTypography-root"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-isadaj-MuiTypography-root"
+                  />
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-cbvp57-MuiTypography-root"
+                  >
+                    some_file.json"
+                  </span>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+                <div
+                  class="css-1wrg553"
+                >
+                  <div
+                    class="css-12z0wuy"
+                  />
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                  >
+                    "
+                  </p>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-7pob25-MuiTypography-root"
+                  />
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-58ybcd-MuiTypography-root"
+                  >
+                    org"
+                  </p>
+                  <div
+                    class="css-qrukgj"
+                  >
+                    :
+                  </div>
+                   
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-1xoa9as-MuiTypography-root"
+                  />
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-1kxdp2f-MuiTypography-root"
+                  />
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-1xoa9as-MuiTypography-root"
+                  >
+                    null
+                  </span>
+                  <div
+                    class="css-jb85ns"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

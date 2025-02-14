@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextChip /> should render passed text 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault css-h24t3i-MuiChip-root"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-1b74zr8-MuiTypography-root"
+      >
+        typecheck
+      </p>
+    </span>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,9 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+aws-load-balancer-controller:
+  region: us-east-1
+  vpcId: vpc-fake
+  clusterName: some-fake-cluster
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn:  arn::k8s.newman.ingress

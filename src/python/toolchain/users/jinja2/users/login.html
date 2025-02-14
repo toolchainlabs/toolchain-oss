@@ -1,0 +1,50 @@
+{#
+Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'users/base.html' %}
+{% block content %}
+    {% if show_onboarding %}
+        <div class="onboarding">
+            <p class="body1 text-center">
+                Toolchain works with source code repos using 
+                <a
+                type="external"
+                href="https://www.pantsbuild.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="primary link"
+                >Pants {{ pants_version }} or higher</a
+                >.
+            </p>   
+            <p class="body1 text-center">
+                If you're already a Pants user, sign in with your GitHub account to 
+                get started, or click <a
+                type="external"
+                href="{{ docs_link }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="primary link"
+                >here</a> for help.
+            </p>   
+            <p class="body1 text-center">
+                If you're not a Pants user yet, click 
+                <a
+                    type="external"
+                    href="{{ onboarding_link }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="primary link"
+                    >here
+                </a> to find out how to set up Pants in your repo.
+            </p>  
+        </div>
+    {% endif %}
+    {% for name, desc, color_class, login_url in login_options %}
+        <a href="{{ login_url }}" class="login-button big-button {{ color_class }}">
+            <i class="fab fa-{{name}} login-button-icon"></i>
+            <span class="login-button-text">Sign in with {{ desc }}</span>
+        </a>
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,26 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'toolshed/base.html' %}
+
+{% block title %}[{{ db_name }}] Workflow {% endblock title %}
+{% block navbar_left %}
+  {{ super() }}
+  <li id="nav-workflow" class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      Workflow: {{ db_name }}
+    </a>
+    <ul class="dropdown-menu">
+      <a class="dropdown-item" href="{{ views_links.summary }}">Summary</a>
+      <a class="dropdown-item" href="{{ views_links.workunit_list }}">WorkUnits</a>
+      <a class="dropdown-item" href="{{ views_links.workexceptionlog_list }}">WorkExceptions</a>
+    </ul>
+  </li>
+{% endblock navbar_left %}
+
+{% block css %}
+  {{ super() }}
+  <link href="{{ static('workflow/css/workflow.css') }}" rel="stylesheet">
+{% endblock css %}

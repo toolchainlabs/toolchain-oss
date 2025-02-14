@@ -1,0 +1,20 @@
+{
+  "scie": {
+    "lift": {
+      "name": "remote-workers",
+      "files": [
+        {"name": "worker"},
+        {"name": "buildbox"}
+      ],
+      "boot": {
+        "commands": {
+          "": {
+            "exe": "{worker}",
+            "args": [],
+            "env": {"=PATH": "{buildbox}:{scie.env.PATH}"}
+          }
+        }
+      }
+    }
+  }
+}

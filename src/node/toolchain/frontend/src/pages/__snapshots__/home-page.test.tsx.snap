@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomePage /> should render the component 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      Welcome to Toolchain!
+    </h1>
+    <p>
+      Current build tools run on your desktop, so when writing, testing and debugging code - slow, broken, and inconsistent builds are an immense source of frustration, interrupted flow and lost productivity.
+      <br />
+      <br />
+      Toolchain is solving these problems by going beyond build tools and creating the first truly cloud-centric build system. We're bringing together the scalability, concurrency and flexibility of distributed systems, as well massive as amounts of data derived from static analysis of your code and millions of open-source libraries.
+    </p>
+  </div>
+</DocumentFragment>
+`;

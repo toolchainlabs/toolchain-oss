@@ -1,0 +1,24 @@
+# Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: payments-workflow
+service_name: payments/workflow
+toolchain_product_name: payments
+workflow_server_rev:
+  us-east-1: prod-2023-04-10.12-32-01-4608ef798597
+workflow_maintenance_image_rev:
+  us-east-1: prod-2023-04-10.12-32-01-4608ef798597
+dbs: [users, payments]
+workers:
+  payments_worker_values:
+    iam_service_role_arn: null # set by deploy script
+    worker_deployment_name: payments-worker
+    replicas: 1
+    secrets:
+    - stripe-integration
+    - amberflo-integration
+    extra_config:
+      WORKFLOW:
+        worker_calls_log_level: 10 # DEBUG
+      STRIPE_CONFIG:
+        default_price_id: null # Resolved in resources_resolver.py

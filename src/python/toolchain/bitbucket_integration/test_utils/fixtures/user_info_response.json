@@ -1,0 +1,31 @@
+{
+    "display_name": "Abhishek Testing",
+    "account_id": "602fd0fe9f84a90069078512",
+    "links": {
+        "hooks": {
+            "href": "https://api.bitbucket.org/2.0/workspaces/%7B2a216c6c-4d18-4ad7-a486-9fddb5119b0a%7D/hooks"
+        },
+        "self": {
+            "href": "https://api.bitbucket.org/2.0/users/%7B2a216c6c-4d18-4ad7-a486-9fddb5119b0a%7D"
+        },
+        "repositories": {
+            "href": "https://api.bitbucket.org/2.0/repositories/%7B2a216c6c-4d18-4ad7-a486-9fddb5119b0a%7D"
+        },
+        "html": {
+            "href": "https://bitbucket.org/%7B2a216c6c-4d18-4ad7-a486-9fddb5119b0a%7D/"
+        },
+        "avatar": {
+            "href": "https://secure.gravatar.com/avatar/37d4257b1cbe9be4babf9d94b4d426ce?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAT-1.png"
+        },
+        "snippets": {
+            "href": "https://api.bitbucket.org/2.0/snippets/%7B2a216c6c-4d18-4ad7-a486-9fddb5119b0a%7D"
+        }
+    },
+    "nickname": "AbhisheK",
+    "created_on": "2021-02-19T16:48:33.943438+00:00",
+    "is_staff": false,
+    "location": null,
+    "account_status": "active",
+    "type": "user",
+    "uuid": "{2a216c6c-4d18-4ad7-a486-9fddb5119b0a}"
+}

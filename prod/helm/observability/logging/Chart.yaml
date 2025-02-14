@@ -1,0 +1,13 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+appVersion: 2.0.10
+description: Logging chart for toolchain
+name: logging
+version: 3.6.0
+kubeVersion: '>=v1.24.0-0,<v1.28-0'
+dependencies:
+- name: fluent-bit
+  version: 0.25.0
+  repository: https://fluent.github.io/helm-charts

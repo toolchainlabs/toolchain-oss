@@ -1,0 +1,7 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{ $values := merge (dict) .Values.workers.pants_demos_depgraph_worker_values .Values }}
+{{- with merge (dict "Values" $values) . -}}
+{{- template "workflow.worker.resources" . -}}
+{{- end -}}

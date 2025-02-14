@@ -1,0 +1,111 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# Note: Secrets are stored in AWS Secrets Manager (https://us-east-1.console.aws.amazon.com/secretsmanager/home)
+# Under the prod/monitoring secret.
+
+global:
+  region: null
+influxdb:
+  url: http://influxdb.prod.svc.cluster.local:80
+  tokens: [] # filled by install script
+grafana:
+  fullnameOverride: prod-grafana
+  rbac:
+    pspEnabled: false  # PSP is being deprecated.
+  serviceAccount:
+    name: grafana
+    annotations:
+      # See service_role_policies.tf for prod cluster, allows grafana to access cloudwatch metrics
+      eks.amazonaws.com/role-arn: arn:aws:iam::283194185447:role/k8s.prod-e1-1.monitoring.grafana.service
+  sidecar:
+    resources:
+      requests:
+        cpu: 80m
+        memory: 128Mi
+      limits:
+        cpu: 400m
+        memory: 512Mi
+    dashboards:
+      enabled: true
+      watchMethod: SLEEP
+      label: grafana_dashboard
+      searchNamespace:
+        - monitoring
+    datasources:
+      enabled: true
+      watchMethod: SLEEP
+      label: grafana_datasource
+      labelValue: "1"
+      searchNamespace:
+        - monitoring
+  serviceMonitor:
+    selfMonitor: false
+  resources:
+    requests:
+      cpu: 50m
+      memory: 128Mi
+    limits:
+      cpu: 200m
+      memory: 256Mi
+  # Just so we don't have the default password from the upstream chart.
+  # We will be using GAuth here, so this is somewhat meaningless.
+  # but leaving the default password just makes me nervous
+  # Also note that the install script overrides this value (to a random value) on every install
+  adminPassword: a4nkFwipbkwNx331uydbcnmdjfbcssOs50AT4OsnnagoCh4X7tWe60wx
+  ## Grafana's primary configuration
+  ## NOTE: values in map will be converted to ini format
+  ## ref: http://docs.grafana.org/installation/configuration/
+  grafana.ini:
+    metrics:
+      enabled: false
+    server:
+      root_url: https://grafana.toolchainlabs.com
+    auth:
+      disable_login_form: true
+      oauth_auto_login: true
+    users:
+      auto_assign_org_role: Editor
+      viewers_can_edit: false
+      editors_can_admin: false
+    auth.google:
+      enabled: true
+      client_id: GOOGLE_AUTH_CLIENT_ID_PLACEHOLDER
+      client_secret: GOOLE_AUTH_CLIENT_SECRET_PLACEHOLDER
+      scopes: "https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"
+      auth_url: https://accounts.google.com/o/oauth2/auth
+      token_url: https://accounts.google.com/o/oauth2/token
+      allowed_domains: toolchain.com
+      allow_sign_up: true
+    paths:
+      data: /var/lib/grafana/data
+      logs: /var/log/grafana
+      plugins: /var/lib/grafana/plugins
+      provisioning: /etc/grafana/provisioning
+    analytics:
+      check_for_updates: true
+    log:
+      mode: console
+    grafana_net:
+        url: https://grafana.net
+ingress:
+  enabled: false  # filled in by installer
+  name: grafana
+  scheme: internal
+  healthcheck_path: /api/health
+  external_ingress_sg_id:
+    us-east-1: null
+  ssl_certificate_arn:
+    us-east-1: null
+  rules:
+    - host: "grafana.toolchainlabs.com"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                # Same as fullnameOverride
+                name: prod-grafana 
+                port:
+                  number: 80

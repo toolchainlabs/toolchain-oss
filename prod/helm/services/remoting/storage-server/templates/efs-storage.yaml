@@ -1,0 +1,41 @@
+# Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{- if eq (include "storage-server.isEFSEnabledForModel" .Values.storageModel) "true" }}
+{{- $volume_handle := printf "%s::%s" .Values.localStorage.efsFileSystemId .Values.localStorage.efsAccessPointId }}
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{.Release.Namespace }}-remote-cache-efs-storage
+  labels:
+    chart: {{ .Chart.Name  }}
+    heritage: {{ .Release.Service }}
+    toolchain_product: "remote-cache"
+spec:
+  capacity:
+    storage: {{ .Values.localStorage.volumeSize }}
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: efs-remote-cache-sc
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: {{ $volume_handle }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: remote-cache-efs-storage-claim
+  labels:
+    chart: {{ .Chart.Name  }}
+    heritage: {{ .Release.Service }}
+    toolchain_product: "remote-cache"
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: efs-remote-cache-sc  # defined in prod/helm/aws/aws-efs-csi-driver
+  resources:
+    requests:
+      storage: {{ .Values.localStorage.volumeSize }}
+{{- end }}

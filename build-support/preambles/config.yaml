@@ -1,0 +1,19 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+"**/*.py:**/*.py_template:**/*.sh:**/*.yaml:**/Dockerfile:**/Dockerfile.*:**/*.tf:**/*.tpl:!**/__init__.py:**/BUILD:**/BUILD_template:**/BUILD.*:**/*.hcl:**/.helmignore": |+
+  # Copyright $year Toolchain Labs, Inc. All rights reserved.
+  # Licensed under the Apache License, Version 2.0 (see LICENSE).
+"**/*.rs:**/*.js:**/*.proto": |+
+  // Copyright $year Toolchain Labs, Inc. All rights reserved.
+  // Licensed under the Apache License, Version 2.0 (see LICENSE).
+"**/*.css:**/*.ts:**/*.tsx": |+
+  /*
+  Copyright $year Toolchain Labs, Inc. All rights reserved.
+  Licensed under the Apache License, Version 2.0 (see LICENSE).
+  */
+"**/*.html": |+
+  {#
+  Copyright $year Toolchain Labs, Inc. All rights reserved.
+  Licensed under the Apache License, Version 2.0 (see LICENSE).
+  #}

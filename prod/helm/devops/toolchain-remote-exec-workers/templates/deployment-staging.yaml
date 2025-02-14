@@ -1,0 +1,60 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  remote-exec-workers-staging
+  namespace: remote-exec
+  labels:
+    app: remote-exec-workers-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: remote-exec-workers-staging
+  template:
+    metadata:
+      name: remote-exec-workers-staging
+      labels:
+        app: remote-exec-workers-staging
+    spec:
+      nodeSelector:
+        toolchain.instance_category: worker
+      volumes:
+      - name: local-cache
+        emptyDir: {}
+      containers:
+      - name: worker
+        image: {{ .Values.image }}
+        imagePullPolicy: IfNotPresent
+        command:
+          - "/usr/local/bin/worker"
+          - "--worker-concurrency={{ .Values.worker_concurrency }}"
+          - "--cache-directory=/var/buildbox-cache"
+          - "--log-level={{ .Values.logLevel }}"
+        resources:
+          requests:
+            cpu: "2000m"
+            memory: "4Gi"
+            ephemeral-storage: {{ .Values.worker_storage }}
+          limits:
+            cpu: "4000m"
+            memory: "6Gi"
+        volumeMounts:
+        - name: local-cache
+          mountPath: /var/buildbox-cache
+        env:
+        - name: ENDPOINT
+          value: grpcs://staging.workers.toolchain.com
+        - name: WORKERS_ENDPOINT
+          value: grpcs://staging.workers.toolchain.com
+        - name: INSTANCE
+          value: VRphmJfW4cmysLENEo5AQh
+        - name: ORG_ID
+          value: VRphmJfW4cmysLENEo5AQh
+        - name: AUTH_TOKEN
+          valueFrom:
+            secretKeyRef: # see: src/python/toolchain/prod/ensure_toolchainlabs_remote_exec_worker_token_secret.py
+               name: toolchainlabs-remote-exec-worker-token
+               key: token

@@ -1,0 +1,33 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{- if .Values.tests.enabled }}
+{{- $region := required "You must set global.region!" .Values.global.region }}
+{{- $toolchain_env := required "You must set $toolchain_env!" .Values.toolchain_env }}
+{{- $infositeTestImage := (printf "%s/e2e_tests/infosite:%s" .Values.django.image_registry (index .Values.tests.infosite.image_rev $region) ) }}
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: infosite-end2end-tests
+  labels:
+    app: infosite-end2end-tests
+    chart: {{ .Chart.Name  }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    toolchain_product: infosite
+  annotations:
+    "helm.sh/hook-delete-policy": "hook-succeeded,hook-failed"
+    "helm.sh/hook": test-success
+spec:
+  restartPolicy: Never
+  containers:
+    - name: e2e-tests
+      image: {{ $infositeTestImage }}
+      imagePullPolicy: IfNotPresent
+      args: 
+        - --toolchain_env
+        - {{ $toolchain_env }}
+        - --namespace
+        - {{ .Release.Namespace }}
+{{- end }}

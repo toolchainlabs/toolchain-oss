@@ -1,0 +1,77 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{ if .Values.features.remotingRules }}
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: remoting-alert-rules
+  labels:
+    app: prometheus-operator
+    release: {{ .Release.Name }}
+spec:
+  groups:
+  - name: ./toolchain.grpc
+    rules:
+    - alert: GrpcErrorRate
+      for: 1h
+      labels:
+        severity: critical
+        type: toolchain-alerts
+        team: remoting
+      expr: |-
+        (
+          sum by (service, grpc_method, grpc_code) (rate(grpc_server_handled_total{grpc_code!~"OK|NotFound|Canceled|Internal|Unknown"}[15m]))
+            /
+          ignoring (grpc_code) group_left sum by (service, grpc_method) (rate(grpc_server_handled_total[15m]))
+          ) > 0.03
+      annotations:
+         message: 'GRPC error responses rate ({{`{{`}} $value | humanizePercentage {{`}}`}}) from {{`{{`}} $labels.service {{`}}`}} {{`{{`}} $labels.grpc_method {{`}}`}} .'
+    - alert: GrpcInFlightRequests
+      for: 20m
+      labels:
+        severity: critical
+        type: toolchain-alerts
+        team: remoting
+      expr: |-
+        (
+          sum by (service) (toolchain_grpc_inflight_requests{namespace="prod"})
+          ) > 120
+      annotations:
+        message: 'Sustained high in-flight GRPC requests: {{`{{`}} $value {{`}}`}} for {{`{{`}} $labels.service {{`}}`}}.'
+    - alert: GrpcLatency
+      for: 1h
+      labels:
+        severity: critical
+        state: testing
+        type: toolchain-alerts
+        team: remoting
+      expr: |-
+        histogram_quantile(0.5,
+          sum(irate(grpc_server_handling_seconds_bucket[1m]))
+        by (le)) > 0.1
+      annotations:
+         message: 'GRPC latency ({{`{{`}} $value {{`}}`}}s) from {{`{{`}} $labels.service {{`}}`}} {{`{{`}} $labels.grpc_method {{`}}`}} .'
+  - name: ./toolchain.redis_conn_pool_delay
+    rules:
+    - alert: RemotingRedisConnPoolDelay
+      for: 5m
+      labels:
+        severity: critical
+        type: toolchain-alerts
+        team: remoting
+      expr: |-
+        histogram_quantile(0.5,
+          sum(increase(toolchain_storage_redis_get_connection_duration_seconds_bucket{job="remoting-storage-server"}[1m]))
+        by (le)) > 0.1
+  - name: ./toolchain.redis_conn_pool_error_rate
+    rules:
+      - alert: RemotingRedisConnPoolErrorRate
+        for: 30m
+        labels:
+          severity: critical
+          type: toolchain-alerts
+          team: remoting
+        expr: |-
+          sum(increase(toolchain_storage_redis_get_connection_duration_seconds_count{job="remoting-storage-server", result="error"}[5m])) > 0.001
+{{ end }}

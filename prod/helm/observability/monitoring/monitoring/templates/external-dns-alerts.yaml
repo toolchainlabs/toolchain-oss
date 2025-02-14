@@ -1,0 +1,50 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: external-dns-alerts-rules
+  labels:
+    app: prometheus-operator
+    release: {{ .Release.Name }}
+spec:
+  groups:
+  - name: ./exernal-dns
+    rules:
+    - alert: ExternalDnsSourceErrors
+      for: 10m
+      expr: increase(external_dns_source_errors_total[2h]) > 0 
+      annotations:
+        message: External DNS is seeing source errors.
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: devops
+    - alert: ExternalDnsRgistryErrors
+      for: 10m
+      expr: increase(external_dns_registry_errors_total[2h]) > 0 
+      annotations:
+        message: External DNS is seeing registry errors.
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: devops
+    - alert: ExternalDnsNotSyncing
+      for: 10m
+      expr: (time() - external_dns_controller_last_sync_timestamp_seconds) > 3600
+      annotations:
+        message: External DNS last sync was more than an hour ago.
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: devops
+    - alert: ExternalDnsIsNotUp
+      for: 10m
+      expr: absent(up{job="external-dns"} == 1)
+      annotations:
+        message: External DNS Service is not up or is not being scraped by prometheus.
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: devops

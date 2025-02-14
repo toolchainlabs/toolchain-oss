@@ -1,0 +1,26 @@
+ignore:
+  - "**/*.json"
+  - "**/*.tf"
+  - "**/*.yaml"
+  - "**/*_test.py"
+  - "**/migrations/*.*"
+coverage:
+  status:
+    project:
+      default:
+        # basic
+        target: 70%
+        threshold: 10%
+        base: auto 
+        if_no_uploads: error
+        if_not_found: success
+        if_ci_failed: error
+    patch:
+      default:
+        # basic
+        target: 70%
+        base: auto
+        # advanced
+        if_no_uploads: error
+        if_not_found: success
+        if_ci_failed: error

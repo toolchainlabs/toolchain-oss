@@ -1,0 +1,54 @@
+{#
+Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "crawler/workunit_detail_base.html" %}
+
+{% block successful_workunit_detail_content_trs %}
+{{ super() }}
+{% set distribution = object.distribution %}
+<table>
+  <tr>
+    <td>Release:</td>
+    <td>{{ distribution.release.project.name }} {{ distribution.release.version }}</td>
+  </tr>
+  <tr>
+    <td>Filename:</td>
+    <td>{{ distribution.filename }}</td>
+  </tr>
+  <tr>
+    <td>Type:</td>
+    <td>{{ distribution.dist_type }}</td>
+  </tr>
+  <tr>
+    <td>Serial range:</td>
+    <td>{{ distribution.serial_from }}-{{ distribution.serial_to or '' }}</td>
+  </tr>
+  <tr>
+    <td>Modules:</td>
+    <td>
+      <table>
+        {% for module in distribution.data.modules %}
+          {% if loop.index0 % 4 == 0 %}<tr>{% endif %}
+            <td><pre>{{ module }}</pre></td>
+          {% if loop.index0 % 4 == 3 %}</tr>{% endif %}
+        {% endfor %}
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>Metadata:</td>
+    <td>
+      <table>
+        {% for k, v in distribution.data.metadata.items() %}
+          <tr>
+            <td><pre>{{ k }}</pre></td>
+            <td><pre>{{ v }}</pre></td>
+          </tr>
+        {% endfor %}
+      </table>
+    </td>
+  </tr>
+</table>
+{% endblock successful_workunit_detail_content_trs %}

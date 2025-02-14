@@ -1,0 +1,9 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+appVersion: '1.0'
+description: Manages IAM access keys.
+name: iam-keys-watcher
+version: 1.0.0
+kubeVersion: '>=v1.23.0-0,<v1.27-0'

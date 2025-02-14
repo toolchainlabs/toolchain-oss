@@ -1,0 +1,5 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+ignored:
+  - DL3008 # Pin version in apt-get calls
+  - DL4006 # Set the SHELL option

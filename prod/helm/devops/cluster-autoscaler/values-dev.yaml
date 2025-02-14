@@ -1,0 +1,31 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+cluster-autoscaler:
+    nodeSelector:
+        toolchain.instance_category: database
+    resources: 
+        requests:
+          cpu: 50m
+          memory: 30Mi
+        limits:
+          cpu: 200m
+          memory: 256Mi
+    # https://docs.aws.amazon.com/eks/latest/userguide/autoscaling.html
+    cloudProvider: aws
+    awsRegion: us-east-1
+    autoDiscovery:
+        clusterName: dev-e1-1
+    podAnnotations:
+      cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
+    extraArgs: # autoscaler container extra args. 
+        # https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md#what-are-the-parameters-to-ca
+        balance-similar-node-groups: null
+        skip-nodes-with-system-pods: "false"
+        scale-down-unneeded-time: 20m
+    rbac:
+      serviceAccount:
+        # see: prod/terraform/resources/us-east-1/kubernetes/dev-e1-1/service_role_policies/cluster_auto_scaler.tf
+        name: dev-aws-cluster-autoscaler
+        annotations:
+          eks.amazonaws.com/role-arn: arn:aws:iam::283194185447:role/k8s.dev-e1-1.aws-eks-cluster-autoscaler

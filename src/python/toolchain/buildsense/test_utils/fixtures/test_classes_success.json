@@ -1,0 +1,353 @@
+[
+    {
+        "tests": [
+            {
+                "name": "src.python.toolchain.django.site.models_test.TestUserModel",
+                "test_file_path": "test_classes_success.py",
+                "time": 0.77,
+                "tests": [
+                    {
+                        "name": "test_with_api_error",
+                        "time": 0.481,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_by_api_id",
+                        "time": 0.028,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_by_github_user_id",
+                        "time": 0.017,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_with_api_ids",
+                        "time": 0.013,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_with_api_ids_with_details",
+                        "time": 0.019,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_deactivate",
+                        "time": 0.019,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_with_user_names",
+                        "time": 0.043,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_with_github_user_names",
+                        "time": 0.052,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_can_impersonate",
+                        "time": 0.047,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_inactive_users_api_ids",
+                        "time": 0.023,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_staff_status",
+                        "time": 0.011,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_staff_status_on_deactivate",
+                        "time": 0.013,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.django.site.models_test.TestUserDetailsModel",
+                "test_file_path": "test_classes_success.py",
+                "time": 0.07,
+                "tests": [
+                    {
+                        "name": "test_create",
+                        "time": 0.011,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_migrate_empty",
+                        "time": 0.01,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_prevent_clear_github_id",
+                        "time": 0.013,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_update",
+                        "time": 0.017,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_larger_user_id",
+                        "time": 0.008,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_invalid_update",
+                        "time": 0.013,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.django.site.models_test.TestCustomerModel",
+                "test_file_path": "test_classes_success.py",
+                "time": 0.18,
+                "tests": [
+                    {
+                        "name": "test_for_slugs",
+                        "time": 0.025,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_for_user_and_slug",
+                        "time": 0.048,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_for_user_and_id",
+                        "time": 0.043,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_exists_user_and_id",
+                        "time": 0.039,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_for_slug",
+                        "time": 0.018,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_customer_state",
+                        "time": 0.009,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.django.site.models_test.TestRepoModel",
+                "test_file_path": "test_classes_success.py",
+                "time": 0.14,
+                "tests": [
+                    {
+                        "name": "test_get_or_404_for_slug",
+                        "time": 0.047,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_or_none_for_slug",
+                        "time": 0.04,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_with_api_ids",
+                        "time": 0.016,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_exists_for_customer",
+                        "time": 0.023,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_by_slug_and_customer_id",
+                        "time": 0.015,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.django.site.models_test.TestWhitelistModel",
+                "test_file_path": "test_classes_success.py",
+                "time": 0.03,
+                "tests": [
+                    {
+                        "name": "test_set_bulk",
+                        "time": 0.025,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.django.site.models_test.TestAccessTokenExchangeCode",
+                "test_file_path": "test_classes_success.py",
+                "time": 0.47,
+                "tests": [
+                    {
+                        "name": "test_create_for_user",
+                        "time": 0.026,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_create_multiple_for_user",
+                        "time": 0.03,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_use_code",
+                        "time": 0.03,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_use_invalid_code",
+                        "time": 0.036,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_expired_if_needed",
+                        "time": 0.252,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_use_expired_code",
+                        "time": 0.097,
+                        "outcome": "pass"
+                    }
+                ]
+            },
+            {
+                "name": "src.python.toolchain.django.site.models_test.TestAllocatedAccessToken",
+                "test_file_path": "test_classes_success.py",
+                "time": 0.99,
+                "tests": [
+                    {
+                        "name": "test_allocate_api_token",
+                        "time": 0.015,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_max_api_tokens",
+                        "time": 0.063,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_check_api_refresh_token",
+                        "time": 0.043,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_check_api_refresh_token_revoked_token",
+                        "time": 0.031,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_deactivate_expired_token",
+                        "time": 0.099,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_check_api_refresh_token_not_existing",
+                        "time": 0.015,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_check_api_refresh_token_invalid_token_usage",
+                        "time": 0.017,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_revoke",
+                        "time": 0.013,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_check_refresh_token_invalid_repo",
+                        "time": 0.02,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_check_refresh_token_invalid_customer",
+                        "time": 0.019,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_active_tokens_for_users_invalid_call",
+                        "time": 0.005,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_active_tokens_for_users",
+                        "time": 0.052,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_or_create_refresh_token_for_ui_create",
+                        "time": 0.014,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_or_create_refresh_token_for_ui_existing",
+                        "time": 0.048,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_get_or_create_refresh_token_for_ui_existing_about_to_expire",
+                        "time": 0.057,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_check_ui_refresh_token",
+                        "time": 0.015,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_check_ui_refresh_token_invalid_token_usage",
+                        "time": 0.02,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_check_ui_refresh_token_expired_token",
+                        "time": 0.054,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_check_ui_refresh_token_revoked",
+                        "time": 0.026,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_check_ui_refresh_token_not_existing",
+                        "time": 0.017,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_check_ui_refresh_token_inactive_user",
+                        "time": 0.155,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_check_ui_refresh_token_invalid_user",
+                        "time": 0.191,
+                        "outcome": "pass"
+                    }
+                ]
+            }
+        ],
+        "timing": {
+            "total": 2.65
+        },
+        "target": "test_classes_success.py",
+        "outputs": {
+            "stdout": "He stopped short?",
+            "stderr": "Three squares? You can\u2019t spare three squares?"
+        }
+    }
+]

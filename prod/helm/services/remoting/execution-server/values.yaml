@@ -1,0 +1,11 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+replicas: 1
+image_registry: 283194185447.dkr.ecr.us-east-1.amazonaws.com
+global:
+  region: us-east-1
+image_rev:
+  us-east-1: prod-2023-03-21.18-14-16-f11f91f6bfc3
+cas_address: null  # Filled by install script.
+server_sentry_dsn: null  # Filled by install script

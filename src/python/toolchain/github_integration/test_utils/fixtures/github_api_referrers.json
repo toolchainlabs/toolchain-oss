@@ -1,0 +1,52 @@
+[
+  {
+    "referrer": "Google",
+    "count": 715,
+    "uniques": 405
+  },
+  {
+    "referrer": "github.com",
+    "count": 132,
+    "uniques": 84
+  },
+  {
+    "referrer": "pantsbuild.org",
+    "count": 51,
+    "uniques": 34
+  },
+  {
+    "referrer": "blog.bitsrc.io",
+    "count": 21,
+    "uniques": 19
+  },
+  {
+    "referrer": "pypi.org",
+    "count": 16,
+    "uniques": 12
+  },
+  {
+    "referrer": "v1.pantsbuild.org",
+    "count": 10,
+    "uniques": 5
+  },
+  {
+    "referrer": "DuckDuckGo",
+    "count": 9,
+    "uniques": 7
+  },
+  {
+    "referrer": "t.co",
+    "count": 5,
+    "uniques": 4
+  },
+  {
+    "referrer": "twitter.github.io",
+    "count": 4,
+    "uniques": 4
+  },
+  {
+    "referrer": "mail.google.com",
+    "count": 4,
+    "uniques": 2
+  }
+]

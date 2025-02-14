@@ -1,0 +1,12 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+global:
+  region: us-east-1
+toolchain_env: toolchain_dev
+workflow_server_rev:
+  us-east-1: jerry
+workflow_maintenance_image_rev:
+  us-east-1: seinfeld
+workers:
+  dependency_worker_values:
+    iam_service_role_arn: bob

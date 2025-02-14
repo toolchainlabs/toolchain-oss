@@ -1,0 +1,13 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+image: bob
+iam_role: jerry
+redis_host: festivus
+s3_base_path: feats/of/strength
+customers_map_s3_url: s3://seinfeld/bagel/no-bagel.json
+slack_webhook: moles
+push_gateway_url: https://jerry.com/newman
+localStorage:
+  efsFileSystemId: hnh-bagels 
+  efsAccessPointId: puddy

@@ -1,0 +1,176 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{- $region := required "You must set global.region!" .Values.global.region }}
+{{- $toolchain_env := required "You must set toolchain_env!" .Values.toolchain_env }}
+{{- $service_image := (printf "%s/remoting/proxy_server:%s" .Values.image_registry (index .Values.image_rev $region) ) }}
+{{- $secrets := required "You must set jwtSecrets!" .Values.jwtSecrets }}
+{{- $add_dev_prometheus_annotations := eq $toolchain_env "toolchain_dev" }}
+
+
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: proxy-server
+  labels:
+    app: remoting-proxy-server
+    chart: {{ .Chart.Name  }}
+    heritage: {{ .Release.Service }}
+    toolchain_product: "remote-cache"
+  annotations:
+     eks.amazonaws.com/role-arn: {{ .Values.iam_service_role_arn }}
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: remoting-proxy-server
+  labels:
+    app: remoting-proxy-server
+    chart: {{ .Chart.Name  }}
+    heritage: {{ .Release.Service }}
+    toolchain_product: "remote-cache"
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: remoting-proxy-server
+  template:
+    metadata:
+      labels:
+        app: remoting-proxy-server
+        chart: {{ .Chart.Name  }}
+        heritage: {{ .Release.Service }}
+        toolchain_product: "remote-cache"
+      annotations:
+        configmap-checksum: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
+    spec:
+      serviceAccountName: proxy-server
+      nodeSelector:
+        toolchain.instance_category: service
+      containers:
+        - name: remoting-proxy
+          image: {{ $service_image }}
+          args:
+            - -c
+            - /config/proxy.yaml
+          env:
+            - name: RUST_LOG
+              value: info
+            - name: K8S_NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+            - name: K8S_POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: K8S_POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: K8S_POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+          ports:
+            - name: grpc-cache
+              containerPort: 8980
+              protocol: TCP
+            - name: grpc-workers
+              containerPort: 8981
+              protocol: TCP
+            - name: checks
+              containerPort: 8000
+              protocol: TCP
+            - name: metrics
+              containerPort: 8010
+              protocol: TCP
+          volumeMounts:
+            - name: config
+              mountPath: /config/
+              readOnly: true
+          {{- range $secrets }}
+            - name: {{ . }}
+              mountPath: /secrets/{{ . }}
+              readOnly: true
+          {{- end }}
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "512Mi"
+            limits:
+              cpu: "900m"
+              memory: "1536Mi"
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
+            initialDelaySeconds: 2
+            periodSeconds: 3
+            timeoutSeconds: 1
+            successThreshold: 2
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 20
+            timeoutSeconds: 1
+            successThreshold: 1  # Required value for liveness.
+      volumes:
+        - name: config
+          configMap:
+            name: remoting-proxy-server
+      {{- range $secrets }}
+        - name: {{ . }}
+          secret:
+            secretName: {{ . }}
+      {{- end }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: remoting-proxy-server
+  labels:
+    app: remoting-proxy-server
+    monitor: "true"
+  {{- if $add_dev_prometheus_annotations  }}
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/path: "/metricsz"
+    prometheus.io/port: "8010"
+  {{ end }}
+spec:
+  ports:
+    - port: 8980
+      protocol: TCP
+      name: grpc-cache
+    - port: 8000
+      protocol: TCP
+      name: checks
+    - name: metrics
+      protocol: TCP
+      port: 8010
+  selector:
+    app: remoting-proxy-server
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: remoting-workers-proxy-server
+  labels:
+    app: remoting-proxy-server
+spec:
+  ports:
+    - port: 8981
+      protocol: TCP
+      name: grpc-workers
+  selector:
+    app: remoting-proxy-server
+
+---
+

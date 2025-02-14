@@ -1,0 +1,30 @@
+# Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: oss-metrics-workflow
+service_name: oss-metrics/workflow
+toolchain_product_name: oss-metrics
+workflow_server_rev:
+  us-east-1: prod-2023-04-10.12-32-01-4608ef798597
+workflow_maintenance_image_rev:
+  us-east-1: prod-2023-04-10.12-32-01-4608ef798597
+dbs: [oss-metrics]
+workers:
+  oss_metrics_worker_values:
+    resources:
+      worker:
+        limits:
+          cpu: 600m
+          memory: 3Gi
+    iam_service_role_arn: null # set by deploy script
+    worker_deployment_name: oss-metrics-worker
+    replicas: 1
+    secrets:
+    - bugout-api-key
+    - influxdb-pants-telemetry-token
+    extra_config: # set by deploy script
+      BUGOUT_INTEGRATION_BUCKET: null
+      GITHUB_REPO_STATS_BASE_KEY: null
+      SCM_INTEGRATION_BUCKET: null
+      INFLUXDB_CONFIG:
+        host: null

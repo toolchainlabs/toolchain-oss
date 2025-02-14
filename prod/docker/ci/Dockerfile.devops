@@ -1,0 +1,89 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+FROM python:3.9.12-slim-buster@sha256:62ed2b347a385102d33f5e82530862359f8dc60464674d78cef844b02d150a50
+
+# We manually create the man1 and man7 dirs to work around bugs when installing postgresql-client:
+# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=866729
+RUN mkdir -p /usr/share/man/man1 && \
+    mkdir -p /usr/share/man/man7 && \
+    apt-get update && \
+    apt-get install --no-install-recommends -y curl git less lsb-release unzip zip git-lfs gnupg2 && \
+    apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    git lfs install
+
+COPY hashicorp.asc /tmp/hashicorp.asc
+RUN apt-key add /tmp/hashicorp.asc  && rm /tmp/hashicorp.asc && \
+    echo "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main" \
+     | tee /etc/apt/sources.list.d/hashicorp.list
+
+# https://github.com/helm/helm/releases
+ARG HELM_VER=v3.11.2
+ARG HELM_CHECKSUM=781d826daec584f9d50a01f0f7dadfd25a3312217a14aa2fbb85107b014ac8ca
+RUN curl --fail -L --output /tmp/helm-dist.tar.gz https://get.helm.sh/helm-${HELM_VER}-linux-amd64.tar.gz && \ 
+    echo "${HELM_CHECKSUM} /tmp/helm-dist.tar.gz" | sha256sum -c -
+WORKDIR /tmp
+RUN tar -zxvf helm-dist.tar.gz && chmod +x linux-amd64/helm  && mv linux-amd64/helm /usr/local/bin/ && rm -rf linux-amd64 && rm helm-dist.tar.gz 
+
+ARG yamllint_version=1.26.3
+ARG yamale_version=4.0.4
+ARG awscli_version=1.27.92
+RUN pip3 install --no-cache-dir "yamllint==$yamllint_version" "yamale==$yamale_version" "awscli==$awscli_version"
+
+ARG JQ_VER=1.6
+ARG JQ_CHECKSUM=af986793a515d500ab2d35f8d2aecd656e764504b789b66d7e1a0b727a124c44
+RUN curl -fsSL "https://github.com/stedolan/jq/releases/download/jq-${JQ_VER}/jq-linux64" > /usr/bin/jq && \
+    echo "${JQ_CHECKSUM}  /usr/bin/jq" | sha256sum -c - && \
+    chmod +x /usr/bin/jq
+
+ARG HELM_CHART_TESTING_VER=3.6.0
+ARG HELM_CHART_TESTING_CHECKSUM=02cdddc0d9a617d71fb0f02d2f7d90bfa06888d1b4373e244128e166f3b5fe79
+RUN curl --fail -L --output /tmp/helm-chart-test.tar.gz https://github.com/helm/chart-testing/releases/download/v${HELM_CHART_TESTING_VER}/chart-testing_${HELM_CHART_TESTING_VER}_linux_amd64.tar.gz &&  \ 
+    echo "${HELM_CHART_TESTING_CHECKSUM}  /tmp/helm-chart-test.tar.gz" | sha256sum -c -
+WORKDIR /tmp
+RUN tar -zxvf helm-chart-test.tar.gz && rm helm-chart-test.tar.gz  && chmod +x ct  && mv ct /usr/local/bin/ && mkdir -p /etc/ct/ && mv etc/*.yaml /etc/ct/
+
+ARG ALERT_MGR_VERSION=0.25.0
+ARG ALERT_MGR_CHECKSUM=206cf787c01921574ca171220bb9b48b043c3ad6e744017030fed586eb48e04b
+RUN curl  --fail -L --output /tmp/alertmanager.tar.gz https://github.com/prometheus/alertmanager/releases/download/v${ALERT_MGR_VERSION}/alertmanager-${ALERT_MGR_VERSION}.linux-amd64.tar.gz  && \
+    echo "${ALERT_MGR_CHECKSUM} /tmp/alertmanager.tar.gz" | sha256sum -c - && \
+    tar -xf /tmp/alertmanager.tar.gz  --wildcards --no-anchored "amtool" --strip-components 1 && \ 
+    mv amtool /usr/bin/
+
+ARG YQ_VERSION=4.25.3
+ARG YQ_CHECKSUM=cb66f4382a65d0443824f0a0fcda9c5c5f7b6bd4e4346539b2f0abc647ecf0ea
+RUN curl -fsSL https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq_linux_amd64 -o /usr/bin/yq && \
+    echo "${YQ_CHECKSUM} /usr/bin/yq" | sha256sum -c - && \
+    chmod +x /usr/bin/yq
+
+ARG HADOLINT_VERSION=2.10.0
+# Manually extracted checsum since it is not published as part of the release.
+ARG HADOLINT_CHECKSUM=8ee6ff537341681f9e91bae2d5da451b15c575691e33980893732d866d3cefc4
+RUN curl -fsSL https://github.com/hadolint/hadolint/releases/download/v${HADOLINT_VERSION}/hadolint-Linux-x86_64 -o /usr/bin/hadolint && \
+    echo "${HADOLINT_CHECKSUM} /usr/bin/hadolint" | sha256sum -c - && \
+    chmod +x /usr/bin/hadolint
+
+ARG KUBECONFORM_VERSION=0.6.1
+ARG KUBECONFORM_CHECKSUM=7f84c1e4109fb72f151da41bdffea05e1e37591f179de51adc048c83533ad215
+RUN curl  --fail -L --output /tmp/kubeconform.tar.gz  https://github.com/yannh/kubeconform/releases/download/v${KUBECONFORM_VERSION}/kubeconform-linux-amd64.tar.gz && \
+    echo "${KUBECONFORM_CHECKSUM} /tmp/kubeconform.tar.gz" | sha256sum -c -
+WORKDIR /tmp
+RUN tar -zxvf kubeconform.tar.gz && rm kubeconform.tar.gz && \
+    chmod +x kubeconform && \
+    mv kubeconform /usr/local/bin/ 
+    
+# NB: Please update src/sh/setup/ensure_util_versions.sh when updating TF version.
+ARG TF_VER=1.4.2
+ARG PACKER_VER=1.8.0
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    "terraform=${TF_VER}" "packer=${PACKER_VER}" && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# We don't know what uids:gids are available to us on the host system, which is controlled by CircleCI.
+# 99:99 has proven to be safe in practice.
+RUN groupadd --gid 99 toolchain && useradd --no-log-init --uid 99 --gid 99 -d /home/toolchain toolchain
+
+WORKDIR /home/toolchain
+RUN chown toolchain:toolchain /home/toolchain
+USER toolchain:toolchain

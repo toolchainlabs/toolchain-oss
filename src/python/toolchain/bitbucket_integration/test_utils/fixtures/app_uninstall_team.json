@@ -1,0 +1,64 @@
+{
+    "headers": {
+        "Content-Length": "1555",
+        "Content-Type": "application/json",
+        "Host": "tcwebhookdev.ngrok.io",
+        "User-Agent": "python-requests/2.22.0",
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate",
+        "Authorization": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmk6Y2xvdWQ6Yml0YnVja2V0OjphcHAve2FjZjU0ODc4LTUxYmUtNDczZS1iZjBiLTBmYmIxMmUwMTFhZH0vdG9vbGNoYWluLWRldiIsImlhdCI6MTYyNjk4MTk0NSwicXNoIjoiNmE4ODA0YzYyMDFkMjk5OTgzNmEzNWMyODNjNjA4MzM4OTYwYzIwOTkxMTAxMDg3MDAxMzg3N2RjNzRjYWMwNCIsImF1ZCI6ImFyaTpjbG91ZDpiaXRidWNrZXQ6OmFwcC97YWNmNTQ4NzgtNTFiZS00NzNlLWJmMGItMGZiYjEyZTAxMWFkfS90b29sY2hhaW4tZGV2IiwiZXhwIjoxNjI2OTg1NTQ1fQ.Jzljc--RGPxcblZ1Uyevaa6bLvzcTyjG6kdaWSDhRUM",
+        "X-Forwarded-For": "18.234.32.224",
+        "X-Forwarded-Proto": "https"
+    },
+    "payload": {
+        "productType": "bitbucket",
+        "eventType": "uninstalled",
+        "baseUrl": "https://bitbucket.org",
+        "publicKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCBFq+6Iq5J9AZzTZQfZEba9udHTIJToJnoDvWVHk8jKZIrMrVT1oJoAec84+nBhiO/8neqvbTlD7MeIb5aTDZo8YVhBKmQuEJ5RY56EakoR4x5oILsz/Ki5O4nGWSeTCCG1hj4heVsUi77umkYG5sZyHKNO+P+SwctTH1GEBDwswIDAQAB",
+        "user": {
+            "username": "festivus-miracle",
+            "display_name": "festivus miracle",
+            "uuid": "{acf54878-51be-473e-bf0b-0fbb12e011ad}",
+            "links": {
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/teams/%7Bacf54878-51be-473e-bf0b-0fbb12e011ad%7D"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/%7Bacf54878-51be-473e-bf0b-0fbb12e011ad%7D/"
+                },
+                "avatar": {
+                    "href": "https://bitbucket.org/account/festivus-miracle/avatar/"
+                }
+            },
+            "is_active": true,
+            "created_on": "2021-03-23T22:31:12.668759+00:00",
+            "type": "team",
+            "properties": {},
+            "has_2fa_enabled": null
+        },
+        "key": "toolchain-dev",
+        "baseApiUrl": "https://api.bitbucket.org",
+        "clientKey": "ari:cloud:bitbucket::app/{acf54878-51be-473e-bf0b-0fbb12e011ad}/toolchain-dev",
+        "principal": {
+            "username": "festivus-miracle",
+            "display_name": "festivus miracle",
+            "uuid": "{acf54878-51be-473e-bf0b-0fbb12e011ad}",
+            "links": {
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/teams/%7Bacf54878-51be-473e-bf0b-0fbb12e011ad%7D"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/%7Bacf54878-51be-473e-bf0b-0fbb12e011ad%7D/"
+                },
+                "avatar": {
+                    "href": "https://bitbucket.org/account/festivus-miracle/avatar/"
+                }
+            },
+            "is_active": true,
+            "created_on": "2021-03-23T22:31:12.668759+00:00",
+            "type": "team",
+            "properties": {},
+            "has_2fa_enabled": null
+        }
+    }
+}

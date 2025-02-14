@@ -1,0 +1,229 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorPage /> should render the component 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg css-cnms5y-MuiContainer-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-5u2hoz-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-oyn2cc-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 MuiGrid-direction-xs-column css-vacfyj-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-direction-xs-column css-1bnhfwg-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <img
+                  alt="Toolchain logo"
+                  class="css-s7d8j9"
+                  src="test-file-stub"
+                />
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle1 css-8zre5p-MuiTypography-root"
+                >
+                  The distributed software build system
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-direction-xs-column css-19zvv5e-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <div
+                  class="css-1f7f1r9"
+                >
+                  <h2
+                    class="MuiTypography-root MuiTypography-h2 css-1j37yc0-MuiTypography-root"
+                  >
+                    oops...
+                  </h2>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-direction-xs-column css-1xmtjsd-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle1 css-8zre5p-MuiTypography-root"
+                    >
+                      Something went wrong
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-1ftuaou-MuiTypography-root"
+                    >
+                      This error has been reported to our team. Please try again. If it persists, please contact 
+                      <a
+                        class="css-jczq1d"
+                        href="mailto:support@toolchain.com?subject=Something went wrong"
+                      >
+                        support@toolchain.com
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge css-ebgv7p-MuiButtonBase-root-MuiButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  go to homepage
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ErrorPage /> should render the component with event id 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg css-cnms5y-MuiContainer-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-5u2hoz-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-oyn2cc-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 MuiGrid-direction-xs-column css-vacfyj-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-direction-xs-column css-1bnhfwg-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <img
+                  alt="Toolchain logo"
+                  class="css-s7d8j9"
+                  src="test-file-stub"
+                />
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle1 css-8zre5p-MuiTypography-root"
+                >
+                  The distributed software build system
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-direction-xs-column css-19zvv5e-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <div
+                  class="css-1f7f1r9"
+                >
+                  <h2
+                    class="MuiTypography-root MuiTypography-h2 css-1j37yc0-MuiTypography-root"
+                  >
+                    oops...
+                  </h2>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-direction-xs-column css-1xmtjsd-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  >
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle1 css-8zre5p-MuiTypography-root"
+                    >
+                      Something went wrong
+                    </h6>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-1ftuaou-MuiTypography-root"
+                    >
+                      This error has been reported to our team. Please try again. If it persists, please contact 
+                      <a
+                        class="css-jczq1d"
+                        href="mailto:support@toolchain.com?subject=Something went wrong. Request id: 123"
+                      >
+                        support@toolchain.com
+                      </a>
+                       and pass along the ID: 
+                      <span
+                        class="css-1i0xjzs"
+                      >
+                        123
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge css-ebgv7p-MuiButtonBase-root-MuiButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  go to homepage
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

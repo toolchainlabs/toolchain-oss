@@ -1,0 +1,17 @@
+requests
+requests-oauthlib
+six
+click >= 5.0
+markdown
+PyYAML
+coverage
+flake8
+mock
+pytest
+pytest-cov
+tox
+babel
+cryptography
+
+# Plugin Dependencies
+sleekxmpp

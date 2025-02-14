@@ -1,0 +1,39 @@
+#cloud-config
+# docs: https://ubuntu.com/server/docs/install/autoinstall-reference
+# useful config: https://nickcharlton.net/posts/automating-ubuntu-2004-installs-with-packer.html
+autoinstall:
+  version: 1
+  identity:
+    hostname: vagrant
+    username: vagrant
+    password: '$1$u1FZJvTw$sWNZMW/L0/6P7zCHKF1kO0'
+  ssh:
+    install-server: true
+    allow-pw: true
+  locale: en_US
+  keyboard:
+    layout: en
+    variant: us
+  storage:
+    config:
+      - {type: disk, ptable: gpt, path: /dev/sda, wipe: superblock, preserve: false, grub_device: true, id: disk}
+      - {type: partition, device: disk, size: 1M, wipe: superblock, flag: bios_grub, number: 1, preserve: false, id: partition-grub}
+      - {type: partition, device: disk, size: 1G, wipe: superblock, number: 2, preserve: false, id: partition-boot}
+      - {type: partition, device: disk, size: -1, wipe: superblock, number: 3, preserve: false, id: partition-system}
+      - {type: format, fstype: ext4, volume: partition-boot, preserve: false, id: format-boot}
+      - {type: format, fstype: ext4, volume: partition-system, preserve: false, id: format-system}
+      - {type: mount, device: format-boot, path: /boot, id: mount-boot}
+      - {type: mount, device: format-system, path: /, id: mount-system}
+  network:
+    network:
+      version: 2
+      ethernets:
+        ens32:
+          dhcp4: true
+          dhcp-identifier: mac
+        enp0s3:
+          dhcp4: true
+          dhcp-identifier: mac
+  late-commands:
+    - sed -i 's/^#*\(send dhcp-client-identifier\).*$/\1 = hardware;/' /target/etc/dhcp/dhclient.conf
+    - 'sed -i "s/dhcp4: true/&\n      dhcp-identifier: mac/" /target/etc/netplan/00-installer-config.yaml'

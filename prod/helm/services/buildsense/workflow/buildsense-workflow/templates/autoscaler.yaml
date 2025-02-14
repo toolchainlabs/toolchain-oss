@@ -1,0 +1,35 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: buildsense-workflow-autoscale
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: buildsense-worker
+  minReplicas: 1
+  maxReplicas: 4
+  behavior:
+   scaleDown:
+      stabilizationWindowSeconds: 180
+   scaleUp:
+      stabilizationWindowSeconds: 60
+      policies:  # Don't scale up more than 1 ped per minute.
+      - type: Pods
+        value: 1
+        periodSeconds: 60
+  metrics:
+   - type: Object
+     object:
+      metric:
+         name: buildsense_queue_length
+      describedObject:
+        apiVersion: "apps/v1"
+        kind: Deployment
+        name: buildsense-workflow-maintenance
+      target:
+         type: Value
+         value: 2  # Arbitrary value of 2 for now, since 2 WU is basically empty. but will tweak this over time.

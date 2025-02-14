@@ -1,0 +1,144 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "config": {
+            "type": "object"
+        },
+        "dbs": {
+            "description": "List of dbs releases of this chart can access (so we know to mount their creds secrets).",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "extra_config": {
+            "type": "object"
+        },
+        "secrets": {
+            "description": "Names of secrets to mount in container",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "gunicorn_image_rev": {
+            "type": "object"
+        },
+        "has_static_files": {
+            "type": "boolean"
+        },
+        "toolchain_product_name": {
+            "type": "string"
+        },
+        "healthcheck_path": {
+            "type": "string"
+        },
+        "image_registry": {
+            "description": "Location of the Docker registry",
+            "type": "string"
+        },
+        "log_level": {
+            "type": "string",
+            "enum": [
+                "debug",
+                "info"
+            ]
+        },
+        "name": {
+            "description": "Name of the service",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "host_name": {
+            "description": "public host name (used by nginx to set the Host header)",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "ecr_repo_base": {
+            "description": "Base name for ecr repo",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "nginx": {
+            "type": "object",
+            "properties": {
+                "exporter": {
+                    "type": "object"
+                },
+                "image_rev": {
+                    "type": "object"
+                }
+            }
+        },
+        "replicas": {
+            "description": "Number of pods to deploy",
+            "type": "number"
+        },
+        "resources": {
+            "type": "object"
+        },
+        "service_location": {
+            "type": "string",
+            "enum": [
+                "edge",
+                "internal"
+            ]
+        },
+        "service_node_selector": {
+            "type": "string"
+        },
+        "service_account_name": {
+            "description": "Name of k8s Service Account",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "temporary_prod_debug_mode_remove_me": {
+            "type": "number"
+        },
+        "toolchain_env": {
+            "description": "Toolchain-specific environment name (e.g., prod / staging)",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "serviceExtraVolumes": {
+            "type": "array"
+        },
+        "gunicornExtraVolumeMounts": {
+            "type": "array"
+        },
+        "extraContainers": {
+            "type": "array"
+        }
+    }
+}

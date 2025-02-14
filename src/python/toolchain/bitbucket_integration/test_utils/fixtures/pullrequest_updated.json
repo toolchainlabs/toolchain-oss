@@ -1,0 +1,276 @@
+{
+    "headers": {
+        "Host": "tcwebhookdev.ngrok.io",
+        "User-Agent": "Bitbucket-Webhooks/2.0",
+        "Content-Length": "6529",
+        "Accept": "*/*",
+        "Authorization": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmk6Y2xvdWQ6Yml0YnVja2V0OjphcHAve2FjZjU0ODc4LTUxYmUtNDczZS1iZjBiLTBmYmIxMmUwMTFhZH0vdG9vbGNoYWluLWRldiIsImlhdCI6MTYyODEzOTczOCwicXNoIjoiZGJjZjRkY2FkYzIzNzNkNDRmZmYzOWZkOWVjZjk0NDI3OTIyMzgxNDRkMDI5YWEyNTAyZjYzYTliNmVkNjM5MyIsImF1ZCI6ImFyaTpjbG91ZDpiaXRidWNrZXQ6OmFwcC97YWNmNTQ4NzgtNTFiZS00NzNlLWJmMGItMGZiYjEyZTAxMWFkfS90b29sY2hhaW4tZGV2IiwiZXhwIjoxNjI4MTQzMzM4fQ.cA7T5x4ws12L24Q0Fde9C_0hRHBKjZydoBtljZQ6jxs",
+        "Content-Type": "application/json",
+        "X-Attempt-Number": "1",
+        "X-B3-Sampled": "1",
+        "X-B3-Spanid": "abb48e8320a12e65",
+        "X-B3-Traceid": "abb48e8320a12e65",
+        "X-Event-Key": "pullrequest:updated",
+        "X-Event-Time": "Thu, 05 Aug 2021 05:02:14 GMT",
+        "X-Forwarded-For": "18.246.31.226",
+        "X-Forwarded-Proto": "https",
+        "X-Hook-Uuid": "2d827de8-2b13-4cda-b2fe-172337251689",
+        "X-Request-Uuid": "e5f52863-d3b9-4e52-b259-b698d801c9a7",
+        "Accept-Encoding": "gzip"
+    },
+    "payload": {
+        "event": "pullrequest:updated",
+        "data": {
+            "pullrequest": {
+                "rendered": {
+                    "description": {
+                        "raw": "* Add linters\r\n* run linters\r\n\r\n‌",
+                        "markup": "markdown",
+                        "html": "<ul>\n<li>Add linters</li>\n<li>run linters</li>\n</ul>\n<p>‌</p>",
+                        "type": "rendered"
+                    },
+                    "title": {
+                        "raw": "Add linters",
+                        "markup": "markdown",
+                        "html": "<p>Add linters</p>",
+                        "type": "rendered"
+                    }
+                },
+                "type": "pullrequest",
+                "description": "* Add linters\r\n* run linters\r\n\r\n‌",
+                "links": {
+                    "decline": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/pullrequests/7/decline"
+                    },
+                    "diffstat": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/diffstat/asherf/minimal-pants:c15bb3fdf21d%0Dd98f3c1d2ad4?from_pullrequest_id=7"
+                    },
+                    "commits": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/pullrequests/7/commits"
+                    },
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/pullrequests/7"
+                    },
+                    "comments": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/pullrequests/7/comments"
+                    },
+                    "merge": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/pullrequests/7/merge"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/festivus-miracle/minimal-pants/pull-requests/7"
+                    },
+                    "activity": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/pullrequests/7/activity"
+                    },
+                    "request-changes": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/pullrequests/7/request-changes"
+                    },
+                    "diff": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/diff/asherf/minimal-pants:c15bb3fdf21d%0Dd98f3c1d2ad4?from_pullrequest_id=7"
+                    },
+                    "approve": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/pullrequests/7/approve"
+                    },
+                    "statuses": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/pullrequests/7/statuses"
+                    }
+                },
+                "title": "Add linters",
+                "close_source_branch": true,
+                "reviewers": [],
+                "id": 7,
+                "destination": {
+                    "commit": {
+                        "hash": "d98f3c1d2ad4",
+                        "type": "commit",
+                        "links": {
+                            "self": {
+                                "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants/commit/d98f3c1d2ad4"
+                            },
+                            "html": {
+                                "href": "https://bitbucket.org/festivus-miracle/minimal-pants/commits/d98f3c1d2ad4"
+                            }
+                        }
+                    },
+                    "repository": {
+                        "links": {
+                            "self": {
+                                "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants"
+                            },
+                            "html": {
+                                "href": "https://bitbucket.org/festivus-miracle/minimal-pants"
+                            },
+                            "avatar": {
+                                "href": "https://bytebucket.org/ravatar/%7Bc389eba6-ca13-49c5-8dec-4e617d39dffe%7D?ts=default"
+                            }
+                        },
+                        "type": "repository",
+                        "name": "minimal-pants",
+                        "full_name": "festivus-miracle/minimal-pants",
+                        "uuid": "{c389eba6-ca13-49c5-8dec-4e617d39dffe}"
+                    },
+                    "branch": {
+                        "name": "main"
+                    }
+                },
+                "created_on": "2021-07-16T03:07:03.406419+00:00",
+                "summary": {
+                    "raw": "* Add linters\r\n* run linters\r\n\r\n‌",
+                    "markup": "markdown",
+                    "html": "<ul>\n<li>Add linters</li>\n<li>run linters</li>\n</ul>\n<p>‌</p>",
+                    "type": "rendered"
+                },
+                "source": {
+                    "commit": {
+                        "hash": "c15bb3fdf21d",
+                        "type": "commit",
+                        "links": {
+                            "self": {
+                                "href": "https://api.bitbucket.org/2.0/repositories/asherf/minimal-pants/commit/c15bb3fdf21d"
+                            },
+                            "html": {
+                                "href": "https://bitbucket.org/asherf/minimal-pants/commits/c15bb3fdf21d"
+                            }
+                        }
+                    },
+                    "repository": {
+                        "links": {
+                            "self": {
+                                "href": "https://api.bitbucket.org/2.0/repositories/asherf/minimal-pants"
+                            },
+                            "html": {
+                                "href": "https://bitbucket.org/asherf/minimal-pants"
+                            },
+                            "avatar": {
+                                "href": "https://bytebucket.org/ravatar/%7B16e7c0d0-f7a1-422f-a871-4b893e750891%7D?ts=default"
+                            }
+                        },
+                        "type": "repository",
+                        "name": "minimal-pants",
+                        "full_name": "asherf/minimal-pants",
+                        "uuid": "{16e7c0d0-f7a1-422f-a871-4b893e750891}"
+                    },
+                    "branch": {
+                        "name": "upgrades"
+                    }
+                },
+                "comment_count": 0,
+                "state": "OPEN",
+                "task_count": 0,
+                "participants": [],
+                "reason": "",
+                "updated_on": "2021-08-05T05:02:14.682285+00:00",
+                "author": {
+                    "display_name": "Asher Foa",
+                    "uuid": "{6ae3c307-ae59-4135-9c72-bdd06eb2010a}",
+                    "links": {
+                        "self": {
+                            "href": "https://api.bitbucket.org/2.0/users/%7B6ae3c307-ae59-4135-9c72-bdd06eb2010a%7D"
+                        },
+                        "html": {
+                            "href": "https://bitbucket.org/%7B6ae3c307-ae59-4135-9c72-bdd06eb2010a%7D/"
+                        },
+                        "avatar": {
+                            "href": "https://secure.gravatar.com/avatar/ac4da70f6b5f883c3d6fb67359182b62?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAF-1.png"
+                        }
+                    },
+                    "type": "user",
+                    "nickname": "Asher Foa",
+                    "account_id": "6059303e630024006fab8c2b"
+                },
+                "merge_commit": null,
+                "closed_by": null
+            },
+            "repository": {
+                "scm": "git",
+                "website": null,
+                "uuid": "{c389eba6-ca13-49c5-8dec-4e617d39dffe}",
+                "links": {
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/festivus-miracle/minimal-pants"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/festivus-miracle/minimal-pants"
+                    },
+                    "avatar": {
+                        "href": "https://bytebucket.org/ravatar/%7Bc389eba6-ca13-49c5-8dec-4e617d39dffe%7D?ts=default"
+                    }
+                },
+                "project": {
+                    "links": {
+                        "self": {
+                            "href": "https://api.bitbucket.org/2.0/workspaces/festivus-miracle/projects/EX"
+                        },
+                        "html": {
+                            "href": "https://bitbucket.org/festivus-miracle/workspace/projects/EX"
+                        },
+                        "avatar": {
+                            "href": "https://bitbucket.org/account/user/festivus-miracle/projects/EX/avatar/32?ts=1616553975"
+                        }
+                    },
+                    "type": "project",
+                    "name": "examples",
+                    "key": "EX",
+                    "uuid": "{c317bcc0-da61-4301-a5ba-fe15f49b6f23}"
+                },
+                "full_name": "festivus-miracle/minimal-pants",
+                "owner": {
+                    "username": "festivus-miracle",
+                    "display_name": "festivus miracle",
+                    "type": "team",
+                    "uuid": "{acf54878-51be-473e-bf0b-0fbb12e011ad}",
+                    "links": {
+                        "self": {
+                            "href": "https://api.bitbucket.org/2.0/teams/%7Bacf54878-51be-473e-bf0b-0fbb12e011ad%7D"
+                        },
+                        "html": {
+                            "href": "https://bitbucket.org/%7Bacf54878-51be-473e-bf0b-0fbb12e011ad%7D/"
+                        },
+                        "avatar": {
+                            "href": "https://bitbucket.org/account/festivus-miracle/avatar/"
+                        }
+                    }
+                },
+                "workspace": {
+                    "slug": "festivus-miracle",
+                    "type": "workspace",
+                    "name": "festivus miracle",
+                    "links": {
+                        "self": {
+                            "href": "https://api.bitbucket.org/2.0/workspaces/festivus-miracle"
+                        },
+                        "html": {
+                            "href": "https://bitbucket.org/festivus-miracle/"
+                        },
+                        "avatar": {
+                            "href": "https://bitbucket.org/workspaces/festivus-miracle/avatar/?ts=1616554926"
+                        }
+                    },
+                    "uuid": "{acf54878-51be-473e-bf0b-0fbb12e011ad}"
+                },
+                "type": "repository",
+                "is_private": false,
+                "name": "minimal-pants"
+            },
+            "actor": {
+                "display_name": "Asher Foa",
+                "uuid": "{6ae3c307-ae59-4135-9c72-bdd06eb2010a}",
+                "links": {
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/users/%7B6ae3c307-ae59-4135-9c72-bdd06eb2010a%7D"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/%7B6ae3c307-ae59-4135-9c72-bdd06eb2010a%7D/"
+                    },
+                    "avatar": {
+                        "href": "https://secure.gravatar.com/avatar/ac4da70f6b5f883c3d6fb67359182b62?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAF-1.png"
+                    }
+                },
+                "type": "user",
+                "nickname": "Asher Foa",
+                "account_id": "6059303e630024006fab8c2b"
+            }
+        }
+    }
+}

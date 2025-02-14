@@ -1,0 +1,281 @@
+{
+    "info": {
+      "author": "Sara Saray, Szabolcs Kali, Christian Rossert, Andrew Davison, Shailesh Appukuttan",
+      "author_email": "saray.sara@koki.mta.hu, kali@koki.hu, christian.rossert@epfl.ch, andrew.davison@unic.cnrs-gif.fr, shailesh.appukuttan@unic.cnrs-gif.fr",
+      "bugtrack_url": null,
+      "classifiers": [
+        
+      ],
+      "description": "",
+      "description_content_type": "",
+      "docs_url": null,
+      "download_url": "",
+      "downloads": {
+        "last_day": -1,
+        "last_month": -1,
+        "last_week": -1
+      },
+      "home_page": "http://github.com/kalilab/hippounit",
+      "keywords": "",
+      "license": "MIT",
+      "maintainer": "",
+      "maintainer_email": "",
+      "name": "hippounit",
+      "package_url": "https://pypi.org/project/hippounit/",
+      "platform": "",
+      "project_url": "https://pypi.org/project/hippounit/",
+      "project_urls": {
+        "Homepage": "http://github.com/kalilab/hippounit"
+      },
+      "release_url": "https://pypi.org/project/hippounit/1.3.4/",
+      "requires_dist": [
+        "sciunit (>=0.2.1)",
+        "efel"
+      ],
+      "requires_python": "",
+      "summary": "A SciUnit library for data-driven validation testing of models of hippocampus.",
+      "version": "1.3.4",
+      "yanked": false
+    },
+    "last_serial": 7198862,
+    "releases": {
+      "1.3.1": [
+        {
+          "comment_text": "",
+          "digests": {
+            "md5": "e58c8456f05445489ddde55856cef8a9",
+            "sha256": "ee3f4f7e248fd5de6984eb50768d725b9525ac0c94da25e6ca5ffa7df12fe059"
+          },
+          "downloads": -1,
+          "filename": "hippounit-1.3.1-py2-none-any.whl",
+          "has_sig": false,
+          "md5_digest": "e58c8456f05445489ddde55856cef8a9",
+          "packagetype": "bdist_wheel",
+          "python_version": "py2",
+          "requires_python": null,
+          "size": 70560,
+          "upload_time": "2019-08-29T10:59:57",
+          "upload_time_iso_8601": "2019-08-29T10:59:57.024852Z",
+          "url": "https://files.pythonhosted.org/packages/f8/02/046e2d737b5e6debf5b02ec01f8f673890604c96573272598d2ded29197b/hippounit-1.3.1-py2-none-any.whl",
+          "yanked": false
+        },
+        {
+          "comment_text": "",
+          "digests": {
+            "md5": "1cdf0a031cdce0910b0c33f4e92d0199",
+            "sha256": "e7a50cebd6f64ed262f0ce0abcc3f97deb9b1bb04090e528236b0859e2d010ab"
+          },
+          "downloads": -1,
+          "filename": "hippounit-1.3.1.tar.gz",
+          "has_sig": false,
+          "md5_digest": "1cdf0a031cdce0910b0c33f4e92d0199",
+          "packagetype": "sdist",
+          "python_version": "source",
+          "requires_python": null,
+          "size": 55325,
+          "upload_time": "2019-08-29T11:00:11",
+          "upload_time_iso_8601": "2019-08-29T11:00:11.635778Z",
+          "url": "https://files.pythonhosted.org/packages/c1/51/84028383bda6066fbb0a1cc0b6b56c581397f70502f77518e370920cf641/hippounit-1.3.1.tar.gz",
+          "yanked": false
+        }
+      ],
+      "1.3.2": [
+        {
+          "comment_text": "",
+          "digests": {
+            "md5": "8fdb69a7f8a33d90023056fe5e1611a9",
+            "sha256": "05b637983b14cbc6c55d12245c349a330bb6288cc7aad4f4073cb53c9c86c3de"
+          },
+          "downloads": -1,
+          "filename": "hippounit-1.3.2-py2.7.egg",
+          "has_sig": false,
+          "md5_digest": "8fdb69a7f8a33d90023056fe5e1611a9",
+          "packagetype": "bdist_egg",
+          "python_version": "2.7",
+          "requires_python": null,
+          "size": 153056,
+          "upload_time": "2019-10-25T11:42:53",
+          "upload_time_iso_8601": "2019-10-25T11:42:53.100685Z",
+          "url": "https://files.pythonhosted.org/packages/a2/0f/81d7f2583a6329704b12b5976122de74a6b1b7352e58781c8efaf447048c/hippounit-1.3.2-py2.7.egg",
+          "yanked": false
+        },
+        {
+          "comment_text": "",
+          "digests": {
+            "md5": "f2e0546b3b51fe7817683aefeee7a228",
+            "sha256": "7eda0e49a125162aa90872431b8c23048b70b2282c1a1dff806d89ed78d6d14f"
+          },
+          "downloads": -1,
+          "filename": "hippounit-1.3.2-py2-none-any.whl",
+          "has_sig": false,
+          "md5_digest": "f2e0546b3b51fe7817683aefeee7a228",
+          "packagetype": "bdist_wheel",
+          "python_version": "py2",
+          "requires_python": null,
+          "size": 70686,
+          "upload_time": "2019-09-04T13:56:18",
+          "upload_time_iso_8601": "2019-09-04T13:56:18.785476Z",
+          "url": "https://files.pythonhosted.org/packages/44/a2/740cae2624521a8d85e5b83f724fa195a6e28bfc4185a4b539842550ea20/hippounit-1.3.2-py2-none-any.whl",
+          "yanked": false
+        },
+        {
+          "comment_text": "",
+          "digests": {
+            "md5": "b0ffeb9fb41030166bea5dc56bf9e550",
+            "sha256": "fd155d63f43e325c096c62e5f3d71e3848f6ea1e63a3e10c2abb27627801e05f"
+          },
+          "downloads": -1,
+          "filename": "hippounit-1.3.2-py3.6.egg",
+          "has_sig": false,
+          "md5_digest": "b0ffeb9fb41030166bea5dc56bf9e550",
+          "packagetype": "bdist_egg",
+          "python_version": "3.6",
+          "requires_python": null,
+          "size": 152096,
+          "upload_time": "2019-10-25T11:42:54",
+          "upload_time_iso_8601": "2019-10-25T11:42:54.796700Z",
+          "url": "https://files.pythonhosted.org/packages/9c/d2/cdefa3fc140114e89ac0fb630a0f59ad24e98da6fd0e129e55d9cf7b3cfc/hippounit-1.3.2-py3.6.egg",
+          "yanked": false
+        },
+        {
+          "comment_text": "",
+          "digests": {
+            "md5": "3d4a51d920dcf33af6fb14594370c328",
+            "sha256": "a60570b668dc490d32986bc801d514df69dd60835dd112c98c4fb31566607340"
+          },
+          "downloads": -1,
+          "filename": "hippounit-1.3.2.tar.gz",
+          "has_sig": false,
+          "md5_digest": "3d4a51d920dcf33af6fb14594370c328",
+          "packagetype": "sdist",
+          "python_version": "source",
+          "requires_python": null,
+          "size": 55463,
+          "upload_time": "2019-09-04T13:56:33",
+          "upload_time_iso_8601": "2019-09-04T13:56:33.094920Z",
+          "url": "https://files.pythonhosted.org/packages/c4/fc/12d8e2e2c3fcc2ed060d3fa5f531d59a90b05a529175bd74699789cd1c1e/hippounit-1.3.2.tar.gz",
+          "yanked": false
+        }
+      ],
+      "1.3.3": [
+        {
+          "comment_text": "",
+          "digests": {
+            "md5": "127bb73be45433e2ee5c747a5eb9d86a",
+            "sha256": "a4d72c2edbbf1eae883e886cbb0750622600ed5a894b432b19a9ea84a6e1d1d9"
+          },
+          "downloads": -1,
+          "filename": "hippounit-1.3.3-py2-none-any.whl",
+          "has_sig": false,
+          "md5_digest": "127bb73be45433e2ee5c747a5eb9d86a",
+          "packagetype": "bdist_wheel",
+          "python_version": "py2",
+          "requires_python": null,
+          "size": 70160,
+          "upload_time": "2019-10-25T11:42:51",
+          "upload_time_iso_8601": "2019-10-25T11:42:51.456351Z",
+          "url": "https://files.pythonhosted.org/packages/02/ce/1ff67ebca9a810ecdb01fcd73728e055c858babd86586426fa80e7eab89d/hippounit-1.3.3-py2-none-any.whl",
+          "yanked": false
+        },
+        {
+          "comment_text": "",
+          "digests": {
+            "md5": "6060ebfca211116c0a21340ef6d8989f",
+            "sha256": "22ae3dc01e6823418786bb147a1eba317e40116947d5d56a54987d30943ca478"
+          },
+          "downloads": -1,
+          "filename": "hippounit-1.3.3.tar.gz",
+          "has_sig": false,
+          "md5_digest": "6060ebfca211116c0a21340ef6d8989f",
+          "packagetype": "sdist",
+          "python_version": "source",
+          "requires_python": null,
+          "size": 55068,
+          "upload_time": "2019-10-25T11:42:56",
+          "upload_time_iso_8601": "2019-10-25T11:42:56.617884Z",
+          "url": "https://files.pythonhosted.org/packages/b6/7f/086c18658ffae32a591af45127b9f4a24a465cc83f0b2a007f6299f09c54/hippounit-1.3.3.tar.gz",
+          "yanked": false
+        }
+      ],
+      "1.3.4": [
+        {
+          "comment_text": "",
+          "digests": {
+            "md5": "b845d28e20cbd1d5a292a60f3655ec1c",
+            "sha256": "da02ed2394477944af5fe541ab9779bd9d4b601ce1df9b4643f048a6f3e14fea"
+          },
+          "downloads": -1,
+          "filename": "hippounit-1.3.4-py2-none-any.whl",
+          "has_sig": false,
+          "md5_digest": "b845d28e20cbd1d5a292a60f3655ec1c",
+          "packagetype": "bdist_wheel",
+          "python_version": "py2",
+          "requires_python": null,
+          "size": 74226,
+          "upload_time": "2020-05-08T17:48:18",
+          "upload_time_iso_8601": "2020-05-08T17:48:18.221605Z",
+          "url": "https://files.pythonhosted.org/packages/09/ad/f16e08f38b9c53e8919bd94e11007f07ce81dc5d05fb6bb9dccbd74a2193/hippounit-1.3.4-py2-none-any.whl",
+          "yanked": false
+        },
+        {
+          "comment_text": "",
+          "digests": {
+            "md5": "3d117e577ca63beeae5f0b0886110d1a",
+            "sha256": "4e00103290c352cac9c35f99404dd3f301ac784946f4ee26aae070b8a330bcbf"
+          },
+          "downloads": -1,
+          "filename": "hippounit-1.3.4.tar.gz",
+          "has_sig": false,
+          "md5_digest": "3d117e577ca63beeae5f0b0886110d1a",
+          "packagetype": "sdist",
+          "python_version": "source",
+          "requires_python": null,
+          "size": 57585,
+          "upload_time": "2020-05-08T17:48:22",
+          "upload_time_iso_8601": "2020-05-08T17:48:22.030919Z",
+          "url": "https://files.pythonhosted.org/packages/60/4c/116fdc1351559c2fb6f8b75da49cd62dc7fd1d25d284c27fc65169adb8e3/hippounit-1.3.4.tar.gz",
+          "yanked": false
+        }
+      ]
+    },
+    "urls": [
+      {
+        "comment_text": "",
+        "digests": {
+          "md5": "b845d28e20cbd1d5a292a60f3655ec1c",
+          "sha256": "da02ed2394477944af5fe541ab9779bd9d4b601ce1df9b4643f048a6f3e14fea"
+        },
+        "downloads": -1,
+        "filename": "hippounit-1.3.4-py2-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "b845d28e20cbd1d5a292a60f3655ec1c",
+        "packagetype": "bdist_wheel",
+        "python_version": "py2",
+        "requires_python": null,
+        "size": 74226,
+        "upload_time": "2020-05-08T17:48:18",
+        "upload_time_iso_8601": "2020-05-08T17:48:18.221605Z",
+        "url": "https://files.pythonhosted.org/packages/09/ad/f16e08f38b9c53e8919bd94e11007f07ce81dc5d05fb6bb9dccbd74a2193/hippounit-1.3.4-py2-none-any.whl",
+        "yanked": false
+      },
+      {
+        "comment_text": "",
+        "digests": {
+          "md5": "3d117e577ca63beeae5f0b0886110d1a",
+          "sha256": "4e00103290c352cac9c35f99404dd3f301ac784946f4ee26aae070b8a330bcbf"
+        },
+        "downloads": -1,
+        "filename": "hippounit-1.3.4.tar.gz",
+        "has_sig": false,
+        "md5_digest": "3d117e577ca63beeae5f0b0886110d1a",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": null,
+        "size": 57585,
+        "upload_time": "2020-05-08T17:48:22",
+        "upload_time_iso_8601": "2020-05-08T17:48:22.030919Z",
+        "url": "https://files.pythonhosted.org/packages/60/4c/116fdc1351559c2fb6f8b75da49cd62dc7fd1d25d284c27fc65169adb8e3/hippounit-1.3.4.tar.gz",
+        "yanked": false
+      }
+    ]
+}

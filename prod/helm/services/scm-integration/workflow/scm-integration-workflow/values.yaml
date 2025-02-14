@@ -1,0 +1,21 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: scm-integration-workflow
+service_name: scm-integration/workflow
+toolchain_product_name: scm-integration
+workflow_server_rev:
+  us-east-1: prod-2023-04-26.16-00-05-bec30673bb16
+workflow_maintenance_image_rev:
+  us-east-1: prod-2023-04-26.16-00-05-bec30673bb16
+dbs: [users, scm-integration]
+workers:
+  scm_integration_worker_values:
+    iam_service_role_arn: null # set by deploy script
+    worker_deployment_name: scm-integration-worker
+    secrets:
+    - github-app-private-key
+    replicas: 1
+    extra_config:
+    # Resolved in resources_resolver.py
+      SCM_INTEGRATION_BUCKET: null

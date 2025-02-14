@@ -1,0 +1,50 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: infosite
+gunicorn_image_rev:
+  us-east-1: prod-2022-12-20.15-01-55-b1957c040fdb
+service_type: web-ui-marketing
+iam_service_role_arn: null
+service_location: edge
+toolchain_product_name: infosite
+host_name: toolchain.com
+resources:
+  gunicorn:
+    requests:
+      cpu: 90m
+      memory: 256Mi
+tests:
+  enabled: true
+  infosite:
+    image_rev:
+      us-east-1: prod-2022-12-20.15-01-55-b1957c040fdb
+ingress:
+  name: infosite-ingress
+  enabled: false
+  external_ingress_sg_id:  # Gets overwritten by install_service_prod.py
+    us-east-1: null
+  ssl_certificate_arn:  # Gets overwritten by install_service_prod.py
+    us-east-1: null
+  healthcheck_path: /healthz
+  rules:
+  - host: www.toolchain.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: infosite
+            port:
+              number: 80
+  - host: toolchain.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: infosite
+            port:
+              number: 80

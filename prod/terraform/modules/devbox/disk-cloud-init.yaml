@@ -1,0 +1,54 @@
+#!cloud-config
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+merge_how:
+  - name: list
+    settings: [append]
+  - name: dict
+    settings: [no_replace, recurse_list]
+
+write_files:
+  - path: /data_setup.sh
+    owner: root:root
+    permissions: '0555'
+    content: |
+      #!/bin/bash
+
+      # Put the Docker daemon's storage onto the /data volume.
+      mkdir -p /etc/docker
+      cat >/etc/docker/daemon.json <<EOF
+      {
+        "data-root": "/data/docker",
+        "storage-driver": "overlay"
+      }
+      EOF
+
+      # Restart the Docker daemon to pick up the configuration change.
+      systemctl restart docker.service
+
+      # Configure users' home directories to be at /data/home/USER.
+      mkdir -p /data/home
+      sed -i 's@^.*HOME=.*$@HOME=/data/home@' /etc/default/useradd
+
+      # Finally remove this script so that it does not run again.
+      rm -f /data_setup.sh
+
+disk_setup:
+  ${disk_device}:
+    table_type: "mbr"
+    layout: True
+    overwrite: false
+
+fs_setup:
+  - label: datavol
+    filesystem: ext4
+    device: ${disk_device}
+    partition: auto
+    overwrite: false
+
+mounts:
+  - [ "LABEL=datavol", "/data" ]
+
+runcmd:
+  - [ /bin/bash, -c, "[ -x /data_setup.sh ] && /data_setup.sh" ]

@@ -1,0 +1,403 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LogArtifat/> should show data 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-cqph87-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-ifwal7-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-14vsyoi-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item css-1stysr8-MuiGrid-root"
+                  id="line1"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-f8nspd-MuiTypography-root"
+                  >
+                    1
+                  </span>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1z0dvx8-MuiGrid-root"
+                >
+                  <code
+                    class="css-hjba6k"
+                  >
+                    <span>
+                      14:58:49.85 
+                    </span>
+                    <span
+                      style="color: rgb(187, 0, 0);"
+                    >
+                      [WARN]
+                    </span>
+                    <span>
+                       File watcher exiting with: The watcher was shut down.
+                    </span>
+                  </code>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-14vsyoi-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item css-1stysr8-MuiGrid-root"
+                  id="line2"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-f8nspd-MuiTypography-root"
+                  >
+                    2
+                  </span>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1z0dvx8-MuiGrid-root"
+                >
+                  <code
+                    class="css-hjba6k"
+                  >
+                    <span>
+                      14:58:50.60 
+                    </span>
+                    <span
+                      style="color: rgb(187, 0, 0);"
+                    >
+                      [WARN]
+                    </span>
+                    <span>
+                       Failed to write to remote cache (1 occurrences so far): Unknown: "transport error: error trying to connect: tcp connect error: Connection refused (os error 61)"
+                    </span>
+                  </code>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-14vsyoi-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item css-1stysr8-MuiGrid-root"
+                  id="line3"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-f8nspd-MuiTypography-root"
+                  >
+                    3
+                  </span>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1z0dvx8-MuiGrid-root"
+                >
+                  <code
+                    class="css-hjba6k"
+                  >
+                    <span>
+                      14:58:50.98 
+                    </span>
+                    <span
+                      style="color: rgb(187, 0, 0);"
+                    >
+                      [WARN]
+                    </span>
+                    <span>
+                       Failed to read from remote cache (1 occurrences so far): Unknown: "transport error: error trying to connect: tcp connect error: Connection refused (os error 61)
+                    </span>
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<LogArtifat/> should show data with multiple lines selected from queryParams 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-cqph87-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-ifwal7-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-1bpoh67-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item css-1stysr8-MuiGrid-root"
+                  id="line1"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-1vij1yw-MuiTypography-root"
+                  >
+                    1
+                  </span>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1z0dvx8-MuiGrid-root"
+                >
+                  <code
+                    class="css-hjba6k"
+                  >
+                    <span>
+                      14:58:49.85 
+                    </span>
+                    <span
+                      style="color: rgb(187, 0, 0);"
+                    >
+                      [WARN]
+                    </span>
+                    <span>
+                       File watcher exiting with: The watcher was shut down.
+                    </span>
+                  </code>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-1wa3r2n-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item css-1stysr8-MuiGrid-root"
+                  id="line2"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-1vij1yw-MuiTypography-root"
+                  >
+                    2
+                  </span>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1z0dvx8-MuiGrid-root"
+                >
+                  <code
+                    class="css-hjba6k"
+                  >
+                    <span>
+                      14:58:50.60 
+                    </span>
+                    <span
+                      style="color: rgb(187, 0, 0);"
+                    >
+                      [WARN]
+                    </span>
+                    <span>
+                       Failed to write to remote cache (1 occurrences so far): Unknown: "transport error: error trying to connect: tcp connect error: Connection refused (os error 61)"
+                    </span>
+                  </code>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-14vsyoi-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item css-1stysr8-MuiGrid-root"
+                  id="line3"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-f8nspd-MuiTypography-root"
+                  >
+                    3
+                  </span>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1z0dvx8-MuiGrid-root"
+                >
+                  <code
+                    class="css-hjba6k"
+                  >
+                    <span>
+                      14:58:50.98 
+                    </span>
+                    <span
+                      style="color: rgb(187, 0, 0);"
+                    >
+                      [WARN]
+                    </span>
+                    <span>
+                       Failed to read from remote cache (1 occurrences so far): Unknown: "transport error: error trying to connect: tcp connect error: Connection refused (os error 61)
+                    </span>
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<LogArtifat/> should show data with one line selected from queryParams 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-cqph87-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-ifwal7-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-h984nc-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item css-1stysr8-MuiGrid-root"
+                  id="line1"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-1vij1yw-MuiTypography-root"
+                  >
+                    1
+                  </span>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1z0dvx8-MuiGrid-root"
+                >
+                  <code
+                    class="css-hjba6k"
+                  >
+                    <span>
+                      14:58:49.85 
+                    </span>
+                    <span
+                      style="color: rgb(187, 0, 0);"
+                    >
+                      [WARN]
+                    </span>
+                    <span>
+                       File watcher exiting with: The watcher was shut down.
+                    </span>
+                  </code>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-14vsyoi-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item css-1stysr8-MuiGrid-root"
+                  id="line2"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-f8nspd-MuiTypography-root"
+                  >
+                    2
+                  </span>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1z0dvx8-MuiGrid-root"
+                >
+                  <code
+                    class="css-hjba6k"
+                  >
+                    <span>
+                      14:58:50.60 
+                    </span>
+                    <span
+                      style="color: rgb(187, 0, 0);"
+                    >
+                      [WARN]
+                    </span>
+                    <span>
+                       Failed to write to remote cache (1 occurrences so far): Unknown: "transport error: error trying to connect: tcp connect error: Connection refused (os error 61)"
+                    </span>
+                  </code>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-14vsyoi-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item css-1stysr8-MuiGrid-root"
+                  id="line3"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-code1 css-f8nspd-MuiTypography-root"
+                  >
+                    3
+                  </span>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1z0dvx8-MuiGrid-root"
+                >
+                  <code
+                    class="css-hjba6k"
+                  >
+                    <span>
+                      14:58:50.98 
+                    </span>
+                    <span
+                      style="color: rgb(187, 0, 0);"
+                    >
+                      [WARN]
+                    </span>
+                    <span>
+                       Failed to read from remote cache (1 occurrences so far): Unknown: "transport error: error trying to connect: tcp connect error: Connection refused (os error 61)
+                    </span>
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,47 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{- $target_ns := default .Release.Namespace .Values.workers.pants_demos_depgraph_worker_values.target_namespace }}
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: pants-demos-depgraph-workflow
+  labels:
+    app: pants-demos-depgraph
+  annotations:
+     eks.amazonaws.com/role-arn: {{ .Values.workers.pants_demos_depgraph_worker_values.iam_service_role_arn }}
+  
+---
+
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: pants-demos-depgraph-workflow
+  namespace: {{ $target_ns }}
+  labels:
+    app: pants-demos-depgraph
+rules:
+  - apiGroups: ["batch"]
+    resources: ["jobs", "jobs/status"]
+    verbs: ["get", "update", "delete", "create", "watch", "list"]
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "list", "delete"]
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  namespace: {{ $target_ns }}
+  labels:
+    app: pants-demos-depgraph
+  name: pants-demos-depgraph-workflow
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: pants-demos-depgraph-workflow
+subjects:
+  - kind: ServiceAccount
+    name: pants-demos-depgraph-workflow
+    namespace: {{ .Release.Namespace }}

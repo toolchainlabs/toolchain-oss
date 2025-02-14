@@ -1,0 +1,44 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "maven/base.html" %}
+
+{% block content %}
+  <h2>Details for POM {{ object.id }}</h2>
+  <table class="table">
+    <tr>
+      <td>URL:</td><td><a href="{{ object.web_resource.url }}" target="_blank">{{ object.web_resource.url }}</a></td>
+    </tr>
+    <tr>
+      <td>Group ID:</td>
+      <td>
+        <a href="{{ url('maven:group_artifacts', kwargs={'group_id': object.artifact.group_id}) }}">{{ object.artifact.group_id }}</a>
+      </td>
+    </tr>
+    <tr><td>Artifact ID:</td><td><a href="{{ object.artifact.get_absolute_url() }}"
+    >{{ object.artifact.artifact_id }}</a></td></tr>
+    <tr>
+      <td>Version:</td>
+      <td>
+        {% if object.artifact_version_ref %}
+          <a href="{{ object.artifact_version_ref.artifact_version.get_absolute_url() }}">{{ object.version }}</a>
+        {% else %}
+          {{ object.version }}
+        {% endif %}
+      </td>
+    </tr>
+    <tr>
+      <td>Parent POM:</td>
+      <td>
+        {% if object.parent %}
+          <a href="{{ object.parent.get_absolute_url() }}">{{ object.parent.web_resource.url }}</a>
+        {% else %}
+          -
+        {% endif %}
+      </td>
+    </tr>
+    <tr><td></td><td><a href="{{ object.web_resource.get_absolute_url() }}">WebResource Details</a></td></tr>
+  </table>
+{% endblock content %}

@@ -1,0 +1,1142 @@
+{
+    "counter_names": [
+        "local_process_total_time_run_ms",
+        "local_cache_requests",
+        "local_cache_requests_cached",
+        "local_cache_requests_uncached",
+        "remote_store_blob_bytes_downloaded",
+        "remote_store_blob_bytes_uploaded"
+    ],
+    "counters": {
+        "local_cache_requests": 1132,
+        "local_cache_requests_cached": 1096,
+        "local_cache_requests_uncached": 36,
+        "local_cache_total_time_saved_ms": 328764,
+        "local_execution_requests": 36,
+        "local_process_total_time_run_ms": 9273
+    },
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 30.840972900390625
+        }
+    ],
+    "observation_histograms": {
+        "histograms": {
+            "local_cache_time_saved_ms": "HISTFAAAARx4nC2PMUsDQRCFd7+b26yXzea8HBeFqIggiARLSwsLWzvxF1gGK0khggqpJYh1SrG2shBLEWsrSysR9BfonMnusDPvvd332N7luGOM3TfTlcy6nbaz353v6XTewBkMTjDOZU4kehdcVnpfxLhQ5FL0qliV677Ml6si5MEHX1RlGasYQhXzIF5Lsrqic+hMZoSAF0cNFYiA+muOmDqvXkLyLzRo6pyqXpceDUxo64WWgnnmYI2ukl0FHRLdfVJZYUn5lFVlW2zTZpGBck02GTKxjC2n+qrPMbscccA1avEAWxyqx4CR5aXOfbKc8Ga5sCq9W/aYwAb3MEr4SnhMubHciRr1+UH1JleWD8ur/u8WPkWTVBjybPkDGm0lrg==",
+            "local_process_time_run_ms": "HISTFAAAAFx4nC2KwQmAMBAEL3NRCRJCyFO/1iFWYjOCBViItYgl2IBfXxqI+5ndZfplSyIySYn+NAXhHe/SImIVIWI9ykxlIy1NPpQOiydkIeXlGDgNj3IY9pqrZnV8t48KLw==",
+            "local_store_read_blob_size": "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",
+            "local_store_read_blob_time_micros": "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"
+        },
+        "version": 0
+    },
+    "pantsd_stats": {
+        "affected_file_count": 1869,
+        "preceding_graph_size": 1417,
+        "resulting_graph_size": 34058
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "streaming_workunits_complete_async": true,
+            "streaming_workunits_level": "debug",
+            "streaming_workunits_report_interval": 1,
+            "subproject_roots": [],
+            "tag": [],
+            "verify_config": true,
+            "watch_filesystem": true
+        },
+        "__no_goal": {},
+        "__unknown_goal": {},
+        "anonymous-telemetry": {
+            "enabled": true,
+            "repo_id": "7775F8D5-FC58-4DBC-9302-D00AE4A1505F"
+        },
+        "yapf": {
+            "args": [],
+            "lockfile": "<default>",
+            "skip": false,
+            "version": "yapf==0.32.0"
+        }
+    },
+    "run_info": {
+        "branch": "tclocal",
+        "buildroot": "/data/home/asher/projects/pants2",
+        "cmd_line": "pants fmt package check lint src/python/::",
+        "computed_goals": [
+            "fmt",
+            "package",
+            "check",
+            "lint"
+        ],
+        "datetime": "Monday May 09, 2022 16:32:20",
+        "id": "pants_run_2022_05_09_16_32_29_279_b049f1b088ca4d88a61492d5429a1338",
+        "machine": "ip-10-1-201-65",
+        "outcome": "SUCCESS",
+        "path": "/data/home/asher/projects/pants2",
+        "revision": "a5cce7374f92fae4fc55cbbd0579e9dd003f64a1",
+        "specs_from_command_line": [
+            "src/python::"
+        ],
+        "timestamp": 1652113940.4178343,
+        "user": "asher",
+        "version": "2.13.0.dev0"
+    },
+    "targets": {
+        "src/python/pants/VERSION:resources": [
+            {
+                "filename": "src/python/pants/VERSION"
+            }
+        ],
+        "src/python/pants:test_utils": [
+            {
+                "filename": "src/python/pants/conftest.py"
+            }
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "db2fd477b44e76a9",
+            "name": "pants.core.goals.fmt.fmt",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [],
+            "last_update": 1652113973,
+            "start_usecs": 1652113949363127,
+            "description": "`fmt` goal",
+            "end_usecs": 1652113954035871,
+            "counters": {
+                "local_cache_requests": 61,
+                "local_cache_total_time_saved_ms": 95886,
+                "local_process_total_time_run_ms": 5266,
+                "local_execution_requests": 29,
+                "DEPRECATED_ConsumeGlobalCountersInstead": 0,
+                "local_cache_requests_cached": 32,
+                "local_cache_requests_uncached": 29
+            }
+        },
+        {
+            "workunit_id": "afeab155ac08325d",
+            "name": "pants.backend.java.lint.google_java_format.rules.google_java_format_fmt",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "db2fd477b44e76a9"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113950215864,
+            "description": "Format with Google Java Format",
+            "end_usecs": 1652113952146255,
+            "metadata": {}
+        },
+        {
+            "workunit_id": "e4740033f8d91c66",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "afeab155ac08325d"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113950626845,
+            "description": "Scheduling: Searching for `python` on PATH=/data/home/asher/.pyenv/versions/3.6.10/bin:/data/home/asher/.pyenv/versions/3.7.10/bin:/data/home/asher/.pyenv/versions/3.8.12/bin:/data/home/asher/.pyenv/versions/3.8.2/bin:/data/home/asher/.pyenv/versions/3.8.5/bin:/data/home/asher/.pyenv/versions/3.8.6/bin:/data/home/asher/.pyenv/versions/3.8.9/bin:/data/home/asher/.pyenv/versions/3.9.4/bin:/data/home/asher/.cache/pants/pants_dev_deps/Linux.x86_64.x86_64.py38.venv/bin:/data/home/asher/bin:/data/home/asher/.pyenv/shims:/data/home/asher/.pyenv/bin:/data/home/asher/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+            "end_usecs": 1652113950641470,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/data/home/asher/.pyenv/versions/3.6.10/bin/python\n/data/home/asher/.pyenv/versions/3.7.10",
+                "stderr": "+ CHECK_FILE_ENTRIES=1\n+ for path in ${PATH//:/ }\n+ [[ -d /data/home/asher/.pyenv/versions"
+            }
+        },
+        {
+            "workunit_id": "08250a6a32b5ea6d",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "afeab155ac08325d"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113950626849,
+            "description": "Scheduling: Searching for `python3` on PATH=/data/home/asher/.pyenv/versions/3.6.10/bin:/data/home/asher/.pyenv/versions/3.7.10/bin:/data/home/asher/.pyenv/versions/3.8.12/bin:/data/home/asher/.pyenv/versions/3.8.2/bin:/data/home/asher/.pyenv/versions/3.8.5/bin:/data/home/asher/.pyenv/versions/3.8.6/bin:/data/home/asher/.pyenv/versions/3.8.9/bin:/data/home/asher/.pyenv/versions/3.9.4/bin:/data/home/asher/.cache/pants/pants_dev_deps/Linux.x86_64.x86_64.py38.venv/bin:/data/home/asher/bin:/data/home/asher/.pyenv/shims:/data/home/asher/.pyenv/bin:/data/home/asher/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+            "end_usecs": 1652113950666202,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/data/home/asher/.pyenv/versions/3.6.10/bin/python3\n/data/home/asher/.pyenv/versions/3.7.1",
+                "stderr": "+ CHECK_FILE_ENTRIES=1\n+ for path in ${PATH//:/ }\n+ [[ -d /data/home/asher/.pyenv/versions"
+            }
+        },
+        {
+            "workunit_id": "21c85b9cbbf3ad71",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "afeab155ac08325d"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113950644701,
+            "description": "Scheduling: Test binary /data/home/asher/.pyenv/shims/python.",
+            "end_usecs": 1652113950876759,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 127
+            },
+            "artifacts": {
+                "stderr": "/usr/bin/env: 'bash': No such file or directory\n"
+            }
+        },
+        {
+            "workunit_id": "4fc00d7ec26702a4",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "afeab155ac08325d"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113950671587,
+            "description": "Scheduling: Test binary /data/home/asher/.pyenv/shims/python3.",
+            "end_usecs": 1652113951050743,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 127
+            },
+            "artifacts": {
+                "stderr": "/usr/bin/env: 'bash': No such file or directory\n"
+            }
+        },
+        {
+            "workunit_id": "e3b45b49489c9ed0",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "afeab155ac08325d"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113951494561,
+            "description": "Scheduling: Fetching with coursier: com.martiansoftware:nailgun-server:0.9.1",
+            "end_usecs": 1652113951495596,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/tmp/process-executionAhBGqN/.cache/82ce2b8f4bc8f448df4f6ed5355885af1faeecda677ab193fad51e95d47d1677/jdk/https/maven-central.storage-download.googleapis.com/maven2/com/martiansoftware/nailgun-server/0.9.1/nailgun-server-0.9.1.jar\n",
+                "stderr": "+ coursier_exe=__coursier/./cs-x86_64-pc-linux\n+ shift\n+ json_output_file=coursier_report."
+            }
+        },
+        {
+            "workunit_id": "533b2a5169a31b58",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "afeab155ac08325d"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113951501970,
+            "description": "Scheduling: Ensure download of JDK --jvm=temurin:1.11.",
+            "end_usecs": 1652113952120311,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stderr": "openjdk version \"11.0.14.1\" 2022-02-08\nOpenJDK Runtime Environment Temurin-11.0.14.1+1 (build 11.0.14.1+1)\nOpenJDK 64-Bit Server VM Temurin-11.0.14.1+1 (build 11.0.14.1+1, mixed mode)\n"
+            }
+        },
+        {
+            "workunit_id": "74833ee34e98f2d4",
+            "name": "pants.jvm.resolve.coursier_fetch.materialize_classpath_for_tool",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "afeab155ac08325d"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113952122980,
+            "end_usecs": 1652113952144202
+        },
+        {
+            "workunit_id": "1ef2a95d828aebeb",
+            "name": "pants.jvm.resolve.coursier_fetch.coursier_fetch_lockfile",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "74833ee34e98f2d4"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113952131992,
+            "end_usecs": 1652113952144121
+        },
+        {
+            "workunit_id": "ab0fe2a249e920a8",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "1ef2a95d828aebeb"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113952133735,
+            "description": "Scheduling: Fetching with coursier: com.google.code.findbugs:jsr305:3.0.2",
+            "end_usecs": 1652113952136742,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/tmp/process-execution7ZHVzd/.cache/82ce2b8f4bc8f448df4f6ed5355885af1faeecda677ab193fad51e95d47d1677/jdk/https/maven-central.storage-download.googleapis.com/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar\n",
+                "stderr": "+ coursier_exe=__coursier/./cs-x86_64-pc-linux\n+ shift\n+ json_output_file=coursier_report."
+            }
+        },
+        {
+            "workunit_id": "4294ca94f7e6fe93",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "1ef2a95d828aebeb"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113952135635,
+            "description": "Scheduling: Fetching with coursier: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+            "end_usecs": 1652113952137751,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/tmp/process-executionY3fq4D/.cache/82ce2b8f4bc8f448df4f6ed5355885af1faeecda677ab193fad51e",
+                "stderr": "+ coursier_exe=__coursier/./cs-x86_64-pc-linux\n+ shift\n+ json_output_file=coursier_report."
+            }
+        },
+        {
+            "workunit_id": "d49a4d82fdb20d56",
+            "name": "pants.backend.python.lint.black.rules.black_fmt",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "db2fd477b44e76a9"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113953682310,
+            "description": "Format with Black",
+            "end_usecs": 1652113953800471,
+            "metadata": {}
+        },
+        {
+            "workunit_id": "c8f1a90f293f7e00",
+            "name": "pants.backend.python.lint.black.rules.black_fmt",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "db2fd477b44e76a9"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113953709590,
+            "description": "Format with Black",
+            "end_usecs": 1652113953829076,
+            "metadata": {}
+        },
+        {
+            "workunit_id": "573c05bfa292a99e",
+            "name": "pants.backend.python.lint.black.rules.black_fmt",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "db2fd477b44e76a9"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113953774089,
+            "description": "Format with Black",
+            "end_usecs": 1652113953856769,
+            "metadata": {}
+        },
+        {
+            "workunit_id": "f909223b37fccd72",
+            "name": "pants.backend.python.lint.black.rules.black_fmt",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "db2fd477b44e76a9"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113953778123,
+            "description": "Format with Black",
+            "end_usecs": 1652113953869982,
+            "metadata": {}
+        },
+        {
+            "workunit_id": "8f66491859325203",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "d49a4d82fdb20d56"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113953788906,
+            "description": "Scheduling: Run Black on 57 files.",
+            "end_usecs": 1652113953792607,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stderr": "All done! ✨ 🍰 ✨\n56 files left unchanged.\n"
+            }
+        },
+        {
+            "workunit_id": "07da40288241184b",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "573c05bfa292a99e"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113953788910,
+            "description": "Scheduling: Run Black on 283 files.",
+            "end_usecs": 1652113953799291,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stderr": "All done! ✨ 🍰 ✨\n283 files left unchanged.\n"
+            }
+        },
+        {
+            "workunit_id": "9be285b2cfe4b8af",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "c8f1a90f293f7e00"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113953790463,
+            "description": "Scheduling: Run Black on 330 files.",
+            "end_usecs": 1652113953798895,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stderr": "All done! ✨ 🍰 ✨\n328 files left unchanged.\n"
+            }
+        },
+        {
+            "workunit_id": "48fe334f01bc0d59",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "f909223b37fccd72"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113953790878,
+            "description": "Scheduling: Run Black on 329 files.",
+            "end_usecs": 1652113953809533,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stderr": "All done! ✨ 🍰 ✨\n329 files left unchanged.\n"
+            }
+        },
+        {
+            "workunit_id": "29f6c74a8cbc7083",
+            "name": "pants.core.goals.package.package_asset",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [],
+            "last_update": 1652113973,
+            "start_usecs": 1652113954036308,
+            "description": "`package` goal",
+            "end_usecs": 1652113960939054,
+            "counters": {
+                "local_cache_requests": 663,
+                "local_execution_requests": 30,
+                "local_cache_requests_uncached": 30,
+                "DEPRECATED_ConsumeGlobalCountersInstead": 0,
+                "local_cache_requests_cached": 601,
+                "local_cache_total_time_saved_ms": 172515,
+                "local_process_total_time_run_ms": 7859
+            }
+        },
+        {
+            "workunit_id": "ab01fea85eba6491",
+            "name": "pants.backend.python.goals.package_pex_binary.package_pex_binary",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "29f6c74a8cbc7083"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113954080305,
+            "end_usecs": 1652113960579035,
+            "metadata": {
+                "address": "src/python/pants/bin:pants"
+            }
+        },
+        {
+            "workunit_id": "8a5dcb75f47e8d46",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "29f6c74a8cbc7083"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113955634582,
+            "description": "Scheduling: Determine Python dependencies for src/python/pants/testutil/rule_runner.py:rule_runner",
+            "end_usecs": 1652113955634907,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"__future__.annotations\": {\"lineno\": 4, \"weak\": false}, \"dataclasses\": {\"line"
+            }
+        },
+        {
+            "workunit_id": "e79d886ea5beac7d",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "ab01fea85eba6491"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113955634634,
+            "description": "Scheduling: Determine Python dependencies for src/python/pants/bin/pants_loader.py:pants_loader",
+            "end_usecs": 1652113955635190,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"importlib\": {\"lineno\": 4, \"weak\": false}, \"locale\": {\"lineno\": 5, \"weak\": fa"
+            }
+        },
+        {
+            "workunit_id": "0722946563e83cf5",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "29f6c74a8cbc7083"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113955634705,
+            "description": "Scheduling: Determine Python dependencies for src/python/pants/__main__.py",
+            "end_usecs": 1652113955636542,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"pants.bin.pants_loader\": {\"lineno\": 4, \"weak\": false}}, \"assets\": []}"
+            }
+        },
+        {
+            "workunit_id": "8110bd186a98dccc",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "29f6c74a8cbc7083"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113955634817,
+            "description": "Scheduling: Determine Python dependencies for src/python/pants/testutil/_process_handler_test.py",
+            "end_usecs": 1652113955640853,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"subprocess\": {\"lineno\": 4, \"weak\": false}, \"textwrap.dedent\": {\"lineno\": 5, \"weak\": false}, \"pants.testutil._process_handler.SubprocessProcessHandler\": {\"lineno\": 7, \"weak\": false}}, \"assets\": []}"
+            }
+        },
+        {
+            "workunit_id": "2d85e1c979b0fcc9",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "29f6c74a8cbc7083"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113955634987,
+            "description": "Scheduling: Determine Python dependencies for src/python/pants/testutil/pants_integration_test.py:pants_integration_test",
+            "end_usecs": 1652113955636669,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"__future__.annotations\": {\"lineno\": 4, \"weak\": false}, \"glob\": {\"lineno\": 6,"
+            }
+        },
+        {
+            "workunit_id": "9f36b365f6ae23b5",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "29f6c74a8cbc7083"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113955635076,
+            "description": "Scheduling: Determine Python dependencies for src/python/pants/testutil/test_base.py:rule_runner",
+            "end_usecs": 1652113955640620,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"__future__.annotations\": {\"lineno\": 4, \"weak\": false}, \"abc.ABC\": {\"lineno\": 6, \"weak\": false}, \"abc.abstractmethod\": {\"lineno\": 6, \"weak\": false}}, \"assets\": []}"
+            }
+        },
+        {
+            "workunit_id": "761c9606f9ccec67",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "29f6c74a8cbc7083"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113955635126,
+            "description": "Scheduling: Determine Python dependencies for src/python/pants/testutil/_process_handler.py",
+            "end_usecs": 1652113955640729,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"io\": {\"lineno\": 4, \"weak\": false}, \"multiprocessing\": {\"lineno\": 5, \"weak\": false}, \"subprocess\": {\"lineno\": 6, \"weak\": false}, \"sys\": {\"lineno\": 7, \"weak\": false}, \"typing.Optional\": {\"lineno\": 8, \"weak\": false}}, \"assets\": []}"
+            }
+        },
+        {
+            "workunit_id": "3ac365b1dfb32ebc",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "29f6c74a8cbc7083"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113955635524,
+            "description": "Scheduling: Determine Python dependencies for src/python/pants/testutil/__init__.py",
+            "end_usecs": 1652113955640767,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {}, \"assets\": []}"
+            }
+        },
+        {
+            "workunit_id": "8c66516f0711e4b3",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "29f6c74a8cbc7083"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113955635615,
+            "description": "Scheduling: Determine Python dependencies for src/python/pants/testutil/python_interpreter_selection.py",
+            "end_usecs": 1652113955640893,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"__future__.annotations\": {\"lineno\": 4, \"weak\": false}, \"os\": {\"lineno\": 6, \""
+            }
+        },
+        {
+            "workunit_id": "56514e19f82bec3b",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "29f6c74a8cbc7083"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113959489905,
+            "description": "Scheduling: Run setuptools.build_meta:__legacy__ for src/python/pants:pants-packaged",
+            "end_usecs": 1652113959490239,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "running bdist_wheel\nrunning build\nrunning build_py\ncreating build\ncreating build/lib.linux",
+                "stderr": "package init file 'pants/__init__.py' not found (or not a regular file)\npackage init file "
+            }
+        },
+        {
+            "workunit_id": "e48f28b3487e889f",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "29f6c74a8cbc7083"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113959489930,
+            "description": "Scheduling: Run setuptools.build_meta:__legacy__ for src/python/pants/testutil:testutil_wheel",
+            "end_usecs": 1652113959490279,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "running bdist_wheel\nrunning build\nrunning build_py\ncreating build\ncreating build/lib\ncreat",
+                "stderr": "warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md\n\nwarning: check: missing meta-data: either (author and author_email) or (maintainer and maintainer_email) must be supplied\n\n"
+            }
+        },
+        {
+            "workunit_id": "1b930358b6a1cca8",
+            "name": "pants.core.goals.check.check",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [],
+            "last_update": 1652113973,
+            "start_usecs": 1652113960939705,
+            "description": "`check` goal",
+            "end_usecs": 1652113969393628,
+            "counters": {
+                "local_cache_requests_cached": 1087,
+                "local_cache_requests_uncached": 34,
+                "local_execution_requests": 34,
+                "local_cache_requests": 1121,
+                "local_cache_total_time_saved_ms": 265646,
+                "local_process_total_time_run_ms": 9155,
+                "DEPRECATED_ConsumeGlobalCountersInstead": 0
+            }
+        },
+        {
+            "workunit_id": "3c71a0033560fe77",
+            "name": "pants.backend.python.typecheck.mypy.rules.mypy_typecheck",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "1b930358b6a1cca8"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113961009273,
+            "description": "Typecheck using MyPy",
+            "end_usecs": 1652113969393075,
+            "metadata": {}
+        },
+        {
+            "workunit_id": "44b3643e5c1ab32a",
+            "name": "pants.backend.scala.goals.check.scalac_check",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "1b930358b6a1cca8"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113961009325,
+            "description": "Check compilation for Scala",
+            "end_usecs": 1652113967292893,
+            "metadata": {}
+        },
+        {
+            "workunit_id": "b3d8a77d85b3f77a",
+            "name": "pants.backend.java.goals.check.javac_check",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "1b930358b6a1cca8"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113961022599,
+            "description": "Check javac compilation",
+            "end_usecs": 1652113967860708,
+            "metadata": {}
+        },
+        {
+            "workunit_id": "b8ebbd6ea57de2c6",
+            "name": "pants.jvm.dependency_inference.symbol_mapper.merge_symbol_mappings",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "b3d8a77d85b3f77a"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113961023243,
+            "end_usecs": 1652113965653401
+        },
+        {
+            "workunit_id": "cb5f7a6bae928777",
+            "name": "pants.backend.scala.dependency_inference.symbol_mapper.map_first_party_scala_targets_to_symbols",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "b8ebbd6ea57de2c6"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113961057702,
+            "description": "Map all first party Scala targets to their symbols",
+            "end_usecs": 1652113965631189
+        },
+        {
+            "workunit_id": "99880ebbe48a55f5",
+            "name": "pants.backend.scala.dependency_inference.scala_parser.resolve_fallible_result_to_analysis",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "cb5f7a6bae928777"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113961063660,
+            "end_usecs": 1652113965613951
+        },
+        {
+            "workunit_id": "df7a3b6241c17e6b",
+            "name": "pants.backend.scala.dependency_inference.scala_parser.analyze_scala_source_dependencies",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "99880ebbe48a55f5"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113961063680,
+            "end_usecs": 1652113965566968
+        },
+        {
+            "workunit_id": "c1dedbbaf44f3151",
+            "name": "pants.jvm.resolve.coursier_fetch.materialize_classpath_for_tool",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "df7a3b6241c17e6b"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113961098371,
+            "end_usecs": 1652113964919061
+        },
+        {
+            "workunit_id": "4fb24e83b6237f10",
+            "name": "pants.jvm.resolve.coursier_fetch.coursier_resolve_lockfile",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "c1dedbbaf44f3151"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113961098751,
+            "end_usecs": 1652113964728675
+        },
+        {
+            "workunit_id": "5f79df7f6268bd96",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "4fb24e83b6237f10"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113961115868,
+            "description": "Scheduling: Running `coursier fetch` against 3 requirements: org.scala-lang:scala-compiler:2.13.8, org.scala-lang:scala-library:2.13.8, org.scala-lang:scala-reflect:2.13.8",
+            "end_usecs": 1652113962298472,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/tmp/process-executionwt8Nr2/.cache/82ce2b8f4bc8f448df4f6ed5355885af1faeecda677ab193fad51e",
+                "stderr": "+ coursier_exe=__coursier/./cs-x86_64-pc-linux\n+ shift\n+ json_output_file=coursier_report."
+            }
+        },
+        {
+            "workunit_id": "6ed0c1ebfd6fdae6",
+            "name": "pants.jvm.resolve.coursier_fetch.materialize_classpath_for_tool",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "44b3643e5c1ab32a"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113966471436,
+            "end_usecs": 1652113967204681
+        },
+        {
+            "workunit_id": "8e0160486b785e75",
+            "name": "pants.jvm.resolve.coursier_fetch.coursier_resolve_lockfile",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "6ed0c1ebfd6fdae6"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113966481798,
+            "end_usecs": 1652113967173733
+        },
+        {
+            "workunit_id": "552a344f79592b4f",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "8e0160486b785e75"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113966549217,
+            "description": "Scheduling: Running `coursier fetch` against 2 requirements: org.scala-lang:scala-compiler:2.13.8, org.scala-lang:scala-library:2.13.8",
+            "end_usecs": 1652113966947054,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/tmp/process-executionERoHhV/.cache/82ce2b8f4bc8f448df4f6ed5355885af1faeecda677ab193fad51e",
+                "stderr": "+ coursier_exe=__coursier/./cs-x86_64-pc-linux\n+ shift\n+ json_output_file=coursier_report."
+            }
+        },
+        {
+            "workunit_id": "a3efc6ae875fabd1",
+            "name": "pants.core.util_rules.system_binaries.find_zip",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "b3d8a77d85b3f77a"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113966811984,
+            "description": "Finding the `zip` binary",
+            "end_usecs": 1652113967393341
+        },
+        {
+            "workunit_id": "3b2f8ae0438b1095",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "a3efc6ae875fabd1"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113966920731,
+            "description": "Scheduling: Searching for `zip` on PATH=/usr/bin:/bin:/usr/local/bin",
+            "end_usecs": 1652113967257047,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/usr/bin/zip\n",
+                "stderr": "+ CHECK_FILE_ENTRIES=\n+ for path in ${PATH//:/ }\n+ [[ -d /usr/bin ]]\n+ maybe_exe=/usr/bin/"
+            }
+        },
+        {
+            "workunit_id": "ad3c501f6465a714",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "a3efc6ae875fabd1"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113967329013,
+            "description": "Scheduling: Test binary /usr/bin/zip.",
+            "end_usecs": 1652113967357785,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "Copyright (c) 1990-2008 Info-ZIP - Type 'zip \"-L\"' for software license.\nThis is Zip 3.0 ("
+            }
+        },
+        {
+            "workunit_id": "8b4084297bd74c7d",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "b3d8a77d85b3f77a"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113967803761,
+            "description": "Scheduling: Capture outputs of src/python/pants/backend/java/dependency_inference/PantsJavaParserLauncher.java:java_parser for javac",
+            "end_usecs": 1652113967804081,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "  adding: org/ (stored 0%)\n  adding: org/pantsbuild/ (stored 0%)\n  adding: org/pantsbuild/"
+            }
+        },
+        {
+            "workunit_id": "6c7012e1409fe048",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "3c71a0033560fe77"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113969392437,
+            "description": "Scheduling: Run MyPy on 996 files.",
+            "end_usecs": 1652113969392611,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "Success: no issues found in 996 source files\n"
+            }
+        },
+        {
+            "workunit_id": "142bdd03773be016",
+            "name": "pants.core.goals.lint.lint",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [],
+            "last_update": 1652113973,
+            "start_usecs": 1652113969394103,
+            "description": "`lint` goal",
+            "end_usecs": 1652113971233024,
+            "counters": {
+                "local_cache_requests_uncached": 36,
+                "local_process_total_time_run_ms": 9273,
+                "DEPRECATED_ConsumeGlobalCountersInstead": 0,
+                "local_cache_requests": 1132,
+                "local_execution_requests": 36,
+                "local_cache_total_time_saved_ms": 328764,
+                "local_cache_requests_cached": 1096
+            }
+        },
+        {
+            "workunit_id": "a6fcd26784f124b6",
+            "name": "pants.backend.shell.lint.shellcheck.rules.run_shellcheck",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "142bdd03773be016"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113969792229,
+            "description": "Lint with Shellcheck",
+            "end_usecs": 1652113970905355,
+            "metadata": {}
+        },
+        {
+            "workunit_id": "c08200359a732649",
+            "name": "pants.core.util_rules.external_tool.download_external_tool",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "a6fcd26784f124b6"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113969799809,
+            "end_usecs": 1652113970902327
+        },
+        {
+            "workunit_id": "2e979329dbe7808c",
+            "name": "pants.core.util_rules.archive.maybe_extract_archive",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "c08200359a732649"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113969800924,
+            "description": "Extracting an archive file",
+            "end_usecs": 1652113970902172
+        },
+        {
+            "workunit_id": "4e28bb05e8b03b16",
+            "name": "pants.core.util_rules.system_binaries.find_tar",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "2e979329dbe7808c"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113969801237,
+            "description": "Finding the `tar` binary",
+            "end_usecs": 1652113970901075
+        },
+        {
+            "workunit_id": "46de940341a14dcc",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "4e28bb05e8b03b16"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113969870427,
+            "description": "Scheduling: Searching for `tar` on PATH=/usr/bin:/bin:/usr/local/bin",
+            "end_usecs": 1652113970870383,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/bin/tar\n",
+                "stderr": "+ CHECK_FILE_ENTRIES=\n+ for path in ${PATH//:/ }\n+ [[ -d /usr/bin ]]\n+ maybe_exe=/usr/bin/"
+            }
+        },
+        {
+            "workunit_id": "83310c1c8d1fcc35",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "4e28bb05e8b03b16"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113970871663,
+            "description": "Scheduling: Test binary /bin/tar.",
+            "end_usecs": 1652113970900736,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "tar (GNU tar) 1.29\nCopyright (C) 2015 Free Software Foundation, Inc.\nLicense GPLv3+: GNU G"
+            }
+        },
+        {
+            "workunit_id": "c82475c399462d4b",
+            "name": "process",
+            "state": "finished",
+            "version": 22,
+            "parent_ids": [
+                "a6fcd26784f124b6"
+            ],
+            "last_update": 1652113973,
+            "start_usecs": 1652113970902534,
+            "description": "Scheduling: Detect Shell imports for src/python/pants/engine/internals/fs_test_data/tls/generate_certs.sh",
+            "end_usecs": 1652113970902704,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "[]\n"
+            }
+        }
+    ]
+}

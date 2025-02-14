@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "workspaces": [
+    "toolchain/frontend",
+    "toolchain/pants-demo-site"
+  ],
+  "resolutions": {
+    "@types/react": "*"
+  },
+  "dependencies": {}
+}

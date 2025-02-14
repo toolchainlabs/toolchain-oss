@@ -1,0 +1,25 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: aws-alb-ingress-controller-rules
+  labels:
+    app: prometheus-operator
+    release: {{ .Release.Name }}
+spec:
+  groups:
+  - name: ./aws.alb.ingress
+    rules:
+    - alert: AlbIngressControllerRecoileErrors
+      for: 40m
+      expr: rate(controller_runtime_reconcile_errors_total[1h])>0
+      annotations:
+        message: | 
+          AWS ALB Ingress controller is unable to recoile ALB configuration.
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: devops
+         state: testing

@@ -1,0 +1,30 @@
+[
+    {
+        "active": true,
+        "config": {
+            "content-type": "form",
+            "content_type": "form",
+            "insecure_ssl": "0",
+            "secret": "********",
+            "url": "https://circleci.com/hooks/github"
+        },
+        "created_at": "2017-02-17T20:23:45Z",
+        "events": [
+            "create",
+            "pull_request",
+            "push"
+        ],
+        "id": 12182943,
+        "last_response": {
+            "code": 200,
+            "message": "OK",
+            "status": "active"
+        },
+        "name": "web",
+        "ping_url": "https://api.github.com/repos/toolchainlabs/toolchain/hooks/12182943/pings",
+        "test_url": "https://api.github.com/repos/toolchainlabs/toolchain/hooks/12182943/test",
+        "type": "Repository",
+        "updated_at": "2018-08-14T00:08:22Z",
+        "url": "https://api.github.com/repos/toolchainlabs/toolchain/hooks/12182943"
+    }
+]

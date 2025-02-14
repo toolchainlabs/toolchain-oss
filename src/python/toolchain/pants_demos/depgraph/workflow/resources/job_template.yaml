@@ -1,0 +1,37 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pants-demo
+  labels:
+    toolchain_product: pants-demos
+    toolchain_role: run-pants
+spec:
+  backoffLimit: 0
+  template:
+    metadata:
+      labels:
+        toolchain_product: pants-demos
+        toolchain_role: run-pants
+    spec:
+      nodeSelector:
+        toolchain.instance_category: null # filled by job_helper.py
+      containers:
+      - name: run-pants
+        image: null  # filled by job_helper.py
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "256Mi"
+            ephemeral-storage: "1Gi"
+          limits: 
+            # No limits for now until https://github.com/toolchainlabs/toolchain/issues/14067 is resolved.
+            # cpu: "1800m"
+            # memory: "2Gi"
+            ephemeral-storage: "10Gi"
+        args:  # more arguments are adding by job_helper.py
+            - "--no-colors"
+      restartPolicy: Never

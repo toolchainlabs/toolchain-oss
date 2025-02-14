@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite name="pytest" errors="0" failures="0" skipped="1" tests="6" time="3.264" timestamp="2021-04-26T14:25:09.692056" hostname="Ashers-MacBook-Pro.local">
+    <testcase classname="src.python.toolchain.aws.dynamodb_test" name="test_create_table" time="1.492"/>
+    <testcase classname="src.python.toolchain.aws.dynamodb_test" name="test_put_item" time="1.054"/>
+    <testcase classname="src.python.toolchain.aws.dynamodb_test" name="test_update_item_no_map" time="0.137">
+      <skipped type="pytest.xfail" message="Not supported, see https://github.com/spulec/moto/blob/1db617a5309d2ac2fa3e6adc9fb3b90ed43c810a/moto/dynamodb2/models.py#L365"/>
+    </testcase>
+    <testcase classname="src.python.toolchain.aws.dynamodb_test" name="test_update_item_empty_map" time="0.065"/>
+    <testcase classname="src.python.toolchain.aws.dynamodb_test" name="test_update_item_existing_with_new_version" time="0.069"/>
+    <testcase classname="src.python.toolchain.aws.dynamodb_test" name="test_update_item_existing_with_older_version" time="0.071"/>
+  </testsuite>
+</testsuites>

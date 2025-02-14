@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" failures="0" hostname="Ashers-MacBook-Pro.local" name="pytest" skipped="0" tests="58" time="3.981" timestamp="2020-07-16T13:14:26.688688">
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserModel" name="test_with_api_error" time="0.481"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserModel" name="test_get_by_api_id" time="0.028"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserModel" name="test_get_by_github_user_id" time="0.017"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserModel" name="test_with_api_ids" time="0.013"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserModel" name="test_with_api_ids_with_details" time="0.019"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserModel" name="test_deactivate" time="0.019"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserModel" name="test_with_user_names" time="0.043"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserModel" name="test_with_github_user_names" time="0.052"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserModel" name="test_can_impersonate" time="0.047"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserModel" name="test_get_inactive_users_api_ids" time="0.023"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserModel" name="test_staff_status" time="0.011"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserModel" name="test_staff_status_on_deactivate" time="0.013"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserDetailsModel" name="test_create" time="0.011"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserDetailsModel" name="test_migrate_empty" time="0.010"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserDetailsModel" name="test_prevent_clear_github_id" time="0.013"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserDetailsModel" name="test_update" time="0.017"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserDetailsModel" name="test_larger_user_id" time="0.008"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestUserDetailsModel" name="test_invalid_update" time="0.013"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestCustomerModel" name="test_for_slugs" time="0.025"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestCustomerModel" name="test_for_user_and_slug" time="0.048"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestCustomerModel" name="test_for_user_and_id" time="0.043"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestCustomerModel" name="test_exists_user_and_id" time="0.039"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestCustomerModel" name="test_for_slug" time="0.018"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestCustomerModel" name="test_customer_state" time="0.009"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestRepoModel" name="test_get_or_404_for_slug" time="0.047"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestRepoModel" name="test_get_or_none_for_slug" time="0.040"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestRepoModel" name="test_with_api_ids" time="0.016"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestRepoModel" name="test_exists_for_customer" time="0.023"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestRepoModel" name="test_get_by_slug_and_customer_id" time="0.015"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestWhitelistModel" name="test_set_bulk" time="0.025"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAccessTokenExchangeCode" name="test_create_for_user" time="0.026"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAccessTokenExchangeCode" name="test_create_multiple_for_user" time="0.030"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAccessTokenExchangeCode" name="test_use_code" time="0.030"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAccessTokenExchangeCode" name="test_use_invalid_code" time="0.036"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAccessTokenExchangeCode" name="test_expired_if_needed" time="0.252"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAccessTokenExchangeCode" name="test_use_expired_code" time="0.097"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_allocate_api_token" time="0.015"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_max_api_tokens" time="0.063"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_check_api_refresh_token" time="0.043"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_check_api_refresh_token_revoked_token" time="0.031"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_deactivate_expired_token" time="0.099"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_check_api_refresh_token_not_existing" time="0.015"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_check_api_refresh_token_invalid_token_usage" time="0.017"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_revoke" time="0.013"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_check_refresh_token_invalid_repo" time="0.020"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_check_refresh_token_invalid_customer" time="0.019"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_get_active_tokens_for_users_invalid_call" time="0.005"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_get_active_tokens_for_users" time="0.052"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_get_or_create_refresh_token_for_ui_create" time="0.014"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_get_or_create_refresh_token_for_ui_existing" time="0.048"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_get_or_create_refresh_token_for_ui_existing_about_to_expire" time="0.057"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_check_ui_refresh_token" time="0.015"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_check_ui_refresh_token_invalid_token_usage" time="0.020"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_check_ui_refresh_token_expired_token" time="0.054"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_check_ui_refresh_token_revoked" time="0.026"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_check_ui_refresh_token_not_existing" time="0.017"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_check_ui_refresh_token_inactive_user" time="0.155"/>
+		<testcase classname="src.python.toolchain.django.site.models_test.TestAllocatedAccessToken" name="test_check_ui_refresh_token_invalid_user" time="0.191"/>
+	</testsuite>
+</testsuites>

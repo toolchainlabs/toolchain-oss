@@ -1,0 +1,252 @@
+{
+    "ci_env": {
+        "CIRCLECI": "true",
+        "CIRCLE_BRANCH": "pull/6490",
+        "CIRCLE_BUILD_NUM": "22579",
+        "CIRCLE_BUILD_URL": "https://circleci.com/gh/toolchainlabs/toolchain/22579",
+        "CIRCLE_COMPARE_URL": "",
+        "CIRCLE_INTERNAL_CONFIG": "/.circleci-runner-config.json",
+        "CIRCLE_INTERNAL_SCRATCH": "/tmp/circleci-363700011",
+        "CIRCLE_INTERNAL_TASK_DATA": "/.circleci-task-data",
+        "CIRCLE_JOB": "build",
+        "CIRCLE_NODE_INDEX": "0",
+        "CIRCLE_NODE_TOTAL": "1",
+        "CIRCLE_PREVIOUS_BUILD_NUM": "22573",
+        "CIRCLE_PROJECT_REPONAME": "toolchain",
+        "CIRCLE_PROJECT_USERNAME": "toolchainlabs",
+        "CIRCLE_PR_NUMBER": "6490",
+        "CIRCLE_PR_REPONAME": "toolchain",
+        "CIRCLE_PR_USERNAME": "asherf",
+        "CIRCLE_PULL_REQUEST": "https://github.com/toolchainlabs/toolchain/pull/6490",
+        "CIRCLE_PULL_REQUESTS": "https://github.com/toolchainlabs/toolchain/pull/6490",
+        "CIRCLE_REPOSITORY_URL": "git@github.com:toolchainlabs/toolchain.git",
+        "CIRCLE_SHA1": "c5454b4327903b7d2242f705e9218ca90bcc7e49",
+        "CIRCLE_SHELL_ENV": "/tmp/.bash_env-5f3486b14964ab4a11b8c25c-0-build",
+        "CIRCLE_STAGE": "build",
+        "CIRCLE_USERNAME": "asherf",
+        "CIRCLE_WORKFLOW_ID": "70d628e8-cda7-4f89-872e-71888e7d6857",
+        "CIRCLE_WORKFLOW_JOB_ID": "2451a61b-a99f-4678-a3d4-3e9acc6579c7",
+        "CIRCLE_WORKFLOW_UPSTREAM_JOB_IDS": "",
+        "CIRCLE_WORKFLOW_WORKSPACE_ID": "70d628e8-cda7-4f89-872e-71888e7d6857",
+        "CIRCLE_WORKING_DIRECTORY": "~/project"
+    },
+    "ci_info": {
+        "account_name": "toolchainlabs",
+        "branch": "pull/6490",
+        "build_num": 22579,
+        "build_url": "https://circleci.com/gh/toolchainlabs/toolchain/22579",
+        "job_name": "build",
+        "pull_request": 6490,
+        "repo_name": "toolchain",
+        "run_type": "pull_request",
+        "sha1": "c5454b4327903b7d2242f705e9218ca90bcc7e49",
+        "username": "asherf"
+    },
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 353.53244972229004,
+            "is_tool": false
+        },
+        {
+            "label": "main:complete",
+            "timing": 0.00004863739013671875,
+            "is_tool": false
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 1958,
+        "affected_targets_size": 0,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 9456,
+        "target_root_size": 0
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "allow_external_binary_tool_downloads": true,
+            "backend_packages": [
+                "toolchain.pants.auth",
+                "toolchain.pants.buildsense",
+                "toolchain.pants.common",
+                "toolchain.pants.rules",
+                "toolchain.pants.internal",
+                "pants.backend.awslambda.python",
+                "pants.backend.project_info",
+                "pants.backend.python",
+                "pants.backend.python.lint.bandit",
+                "pants.backend.python.lint.black",
+                "pants.backend.python.lint.docformatter",
+                "pants.backend.python.lint.flake8",
+                "pants.backend.python.lint.pylint",
+                "pants.backend.python.lint.isort",
+                "pants.backend.python.typecheck.mypy"
+            ],
+            "backend_packages2": [],
+            "binaries_baseurls": [
+                "https://binaries.pantsbuild.org",
+                "https://github.com/toolchainlabs/binhost/raw/master/"
+            ],
+            "binaries_fetch_timeout_secs": 30,
+            "binaries_path_by_id": {},
+            "build_file_prelude_globs": [],
+            "build_ignore": [
+                "3rdparty/jvm",
+                "3rdparty/go",
+                "prod/java",
+                "src/java",
+                "src/go",
+                "src/node",
+                "testdata/java"
+            ],
+            "colors": false,
+            "concurrent": false,
+            "dependency_inference": false,
+            "dynamic_ui": false,
+            "exclude_target_regexp": [],
+            "files_not_found_behavior": "warn",
+            "ignore_pants_warnings": [],
+            "level": "info",
+            "local_execution_root_dir": "/tmp",
+            "local_store_dir": "/home/toolchain/.cache/pants/lmdb_store",
+            "lock": true,
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "named_caches_dir": "/home/toolchain/.cache/pants/named_caches",
+            "native_engine_visualize_to": null,
+            "option_name_check_distance": 2,
+            "owners_not_found_behavior": "error",
+            "pants_bin_name": "./pants",
+            "pants_bootstrapdir": "/home/toolchain/.cache/pants",
+            "pants_config_files": [
+                "/home/toolchain/project/pants.toml",
+                "/home/toolchain/project/pants.ci.toml"
+            ],
+            "pants_configdir": "/home/toolchain/.config/pants",
+            "pants_distdir": "/home/toolchain/project/dist",
+            "pants_ignore": [
+                ".*/",
+                "/dist/"
+            ],
+            "pants_ignore_use_gitignore": true,
+            "pants_physical_workdir_base": null,
+            "pants_subprocessdir": "/home/toolchain/project/.pids",
+            "pants_supportdir": "/home/toolchain/project/build-support",
+            "pants_version": "2.0.0.dev6",
+            "pants_workdir": "/home/toolchain/project/.pants.d",
+            "pantsd": false,
+            "pantsd_invalidation_globs": [
+                "!/src/python/curator/",
+                "!/src/python/toolchain/codebrowser/",
+                "!/src/python/toolchain/crawler/",
+                "!/src/python/toolchain/dependency/",
+                "!/src/python/toolchain/github_integration/",
+                "!/src/python/toolchain/infosite/",
+                "!/src/python/toolchain/kythebrowser/",
+                "!/src/python/toolchain/packagerepo/",
+                "!/src/python/toolchain/prod/",
+                "!/src/python/toolchain/remoting/",
+                "!/src/python/toolchain/satresolver/",
+                "!/src/python/toolchain/service/",
+                "!/src/python/toolchain/servicerouter/",
+                "!/src/python/toolchain/toolshed/",
+                "!/src/python/toolchain/users/",
+                "!/src/python/toolchain/webhooks/",
+                "!*_test.py",
+                "!BUILD"
+            ],
+            "pantsd_log_dir": null,
+            "pantsd_max_memory_usage": 1073741824,
+            "pantsd_pailgun_port": 0,
+            "pantsd_pailgun_quit_timeout": 5,
+            "pantsd_timeout_when_multiple_invocations": 60,
+            "pantsrc": true,
+            "pantsrc_files": [
+                "/etc/pantsrc",
+                "~/.pants.rc"
+            ],
+            "parent_build_id": null,
+            "plugin_cache_dir": "/home/toolchain/.cache/pants/plugins",
+            "plugins": [
+                "python-dateutil",
+                "networkx==2.4"
+            ],
+            "plugins2": [],
+            "plugins_force_resolve": false,
+            "print_exception_stacktrace": true,
+            "process_execution_cleanup_local_dirs": true,
+            "process_execution_local_enable_nailgun": false,
+            "process_execution_local_parallelism": 4,
+            "process_execution_remote_parallelism": 128,
+            "process_execution_speculation_delay": 1,
+            "process_execution_speculation_strategy": "local_first",
+            "process_execution_use_local_cache": true,
+            "pythonpath": [
+                "/home/toolchain/project/src/python"
+            ],
+            "remote_ca_certs_path": null,
+            "remote_execution": false,
+            "remote_execution_enable_streaming": true,
+            "remote_execution_extra_platform_properties": [
+                "execution-policy=network"
+            ],
+            "remote_execution_headers": {},
+            "remote_execution_overall_deadline_secs": 3600,
+            "remote_execution_process_cache_namespace": null,
+            "remote_execution_server": null,
+            "remote_instance_name": null,
+            "remote_oauth_bearer_token_path": null,
+            "remote_store_chunk_bytes": 1048576,
+            "remote_store_chunk_upload_timeout_seconds": 60,
+            "remote_store_connection_limit": 5,
+            "remote_store_rpc_retries": 2,
+            "remote_store_server": [],
+            "remote_store_thread_count": 1,
+            "spec_file": [],
+            "spec_files": [],
+            "streaming_workunits_handlers": [
+                "toolchain.pants.buildsense.reporter.Reporter"
+            ],
+            "streaming_workunits_report_interval": 1,
+            "subproject_roots": [],
+            "tag": [
+                "-nolint"
+            ],
+            "v1": false,
+            "v2": true,
+            "verify_config": true
+        }
+    },
+    "run_info": {
+        "id": "pants_run_2020_08_13_00_21_45_933_7b6b93239b1e4a329e7de2c7bc65ce1f",
+        "timestamp": "1597278105.933279",
+        "datetime": "Thursday Aug 13, 2020 00:21:45",
+        "user": "toolchain",
+        "machine": "c2fd5769a378",
+        "path": "/home/toolchain/project",
+        "buildroot": "/home/toolchain/project",
+        "version": "2.0.0.dev6",
+        "cmd_line": "pants --pants-bin-name=./pants --tag=-nolint lint prod/python:: src/python::",
+        "specs_from_command_line": [
+            "prod/python::",
+            "src/python::"
+        ],
+        "outcome": "SUCCESS",
+        "revision": "c5454b4327903b7d2242f705e9218ca90bcc7e49",
+        "branch": "pull/6490",
+        "computed_goals": [
+            "lint"
+        ]
+    },
+    "workunits": [ {
+        "workunit_id": "5afb5e9c0de445a3",
+        "name": "select",
+        "state": "finished",
+        "version": 341,
+        "parent_id": null,
+        "last_update": 1597278450,
+        "start_usecs": 1597278105950637,
+        "end_usecs": 1597278450010128
+    }]
+}

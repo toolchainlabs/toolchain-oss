@@ -1,0 +1,340 @@
+{
+    "routes": [
+        {
+            "source": "^auth/login/github/",
+            "target": "/auth/login/github/",
+            "service": "users/ui",
+            "name": "github-auth-begin"
+        },
+        {
+            "source": "^auth/complete/github/",
+            "target": "/auth/complete/github/",
+            "service": "users/ui",
+            "name": "github-auth-complete"
+        },
+        {
+            "source": "^auth/login/bitbucket/",
+            "target": "/auth/login/bitbucket/",
+            "service": "users/ui",
+            "name": "bitbucket-auth-begin"
+        },
+        {
+            "source": "^auth/complete/bitbucket/",
+            "target": "/auth/complete/bitbucket/",
+            "service": "users/ui",
+            "name": "bitbucket-auth-complete"
+        },
+        {
+            "source": "^auth/login/$",
+            "target": "/auth/login/",
+            "service": "users/ui",
+            "name": "login"
+        },
+        {
+            "source": "^auth/logout/",
+            "target": "/auth/logout/",
+            "service": "users/ui",
+            "name": "logout"
+        },
+        {
+            "source": "^auth/denied/",
+            "target": "/auth/denied/",
+            "service": "users/ui",
+            "name": "user-access-denied"
+        },
+        {
+            "source": "^tos/",
+            "target": "/tos/",
+            "service": "users/ui",
+            "name": "terms-of-service"
+        },
+        {
+            "source": "^org/install/",
+            "target": "/org/install/",
+            "service": "users/ui",
+            "name": "github-app-install"
+        },
+        {
+            "source": "^org/",
+            "target": "/org/",
+            "service": "users/ui",
+            "name": "no-org"
+        },
+        {
+            "source": "^impersonate/start/(?P<session_id>[^/.]+)/$",
+            "target": "/impersonate/start/{session_id}/",
+            "pass_args": [
+                "session_id"
+            ],
+            "service": "users/ui",
+            "name": "impersonate-start"
+        },
+        {
+            "source": "^impersonate/end/",
+            "target": "/impersonate/end/",
+            "service": "users/ui",
+            "name": "impersonate-end"
+        },
+        {
+            "source": "^api/v1/token/auth/$",
+            "target": "/api/v1/token/auth/",
+            "service": "users/api",
+            "name": "auth-for-token"
+        },
+        {
+            "source": "^api/v1/token/exchange/$",
+            "target": "/api/v1/token/exchange/",
+            "service": "users/api",
+            "name": "auth-token-exchange"
+        },
+        {
+            "source": "^api/v1/token/refresh/$",
+            "target": "/api/v1/token/refresh/",
+            "service": "users/api",
+            "name": "auth-token-refresh"
+        },
+        {
+            "source": "^api/v1/token/restricted/$",
+            "target": "/api/v1/token/restricted/",
+            "service": "users/api",
+            "name": "auth-token-restricted"
+        },
+        {
+            "source": "^api/v1/tokens/$",
+            "target": "/api/v1/tokens/",
+            "service": "users/api",
+            "name": "tokens-list"
+        },
+        {
+            "source": "^api/v1/tokens/(?P<token_id>[a-zA-z0-9]+)/$",
+            "target": "/api/v1/tokens/{token_id}/",
+            "pass_args": [
+                "token_id"
+            ],
+            "service": "users/api",
+            "name": "tokens-detail"
+        },
+        {
+            "source": "^api/v1/users/(?P<user_api_id>[^/.]+)/$",
+            "target": "/api/v1/users/{user_api_id}/",
+            "pass_args": [
+                "user_api_id"
+            ],
+            "service": "users/api",
+            "name": "users-detail"
+        },
+        {
+            "source": "^api/v1/users/repos/$",
+            "target": "/api/v1/users/repos/",
+            "service": "users/api",
+            "name": "users-repos"
+        },
+        {
+            "source": "^api/v1/users/emails/$",
+            "target": "/api/v1/users/emails/",
+            "service": "users/api",
+            "name": "users-emails"
+        },
+        {
+            "source": "^api/v1/users/(?P<user_api_id>[^/.]+)/customers/$",
+            "target": "/api/v1/users/{user_api_id}/customers/",
+            "pass_args": [
+                "user_api_id"
+            ],
+            "service": "users/api",
+            "deprecated": true,
+            "name": "customers-list"
+        },
+        {
+            "source": "^api/v1/customers/(?P<customer_slug>[^/.]+)/repos/(?P<repo_slug>[^/.]+)/$",
+            "target": "/api/v1/customers/{customer_slug}/repos/{repo_slug}/",
+            "pass_args": [
+                "customer_slug",
+                "repo_slug"
+            ],
+            "service": "users/api",
+            "name": "customer-repo-view"
+        },
+        {
+            "source": "^api/v1/customers/(?P<customer_slug>[^/.]+)/$",
+            "target": "/api/v1/customers/{customer_slug}/",
+            "pass_args": [
+                "customer_slug"
+            ],
+            "service": "users/api",
+            "name": "customer-view"
+        },
+        {
+            "source": "^api/v1/customers/(?P<customer_slug>[^/.]+)/plan/$",
+            "target": "/api/v1/customers/{customer_slug}/plan/",
+            "pass_args": [
+                "customer_slug"
+            ],
+            "service": "users/api",
+            "name": "customer-plan-view"
+        },
+        {
+            "source": "^api/v1/customers/(?P<customer_slug>[^/.]+)/billing/$",
+            "target": "/api/v1/customers/{customer_slug}/billing/",
+            "pass_args": [
+                "customer_slug"
+            ],
+            "service": "users/api",
+            "name": "customer-billing"
+        },
+        {
+            "source": "^api/v1/customers/(?P<customer_slug>[^/.]+)/workers/tokens/$",
+            "target": "/api/v1/customers/{customer_slug}/workers/tokens/",
+            "pass_args": [
+                "customer_slug"
+            ],
+            "service": "users/api",
+            "name": "customer-worker-tokens-view"
+        },
+        {
+            "source": "^api/v1/customers/(?P<customer_slug>[^/.]+)/workers/tokens/(?P<token_id>[^/.]+)/$",
+            "target": "/api/v1/customers/{customer_slug}/workers/tokens/{token_id}/",
+            "pass_args": [
+                "customer_slug",
+                "token_id"
+            ],
+            "service": "users/api",
+            "name": "customer-worker-token-view"
+        },
+        {
+            "source": "^api/v1/repos/(?P<customer_slug>[^/.]+)/(?P<repo_slug>[^/.]+)/builds/$",
+            "target": "/api/v1/repos/{customer_slug}/{repo_slug}/builds/",
+            "pass_args": [
+                "customer_slug",
+                "repo_slug"
+            ],
+            "service": "buildsense/api",
+            "name": "builds-list"
+        },
+        {
+            "source": "^api/v1/repos/(?P<customer_slug>[^/.]+)/(?P<repo_slug>[^/.]+)/builds/indicators/$",
+            "target": "/api/v1/repos/{customer_slug}/{repo_slug}/builds/indicators/",
+            "pass_args": [
+                "customer_slug",
+                "repo_slug"
+            ],
+            "service": "buildsense/api",
+            "name": "builds-indicators"
+        },
+        {
+            "source": "^api/v1/repos/(?P<customer_slug>[^/.]+)/(?P<repo_slug>[^/.]+)/buildsense/(?P<run_id>[^/.]+)/$",
+            "target": "/api/v1/repos/{customer_slug}/{repo_slug}/buildsense/{run_id}/",
+            "pass_args": [
+                "customer_slug",
+                "repo_slug",
+                "run_id"
+            ],
+            "timeout": 20,
+            "service": "buildsense/api",
+            "name": "buildsense-ingest"
+        },
+        {
+            "source": "^api/v1/repos/(?P<customer_slug>[^/.]+)/(?P<repo_slug>[^/.]+)/buildsense/(?P<run_id>[^/.]+)/workunits/$",
+            "target": "/api/v1/repos/{customer_slug}/{repo_slug}/buildsense/{run_id}/workunits/",
+            "pass_args": [
+                "customer_slug",
+                "repo_slug",
+                "run_id"
+            ],
+            "timeout": 10,
+            "service": "buildsense/api",
+            "name": "buildsense-workunits-ingest"
+        },
+        {
+            "source": "^api/v1/repos/(?P<customer_slug>[^/.]+)/(?P<repo_slug>[^/.]+)/buildsense/(?P<run_id>[^/.]+)/artifacts/$",
+            "target": "/api/v1/repos/{customer_slug}/{repo_slug}/buildsense/{run_id}/artifacts/",
+            "pass_args": [
+                "customer_slug",
+                "repo_slug",
+                "run_id"
+            ],
+            "service": "buildsense/api",
+            "name": "buildsense-artifacts-ingest"
+        },
+        {
+            "source": "^api/v1/repos/(?P<customer_slug>[^/.]+)/(?P<repo_slug>[^/.]+)/buildsense/batch/$",
+            "target": "/api/v1/repos/{customer_slug}/{repo_slug}/buildsense/batch/",
+            "pass_args": [
+                "customer_slug",
+                "repo_slug"
+            ],
+            "service": "buildsense/api",
+            "timeout": 15,
+            "name": "buildsense-batch"
+        },
+        {
+            "source": "^api/v1/repos/(?P<customer_slug>[^/.]+)/(?P<repo_slug>[^/.]+)/buildsense/$",
+            "target": "/api/v1/repos/{customer_slug}/{repo_slug}/buildsense/",
+            "pass_args": [
+                "customer_slug",
+                "repo_slug"
+            ],
+            "service": "buildsense/api",
+            "name": "buildsense-config"
+        },
+        {
+            "source": "^api/v1/repos/(?P<customer_slug>[^/.]+)/(?P<repo_slug>[^/.]+)/builds/(?P<run_id>[^/.]+)/$",
+            "target": "/api/v1/repos/{customer_slug}/{repo_slug}/builds/{run_id}/",
+            "pass_args": [
+                "customer_slug",
+                "repo_slug",
+                "run_id"
+            ],
+            "service": "buildsense/api",
+            "name": "builds-detail"
+        },
+        {
+            "source": "^api/v1/repos/(?P<customer_slug>[^/.]+)/(?P<repo_slug>[^/.]+)/builds/(?P<run_id>[^/.]+)/trace/$",
+            "target": "/api/v1/repos/{customer_slug}/{repo_slug}/builds/{run_id}/trace/",
+            "pass_args": [
+                "customer_slug",
+                "repo_slug",
+                "run_id"
+            ],
+            "service": "buildsense/api",
+            "name": "builds-get-trace-data",
+            "timeout": 10
+        },
+        {
+            "source": "^api/v1/repos/(?P<customer_slug>[^/.]+)/(?P<repo_slug>[^/.]+)/builds/(?P<run_id>[^/.]+)/raw/$",
+            "target": "/api/v1/repos/{customer_slug}/{repo_slug}/builds/{run_id}/raw/",
+            "pass_args": [
+                "customer_slug",
+                "repo_slug",
+                "run_id"
+            ],
+            "timeout": 10,
+            "service": "buildsense/api",
+            "name": "builds-get-raw-data"
+        },
+        {
+            "source": "^api/v1/repos/(?P<customer_slug>[^/.]+)/(?P<repo_slug>[^/.]+)/builds/(?P<run_id>[^/.]+)/workunits/$",
+            "target": "/api/v1/repos/{customer_slug}/{repo_slug}/builds/{run_id}/workunits/",
+            "pass_args": [
+                "customer_slug",
+                "repo_slug",
+                "run_id"
+            ],
+            "timeout": 10,
+            "service": "buildsense/api",
+            "name": "builds-get-workunits-data"
+        },
+        {
+            "source": "^api/v1/repos/(?P<customer_slug>[^/.]+)/(?P<repo_slug>[^/.]+)/builds/(?P<run_id>[^/.]+)/artifacts/(?P<artifact_id>[^/]+)/$",
+            "target": "/api/v1/repos/{customer_slug}/{repo_slug}/builds/{run_id}/artifacts/{artifact_id}/",
+            "pass_args": [
+                "customer_slug",
+                "repo_slug",
+                "run_id",
+                "artifact_id"
+            ],
+            "service": "buildsense/api",
+            "name": "artifacts"
+        }
+    ]
+}

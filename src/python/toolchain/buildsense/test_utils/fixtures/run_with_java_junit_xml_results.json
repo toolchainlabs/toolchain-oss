@@ -1,0 +1,150 @@
+{
+    "counter_names": [
+        "local_process_total_time_run_ms",
+        "local_cache_requests",
+        "local_cache_requests_cached",
+        "local_cache_requests_uncached",
+        "local_cache_read_errors",
+        "local_cache_write_errors",
+        "local_cache_total_time_saved_ms",
+        "local_execution_requests",
+        "remote_process_total_time_run_ms",
+        "remote_cache_requests",
+        "remote_cache_requests_cached",
+        "remote_cache_requests_uncached",
+        "remote_cache_read_errors",
+        "remote_cache_write_attempts",
+        "remote_cache_write_successes",
+        "remote_cache_write_errors",
+        "remote_cache_speculation_local_completed_first",
+        "remote_cache_speculation_remote_completed_first",
+        "remote_cache_total_time_saved_ms",
+        "remote_execution_errors",
+        "remote_execution_requests",
+        "remote_execution_rpc_errors",
+        "remote_execution_rpc_execute",
+        "remote_execution_rpc_retries",
+        "remote_execution_rpc_wait_execution",
+        "remote_execution_success",
+        "remote_execution_timeouts",
+        "remote_store_missing_digest",
+        "remote_store_blob_bytes_downloaded",
+        "remote_store_blob_bytes_uploaded"
+    ],
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 0.1830298900604248
+        }
+    ],
+    "observation_histograms": {
+        "histograms": {
+            "local_store_read_blob_size": "HISTFAAAAEF4nC2GsQ3AIBDE7i+PlD4tUnqWYBIqRoENqBiPDdgAJB4Xtn1tHwAP47kVy7/itOuiTokjOuY36VCuwCLc3ZEH2Q==",
+            "local_store_read_blob_time_micros": "HISTFAAAAEV4nC2HMQ6AIBAE1zkSYywskM5Wv2H8mz/gLfyLnoZLYLeYmevPUdKjMZtcJnnrkBuFkNhZMT8bB3JJRIrx0U6vDsPxBWw="
+        },
+        "version": 0
+    },
+    "pantsd_stats": {
+        "affected_file_count": 11,
+        "preceding_graph_size": 1158,
+        "resulting_graph_size": 1165
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "log_levels_by_target": {},
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "verify_config": true,
+            "watch_filesystem": true
+        },
+        "toolchain-setup": {
+            "base_url": "https://app.toolchain.com",
+            "repo": "pants"
+        },
+        "typecheck": {},
+        "validate": {
+            "detail_level": "nonmatching"
+        }
+    },
+    "run_info": {
+        "branch": "stuhood/ensure-xml-results",
+        "buildroot": "/Users/stuhood/src/pants",
+        "cmd_line": "pants test --xml-dir=blah testprojects/src/java/::",
+        "computed_goals": [
+            "test"
+        ],
+        "datetime": "Monday Sep 27, 2021 21:27:53",
+        "id": "pants_run_2021_09_27_21_27_54_75_221796228e4944f28d2b18d33b043959",
+        "machine": "Stus-Air",
+        "outcome": "SUCCESS",
+        "path": "/Users/stuhood/src/pants",
+        "revision": "f57ccc7a853927aa630cb4864d38a0ce1429e2bf",
+        "specs_from_command_line": [
+            "testprojects/src/java::"
+        ],
+        "timestamp": 1632803273.950207,
+        "user": "stuhood",
+        "version": "2.8.0.dev2"
+    },
+    "targets": {
+        "testprojects/src/java/org/pantsbuild/example": [
+            {
+                "filename": "testprojects/src/java/org/pantsbuild/example/ExampleLib.java"
+            }
+        ],
+        "testprojects/src/java/org/pantsbuild/example:lockfile": [
+            {
+                "filename": "testprojects/src/java/org/pantsbuild/example:lockfile"
+            }
+        ],
+        "testprojects/src/java/org/pantsbuild/example:tests": [
+            {
+                "filename": "testprojects/src/java/org/pantsbuild/example/ExampleLibTest.java"
+            }
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "8b5f472fbb265cc0",
+            "name": "select",
+            "state": "finished",
+            "version": 1,
+            "parent_id": null,
+            "last_update": 1632803275,
+            "start_usecs": 1632803274105537,
+            "end_usecs": 1632803274132005
+        },
+        {
+            "workunit_id": "764448ca4ac6ef7c",
+            "name": "pants.core.goals.test.run_tests",
+            "state": "finished",
+            "version": 1,
+            "parent_id": "8b5f472fbb265cc0",
+            "last_update": 1632803275,
+            "start_usecs": 1632803274106182,
+            "description": "`test` goal",
+            "end_usecs": 1632803274131859
+        },
+        {
+            "workunit_id": "1497f6022cf245a2",
+            "name": "pants.backend.java.test.junit.run_junit_test",
+            "state": "finished",
+            "version": 1,
+            "parent_id": "764448ca4ac6ef7c",
+            "last_update": 1632803275,
+            "start_usecs": 1632803274114556,
+            "description": "Run JUnit",
+            "end_usecs": 1632803274122191,
+            "artifacts": {
+                "stdout": "\nThanks for using JUnit! Support its development at https://junit.org/sponsoring\n\n\u001b[36m╷\u001b[0m\n\u001b[36m├─\u001b[0m \u001b[36mJUnit Jupiter\u001b[0m \u001b[32m✔\u001b[0m\n\u001b[36m│  └─\u001b[0m \u001b[36mExampleLibTest\u001b[0m \u001b[32m✔\u001b[0m\n\u001b[36m│     └─\u001b[0m \u001b[34mtestBlah()\u001b[0m \u001b[32m✔\u001b[0m\n\u001b[36m└─\u001b[0m \u001b[36mJUnit Vintage\u001b[0m \u001b[32m✔\u001b[0m\n\nTest run finished after 137 ms\n[         3 containers found      ]\n[         0 containers skipped    ]\n[         3 containers started    ]\n[         0 containers aborted    ]\n[         3 containers successful ]\n[         0 containers failed     ]\n[         1 tests found           ]\n[         0 tests skipped         ]\n[         1 tests started         ]\n[         0 tests aborted         ]\n[         1 tests successful      ]\n[         0 tests failed          ]\n\n",
+                "stderr": "setrlimit to increase file descriptor limit failed, errno 22\n",
+                "xml_results": {
+                    "testprojects.src.java.org.pantsbuild.example.ExampleLibTest.java.tests/TEST-junit-jupiter.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<testsuite name=\"JUnit Jupiter\" tests=\"1\" skipped=\"0\" failures=\"0\" errors=\"0\" time=\"0.04\" hostname=\"Stus-Air\" timestamp=\"2021-09-27T21:27:52\">\n<properties>\n<property name=\"awt.toolkit\" value=\"sun.lwawt.macosx.LWCToolkit\"/>\n<property name=\"file.encoding\" value=\"UTF-8\"/>\n<property name=\"file.separator\" value=\"/\"/>\n<property name=\"ftp.nonProxyHosts\" value=\"local|*.local|169.254/16|*.169.254/16\"/>\n<property name=\"gopherProxySet\" value=\"false\"/>\n<property name=\"http.nonProxyHosts\" value=\"local|*.local|169.254/16|*.169.254/16\"/>\n<property name=\"java.awt.graphicsenv\" value=\"sun.awt.CGraphicsEnvironment\"/>\n<property name=\"java.awt.printerjob\" value=\"sun.lwawt.macosx.CPrinterJob\"/>\n<property name=\"java.class.path\" value=\"nailgun-server-0.9.1.jar:__thirdpartycp/apiguardian-api-1.1.0.jar:__thirdpartycp/junit-jupiter-api-5.7.2.jar:__thirdpartycp/junit-platform-commons-1.7.2.jar:__thirdpartycp/opentest4j-1.2.0.jar:__thirdpartycp/junit-4.13.jar:__thirdpartycp/apiguardian-api-1.1.0.jar:__thirdpartycp/hamcrest-core-1.3.jar:__thirdpartycp/junit-jupiter-api-5.7.2.jar:__thirdpartycp/junit-jupiter-engine-5.7.2.jar:__thirdpartycp/junit-platform-commons-1.7.2.jar:__thirdpartycp/junit-platform-console-1.7.2.jar:__thirdpartycp/junit-platform-engine-1.7.2.jar:__thirdpartycp/junit-platform-launcher-1.7.2.jar:__thirdpartycp/junit-platform-reporting-1.7.2.jar:__thirdpartycp/junit-vintage-engine-5.7.2.jar:__thirdpartycp/opentest4j-1.2.0.jar\"/>\n<property name=\"java.class.version\" value=\"55.0\"/>\n<property name=\"java.home\" value=\"/Users/stuhood/Library/Caches/Coursier/jvm/adopt@1.11.0-11/Contents/Home\"/>\n<property name=\"java.io.tmpdir\" value=\"/var/folders/bg/_r10hqp14kjcpv68yzdk5svc0000gn/T/\"/>\n<property name=\"java.library.path\" value=\"/Users/stuhood/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.\"/>\n<property name=\"java.runtime.name\" value=\"OpenJDK Runtime Environment\"/>\n<property name=\"java.runtime.version\" value=\"11.0.11+9\"/>\n<property name=\"java.specification.name\" value=\"Java Platform API Specification\"/>\n<property name=\"java.specification.vendor\" value=\"Oracle Corporation\"/>\n<property name=\"java.specification.version\" value=\"11\"/>\n<property name=\"java.vendor\" value=\"AdoptOpenJDK\"/>\n<property name=\"java.vendor.url\" value=\"https://adoptopenjdk.net/\"/>\n<property name=\"java.vendor.url.bug\" value=\"https://github.com/AdoptOpenJDK/openjdk-support/issues\"/>\n<property name=\"java.vendor.version\" value=\"AdoptOpenJDK-11.0.11+9\"/>\n<property name=\"java.version\" value=\"11.0.11\"/>\n<property name=\"java.version.date\" value=\"2021-04-20\"/>\n<property name=\"java.vm.compressedOopsMode\" value=\"Zero based\"/>\n<property name=\"java.vm.info\" value=\"mixed mode\"/>\n<property name=\"java.vm.name\" value=\"OpenJDK 64-Bit Server VM\"/>\n<property name=\"java.vm.specification.name\" value=\"Java Virtual Machine Specification\"/>\n<property name=\"java.vm.specification.vendor\" value=\"Oracle Corporation\"/>\n<property name=\"java.vm.specification.version\" value=\"11\"/>\n<property name=\"java.vm.vendor\" value=\"AdoptOpenJDK\"/>\n<property name=\"java.vm.version\" value=\"11.0.11+9\"/>\n<property name=\"jdk.debug\" value=\"release\"/>\n<property name=\"line.separator\" value=\"\n\"/>\n<property name=\"os.arch\" value=\"x86_64\"/>\n<property name=\"os.name\" value=\"Mac OS X\"/>\n<property name=\"os.version\" value=\"11.5\"/>\n<property name=\"path.separator\" value=\":\"/>\n<property name=\"socksNonProxyHosts\" value=\"local|*.local|169.254/16|*.169.254/16\"/>\n<property name=\"sun.arch.data.model\" value=\"64\"/>\n<property name=\"sun.boot.library.path\" value=\"/Users/stuhood/Library/Caches/Coursier/jvm/adopt@1.11.0-11/Contents/Home/lib\"/>\n<property name=\"sun.cpu.endian\" value=\"little\"/>\n<property name=\"sun.cpu.isalist\" value=\"\"/>\n<property name=\"sun.io.unicode.encoding\" value=\"UnicodeBig\"/>\n<property name=\"sun.java.command\" value=\"org.junit.platform.console.ConsoleLauncher --classpath __usercp --scan-class-path __usercp --reports-dir __reports_dir/testprojects.src.java.org.pantsbuild.example.ExampleLibTest.java.tests\"/>\n<property name=\"sun.java.launcher\" value=\"SUN_STANDARD\"/>\n<property name=\"sun.jnu.encoding\" value=\"UTF-8\"/>\n<property name=\"sun.management.compiler\" value=\"HotSpot 64-Bit Tiered Compilers\"/>\n<property name=\"sun.os.patch.level\" value=\"unknown\"/>\n<property name=\"user.country\" value=\"US\"/>\n<property name=\"user.dir\" value=\"/private/var/folders/bg/_r10hqp14kjcpv68yzdk5svc0000gn/T/process-executionKxlnLt\"/>\n<property name=\"user.home\" value=\"/Users/stuhood\"/>\n<property name=\"user.language\" value=\"en\"/>\n<property name=\"user.name\" value=\"stuhood\"/>\n<property name=\"user.timezone\" value=\"America/Los_Angeles\"/>\n</properties>\n<testcase name=\"testBlah()\" classname=\"org.pantsbuild.example.ExampleLibTest\" time=\"0.013\">\n<system-out><![CDATA[\nunique-id: [engine:junit-jupiter]/[class:org.pantsbuild.example.ExampleLibTest]/[method:testBlah()]\ndisplay-name: testBlah()\n]]></system-out>\n</testcase>\n<system-out><![CDATA[\nunique-id: [engine:junit-jupiter]\ndisplay-name: JUnit Jupiter\n]]></system-out>\n</testsuite>\n",
+                    "testprojects.src.java.org.pantsbuild.example.ExampleLibTest.java.tests/TEST-junit-vintage.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<testsuite name=\"JUnit Vintage\" tests=\"0\" skipped=\"0\" failures=\"0\" errors=\"0\" time=\"0.001\" hostname=\"Stus-Air\" timestamp=\"2021-09-27T21:27:52\">\n<properties>\n<property name=\"awt.toolkit\" value=\"sun.lwawt.macosx.LWCToolkit\"/>\n<property name=\"file.encoding\" value=\"UTF-8\"/>\n<property name=\"file.separator\" value=\"/\"/>\n<property name=\"ftp.nonProxyHosts\" value=\"local|*.local|169.254/16|*.169.254/16\"/>\n<property name=\"gopherProxySet\" value=\"false\"/>\n<property name=\"http.nonProxyHosts\" value=\"local|*.local|169.254/16|*.169.254/16\"/>\n<property name=\"java.awt.graphicsenv\" value=\"sun.awt.CGraphicsEnvironment\"/>\n<property name=\"java.awt.printerjob\" value=\"sun.lwawt.macosx.CPrinterJob\"/>\n<property name=\"java.class.path\" value=\"nailgun-server-0.9.1.jar:__thirdpartycp/apiguardian-api-1.1.0.jar:__thirdpartycp/junit-jupiter-api-5.7.2.jar:__thirdpartycp/junit-platform-commons-1.7.2.jar:__thirdpartycp/opentest4j-1.2.0.jar:__thirdpartycp/junit-4.13.jar:__thirdpartycp/apiguardian-api-1.1.0.jar:__thirdpartycp/hamcrest-core-1.3.jar:__thirdpartycp/junit-jupiter-api-5.7.2.jar:__thirdpartycp/junit-jupiter-engine-5.7.2.jar:__thirdpartycp/junit-platform-commons-1.7.2.jar:__thirdpartycp/junit-platform-console-1.7.2.jar:__thirdpartycp/junit-platform-engine-1.7.2.jar:__thirdpartycp/junit-platform-launcher-1.7.2.jar:__thirdpartycp/junit-platform-reporting-1.7.2.jar:__thirdpartycp/junit-vintage-engine-5.7.2.jar:__thirdpartycp/opentest4j-1.2.0.jar\"/>\n<property name=\"java.class.version\" value=\"55.0\"/>\n<property name=\"java.home\" value=\"/Users/stuhood/Library/Caches/Coursier/jvm/adopt@1.11.0-11/Contents/Home\"/>\n<property name=\"java.io.tmpdir\" value=\"/var/folders/bg/_r10hqp14kjcpv68yzdk5svc0000gn/T/\"/>\n<property name=\"java.library.path\" value=\"/Users/stuhood/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.\"/>\n<property name=\"java.runtime.name\" value=\"OpenJDK Runtime Environment\"/>\n<property name=\"java.runtime.version\" value=\"11.0.11+9\"/>\n<property name=\"java.specification.name\" value=\"Java Platform API Specification\"/>\n<property name=\"java.specification.vendor\" value=\"Oracle Corporation\"/>\n<property name=\"java.specification.version\" value=\"11\"/>\n<property name=\"java.vendor\" value=\"AdoptOpenJDK\"/>\n<property name=\"java.vendor.url\" value=\"https://adoptopenjdk.net/\"/>\n<property name=\"java.vendor.url.bug\" value=\"https://github.com/AdoptOpenJDK/openjdk-support/issues\"/>\n<property name=\"java.vendor.version\" value=\"AdoptOpenJDK-11.0.11+9\"/>\n<property name=\"java.version\" value=\"11.0.11\"/>\n<property name=\"java.version.date\" value=\"2021-04-20\"/>\n<property name=\"java.vm.compressedOopsMode\" value=\"Zero based\"/>\n<property name=\"java.vm.info\" value=\"mixed mode\"/>\n<property name=\"java.vm.name\" value=\"OpenJDK 64-Bit Server VM\"/>\n<property name=\"java.vm.specification.name\" value=\"Java Virtual Machine Specification\"/>\n<property name=\"java.vm.specification.vendor\" value=\"Oracle Corporation\"/>\n<property name=\"java.vm.specification.version\" value=\"11\"/>\n<property name=\"java.vm.vendor\" value=\"AdoptOpenJDK\"/>\n<property name=\"java.vm.version\" value=\"11.0.11+9\"/>\n<property name=\"jdk.debug\" value=\"release\"/>\n<property name=\"line.separator\" value=\"\n\"/>\n<property name=\"os.arch\" value=\"x86_64\"/>\n<property name=\"os.name\" value=\"Mac OS X\"/>\n<property name=\"os.version\" value=\"11.5\"/>\n<property name=\"path.separator\" value=\":\"/>\n<property name=\"socksNonProxyHosts\" value=\"local|*.local|169.254/16|*.169.254/16\"/>\n<property name=\"sun.arch.data.model\" value=\"64\"/>\n<property name=\"sun.boot.library.path\" value=\"/Users/stuhood/Library/Caches/Coursier/jvm/adopt@1.11.0-11/Contents/Home/lib\"/>\n<property name=\"sun.cpu.endian\" value=\"little\"/>\n<property name=\"sun.cpu.isalist\" value=\"\"/>\n<property name=\"sun.io.unicode.encoding\" value=\"UnicodeBig\"/>\n<property name=\"sun.java.command\" value=\"org.junit.platform.console.ConsoleLauncher --classpath __usercp --scan-class-path __usercp --reports-dir __reports_dir/testprojects.src.java.org.pantsbuild.example.ExampleLibTest.java.tests\"/>\n<property name=\"sun.java.launcher\" value=\"SUN_STANDARD\"/>\n<property name=\"sun.jnu.encoding\" value=\"UTF-8\"/>\n<property name=\"sun.management.compiler\" value=\"HotSpot 64-Bit Tiered Compilers\"/>\n<property name=\"sun.os.patch.level\" value=\"unknown\"/>\n<property name=\"user.country\" value=\"US\"/>\n<property name=\"user.dir\" value=\"/private/var/folders/bg/_r10hqp14kjcpv68yzdk5svc0000gn/T/process-executionKxlnLt\"/>\n<property name=\"user.home\" value=\"/Users/stuhood\"/>\n<property name=\"user.language\" value=\"en\"/>\n<property name=\"user.name\" value=\"stuhood\"/>\n<property name=\"user.timezone\" value=\"America/Los_Angeles\"/>\n</properties>\n<system-out><![CDATA[\nunique-id: [engine:junit-vintage]\ndisplay-name: JUnit Vintage\n]]></system-out>\n</testsuite>\n"
+                }
+            }
+        }
+    ]
+}

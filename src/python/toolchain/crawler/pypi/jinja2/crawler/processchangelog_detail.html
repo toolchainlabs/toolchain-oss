@@ -1,0 +1,56 @@
+{#
+Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "crawler/workunit_detail_base.html" %}
+
+{% block successful_workunit_detail_content_trs %}
+{{ super() }}
+<table>
+  <tr>
+    <td>From Serial:</td>
+    <td>{{ object.serial_from }}</td>
+  </tr>
+  <tr>
+    <td>To Serial:</td>
+    <td>{{ object.serial_to }}</td>
+  </tr>
+  <tr>
+    <td>Number of distributions added:</td>
+    <td>{{ object.num_distributions_added }}</td>
+  </tr>
+  <tr>
+    <td>Number of distributions removed:</td>
+    <td>{{ object.num_distributions_removed }}</td>
+  </tr>
+  <tr>
+    <td>Distributions added:</td>
+    <td>
+      <table>
+        {% for dist in object.distributions_added.all() %}
+          <tr>
+            <td>{{ dist.release.project.name }}</td>
+            <td>{{ dist.release.version }}</td>
+            <td>{{ dist.filename }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>Distributions removed:</td>
+    <td>
+      <table>
+        {% for dist in object.distributions_removed.all() %}
+          <tr>
+            <td>{{ dist.release.project.name }}</td>
+            <td>{{ dist.release.version }}</td>
+            <td>{{ dist.filename }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </td>
+  </tr>
+</table>
+{% endblock successful_workunit_detail_content_trs %}

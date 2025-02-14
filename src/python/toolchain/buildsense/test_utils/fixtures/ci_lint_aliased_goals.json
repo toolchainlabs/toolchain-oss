@@ -1,0 +1,396 @@
+{
+    "ci_env": {
+        "CIRCLECI": "true",
+        "CIRCLE_BRANCH": "pull/7058",
+        "CIRCLE_BUILD_NUM": "26072",
+        "CIRCLE_BUILD_URL": "https://circleci.com/gh/toolchainlabs/toolchain/26072",
+        "CIRCLE_COMPARE_URL": "",
+        "CIRCLE_INTERNAL_CONFIG": "/.circleci-runner-config.json",
+        "CIRCLE_INTERNAL_SCRATCH": "/tmp/circleci-539513020",
+        "CIRCLE_INTERNAL_TASK_DATA": "/.circleci-task-data",
+        "CIRCLE_JOB": "build-with-pants",
+        "CIRCLE_NODE_INDEX": "0",
+        "CIRCLE_NODE_TOTAL": "1",
+        "CIRCLE_PREVIOUS_BUILD_NUM": "26071",
+        "CIRCLE_PROJECT_REPONAME": "toolchain",
+        "CIRCLE_PROJECT_USERNAME": "toolchainlabs",
+        "CIRCLE_PR_NUMBER": "7058",
+        "CIRCLE_PR_REPONAME": "toolchain",
+        "CIRCLE_PR_USERNAME": "tdyas",
+        "CIRCLE_PULL_REQUEST": "https://github.com/toolchainlabs/toolchain/pull/7058",
+        "CIRCLE_PULL_REQUESTS": "https://github.com/toolchainlabs/toolchain/pull/7058",
+        "CIRCLE_REPOSITORY_URL": "git@github.com:toolchainlabs/toolchain.git",
+        "CIRCLE_SHA1": "9e5d10e707414dc0fed91560264f804252b518f0",
+        "CIRCLE_SHELL_ENV": "/tmp/.bash_env-5f7b789d8b273c12dc070bbe-0-build",
+        "CIRCLE_STAGE": "build-with-pants",
+        "CIRCLE_USERNAME": "tdyas",
+        "CIRCLE_WORKFLOW_ID": "2efac5f8-a6e7-45cc-b9f6-8e5faffa2018",
+        "CIRCLE_WORKFLOW_JOB_ID": "0c81e11a-3fed-449c-b7e7-5f111d66593e",
+        "CIRCLE_WORKFLOW_UPSTREAM_JOB_IDS": "28e6113e-d7be-4eae-b23c-ed85e3d1a10d",
+        "CIRCLE_WORKFLOW_WORKSPACE_ID": "2efac5f8-a6e7-45cc-b9f6-8e5faffa2018",
+        "CIRCLE_WORKING_DIRECTORY": "~/project"
+    },
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 19.35629177093506,
+            "is_tool": false
+        },
+        {
+            "label": "main:complete",
+            "timing": 4.601478576660156e-05,
+            "is_tool": false
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 2009,
+        "affected_targets_size": 0,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 21405,
+        "target_root_size": 0
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "allow_external_binary_tool_downloads": true,
+            "backend_packages": [
+                "toolchain.pants.auth",
+                "toolchain.pants.buildsense",
+                "toolchain.pants.common",
+                "toolchain.pants.rules",
+                "pants.backend.awslambda.python",
+                "pants.backend.project_info",
+                "pants.backend.python",
+                "pants.backend.python.lint.bandit",
+                "pants.backend.python.lint.black",
+                "pants.backend.python.lint.docformatter",
+                "pants.backend.python.lint.flake8",
+                "pants.backend.python.lint.pylint",
+                "pants.backend.python.lint.isort",
+                "pants.backend.python.typecheck.mypy"
+            ],
+            "backend_packages2": [],
+            "binaries_baseurls": [
+                "https://binaries.pantsbuild.org"
+            ],
+            "binaries_fetch_timeout_secs": 30,
+            "binaries_path_by_id": {},
+            "build_file_prelude_globs": [],
+            "build_ignore": [
+                "3rdparty/jvm",
+                "3rdparty/go",
+                "prod/java",
+                "src/java",
+                "src/go",
+                "src/node",
+                "testdata/java"
+            ],
+            "build_patterns": [
+                "BUILD",
+                "BUILD.*"
+            ],
+            "ca_certs_path": null,
+            "colors": false,
+            "concurrent": false,
+            "dependency_inference": false,
+            "dynamic_ui": false,
+            "exclude_target_regexp": [],
+            "files_not_found_behavior": "warn",
+            "ignore_pants_warnings": [],
+            "level": "info",
+            "local_execution_root_dir": "/tmp",
+            "local_store_dir": "/home/toolchain/.cache/pants/lmdb_store",
+            "lock": true,
+            "log_levels_by_target": {},
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "named_caches_dir": "/home/toolchain/.cache/pants/named_caches",
+            "native_engine_visualize_to": null,
+            "option_name_check_distance": 2,
+            "owners_not_found_behavior": "error",
+            "pants_bin_name": "./pants",
+            "pants_bootstrapdir": "/home/toolchain/.cache/pants",
+            "pants_config_files": [
+                "/home/toolchain/project/pants.toml",
+                "/home/toolchain/project/pants.ci.toml"
+            ],
+            "pants_configdir": "/home/toolchain/.config/pants",
+            "pants_distdir": "/home/toolchain/project/dist",
+            "pants_distdir_legacy_paths": false,
+            "pants_ignore": [
+                ".*/",
+                "/dist/"
+            ],
+            "pants_ignore_use_gitignore": true,
+            "pants_physical_workdir_base": null,
+            "pants_subprocessdir": "/home/toolchain/project/.pids",
+            "pants_supportdir": "/home/toolchain/project/build-support",
+            "pants_version": "2.0.0b3",
+            "pants_workdir": "/home/toolchain/project/.pants.d",
+            "pantsd": false,
+            "pantsd_invalidation_globs": [
+                "!/src/python/curator/",
+                "!/src/python/toolchain/codebrowser/",
+                "!/src/python/toolchain/crawler/",
+                "!/src/python/toolchain/dependency/",
+                "!/src/python/toolchain/github_integration/",
+                "!/src/python/toolchain/infosite/",
+                "!/src/python/toolchain/kythebrowser/",
+                "!/src/python/toolchain/packagerepo/",
+                "!/src/python/toolchain/prod/",
+                "!/src/python/toolchain/remoting/",
+                "!/src/python/toolchain/satresolver/",
+                "!/src/python/toolchain/service/",
+                "!/src/python/toolchain/servicerouter/",
+                "!/src/python/toolchain/toolshed/",
+                "!/src/python/toolchain/users/",
+                "!/src/python/toolchain/webhooks/",
+                "!*_test.py",
+                "!BUILD"
+            ],
+            "pantsd_log_dir": null,
+            "pantsd_max_memory_usage": 1073741824,
+            "pantsd_pailgun_port": 0,
+            "pantsd_pailgun_quit_timeout": 5,
+            "pantsd_timeout_when_multiple_invocations": 60,
+            "pantsrc": true,
+            "pantsrc_files": [
+                "/etc/pantsrc",
+                "~/.pants.rc"
+            ],
+            "plugin_cache_dir": "/home/toolchain/.cache/pants/plugins",
+            "plugins": [
+                "python-dateutil>=2.8.1,<3.0.0",
+                "networkx==2.5"
+            ],
+            "plugins2": [],
+            "plugins_force_resolve": false,
+            "print_exception_stacktrace": true,
+            "process_execution_cleanup_local_dirs": true,
+            "process_execution_local_enable_nailgun": false,
+            "process_execution_local_parallelism": 4,
+            "process_execution_remote_parallelism": 128,
+            "process_execution_speculation_delay": 1,
+            "process_execution_speculation_strategy": "none",
+            "process_execution_use_local_cache": true,
+            "pythonpath": [
+                "/home/toolchain/project/src/python"
+            ],
+            "remote_ca_certs_path": null,
+            "remote_execution": false,
+            "remote_execution_enable_streaming": true,
+            "remote_execution_extra_platform_properties": [
+                "execution-policy=network",
+                "execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-09-25.19-56-00-46b57473e89a"
+            ],
+            "remote_execution_headers": {},
+            "remote_execution_overall_deadline_secs": 3600,
+            "remote_execution_process_cache_namespace": null,
+            "remote_execution_server": null,
+            "remote_instance_name": null,
+            "remote_oauth_bearer_token_path": null,
+            "remote_store_chunk_bytes": 1048576,
+            "remote_store_chunk_upload_timeout_seconds": 60,
+            "remote_store_connection_limit": 5,
+            "remote_store_rpc_retries": 2,
+            "remote_store_server": [],
+            "remote_store_thread_count": 1,
+            "show_log_target": false,
+            "spec_file": [],
+            "spec_files": [],
+            "streaming_workunits_handlers": [
+                "toolchain.pants.buildsense.reporter.Reporter"
+            ],
+            "streaming_workunits_report_interval": 1,
+            "subproject_roots": [],
+            "tag": [
+                "-nolint"
+            ],
+            "v1": false,
+            "v2": true,
+            "verify_config": true
+        },
+        "black": {
+            "args": [],
+            "config": "pyproject.toml",
+            "entry_point": "black:patched_main",
+            "extra_requirements": [
+                "regex>=2020.7.14"
+            ],
+            "interpreter_constraints": [
+                "CPython>=3.6"
+            ],
+            "skip": false,
+            "version": "black==20.8b1"
+        },
+        "buildsense": {
+            "base_url": "https://app.toolchain.com/api/v1/repos/",
+            "ci_env_var_pattern": null,
+            "compress": true,
+            "dry_run": false,
+            "file_uploads": true,
+            "local_build_store": true,
+            "local_store_base": ".pants.d/toolchain/buildsense",
+            "max_batch_size_mb": 20,
+            "timeout": 5
+        },
+        "flake8": {
+            "args": [],
+            "config": "build-support/python/flake8",
+            "entry_point": "flake8",
+            "extra_requirements": [
+                "setuptools<45",
+                "flake8-debugger",
+                "flake8-2020",
+                "flake8-mutable",
+                "flake8-comprehensions",
+                "flake8-bugbear",
+                "flake8-django>=1.0.0",
+                "flake8-executable",
+                "flake8-pytest-style>=1.1.1",
+                "flake8-os-walk==0.4.0",
+                "flake8-absolute-import"
+            ],
+            "interpreter_constraints": [],
+            "skip": false,
+            "version": "flake8==3.8.0"
+        },
+        "fmt": {
+            "per_file_caching": false,
+            "per_target_caching": false
+        },
+        "isort": {
+            "args": [],
+            "config": [
+                "pyproject.toml"
+            ],
+            "entry_point": "isort.main",
+            "extra_requirements": [
+                "setuptools"
+            ],
+            "interpreter_constraints": [
+                "CPython>=3.6"
+            ],
+            "skip": false,
+            "version": "isort[pyproject]==5.5.4"
+        },
+        "lint": {
+            "per_file_caching": false,
+            "per_target_caching": false,
+            "reports_dir": null
+        }
+    },
+    "run_info": {
+        "id": "pants_run_2020_10_05_19_50_26_961_3b37f088a26849a5b7d9b9f26ed3500b",
+        "timestamp": "1601927426.9614115",
+        "datetime": "Monday Oct 05, 2020 19:50:26",
+        "user": "toolchain",
+        "machine": "f1b0f01ded24 [docker]",
+        "path": "/home/toolchain/project",
+        "buildroot": "/home/toolchain/project",
+        "version": "2.0.0b3",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.0.0b3 --tag=-nolint --no-remote-execution lint prod/python:: src/python::",
+        "specs_from_command_line": [
+            "prod/python::",
+            "src/python::"
+        ],
+        "outcome": "SUCCESS",
+        "revision": "9e5d10e707414dc0fed91560264f804252b518f0",
+        "branch": "pull/7058",
+        "computed_goals": [
+            "lint"
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "e377d1b997ab2a20",
+            "name": "select",
+            "state": "finished",
+            "version": 6,
+            "parent_id": null,
+            "last_update": 1601927445,
+            "start_usecs": 1601927427034923,
+            "end_usecs": 1601927445350446
+        },
+        {
+            "workunit_id": "e1cb72f920cb33c3",
+            "name": "pants.core.goals.lint.lint",
+            "state": "finished",
+            "version": 6,
+            "parent_id": "e377d1b997ab2a20",
+            "last_update": 1601927445,
+            "start_usecs": 1601927427035223,
+            "description": "`lint` goal",
+            "end_usecs": 1601927445350420
+        },
+        {
+            "workunit_id": "7026f706e18ab4a5",
+            "name": "pants.backend.python.lint.bandit.rules.bandit_lint",
+            "state": "finished",
+            "version": 6,
+            "parent_id": "e1cb72f920cb33c3",
+            "last_update": 1601927445,
+            "start_usecs": 1601927429876152,
+            "description": "Lint with Bandit",
+            "end_usecs": 1601927443303418
+        },
+        {
+            "workunit_id": "ec908773f07f8ddb",
+            "name": "pants.backend.python.lint.bandit.rules.bandit_lint_partition",
+            "state": "finished",
+            "version": 6,
+            "parent_id": "7026f706e18ab4a5",
+            "last_update": 1601927445,
+            "start_usecs": 1601927431577237,
+            "end_usecs": 1601927443302083
+        },
+        {
+            "workunit_id": "5cb384a5fcc4220b",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 6,
+            "parent_id": "ec908773f07f8ddb",
+            "last_update": 1601927445,
+            "start_usecs": 1601927441180632,
+            "end_usecs": 1601927443301636
+        },
+        {
+            "workunit_id": "eb7c7aa4c5a5494f",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 6,
+            "parent_id": "5cb384a5fcc4220b",
+            "last_update": 1601927445,
+            "start_usecs": 1601927441269386,
+            "description": "Run Bandit on 4 files.",
+            "end_usecs": 1601927443096034
+        },
+        {
+            "workunit_id": "08443fbd4677c12b",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 6,
+            "parent_id": "eb7c7aa4c5a5494f",
+            "last_update": 1601927445,
+            "start_usecs": 1601927441270172,
+            "description": "(Waiting) Run Bandit on 4 files.",
+            "end_usecs": 1601927442982941
+        },
+        {
+            "workunit_id": "d46dc478746a22c2",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 6,
+            "parent_id": "08443fbd4677c12b",
+            "last_update": 1601927445,
+            "start_usecs": 1601927441270193,
+            "description": "Run Bandit on 4 files.",
+            "end_usecs": 1601927442982931,
+            "artifacts": {
+                "stdout": "Run started:2020-10-05 19:50:42.307232\n\nTest results:\n\tNo issues identified.\n\nCode scanned:\n\tTotal lines of code: 38\n\tTotal lines skipped (#nosec): 0\n\nRun metrics:\n\tTotal issues (by severity):\n\t\tUndefined: 0.0\n\t\tLow: 0.0\n\t\tMedium: 0.0\n\t\tHigh: 0.0\n\tTotal issues (by confidence):\n\t\tUndefined: 0.0\n\t\tLow: 0.0\n\t\tMedium: 0.0\n\t\tHigh: 0.0\nFiles skipped (0):\n",
+                "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: B405,B603,B314,B404,B322,B303,B607\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\tusing config: build-support/python/bandit.yaml\n[main]\tINFO\trunning on Python 3.8.5\n"
+            }
+        }
+    ]
+}

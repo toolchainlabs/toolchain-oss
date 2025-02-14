@@ -1,0 +1,15 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+image:
+  version: 0.25.0
+  digest: sha256:e5209b086fda1723a82b92d81761796d2737599cf0f4fc93693648912d02c198
+collector:
+  replicas: 1
+serviceMonitor: true
+# Note: For now, group all traces into a single Honeycomb dataset. In the future, it might make sense
+# to split by cluster, by service, or by type of service (e.g., remoting, Buildsense, etc.).
+
+honeycomb:
+  dataset: traces
+  apiKey: null  # supplied by installer script

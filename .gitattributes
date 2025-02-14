@@ -1,0 +1,18 @@
+*.png filter=lfs diff=lfs merge=lfs binary
+*.jpg filter=lfs diff=lfs merge=lfs binary
+*.gif filter=lfs diff=lfs merge=lfs binary
+*.ico filter=lfs diff=lfs merge=lfs binary
+*.tif filter=lfs diff=lfs merge=lfs binary
+*.svg filter=lfs diff=lfs merge=lfs binary
+*.webp filter=lfs diff=lfs merge=lfs binary
+# If tests need binary data files with suffixes banned in .gitignore, add .testbin to
+# check the file in via git lfs, and then strip the suffix in the test code as needed.
+*.testbin filter=lfs diff=lfs merge=lfs binary
+
+# This dir contains compiled js and other deployable files that aren't useful to diff.
+src/python/toolchain/servicerouter/static/servicerouter/generated/*.* filter=lfs diff=lfs merge=lfs binary
+
+# These can contain very long lines of captured stdout text that contaminate git grep output,
+# and aren't typically useful to view as text.
+src/python/toolchain/satresolver/test_helpers/fixtures/*.json filter=lfs diff=lfs merge=lfs binary
+src/python/toolchain/buildsense/test_utils/fixtures/*.* binary

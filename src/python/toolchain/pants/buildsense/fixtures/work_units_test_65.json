@@ -1,0 +1,98 @@
+[
+    {
+        "name": "multi_platform_process-running",
+        "span_id": "02ea4d08ed4d0463",
+        "level": "INFO",
+        "parent_id": "778331fc8cc15bfe",
+        "start_secs": 1597097290,
+        "start_nanos": 789867000,
+        "duration_secs": 11,
+        "duration_nanos": 670216000,
+        "description": "Run Pytest for src/python/toolchain/aws:tests",
+        "artifacts": {
+            "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.5, pytest-6.0.1, py-1.9.0, pluggy-0.13.1\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionAEO9Sk\nplugins: cov-2.8.1, icdiff-0.5, timeout-1.3.4\ncollected 40 items\n\nsrc/python/toolchain/aws/acm_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m                                  [  5%]\u001b[0m\nsrc/python/toolchain/aws/aws_api_test.py \u001b[32m.\u001b[0m\u001b[33m                               [  7%]\u001b[0m\nsrc/python/toolchain/aws/dynamodb_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33ms\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m                         [ 22%]\u001b[0m\nsrc/python/toolchain/aws/elasticsearch_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m                    [ 37%]\u001b[0m\nsrc/python/toolchain/aws/elb_test.py \u001b[32m.\u001b[0m\u001b[33m                                   [ 40%]\u001b[0m\nsrc/python/toolchain/aws/s3_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m                      [ 77%]\u001b[0m\nsrc/python/toolchain/aws/secretsmanager_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m                [100%]\u001b[0m\n\n\u001b[33m=============================== warnings summary ===============================\u001b[0m\n/Users/asher/.pex/installed_wheels/7d16e195839557c3f2f74bdc7cd6b88f38e94efe/boto-2.49.0-py2.py3-none-any.whl/boto/plugin.py:40\n  /Users/asher/.pex/installed_wheels/7d16e195839557c3f2f74bdc7cd6b88f38e94efe/boto-2.49.0-py2.py3-none-any.whl/boto/plugin.py:40: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses\n    import imp\n\n-- Docs: https://docs.pytest.org/en/stable/warnings.html\n\u001b[33m=================== \u001b[32m39 passed\u001b[0m, \u001b[33m\u001b[1m1 skipped\u001b[0m, \u001b[33m\u001b[1m1 warning\u001b[0m\u001b[33m in 7.66s\u001b[0m\u001b[33m ===================\u001b[0m\n",
+            "stderr": ""
+        }
+    },
+    {
+        "name": "multi_platform_process-waiting",
+        "span_id": "778331fc8cc15bfe",
+        "level": "DEBUG",
+        "parent_id": "ecc6e8d28b6dc3cd",
+        "start_secs": 1597097290,
+        "start_nanos": 789860000,
+        "duration_secs": 11,
+        "duration_nanos": 670300000,
+        "description": "Run Pytest for src/python/toolchain/aws:tests",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process",
+        "span_id": "ecc6e8d28b6dc3cd",
+        "level": "DEBUG",
+        "parent_id": "215556a93bfa3137",
+        "start_secs": 1597097290,
+        "start_nanos": 788774000,
+        "duration_secs": 11,
+        "duration_nanos": 671843000,
+        "description": "Run Pytest for src/python/toolchain/aws:tests",
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.remove_platform_information",
+        "span_id": "215556a93bfa3137",
+        "level": "DEBUG",
+        "parent_id": "9d8469f373ddddba",
+        "start_secs": 1597097290,
+        "start_nanos": 788494000,
+        "duration_secs": 11,
+        "duration_nanos": 672762000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.backend.python.rules.pytest_runner.run_python_test",
+        "span_id": "9d8469f373ddddba",
+        "level": "DEBUG",
+        "parent_id": "c4413b8639677f00",
+        "start_secs": 1597097236,
+        "start_nanos": 585407000,
+        "duration_secs": 65,
+        "duration_nanos": 876132000,
+        "description": "Run Pytest",
+        "artifacts": {}
+    },
+    {
+        "name": "pants.core.goals.test.coordinator_of_tests",
+        "span_id": "c4413b8639677f00",
+        "level": "DEBUG",
+        "parent_id": "f3d563f6308ee0c2",
+        "start_secs": 1597097236,
+        "start_nanos": 585309000,
+        "duration_secs": 65,
+        "duration_nanos": 876302000,
+        "description": "Run test target",
+        "artifacts": {}
+    },
+    {
+        "name": "test",
+        "span_id": "f3d563f6308ee0c2",
+        "level": "DEBUG",
+        "parent_id": "22418ec792fec8ca",
+        "start_secs": 1597097236,
+        "start_nanos": 542371000,
+        "duration_secs": 65,
+        "duration_nanos": 920257000,
+        "description": "`test` goal",
+        "artifacts": {}
+    },
+    {
+        "name": "select",
+        "span_id": "22418ec792fec8ca",
+        "level": "DEBUG",
+        "start_secs": 1597097236,
+        "start_nanos": 541870000,
+        "duration_secs": 65,
+        "duration_nanos": 920893000,
+        "artifacts": {}
+    }
+]

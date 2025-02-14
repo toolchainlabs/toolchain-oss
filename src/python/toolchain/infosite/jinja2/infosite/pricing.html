@@ -1,0 +1,155 @@
+{#
+Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'infosite/base.html' %}
+{% set description = "With our remote caching service, work is shared across your entire team. When you pull other people's changes you utilize the results of their build and test work, instead of having to re-run it. This can result in great speedups in both desktop and, especially, CI builds. The remote cache is easy to enable, and requires no knowledge of tool internals, unlike the unwieldy syncing of cache directories to and from CI machines." %}
+{% block body_class %}pricing{% endblock body_class %}
+{% block active_menu_item %}pricing{% endblock %}
+
+{% block meta_tags %}
+<meta name="description" content="{{ description }}" />
+<meta name="description" property="og:description" content="{{ description }}" />
+<meta name="twitter:description" content="{{ description }}">
+{% endblock meta_tags %}
+
+{% block main %}
+{% include "infosite/header.html" %}
+<section class="pricing-section">
+    <div class="container margin-bottom-80">
+        <div class="row">
+            <div class="col-12 page-title">
+                <h1 class="page-title">Pricing</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 body3 pricing-paragraph text-center">
+                Toolchain supports developer teams of any size and enables them to <br />
+                speed up and stabilize builds and workflows on top of the Pants OSS <br />
+                build system. If you're not already using Pants, get started <a type="external" class="primary" target="_blank" href="https://www.pantsbuild.org/" rel="noopener">here</a>. Or <br />
+                <a class="primary" href="{{ url('contact') }}">contact us</a> with any questions.
+            </div>
+        </div>
+        <div class="d-flex justify-content-center flex-wrap flex-gap24">
+            <div class="pricing-box d-flex">
+                <div>
+                    <h2>Starter</h2>
+                    <div class="d-flex align-items-end flex-gap8">
+                        <div class="display2">$99</div>
+                        <div class="body1">per month</div>
+                    </div>
+                </div>
+                <div class="body1 text-secondary">For small teams getting started with Pants.</div>
+                <a href="{{ get_started_toolchain_link }}" target="_blank" class="button3 link-button text-center full-width">
+                    START 30-DAY FREE TRIAL
+                </a>
+                <div class="d-flex flex-column flex-gap8">
+                    <div class="d-flex align-items-center flex-gap8">
+                        <div class="bullet-box">
+                            <svg width="8" height="9.24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 0L21.3923 6V18L11 24L0.607696 18V6L11 0Z" fill="#00A9B7"/>
+                            </svg>
+                        </div>
+                        <div class="body1">Teams of up to 10 developers</div>
+                    </div>
+                    <div class="d-flex align-items-center flex-gap8">
+                        <div class="bullet-box">
+                            <svg width="8" height="9.24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 0L21.3923 6V18L11 24L0.607696 18V6L11 0Z" fill="#00A9B7"/>
+                            </svg>
+                        </div>
+                        <div class="body1">Up to 100 GB cache storage</div>
+                    </div>
+                    <div class="d-flex align-items-center flex-gap8">
+                        <div class="bullet-box">
+                            <svg width="8" height="9.24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 0L21.3923 6V18L11 24L0.607696 18V6L11 0Z" fill="#00A9B7"/>
+                            </svg>
+                        </div>
+                        <div class="body1">Up to 500 GB outbound data transfer per month</div>
+                    </div>
+                    <div class="d-flex align-items-center flex-gap8">
+                        <div class="bullet-box">
+                            <svg width="8" height="9.24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 0L21.3923 6V18L11 24L0.607696 18V6L11 0Z" fill="#00A9B7"/>
+                            </svg>
+                        </div>
+                        <div class="body1">Community support</div>
+                    </div>
+                    <div class="d-flex align-items-center flex-gap8">
+                        <div class="bullet-box">
+                            <svg width="8" height="9.24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 0L21.3923 6V18L11 24L0.607696 18V6L11 0Z" fill="#00A9B7"/>
+                            </svg>
+                        </div>
+                        <div class="body1">Free to try for 30 days</div>
+                    </div>
+                </div>
+                <svg class="start-here-first-svg" width="60" height="69.28" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 0L21.3923 6V18L11 24L0.607696 18V6L11 0Z" fill="#00a9b714"/>
+                </svg>
+                <svg class="start-here-second-svg" width="60" height="69.28" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 0L21.3923 6V18L11 24L0.607696 18V6L11 0Z" fill="#00a9b714"/>
+                </svg>
+                <div class="start-here-third-svg">
+                    <svg width="60" height="69.28" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 0L21.3923 6V18L11 24L0.607696 18V6L11 0Z" fill="#00dbed"/>
+                    </svg>
+                    <div class="start-here-text">FREE TRIAL</div>
+                </div>
+                <svg class="start-here-fourth-svg" width="60" height="69.28" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 0L21.3923 6V18L11 24L0.607696 18V6L11 0Z" fill="#00a9b714"/>
+                </svg>
+            </div>
+            <div class="pricing-box">
+                <div>
+                    <h2>Enterprise</h2>
+                    <div class="d-flex align-items-end flex-gap8">
+                        <div class="display2">Custom</div>
+                    </div>
+                </div>
+                <div class="body1 text-secondary">Fast, scalable builds for large or growing teams.</div>
+                <a href="{{ url('contact') }}" class="button3 text-center full-width border-button">
+                    CONTACT US FOR PRICING
+                </a>
+                <div class="d-flex flex-column flex-gap8">
+                    <div class="d-flex align-items-center flex-gap8">
+                        <div class="bullet-box">
+                            <svg width="8" height="9.24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 0L21.3923 6V18L11 24L0.607696 18V6L11 0Z" fill="#00A9B7"/>
+                            </svg>
+                        </div>
+                        <div class="body1">Teams of any size</div>
+                    </div>
+                    <div class="d-flex align-items-center flex-gap8">
+                        <div class="bullet-box">
+                            <svg width="8" height="9.24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 0L21.3923 6V18L11 24L0.607696 18V6L11 0Z" fill="#00A9B7"/>
+                            </svg>
+                        </div>
+                        <div class="body1">Cache storage as needed</div>
+                    </div>
+                    <div class="d-flex align-items-center flex-gap8">
+                        <div class="bullet-box">
+                            <svg width="8" height="9.24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 0L21.3923 6V18L11 24L0.607696 18V6L11 0Z" fill="#00A9B7"/>
+                            </svg>
+                        </div>
+                        <div class="body1">Data transfer as needed</div>
+                    </div>
+                    <div class="d-flex align-items-center flex-gap8">
+                        <div class="bullet-box">
+                            <svg width="8" height="9.24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 0L21.3923 6V18L11 24L0.607696 18V6L11 0Z" fill="#00A9B7"/>
+                            </svg>
+                        </div>
+                        <div class="body1">Enterprise support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+{% endblock main %}

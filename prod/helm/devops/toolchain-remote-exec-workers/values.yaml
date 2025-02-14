@@ -1,0 +1,10 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+image: 283194185447.dkr.ecr.us-east-1.amazonaws.com/remoting/worker/toolchainlabs:2023-02-28.21-11-49-30297aa6dced
+replicas: 4
+# see: https://github.com/toolchainlabs/toolchain/blob/master/src/rust/worker/src/main.rs#L57
+worker_storage: "35Gi"
+# https://github.com/toolchainlabs/toolchain/blob/master/src/rust/worker/src/main.rs#L41
+logLevel: info
+worker_concurrency: 3

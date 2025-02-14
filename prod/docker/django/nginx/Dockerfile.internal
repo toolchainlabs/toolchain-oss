@@ -1,0 +1,13 @@
+# Copyright 2018 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# https://gallery.ecr.aws/nginx/nginx
+FROM public.ecr.aws/nginx/nginx:1.23.3-alpine@sha256:0f4e03e4e0e854bafe7ce689a4c2476feb07a88a465bbc7d0f155dd89a6b00db
+ARG CONFIG_FILE=nginx-internal.conf
+
+COPY $CONFIG_FILE /etc/nginx/nginx.conf
+
+EXPOSE 8000
+
+# nginx itself will drop privileges and run as nginx:nginx.
+CMD ["nginx"]

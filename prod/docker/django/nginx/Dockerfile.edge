@@ -1,0 +1,18 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# https://gallery.ecr.aws/nginx/nginx
+FROM public.ecr.aws/nginx/nginx:1.23.3-alpine@sha256:0f4e03e4e0e854bafe7ce689a4c2476feb07a88a465bbc7d0f155dd89a6b00db
+
+ARG TEMPLATE_CONFIG_FILE=nginx-edge.conf.template
+
+# See: https://github.com/docker-library/docs/tree/master/nginx#using-environment-variables-in-nginx-configuration-new-in-119
+# https://github.com/nginxinc/docker-nginx/blob/ab8516ed3a212d8a03392567c8f55c570c839e59/stable/debian/20-envsubst-on-templates.sh#L8
+COPY $TEMPLATE_CONFIG_FILE /etc/nginx/templates/nginx.conf.template
+
+EXPOSE 8000
+
+ENV NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+
+# nginx itself will drop privileges and run as nginx:nginx.
+CMD ["nginx"]

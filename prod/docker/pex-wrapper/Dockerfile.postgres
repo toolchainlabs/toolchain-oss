@@ -1,0 +1,26 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+FROM python:3.9.12-slim-buster@sha256:62ed2b347a385102d33f5e82530862359f8dc60464674d78cef844b02d150a50
+
+RUN apt-get update && apt-get upgrade -y && \
+    mkdir -p /usr/share/man/man1 && mkdir -p /usr/share/man/man7 && \
+    apt-get install -y --no-install-recommends libevent-dev libssl-dev curl gnupg2 lsb-release && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Install Postgesql-client-14, see https://www.postgresql.org/download/linux/ubuntu/
+COPY postgres.asc /tmp/postgres.asc
+RUN apt-key add tmp/postgres.asc && \
+    echo "deb https://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)"-pgdg main | tee /etc/apt/sources.list.d/pgdg.list && \
+    apt-get update && apt-get install -y --no-install-recommends postgresql-client-14 && \
+    apt-get -y clean && rm -rf /var/lib/apt/lists/* && \
+    rm /tmp/postgres.asc && \
+    # The uid:gid 99:99 is nobody:nobody on our production host system (AWS's EKS-optimized AMI).
+    groupadd --gid 99 toolchain && useradd -m --no-log-init --uid 99 --gid 99 toolchain
+ENV PATH="${PATH}:/usr/lib/postgresql/14/bin"
+
+USER toolchain:toolchain
+WORKDIR /pex
+ARG PEX_FILE
+COPY --chown=toolchain:toolchain $PEX_FILE ./tool.pex
+ENTRYPOINT ["/pex/tool.pex"]

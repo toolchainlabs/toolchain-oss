@@ -1,0 +1,41 @@
+{
+    "pagelen": 10,
+    "page": 1,
+    "size": 1,
+    "values": [
+      {
+          "uuid": "{a15fb181-db1f-48f7-b41f-e1eff06929d6}",
+          "links": {
+              "owners": {
+                  "href": "https://api.bitbucket.org/2.0/workspaces/bbworkspace1/members?q=permission%3D%22owner%22"
+              },
+              "self": {
+                  "href": "https://api.bitbucket.org/2.0/workspaces/bbworkspace1"
+              },
+              "repositories": {
+                  "href": "https://api.bitbucket.org/2.0/repositories/bbworkspace1"
+              },
+              "snippets": {
+                  "href": "https://api.bitbucket.org/2.0/snippets/bbworkspace1"
+              },
+              "html": {
+                  "href": "https://bitbucket.org/bbworkspace1/"
+              },
+              "avatar": {
+                  "href": "https://bitbucket.org/workspaces/bbworkspace1/avatar/?ts=1543465801"
+              },
+              "members": {
+                  "href": "https://api.bitbucket.org/2.0/workspaces/bbworkspace1/members"
+              },
+              "projects": {
+                  "href": "https://api.bitbucket.org/2.0/workspaces/bbworkspace1/projects"
+              }
+          },
+          "created_on": "2018-11-14T19:15:05.058566+00:00",
+          "type": "workspace",
+          "slug": "newman",
+          "is_private": true,
+          "name": "Newman Enterprises"
+      }
+    ]
+  }

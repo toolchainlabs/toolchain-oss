@@ -1,0 +1,225 @@
+{
+    "ci_env": {
+        "BITBUCKET_BUILD_NUMBER": "33",
+        "BITBUCKET_CLONE_DIR": "/opt/atlassian/pipelines/agent/build",
+        "BITBUCKET_COMMIT": "113feb0671944c44d274fc4d7c32c681427f9011",
+        "BITBUCKET_DOCKER_HOST_INTERNAL": "10.36.202.130",
+        "BITBUCKET_GIT_HTTP_ORIGIN": "http://bitbucket.org/festivus-miracle/minimal-pants",
+        "BITBUCKET_GIT_SSH_ORIGIN": "git@bitbucket.org:festivus-miracle/minimal-pants.git",
+        "BITBUCKET_PIPELINE_UUID": "{49cad2bc-a237-4916-9e1b-0cb11ccb81db}",
+        "BITBUCKET_PROJECT_KEY": "EX",
+        "BITBUCKET_PROJECT_UUID": "{8454e8bb-7290-4396-9eb9-6c0d77556bc5}",
+        "BITBUCKET_REPO_FULL_NAME": "festivus-miracle/minimal-pants",
+        "BITBUCKET_REPO_IS_PRIVATE": "false",
+        "BITBUCKET_REPO_OWNER": "festivus-miracle",
+        "BITBUCKET_REPO_OWNER_UUID": "{acf54878-51be-473e-bf0b-0fbb12e011ad}",
+        "BITBUCKET_REPO_SLUG": "minimal-pants",
+        "BITBUCKET_REPO_UUID": "{c389eba6-ca13-49c5-8dec-4e617d39dffe}",
+        "BITBUCKET_STEP_RUN_NUMBER": "1",
+        "BITBUCKET_STEP_TRIGGERER_UUID": "{6ae3c307-ae59-4135-9c72-bdd06eb2010a}",
+        "BITBUCKET_STEP_UUID": "{f987bb55-e706-49f5-9a2d-6ade1f16ee5f}",
+        "BITBUCKET_TAG": "h&h-bagles",
+        "BITBUCKET_WORKSPACE": "festivus-miracle"
+    },
+    "counter_names": [
+        "local_cache_requests",
+        "local_cache_requests_cached",
+        "local_cache_requests_uncached",
+        "local_cache_read_errors",
+        "local_cache_write_errors",
+        "local_cache_total_time_saved_ms",
+        "local_execution_requests",
+        "remote_cache_requests",
+        "remote_cache_requests_cached",
+        "remote_cache_requests_uncached",
+        "remote_cache_read_errors",
+        "remote_cache_write_attempts",
+        "remote_cache_write_successes",
+        "remote_cache_write_errors",
+        "remote_cache_speculation_local_completed_first",
+        "remote_cache_speculation_remote_completed_first",
+        "remote_cache_total_time_saved_ms",
+        "remote_execution_errors",
+        "remote_execution_requests",
+        "remote_execution_rpc_errors",
+        "remote_execution_rpc_execute",
+        "remote_execution_rpc_retries",
+        "remote_execution_rpc_wait_execution",
+        "remote_execution_success",
+        "remote_execution_timeouts",
+        "remote_store_missing_digest"
+    ],
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 10.176255941390991
+        }
+    ],
+    "observation_histograms": {
+        "histograms": {
+            "local_cache_time_saved_ms": "HISTFAAAADd4nC3GoQ0AIAxE0euROhyWBMMezEbCBkzBdhiCBNF+834eMwGIsIIrRnlt213lEa7KrvyMVQbx",
+            "local_store_read_blob_size": "HISTFAAAAIh4nC1LPQrCUBj7mi/vez/UoRSRoqLg0BM4d/QYnsITKDiLBxBXb+JtBEeH+mpNSAIhWZyutYgcZIT+s/h51/fdaywqwEPQZi2RbWBinSBJ1ykorQylgI4GT2yhaYIZHSqKTbmiILJltJ3Nh3+DiA2OwE3to3nXYM+z4vIo8Cxw93i78AX0dw8f"
+        },
+        "version": 0
+    },
+    "pantsd_stats": {
+        "affected_file_count": 9,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 249
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "level": "info",
+            "local_execution_root_dir": "/tmp",
+            "local_store_dir": "/root/.cache/pants/lmdb_store",
+            "local_store_directories_max_size_bytes": 16000000000,
+            "local_store_files_max_size_bytes": 256000000000,
+            "local_store_processes_max_size_bytes": 16000000000,
+            "local_store_shard_count": 16,
+            "log_levels_by_target": {},
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "remote_store_chunk_bytes": 1048576,
+            "remote_store_chunk_upload_timeout_seconds": 60,
+            "watch_filesystem": true
+        },
+        "auth": {
+            "auth_file": null,
+            "ci_env_variables": [],
+            "from_env_var": "TOOLCHAIN_AUTH_TOKEN",
+            "org": null,
+            "restricted_token_matches": {}
+        },
+        "toolchain-setup": {
+            "base_url": "https://app.toolchain.com",
+            "repo": "minimal-pants"
+        },
+        "typecheck": {},
+        "validate": {
+            "detail_level": "nonmatching"
+        }
+    },
+    "run_info": {
+        "branch": "113feb0671944c44d274fc4d7c32c681427f9011",
+        "buildroot": "/opt/atlassian/pipelines/agent/build",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.6.0 lint ::",
+        "computed_goals": [
+            "lint"
+        ],
+        "datetime": "Thursday Aug 12, 2021 00:53:48",
+        "id": "pants_run_2021_08_12_00_53_51_617_f8c6c6871059495ebaef93fb4f3b394f",
+        "machine": "f987bb55-e706-49f5-9a2d-6ade1f16ee5f-l4lcq",
+        "outcome": "SUCCESS",
+        "path": "/opt/atlassian/pipelines/agent/build",
+        "revision": "113feb0671944c44d274fc4d7c32c681427f9011",
+        "specs_from_command_line": [
+            "::"
+        ],
+        "timestamp": 1628729628.813356,
+        "user": "root",
+        "version": "2.6.0"
+    },
+    "targets": {
+        "//:ansicolors": [
+            {
+                "filename": "//:ansicolors"
+            }
+        ],
+        "//:requirements.txt": [
+            {
+                "filename": "//:requirements.txt"
+            }
+        ],
+        "seinfeld": [
+            {
+                "filename": "seinfeld/main.py"
+            },
+            {
+                "filename": "seinfeld/quote_of_the_day.py"
+            }
+        ],
+        "seinfeld:main": [
+            {
+                "filename": "seinfeld:main"
+            }
+        ],
+        "seinfeld:tests": [
+            {
+                "filename": "seinfeld/quote_of_the_day_test.py"
+            }
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "1b4eef9269da6b50",
+            "name": "select",
+            "state": "finished",
+            "version": 8,
+            "parent_id": null,
+            "last_update": 1628729639,
+            "start_usecs": 1628729631825881,
+            "end_usecs": 1628729638988887
+        },
+        {
+            "workunit_id": "c7ca33784643cafb",
+            "name": "pants.core.goals.lint.lint",
+            "state": "finished",
+            "version": 8,
+            "parent_id": "1b4eef9269da6b50",
+            "last_update": 1628729639,
+            "start_usecs": 1628729631829843,
+            "description": "`lint` goal",
+            "end_usecs": 1628729638988816
+        },
+        {
+            "workunit_id": "2e696cdf18380710",
+            "name": "pants.core.goals.lint.enrich_lint_results",
+            "state": "finished",
+            "version": 8,
+            "parent_id": "c7ca33784643cafb",
+            "last_update": 1628729639,
+            "start_usecs": 1628729631929587,
+            "description": "lint",
+            "end_usecs": 1628729638988145
+        },
+        {
+            "workunit_id": "dde8e0cf927cfd55",
+            "name": "pants.backend.python.lint.black.rules.black_lint",
+            "state": "finished",
+            "version": 8,
+            "parent_id": "2e696cdf18380710",
+            "last_update": 1628729639,
+            "start_usecs": 1628729631929646,
+            "description": "Lint with Black",
+            "end_usecs": 1628729638987853
+        },
+        {
+            "workunit_id": "7eb22d885fc0e456",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 8,
+            "parent_id": "dde8e0cf927cfd55",
+            "last_update": 1628729639,
+            "start_usecs": 1628729638484014,
+            "end_usecs": 1628729638987399
+        },
+        {
+            "workunit_id": "81242845ee98a69f",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 8,
+            "parent_id": "7eb22d885fc0e456",
+            "last_update": 1628729639,
+            "start_usecs": 1628729638484258,
+            "description": "Scheduling: Run Black on 3 files.",
+            "end_usecs": 1628729638986962,
+            "metadata": {
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stderr": "All done! ✨ 🍰 ✨\n3 files would be left unchanged.\n"
+            }
+        }
+    ]
+}

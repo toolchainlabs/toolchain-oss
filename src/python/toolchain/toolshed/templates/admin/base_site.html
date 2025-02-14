@@ -1,0 +1,24 @@
+{#
+Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block extrahead %}
+{% load static %}
+  <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}" />
+{% endblock %}
+
+{% block branding %}
+{% load static %}
+<h1 id="site-name">
+  <a href="{{ site_url }}">
+    <img src="{% static 'images/favicon.png' %}"/>
+    {{ site_header|default:_('Django administration') }}
+  </a>
+</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

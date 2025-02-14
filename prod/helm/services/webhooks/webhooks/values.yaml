@@ -1,0 +1,46 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: webhooks
+service_type: api
+service_location: edge
+has_static_files: false
+toolchain_product_name: webhooks
+host_name: webhooks.toolchain.com
+gunicorn_image_rev:
+  us-east-1: prod-2023-04-17.16-29-17-d01c098cd738
+secrets:
+- github-app-webhook-secrets
+- stripe-integration
+resources:
+  gunicorn:
+    requests:
+      cpu: 50m
+      memory: 256Mi
+tests:
+  enabled: true
+  webhooks:
+    image_rev:
+      us-east-1: prod-2023-04-17.16-29-17-d01c098cd738 # Filled by install script
+
+ingress:
+  name: webhooks-ingress
+  # Disable ingress by default so it doesn't get enabled in dev. the install prod script will enable it and insert the security group and cert ARN
+  enabled: false
+  external_ingress_sg_id:  # Gets overwritten by install_service_prod.py
+    us-east-1: prod-2021-02-01.22-28-02-60f48e0759a2
+  ssl_certificate_arn:  # Gets overwritten by install_service_prod.py
+    us-east-1: prod-2021-02-01.22-28-02-60f48e0759a2
+  healthcheck_path: /healthz
+  rules:
+  - host: webhooks.toolchain.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: webhooks
+            port:
+              number: 80
+

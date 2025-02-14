@@ -1,0 +1,67 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'crawler/base.html' %}
+{% block content %}
+  <h2>Index Status for <code>{{ coords }}</code></h2>
+
+  <form method="POST" id="index_jars">{{ csrf_input }}</form>
+
+  <table class="table crawler-status-table">
+    {% for kind in [source, binary] %}
+      <tbody>
+        <tr>
+          <th colspan="2"><h4>Index from {{ kind.name }}</h4></th>
+        </tr>
+
+        <tr>
+          <td>Jar:</td>
+          <td><a class="{% if not kind.jar_exists %}broken{% endif %}" href="{{ kind.jar }}">{{ kind.jar }}</a></td>
+        </tr>
+
+        <tr>
+          <td>Entries:</td>
+          <td>
+            <span class="{% if not kind.entries_file_exists %}broken{% endif %}">
+              {% if kind.entries_file_exists %}{{ kind.entries_file_location }}{% endif %}
+            </span>
+          </td>
+          <td colspan="2">
+            <a class="btn btn-default btn-primary" {% if not kind.entries_file_exists or not kind.jar_exists %}disabled{% endif %} href="{{ url('kythebrowser:loadgraph', kwargs={'file_path': kind.entries_file_location}) }}">Browse</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Indexer Work:</td>
+          <td>
+            {% if kind.indexer_workunit_payload %}
+              <a href="{{ url('workflow:workunit_status', kwargs={'pk': kind.indexer_workunit_payload.id}) }}">
+                {{ kind.indexer_workunit_payload }}
+              </a>
+            {% endif %}
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <button
+              class="btn btn-default btn-primary"
+              {% if not kind.all_indexer_workunits_succeeded or not kind.jar_exists%}
+                disabled
+              {% endif %}
+              form="index_jars"
+              type="submit"
+              name="kind"
+              value={{ kind.value }}
+            >
+              {% if kind.entries_file_exists %}Re-{% endif %}Index {{ kind.name }} JAR
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    {% endfor %}
+  </table>
+
+{% endblock content %}

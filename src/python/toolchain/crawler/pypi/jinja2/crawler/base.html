@@ -1,0 +1,16 @@
+{#
+Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'pypi/base.html' %}
+
+{% block navbar_left %}
+{{ super() }}
+
+<li id="nav-pypi" class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+    aria-expanded="false">Indexer<span class="caret"></span></a>
+</li>
+
+{% endblock navbar_left %}

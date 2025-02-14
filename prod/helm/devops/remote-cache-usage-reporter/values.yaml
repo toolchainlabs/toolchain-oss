@@ -1,0 +1,15 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# values set by build_install_remote_cache_reporter
+image: null
+iam_role: null
+redis_cluster_prefix: null
+s3_base_path: null
+customers_map_s3_url: null
+slack_webhook: null
+push_gateway_url: http://prod-monitoring-prometheus-pushgateway.monitoring.svc.cluster.local:9091
+localStorage:
+  efsFileSystemId: null 
+  efsAccessPointId: null
+

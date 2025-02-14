@@ -1,0 +1,103 @@
+{
+    "toolchain_team": [
+        {
+            "name": "Benjy Weinberger",
+            "alias": "benjy",
+            "title": "Co-Founder",
+            "github_url": "https://github.com/benjyw",
+            "bio": [
+                "When Benjy was ten years old, his uncle showed him the latest gadget: a Sinclair ZX80. It was the 8-bit wonder of the time, with its 3 MHz processor and 1KB of RAM. That was the first time Benjy saw a computer but by the end of a week learning BASIC, he knew they would play a major role in his life.",
+                "Although originally from the UK, Benjy grew up in Israel where an ongoing fascination with computers translated to undergraduate and graduate Computer Science studies at Hebrew University.",
+                "Benjy has worked as a software engineer for over 20 years. He cut his teeth on C++ and low-level network programming before working on distributed systems at Google and Twitter. While at Foursquare, he led the infrastructure engineering team. Benjy has been a core contributor to the Pants open-source build system since its inception, and was instrumental in turning it into a true OSS project supported by a growing community."
+            ]
+        },
+        {
+            "name": "John Sirois",
+            "alias": "jsirois",
+            "title": "Co-Founder",
+            "github_url": "https://github.com/jsirois",
+            "bio": [
+                "John's early interest in programming began by drawing with Logo on an Apple II, and then trying to create games in the Zork style. Although not eaten by a Grue, he moved away from programming, developing a deep interest in physics. After two years of mentoring a FIRST Robotics Competition team, he was drawn back into coding.",
+                "John has many years of experience in software engineering. He worked on the Google Docs team with a focus on storage APIs. Later, he worked on early PaaS efforts at VMware which led to a turn at Twitter building out Mesos/Aurora with focuses on distributed storage systems and consensus algorithms. Along the way, he worked on the \"Who To Follow\" service. While at Twitter, John started the Pants build system project, and continues to be a core contributor to this day."
+            ]
+        },
+        {
+            "name": "Stu Hood",
+            "alias": "stuhood",
+            "title": "Head of Engineering",
+            "github_url": "https://github.com/stuhood",
+            "bio": [
+                "Stu enjoys breaking and fixing things, but also loves building systems and APIs that are harder to break and easier to fix...",
+                "Initially focused on storage, Stu worked on email and distributed log search in the earlier days of Apache Hadoop and Lucene. His contributions to Apache Cassandra brought him to Twitter, where he spent a few years working on storage before transitioning to Twitter's developer productivity team. There, he led the development of the next generation v2 \"engine\" for the Pants build system, now foundational for Toolchain Labs.",
+                "Stu is excited to work at Toolchain because of the potential to save so much time for engineers by removing boilerplate and efficiently and transparently taking advantage of remote resources."
+            ]
+        },
+        {
+            "name": "Carina C. Zona",
+            "alias": "cczona",
+            "title": "Head of Developer Relations",
+            "github_url": "https://github.com/cczona",
+            "bio": [
+                "Carina C. Zona started out as a developer/consultant then transitioned into developer relations, where her work has focused on open source projects, especially in Python and Ruby communities. She has served as an organizational leader, event organizer, and teacher for various national and international groups including Railsbridge and Bridge Foundry. She was one of the earliest organizers and stewards of Women Who Code. She has developed and taught curricula on Git, Ruby, and other technical topics for groups including PyLadies. She's also served on tech conference program committees, and frequently mentors emerging speakers who are underrepresented at the podium.",
+                "Carina is a frequent speaker and keynoter at conferences around the world. She is fascinated by the unexpected effects of our choices as developers, and is best known for talks on data modeling, biometrics, ethics, and security. Many of which have been deeply influenced by her background as a certified sex educator.",
+                "She is also the founder of CallbackWomen, on a mission to increase gender diversity at the podium of over professional developers conferences, most of which center on open source languages, platforms, frameworks, and tooling."
+            ]
+        },
+        {
+            "name": "Asher Foa",
+            "alias": "asher",
+            "title": "Software Engineer",
+            "github_url": "https://github.com/asherf",
+            "bio": [
+                "Asher’s interest in programming started when he discovered that if you boot up a TI-99/4A without a game cartridge, you get a basic interpreter.",
+                "He was born and raised in Israel, where he worked on building software for command and control systems using Java and, later on, Microsoft’s .NET stack.",
+                "Asher moved to the US a few years ago, where he worked on web systems and applications, mostly in Python, before joining Toolchain."
+            ]
+        },
+        {
+            "name": "Christopher Neugebauer",
+            "alias": "chrisjrn",
+            "title": "Software Engineer",
+            "github_url": "https://github.com/chrisjrn",
+            "bio": [
+                "Christopher has been a programmer for longer than he can care to remember, after accidentally discovering that by editing the QBasic source files to games he found on old computer, you could make it play different music. Since then, his career has led him to working on a high-performance Python-based search engine, to building reliable abstractions over unreliable 3rd party systems, and even to designing an access contoller for a reclusive art collector's cliffside bunker.",
+                "Chris likes it when programmers share knowledge with each other, so he regularly speaks at technical conferences throughout the world. He's also been a serial conference organiser for more than ten years, with past credits including PyCon Australia, and linux.conf.au. These days, when fires or pandemic aren't preventing it, he runs North Bay Python, a boutique single-track conference run in a live music venue.",
+                "Originally from Australia, he now resides with his husband, Josh, and cats Astra and Pico, in glorious Petaluma, California."
+            ]
+        },
+        {
+            "name": "Nikola Pervic",
+            "alias": "nikola",
+            "title": "Frontend developer",
+            "github_url": "https://github.com/thehambalamba",
+            "bio": [
+                "Nikola still remembers the first PC - a 386 - he received from his aunt when she got an upgrade. From that day on he would spend all his free time alternating between that computer and his best friend's PS1. This experience would guide him, when he started college, to choose a degree in IT.",
+                "Nikola was born and raised in Belgrade, Serbia where, while studying, he pursued work in web development. His first role at a company included web development but he soon shifted into frontend development using JavaScript and various frameworks.",
+                "While at <a href=\"https://www.itekako.com/\"  target=\"_new\" rel=\"noopener\">Itekako</a> he helps clients like Toolchain build reliable single-page applications and other frontend solutions."
+            ]
+        },
+        {
+            "name": "Darko Ninkovic",
+            "alias": "darko",
+            "title": "Frontend developer",
+            "github_url": "https://github.com/darkoninkovic",
+            "bio": [
+                "When Darko was near the end of primary school he discovered that he could create electronic music using only a computer. This led him to ongoing work as an amateur music producer. Once he started studying computer science, Darko found out that he could use his creativity outside the music production field as well.",
+                "Darko was born and raised in Belgrade, Serbia. During his professional career, he has worked with people from the US and all over the world.",
+                "Currently, Darko works as a web frontend developer, but his interests also include mobile and backend technologies",
+                "As an engineer at <a href=\"https://www.itekako.com/\" target=\"_new\" rel=\"noopener\">Itekako</a> Darko works on Toolchain's single-page web application."
+            ]
+        },
+        {
+            "name": "Enzo Yu Deng",
+            "alias": "enzo",
+            "title": "Product Designer",
+            "bio": [
+                "Growing up, Enzo always got excited about all kinds of thought experiments. Without realizing or understanding it, he was involuntarily training his logical thinking habits. He likes things that work and concepts that make sense.",
+                "Currently, working as a freelance Product and UX Designer, he always tries to make reasonable and sensible designs, both functionally and aesthetically. He also taught himself a little bit of HTML, CSS, and Javascript because it helps him understand the receiving end of his design works, and because it is fun. With these interests and skillsets, he naturally chooses to work on SaaS products, which keeps the work challenging and entertaining for him.",
+                "Enzo also runs the fashion store <a href=\"https://hitchhikermilano.com/\" target=\"_new\" rel=\"noopener\">Hitchhiker</a> in Milan together with some friends. Although still very small, the business seeks to advocate for the LGBTQ+ subculture by showcasing emerging avant-garde fashion designers.",
+                "Although he's working relatively hard throughout his life, Enzo still finds that parts of the ideology of cosmic nihilism resonate with him."
+            ]
+        }
+    ]
+}

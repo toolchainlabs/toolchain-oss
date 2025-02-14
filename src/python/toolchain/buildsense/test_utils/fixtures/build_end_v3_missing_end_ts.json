@@ -1,0 +1,1827 @@
+{
+    "artifact_cache_stats": [],
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 21.027222394943237,
+            "is_tool": false
+        },
+        {
+            "label": "main:complete",
+            "timing": 0.0007340908050537109,
+            "is_tool": false
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 22,
+        "affected_targets_size": 0,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 136,
+        "target_root_size": 0
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "allow_external_binary_tool_downloads": true,
+            "backend_packages": [
+                "pants.backend.graph_info",
+                "pants.backend.project_info",
+                "pants.backend.python",
+                "pants.backend.jvm",
+                "toolchain.pants.internal"
+            ],
+            "backend_packages2": [
+                "toolchain.pants.auth",
+                "toolchain.pants.buildsense",
+                "toolchain.pants.common",
+                "toolchain.pants.internal",
+                "toolchain.pants.external",
+                "toolchain.pants.rules.mypy",
+                "pants.backend.awslambda.python",
+                "pants.backend.project_info",
+                "pants.backend.python",
+                "pants.backend.python.lint.bandit",
+                "pants.backend.python.lint.black",
+                "pants.backend.python.lint.docformatter",
+                "pants.backend.python.lint.flake8",
+                "pants.backend.python.lint.isort",
+                "pants.contrib.go",
+                "pants.contrib.node"
+            ],
+            "binaries_baseurls": [
+                "https://binaries.pantsbuild.org",
+                "https://github.com/toolchainlabs/binhost/raw/master/"
+            ],
+            "binaries_fetch_timeout_secs": 30,
+            "binaries_path_by_id": {},
+            "build_file_imports": "error",
+            "build_file_prelude_globs": [],
+            "build_ignore": [
+                ".*/",
+                "bower_components/",
+                "node_modules/",
+                "*.egg-info/"
+            ],
+            "cache_key_gen_version": "200",
+            "colors": true,
+            "concurrent": false,
+            "enable_pantsd": false,
+            "exclude_target_regexp": [],
+            "experimental_fs_watcher": true,
+            "explain": false,
+            "fail_fast": false,
+            "files_not_found_behavior": "warn",
+            "ignore_pants_warnings": [],
+            "kill_nailguns": false,
+            "level": "info",
+            "local_execution_root_dir": "/tmp",
+            "local_store_dir": "/home/vagrant/.cache/pants/lmdb_store",
+            "lock": true,
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "max_subprocess_args": 100,
+            "native_engine_visualize_to": null,
+            "option_name_check_distance": 2,
+            "owners_not_found_behavior": "error",
+            "pants_bin_name": "./tc",
+            "pants_bootstrapdir": "/home/vagrant/.cache/pants",
+            "pants_config_files": [
+                "/vagrant/pants.toml",
+                "/vagrant/toolchain.toml",
+                "pants.local-bf.toml"
+            ],
+            "pants_configdir": "/home/vagrant/.config/pants",
+            "pants_distdir": "/vagrant/dist",
+            "pants_ignore": [
+                ".*/",
+                "/dist/"
+            ],
+            "pants_ignore_use_gitignore": true,
+            "pants_physical_workdir_base": null,
+            "pants_subprocessdir": "/vagrant/.pids",
+            "pants_supportdir": "/vagrant/build-support",
+            "pants_version": "1.28.0rc0",
+            "pants_workdir": "/vagrant/.pants.d",
+            "pantsd_invalidation_globs": [],
+            "pantsd_log_dir": null,
+            "pantsd_pailgun_host": "127.0.0.1",
+            "pantsd_pailgun_port": 0,
+            "pantsd_pailgun_quit_timeout": 5,
+            "pantsd_timeout_when_multiple_invocations": 60,
+            "pantsrc": true,
+            "pantsrc_files": [
+                "/etc/pantsrc",
+                "~/.pants.rc"
+            ],
+            "parent_build_id": null,
+            "plugin_cache_dir": "/home/vagrant/.cache/pants/plugins",
+            "plugins": [
+                "pantsbuild.pants.contrib.codeanalysis==1.28.0rc0",
+                "pantsbuild.pants.contrib.go==1.28.0rc0",
+                "pantsbuild.pants.contrib.mypy==1.28.0rc0",
+                "pantsbuild.pants.contrib.node==1.28.0rc0",
+                "boto3==1.13.9",
+                "isort==4.3.21",
+                "networkx==2.4",
+                "pkginfo==1.5.0.1",
+                "plyvel==1.2.0",
+                "protobuf==3.11.3",
+                "setuptools==44.0.0"
+            ],
+            "plugins2": [],
+            "plugins_force_resolve": false,
+            "print_exception_stacktrace": false,
+            "process_execution_cleanup_local_dirs": true,
+            "process_execution_local_enable_nailgun": false,
+            "process_execution_local_parallelism": 4,
+            "process_execution_remote_parallelism": 128,
+            "process_execution_speculation_delay": 1,
+            "process_execution_speculation_strategy": "none",
+            "process_execution_use_local_cache": true,
+            "pythonpath": [
+                "/vagrant/src/python"
+            ],
+            "quiet": false,
+            "remote_ca_certs_path": null,
+            "remote_execution": true,
+            "remote_execution_extra_platform_properties": [
+                "execution-policy=network",
+                "execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb",
+                "execution-policy=debug"
+            ],
+            "remote_execution_headers": {},
+            "remote_execution_process_cache_namespace": null,
+            "remote_execution_server": "localhost:8980",
+            "remote_instance_name": null,
+            "remote_oauth_bearer_token_path": null,
+            "remote_store_chunk_bytes": 1048576,
+            "remote_store_chunk_upload_timeout_seconds": 60,
+            "remote_store_connection_limit": 5,
+            "remote_store_rpc_retries": 2,
+            "remote_store_server": [
+                "localhost:8980"
+            ],
+            "remote_store_thread_count": 1,
+            "shutdown_pantsd_after_run": false,
+            "spec_files": [],
+            "streaming_workunits_handlers": [
+                "toolchain.pants.buildsense.reporter.Reporter"
+            ],
+            "streaming_workunits_report_interval": 1,
+            "subproject_roots": [],
+            "tag": [],
+            "time": false,
+            "v1": false,
+            "v2": true,
+            "v2_ui": true,
+            "verify_config": true,
+            "watchman_enable": false,
+            "watchman_socket_path": null,
+            "watchman_socket_timeout": 0.1,
+            "watchman_startup_timeout": 60,
+            "watchman_supportdir": "bin/watchman",
+            "watchman_version": "4.9.0-pants1",
+            "workdir_max_build_entries": 8
+        }
+    },
+    "run_info": {
+        "id": "pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7",
+        "timestamp": "1589576151.4686954",
+        "datetime": "Friday May 15, 2020 20:55:51",
+        "user": "vagrant",
+        "machine": "vagrant",
+        "path": "/vagrant",
+        "buildroot": "/vagrant",
+        "version": "1.28.0rc0",
+        "cmd_line": "pants --pants-config-files=+[\"/vagrant/toolchain.toml\"] --pants-bin-name=./tc --pants-config-files=pants.local-bf.toml --remote-execution-extra-platform-properties=execution-policy=debug test src/python/toolchain/base::",
+        "default_report": "/vagrant/.pants.d/reports/pants_run_2020_05_15_20_55_51_468_6caca4513f92485fb088c9dac3ba8bc7/html/build.html",
+        "specs_from_command_line": [
+            "src/python/toolchain/base::"
+        ],
+        "outcome": "FAILURE",
+        "revision": "3856722336f1c67ebda9068d2515ea43d4d6c25e",
+        "branch": "master"
+    },
+    "workunits": [
+        {
+            "workunit_id": "405df15bcd979569",
+            "name": "union_membership_singleton",
+            "version": 1,
+            "parent_id": "5007432b60c5b942",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151496719,
+            "description": "",
+            "end_usecs": 1589576151496817
+        },
+        {
+            "workunit_id": "135b2d218e032633",
+            "name": "parse_options",
+            "version": 1,
+            "parent_id": "c69108685755d498",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151497142,
+            "description": "",
+            "end_usecs": 1589576151510911
+        },
+        {
+            "workunit_id": "c69108685755d498",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "d0ee77b48659c424",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151497130,
+            "description": "",
+            "end_usecs": 1589576151510941
+        },
+        {
+            "workunit_id": "d0ee77b48659c424",
+            "name": "task",
+            "version": 1,
+            "parent_id": "5007432b60c5b942",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151497036,
+            "description": "Task(pants.core.goals.test:160:construct_scope_test(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), TestOptions, true)",
+            "end_usecs": 1589576151510976
+        },
+        {
+            "workunit_id": "2058a2e27da6c35b",
+            "name": "registered_target_types_singleton",
+            "version": 1,
+            "parent_id": "4f8d990eda45d950",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151511098,
+            "description": "",
+            "end_usecs": 1589576151512658
+        },
+        {
+            "workunit_id": "ce2ebf6b2cd7b8ed",
+            "name": "address_mapper_singleton",
+            "version": 1,
+            "parent_id": "a758352ca680ebe0",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151511202,
+            "description": "",
+            "end_usecs": 1589576151512742
+        },
+        {
+            "workunit_id": "1aab35aeaa713126",
+            "name": "scandir",
+            "version": 1,
+            "parent_id": "149e590485bcbe54",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151513190,
+            "description": "Scandir(Dir(\"\"))",
+            "end_usecs": 1589576151518238
+        },
+        {
+            "workunit_id": "3ec6f4b48a0c20a6",
+            "name": "scandir",
+            "version": 1,
+            "parent_id": "149e590485bcbe54",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151518294,
+            "description": "Scandir(Dir(\"src\"))",
+            "end_usecs": 1589576151518761
+        },
+        {
+            "workunit_id": "498c34f403700f47",
+            "name": "scandir",
+            "version": 1,
+            "parent_id": "149e590485bcbe54",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151518807,
+            "description": "Scandir(Dir(\"src/python\"))",
+            "end_usecs": 1589576151519162
+        },
+        {
+            "workunit_id": "84f8c9263ca76e35",
+            "name": "scandir",
+            "version": 1,
+            "parent_id": "149e590485bcbe54",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151519191,
+            "description": "Scandir(Dir(\"src/python/toolchain\"))",
+            "end_usecs": 1589576151520059
+        },
+        {
+            "workunit_id": "c3f247af5d3463d4",
+            "name": "scandir",
+            "version": 1,
+            "parent_id": "149e590485bcbe54",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151520101,
+            "description": "Scandir(Dir(\"src/python/toolchain/base\"))",
+            "end_usecs": 1589576151521214
+        },
+        {
+            "workunit_id": "bdefd73dd6c37978",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "149e590485bcbe54",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151521308,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/BUILD\", is_executable: false })",
+            "end_usecs": 1589576151522196
+        },
+        {
+            "workunit_id": "149e590485bcbe54",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "a758352ca680ebe0",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151512999,
+            "description": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/base/**/BUILD', 'src/python/toolchain/base/**/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1589576151522553
+        },
+        {
+            "workunit_id": "9d25b2e6ef16e014",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "ee9188457148743e",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151522810,
+            "description": "Snapshot(PathGlobs(globs=(), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1589576151522882
+        },
+        {
+            "workunit_id": "ee9188457148743e",
+            "name": "evalute_preludes",
+            "version": 1,
+            "parent_id": "d1d447d43c7c07d0",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151522718,
+            "description": "",
+            "end_usecs": 1589576151523027
+        },
+        {
+            "workunit_id": "bbeb17944cef34e5",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "d1d447d43c7c07d0",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151523127,
+            "description": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', 'src/python/toolchain/base/BUILD', 'src/python/toolchain/base/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1589576151523666
+        },
+        {
+            "workunit_id": "d1d447d43c7c07d0",
+            "name": "parse_address_family",
+            "version": 1,
+            "parent_id": "a758352ca680ebe0",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151522691,
+            "description": "",
+            "end_usecs": 1589576151524295
+        },
+        {
+            "workunit_id": "a758352ca680ebe0",
+            "name": "addresses_with_origins_from_address_families",
+            "version": 1,
+            "parent_id": "f575fafdde67a752",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151511191,
+            "description": "",
+            "end_usecs": 1589576151524531
+        },
+        {
+            "workunit_id": "4298bb128307f0d6",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "6495bff8306d5d29",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151524665,
+            "description": "",
+            "end_usecs": 1589576151524987
+        },
+        {
+            "workunit_id": "6495bff8306d5d29",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "f54ba2dc7152c952",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151524654,
+            "description": "",
+            "end_usecs": 1589576151525145
+        },
+        {
+            "workunit_id": "f54ba2dc7152c952",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "f575fafdde67a752",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151524612,
+            "description": "",
+            "end_usecs": 1589576151525164
+        },
+        {
+            "workunit_id": "20aab0c123d54d17",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "2080114a99ed3464",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151524731,
+            "description": "",
+            "end_usecs": 1589576151525347
+        },
+        {
+            "workunit_id": "2080114a99ed3464",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "a6bafdc568445383",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151524720,
+            "description": "",
+            "end_usecs": 1589576151525487
+        },
+        {
+            "workunit_id": "a6bafdc568445383",
+            "name": "resolve_target_with_origin",
+            "version": 1,
+            "parent_id": "f575fafdde67a752",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151524628,
+            "description": "",
+            "end_usecs": 1589576151525501
+        },
+        {
+            "workunit_id": "f575fafdde67a752",
+            "name": "resolve_targets_with_origins",
+            "version": 1,
+            "parent_id": "4f8d990eda45d950",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151511173,
+            "description": "",
+            "end_usecs": 1589576151525520
+        },
+        {
+            "workunit_id": "4f8d990eda45d950",
+            "name": "find_valid_field_sets",
+            "version": 1,
+            "parent_id": "5007432b60c5b942",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151511068,
+            "description": "",
+            "end_usecs": 1589576151525826
+        },
+        {
+            "workunit_id": "c367d215e1dc1510",
+            "name": "glob_match_error_behavior_singleton",
+            "version": 1,
+            "parent_id": "84ca65c415527436",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151525990,
+            "description": "",
+            "end_usecs": 1589576151526001
+        },
+        {
+            "workunit_id": "eae992f47ed279e3",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "0bf4885eced22408",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151526329,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/strutil_test.py\", is_executable: false })",
+            "end_usecs": 1589576151527911
+        },
+        {
+            "workunit_id": "0cb28bc8521758d5",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "0bf4885eced22408",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151526350,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/email_test.py\", is_executable: false })",
+            "end_usecs": 1589576151527922
+        },
+        {
+            "workunit_id": "b1b22e2ba3b3cf72",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "0bf4885eced22408",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151526340,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/password_test.py\", is_executable: false })",
+            "end_usecs": 1589576151528025
+        },
+        {
+            "workunit_id": "47dc169303418406",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "0bf4885eced22408",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151526357,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/fileutil_test.py\", is_executable: false })",
+            "end_usecs": 1589576151528306
+        },
+        {
+            "workunit_id": "0bf4885eced22408",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "84ca65c415527436",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151526139,
+            "description": "Snapshot(PathGlobs(globs=('src/python/toolchain/base/*_test.py', 'src/python/toolchain/base/conftest.py', 'src/python/toolchain/base/test_*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/base:tests's `sources` field\"))",
+            "end_usecs": 1589576151528578
+        },
+        {
+            "workunit_id": "84ca65c415527436",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "a9e0f189d38a2e1e",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151525979,
+            "description": "",
+            "end_usecs": 1589576151528737
+        },
+        {
+            "workunit_id": "a9e0f189d38a2e1e",
+            "name": "determine_field_sets_with_sources",
+            "version": 1,
+            "parent_id": "5007432b60c5b942",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151525905,
+            "description": "",
+            "end_usecs": 1589576151528769
+        },
+        {
+            "workunit_id": "35631d367d5adb11",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "79f9a2060dc818ad",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151530885,
+            "description": "",
+            "end_usecs": 1589576151532790
+        },
+        {
+            "workunit_id": "79f9a2060dc818ad",
+            "name": "task",
+            "version": 1,
+            "parent_id": "42985d735b3a0dc3",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151530563,
+            "description": "Task(pants.backend.python.subsystems.pytest:10:construct_scope_pytest(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), PyTest, true)",
+            "end_usecs": 1589576151532864
+        },
+        {
+            "workunit_id": "e5756f2740ff1055",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "ccf0559bb1161fa1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151530703,
+            "description": "",
+            "end_usecs": 1589576151533355
+        },
+        {
+            "workunit_id": "b6cdd7220156d8b2",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "3ff97699bebfc40f",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151533497,
+            "description": "",
+            "end_usecs": 1589576151534600
+        },
+        {
+            "workunit_id": "3ff97699bebfc40f",
+            "name": "task",
+            "version": 1,
+            "parent_id": "92c83a6fc3e09ac7",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151533107,
+            "description": "Task(pants.backend.python.subsystems.subprocess_environment:12:construct_scope_subprocess_environment(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), SubprocessEnvironment, true)",
+            "end_usecs": 1589576151534636
+        },
+        {
+            "workunit_id": "92c83a6fc3e09ac7",
+            "name": "create_subprocess_encoding_environment",
+            "version": 1,
+            "parent_id": "ba9137483b8cc950",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151529548,
+            "description": "",
+            "end_usecs": 1589576151534752
+        },
+        {
+            "workunit_id": "ccf0559bb1161fa1",
+            "name": "task",
+            "version": 1,
+            "parent_id": "ba9137483b8cc950",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151529948,
+            "description": "Task(pants.option.global_options:159:construct_scope_(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), GlobalOptions, true)",
+            "end_usecs": 1589576151535718
+        },
+        {
+            "workunit_id": "e0dc8614b9da1564",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "e52e2daedbef29ef",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151533335,
+            "description": "",
+            "end_usecs": 1589576151537007
+        },
+        {
+            "workunit_id": "e52e2daedbef29ef",
+            "name": "task",
+            "version": 1,
+            "parent_id": "ba9137483b8cc950",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151529764,
+            "description": "Task(pants.python.python_setup:20:construct_scope_python_setup(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), PythonSetup, true)",
+            "end_usecs": 1589576151537029
+        },
+        {
+            "workunit_id": "83f34e768ec86d86",
+            "name": "scandir",
+            "version": 1,
+            "parent_id": "daf31fdd64298632",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151538102,
+            "description": "Scandir(Dir(\"3rdparty\"))",
+            "end_usecs": 1589576151538516
+        },
+        {
+            "workunit_id": "47c827acd1632728",
+            "name": "scandir",
+            "version": 1,
+            "parent_id": "daf31fdd64298632",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151538547,
+            "description": "Scandir(Dir(\"3rdparty/python\"))",
+            "end_usecs": 1589576151539277
+        },
+        {
+            "workunit_id": "83abe8cc6262c983",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "daf31fdd64298632",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151539311,
+            "description": "DigestFile(File { path: \"3rdparty/python/BUILD\", is_executable: false })",
+            "end_usecs": 1589576151540124
+        },
+        {
+            "workunit_id": "daf31fdd64298632",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "3b593e65b4b42f84",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151537887,
+            "description": "Snapshot(PathGlobs(globs=('!*.egg-info/', '!.*/', '!bower_components/', '!node_modules/', '3rdparty/python/BUILD', '3rdparty/python/BUILD.*'), glob_match_error_behavior=<GlobMatchErrorBehavior.ignore: 'ignore'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=''))",
+            "end_usecs": 1589576151540338
+        },
+        {
+            "workunit_id": "3b593e65b4b42f84",
+            "name": "parse_address_family",
+            "version": 1,
+            "parent_id": "3c8357fd52f9c46e",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151537569,
+            "description": "",
+            "end_usecs": 1589576151560704
+        },
+        {
+            "workunit_id": "5a3a735676a5dea0",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "b5a872c4bf66ceba",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151537497,
+            "description": "",
+            "end_usecs": 1589576151561156
+        },
+        {
+            "workunit_id": "3d4bd74fb5f7a1a9",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "b4493d99640cf039",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151537478,
+            "description": "",
+            "end_usecs": 1589576151561866
+        },
+        {
+            "workunit_id": "b4493d99640cf039",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "e87af9be6b8f6a3b",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151537453,
+            "description": "",
+            "end_usecs": 1589576151562000
+        },
+        {
+            "workunit_id": "b5a872c4bf66ceba",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "af58503aa7423331",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151537456,
+            "description": "",
+            "end_usecs": 1589576151562546
+        },
+        {
+            "workunit_id": "3c8357fd52f9c46e",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "1a2cd1763a3c0a5f",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151537376,
+            "description": "",
+            "end_usecs": 1589576151562992
+        },
+        {
+            "workunit_id": "1a2cd1763a3c0a5f",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "65c058718efcf810",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151537365,
+            "description": "",
+            "end_usecs": 1589576151563099
+        },
+        {
+            "workunit_id": "07e3186eae1d05b5",
+            "name": "hydrate_struct",
+            "version": 1,
+            "parent_id": "33db58b40143038e",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151562159,
+            "description": "",
+            "end_usecs": 1589576151563311
+        },
+        {
+            "workunit_id": "33db58b40143038e",
+            "name": "resolve_target",
+            "version": 1,
+            "parent_id": "6075c2bd9817047e",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151562147,
+            "description": "",
+            "end_usecs": 1589576151563428
+        },
+        {
+            "workunit_id": "6075c2bd9817047e",
+            "name": "transitive_target",
+            "version": 1,
+            "parent_id": "e87af9be6b8f6a3b",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151562133,
+            "description": "",
+            "end_usecs": 1589576151563460
+        },
+        {
+            "workunit_id": "65c058718efcf810",
+            "name": "transitive_target",
+            "version": 1,
+            "parent_id": "7f8fe2bb48dab06f",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151537294,
+            "description": "",
+            "end_usecs": 1589576151563487
+        },
+        {
+            "workunit_id": "e87af9be6b8f6a3b",
+            "name": "transitive_target",
+            "version": 1,
+            "parent_id": "f518b7b67ec6fd63",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151537422,
+            "description": "",
+            "end_usecs": 1589576151563504
+        },
+        {
+            "workunit_id": "af58503aa7423331",
+            "name": "transitive_target",
+            "version": 1,
+            "parent_id": "f518b7b67ec6fd63",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151537441,
+            "description": "",
+            "end_usecs": 1589576151563518
+        },
+        {
+            "workunit_id": "f518b7b67ec6fd63",
+            "name": "transitive_target",
+            "version": 1,
+            "parent_id": "7f8fe2bb48dab06f",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151537254,
+            "description": "",
+            "end_usecs": 1589576151563531
+        },
+        {
+            "workunit_id": "7f8fe2bb48dab06f",
+            "name": "transitive_target",
+            "version": 1,
+            "parent_id": "de2e9f3145584d72",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151537150,
+            "description": "",
+            "end_usecs": 1589576151563544
+        },
+        {
+            "workunit_id": "de2e9f3145584d72",
+            "name": "transitive_targets",
+            "version": 1,
+            "parent_id": "42985d735b3a0dc3",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151537095,
+            "description": "",
+            "end_usecs": 1589576151563590
+        },
+        {
+            "workunit_id": "b7440e705e7644f3",
+            "name": "log_level",
+            "version": 1,
+            "parent_id": "5dded94699242ffb",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151564504,
+            "description": "",
+            "end_usecs": 1589576151564604
+        },
+        {
+            "workunit_id": "fda861f7a934f179",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "b0d568ae9fd58a3f",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151565222,
+            "description": "",
+            "end_usecs": 1589576151565670
+        },
+        {
+            "workunit_id": "b0d568ae9fd58a3f",
+            "name": "strip_source_roots_from_sources_field",
+            "version": 1,
+            "parent_id": "6cff1071a0959c06",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151564987,
+            "description": "",
+            "end_usecs": 1589576151565696
+        },
+        {
+            "workunit_id": "432774e62408aec1",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "a7c6f61cd7237de2",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151565803,
+            "description": "",
+            "end_usecs": 1589576151566027
+        },
+        {
+            "workunit_id": "548f26112b86ed48",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "499c52750758247d",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151566281,
+            "description": "",
+            "end_usecs": 1589576151566766
+        },
+        {
+            "workunit_id": "499c52750758247d",
+            "name": "strip_source_roots_from_sources_field",
+            "version": 1,
+            "parent_id": "6cff1071a0959c06",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151566161,
+            "description": "",
+            "end_usecs": 1589576151566783
+        },
+        {
+            "workunit_id": "a69799a8fb113dd9",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "048887520082f6ae",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151566659,
+            "description": "",
+            "end_usecs": 1589576151568832
+        },
+        {
+            "workunit_id": "048887520082f6ae",
+            "name": "task",
+            "version": 1,
+            "parent_id": "5b9f70c905edae19",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151566545,
+            "description": "Task(pants.source.source_root:111:construct_scope_source(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), SourceRootConfig, true)",
+            "end_usecs": 1589576151568899
+        },
+        {
+            "workunit_id": "13c4ac5843665b66",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "86d985fd6e767673",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151569637,
+            "description": "",
+            "end_usecs": 1589576151570610
+        },
+        {
+            "workunit_id": "86d985fd6e767673",
+            "name": "task",
+            "version": 1,
+            "parent_id": "5dded94699242ffb",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151569537,
+            "description": "Task(pants.python.python_repos:9:construct_scope_python_repos(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), PythonRepos, true)",
+            "end_usecs": 1589576151571094
+        },
+        {
+            "workunit_id": "d1555673967e5bf3",
+            "name": "materialize_platform",
+            "version": 1,
+            "parent_id": "5dded94699242ffb",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151569065,
+            "description": "",
+            "end_usecs": 1589576151571151
+        },
+        {
+            "workunit_id": "c324e26427fbf368",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "2e38d6ae1e3bc660",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151571559,
+            "description": "",
+            "end_usecs": 1589576151572397
+        },
+        {
+            "workunit_id": "06289e3abf6c1762",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "6e61ea19bf3c52aa",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151571647,
+            "description": "",
+            "end_usecs": 1589576151572505
+        },
+        {
+            "workunit_id": "6e61ea19bf3c52aa",
+            "name": "strip_source_roots_from_sources_field",
+            "version": 1,
+            "parent_id": "6cff1071a0959c06",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151571554,
+            "description": "",
+            "end_usecs": 1589576151572646
+        },
+        {
+            "workunit_id": "2e38d6ae1e3bc660",
+            "name": "task",
+            "version": 1,
+            "parent_id": "08a268471e1f4707",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151571418,
+            "description": "Task(pants.backend.python.subsystems.python_native_code:25:construct_scope_python_native_code(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), PythonNativeCode, true)",
+            "end_usecs": 1589576151572726
+        },
+        {
+            "workunit_id": "08a268471e1f4707",
+            "name": "create_pex_native_build_environment",
+            "version": 1,
+            "parent_id": "5dded94699242ffb",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151571162,
+            "description": "",
+            "end_usecs": 1589576151572759
+        },
+        {
+            "workunit_id": "ad976415f660455d",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "df9b8d1a8a351c5e",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151571274,
+            "description": "",
+            "end_usecs": 1589576151573052
+        },
+        {
+            "workunit_id": "df9b8d1a8a351c5e",
+            "name": "strip_source_roots_from_sources_field",
+            "version": 1,
+            "parent_id": "6cff1071a0959c06",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151571125,
+            "description": "",
+            "end_usecs": 1589576151573093
+        },
+        {
+            "workunit_id": "a17d7b4657b6f4d1",
+            "name": "pex_from_targets",
+            "version": 1,
+            "parent_id": "5dded94699242ffb",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151573705,
+            "description": "",
+            "end_usecs": 1589576151575356
+        },
+        {
+            "workunit_id": "4947f24b89f9a54d",
+            "name": "scope_options",
+            "version": 1,
+            "parent_id": "a49e355fb276e031",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151573250,
+            "description": "",
+            "end_usecs": 1589576151575370
+        },
+        {
+            "workunit_id": "a49e355fb276e031",
+            "name": "task",
+            "version": 1,
+            "parent_id": "917c6b11456031e2",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151572976,
+            "description": "Task(pants.backend.python.rules.download_pex_bin:23:construct_scope_download_pex_bin(), OptionsBootstrapper(env_tuples=(('PANTS_REMOTE_EXECUTION_EXTRA_PLATFORM_PROPERTIES', \"+['execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-05-07.21-03-51-ede7af84e4eb']\"),), bootstrap_args=('--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug'), args=('/home/vagrant/.cache/pants/setup/bootstrap-Linux-x86_64/1.28.0rc0_py38/bin/pants', '--pants-config-files=+[\"/vagrant/toolchain.toml\"]', '--pants-bin-name=./tc', '--pants-config-files=pants.local-bf.toml', '--remote-execution-extra-platform-properties=execution-policy=debug', 'test', 'src/python/toolchain/base::'), config=_ChainedConfig(chained_configs=(_SingleFileConfig(config_path='pants.local-bf.toml', content_digest='04fb91b86c9d87dd026fc8670efa579401285fcd', values=_TomlValues(values={'GLOBAL': {'process_execution_speculation_strategy': 'none', 'remote_execution': True, 'remote_execution_server': 'localhost:8980', 'remote_store_server': 'localhost:8980'}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/toolchain.toml', content_digest='ef4a158200140995cfd2712dde5f8cd8f3a3f090', values=_TomlValues(values={'GLOBAL': {'v1': False, 'v2_ui': True, 'print_exception_stacktrace': False, 'process_execution_local_parallelism': 4}, 'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist'}})), _SingleFileConfig(config_path='/vagrant/pants.toml', content_digest='0c19b687235e2e642cdfb9bc8eb16110119eb48e', values=_TomlValues(values={'DEFAULT': {'buildroot': '/vagrant', 'homedir': '/home/vagrant', 'user': 'vagrant', 'pants_bootstrapdir': '/home/vagrant/.cache/pants', 'pants_configdir': '/home/vagrant/.config/pants', 'pants_workdir': '/vagrant/.pants.d', 'pants_supportdir': '/vagrant/build-support', 'pants_distdir': '/vagrant/dist', 'kythe_javac9': '3rdparty/jvm:javac9'}, 'GLOBAL': {'pants_version': '1.28.0rc0', 'enable_pantsd': False, 'watchman_startup_timeout': 60, 'print_exception_stacktrace': True, 'pythonpath': ['%(buildroot)s/src/python'], 'backend_packages': ['pants.backend.graph_info', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.jvm', 'toolchain.pants.internal'], 'backend_packages2': {'add': ['toolchain.pants.auth', 'toolchain.pants.buildsense', 'toolchain.pants.common', 'toolchain.pants.internal', 'toolchain.pants.external', 'toolchain.pants.rules.mypy', 'pants.backend.awslambda.python', 'pants.backend.project_info', 'pants.backend.python', 'pants.backend.python.lint.bandit', 'pants.backend.python.lint.black', 'pants.backend.python.lint.docformatter', 'pants.backend.python.lint.flake8', 'pants.backend.python.lint.isort', 'pants.contrib.go', 'pants.contrib.node']}, 'plugins': ['pantsbuild.pants.contrib.codeanalysis==%(pants_version)s', 'pantsbuild.pants.contrib.go==%(pants_version)s', 'pantsbuild.pants.contrib.mypy==%(pants_version)s', 'pantsbuild.pants.contrib.node==%(pants_version)s', 'boto3==1.13.9', 'isort==4.3.21', 'networkx==2.4', 'pkginfo==1.5.0.1', 'plyvel==1.2.0', 'protobuf==3.11.3', 'setuptools==44.0.0'], 'binaries_baseurls': {'add': ['https://github.com/toolchainlabs/binhost/raw/master/']}, 'remote_execution_extra_platform_properties': {'add': ['execution-policy=network']}, 'streaming_workunits_handlers': ['toolchain.pants.buildsense.reporter.Reporter'], 'streaming_workunits_report_interval': 1}, 'source': {'root_patterns': ['src/go/src', 'src/java', 'src/node', 'src/python', 'test/python', 'testdata/java/broken/src/java', 'testdata/java/external_dep/src/java', 'prod/python/toolchain_prod']}, 'python-setup': {'interpreter_constraints': ['CPython>=3.8,<4'], 'requirement_constraints': '3rdparty/python/constraints.txt'}, 'run-tracker': {'stats_option_scopes_to_record': ['GLOBAL'], 'stats_version': 2}, 'resolver': {'resolver': 'coursier'}, 'dependencies': {'transitive': False}, 'resolve': {'coursier': {'jvm_options': ['-Xmx256m']}}, 'coursier': {'repos': ['https://repo1.maven.org/maven2', 'https://raw.githubusercontent.com/toolchainlabs/binhost/master/']}, 'jvm-platform': {'default_platform': 'java11', 'platforms': '{\\n  \"java11\": {\"source\": \"11\", \"target\": \"11\", \"args\": [] },\\n}\\n'}, 'jvm-distributions': {'minimum_version': 11.0}, 'compile': {'rsc': {'args': ['-C-g', '-C-parameters'], 'use_classpath_jars': True, 'incremental_caching': True}}, 'bundle': {'dup': {'exclude_patterns': ['com/sun/.*']}}, 'binary': {'dup': {'exclude_patterns': ['com/sun/.*']}, 'py': {'include_run_information': True}}, 'go-distribution': {'version': 1.8}, 'buildgen': {'go': {'materialize': True, 'remote': True, 'fail_floating': True}, 'string_matchable_path_regexps': ['^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+settings(_base|_service|_util|_extra(_worker)?)?\\\\\\\\.py$', '^([\\\\\\\\/]?\\\\\\\\w*\\\\\\\\/)+constants\\\\\\\\.py$'], 'exclude_inferred_modules': ['use.fontawesome.com', 'fonts.gstatic.com', 'app.toolchain.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'fonts.googleapis.com']}, 'index': {'kythe-java-extract': {'kythe_java_extractor': '3rdparty/jvm:kythe-java-extractor', 'javac9': '%(kythe_javac9)s'}, 'kythe-java-index': {'kythe_java_indexer': '3rdparty/jvm:kythe-java-indexer', 'javac9': '%(kythe_javac9)s'}, 'kythe-jvm-index': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'index-artifact': {'kythe-binary-jar': {'kythe_jvm_indexer': '3rdparty/jvm:kythe-jvm-indexer'}}, 'toolchain': {'index-java': {'execution_strategy': 'subprocess'}}, 'black': {'args': {'add': ['--line-length 120', '--target-version py37']}}, 'eslint': {'setupdir': '%(pants_supportdir)s/eslint/', 'config': '%(pants_supportdir)s/eslint/.eslintrc'}, 'bandit': {'config': 'build-support/bandit/bandit.yaml', 'extra_requirements': ['setuptools'], 'args': [\"--exclude '*_test.py','**/test_*.py','conftest.py'\"]}, 'docformatter': {'args': ['--wrap-summaries=120', '--wrap-descriptions=120']}, 'flake8': {'config': 'build-support/flake8/.flake8', 'version': 'flake8==3.8.0', 'extra_requirements': {'add': ['flake8-debugger', 'flake8-2020', 'flake8-mutable', 'flake8-comprehensions', 'flake8-bugbear', 'flake8-django==0.0.4', 'flake8-executable', 'flake8-pytest-style>=1.1.1', 'flake8-os-walk==0.4.0', 'flake8-absolute-import']}}, 'gofmt': {'skip': True}, 'isort': {'config': '.isort.cfg'}, 'mypy': {'version': 'mypy==0.770', 'config': 'build-support/mypy/mypy.ini'}, 'pytest': {'version': 'pytest>=5.4.1', 'pytest_plugins': {'add': ['pygments', 'pytest-icdiff']}}, 'node-distribution': {'version': 'v12.16.0'}, 'yarnpkg-distribution': {'version': 'v1.22.0'}, 'sourcefile-validation': {'config': '@%(pants_supportdir)s/validator/sourcefile/config.yaml'}, 'toolchain-dependency-api': {'url': 'https://staging.app.toolchain.com/api/v1/'}, 'auth': {'base_url': 'https://staging.app.toolchain.com/api/v1'}, 'buildsense': {'base_url': 'https://staging.app.toolchain.com/api/v1/repos/'}, 'toolchain-setup': {'repo': 'toolchain'}}))))), PexBin, true)",
+            "end_usecs": 1589576151575926
+        },
+        {
+            "workunit_id": "d41928a3ec2e44c6",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151572659,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/__init__.py\", is_executable: false })",
+            "end_usecs": 1589576151578436
+        },
+        {
+            "workunit_id": "3de32e9e23a52f28",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151571547,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/toolchain_error.py\", is_executable: false })",
+            "end_usecs": 1589576151578437
+        },
+        {
+            "workunit_id": "daf6a499b7eb0061",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151572681,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/email.py\", is_executable: false })",
+            "end_usecs": 1589576151578442
+        },
+        {
+            "workunit_id": "d413cd3ee09ff98c",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151572669,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/ansi_colors_mixin.py\", is_executable: false })",
+            "end_usecs": 1589576151578445
+        },
+        {
+            "workunit_id": "ef491d7328b131f7",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151572674,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/datetime_tools.py\", is_executable: false })",
+            "end_usecs": 1589576151578450
+        },
+        {
+            "workunit_id": "885079cbfb5077a7",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151573135,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/password.py\", is_executable: false })",
+            "end_usecs": 1589576151578462
+        },
+        {
+            "workunit_id": "5b9f70c905edae19",
+            "name": "strip_source_roots_from_snapshot",
+            "version": 1,
+            "parent_id": "129c194245052ee2",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151565144,
+            "description": "",
+            "end_usecs": 1589576151578538
+        },
+        {
+            "workunit_id": "a7c6f61cd7237de2",
+            "name": "strip_source_roots_from_sources_field",
+            "version": 1,
+            "parent_id": "6cff1071a0959c06",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151565703,
+            "description": "",
+            "end_usecs": 1589576151578551
+        },
+        {
+            "workunit_id": "129c194245052ee2",
+            "name": "strip_source_roots_from_sources_field",
+            "version": 1,
+            "parent_id": "c3c5fb916b3cf1f6",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151564533,
+            "description": "",
+            "end_usecs": 1589576151578561
+        },
+        {
+            "workunit_id": "80f305c5bcb26580",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151573024,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/hashutil.py\", is_executable: false })",
+            "end_usecs": 1589576151578764
+        },
+        {
+            "workunit_id": "c3c5fb916b3cf1f6",
+            "name": "determine_specified_source_files",
+            "version": 1,
+            "parent_id": "42985d735b3a0dc3",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151564406,
+            "description": "",
+            "end_usecs": 1589576151578890
+        },
+        {
+            "workunit_id": "3da4c7ca5a0e210e",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151572854,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/env_args.py\", is_executable: false })",
+            "end_usecs": 1589576151579118
+        },
+        {
+            "workunit_id": "e984e9f12cd0da17",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151573399,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/timer.py\", is_executable: false })",
+            "end_usecs": 1589576151580057
+        },
+        {
+            "workunit_id": "6ca0c2a9d6fa9b53",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151573511,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/meta.py\", is_executable: false })",
+            "end_usecs": 1589576151580068
+        },
+        {
+            "workunit_id": "e09eca6314fcb181",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151573218,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/strutil.py\", is_executable: false })",
+            "end_usecs": 1589576151580070
+        },
+        {
+            "workunit_id": "bc1a12b4a36d0513",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151573359,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/memo.py\", is_executable: false })",
+            "end_usecs": 1589576151580075
+        },
+        {
+            "workunit_id": "02db0adb5d7ce347",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151573010,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/fileutil.py\", is_executable: false })",
+            "end_usecs": 1589576151580164
+        },
+        {
+            "workunit_id": "299699227c256cba",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151573663,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/node_id.py\", is_executable: false })",
+            "end_usecs": 1589576151580611
+        },
+        {
+            "workunit_id": "c2b3154237d0d30c",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "a1fedd66b0427bd1",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151573533,
+            "description": "DigestFile(File { path: \"src/python/toolchain/base/toolchain_binary.py\", is_executable: false })",
+            "end_usecs": 1589576151580642
+        },
+        {
+            "workunit_id": "a1fedd66b0427bd1",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "e3f989a8d92958b9",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151570871,
+            "description": "Snapshot(PathGlobs(globs=('!src/python/toolchain/base/*_test.py', '!src/python/toolchain/base/conftest.py', '!src/python/toolchain/base/test_*.py', 'src/python/toolchain/base/*.py'), glob_match_error_behavior=<GlobMatchErrorBehavior.warn: 'warn'>, conjunction=<GlobExpansionConjunction.any_match: 'any_match'>, description_of_origin=\"src/python/toolchain/base:base's `sources` field\"))",
+            "end_usecs": 1589576151581740
+        },
+        {
+            "workunit_id": "e3f989a8d92958b9",
+            "name": "hydrate_sources",
+            "version": 1,
+            "parent_id": "0b314b1a7b37c018",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151569172,
+            "description": "",
+            "end_usecs": 1589576151581968
+        },
+        {
+            "workunit_id": "113543cfe903c32b",
+            "name": "strip_source_roots_from_snapshot",
+            "version": 1,
+            "parent_id": "0b314b1a7b37c018",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151582080,
+            "description": "",
+            "end_usecs": 1589576151583730
+        },
+        {
+            "workunit_id": "0b314b1a7b37c018",
+            "name": "strip_source_roots_from_sources_field",
+            "version": 1,
+            "parent_id": "6cff1071a0959c06",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151566791,
+            "description": "",
+            "end_usecs": 1589576151583751
+        },
+        {
+            "workunit_id": "88ff27202b99eb83",
+            "name": "maybe_extract",
+            "version": 1,
+            "parent_id": "9980c3a494bf3766",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151585158,
+            "description": "",
+            "end_usecs": 1589576151585461
+        },
+        {
+            "workunit_id": "9980c3a494bf3766",
+            "name": "download_external_tool",
+            "version": 1,
+            "parent_id": "917c6b11456031e2",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151576089,
+            "description": "",
+            "end_usecs": 1589576151585542
+        },
+        {
+            "workunit_id": "917c6b11456031e2",
+            "name": "download_pex_bin",
+            "version": 1,
+            "parent_id": "5dded94699242ffb",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151564570,
+            "description": "",
+            "end_usecs": 1589576151585573
+        },
+        {
+            "workunit_id": "6cff1071a0959c06",
+            "name": "determine_all_source_files",
+            "version": 1,
+            "parent_id": "d3116fb53a8dfccc",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151564848,
+            "description": "",
+            "end_usecs": 1589576151586571
+        },
+        {
+            "workunit_id": "8a2ad1b448608677",
+            "name": "digestfile",
+            "version": 1,
+            "parent_id": "5e1c16e5bb390696",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151586317,
+            "description": "DigestFile(File { path: \"3rdparty/python/constraints.txt\", is_executable: false })",
+            "end_usecs": 1589576151587296
+        },
+        {
+            "workunit_id": "5e1c16e5bb390696",
+            "name": "snapshot",
+            "version": 1,
+            "parent_id": "5dded94699242ffb",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151586096,
+            "description": "Snapshot(PathGlobs(globs=('3rdparty/python/constraints.txt',), glob_match_error_behavior=<GlobMatchErrorBehavior.error: 'error'>, conjunction=<GlobExpansionConjunction.all_match: 'all_match'>, description_of_origin='the option `--python-setup-requirement-constraints`'))",
+            "end_usecs": 1589576151587594
+        },
+        {
+            "workunit_id": "e6575a9a70dc1828",
+            "name": "inject_missing_init_files",
+            "version": 1,
+            "parent_id": "d3116fb53a8dfccc",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151586628,
+            "description": "",
+            "end_usecs": 1589576151588077
+        },
+        {
+            "workunit_id": "d3116fb53a8dfccc",
+            "name": "prepare_python_sources",
+            "version": 1,
+            "parent_id": "42985d735b3a0dc3",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151564560,
+            "description": "",
+            "end_usecs": 1589576151588271
+        },
+        {
+            "workunit_id": "c99433ea0f989163",
+            "name": "get_multi_platform_request_description",
+            "version": 1,
+            "parent_id": "44a0290cab5c152a",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151589431,
+            "description": "",
+            "end_usecs": 1589576151589458
+        },
+        {
+            "workunit_id": "08e6e66ef9a2428e",
+            "name": "get_multi_platform_request_description",
+            "version": 1,
+            "parent_id": "6a3972cd56daf356",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151589756,
+            "description": "",
+            "end_usecs": 1589576151589979
+        },
+        {
+            "workunit_id": "946a1b646d5ad8f9",
+            "name": "get_multi_platform_request_description",
+            "version": 1,
+            "parent_id": "800d87ecd31ab0b9",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151589921,
+            "description": "",
+            "end_usecs": 1589576151590465
+        },
+        {
+            "workunit_id": "2244a3dba16582d2",
+            "name": "list_missing_digests()",
+            "version": 1,
+            "parent_id": "4a57545d55f81e57",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151592480,
+            "description": "",
+            "end_usecs": 1589576151628351
+        },
+        {
+            "workunit_id": "26dd2ef01dbd3aa0",
+            "name": "list_missing_digests()",
+            "version": 1,
+            "parent_id": "54a6eeae4c236214",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151592588,
+            "description": "",
+            "end_usecs": 1589576151628434
+        },
+        {
+            "workunit_id": "15826bea4bb916e3",
+            "name": "list_missing_digests()",
+            "version": 1,
+            "parent_id": "cc54288722428e9f",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151592193,
+            "description": "",
+            "end_usecs": 1589576151628507
+        },
+        {
+            "workunit_id": "622e87452bb4a5f1",
+            "name": "store_bytes(/uploads/8864ca82-33d0-42a9-b48b-f5c046b162a3/blobs/7bcab8e1b966a0db5c45437af6f5f36f8d92279a6ebc46706e3aae4782ae232d/919)",
+            "version": 1,
+            "parent_id": "cc54288722428e9f",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151630415,
+            "description": "",
+            "end_usecs": 1589576151749546
+        },
+        {
+            "workunit_id": "61429c1a0ff49cbd",
+            "name": "store_bytes(/uploads/929c2294-d8e1-435d-a61e-d3b736eb00a3/blobs/fc5ec4015acfe25f43106bea2e42f7eedfbd8e88b88bdd226eaf694a570e03e3/89)",
+            "version": 1,
+            "parent_id": "cc54288722428e9f",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151652077,
+            "description": "",
+            "end_usecs": 1589576151749557
+        },
+        {
+            "workunit_id": "3b5980444deff446",
+            "name": "store_bytes(/uploads/6961e0f9-0074-490b-966a-549e07bd77b1/blobs/c2b02cf0ec969932d8913cbff90c20b2aa8edb7835d030b5476d3dddde98f6e4/142)",
+            "version": 1,
+            "parent_id": "cc54288722428e9f",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151652130,
+            "description": "",
+            "end_usecs": 1589576151749560
+        },
+        {
+            "workunit_id": "a31c5c21e13452d4",
+            "name": "store_bytes(/uploads/1e864ef7-18bb-4cc2-8edd-b467f094563a/blobs/4b00000be7d246de031fea00c441edca373b5fb8383f84e6b0b56865cd0aeb69/40)",
+            "version": 1,
+            "parent_id": "cc54288722428e9f",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151652184,
+            "description": "",
+            "end_usecs": 1589576151749565
+        },
+        {
+            "workunit_id": "b2350c920efef673",
+            "name": "store_bytes(/uploads/c017766e-728d-4b50-9d0a-af6ca4fc5f3b/blobs/77e739b0154ac585c7af6cbd1b2af7a18cc68a3c06a6bfc88ea5fab5e0c9664c/248)",
+            "version": 1,
+            "parent_id": "cc54288722428e9f",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151652203,
+            "description": "",
+            "end_usecs": 1589576151749568
+        },
+        {
+            "workunit_id": "69b8fc40b889fa9f",
+            "name": "store_bytes(/uploads/c63b4d5f-d992-4f90-b174-671be6db9349/blobs/7adf19dd54828e297665912c5e12535b6ac85fd61f7b132d0f6cc251328a3e60/923)",
+            "version": 1,
+            "parent_id": "54a6eeae4c236214",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151630597,
+            "description": "",
+            "end_usecs": 1589576151749576
+        },
+        {
+            "workunit_id": "3b8f1838aacde6bc",
+            "name": "store_bytes(/uploads/2c08d862-182d-4dfa-94e7-31d38474037b/blobs/77e739b0154ac585c7af6cbd1b2af7a18cc68a3c06a6bfc88ea5fab5e0c9664c/248)",
+            "version": 1,
+            "parent_id": "4a57545d55f81e57",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151630790,
+            "description": "",
+            "end_usecs": 1589576151749578
+        },
+        {
+            "workunit_id": "0cd1cc25fd22bb2b",
+            "name": "store_bytes(/uploads/5596ba4c-edea-4669-a496-2d7d8013f850/blobs/e870fffed414624b04992e450d2f538964ef0614d8d1dab051610ed9a7ee5a5c/142)",
+            "version": 1,
+            "parent_id": "54a6eeae4c236214",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151630706,
+            "description": "",
+            "end_usecs": 1589576151749583
+        },
+        {
+            "workunit_id": "df267819110986f9",
+            "name": "store_bytes(/uploads/57cc10e0-1780-4658-8360-ad1f76454852/blobs/fc5ec4015acfe25f43106bea2e42f7eedfbd8e88b88bdd226eaf694a570e03e3/89)",
+            "version": 1,
+            "parent_id": "4a57545d55f81e57",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151630895,
+            "description": "",
+            "end_usecs": 1589576151749586
+        },
+        {
+            "workunit_id": "28b1bbb4ccbf00f2",
+            "name": "store_bytes(/uploads/36828223-f652-4714-a5a7-bbcd767ac858/blobs/8757101ca8dcda845ed4f8973e1e5a04eba46fd798fd8375f1b038d3fb4457ba/80)",
+            "version": 1,
+            "parent_id": "54a6eeae4c236214",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151630759,
+            "description": "",
+            "end_usecs": 1589576151749588
+        },
+        {
+            "workunit_id": "c7705ff981f092ef",
+            "name": "store_bytes(/uploads/54ed0417-af73-41be-a3c6-46f397ac050d/blobs/4b00000be7d246de031fea00c441edca373b5fb8383f84e6b0b56865cd0aeb69/40)",
+            "version": 1,
+            "parent_id": "4a57545d55f81e57",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151630915,
+            "description": "",
+            "end_usecs": 1589576151749588
+        },
+        {
+            "workunit_id": "684ef7c0cba85de1",
+            "name": "store_bytes(/uploads/ce5d2a11-737a-4b69-b257-e40c985f7eca/blobs/fc5ec4015acfe25f43106bea2e42f7eedfbd8e88b88bdd226eaf694a570e03e3/89)",
+            "version": 1,
+            "parent_id": "54a6eeae4c236214",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151630799,
+            "description": "",
+            "end_usecs": 1589576151749590
+        },
+        {
+            "workunit_id": "7684617809ac8b2c",
+            "name": "store_bytes(/uploads/359d7e83-13cc-424b-9cbe-b3bdbabbec97/blobs/0b45d6961d3f70ff8073e15c358a4500efb9fb064b9cf01964c3c33a78589f57/965)",
+            "version": 1,
+            "parent_id": "4a57545d55f81e57",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151630961,
+            "description": "",
+            "end_usecs": 1589576151749592
+        },
+        {
+            "workunit_id": "d5837a0802ad4323",
+            "name": "store_bytes(/uploads/87b8e8a6-92c4-4ec8-a375-ecad1be1c772/blobs/77e739b0154ac585c7af6cbd1b2af7a18cc68a3c06a6bfc88ea5fab5e0c9664c/248)",
+            "version": 1,
+            "parent_id": "54a6eeae4c236214",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151630889,
+            "description": "",
+            "end_usecs": 1589576151749593
+        },
+        {
+            "workunit_id": "42560acec3df61ca",
+            "name": "store_bytes(/uploads/02d32882-eaee-41ec-b254-bac2ee8265a0/blobs/4b00000be7d246de031fea00c441edca373b5fb8383f84e6b0b56865cd0aeb69/40)",
+            "version": 1,
+            "parent_id": "54a6eeae4c236214",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151631214,
+            "description": "",
+            "end_usecs": 1589576151749596
+        },
+        {
+            "workunit_id": "d30d2efd137b43e9",
+            "name": "store_bytes(/uploads/08bf1c9f-e7fe-4d26-b6fb-b2c054828e93/blobs/698a3f0211636d8d8ba1b8e3170cd8b91bd283c7cdf987b3a07823ea41e8266e/142)",
+            "version": 1,
+            "parent_id": "4a57545d55f81e57",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151645718,
+            "description": "",
+            "end_usecs": 1589576151749597
+        },
+        {
+            "workunit_id": "0acc25689bafc161",
+            "name": "store_bytes(/uploads/5f34a552-6427-4a37-98c2-b6e1d6324539/blobs/8757101ca8dcda845ed4f8973e1e5a04eba46fd798fd8375f1b038d3fb4457ba/80)",
+            "version": 1,
+            "parent_id": "4a57545d55f81e57",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151645749,
+            "description": "",
+            "end_usecs": 1589576151749599
+        },
+        {
+            "workunit_id": "cdce3b5f256abd6e",
+            "name": "store_bytes(/uploads/75c7551c-be6a-409e-a411-c275be4d7bd5/blobs/8757101ca8dcda845ed4f8973e1e5a04eba46fd798fd8375f1b038d3fb4457ba/80)",
+            "version": 1,
+            "parent_id": "cc54288722428e9f",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151652163,
+            "description": "",
+            "end_usecs": 1589576151777830
+        },
+        {
+            "workunit_id": "c4b8f70151b4c1e0",
+            "name": "store_bytes(/uploads/29f2c6b8-111d-485f-b0e9-8a1168786818/blobs/a9b5eb55ec4d7babc11279fc070c066565915c8b8a7b009a4eaceb41149a5f03/2631051)",
+            "version": 1,
+            "parent_id": "4a57545d55f81e57",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151631016,
+            "description": "",
+            "end_usecs": 1589576151845343
+        },
+        {
+            "workunit_id": "2e8ebf3da0ddf547",
+            "name": "store_bytes(/uploads/8d9b5288-e867-4b71-8b47-cbe81d9fd1ac/blobs/a9b5eb55ec4d7babc11279fc070c066565915c8b8a7b009a4eaceb41149a5f03/2631051)",
+            "version": 1,
+            "parent_id": "cc54288722428e9f",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151630532,
+            "description": "",
+            "end_usecs": 1589576151867856
+        },
+        {
+            "workunit_id": "0605ddf9029f445e",
+            "name": "store_bytes(/uploads/711786af-f38e-4985-b3b6-a6a44d4c9ec3/blobs/a9b5eb55ec4d7babc11279fc070c066565915c8b8a7b009a4eaceb41149a5f03/2631051)",
+            "version": 1,
+            "parent_id": "54a6eeae4c236214",
+            "last_update": 1589576152,
+            "start_usecs": 1589576151631274,
+            "description": "",
+            "end_usecs": 1589576151869891
+        },
+        {
+            "workunit_id": "66e43057db1f10d4",
+            "name": "remote execution action scheduling",
+            "version": 18,
+            "parent_id": "4a57545d55f81e57",
+            "last_update": 1589576170,
+            "start_usecs": 0,
+            "description": "",
+            "end_usecs": 1589576152022000
+        },
+        {
+            "workunit_id": "552f2cafac1ecce6",
+            "name": "remote execution worker input fetching",
+            "version": 18,
+            "parent_id": "4a57545d55f81e57",
+            "last_update": 1589576170,
+            "start_usecs": 1589576152050000,
+            "description": "",
+            "end_usecs": 1589576152220000
+        },
+        {
+            "workunit_id": "636d791e763bc3b5",
+            "name": "remote execution worker command executing",
+            "version": 18,
+            "parent_id": "4a57545d55f81e57",
+            "last_update": 1589576170,
+            "start_usecs": 1589576152265000,
+            "description": "",
+            "end_usecs": 1589576167899000
+        },
+        {
+            "workunit_id": "1867502e132fa996",
+            "name": "remote execution worker output uploading",
+            "version": 18,
+            "parent_id": "4a57545d55f81e57",
+            "last_update": 1589576170,
+            "start_usecs": 1589576167904000,
+            "description": "",
+            "end_usecs": 1589576167908000
+        },
+        {
+            "workunit_id": "4a57545d55f81e57",
+            "name": "MultiPlatformProcess",
+            "version": 18,
+            "parent_id": "b7a6bb478f0b0c94",
+            "last_update": 1589576170,
+            "start_usecs": 1589576151591408,
+            "description": "",
+            "end_usecs": 1589576169981573
+        },
+        {
+            "workunit_id": "b7a6bb478f0b0c94",
+            "name": "remove_platform_information",
+            "version": 18,
+            "parent_id": "44a0290cab5c152a",
+            "last_update": 1589576170,
+            "start_usecs": 1589576151589434,
+            "description": "",
+            "end_usecs": 1589576169981733
+        },
+        {
+            "workunit_id": "44a0290cab5c152a",
+            "name": "fallible_to_exec_result_or_raise",
+            "version": 18,
+            "parent_id": "357a589b1132cc64",
+            "last_update": 1589576170,
+            "start_usecs": 1589576151589397,
+            "description": "",
+            "end_usecs": 1589576169984021
+        },
+        {
+            "workunit_id": "357a589b1132cc64",
+            "name": "create_pex",
+            "version": 18,
+            "parent_id": "42985d735b3a0dc3",
+            "last_update": 1589576170,
+            "start_usecs": 1589576151573664,
+            "description": "",
+            "end_usecs": 1589576169984037
+        },
+        {
+            "workunit_id": "42985d735b3a0dc3",
+            "name": "setup_pytest_for_target",
+            "version": 18,
+            "parent_id": "ba9137483b8cc950",
+            "last_update": 1589576170,
+            "start_usecs": 1589576151529483,
+            "description": "",
+            "end_usecs": 1589576169984046
+        },
+        {
+            "workunit_id": "ba9137483b8cc950",
+            "name": "run_python_test",
+            "version": 18,
+            "parent_id": "4197ad0ca997bfe5",
+            "last_update": 1589576170,
+            "start_usecs": 1589576151529273,
+            "description": "",
+            "end_usecs": 1589576169984052
+        },
+        {
+            "workunit_id": "4197ad0ca997bfe5",
+            "name": "coordinator_of_tests",
+            "version": 18,
+            "parent_id": "5007432b60c5b942",
+            "last_update": 1589576170,
+            "start_usecs": 1589576151528846,
+            "description": "",
+            "end_usecs": 1589576169984059
+        },
+        {
+            "workunit_id": "5007432b60c5b942",
+            "name": "test",
+            "version": 18,
+            "parent_id": null,
+            "last_update": 1589576170,
+            "start_usecs": 1589576151496688,
+            "description": "",
+            "end_usecs": 1589576169984066
+        },
+        {
+            "workunit_id": "97f282a3a4c8e265",
+            "name": "remote execution action scheduling",
+            "version": 18,
+            "parent_id": "54a6eeae4c236214",
+            "last_update": 1589576170,
+            "start_usecs": 0,
+            "description": "",
+            "end_usecs": 1589576152231000
+        },
+        {
+            "workunit_id": "f744bab9cf2d5703",
+            "name": "remote execution worker input fetching",
+            "version": 18,
+            "parent_id": "54a6eeae4c236214",
+            "last_update": 1589576170,
+            "start_usecs": 1589576152234000,
+            "description": "",
+            "end_usecs": 1589576152262000
+        },
+        {
+            "workunit_id": "57669f3194109540",
+            "name": "remote execution worker command executing",
+            "version": 18,
+            "parent_id": "54a6eeae4c236214",
+            "last_update": 1589576170,
+            "start_usecs": 1589576167915000,
+            "description": "",
+            "end_usecs": 1589576169692000
+        },
+        {
+            "workunit_id": "7d66e97f6367b978",
+            "name": "remote execution worker output uploading",
+            "version": 18,
+            "parent_id": "54a6eeae4c236214",
+            "last_update": 1589576170,
+            "start_usecs": 1589576169695000,
+            "description": ""
+        },
+        {
+            "workunit_id": "54a6eeae4c236214",
+            "name": "MultiPlatformProcess",
+            "version": 18,
+            "parent_id": "34fa2d4596640daf",
+            "last_update": 1589576170,
+            "start_usecs": 1589576151591206,
+            "description": "",
+            "end_usecs": 1589576169997575
+        },
+        {
+            "workunit_id": "34fa2d4596640daf",
+            "name": "remove_platform_information",
+            "version": 18,
+            "parent_id": "800d87ecd31ab0b9",
+            "last_update": 1589576170,
+            "start_usecs": 1589576151589990,
+            "description": "",
+            "end_usecs": 1589576170000035
+        },
+        {
+            "workunit_id": "800d87ecd31ab0b9",
+            "name": "fallible_to_exec_result_or_raise",
+            "version": 18,
+            "parent_id": "d810b5ae321bb752",
+            "last_update": 1589576170,
+            "start_usecs": 1589576151589908,
+            "description": "",
+            "end_usecs": 1589576170000224
+        },
+        {
+            "workunit_id": "d810b5ae321bb752",
+            "name": "create_pex",
+            "version": 18,
+            "parent_id": "42985d735b3a0dc3",
+            "last_update": 1589576170,
+            "start_usecs": 1589576151564534,
+            "description": "",
+            "end_usecs": 1589576170000235
+        }
+    ]
+}

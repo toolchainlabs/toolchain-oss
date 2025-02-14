@@ -1,0 +1,20 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "workflow/base.html" %}
+
+{% block content %}
+  <h2>Creator Ancestry for {{ object.payload_ctype.model }} {{ object.pk }}</h2>
+  <div class="workunit-context-links-container">
+    <a href="{{ workunit_status_url }}" class="workunit-context-links">Status</a>
+  </div>
+  <div class="workunit-ancestry-container">
+    {% for wu in ancestors %}
+      <br>{{ loop.index0 * '&nbsp;&nbsp;&nbsp;&nbsp;'|safe }}
+      <a href="{{ wu.status_link }}">{{ wu }}</a>
+    {% endfor %}
+  </div>
+
+{% endblock content %}

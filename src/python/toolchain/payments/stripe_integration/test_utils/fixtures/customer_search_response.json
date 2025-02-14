@@ -1,0 +1,41 @@
+{
+  "object": "search_result",
+  "data": [
+    {
+      "id": "cus_La28SpSIkT9BDh",
+      "object": "customer",
+      "address": null,
+      "balance": 0,
+      "created": 1650993645,
+      "currency": null,
+      "default_source": null,
+      "delinquent": false,
+      "description": null,
+      "discount": null,
+      "email": null,
+      "invoice_prefix": "686A5B46",
+      "invoice_settings": {
+        "custom_fields": null,
+        "default_payment_method": null,
+        "footer": null
+      },
+      "livemode": false,
+      "metadata": {
+        "toolchain_id": "jerryjerryjerry8323",
+        "toolchain_env": "asher_local_test"
+      },
+      "name": "jerry test 1",
+      "next_invoice_sequence": 1,
+      "phone": null,
+      "preferred_locales": [
+
+      ],
+      "shipping": null,
+      "tax_exempt": "none",
+      "test_clock": null
+    }
+  ],
+  "has_more": false,
+  "next_page": null,
+  "url": "/v1/customers/search"
+}

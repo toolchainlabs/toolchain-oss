@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should render the home page successfully 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiDrawer-root MuiDrawer-docked css-1kchqgg-MuiDrawer-docked"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-ji07s3-MuiPaper-root-MuiDrawer-paper"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-wrap-xs-nowrap css-sfpyyv-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto css-18met8a-MuiGrid-root"
+        >
+          <button
+            aria-label="open menu"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-1ddm7yl-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1pe1w7m-MuiSvgIcon-root"
+              data-testid="MenuIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto css-18met8a-MuiGrid-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-1xfqvk9-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <div
+              class="MuiAvatar-root MuiAvatar-rounded css-gchap1-MuiAvatar-root"
+            >
+              <img
+                alt="George Costanza"
+                class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+                src="https://avatars1.githubusercontent.com/u/35751794?s=200&v=4"
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-1468yxu-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+    >
+      <main>
+        <div>
+          <h1>
+            Welcome to Toolchain!
+          </h1>
+          <p>
+            Current build tools run on your desktop, so when writing, testing and debugging code - slow, broken, and inconsistent builds are an immense source of frustration, interrupted flow and lost productivity.
+            <br />
+            <br />
+            Toolchain is solving these problems by going beyond build tools and creating the first truly cloud-centric build system. We're bringing together the scalability, concurrency and flexibility of distributed systems, as well massive as amounts of data derived from static analysis of your code and millions of open-source libraries.
+          </p>
+        </div>
+      </main>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-qwc4y7-MuiGrid-root"
+    >
+      <footer
+        class="css-19midj6"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,74 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb-typescript",
+    "prettier",
+    "plugin:testing-library/react"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "import",
+    "jest",
+    "testing-library"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          "test.ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "react/static-property-placement": "off",
+    "react/state-in-constructor": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "react/jsx-boolean-value": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/require-default-props": "off",
+    "react/prop-types": "off",
+    // Consider following these rules in the future
+    "testing-library/no-node-access": "off",
+    "testing-library/no-container": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@mui/*/*/*", "!@mui/material/test-utils/*"],
+        "paths": [{
+          "name": "@mui/material",
+          "message": "Please use direct component imports to lower bundle size"
+        },{
+          "name": "@mui/icons-material",
+          "message": "Please use direct icon imports to lower bundle size"
+        }]
+      }
+    ],
+    "no-console": 2
+  }
+}

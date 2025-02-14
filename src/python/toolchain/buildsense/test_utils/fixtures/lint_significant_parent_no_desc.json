@@ -1,0 +1,415 @@
+{
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 69.15304017066956,
+            "is_tool": false
+        },
+        {
+            "label": "main:complete",
+            "timing": 5.2928924560546875e-05,
+            "is_tool": false
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 1801,
+        "affected_targets_size": 0,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 4667,
+        "target_root_size": 0
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "allow_external_binary_tool_downloads": true,
+            "backend_packages": [
+                "toolchain.pants.auth",
+                "toolchain.pants.buildsense",
+                "toolchain.pants.common",
+                "toolchain.pants.rules",
+                "toolchain.pants.internal",
+                "pants.backend.awslambda.python",
+                "pants.backend.project_info",
+                "pants.backend.python",
+                "pants.backend.python.lint.bandit",
+                "pants.backend.python.lint.black",
+                "pants.backend.python.lint.docformatter",
+                "pants.backend.python.lint.flake8",
+                "pants.backend.python.lint.pylint",
+                "pants.backend.python.lint.isort",
+                "pants.backend.python.typecheck.mypy"
+            ],
+            "backend_packages2": [],
+            "binaries_baseurls": [
+                "https://binaries.pantsbuild.org",
+                "https://github.com/toolchainlabs/binhost/raw/master/"
+            ],
+            "binaries_fetch_timeout_secs": 30,
+            "binaries_path_by_id": {},
+            "build_file_prelude_globs": [],
+            "build_ignore": [
+                "3rdparty/jvm",
+                "3rdparty/go",
+                "prod/java",
+                "src/java",
+                "src/go",
+                "src/node",
+                "testdata/java"
+            ],
+            "colors": true,
+            "concurrent": false,
+            "dependency_inference": false,
+            "dynamic_ui": true,
+            "exclude_target_regexp": [],
+            "files_not_found_behavior": "warn",
+            "ignore_pants_warnings": [],
+            "level": "info",
+            "local_execution_root_dir": "/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T",
+            "local_store_dir": "/Users/asher/.cache/pants/lmdb_store",
+            "lock": true,
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "named_caches_dir": "/Users/asher/.cache/pants/named_caches",
+            "native_engine_visualize_to": null,
+            "option_name_check_distance": 2,
+            "owners_not_found_behavior": "error",
+            "pants_bin_name": "./pants",
+            "pants_bootstrapdir": "/Users/asher/.cache/pants",
+            "pants_config_files": [
+                "/Users/asher/projects/toolchain/pants.toml",
+                "pants.localdev.toml"
+            ],
+            "pants_configdir": "/Users/asher/.config/pants",
+            "pants_distdir": "/Users/asher/projects/toolchain/dist",
+            "pants_ignore": [
+                ".*/",
+                "/dist/"
+            ],
+            "pants_ignore_use_gitignore": true,
+            "pants_physical_workdir_base": null,
+            "pants_subprocessdir": "/Users/asher/projects/toolchain/.pids",
+            "pants_supportdir": "/Users/asher/projects/toolchain/build-support",
+            "pants_version": "2.0.0.dev6",
+            "pants_workdir": "/Users/asher/projects/toolchain/.pants.d",
+            "pantsd": false,
+            "pantsd_invalidation_globs": [
+                "!/src/python/curator/",
+                "!/src/python/toolchain/codebrowser/",
+                "!/src/python/toolchain/crawler/",
+                "!/src/python/toolchain/dependency/",
+                "!/src/python/toolchain/github_integration/",
+                "!/src/python/toolchain/infosite/",
+                "!/src/python/toolchain/kythebrowser/",
+                "!/src/python/toolchain/packagerepo/",
+                "!/src/python/toolchain/prod/",
+                "!/src/python/toolchain/remoting/",
+                "!/src/python/toolchain/satresolver/",
+                "!/src/python/toolchain/service/",
+                "!/src/python/toolchain/servicerouter/",
+                "!/src/python/toolchain/toolshed/",
+                "!/src/python/toolchain/users/",
+                "!/src/python/toolchain/webhooks/",
+                "!*_test.py",
+                "!BUILD"
+            ],
+            "pantsd_log_dir": null,
+            "pantsd_max_memory_usage": 1073741824,
+            "pantsd_pailgun_port": 0,
+            "pantsd_pailgun_quit_timeout": 5.0,
+            "pantsd_timeout_when_multiple_invocations": 60.0,
+            "pantsrc": true,
+            "pantsrc_files": [
+                "/etc/pantsrc",
+                "~/.pants.rc"
+            ],
+            "parent_build_id": null,
+            "plugin_cache_dir": "/Users/asher/.cache/pants/plugins",
+            "plugins": [
+                "python-dateutil",
+                "networkx==2.4"
+            ],
+            "plugins2": [],
+            "plugins_force_resolve": false,
+            "print_exception_stacktrace": true,
+            "process_execution_cleanup_local_dirs": true,
+            "process_execution_local_enable_nailgun": false,
+            "process_execution_local_parallelism": 24,
+            "process_execution_remote_parallelism": 128,
+            "process_execution_speculation_delay": 1.0,
+            "process_execution_speculation_strategy": "local_first",
+            "process_execution_use_local_cache": true,
+            "pythonpath": [
+                "/Users/asher/projects/toolchain/src/python"
+            ],
+            "remote_ca_certs_path": null,
+            "remote_execution": false,
+            "remote_execution_enable_streaming": true,
+            "remote_execution_extra_platform_properties": [
+                "execution-policy=network",
+                "execution-policy=container-image=283194185447.dkr.ecr.us-east-1.amazonaws.com/ci:2020-08-06.21-47-44-aaaff1b1c2ca"
+            ],
+            "remote_execution_headers": {},
+            "remote_execution_overall_deadline_secs": 3600,
+            "remote_execution_process_cache_namespace": null,
+            "remote_execution_server": null,
+            "remote_instance_name": null,
+            "remote_oauth_bearer_token_path": null,
+            "remote_store_chunk_bytes": 1048576,
+            "remote_store_chunk_upload_timeout_seconds": 60,
+            "remote_store_connection_limit": 5,
+            "remote_store_rpc_retries": 2,
+            "remote_store_server": [],
+            "remote_store_thread_count": 1,
+            "spec_file": [],
+            "spec_files": [],
+            "streaming_workunits_handlers": [
+                "toolchain.pants.buildsense.reporter.Reporter"
+            ],
+            "streaming_workunits_report_interval": 1.0,
+            "subproject_roots": [],
+            "tag": [],
+            "v1": false,
+            "v2": true,
+            "verify_config": true
+        }
+    },
+    "run_info": {
+        "id": "pants_run_2020_08_10_09_19_53_335_d79beca8755a471caf99664bcb145e34",
+        "timestamp": "1597076393.3352032",
+        "datetime": "Monday Aug 10, 2020 09:19:53",
+        "user": "asher",
+        "machine": "Ashers-MacBook-Pro.local",
+        "path": "/Users/asher/projects/toolchain",
+        "buildroot": "/Users/asher/projects/toolchain",
+        "version": "2.0.0.dev6",
+        "cmd_line": "pants --pants-bin-name=./pants lint src/python/toolchain/aws/::",
+        "specs_from_command_line": [
+            "src/python/toolchain/aws::"
+        ],
+        "outcome": "SUCCESS",
+        "revision": "906d3444dcbfb455db24495c51c9fb04550ffd82",
+        "branch": "helen",
+        "computed_goals": [
+            "lint"
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "3a7c211eea5c3024",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "410a0f0a6bdae4e2",
+            "last_update": 1597076445,
+            "start_usecs": 1597076410194704,
+            "description": "Run Black on 3 targets: src/python/toolchain/aws, src/python/toolchain/aws/test_utils, src/python/toolchain/aws:tests.",
+            "end_usecs": 1597076420180795
+        },
+        {
+            "workunit_id": "5c7d68360a850ea4",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "1bd135a5404170c4",
+            "last_update": 1597076445,
+            "start_usecs": 1597076402189290,
+            "description": "Run Bandit on 3 targets: src/python/toolchain/aws, src/python/toolchain/aws/test_utils, src/python/toolchain/aws:tests.",
+            "end_usecs": 1597076403894694
+        },
+        {
+            "workunit_id": "05a9b10c98a3658f",
+            "name": "pants.backend.python.lint.bandit.rules.bandit_lint_partition",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "25a035749a92f7a1",
+            "last_update": 1597076445,
+            "start_usecs": 1597076393434442,
+            "end_usecs": 1597076403895564
+        },
+        {
+            "workunit_id": "7fde3dd7079531eb",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "3a7c211eea5c3024",
+            "last_update": 1597076445,
+            "start_usecs": 1597076410194712,
+            "description": "Run Black on 3 targets: src/python/toolchain/aws, src/python/toolchain/aws/test_utils, src/python/toolchain/aws:tests.",
+            "end_usecs": 1597076420180782,
+            "artifacts": {
+                "stderr": "All done! \u2728 \ud83c\udf70 \u2728\n31 files would be left unchanged.\n"
+            },
+            "significant_parent_id": "8dad3c0c7fa73f24"
+        },
+        {
+            "workunit_id": "e44bcee80b8d1a04",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "b8bdba34267c61a6",
+            "last_update": 1597076445,
+            "start_usecs": 1597076429823687,
+            "description": "Run Pylint on 3 targets: src/python/toolchain/aws, src/python/toolchain/aws/test_utils, src/python/toolchain/aws:tests.",
+            "end_usecs": 1597076445170488,
+            "artifacts": {
+                "stdout": "\n--------------------------------------------------------------------\nYour code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)\n\n"
+            },
+            "significant_parent_id": "f8921544a84cd20a"
+        },
+        {
+            "workunit_id": "f8921544a84cd20a",
+            "name": "pants.backend.python.lint.pylint.rules.pylint_lint_partition",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "6c63f16f81427d9d",
+            "last_update": 1597076445,
+            "start_usecs": 1597076394902017,
+            "end_usecs": 1597076445171583
+        },
+        {
+            "workunit_id": "410a0f0a6bdae4e2",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "deda195655a26346",
+            "last_update": 1597076445,
+            "start_usecs": 1597076410194174,
+            "description": "Run Black on 3 targets: src/python/toolchain/aws, src/python/toolchain/aws/test_utils, src/python/toolchain/aws:tests.",
+            "end_usecs": 1597076420180949
+        },
+        {
+            "workunit_id": "b9b9961cebd636dc",
+            "name": "lint",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "2416069f05690c08",
+            "last_update": 1597076445,
+            "start_usecs": 1597076393375111,
+            "description": "`lint` goal",
+            "end_usecs": 1597076445174252
+        },
+        {
+            "workunit_id": "8dad3c0c7fa73f24",
+            "name": "pants.backend.python.lint.black.rules.black_lint",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "b9b9961cebd636dc",
+            "last_update": 1597076445,
+            "start_usecs": 1597076393415435,
+            "description": "Lint using Black",
+            "end_usecs": 1597076420181479
+        },
+        {
+            "workunit_id": "b28de53e65e7ba20",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "f8921544a84cd20a",
+            "last_update": 1597076445,
+            "start_usecs": 1597076429822796,
+            "end_usecs": 1597076445171310
+        },
+        {
+            "workunit_id": "1bd135a5404170c4",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "f774bef465f0b6f9",
+            "last_update": 1597076445,
+            "start_usecs": 1597076402189100,
+            "description": "Run Bandit on 3 targets: src/python/toolchain/aws, src/python/toolchain/aws/test_utils, src/python/toolchain/aws:tests.",
+            "end_usecs": 1597076403894903
+        },
+        {
+            "workunit_id": "deda195655a26346",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "8dad3c0c7fa73f24",
+            "last_update": 1597076445,
+            "start_usecs": 1597076410193706,
+            "end_usecs": 1597076420181267
+        },
+        {
+            "workunit_id": "dc2d04221fbd9b92",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "b28de53e65e7ba20",
+            "last_update": 1597076445,
+            "start_usecs": 1597076429823013,
+            "description": "Run Pylint on 3 targets: src/python/toolchain/aws, src/python/toolchain/aws/test_utils, src/python/toolchain/aws:tests.",
+            "end_usecs": 1597076445171009
+        },
+        {
+            "workunit_id": "b8bdba34267c61a6",
+            "name": "multi_platform_process-waiting",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "dc2d04221fbd9b92",
+            "last_update": 1597076445,
+            "start_usecs": 1597076429823679,
+            "description": "Run Pylint on 3 targets: src/python/toolchain/aws, src/python/toolchain/aws/test_utils, src/python/toolchain/aws:tests.",
+            "end_usecs": 1597076445170503
+        },
+        {
+            "workunit_id": "846f9282a20552c3",
+            "name": "multi_platform_process-running",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "5c7d68360a850ea4",
+            "last_update": 1597076445,
+            "start_usecs": 1597076402189298,
+            "description": "Run Bandit on 3 targets: src/python/toolchain/aws, src/python/toolchain/aws/test_utils, src/python/toolchain/aws:tests.",
+            "end_usecs": 1597076403894679,
+            "artifacts": {
+                "stdout": "Run started:2020-08-10 16:20:03.847376\n\nTest results:\n\tNo issues identified.\n\nCode scanned:\n\tTotal lines of code: 1065\n\tTotal lines skipped (#nosec): 0\n\nRun metrics:\n\tTotal issues (by severity):\n\t\tUndefined: 0.0\n\t\tLow: 0.0\n\t\tMedium: 0.0\n\t\tHigh: 0.0\n\tTotal issues (by confidence):\n\t\tUndefined: 0.0\n\t\tLow: 0.0\n\t\tMedium: 0.0\n\t\tHigh: 0.0\nFiles skipped (0):\n",
+                "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: B603,B607,B314,B404,B322,B303,B405\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\tusing config: build-support/python/bandit.yaml\n[main]\tINFO\trunning on Python 3.8.5\n"
+            },
+            "significant_parent_id": "05a9b10c98a3658f"
+        },
+        {
+            "workunit_id": "25a035749a92f7a1",
+            "name": "pants.backend.python.lint.bandit.rules.bandit_lint",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "b9b9961cebd636dc",
+            "last_update": 1597076445,
+            "start_usecs": 1597076393415420,
+            "description": "Lint using Bandit",
+            "end_usecs": 1597076403895670
+        },
+        {
+            "workunit_id": "f774bef465f0b6f9",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "05a9b10c98a3658f",
+            "last_update": 1597076445,
+            "start_usecs": 1597076402188895,
+            "end_usecs": 1597076403895362
+        },
+        {
+            "workunit_id": "2416069f05690c08",
+            "name": "select",
+            "state": "finished",
+            "version": 52,
+            "parent_id": null,
+            "last_update": 1597076445,
+            "start_usecs": 1597076393374902,
+            "end_usecs": 1597076445174378
+        },
+        {
+            "workunit_id": "6c63f16f81427d9d",
+            "name": "pants.backend.python.lint.pylint.rules.pylint_lint",
+            "state": "finished",
+            "version": 52,
+            "parent_id": "b9b9961cebd636dc",
+            "last_update": 1597076445,
+            "start_usecs": 1597076393415456,
+            "description": "Lint using Pylint",
+            "end_usecs": 1597076445171716
+        }
+    ]
+}

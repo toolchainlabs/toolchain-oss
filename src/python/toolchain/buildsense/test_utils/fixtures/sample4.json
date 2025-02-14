@@ -1,0 +1,69 @@
+{
+  "run_info": {
+    "id": "pants_run_2019_07_19_15_35_18_154_36abaf9ca0894265828d66e1bae1a969",
+    "timestamp": "1563575718.15477",
+    "datetime": "Friday Jul 19, 2019 15:35:18",
+    "user": "asher",
+    "machine": "Ashers-MacBook-Pro.local",
+    "path": "/Users/asher/projects/toolchain",
+    "buildroot": "/Users/asher/projects/toolchain",
+    "version": "1.18.0.dev1",
+    "cmd_line": "pants fmt.isort prod/python:: src/python:: test/python::",
+    "default_report": "/Users/asher/projects/toolchain/.pants.d/reports/pants_run_2019_07_19_15_35_18_154_36abaf9ca0894265828d66e1bae1a969/html/build.html",
+    "report_url": "http://localhost:50609/run/pants_run_2019_07_19_15_35_18_154_36abaf9ca0894265828d66e1bae1a969",
+    "specs_from_command_line": [],
+    "outcome": "FAILURE"
+  },
+  "cumulative_timings": [
+    {
+      "label": "main",
+      "timing": 3.2912423610687256,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup",
+      "timing": 0.001767873764038086,
+      "is_tool": false
+    },
+    {
+      "label": "main:complete",
+      "timing": 0.0003509521484375,
+      "is_tool": false
+    }
+  ],
+  "self_timings": [
+    {
+      "label": "main",
+      "timing": 3.28912353515625,
+      "is_tool": false
+    },
+    {
+      "label": "main:setup",
+      "timing": 0.001767873764038086,
+      "is_tool": false
+    },
+    {
+      "label": "main:complete",
+      "timing": 0.0003509521484375,
+      "is_tool": false
+    }
+  ],
+  "critical_path_timings": [
+    {
+      "label": "main:setup",
+      "timing": 0.001767873764038086,
+      "is_tool": false
+    }
+  ],
+  "artifact_cache_stats": [],
+  "pantsd_stats": {
+    "affected_targets_size": 0,
+    "target_root_size": 0
+  },
+  "outcomes": {
+    "main": "FAILURE",
+    "main:complete": "SUCCESS",
+    "main:setup": "FAILURE"
+  },
+  "recorded_options": {}
+}

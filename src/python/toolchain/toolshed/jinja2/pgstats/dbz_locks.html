@@ -1,0 +1,25 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'toolshed/base.html' %}
+
+{% block content %}
+  <h2>DB Locks</h2>
+  <br>
+  <div class="dbz-locks-table-container">
+    <table id="dbz-locks-table" class="table table-condensed table-bordered dbz-locks-table">
+    </table>
+  </div>
+{% endblock content %}
+
+{% block js %}
+  {{ super() }}
+  <script src="{{ static('site/js/db_locks_table.js') }}"></script>
+  <script>
+    $(function() {
+      toolchain.dbz.initLocksTable('#dbz-locks-table', '{{ views_links.dbz_locks_data }}');
+    });
+  </script>
+{% endblock js %}

@@ -1,0 +1,26 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+aws_region: us-east-1
+logging_opensearch_host: costanza.domain.local
+toolchain_env: toolchain_dev
+fluent-bit:
+  serviceMonitor:
+    enabled: false
+  config:
+     outputs: |
+        [OUTPUT]
+            Name  opensearch
+            Host  costanza.domain.local
+            Port  443
+            Logstash_Format On
+            Suppress_Type_Name On
+            Time_Key @timestamp
+            Replace_Dots On
+            Logstash_Prefix prod-logs
+            tls On
+            AWS_Auth On
+            AWS_Region us-east-1
+curator:
+  enabled: true
+  iam_role_arn: arn:aws:benes
+  image: jerry

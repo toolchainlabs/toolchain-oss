@@ -1,0 +1,16 @@
+{#
+Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "crawler/workunit_detail_base.html" %}
+
+{% block successful_workunit_detail_content_trs %}
+{{ super() }}
+<table>
+  <tr>
+    <td>Period:</td>
+    <td>{{ object.period_minutes }} Minutes</td>
+  </tr>
+</table>
+{% endblock successful_workunit_detail_content_trs %}

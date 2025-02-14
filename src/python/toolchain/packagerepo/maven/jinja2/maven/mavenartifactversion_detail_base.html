@@ -1,0 +1,70 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "maven/base.html" %}
+
+{% block content %}
+<h2>Details for <code>{{ object.coordinates() }}</code></h2>
+
+<table class="table">
+  <tr>
+    <td>Group ID:</td>
+    <td>
+      <a
+        href="{{ url('maven:group_artifacts', kwargs={'group_id': object.artifact.group_id}) }}">{{ object.artifact.group_id }}</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Artifact ID:</td>
+    <td><a href="{{ object.artifact.get_absolute_url() }}">{{ object.artifact.artifact_id }}</a></td>
+  </tr>
+  <tr>
+    <td>Version:</td>
+    <td>{{ object.version }}</td>
+  </tr>
+  <tr>
+    <td>POMs:</td>
+    <td>
+      <ul class="nobullets">
+        {% for ref in object.pom_refs.all() %}
+        <li><a href="{{ url('maven:pom_detail', kwargs={'pk': ref.pom.pk}) }}">{{ ref.pom.web_resource.url }}</a></li>
+        {% else %}
+        <li>-</li>
+        {% endfor %}
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Project URL:</td>
+    <td>{{ object.url|urlize(target="_blank") }}</td>
+  </tr>
+  <tr>
+    <td>SCM URL:</td>
+    <td>{{ object.scm_url|urlize(target="_blank") }}</td>
+  </tr>
+  <tr>
+    <td>Packaging:</td>
+    <td>{{ object.packaging or 'jar' }}</td>
+  </tr>
+  <tr>
+    <td>Organization:</td>
+    <td>{{ object.organization|urlize(target="_blank") or '-' }}</td>
+  </tr>
+  <tr>
+    <td>Licenses:</td>
+    <td>
+      <ul class="nobullets">
+        {% for license in object.licenses.all() %}
+        <li>{{ license|urlize(target="_blank") }}</li>
+        {% else %}
+        <li>-</li>
+        {% endfor %}
+      </ul>
+    </td>
+  </tr>
+  {% block extra_artifact_info_rows %}{% endblock %}
+</table>
+
+{% endblock content %}

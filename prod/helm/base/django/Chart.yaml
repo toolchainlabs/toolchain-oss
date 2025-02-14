@@ -1,0 +1,7 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+description: A Helm chart containing templates for use by charts defining django services.
+name: django
+version: 1.3.0

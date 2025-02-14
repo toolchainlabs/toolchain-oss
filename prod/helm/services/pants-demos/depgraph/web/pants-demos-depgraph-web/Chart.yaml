@@ -1,0 +1,15 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+description: Pants Demos - Depgraph Web UI
+name: pants-demos-depgraph-web
+version: 1.1.0
+kubeVersion: '>=v1.24.0-0,<v1.28-0'
+dependencies:
+- name: django
+  version: '*'
+  repository: file://../../../../../base/django/
+- name: ingress
+  version: '*'
+  repository: file://../../../../../base/ingress/

@@ -1,0 +1,156 @@
+{
+    "info": {
+        "author": "Anton Paquin",
+        "author_email": "python@antonpaqu.in",
+        "bugtrack_url": null,
+        "classifiers": [],
+        "description": "# todo-placeholder\n\n## Installation\n\n```\npip install todo-placeholder\n```\n\n## Placeholder\n\nThis is a tool intended to speed the process of development in python.\n\nYou're writing your code, and you run into a spot where you don't know exactly \nwhat needs to go there.\n\nPlaceholder lets you fill that spot with a \"placeholder\" variable. \n\nAt runtime, when it comes time that you actually need to compute the value, \n\"placeholder\" will open an interactive session that you can play around in to\nget the value.\n\n(Optional) When you're done with your session, the placeholder in your code is\nreplaced with expression from your terminal session.\n\nTHIS TOOL CAN EDIT YOUR SOURCE CODE. KEEP BACKUPS.\n\n### wtf\n\nyeah\n\n### Simple Example\n\nSay we have `my_program.py`:\n\n```\nfrom todo import Placeholder\nplaceholder = Placeholder()\n\nprint(placeholder.some_string)\n```\n\nRun it with `python my_program.py` and you'll enter an interactive session.\n\n```\nTODO: fill variable \"some_string\"\nWhen you have an expression that works, press ctrl+D to end the session and\nreplace the placeholder with the last line you typed.\nAlternatively, call exit() to abort.\n\n>>>\n```\n\nThis is a `code.interact` session, which means you have all of python available\nto you. I recommend learning to use `help()` and `dir()` to inspect your \nenvironment and see what's available to you.\n\nFrom here, you should fill in the value of `some_string`\n\n```\n>>> 'hello world!'\n'hello world!'\n>>> <ctrl+D>\nnow exiting InteractiveConsole...\n```\n\n`my_program.py` will continue execution, except `some_string` is replaced with\nthe expression 'hello world!'.\n\nNote: the *expression*, not the *value* of the expression. You can use \n`placeholder.some_string` later and the same expression will be re-evaluated in \nwhatever context it was accessed from.\n\nWhen the program completes, you can check `my_program.py` again:\n\n```\nfrom todo import Placeholder\nplaceholder = Placeholder()\n\nprint('hello world!')\n```\n\nThe placeholder has been replaced by the expression you used in your terminal\nsession.\n\n### More realistic example\n\nSay I'm writing a larger program that involves downloading something from the\nweb. Naturally, I'll use requests. But personally, I can never remember exactly\nwhat variable in the response holds the HTTP response status.\n\nThis `my_program.py` is a toy example, but it would work the same in a larger\nprogram:\n\n```\nfrom todo import Placeholder\nimport requests\n\nplaceholder = Placeholder()\n\ndef get_data(url):\n    r = requests.get(url)\n    # How do I get the response code here? TODO via placeholder\n    if placeholder.http_code != 200:\n        raise RuntimeError(f'Error: server responded with error code {placeholder.http_code}')\n    return r.text\n\nget_data('http://www.example.com/probably_404')\n```\n\nRunning the program will drop me into an interactive session, where the local\ncontext of `get_data` is all available.\n\n```\nTODO: fill variable \"http_code\"\nWhen you have an expression that works, press ctrl+D to end the session and\nreplace the placeholder with the last line you typed.\nAlternatively, call exit() to abort.\n\n>>> r\n<Response [404]>\n>>> url\n'http://www.example.com/probably_404'\n>>> # Now I can use help() to figure out how to get the error code out of r\n>>> help(r)\n\n>>> # aha, it's r.status_code\n>>> r.status_code\n404\n>>> <ctrl+D>\nnow exiting InteractiveConsole...\nTraceback (most recent call last):\n  File \"my_program.py\", line 12, in <module>\n    get_data('http://www.example.com/probably_404')\n  File \"my_program.py\", line 9, in get_data\n    raise RuntimeError(f'Error: server responded with error code {r.status_code}')\nRuntimeError: Error: server responded with error code 404\n```\n\nAnd if I check `my_program.py` again, the expression has been filled in\n\n```\nfrom todo import Placeholder\nimport requests\n\nplaceholder = Placeholder()\n\ndef get_data(url):\n    r = requests.get(url)\n    if r.status_code != 200:\n        raise RuntimeError(f'Error: server responded with error code {r.status_code}')\n    return r.text\n\nget_data('http://www.example.com/probably_404')\n```\n\n### Other Placeholders\n\n#### PlaceholderExpression\n\n`todo.Placeholder` is an alias for `todo.PlaceholderExpression`. This is the\nsimplest placeholder: it evaluates a single expression and does not modify the\nlocal environment beyond the value of that expression.\n\n#### PlaceholderStatement\n\n`todo.PlaceholderStatement` allows for a single python statement, which can\nbe used to do things like assign to a variable.\n\nExample:\n\n```\nimport todo\n\nplaceholder = todo.PlaceholderStatement()\n\nx = 1\nprint(x)\nplaceholder.incr_x\nprint(x)\nplaceholder.incr_x\nprint(x)\n```\n\n```\n1\n\nTODO: fill statement \"incr_x\"\nWhen you have an expression that works, press ctrl+D to end the session and\nreplace the placeholder with the last line you typed.\nAlternatively, call exit() to abort.\n\n>>> x += 1\n>>>\nnow exiting InteractiveConsole...\n2\n3\n```\n\n```\nimport todo\n\nplaceholder = todo.PlaceholderStatement()\n\nx = 1\nprint(x)\nx += 1\nprint(x)\nx += 1\nprint(x)\n```\n\n#### PlaceholderMultiline\n\n`todo.PlaceholderMultiline` allows for replacing a placeholder with many lines\nof input.\n\nTo use this, the placeholder should be the only expression on the line where it\nis accessed, and you should prefix any lines you want to add to the replacement \nwith '!'\n\nExample:\n\n```\nimport todo\n\nplaceholder = todo.PlaceholderMultiline()\n\nx = 1\ny = -1\nprint(x, y)\nplaceholder.incr_xy\nprint(x, y)\nplaceholder.incr_xy\nprint(x, y)\n```\n\n```\n1 -1\n\nTODO: fill statements at \"incr_xy\"\nPlay around in your session.\nWhen you want to add a statement to the placeholder, prefix it with \"!\"\ne.g.\n>>> !x = x + 10\n\nWhen your placeholder is complete, press ctrl+D to exit the session and\noverwrite the placeholder in source code.\nAlternatively, call exit() to abort.\n\n>>> !x += 1\n>>> !y -= 1\n>>>\nnow exiting InteractiveConsole...\n2 -2\n3 -3\n```\n\n```\nimport todo\n\nplaceholder = todo.PlaceholderMultiline()\n\nx = 1\ny = -1\nprint(x, y)\nx += 1\ny -= 1\nprint(x, y)\nx += 1\ny -= 1\nprint(x, y)\n```\n\n### Parameters\n\nTo disable rewriting the source code of the original program, you can pass \n`rewrite_source=False`.\n\nBy default, Placeholder will refuse to edit the source code of any file except\nthe one it was initialized. This is to prevent things like\n\n```\nplaceholder = todo.Placeholder()\n\nsome_system_library(placeholder)\n```\n\nfrom editing important system files that it should not be touching.\n\nTo enable editing other files, pass `allow_propagation=True`.\n\n### Caveats\n\n`Placeholder` works by scanning your code for an accessor of the form \n`placeholder_var.some_key`. If you access it in an unusual way -- say, \n`__getattribute__`, it won't be able to find the item it should replace.\n\nFurthermore, it can't tell the difference between a \"code\" accessor and a \n\"non-code\" accessor. So if you have something like \n\n```\nprint('placeholder.key = {}'.format(placeholder.key))\n```\n\nBoth instances of \"placeholder.key\" will be replaced in that line, even though\nonly one of them is the actual access point.\n\nBecause of how placeholder internals work, your keys cannot start with an\nunderscore '_'.\n\n\n",
+        "description_content_type": "text/markdown",
+        "docs_url": null,
+        "download_url": "",
+        "downloads": {
+            "last_day": -1,
+            "last_month": -1,
+            "last_week": -1
+        },
+        "home_page": "",
+        "keywords": "",
+        "license": "",
+        "maintainer": "",
+        "maintainer_email": "",
+        "name": "todo-placeholder",
+        "package_url": "https://pypi.org/project/todo-placeholder/",
+        "platform": "",
+        "project_url": "https://pypi.org/project/todo-placeholder/",
+        "project_urls": null,
+        "release_url": "https://pypi.org/project/todo-placeholder/1.0.1/",
+        "requires_dist": null,
+        "requires_python": "",
+        "summary": "Use a terminal session to lazily write python source code",
+        "version": "1.0.1",
+        "yanked": false
+    },
+    "last_serial": 7200236,
+    "releases": {
+        "1.0.0": [
+            {
+                "comment_text": "",
+                "digests": {
+                    "md5": "762868e803f4efd7f668bb93d627451e",
+                    "sha256": "04cd1d134d99401ba1667aaf124bdf295056396d5157e78598696f2c3b37b8a4"
+                },
+                "downloads": -1,
+                "filename": "todo_placeholder-1.0.0-py3-none-any.whl",
+                "has_sig": false,
+                "md5_digest": "762868e803f4efd7f668bb93d627451e",
+                "packagetype": "bdist_wheel",
+                "python_version": "py3",
+                "requires_python": null,
+                "size": 4376,
+                "upload_time": "2020-05-08T20:32:47",
+                "upload_time_iso_8601": "2020-05-08T20:32:47.734401Z",
+                "url": "https://files.pythonhosted.org/packages/7e/07/dd8b995b9de27bc7c0d7525b2bda0e0e13f62e71ad12846a729b11fcc6bf/todo_placeholder-1.0.0-py3-none-any.whl",
+                "yanked": false
+            },
+            {
+                "comment_text": "",
+                "digests": {
+                    "md5": "8add9396b0d6452f108ced8dd0244bb9",
+                    "sha256": "f995e4402007a1fac81e17b6f860fb64989ae53f2a323041fb27a4e2d769562f"
+                },
+                "downloads": -1,
+                "filename": "todo-placeholder-1.0.0.tar.gz",
+                "has_sig": false,
+                "md5_digest": "8add9396b0d6452f108ced8dd0244bb9",
+                "packagetype": "sdist",
+                "python_version": "source",
+                "requires_python": null,
+                "size": 4479,
+                "upload_time": "2020-05-08T20:32:49",
+                "upload_time_iso_8601": "2020-05-08T20:32:49.980268Z",
+                "url": "https://files.pythonhosted.org/packages/aa/29/515a3534a1f288ef76a1ec8bd8629737d8535312ec7dd3498f38ac814596/todo-placeholder-1.0.0.tar.gz",
+                "yanked": false
+            }
+        ],
+        "1.0.1": [
+            {
+                "comment_text": "",
+                "digests": {
+                    "md5": "6ca91ad6dfd972cf487a8dca6856b22b",
+                    "sha256": "64501adf3efa8eff207ed06fe39af9add1961946f9010ad7e2a42a921fcb9ebc"
+                },
+                "downloads": -1,
+                "filename": "todo_placeholder-1.0.1-py3-none-any.whl",
+                "has_sig": false,
+                "md5_digest": "6ca91ad6dfd972cf487a8dca6856b22b",
+                "packagetype": "bdist_wheel",
+                "python_version": "py3",
+                "requires_python": null,
+                "size": 7478,
+                "upload_time": "2020-05-08T20:35:47",
+                "upload_time_iso_8601": "2020-05-08T20:35:47.893272Z",
+                "url": "https://files.pythonhosted.org/packages/06/5a/e8c84aa257db09a83e6c158cf62448b59321dd79dc8d253bfbb98d87f695/todo_placeholder-1.0.1-py3-none-any.whl",
+                "yanked": false
+            },
+            {
+                "comment_text": "",
+                "digests": {
+                    "md5": "57770d1b91c7d6f2970a414ae083db7c",
+                    "sha256": "e28e4ac0683d18cf0ec197bdcb37435bd4484bac21d37b013b7e58055d3a7613"
+                },
+                "downloads": -1,
+                "filename": "todo-placeholder-1.0.1.tar.gz",
+                "has_sig": false,
+                "md5_digest": "57770d1b91c7d6f2970a414ae083db7c",
+                "packagetype": "sdist",
+                "python_version": "source",
+                "requires_python": null,
+                "size": 9088,
+                "upload_time": "2020-05-08T20:35:50",
+                "upload_time_iso_8601": "2020-05-08T20:35:50.282444Z",
+                "url": "https://files.pythonhosted.org/packages/0e/53/13202e2ad275742495112b1cab5918c51409fb9fda688142ec96a9f510c4/todo-placeholder-1.0.1.tar.gz",
+                "yanked": false
+            }
+        ]
+    },
+    "urls": [
+        {
+            "comment_text": "",
+            "digests": {
+                "md5": "6ca91ad6dfd972cf487a8dca6856b22b",
+                "sha256": "64501adf3efa8eff207ed06fe39af9add1961946f9010ad7e2a42a921fcb9ebc"
+            },
+            "downloads": -1,
+            "filename": "todo_placeholder-1.0.1-py3-none-any.whl",
+            "has_sig": false,
+            "md5_digest": "6ca91ad6dfd972cf487a8dca6856b22b",
+            "packagetype": "bdist_wheel",
+            "python_version": "py3",
+            "requires_python": null,
+            "size": 7478,
+            "upload_time": "2020-05-08T20:35:47",
+            "upload_time_iso_8601": "2020-05-08T20:35:47.893272Z",
+            "url": "https://files.pythonhosted.org/packages/06/5a/e8c84aa257db09a83e6c158cf62448b59321dd79dc8d253bfbb98d87f695/todo_placeholder-1.0.1-py3-none-any.whl",
+            "yanked": false
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "md5": "57770d1b91c7d6f2970a414ae083db7c",
+                "sha256": "e28e4ac0683d18cf0ec197bdcb37435bd4484bac21d37b013b7e58055d3a7613"
+            },
+            "downloads": -1,
+            "filename": "todo-placeholder-1.0.1.tar.gz",
+            "has_sig": false,
+            "md5_digest": "57770d1b91c7d6f2970a414ae083db7c",
+            "packagetype": "sdist",
+            "python_version": "source",
+            "requires_python": null,
+            "size": 9088,
+            "upload_time": "2020-05-08T20:35:50",
+            "upload_time_iso_8601": "2020-05-08T20:35:50.282444Z",
+            "url": "https://files.pythonhosted.org/packages/0e/53/13202e2ad275742495112b1cab5918c51409fb9fda688142ec96a9f510c4/todo-placeholder-1.0.1.tar.gz",
+            "yanked": false
+        }
+    ]
+}

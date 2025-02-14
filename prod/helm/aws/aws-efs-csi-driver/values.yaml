@@ -1,0 +1,38 @@
+# Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+aws:
+  iam_role: null # Filled by install script
+  account_number: "283194185447" # might want to move this to code later.
+efsFileSystemId: null # Filled by install script
+aws-efs-csi-driver:
+  image:
+    # At some point we want to get it from ECR instead of docker hub, but AWS don't seem to publish there as part of their public release process.
+    # See: https://github.com/kubernetes-sigs/aws-efs-csi-driver/blob/53b3525e81d4b76295b209ba15b8655b26880a5b/.github/workflows/container-image.yaml#L17
+    # https://gallery.ecr.aws/efs-csi-driver/amazon/aws-efs-csi-driver
+    repository: amazon/aws-efs-csi-driver
+  sidecars:  # See https://github.com/kubernetes-sigs/aws-efs-csi-driver/pull/595/
+    livenessProbe:
+      image:
+        repository: public.ecr.aws/eks-distro/kubernetes-csi/livenessprobe
+        tag: v2.7.0-eks-1-22-12
+  controller:
+    serviceAccount:
+      create: false # We use a template in this chart to create it.
+      name: efs-csi-controller-sa
+    volMetricsOptIn: true
+    resources:
+      requests:
+        cpu: 15m
+        memory: 48Mi
+      limits:
+        cpu: 200m
+        memory: 256Mi
+  node:
+    resources:
+      requests:
+        cpu: 50m
+        memory: 36Mi
+      limits:
+        cpu: 200m
+        memory: 128Mi

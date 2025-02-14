@@ -1,0 +1,26 @@
+[tool.black]
+line-length = 120
+target-version = ["py38"]
+
+[tool.isort]
+# Note: For some reason, we can't use `profile = 'black'`. Instead of the profile, isort uses its
+# default settings.
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 120
+
+# Note: For some reason, we have to set `default_section = "THIRDPARTY"`, even though that's
+# supposed to be the default value. Without this, iSort misclassifies our imports.
+known_first_party = ["toolchain"]
+default_section = "THIRDPARTY"
+
+[tool.ruff]
+target-version = "py39"
+ignore = [
+    "F405", # start imports are enforced by flake8 (used for django settings)
+    "F403", # unused start imports are enforced by flake8 (used for django settings)
+    "E501", # line length - we are using black for that
+]

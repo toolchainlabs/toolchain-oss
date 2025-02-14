@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="30.067" timestamp="2022-06-17T15:55:09.374327" hostname="f464c2bb55f4"><testcase time="18.514" /><testcase classname="pytest" name="internal" time="0.000"><error message="internal error">Traceback (most recent call last):
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/main.py", line 268, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/main.py", line 322, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_callers.py", line 60, in _multicall
+    return outcome.get_result()
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_result.py", line 60, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/main.py", line 347, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_callers.py", line 60, in _multicall
+    return outcome.get_result()
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_result.py", line 60, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/runner.py", line 223, in call_and_report
+    report: TestReport = hook.pytest_runtest_makereport(item=item, call=call)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_callers.py", line 55, in _multicall
+    gen.send(outcome)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/skipping.py", line 265, in pytest_runtest_makereport
+    rep = outcome.get_result()
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_result.py", line 60, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pluggy/_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/runner.py", line 367, in pytest_runtest_makereport
+    return TestReport.from_item_and_call(item, call)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/reports.py", line 344, in from_item_and_call
+    longrepr = item.repr_failure(excinfo)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/python.py", line 1752, in repr_failure
+    return self._repr_failure_py(excinfo, style=style)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/nodes.py", line 475, in _repr_failure_py
+    return excinfo.getrepr(
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/_code/code.py", line 666, in getrepr
+    return fmt.repr_excinfo(self)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/_code/code.py", line 926, in repr_excinfo
+    reprtraceback = self.repr_traceback(excinfo_)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/_code/code.py", line 867, in repr_traceback
+    reprentry = self.repr_traceback_entry(entry, einfo)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/_code/code.py", line 810, in repr_traceback_entry
+    source = self._getentrysource(entry)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/_code/code.py", line 718, in _getentrysource
+    source = entry.getsource(self.astcache)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/_code/code.py", line 250, in getsource
+    source = self.frame.code.fullsource
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/_code/code.py", line 106, in fullsource
+    full, _ = findsource(self.raw)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/_code/source.py", line 121, in findsource
+    sourcelines, lineno = inspect.findsource(obj)
+  File "/usr/local/lib/python3.8/inspect.py", line 792, in findsource
+    module = getmodule(object, file)
+  File "/usr/local/lib/python3.8/inspect.py", line 745, in getmodule
+    if ismodule(module) and hasattr(module, '__file__'):
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pytest_timeout.py", line 200, in handler
+    timeout_sigalrm(item, params.timeout)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/pytest_timeout.py", line 375, in timeout_sigalrm
+    pytest.fail("Timeout &gt;%ss" % timeout)
+  File "/root/.cache/pants/named_caches/pex_root/venvs/s/c498e23d/venv/lib/python3.8/site-packages/_pytest/outcomes.py", line 196, in fail
+    raise Failed(msg=reason, pytrace=pytrace)
+Failed: Timeout &gt;30.0s</error></testcase></testsuite></testsuites>

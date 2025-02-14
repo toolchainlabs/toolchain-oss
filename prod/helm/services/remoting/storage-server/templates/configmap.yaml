@@ -1,0 +1,30 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: remoting-storage-server
+  labels:
+    app: remoting-storage-server
+    chart: {{ .Chart.Name  }}
+    heritage: {{ .Release.Service }}
+    toolchain_product: "remote-cache"
+data:
+  storage.yaml: |
+    listen_address: 0.0.0.0:8980
+{{ include (printf "storage-server.model.%s" .Values.storageModel) . | nindent 4 }}
+    infra:
+      sentry_dsn: {{ .Values.server_sentry_dsn }}
+    grpc:
+      max_concurrent_streams: {{ .Values.grpc.maxConcurrentStreams }}
+      concurrency_limit_per_connection: {{ .Values.grpc.concurrencyLimitPerConnection }}
+    check_action_cache_completeness: true
+    completeness_check_probability: {{ .Values.completeness_check_probability }}
+{{- if eq (include "storage-server.isAmberfloEnabledForModel" .Values.storageModel) "true" }}
+    amberflo_backend:
+      customer_id_prefix: "{{- if eq .Release.Namespace "staging" -}}prod{{- else -}}{{ .Release.Namespace }}{{- end -}}_v1"
+      api_key_file: /amberflo-api-key/secret_string
+      aggregation_window_duration_secs: {{ .Values.amberflo.aggregation_window_secs }}
+      env_dimension: {{ .Release.Namespace | toString }}
+{{- end }}

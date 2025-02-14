@@ -1,0 +1,885 @@
+{
+  "pantsd_stats": {
+    "affected_targets_size": 79,
+    "resulting_graph_size": 466,
+    "target_root_size": 26,
+    "preceding_graph_size": -1,
+    "affected_file_count": 74
+  },
+  "artifact_cache_stats": [
+    {
+      "num_hits": 2,
+      "hits": [
+        [
+          "src/java/com/toolchain/asm/dependency:lib",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/testutil",
+          "uncached"
+        ]
+      ],
+      "num_misses": 7,
+      "cache_name": "ZincCompile_compile_zinc",
+      "misses": [
+        [
+          "src/java/com/toolchain/base:tests",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/asm/dependency:tests",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/asm/signature:tests",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/analysis/classfile:tests",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/model:tests",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/asm/echo:lib",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/io:tests",
+          "uncached"
+        ]
+      ]
+    },
+    {
+      "num_hits": 2,
+      "hits": [
+        [
+          "3rdparty/jvm:junit",
+          "uncached"
+        ],
+        [
+          "3rdparty/jvm:kythe-java-indexer",
+          "uncached"
+        ]
+      ],
+      "num_misses": 4,
+      "cache_name": "IvyResolve_resolve_ivy",
+      "misses": [
+        [
+          "//:junit_library",
+          "uncached"
+        ],
+        [
+          "3rdparty/jvm:asm",
+          "uncached"
+        ],
+        [
+          "3rdparty/jvm:aws-java-sdk",
+          "uncached"
+        ],
+        [
+          "3rdparty/jvm:commons-cli",
+          "uncached"
+        ]
+      ]
+    },
+    {
+      "num_hits": 0,
+      "hits": [],
+      "num_misses": 12,
+      "cache_name": "JvmPlatformValidate_jvm_platform_validate",
+      "misses": [
+        [
+          "src/java/com/toolchain/analysis/classfile:tests",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/asm/dependency",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/asm/dependency:lib",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/asm/dependency:tests",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/asm/echo",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/asm/echo:lib",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/asm/signature:tests",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/base:tests",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/io:tester",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/io:tests",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/model:tests",
+          "uncached"
+        ],
+        [
+          "src/java/com/toolchain/testutil",
+          "uncached"
+        ]
+      ]
+    },
+    {
+      "num_hits": 1,
+      "hits": [
+        [
+          "3rdparty/jvm:kythe-java-extractor",
+          ""
+        ]
+      ],
+      "num_misses": 0,
+      "cache_name": "BootstrapJvmTools_bootstrap_bootstrap_jvm_tools",
+      "misses": []
+    }
+  ],
+  "run_info": {
+    "buildroot": "/Users/benjyw/src/toolchain",
+    "timestamp": "1529103862.68",
+    "target_data": {
+      "src/java/com/toolchain/asm/echo:lib": {
+        "compile.zinc": {
+          "compile": {
+            "classpath_len": 119,
+            "sources_len": 2,
+            "incremental": false,
+            "time": 4.426811933517456
+          }
+        }
+      },
+      "src/java/com/toolchain/io:tests": {
+        "compile.zinc": {
+          "compile": {
+            "classpath_len": 117,
+            "sources_len": 1,
+            "incremental": false,
+            "time": 0.989872932434082
+          }
+        }
+      },
+      "src/java/com/toolchain/model:tests": {
+        "compile.zinc": {
+          "compile": {
+            "classpath_len": 8,
+            "sources_len": 1,
+            "incremental": false,
+            "time": 0.7923309803009033
+          }
+        }
+      },
+      "src/java/com/toolchain/analysis/classfile:tests": {
+        "compile.zinc": {
+          "compile": {
+            "classpath_len": 9,
+            "sources_len": 2,
+            "incremental": false,
+            "time": 3.19112491607666
+          }
+        }
+      },
+      "src/java/com/toolchain/base:tests": {
+        "compile.zinc": {
+          "compile": {
+            "classpath_len": 5,
+            "sources_len": 2,
+            "incremental": false,
+            "time": 0.6138999462127686
+          }
+        }
+      },
+      "src/java/com/toolchain/asm/dependency:tests": {
+        "compile.zinc": {
+          "compile": {
+            "classpath_len": 9,
+            "sources_len": 1,
+            "incremental": false,
+            "time": 0.5110020637512207
+          }
+        }
+      },
+      "src/java/com/toolchain/asm/signature:tests": {
+        "compile.zinc": {
+          "compile": {
+            "classpath_len": 12,
+            "sources_len": 1,
+            "incremental": false,
+            "time": 0.37340211868286133
+          }
+        }
+      },
+      "src/java/com/toolchain/asm/dependency:lib": {
+        "compile.zinc": {
+          "compile": {
+            "classpath_len": 6,
+            "sources_len": 9,
+            "incremental": false,
+            "time": 3.3077869415283203
+          }
+        }
+      },
+      "src/java/com/toolchain/testutil:testutil": {
+        "compile.zinc": {
+          "compile": {
+            "classpath_len": 7,
+            "sources_len": 1,
+            "incremental": false,
+            "time": 2.9247920513153076
+          }
+        }
+      }
+    },
+    "datetime": "Friday Jun 15, 2018 16:04:22",
+    "machine": "gonzo.local",
+    "report_url": "http://localhost:51327/run/pants_run_2018_06_15_16_04_22_681_b9222bfce9cd421ba1a67ec225a8c6f6",
+    "version": "1.7.0rc0",
+    "user": "benjyw",
+    "branch": "master",
+    "path": "/Users/benjyw/src/toolchain",
+    "default_report": "/Users/benjyw/src/toolchain/.pants.d/reports/pants_run_2018_06_15_16_04_22_681_b9222bfce9cd421ba1a67ec225a8c6f6/html/build.html",
+    "outcome": "SUCCESS",
+    "cmd_line": "pants compile src/java/::",
+    "id": "pants_run_2018_06_15_16_04_22_681_b9222bfce9cd421ba1a67ec225a8c6f6",
+    "revision": "176ea2094d376dc3f38ed9c95445da23fa757323"
+  },
+  "outcomes": {
+    "main:compile:jvm-dep-check": "SUCCESS",
+    "main:gen:antlr-py": "SUCCESS",
+    "main:gen:thrift-py": "SUCCESS",
+    "main:jvm-platform-validate:jvm-platform-validate:cache": "SUCCESS",
+    "main:setup": "SUCCESS",
+    "main:compile:zinc:cache": "SUCCESS",
+    "main:gen:antlr-java": "SUCCESS",
+    "main:unpack-jars": "SUCCESS",
+    "main:resolve:coursier": "SUCCESS",
+    "main:compile:javac": "SUCCESS",
+    "main:resolve:ivy": "SUCCESS",
+    "main:deferred-sources:deferred-sources": "SUCCESS",
+    "main:imports": "SUCCESS",
+    "main:bootstrap": "SUCCESS",
+    "background:workdir_build_cleanup": "SUCCESS",
+    "main:jvm-platform-validate:jvm-platform-validate": "SUCCESS",
+    "main:resolve:go": "SUCCESS",
+    "main:compile:compile-jvm-prep-command:jvm_prep_command": "SUCCESS",
+    "main:compile:compile-jvm-prep-command": "SUCCESS",
+    "main:resolve": "SUCCESS",
+    "main:gen:jaxb": "SUCCESS",
+    "main:compile:zinc:compile": "SUCCESS",
+    "background:cache": "SUCCESS",
+    "main:bootstrap:bootstrap-jvm-tools": "SUCCESS",
+    "main:compile:zinc": "SUCCESS",
+    "main:bootstrap:jar-dependency-management": "SUCCESS",
+    "main:jvm-platform-validate": "SUCCESS",
+    "main:gen": "SUCCESS",
+    "main": "SUCCESS",
+    "main:gen:ragel": "SUCCESS",
+    "main:resolve:ivy:cache": "SUCCESS",
+    "main:gen:wire": "SUCCESS",
+    "main:compile:zinc:compile:cache": "SUCCESS",
+    "main:compile:zinc:isolation-zinc-pool-bootstrap": "SUCCESS",
+    "main:gen:thrift-java": "SUCCESS",
+    "main:bootstrap:provide-tools-jar": "SUCCESS",
+    "background": "SUCCESS",
+    "main:compile:compile": "SUCCESS",
+    "main:deferred-sources": "SUCCESS",
+    "main:compile:go": "SUCCESS",
+    "main:resolve:ivy:ivy-resolve": "SUCCESS",
+    "main:compile:zinc:compile:zinc": "SUCCESS",
+    "main:gen:protoc": "SUCCESS",
+    "main:compile": "SUCCESS",
+    "main:unpack-jars:unpack-jars": "SUCCESS",
+    "main:bootstrap:substitute-aliased-targets": "SUCCESS",
+    "main:compile:compile-prep-command": "SUCCESS",
+    "main:setup:parse": "SUCCESS",
+    "background:cache:insert": "SUCCESS",
+    "main:complete": "SUCCESS",
+    "main:gen:go-thrift": "SUCCESS",
+    "main:imports:ivy-imports": "SUCCESS"
+  },
+  "critical_path_timings": [
+    {
+      "timing": 8.143549919128418,
+      "is_tool": false,
+      "label": "main:compile"
+    },
+    {
+      "timing": 3.4364078044891357,
+      "is_tool": false,
+      "label": "main:resolve"
+    },
+    {
+      "timing": 0.8249659538269043,
+      "is_tool": false,
+      "label": "main:gen"
+    },
+    {
+      "timing": 0.7726678848266602,
+      "is_tool": false,
+      "label": "main:deferred-sources"
+    },
+    {
+      "timing": 0.7686328887939453,
+      "is_tool": false,
+      "label": "main:unpack-jars"
+    },
+    {
+      "timing": 0.7483398914337158,
+      "is_tool": false,
+      "label": "main:imports"
+    },
+    {
+      "timing": 0.740027904510498,
+      "is_tool": false,
+      "label": "main:bootstrap"
+    },
+    {
+      "timing": 0.06437492370605469,
+      "is_tool": false,
+      "label": "main:jvm-platform-validate"
+    }
+  ],
+  "self_timings": [
+    {
+      "timing": 16.75760006904602,
+      "is_tool": true,
+      "label": "main:compile:zinc:compile:zinc"
+    },
+    {
+      "timing": 6.9441282749176025,
+      "is_tool": false,
+      "label": "background"
+    },
+    {
+      "timing": 2.221928119659424,
+      "is_tool": false,
+      "label": "main"
+    },
+    {
+      "timing": 2.210810899734497,
+      "is_tool": true,
+      "label": "main:resolve:ivy:ivy-resolve"
+    },
+    {
+      "timing": 0.6815416812896729,
+      "is_tool": false,
+      "label": "main:bootstrap"
+    },
+    {
+      "timing": 0.5297532081604004,
+      "is_tool": false,
+      "label": "main:setup"
+    },
+    {
+      "timing": 0.4132697582244873,
+      "is_tool": false,
+      "label": "background:cache:insert"
+    },
+    {
+      "timing": 0.3274848461151123,
+      "is_tool": false,
+      "label": "main:compile:zinc:compile"
+    },
+    {
+      "timing": 0.32172513008117676,
+      "is_tool": false,
+      "label": "main:resolve:ivy"
+    },
+    {
+      "timing": 0.09999656677246094,
+      "is_tool": false,
+      "label": "background:cache"
+    },
+    {
+      "timing": 0.07160139083862305,
+      "is_tool": false,
+      "label": "background:workdir_build_cleanup"
+    },
+    {
+      "timing": 0.0643150806427002,
+      "is_tool": false,
+      "label": "main:compile:go"
+    },
+    {
+      "timing": 0.05228114128112793,
+      "is_tool": false,
+      "label": "main:bootstrap:provide-tools-jar"
+    },
+    {
+      "timing": 0.05128312110900879,
+      "is_tool": false,
+      "label": "main:jvm-platform-validate:jvm-platform-validate"
+    },
+    {
+      "timing": 0.03715348243713379,
+      "is_tool": false,
+      "label": "main:gen"
+    },
+    {
+      "timing": 0.02889871597290039,
+      "is_tool": false,
+      "label": "main:compile"
+    },
+    {
+      "timing": 0.016733884811401367,
+      "is_tool": false,
+      "label": "main:unpack-jars:unpack-jars"
+    },
+    {
+      "timing": 0.010532617568969727,
+      "is_tool": false,
+      "label": "main:resolve"
+    },
+    {
+      "timing": 0.010287046432495117,
+      "is_tool": false,
+      "label": "main:compile:zinc:compile:cache"
+    },
+    {
+      "timing": 0.009649991989135742,
+      "is_tool": false,
+      "label": "main:jvm-platform-validate:jvm-platform-validate:cache"
+    },
+    {
+      "timing": 0.005944013595581055,
+      "is_tool": false,
+      "label": "main:imports"
+    },
+    {
+      "timing": 0.004182100296020508,
+      "is_tool": false,
+      "label": "main:compile:zinc:cache"
+    },
+    {
+      "timing": 0.003559112548828125,
+      "is_tool": false,
+      "label": "main:unpack-jars"
+    },
+    {
+      "timing": 0.0034799575805664062,
+      "is_tool": false,
+      "label": "main:gen:thrift-py"
+    },
+    {
+      "timing": 0.0034418106079101562,
+      "is_tool": false,
+      "label": "main:jvm-platform-validate"
+    },
+    {
+      "timing": 0.003268003463745117,
+      "is_tool": false,
+      "label": "main:compile:zinc:isolation-zinc-pool-bootstrap"
+    },
+    {
+      "timing": 0.002992868423461914,
+      "is_tool": false,
+      "label": "main:deferred-sources"
+    },
+    {
+      "timing": 0.00278472900390625,
+      "is_tool": false,
+      "label": "main:compile:compile-jvm-prep-command"
+    },
+    {
+      "timing": 0.0025680065155029297,
+      "is_tool": false,
+      "label": "main:bootstrap:jar-dependency-management"
+    },
+    {
+      "timing": 0.0023679733276367188,
+      "is_tool": false,
+      "label": "main:imports:ivy-imports"
+    },
+    {
+      "timing": 0.0022118091583251953,
+      "is_tool": false,
+      "label": "main:gen:wire"
+    },
+    {
+      "timing": 0.0021789073944091797,
+      "is_tool": false,
+      "label": "main:gen:protoc"
+    },
+    {
+      "timing": 0.0021240711212158203,
+      "is_tool": false,
+      "label": "main:resolve:ivy:cache"
+    },
+    {
+      "timing": 0.0019960403442382812,
+      "is_tool": false,
+      "label": "main:bootstrap:bootstrap-jvm-tools"
+    },
+    {
+      "timing": 0.0016410350799560547,
+      "is_tool": false,
+      "label": "main:bootstrap:substitute-aliased-targets"
+    },
+    {
+      "timing": 0.0015349388122558594,
+      "is_tool": false,
+      "label": "main:compile:compile-prep-command"
+    },
+    {
+      "timing": 0.001519918441772461,
+      "is_tool": false,
+      "label": "main:gen:thrift-java"
+    },
+    {
+      "timing": 0.0013959407806396484,
+      "is_tool": false,
+      "label": "main:gen:antlr-py"
+    },
+    {
+      "timing": 0.0012140274047851562,
+      "is_tool": false,
+      "label": "main:gen:antlr-java"
+    },
+    {
+      "timing": 0.0011219978332519531,
+      "is_tool": false,
+      "label": "main:gen:ragel"
+    },
+    {
+      "timing": 0.0011000633239746094,
+      "is_tool": false,
+      "label": "main:gen:jaxb"
+    },
+    {
+      "timing": 0.0010488033294677734,
+      "is_tool": false,
+      "label": "main:setup:parse"
+    },
+    {
+      "timing": 0.0010421276092529297,
+      "is_tool": false,
+      "label": "main:deferred-sources:deferred-sources"
+    },
+    {
+      "timing": 0.0010180473327636719,
+      "is_tool": false,
+      "label": "main:resolve:go"
+    },
+    {
+      "timing": 0.0009219646453857422,
+      "is_tool": false,
+      "label": "main:gen:go-thrift"
+    },
+    {
+      "timing": 0.0008561611175537109,
+      "is_tool": false,
+      "label": "main:resolve:coursier"
+    },
+    {
+      "timing": 0.0007381439208984375,
+      "is_tool": false,
+      "label": "main:compile:jvm-dep-check"
+    },
+    {
+      "timing": 0.0005621910095214844,
+      "is_tool": false,
+      "label": "main:compile:javac"
+    },
+    {
+      "timing": 0.0003609657287597656,
+      "is_tool": false,
+      "label": "main:complete"
+    },
+    {
+      "timing": 0.00032711029052734375,
+      "is_tool": false,
+      "label": "main:compile:compile-jvm-prep-command:jvm_prep_command"
+    },
+    {
+      "timing": 0.0003180503845214844,
+      "is_tool": false,
+      "label": "main:compile:compile"
+    },
+    {
+      "timing": -12.495158910751343,
+      "is_tool": false,
+      "label": "main:compile:zinc"
+    }
+  ],
+  "cumulative_timings": [
+    {
+      "timing": 17.095371961593628,
+      "is_tool": false,
+      "label": "main:compile:zinc:compile"
+    },
+    {
+      "timing": 16.75760006904602,
+      "is_tool": true,
+      "label": "main:compile:zinc:compile:zinc"
+    },
+    {
+      "timing": 10.89664101600647,
+      "is_tool": false,
+      "label": "main"
+    },
+    {
+      "timing": 7.528995990753174,
+      "is_tool": false,
+      "label": "background"
+    },
+    {
+      "timing": 4.707142114639282,
+      "is_tool": false,
+      "label": "main:compile"
+    },
+    {
+      "timing": 4.607663154602051,
+      "is_tool": false,
+      "label": "main:compile:zinc"
+    },
+    {
+      "timing": 2.5470669269561768,
+      "is_tool": false,
+      "label": "main:resolve"
+    },
+    {
+      "timing": 2.5346601009368896,
+      "is_tool": false,
+      "label": "main:resolve:ivy"
+    },
+    {
+      "timing": 2.210810899734497,
+      "is_tool": true,
+      "label": "main:resolve:ivy:ivy-resolve"
+    },
+    {
+      "timing": 0.740027904510498,
+      "is_tool": false,
+      "label": "main:bootstrap"
+    },
+    {
+      "timing": 0.5308020114898682,
+      "is_tool": false,
+      "label": "main:setup"
+    },
+    {
+      "timing": 0.5132663249969482,
+      "is_tool": false,
+      "label": "background:cache"
+    },
+    {
+      "timing": 0.4132697582244873,
+      "is_tool": false,
+      "label": "background:cache:insert"
+    },
+    {
+      "timing": 0.07160139083862305,
+      "is_tool": false,
+      "label": "background:workdir_build_cleanup"
+    },
+    {
+      "timing": 0.06437492370605469,
+      "is_tool": false,
+      "label": "main:jvm-platform-validate"
+    },
+    {
+      "timing": 0.0643150806427002,
+      "is_tool": false,
+      "label": "main:compile:go"
+    },
+    {
+      "timing": 0.06093311309814453,
+      "is_tool": false,
+      "label": "main:jvm-platform-validate:jvm-platform-validate"
+    },
+    {
+      "timing": 0.05229806900024414,
+      "is_tool": false,
+      "label": "main:gen"
+    },
+    {
+      "timing": 0.05228114128112793,
+      "is_tool": false,
+      "label": "main:bootstrap:provide-tools-jar"
+    },
+    {
+      "timing": 0.020292997360229492,
+      "is_tool": false,
+      "label": "main:unpack-jars"
+    },
+    {
+      "timing": 0.016733884811401367,
+      "is_tool": false,
+      "label": "main:unpack-jars:unpack-jars"
+    },
+    {
+      "timing": 0.010287046432495117,
+      "is_tool": false,
+      "label": "main:compile:zinc:compile:cache"
+    },
+    {
+      "timing": 0.009649991989135742,
+      "is_tool": false,
+      "label": "main:jvm-platform-validate:jvm-platform-validate:cache"
+    },
+    {
+      "timing": 0.008311986923217773,
+      "is_tool": false,
+      "label": "main:imports"
+    },
+    {
+      "timing": 0.004182100296020508,
+      "is_tool": false,
+      "label": "main:compile:zinc:cache"
+    },
+    {
+      "timing": 0.004034996032714844,
+      "is_tool": false,
+      "label": "main:deferred-sources"
+    },
+    {
+      "timing": 0.0034799575805664062,
+      "is_tool": false,
+      "label": "main:gen:thrift-py"
+    },
+    {
+      "timing": 0.003268003463745117,
+      "is_tool": false,
+      "label": "main:compile:zinc:isolation-zinc-pool-bootstrap"
+    },
+    {
+      "timing": 0.0031118392944335938,
+      "is_tool": false,
+      "label": "main:compile:compile-jvm-prep-command"
+    },
+    {
+      "timing": 0.0025680065155029297,
+      "is_tool": false,
+      "label": "main:bootstrap:jar-dependency-management"
+    },
+    {
+      "timing": 0.0023679733276367188,
+      "is_tool": false,
+      "label": "main:imports:ivy-imports"
+    },
+    {
+      "timing": 0.0022118091583251953,
+      "is_tool": false,
+      "label": "main:gen:wire"
+    },
+    {
+      "timing": 0.0021789073944091797,
+      "is_tool": false,
+      "label": "main:gen:protoc"
+    },
+    {
+      "timing": 0.0021240711212158203,
+      "is_tool": false,
+      "label": "main:resolve:ivy:cache"
+    },
+    {
+      "timing": 0.0019960403442382812,
+      "is_tool": false,
+      "label": "main:bootstrap:bootstrap-jvm-tools"
+    },
+    {
+      "timing": 0.0016410350799560547,
+      "is_tool": false,
+      "label": "main:bootstrap:substitute-aliased-targets"
+    },
+    {
+      "timing": 0.0015349388122558594,
+      "is_tool": false,
+      "label": "main:compile:compile-prep-command"
+    },
+    {
+      "timing": 0.001519918441772461,
+      "is_tool": false,
+      "label": "main:gen:thrift-java"
+    },
+    {
+      "timing": 0.0013959407806396484,
+      "is_tool": false,
+      "label": "main:gen:antlr-py"
+    },
+    {
+      "timing": 0.0012140274047851562,
+      "is_tool": false,
+      "label": "main:gen:antlr-java"
+    },
+    {
+      "timing": 0.0011219978332519531,
+      "is_tool": false,
+      "label": "main:gen:ragel"
+    },
+    {
+      "timing": 0.0011000633239746094,
+      "is_tool": false,
+      "label": "main:gen:jaxb"
+    },
+    {
+      "timing": 0.0010488033294677734,
+      "is_tool": false,
+      "label": "main:setup:parse"
+    },
+    {
+      "timing": 0.0010421276092529297,
+      "is_tool": false,
+      "label": "main:deferred-sources:deferred-sources"
+    },
+    {
+      "timing": 0.0010180473327636719,
+      "is_tool": false,
+      "label": "main:resolve:go"
+    },
+    {
+      "timing": 0.0009219646453857422,
+      "is_tool": false,
+      "label": "main:gen:go-thrift"
+    },
+    {
+      "timing": 0.0008561611175537109,
+      "is_tool": false,
+      "label": "main:resolve:coursier"
+    },
+    {
+      "timing": 0.0007381439208984375,
+      "is_tool": false,
+      "label": "main:compile:jvm-dep-check"
+    },
+    {
+      "timing": 0.0005621910095214844,
+      "is_tool": false,
+      "label": "main:compile:javac"
+    },
+    {
+      "timing": 0.0003609657287597656,
+      "is_tool": false,
+      "label": "main:complete"
+    },
+    {
+      "timing": 0.00032711029052734375,
+      "is_tool": false,
+      "label": "main:compile:compile-jvm-prep-command:jvm_prep_command"
+    },
+    {
+      "timing": 0.0003180503845214844,
+      "is_tool": false,
+      "label": "main:compile:compile"
+    }
+  ]
+}

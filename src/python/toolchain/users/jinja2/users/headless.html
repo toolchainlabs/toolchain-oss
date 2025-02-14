@@ -1,0 +1,29 @@
+{#
+Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'users/base_old.html' %}
+
+{% block content %}
+  <div class="site-message">
+    <div class="alert alert-success" role="alert">
+      <span><input id="input" type="text" readonly value="{{ access_code_data }}"/>
+      <button id="copy">Copy to clipboard</button></span>
+      
+    </div>
+  </div>
+{% endblock content %}
+{% block js %}
+  {{ super() }}
+  {% script type="application/javascript" async=False %}
+  <script>
+   function copy_to_cb() {
+      document.querySelector("#input").select();
+      document.execCommand("copy");
+}
+
+document.querySelector("#copy").addEventListener("click", copy_to_cb);
+  </script>
+  {% endscript %}
+{% endblock js %}

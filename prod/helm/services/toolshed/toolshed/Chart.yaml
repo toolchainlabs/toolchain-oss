@@ -1,0 +1,15 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+description: Backoffice/admin service to manage DBs for toolchain services
+name: toolshed
+version: 2.2.0
+kubeVersion: '>=v1.24.0-0,<v1.28-0'
+dependencies:
+- name: django
+  version: '*'
+  repository: file://../../../base/django/
+- name: ingress
+  version: '*'
+  repository: file://../../../base/ingress/

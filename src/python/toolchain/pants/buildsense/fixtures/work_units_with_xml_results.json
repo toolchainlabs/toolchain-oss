@@ -1,0 +1,771 @@
+[
+    {
+        "name": "select",
+        "span_id": "4b0a6b1dfd4d817f",
+        "level": "TRACE",
+        "start_secs": 1601678895,
+        "start_nanos": 821701000,
+        "duration_secs": 6,
+        "duration_nanos": 802475000,
+        "artifacts": {}
+    },
+    {
+        "name": "test",
+        "span_id": "be36df2dfff9636a",
+        "level": "DEBUG",
+        "parent_id": "4b0a6b1dfd4d817f",
+        "start_secs": 1601678895,
+        "start_nanos": 821831000,
+        "duration_secs": 6,
+        "duration_nanos": 802259000,
+        "description": "`test` goal",
+        "artifacts": {}
+    },
+    {
+        "name": "pants.core.goals.test.enrich_test_result",
+        "span_id": "fbfa20fe398ea316",
+        "level": "INFO",
+        "parent_id": "be36df2dfff9636a",
+        "start_secs": 1601678895,
+        "start_nanos": 916312000,
+        "duration_secs": 6,
+        "duration_nanos": 706766000,
+        "description": "Run tests",
+        "artifacts": {
+            "xml_results": {
+                "dist/src.python.toolchain.aws.secretsmanager_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"9\" time=\"0.083\" timestamp=\"2020-10-02T13:17:03.805271\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.aws.secretsmanager_test\" name=\"test_secret_name_invalid[%foo]\" time=\"0.004\" /><testcase classname=\"src.python.toolchain.aws.secretsmanager_test\" name=\"test_secret_name_invalid[foo*]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.aws.secretsmanager_test\" name=\"test_secret_name_invalid[foo-012345]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.aws.secretsmanager_test\" name=\"test_secret_name_invalid[XXX]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.aws.secretsmanager_test\" name=\"test_secret_name_valid[foo]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.aws.secretsmanager_test\" name=\"test_secret_name_valid[@Foo.BAR1+2/4]\" time=\"0.002\" /><testcase classname=\"src.python.toolchain.aws.secretsmanager_test\" name=\"test_secret_name_valid[foo-01234]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.aws.secretsmanager_test\" name=\"test_secret_name_valid[foo-0123456]\" time=\"0.003\" /><testcase classname=\"src.python.toolchain.aws.secretsmanager_test\" name=\"test_secret_name_valid[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]\" time=\"0.004\" /></testsuite></testsuites>"
+            }
+        }
+    },
+    {
+        "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+        "span_id": "7d7f4ae7f6f32cfc",
+        "level": "DEBUG",
+        "parent_id": "fbfa20fe398ea316",
+        "start_secs": 1601678895,
+        "start_nanos": 916350000,
+        "duration_secs": 6,
+        "duration_nanos": 706605000,
+        "description": "Run Pytest",
+        "artifacts": {}
+    },
+    {
+        "name": "pants.backend.python.goals.pytest_runner.setup_pytest_for_target",
+        "span_id": "1a2511887abc18e7",
+        "level": "DEBUG",
+        "parent_id": "7d7f4ae7f6f32cfc",
+        "start_secs": 1601678895,
+        "start_nanos": 916593000,
+        "duration_secs": 6,
+        "duration_nanos": 703372000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.backend.python.util_rules.pex.create_pex",
+        "span_id": "aa5932e2d34259fd",
+        "level": "DEBUG",
+        "parent_id": "1a2511887abc18e7",
+        "start_secs": 1601678900,
+        "start_nanos": 683943000,
+        "duration_secs": 1,
+        "duration_nanos": 935350000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.backend.python.util_rules.pex.find_interpreter",
+        "span_id": "20f5a7d2d8b3f4ce",
+        "level": "DEBUG",
+        "parent_id": "aa5932e2d34259fd",
+        "start_secs": 1601678900,
+        "start_nanos": 694950000,
+        "duration_secs": 1,
+        "duration_nanos": 916378000,
+        "description": "Find Python interpreter for constraints",
+        "artifacts": {}
+    },
+    {
+        "name": "pants.backend.python.util_rules.pex_cli.setup_pex_cli_process",
+        "span_id": "37af31e4ee81a77c",
+        "level": "TRACE",
+        "parent_id": "20f5a7d2d8b3f4ce",
+        "start_secs": 1601678900,
+        "start_nanos": 698042000,
+        "duration_secs": 0,
+        "duration_nanos": 879618000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.backend.python.util_rules.pex_environment.find_pex_python",
+        "span_id": "6fe4ccddcd0c9937",
+        "level": "DEBUG",
+        "parent_id": "37af31e4ee81a77c",
+        "start_secs": 1601678900,
+        "start_nanos": 699328000,
+        "duration_secs": 0,
+        "duration_nanos": 771801000,
+        "description": "Find PEX Python",
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.find_binary",
+        "span_id": "db2cd61867775ee2",
+        "level": "DEBUG",
+        "parent_id": "6fe4ccddcd0c9937",
+        "start_secs": 1601678900,
+        "start_nanos": 755276000,
+        "duration_secs": 0,
+        "duration_nanos": 647903000,
+        "description": "Find binary path",
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.find_binary",
+        "span_id": "1e2c657aade0b91a",
+        "level": "DEBUG",
+        "parent_id": "6fe4ccddcd0c9937",
+        "start_secs": 1601678900,
+        "start_nanos": 755728000,
+        "duration_secs": 0,
+        "duration_nanos": 642793000,
+        "description": "Find binary path",
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.find_binary",
+        "span_id": "d105c930955a3f27",
+        "level": "DEBUG",
+        "parent_id": "6fe4ccddcd0c9937",
+        "start_secs": 1601678900,
+        "start_nanos": 755938000,
+        "duration_secs": 0,
+        "duration_nanos": 714742000,
+        "description": "Find binary path",
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.find_binary",
+        "span_id": "08fd2751066d050a",
+        "level": "DEBUG",
+        "parent_id": "db2cd61867775ee2",
+        "start_secs": 1601678900,
+        "start_nanos": 756100000,
+        "duration_secs": 0,
+        "duration_nanos": 374905000,
+        "description": "Find binary path",
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+        "span_id": "6c8113467b39662c",
+        "level": "TRACE",
+        "parent_id": "08fd2751066d050a",
+        "start_secs": 1601678900,
+        "start_nanos": 757342000,
+        "duration_secs": 0,
+        "duration_nanos": 373452000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.remove_platform_information",
+        "span_id": "fbcca68e8b1e6280",
+        "level": "TRACE",
+        "parent_id": "6c8113467b39662c",
+        "start_secs": 1601678900,
+        "start_nanos": 757525000,
+        "duration_secs": 0,
+        "duration_nanos": 373222000,
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process",
+        "span_id": "4bdbcdfa51933114",
+        "level": "TRACE",
+        "parent_id": "fbcca68e8b1e6280",
+        "start_secs": 1601678900,
+        "start_nanos": 760547000,
+        "duration_secs": 0,
+        "duration_nanos": 369926000,
+        "description": "Searching for `bash` on PATH=/usr/bin:/bin:/usr/local/bin",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-waiting",
+        "span_id": "b09e5fdb0790b7c5",
+        "level": "DEBUG",
+        "parent_id": "4bdbcdfa51933114",
+        "start_secs": 1601678900,
+        "start_nanos": 761908000,
+        "duration_secs": 0,
+        "duration_nanos": 368422000,
+        "description": "Searching for `bash` on PATH=/usr/bin:/bin:/usr/local/bin",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-running",
+        "span_id": "0d465d98c85fe8c7",
+        "level": "DEBUG",
+        "parent_id": "b09e5fdb0790b7c5",
+        "start_secs": 1601678900,
+        "start_nanos": 761967000,
+        "duration_secs": 0,
+        "duration_nanos": 368329000,
+        "description": "Searching for `bash` on PATH=/usr/bin:/bin:/usr/local/bin",
+        "artifacts": {
+            "stdout": "/bin/bash\n",
+            "stderr": "+ command -v which\n+ command which -a bash\n+ which -a bash\n"
+        }
+    },
+    {
+        "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+        "span_id": "0023c8eda392d27a",
+        "level": "TRACE",
+        "parent_id": "1e2c657aade0b91a",
+        "start_secs": 1601678901,
+        "start_nanos": 132276000,
+        "duration_secs": 0,
+        "duration_nanos": 118706000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+        "span_id": "f83c474eb8df6d7e",
+        "level": "TRACE",
+        "parent_id": "d105c930955a3f27",
+        "start_secs": 1601678901,
+        "start_nanos": 132471000,
+        "duration_secs": 0,
+        "duration_nanos": 153982000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+        "span_id": "8e8cbb86d9396d13",
+        "level": "TRACE",
+        "parent_id": "db2cd61867775ee2",
+        "start_secs": 1601678901,
+        "start_nanos": 132638000,
+        "duration_secs": 0,
+        "duration_nanos": 203037000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.remove_platform_information",
+        "span_id": "e306d131d5a37a06",
+        "level": "TRACE",
+        "parent_id": "0023c8eda392d27a",
+        "start_secs": 1601678901,
+        "start_nanos": 132645000,
+        "duration_secs": 0,
+        "duration_nanos": 118209000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.remove_platform_information",
+        "span_id": "7dca377fc32d6049",
+        "level": "TRACE",
+        "parent_id": "f83c474eb8df6d7e",
+        "start_secs": 1601678901,
+        "start_nanos": 132798000,
+        "duration_secs": 0,
+        "duration_nanos": 153539000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.remove_platform_information",
+        "span_id": "31459056c347b36f",
+        "level": "TRACE",
+        "parent_id": "8e8cbb86d9396d13",
+        "start_secs": 1601678901,
+        "start_nanos": 132864000,
+        "duration_secs": 0,
+        "duration_nanos": 202700000,
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process",
+        "span_id": "3c5953cd89147662",
+        "level": "TRACE",
+        "parent_id": "e306d131d5a37a06",
+        "start_secs": 1601678901,
+        "start_nanos": 134292000,
+        "duration_secs": 0,
+        "duration_nanos": 116117000,
+        "description": "Searching for `python` on PATH=/Users/asher/.pyenv/versions/3.8.5/bin:/Users/asher/.toolchain/homebrew/bin:/Users/asher/.gem/ruby/2.6.0/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/asher/go/bin/:/Users/asher/.poetry/bin:/Users/asher/.krew/bin",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-waiting",
+        "span_id": "f0abebd63a067f4d",
+        "level": "DEBUG",
+        "parent_id": "3c5953cd89147662",
+        "start_secs": 1601678901,
+        "start_nanos": 134468000,
+        "duration_secs": 0,
+        "duration_nanos": 115413000,
+        "description": "Searching for `python` on PATH=/Users/asher/.pyenv/versions/3.8.5/bin:/Users/asher/.toolchain/homebrew/bin:/Users/asher/.gem/ruby/2.6.0/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/asher/go/bin/:/Users/asher/.poetry/bin:/Users/asher/.krew/bin",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-running",
+        "span_id": "5e6836ac92376122",
+        "level": "DEBUG",
+        "parent_id": "f0abebd63a067f4d",
+        "start_secs": 1601678901,
+        "start_nanos": 134526000,
+        "duration_secs": 0,
+        "duration_nanos": 115284000,
+        "description": "Searching for `python` on PATH=/Users/asher/.pyenv/versions/3.8.5/bin:/Users/asher/.toolchain/homebrew/bin:/Users/asher/.gem/ruby/2.6.0/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/asher/go/bin/:/Users/asher/.poetry/bin:/Users/asher/.krew/bin",
+        "artifacts": {
+            "stdout": "/Users/asher/.pyenv/versions/3.8.5/bin/python\n/usr/bin/python\n",
+            "stderr": "+ command -v which\n+ command which -a python\n+ which -a python\n"
+        }
+    },
+    {
+        "name": "multi_platform_process",
+        "span_id": "eb04f75aa03cde54",
+        "level": "TRACE",
+        "parent_id": "7dca377fc32d6049",
+        "start_secs": 1601678901,
+        "start_nanos": 134561000,
+        "duration_secs": 0,
+        "duration_nanos": 151265000,
+        "description": "Searching for `python3` on PATH=/Users/asher/.pyenv/versions/3.8.5/bin:/Users/asher/.toolchain/homebrew/bin:/Users/asher/.gem/ruby/2.6.0/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/asher/go/bin/:/Users/asher/.poetry/bin:/Users/asher/.krew/bin",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process",
+        "span_id": "39e42bdd14f8e28b",
+        "level": "TRACE",
+        "parent_id": "31459056c347b36f",
+        "start_secs": 1601678901,
+        "start_nanos": 134774000,
+        "duration_secs": 0,
+        "duration_nanos": 200408000,
+        "description": "Searching for `python2` on PATH=/Users/asher/.pyenv/versions/3.8.5/bin:/Users/asher/.toolchain/homebrew/bin:/Users/asher/.gem/ruby/2.6.0/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/asher/go/bin/:/Users/asher/.poetry/bin:/Users/asher/.krew/bin",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-waiting",
+        "span_id": "789ee32650d7139a",
+        "level": "DEBUG",
+        "parent_id": "eb04f75aa03cde54",
+        "start_secs": 1601678901,
+        "start_nanos": 135238000,
+        "duration_secs": 0,
+        "duration_nanos": 150335000,
+        "description": "Searching for `python3` on PATH=/Users/asher/.pyenv/versions/3.8.5/bin:/Users/asher/.toolchain/homebrew/bin:/Users/asher/.gem/ruby/2.6.0/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/asher/go/bin/:/Users/asher/.poetry/bin:/Users/asher/.krew/bin",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-waiting",
+        "span_id": "9a1c1aafdc21ba32",
+        "level": "DEBUG",
+        "parent_id": "39e42bdd14f8e28b",
+        "start_secs": 1601678901,
+        "start_nanos": 135265000,
+        "duration_secs": 0,
+        "duration_nanos": 199274000,
+        "description": "Searching for `python2` on PATH=/Users/asher/.pyenv/versions/3.8.5/bin:/Users/asher/.toolchain/homebrew/bin:/Users/asher/.gem/ruby/2.6.0/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/asher/go/bin/:/Users/asher/.poetry/bin:/Users/asher/.krew/bin",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-running",
+        "span_id": "f8d7a1d2ba24b617",
+        "level": "DEBUG",
+        "parent_id": "789ee32650d7139a",
+        "start_secs": 1601678901,
+        "start_nanos": 135275000,
+        "duration_secs": 0,
+        "duration_nanos": 150209000,
+        "description": "Searching for `python3` on PATH=/Users/asher/.pyenv/versions/3.8.5/bin:/Users/asher/.toolchain/homebrew/bin:/Users/asher/.gem/ruby/2.6.0/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/asher/go/bin/:/Users/asher/.poetry/bin:/Users/asher/.krew/bin",
+        "artifacts": {
+            "stdout": "/Users/asher/.pyenv/versions/3.8.5/bin/python3\n/usr/local/bin/python3\n/usr/bin/python3\n",
+            "stderr": "+ command -v which\n+ command which -a python3\n+ which -a python3\n"
+        }
+    },
+    {
+        "name": "multi_platform_process-running",
+        "span_id": "0a97c89277288cd3",
+        "level": "DEBUG",
+        "parent_id": "9a1c1aafdc21ba32",
+        "start_secs": 1601678901,
+        "start_nanos": 135703000,
+        "duration_secs": 0,
+        "duration_nanos": 198747000,
+        "description": "Searching for `python2` on PATH=/Users/asher/.pyenv/versions/3.8.5/bin:/Users/asher/.toolchain/homebrew/bin:/Users/asher/.gem/ruby/2.6.0/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/asher/go/bin/:/Users/asher/.poetry/bin:/Users/asher/.krew/bin",
+        "artifacts": {
+            "stdout": "/usr/bin/python2\n",
+            "stderr": "+ command -v which\n+ command which -a python2\n+ which -a python2\n"
+        }
+    },
+    {
+        "name": "pants.core.util_rules.external_tool.download_external_tool",
+        "span_id": "4c82e76f0d4d1f29",
+        "level": "DEBUG",
+        "parent_id": "37af31e4ee81a77c",
+        "start_secs": 1601678901,
+        "start_nanos": 472071000,
+        "duration_secs": 0,
+        "duration_nanos": 104951000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.core.util_rules.archive.maybe_extract",
+        "span_id": "7a9f423a963b4571",
+        "level": "DEBUG",
+        "parent_id": "4c82e76f0d4d1f29",
+        "start_secs": 1601678901,
+        "start_nanos": 475862000,
+        "duration_secs": 0,
+        "duration_nanos": 101063000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.core.util_rules.archive.find_unzip",
+        "span_id": "1139966086cf5a76",
+        "level": "DEBUG",
+        "parent_id": "7a9f423a963b4571",
+        "start_secs": 1601678901,
+        "start_nanos": 475964000,
+        "duration_secs": 0,
+        "duration_nanos": 100054000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.core.util_rules.archive.find_tar",
+        "span_id": "342085d6e40afe9f",
+        "level": "DEBUG",
+        "parent_id": "7a9f423a963b4571",
+        "start_secs": 1601678901,
+        "start_nanos": 476103000,
+        "duration_secs": 0,
+        "duration_nanos": 71318000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.find_binary",
+        "span_id": "ffc3ef1e1ba5e03b",
+        "level": "DEBUG",
+        "parent_id": "1139966086cf5a76",
+        "start_secs": 1601678901,
+        "start_nanos": 476128000,
+        "duration_secs": 0,
+        "duration_nanos": 99760000,
+        "description": "Find binary path",
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.find_binary",
+        "span_id": "f8c332d8c94a8cef",
+        "level": "DEBUG",
+        "parent_id": "342085d6e40afe9f",
+        "start_secs": 1601678901,
+        "start_nanos": 476326000,
+        "duration_secs": 0,
+        "duration_nanos": 70961000,
+        "description": "Find binary path",
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+        "span_id": "7dacf76bcea4db68",
+        "level": "TRACE",
+        "parent_id": "ffc3ef1e1ba5e03b",
+        "start_secs": 1601678901,
+        "start_nanos": 477217000,
+        "duration_secs": 0,
+        "duration_nanos": 84212000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.remove_platform_information",
+        "span_id": "d38ca26744e4b1ed",
+        "level": "TRACE",
+        "parent_id": "7dacf76bcea4db68",
+        "start_secs": 1601678901,
+        "start_nanos": 477317000,
+        "duration_secs": 0,
+        "duration_nanos": 84043000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+        "span_id": "83139eb84a549333",
+        "level": "TRACE",
+        "parent_id": "f8c332d8c94a8cef",
+        "start_secs": 1601678901,
+        "start_nanos": 477829000,
+        "duration_secs": 0,
+        "duration_nanos": 57843000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.remove_platform_information",
+        "span_id": "bbc444d8fe688269",
+        "level": "TRACE",
+        "parent_id": "83139eb84a549333",
+        "start_secs": 1601678901,
+        "start_nanos": 478104000,
+        "duration_secs": 0,
+        "duration_nanos": 57476000,
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process",
+        "span_id": "650dc2e5ac047db8",
+        "level": "TRACE",
+        "parent_id": "d38ca26744e4b1ed",
+        "start_secs": 1601678901,
+        "start_nanos": 478853000,
+        "duration_secs": 0,
+        "duration_nanos": 82277000,
+        "description": "Searching for `unzip` on PATH=/usr/bin:/bin:/usr/local/bin",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process",
+        "span_id": "a2990cde398f3a20",
+        "level": "TRACE",
+        "parent_id": "bbc444d8fe688269",
+        "start_secs": 1601678901,
+        "start_nanos": 478874000,
+        "duration_secs": 0,
+        "duration_nanos": 56270000,
+        "description": "Searching for `tar` on PATH=/usr/bin:/bin:/usr/local/bin",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-waiting",
+        "span_id": "b6034a0b5ef86fad",
+        "level": "DEBUG",
+        "parent_id": "a2990cde398f3a20",
+        "start_secs": 1601678901,
+        "start_nanos": 479024000,
+        "duration_secs": 0,
+        "duration_nanos": 55940000,
+        "description": "Searching for `tar` on PATH=/usr/bin:/bin:/usr/local/bin",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-running",
+        "span_id": "3e44c00d3cb36696",
+        "level": "DEBUG",
+        "parent_id": "b6034a0b5ef86fad",
+        "start_secs": 1601678901,
+        "start_nanos": 479077000,
+        "duration_secs": 0,
+        "duration_nanos": 55840000,
+        "description": "Searching for `tar` on PATH=/usr/bin:/bin:/usr/local/bin",
+        "artifacts": {
+            "stdout": "/usr/bin/tar\n",
+            "stderr": "+ command -v which\n+ command which -a tar\n+ which -a tar\n"
+        }
+    },
+    {
+        "name": "multi_platform_process-waiting",
+        "span_id": "9c63624af5e1c7e4",
+        "level": "DEBUG",
+        "parent_id": "650dc2e5ac047db8",
+        "start_secs": 1601678901,
+        "start_nanos": 479361000,
+        "duration_secs": 0,
+        "duration_nanos": 81603000,
+        "description": "Searching for `unzip` on PATH=/usr/bin:/bin:/usr/local/bin",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-running",
+        "span_id": "9de6e0cbf2689084",
+        "level": "DEBUG",
+        "parent_id": "9c63624af5e1c7e4",
+        "start_secs": 1601678901,
+        "start_nanos": 479408000,
+        "duration_secs": 0,
+        "duration_nanos": 81518000,
+        "description": "Searching for `unzip` on PATH=/usr/bin:/bin:/usr/local/bin",
+        "artifacts": {
+            "stdout": "/usr/bin/unzip\n",
+            "stderr": "+ command -v which\n+ command which -a unzip\n+ which -a unzip\n"
+        }
+    },
+    {
+        "name": "pants.engine.process.remove_platform_information",
+        "span_id": "d6aae94a9b884b0b",
+        "level": "TRACE",
+        "parent_id": "f8c332d8c94a8cef",
+        "start_secs": 1601678901,
+        "start_nanos": 536271000,
+        "duration_secs": 0,
+        "duration_nanos": 10640000,
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process",
+        "span_id": "4a6df3d54f730741",
+        "level": "TRACE",
+        "parent_id": "d6aae94a9b884b0b",
+        "start_secs": 1601678901,
+        "start_nanos": 536831000,
+        "duration_secs": 0,
+        "duration_nanos": 9774000,
+        "description": "Test binary /usr/bin/tar.",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-waiting",
+        "span_id": "7d3e0e2a801361f7",
+        "level": "DEBUG",
+        "parent_id": "4a6df3d54f730741",
+        "start_secs": 1601678901,
+        "start_nanos": 537321000,
+        "duration_secs": 0,
+        "duration_nanos": 9114000,
+        "description": "Test binary /usr/bin/tar.",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-running",
+        "span_id": "6e36e99091baa663",
+        "level": "DEBUG",
+        "parent_id": "7d3e0e2a801361f7",
+        "start_secs": 1601678901,
+        "start_nanos": 537370000,
+        "duration_secs": 0,
+        "duration_nanos": 9023000,
+        "description": "Test binary /usr/bin/tar.",
+        "artifacts": {
+            "stdout": "bsdtar 3.3.2 - libarchive 3.3.2 zlib/1.2.11 liblzma/5.0.5 bz2lib/1.0.6\n"
+        }
+    },
+    {
+        "name": "pants.engine.process.remove_platform_information",
+        "span_id": "1794337062b8fb3c",
+        "level": "TRACE",
+        "parent_id": "ffc3ef1e1ba5e03b",
+        "start_secs": 1601678901,
+        "start_nanos": 561831000,
+        "duration_secs": 0,
+        "duration_nanos": 13654000,
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process",
+        "span_id": "8c28c07991f4a644",
+        "level": "TRACE",
+        "parent_id": "1794337062b8fb3c",
+        "start_secs": 1601678901,
+        "start_nanos": 562285000,
+        "duration_secs": 0,
+        "duration_nanos": 12742000,
+        "description": "Test binary /usr/bin/unzip.",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-waiting",
+        "span_id": "a5e91f262020d9f5",
+        "level": "DEBUG",
+        "parent_id": "8c28c07991f4a644",
+        "start_secs": 1601678901,
+        "start_nanos": 562835000,
+        "duration_secs": 0,
+        "duration_nanos": 11984000,
+        "description": "Test binary /usr/bin/unzip.",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-running",
+        "span_id": "98006784f7ec525f",
+        "level": "DEBUG",
+        "parent_id": "a5e91f262020d9f5",
+        "start_secs": 1601678901,
+        "start_nanos": 562874000,
+        "duration_secs": 0,
+        "duration_nanos": 11875000,
+        "description": "Test binary /usr/bin/unzip.",
+        "artifacts": {
+            "stdout": "UnZip 6.00 of 20 April 2009, by Info-ZIP.  Maintained by C. Spieler.  Send\nbug reports using http://www.info-zip.org/zip-bug.html; see README for details.\n\nLatest sources and executables are at ftp://ftp.info-zip.org/pub/infozip/ ;\nsee ftp://ftp.info-zip.org/pub/infozip/UnZip.html for other sites.\n\nCompiled with gcc 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.29.20) (-macos10.15-objc-selector-opts) for Unix Mac OS X on Jun  5 2020.\n\nUnZip special compilation options:\n        COPYRIGHT_CLEAN (PKZIP 0.9x unreducing method not supported)\n        SET_DIR_ATTRIB\n        SYMLINKS (symbolic links supported, if RTL and file system permit)\n        TIMESTAMP\n        UNIXBACKUP\n        USE_EF_UT_TIME\n        USE_UNSHRINK (PKZIP/Zip 1.x unshrinking method supported)\n        USE_DEFLATE64 (PKZIP 4.x Deflate64(tm) supported)\n        LARGE_FILE_SUPPORT (large files over 2 GiB supported)\n        ZIP64_SUPPORT (archives using Zip64 for large files supported)\n        VMS_TEXT_CONV\n        [decryption, version 2.11 of 05 Jan 2007]\n\nUnZip and ZipInfo environment options:\n           UNZIP:  [none]\n        UNZIPOPT:  [none]\n         ZIPINFO:  [none]\n      ZIPINFOOPT:  [none]\n"
+        }
+    },
+    {
+        "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+        "span_id": "1492519a0d19aa2f",
+        "level": "TRACE",
+        "parent_id": "20f5a7d2d8b3f4ce",
+        "start_secs": 1601678901,
+        "start_nanos": 577867000,
+        "duration_secs": 1,
+        "duration_nanos": 33361000,
+        "artifacts": {}
+    },
+    {
+        "name": "pants.engine.process.remove_platform_information",
+        "span_id": "344f2ddf49251cfc",
+        "level": "TRACE",
+        "parent_id": "1492519a0d19aa2f",
+        "start_secs": 1601678901,
+        "start_nanos": 577989000,
+        "duration_secs": 1,
+        "duration_nanos": 33198000,
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process",
+        "span_id": "c60388febb92fc22",
+        "level": "TRACE",
+        "parent_id": "344f2ddf49251cfc",
+        "start_secs": 1601678901,
+        "start_nanos": 578592000,
+        "duration_secs": 1,
+        "duration_nanos": 32371000,
+        "description": "Find interpreter for constraints: CPython<3.9,<4,>=3.7,>=3.8",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-waiting",
+        "span_id": "4c4b42787eca9903",
+        "level": "DEBUG",
+        "parent_id": "c60388febb92fc22",
+        "start_secs": 1601678901,
+        "start_nanos": 579649000,
+        "duration_secs": 1,
+        "duration_nanos": 31160000,
+        "description": "Find interpreter for constraints: CPython<3.9,<4,>=3.7,>=3.8",
+        "artifacts": {}
+    },
+    {
+        "name": "multi_platform_process-running",
+        "span_id": "11f7caf674ad3d6b",
+        "level": "DEBUG",
+        "parent_id": "4c4b42787eca9903",
+        "start_secs": 1601678901,
+        "start_nanos": 579688000,
+        "duration_secs": 1,
+        "duration_nanos": 31083000,
+        "description": "Find interpreter for constraints: CPython<3.9,<4,>=3.7,>=3.8",
+        "artifacts": {
+            "stdout": "/Users/asher/.pyenv/versions/3.8.5/bin/python3.8\n9a2e6c774ca163a1f473902d50fd1577cc2da00efddbbe3c1250c99aa473695d\n"
+        }
+    },
+    {
+        "name": "pants.init.engine_initializer.union_membership_singleton",
+        "span_id": "9cc21ebf8634140c",
+        "level": "TRACE",
+        "parent_id": "be36df2dfff9636a",
+        "start_secs": 1601678895,
+        "start_nanos": 822006000,
+        "duration_secs": 0,
+        "duration_nanos": 21000,
+        "artifacts": {}
+    },
+    {
+        "name": "construct_scope_test",
+        "span_id": "1f9f7e35c37c5517",
+        "level": "TRACE",
+        "parent_id": "be36df2dfff9636a",
+        "start_secs": 1601678895,
+        "start_nanos": 822099000,
+        "duration_secs": 0,
+        "duration_nanos": 3570000,
+        "artifacts": {}
+    }
+]

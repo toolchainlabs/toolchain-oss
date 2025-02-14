@@ -1,0 +1,34 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+replicas: 1
+image_registry: 283194185447.dkr.ecr.us-east-1.amazonaws.com
+global:
+  region: us-east-1
+image_rev:
+  us-east-1: prod-2023-03-21.18-14-16-f11f91f6bfc3
+redis:
+  host: null # Filled by install script.
+  read_only_host: null # Filled by install script.
+  num_connections: null # Filled by install script.
+  shards_config: null   # Filled in by installer script.
+  num_replicas: null  # Number of replicas for sharding configs including the primary. Filled in by installer script.
+server_sentry_dsn: null  # Filled by install script
+sizeSplitThreshold: 131072  # 128 KB
+grpc:
+  maxConcurrentStreams: 1000
+  # TODO: We do not set a concurrency limit on the `storage-server` due to
+  # https://github.com/toolchainlabs/toolchain/issues/16012
+  concurrencyLimitPerConnection: null
+
+# Probability of running a completeness check on a GetActionResult.
+completeness_check_probability: 10  # range: 0 - 1000. 10 = 1%.
+storageModel: null  # Filled by install script.
+localStorage:
+  efsFileSystemId: null  # Filled by install script.
+  efsAccessPointId: null # Filled by install script.
+  volumeSize: 10Gi # should be enough for dev, will need to bump up for prod
+amberflo:
+  aggregation_window_secs: 10  # Updated by install script. This is dev default.
+storage:
+  base_path: /data/cas

@@ -1,0 +1,15 @@
+# Copyright 2022 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# Based on: https://github.com/kubernetes-sigs/aws-efs-csi-driver/blob/master/deploy/kubernetes/base/controller-serviceaccount.yaml
+
+{{- $role_arn := printf "arn:aws:iam::%s:role/%s" .Values.aws.account_number .Values.aws.iam_role }}
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: efs-csi-controller-sa
+  labels:
+    app.kubernetes.io/name: aws-efs-csi-driver
+  annotations:
+    eks.amazonaws.com/role-arn: {{ $role_arn }}

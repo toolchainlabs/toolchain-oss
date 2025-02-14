@@ -1,0 +1,4 @@
+# Don't commit pulled dependency charts.
+*.tgz
+# Don't commit generated helm dependency lockfiles.
+*.lock

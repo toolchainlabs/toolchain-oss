@@ -1,0 +1,54 @@
+name: Pants/Buildsense GitHub Integrations
+on: 
+  push:
+    branches:
+      - master
+      - 'auto-updates/**'
+    tags:
+      - test*
+  pull_request:
+    paths:
+      - 'src/python/toolchain/buildsense/**'
+      - 'src/python/toolchain/pants/**'
+      - 'src/python/toolchain/users/**'
+      - 'src/python/toolchain/util/**'
+      - '3rdparty/python/**'
+      - './pants*.toml'
+      - '.github/workflows/**'
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+jobs:
+  run_pants:
+    name: Run pants lint
+    runs-on: ubuntu-22.04
+    if: github.event.pull_request.draft == false
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          lfs: false
+      - name: Set up Python 3.9.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9.12"
+      - uses: actions/setup-go@v4
+        with:
+          go-version: '1.19'
+      - name: write pants version into a file
+        run: ./src/sh/ci/get-pants-version.sh > pants_ver.txt
+      - name: Cache pants
+        uses: actions/cache@v3
+        with:
+          key: ${{ runner.os }}-${{ hashFiles('pants_ver.txt') }}-v1
+          path: |
+             ~/.cache/pants/setup
+      - name: remove pants version file
+        run: rm pants_ver.txt
+      - name: Set env vars
+        run: |
+          echo 'PANTS_CONFIG_FILES=+["${{ github.workspace }}/pants.ci.toml"]' >> ${GITHUB_ENV}
+      - name: Pants Version
+        run: ./pants version
+      - name: Lint Python
+        run: |
+          ./pants lint src/python/toolchain/::

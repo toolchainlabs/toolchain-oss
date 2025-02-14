@@ -1,0 +1,47 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{- if .Values.tests.enabled }}
+{{- $region := required "You must set global.region!" .Values.global.region }}
+{{- $toolchain_env := required "You must set $toolchain_env!" .Values.toolchain_env }}
+{{- $webhooksTestImage := (printf "%s/e2e_tests/webhooks:%s" .Values.django.image_registry (index .Values.tests.webhooks.image_rev $region) ) }}
+{{- $secrets := .Values.secrets }}
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webhooks-end2end-tests
+  labels:
+    app: webhooks-end2end-tests
+    chart: {{ .Chart.Name  }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    toolchain_product: webhooks
+  annotations:
+    "helm.sh/hook-delete-policy": "hook-succeeded,hook-failed"
+    "helm.sh/hook": test-success
+spec:
+  restartPolicy: Never
+  volumes:
+    {{- range $secrets }}
+      - name: {{ . }}
+        secret:
+          secretName: {{ . }}
+      {{- end }}
+  containers:
+    - name: e2e-tests
+      image: {{ $webhooksTestImage }}
+      imagePullPolicy: IfNotPresent
+      args: 
+        - --toolchain_env
+        - {{ $toolchain_env }}
+        - --namespace
+        - {{ .Release.Namespace }}
+      volumeMounts:
+      # Mount every secret at /secrets/<name_of_secret>.
+        {{- range $secrets }}
+        - name: {{ . }}
+          mountPath: /secrets/{{ . }}
+          readOnly: true
+        {{- end }}
+{{- end }}

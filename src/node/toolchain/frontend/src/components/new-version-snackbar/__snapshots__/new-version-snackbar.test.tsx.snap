@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VersionSnackbar /> should render the component 1`] = `
+<DocumentFragment>
+  <div>
+    Random element
+  </div>
+  <div
+    class="MuiSnackbar-root MuiSnackbar-anchorOriginBottomCenter css-wbkyf0-MuiSnackbar-root"
+    role="presentation"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation6 MuiSnackbarContent-root css-mqxpjw-MuiPaper-root-MuiSnackbarContent-root"
+      direction="up"
+      role="alert"
+      style="opacity: 1; transform: scale(1, 1); transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+    >
+      <div
+        class="MuiSnackbarContent-message css-1exqwzz-MuiSnackbarContent-message"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+        >
+          A new version of the app is available
+        </p>
+      </div>
+      <div
+        class="MuiSnackbarContent-action css-1kr9x0n-MuiSnackbarContent-action"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-sv7hz0-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-button1 css-f9nyeh-MuiTypography-root"
+              >
+                RELOAD
+              </span>
+            </button>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <button
+              aria-label="close new version"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall css-8qkyxp-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="CloseIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

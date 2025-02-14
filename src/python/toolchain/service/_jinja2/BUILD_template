@@ -1,0 +1,31 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+# Copyright {{ copyright_year }} Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+python_sources(
+  name = '{{ service_name_dashes }}',
+  dependencies = [
+    '3rdparty/python:Django',
+    '3rdparty/python:gunicorn',
+    'src/python/toolchain/django/site',
+    'src/python/toolchain/django/util',
+    #### Add dependencies on required Django apps here. ####
+  ],
+)
+
+pex_binary(
+  name = '{{ service_name_dashes }}-manage',
+  entry_point = '{{ service_pkg }}.manage',
+  dependencies = [
+    ':{{ service_name_dashes }}',
+  ]
+)
+
+pex_binary(
+  name = '{{ service_name_dashes }}-gunicorn',
+  entry_point = '{{ service_pkg }}.gunicorn_main',
+  dependencies = [
+    ':{{ service_name_dashes }}',
+  ],
+)

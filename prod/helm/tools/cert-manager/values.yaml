@@ -1,0 +1,40 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+letsencrypt:
+  # Email to which Let's Encrypt project reports certificate issues.
+  email: ops-mgmt@toolchain.com
+
+cert-manager:
+  global: # https://github.com/jetstack/cert-manager/blob/c7dade0fc5e19afdcec02ca963ceeb75ef427964/deploy/charts/cert-manager/values.yaml#L20
+    logLevel: "1"
+  resources:
+    requests:
+      cpu: 10m
+      memory: 32Mi
+    limits:
+      cpu: 100m
+      memory: 128Mi
+  cainjector:
+    resources:
+      requests:
+        cpu: 10m
+        memory: 64Mi
+      limits:
+        cpu: 40m
+        memory: 128Mi
+  webhook:
+    resources:
+      requests:
+        cpu: 5m
+        memory: 16Mi
+      limits:
+        cpu: 40m
+        memory: 128Mi
+  prometheus:
+    enabled: true
+    servicemonitor:
+      enabled: true
+      namespace: monitoring
+      labels:
+        services: toolchain-monitoring

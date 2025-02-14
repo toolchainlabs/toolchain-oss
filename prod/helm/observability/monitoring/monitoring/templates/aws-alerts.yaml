@@ -1,0 +1,149 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{ if .Values.features.cloudwatchExporter }}
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: aws-alert-rules
+  labels:
+    app: prometheus-operator
+    release: {{ .Release.Name }}
+spec:
+  groups:
+  - name: ./aws.remote-cache
+    rules:
+    - alert: RemoteCacheRedisHighCpuUtlization
+      for: 10m
+      expr: (sum(rate(aws_elasticache_engine_cpuutilization_average{cache_cluster_id=~"remoting-prod-sharded.*"}[15m])) BY (cache_cluster_id, cache_node_id) * 100) > 10
+      annotations:
+        message: Remote cache redis engine cpu utilization is high
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: remoteing
+    - alert: RemoteCacheRedisLowConnectionCount
+      for: 10m
+      expr: avg_over_time (aws_elasticache_curr_connections_average{cache_cluster_id=~"remoting-prod-sharded.*"}[30m]) < 3
+      annotations:
+        message: Low number of connections to remote redis cluster
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: remoteing
+    - alert: RemoteCacheEfsLowConnectionCount
+      for: 10m
+      expr: avg_over_time(aws_efs_client_connections_sum{file_system_id='fs-0da12c5381f11d884'}[30m]) < 3
+      annotations:
+        message: Low number of connections to EFS from storage server, check for connectivity issues between Storage Server and EFS
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: remoteing
+  - name: ./aws.es.buildsense
+    rules:
+    - alert: BuildSenseESDiskSpaceLow
+      for: 10m
+      expr:  avg_over_time(aws_es_free_storage_space_average{domain_name=~"prod.*"}[1h]) < 50 * 1024
+      annotations:
+        message: | 
+          Elasticsearch disk space low below 50gb (instance {{`{{`}} $labels.domain_name {{`}}`}}) VALUE = {{`{{`}} $value {{`}}`}}mb
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: buildsense
+    - alert: BuildSenseESCpuUtlization
+      for: 10m
+      expr:  avg_over_time(aws_es_cpuutilization_average{domain_name=~"prod.*"}[1h]) > 40
+      annotations:
+        message: | 
+          Elasticsearch high CPU utlization (over 40%) (instance {{`{{`}} $labels.domain_name {{`}}`}}) VALUE = {{`{{`}} $value {{`}}`}}%\n
+          While this is not really high, at our current using more than 40% CPU in ES instances indicates something is not right.
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: buildsense
+    - alert: BuildSenseESJVMMemoryPresure
+      for: 3h
+      expr:  avg_over_time(aws_es_jvmmemory_pressure_average{domain_name=~"prod.*"}[1h]) > 75 
+      annotations:
+        message: |
+          Elasticsearch high JVM memory preasure utlization (over 75%) (instance {{`{{`}} $labels.domain_name {{`}}`}}) VALUE = {{`{{`}} $value {{`}}`}}%\n
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: buildsense
+    - alert: ESClusterCritical
+      for: 20m
+      expr:  avg_over_time(aws_es_cluster_status_red_average{domain_name=~"prod.*"}[1h]) > 0.2
+      annotations:
+        message: ElasticSearch cluster status is critical (red)
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: devops
+    - alert: ESClusterWarning
+      for: 1h
+      expr:  avg_over_time(aws_es_cluster_status_yellow_average{domain_name=~"prod.*"}[1h]) > 0.2
+      annotations:
+        message: ElasticSearch cluster status is yellow
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: devops
+    - alert: BuildSenseLambdaErrors
+      for: 25m
+      expr: avg_over_time(aws_lambda_errors_minimum{function_name="prod-buildsense-dynamodb-to-es"}[1h]) > 5
+      annotations:
+        message: Production BuildSense Lambda functions has errors
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: buildsense
+    - alert: BuildSenseLambdaDuration
+      for: 30m
+      expr: avg_over_time(aws_lambda_duration_average{function_name="prod-buildsense-dynamodb-to-es"}[15m]) > 1500
+      annotations:
+        message: Production BuildSense Lambda functions avgerage duration exceeds 1.5sec
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: buildsense
+    - alert: BuildSenseDynamoDBThrottledRequests
+      for: 10m
+      expr: avg_over_time(aws_dynamodb_throttled_requests_average{table_name="prod-runinfo-v1"}[15m]) > 0
+      annotations:
+        message: Production BuildSense DynamoDB requests are being throttled. We need to increase capacity via the AWS console. https://us-east-1.console.aws.amazon.com/dynamodbv2/home?region=us-east-1#capacity-settings?table=prod-runinfo-v1
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: buildsense
+    - alert: BuildSenseDynamoDBLowWriteRequestsRate
+      for: 1h
+      expr: absent_over_time(aws_dynamodb_consumed_read_capacity_units_sample_count{table_name="prod-runinfo-v1"}[1h])
+      annotations:
+        message: Production BuildSense DynamoDB Table is not seeing write requests. Check if buildsense ingestion pipeline is working properly.
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: buildsense
+    - alert: BuildSenseDynamoDBNoReadRequests
+      for: 1h
+      expr: absent_over_time(aws_dynamodb_consumed_read_capacity_units_sample_count{table_name="prod-runinfo-v1"}[1h])
+      annotations:
+        message: Production BuildSense DynamoDB Table is not seeing read requests. Check if buildsense UI and ingestion is working properly.
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: buildsense
+    - alert: BuildSenseDynamoDBSystemErrors
+      for: 10m
+      expr: min_over_time(aws_dynamodb_system_errors_average[1h]) > 4
+      annotations:
+        message: We are seeing system errors from DynamoDB. There might be an infra issue in AWS, check the AWS health dashboard.
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: buildsense
+      
+{{ end }}

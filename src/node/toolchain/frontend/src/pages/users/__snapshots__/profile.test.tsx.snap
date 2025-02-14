@@ -1,0 +1,400 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserProfile should render component 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiDrawer-root MuiDrawer-docked css-1kchqgg-MuiDrawer-docked"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-ji07s3-MuiPaper-root-MuiDrawer-paper"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-wrap-xs-nowrap css-sfpyyv-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto css-18met8a-MuiGrid-root"
+        >
+          <button
+            aria-label="open menu"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-1ddm7yl-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1pe1w7m-MuiSvgIcon-root"
+              data-testid="MenuIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto css-18met8a-MuiGrid-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-1xfqvk9-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <div
+              class="MuiAvatar-root MuiAvatar-rounded css-gchap1-MuiAvatar-root"
+            >
+              <img
+                alt="George Constanza"
+                class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+                src="https://avatars1.githubusercontent.com/u/35751794?s=200&v=4"
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-1468yxu-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+    >
+      <main>
+        <div
+          class="MuiGrid-root MuiGrid-container css-1szxfzx-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+          >
+            <div
+              class="MuiBox-root css-1z05cut"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-1402ce4-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiAvatar-root MuiAvatar-rounded css-1qczawd-MuiAvatar-root"
+                      >
+                        <img
+                          alt="George Constanza"
+                          class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+                          src="https://avatars1.githubusercontent.com/u/35751794?s=200&v=4"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                        >
+                          <h2
+                            class="MuiTypography-root MuiTypography-h2 MuiTypography-alignCenter css-1sshhtq-MuiTypography-root"
+                          >
+                            gcostanza
+                            <button
+                              aria-label="edit username"
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-11afu8v-MuiButtonBase-root-MuiIconButton-root"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1pe1w7m-MuiSvgIcon-root"
+                                data-testid="EditIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                                />
+                              </svg>
+                            </button>
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-overline css-wagdv9-MuiTypography-root"
+                      >
+                        NAME
+                      </span>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-container css-9cyib4-MuiGrid-root"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        >
+                          <p
+                            class="MuiTypography-root MuiTypography-body2 css-z3z6ku-MuiTypography-root"
+                          >
+                            George Constanza
+                          </p>
+                        </div>
+                        <div
+                          class="MuiGrid-root MuiGrid-item css-1snjm19-MuiGrid-root"
+                        >
+                          <button
+                            aria-label="edit full name"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-11afu8v-MuiButtonBase-root-MuiIconButton-root"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeSmall css-1v0lfyk-MuiSvgIcon-root"
+                              data-testid="EditIcon"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-overline css-wagdv9-MuiTypography-root"
+                      >
+                        PRIMARY EMAIL
+                      </span>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                      >
+                        <div
+                          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-gl1kpv-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                          role="combobox"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                            role="button"
+                            tabindex="0"
+                          >
+                            <p
+                              class="MuiTypography-root MuiTypography-body1 css-1f2ftya-MuiTypography-root"
+                            >
+                              example@gmail.com
+                            </p>
+                          </div>
+                          <input
+                            aria-hidden="true"
+                            aria-invalid="false"
+                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            tabindex="-1"
+                            value="example@gmail.com"
+                            width="100%"
+                          />
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-k8dwxu-MuiSvgIcon-root-MuiSelect-icon"
+                            data-testid="ArrowDropDownIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                          <fieldset
+                            aria-hidden="true"
+                            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                          >
+                            <legend
+                              class="css-ihdtdm"
+                            >
+                              <span
+                                class="notranslate"
+                              >
+                                ​
+                              </span>
+                            </legend>
+                          </fieldset>
+                        </div>
+                        <p
+                          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-14ivi0i-MuiFormHelperText-root"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-caption css-19nduf8-MuiTypography-root"
+                      >
+                        All verified email addresses come from your login provider. We will use this email address for account maintenance messages.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                    >
+                      <button
+                        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-fme2tx-MuiButtonBase-root-MuiButton-root"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <span
+                          class="MuiTypography-root MuiTypography-button2 css-1mpf6p7-MuiTypography-root"
+                        >
+                          SIGN OUT
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-qwc4y7-MuiGrid-root"
+    >
+      <footer
+        class="css-19midj6"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`UserProfile should render loader 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiDrawer-root MuiDrawer-docked css-1kchqgg-MuiDrawer-docked"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-ji07s3-MuiPaper-root-MuiDrawer-paper"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-wrap-xs-nowrap css-sfpyyv-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto css-18met8a-MuiGrid-root"
+        >
+          <button
+            aria-label="open menu"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-1ddm7yl-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1pe1w7m-MuiSvgIcon-root"
+              data-testid="MenuIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-auto css-18met8a-MuiGrid-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-1xfqvk9-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <div
+              class="MuiAvatar-root MuiAvatar-rounded css-gchap1-MuiAvatar-root"
+            >
+              <img
+                class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+                src="/"
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-1468yxu-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+    >
+      <main>
+        <span
+          class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-indeterminate css-1v73c1t-MuiLinearProgress-root"
+          role="progressbar"
+        >
+          <span
+            class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Indeterminate css-scyn4f-MuiLinearProgress-bar1"
+          />
+          <span
+            class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar2Indeterminate css-1gnvkt3-MuiLinearProgress-bar2"
+          />
+        </span>
+      </main>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-qwc4y7-MuiGrid-root"
+    >
+      <footer
+        class="css-19midj6"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

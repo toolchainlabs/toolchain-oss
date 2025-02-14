@@ -1,0 +1,12 @@
+// Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+// Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+syntax = "proto3";
+
+package toolchain.storage.redis;
+
+// Metdata stored in the "metadata chunk" for CAS/AC blobs stored by the `redis` storage driver.
+message RedisMetadataChunk {
+    // Number of chunks used to store this blob.
+    uint64 num_chunks = 1;
+}

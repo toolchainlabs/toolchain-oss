@@ -1,0 +1,90 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "workflow/base.html" %}
+{% block title %}[{{ db_name }}] WorkUnit {{ object.payload_ctype.model }} {% endblock title %}
+{% block content %}
+  <h2>WorkUnit Status for {{ object.payload_ctype.model }} {{ object.pk }}</h2>
+  <div class="workunit-context-links-container">
+    <a href="{{ views_links.workunit_ancestors }}"
+       class="workunit-context-links">Ancestors</a>
+    <a href="{{ views_links.workunit_descendants }}"
+       class="workunit-context-links">Descendants</a>
+    {% if views_links.payload_url %}
+      <a href="{{ views_links.payload_url }}" class="workunit-context-links">Details</a>
+    {% endif %}
+  </div>
+  <table class="table">
+    <tr>
+      <td>Description:</td>
+      <td>{{ description|urlize(target="_blank") }}</td>
+    </tr>
+    <tr>
+      <td>State:</td>
+      <td><span class="work-unit-state-{{ object.pk }}">{{ object.state_str() }}</span>
+        {% if object.state == object.INFEASIBLE %}
+          <a href="#" id="mark-as-feasible" class="mark-as-feasible">mark as feasible</a>
+        {% endif %}
+      </td>
+    </tr>
+    <tr><td>Created at:</td><td>{{ object.created_at|datetime_fmt_std() }}</td></tr>
+    <tr><td>Last attempt:</td><td>{{ object.last_attempt|datetime_fmt_std() }}</td></tr>
+    <tr><td>Succeeded at:</td><td>{{ object.succeeded_at|datetime_fmt_std() }}</td></tr>
+    <tr><td>Num unsatisfied requirements:</td><td>{{ object.num_unsatisfied_requirements }}</td></tr>
+    <tr>
+      <td>Lease remaining:</td>
+      <td>{% if lease_remaining  %} 
+          {{ lease_remaining  | humanize_time }} ({{lease_remaining.seconds}}s)
+        {% endif %}
+      </td>
+    </tr>
+    <tr><td>Lease holder:</td><td>{{ object.lease_holder }}</td></tr>
+  </table>
+  <h3>Created by:</h3>
+  <div class="workunit-list-table-container">
+    <table id="created-by-table" class="table table-condensed workunit-list-table"></table>
+  </div>
+  <h3>Required by:</h3>
+  <div class="workunit-list-table-container">
+    <table id="required-by-table" class="table table-condensed workunit-list-table"></table>
+  </div>
+  <h3>Created:</h3>
+  <div class="workunit-list-table-container">
+    <table id="created-table" class="table table-condensed workunit-list-table"></table>
+  </div>
+  <h3>Requires:</h3>
+  <div class="workunit-list-table-container">
+    <table id="requires-table" class="table table-condensed workunit-list-table"></table>
+  </div>
+  <h3>Errors:</h3>
+  <div class="workunit-exceptions-table-container">
+    <table id="workunit-exceptions-table" class="table table-condensed workunit-exceptions-table"></table>
+  </div>
+
+{% endblock content %}
+
+{% block js %}
+  {{ super() }}
+  <script src="{{ static('workflow/js/workunit_list_table.js') }}"></script>
+  <script src="{{ static('workflow/js/mark_as_feasible.js') }}"></script>
+  {{ csrf_input }}
+  <script>
+    $(function() {
+      toolchain.workflow.initWorkunitListTable('#requires-table',
+          '{{ views_links.workunit_requirements_data }}', '{{ object.pk }}');
+      toolchain.workflow.initWorkunitListTable('#required-by-table',
+          '{{ views_links.workunit_required_by_data }}', '{{ object.pk }}');
+      toolchain.workflow.initWorkunitListTable('#created-table',
+          '{{ views_links.workunit_created_data }}', '{{ object.pk }}');
+      toolchain.workflow.initWorkunitListTable('#created-by-table',
+          '{{ views_links.workunit_created_by_data }}', '{{ object.pk }}', true);
+      toolchain.workflow.initWorkExceptionLogTable('#workunit-exceptions-table',
+          '{{ views_links.workexceptionsforworkunit_data }}', '{{ object.pk }}');
+
+      toolchain.workflow.setMarkSelectedUrl('{{ views_links.mark_as_feasible }}');
+      toolchain.workflow.initMarkAsFeasibleLink('.mark-as-feasible', '{{ object.pk }}');
+    });
+  </script>
+{% endblock js %}

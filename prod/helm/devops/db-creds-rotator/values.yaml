@@ -1,0 +1,8 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# set by build_install_db_creds_rotator.py
+image: 283194185447.dkr.ecr.us-east-1.amazonaws.com/db_creds_rotator:2020-03-16.21-13-12-602696a9c9dd
+database: null
+new_db_host: null
+run_env: null

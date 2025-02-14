@@ -1,0 +1,19 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "maven/base.html" %}
+
+{% block content %}
+  <h2>Details for {{ object.__class__.__name__ }} {{ object.id }}</h2>
+  <table class="table">
+    <tr>
+      <td>URL:</td><td><a href="{{ object.url }}" target="_blank">{{ object.url }}</a></td>
+    </tr>
+    <tr>
+      <td>Encoding:</td><td>{{ object.encoding }}</td>
+    </tr>
+  <tr><td colspan="2"><pre>{{ object.get_content_as_text() }}</pre></td></tr>
+  </table>
+{% endblock content %}

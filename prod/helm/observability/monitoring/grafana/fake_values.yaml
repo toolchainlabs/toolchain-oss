@@ -1,0 +1,76 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+global:
+  region: us-east-1
+influxdb:
+  url: http://jerry:80
+  tokens:
+    - org: kramer
+      token: bob
+      defaultBucket: cosmo
+grafana:
+  adminPassword: nosoupforyou#comeback#oneyear
+  fullnameOverride: prod-grafana
+  grafana.ini:
+    analytics:
+      check_for_updates: true
+    auth:
+      disable_login_form: true
+      oauth_auto_login: true
+    auth.google:
+      allow_sign_up: true
+      allowed_domains: exmaple.seinfeld
+      auth_url: https://accounts.google.com/o/oauth2/auth
+      client_id: someclientid
+      client_secret: someclientsecret
+      enabled: true
+      scopes: https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email
+      token_url: https://accounts.google.com/o/oauth2/token
+    grafana_net:
+      url: https://grafana.net
+    log:
+      mode: console
+    metrics:
+      enabled: false
+    paths:
+      data: /var/lib/grafana/data
+      logs: /var/log/grafana
+      plugins: /var/lib/grafana/plugins
+      provisioning: /etc/grafana/provisioning
+    server:
+      root_url: https://fakecomain.exmaple.seinfeld
+    users:
+      auto_assign_org_role: Editor
+      editors_can_admin: false
+      viewers_can_edit: false
+  serviceMonitor:
+    selfMonitor: false
+  sidecar:
+    dashboards:
+      enabled: true
+      label: grafana_dashboard
+    datasources:
+      enabled: true
+      label: grafana_datasource
+      labelValue: "1"
+ingress:
+  enabled: true
+  external_ingress_sg_id:
+    us-east-1: fake-security-group
+  healthcheck_path: /api/health
+  logs_prefix: prod-e1-1
+  name: grafana
+  rules:
+  - host: some-fake-domain
+    http:
+      paths:
+      - backend:
+          service:
+            name: prod-grafana
+            port: 
+                number: 80
+        path: /
+        pathType: Prefix
+  scheme: internal
+  ssl_certificate_arn:
+    us-east-1: fake-arn

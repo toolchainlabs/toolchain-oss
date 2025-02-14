@@ -1,0 +1,71 @@
+{#
+Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'infosite/base.html' %}
+
+{% block body_class %}careers{% endblock body_class %}
+{% block active_menu_item %}careers{% endblock %}
+
+{% block main %}
+{% include "infosite/header.html" %}
+<section class="jobs-main-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-2">
+                <h3 class="join-us-title">Join us!</h3>
+                <div class="join-us-subtitle body3">
+                    We're looking for a diverse group of thinkers to hit the ground running with us as we invent the next generation of build systems
+                </div>
+                <div class="join-us-bottom-border">
+                </div>
+            </div>
+        </div>
+        <div class="row careers-content">
+            <div class="col-12">
+                <h1 class="careers-title">Careers</h1>
+                <div class="jobs-container">
+                    <div class="job-wrapper">
+                        <h3>Full-Stack Engineer</h3>
+                        <span class="body3">USA</span>
+                    </div>
+                    <div class="job-wrapper">
+                        <h3>Full-Stack Engineer</h3>
+                        <span class="body3">USA</span>
+                    </div>
+                    <div class="job-wrapper">
+                        <h3>Full-Stack Engineer</h3>
+                        <span class="body3">USA</span>
+                    </div>
+                    <div class="job-wrapper">
+                        <h3>Full-Stack Engineer</h3>
+                        <span class="body3">USA</span>
+                    </div>
+                </div>
+                <div class="careers-bottom-title body3">
+                    If you don't see a job title that fits you exactly, let us know.
+                    You might still be the right fit!
+                </div>
+                <div class="careers-link-container">
+                    <a href="mailto:info@toolchain.com" class="contact-link">
+                        CONTACT US
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="where-are-we-section">
+    <h3 class="where-we-are-title">
+        Where are we?
+    </h3>
+    <div class="where-we-are-desc body1">
+        We're in San Francisco, New York City, Bozeman, Tempe, and Seattle.
+        Candidates in these or other cities are welcome to apply.
+    </div>
+    <div class="where-we-are-map">
+        <img src="{{ static('infosite/images/where-we-are-map_v2.webp') }}" alt="where we are map"/>
+    </div>
+</section>
+{% endblock main %}

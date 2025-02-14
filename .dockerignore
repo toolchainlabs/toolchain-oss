@@ -1,0 +1,22 @@
+# Ignore everything...
+*
+# ... except these paths.
+!3rdparty/
+!build-support/
+!prod/
+!src/
+!pants
+!pants.ini
+!python
+!python3
+# But ignore .pyc files and other python cruft.
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/__pycache__/
+# And ignore emacs cruft.
+**/*~
+**/#*#
+**/.#*
+# And ignore terraform cruft.
+**/.terraform

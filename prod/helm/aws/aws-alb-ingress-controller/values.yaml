@@ -1,0 +1,30 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+aws-load-balancer-controller:
+  # To be filled by install script
+  region: null
+  vpcId: null
+  # https://github.com/helm/helm/issues/2055
+  clusterName: null
+  serviceMonitor:
+    enabled: true
+    additionalLabels:
+      services: toolchain-monitoring
+      monitor: "true"
+  serviceAccount:
+    # see: prod/terraform/modules/eks/control_plane/ingress_controller.tf
+    name: aws-alb-ingress-controller
+    annotations:
+      eks.amazonaws.com/role-arn: null # To be filled by install_aws_alb_ingress_controller.py
+  replicaCount: 1
+  enableShield: false
+  enableWaf: false
+  enableWafv2: false
+  resources:
+    requests:
+      cpu: 20m
+      memory: 128Mi
+    limits:
+      cpu: 100m
+      memory: 256Mi

@@ -1,0 +1,6 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+image: null  # set by build_install_aws_cost_reporter.py
+slack_webhook: null  # set by build_install_aws_cost_reporter.py
+iam_role_arn: arn:aws:iam::283194185447:role/k8s.dev-e1-1.aws-cost-reporter.job

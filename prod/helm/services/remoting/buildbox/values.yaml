@@ -1,0 +1,17 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+image: public.ecr.aws/g2d5g9h4/remoting/worker/tc:2022-12-29.16-46-48-d7553e97c6e2
+nodeType: service
+
+mainInstanceName: 'main'
+customer: null
+
+endpoint: null
+requestTimeout: 30 # Note: This is the timeout for "leases" of work by the worker from the controller.
+
+workersPerPod: 1
+replicas: 1
+cpu_request: "350m"
+memory_request: "1000Mi"
+cache_size: 200G

@@ -1,0 +1,330 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{- /* A named template containing kubernetes resources for a django service. */ -}}
+{{- define "django.service.resources" -}}
+
+{{- /* See README.md for explanation of this incantation. */ -}}
+{{- $django := dict "Values" .Values.django -}}
+{{- $noDjango := omit .Values "django" -}}
+{{- $overrides := dict "Values" $noDjango -}}
+{{- $noValues := omit . "Values" -}}
+{{- with merge $noValues $overrides $django -}}
+
+{{- $name := .Values.name }}
+{{- $service_type := .Values.service_type }}
+{{- $service_location := .Values.service_location }}
+{{- $service_name := default ($name | replace "-" "/") .Values.service_name}}
+
+{{- $secrets := compact (include "django.secrets" . | splitList "+") }}
+{{- $toolchain_env := required "You must set toolchain_env!" .Values.toolchain_env }}
+{{- $nginx_exporter_img := printf "public.ecr.aws/nginx/nginx-prometheus-exporter:%s" .Values.nginx.exporter.image_tag}}
+{{- $product_name := required "You must set toolchain_product_name!" .Values.toolchain_product_name  }}
+{{- $ecr_repo_base :=  .Values.ecr_repo_base | default $service_name}}
+{{- $host_name :=  .Values.host_name | default "toolchain.com"}}
+
+{{- if eq $service_location "edge" -}}
+{{- $dummy := set . "nginx_image_repo" "django/nginx-edge" }}
+{{- else if eq $service_location "internal" -}}
+{{- $dummy := set . "nginx_image_repo" "django/nginx-internal" }}
+{{- else }}
+{{ fail "Invalid service_location" }}
+{{- end -}}
+
+# Varibles are scoped to if statement context: https://stackoverflow.com/a/49604964
+{{- $region := required "You must set global.region!" .Values.global.region }}
+{{- $dummy := set . "gunicorn_image" (printf "%s/%s/gunicorn:%s" .Values.image_registry $ecr_repo_base (index .Values.gunicorn_image_rev $region)) }}
+{{- $dummy := set . "nginx_image" (printf "%s/%s:%s" .Values.image_registry .nginx_image_repo (index .Values.nginx.image_rev $region)) }}
+{{- $add_dev_prometheus_annotations := eq $toolchain_env "toolchain_dev" }}
+
+# If iam_service_role_arn is specified, then we must set service_account_name, it will be either .Values.service_account_name (if provided) or $name if .Values.service_account_name is not set.
+# It is also assumed that if .Values.service_account_name is provided then the upstream chart is responsible for the creation of the ServiceAccount object and the proper annotations of it (if needed)
+{{- $service_account_name := ternary .Values.service_account_name (default $name .Values.service_account_name)  (empty .Values.iam_service_role_arn ) }}
+
+# If the upstream chart defines a .Values.service_account_name it is assume that it also defines the ServiceAccount object and properly annotates it.
+{{- if and .Values.iam_service_role_arn (not .Values.service_account_name) -}}
+
+---
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ $service_account_name }}
+  labels:
+    name: {{ $name }}
+    chart: {{ .Chart.Name  }}
+    toolchain_product: {{ $product_name }}
+  annotations:
+     eks.amazonaws.com/role-arn: {{ .Values.iam_service_role_arn }}
+
+---
+{{- end -}}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ $name }}
+  labels:
+    app: {{ $name }}
+    toolchain_service_type: {{ $service_type }}
+    chart: {{ .Chart.Name  }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    toolchain_product:  {{ $product_name }}
+    # Used the monitor label is used by ServiceMonitor to select services to monitor
+    # see prod/helm/observability/monitoring/README.md for more info.
+    monitor: "true"
+    services: "toolchain"
+  {{- if $add_dev_prometheus_annotations  }}
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/path: "/metricsz"
+    prometheus.io/port: "8010"
+  {{ end }}  
+spec:
+  selector:
+    app: {{ $name }}
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 8000
+  - name: metrics
+    protocol: TCP
+    port: 8010
+  - name: checks
+    protocol: TCP
+    port: 8020
+  - name: nginx-metrics
+    protocol: TCP
+    port: 9113
+  type: ClusterIP
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ $name }}
+  labels:
+    name: {{ $name }}
+    chart: {{ .Chart.Name  }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    toolchain_product:  {{ $product_name }}
+data:
+  service_config.json: |-
+    {
+      "common": {
+        "toolchain_service_type": "{{ $service_type }}",
+        "toolchain_service_location": "{{ $service_location }}",
+        "server_sentry_dsn": "{{ .Values.server_sentry_dsn }}",
+        "toolchain_env": "{{ $toolchain_env }}"
+      },
+      "app": {{ tpl (.Values.config | merge .Values.extra_config |  toJson ) . }}
+    }
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $name }}
+  labels:
+    app: {{ $name }}
+    chart: {{ .Chart.Name  }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    toolchain_product:  {{ $product_name }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: {{ $name }}
+  template:
+    metadata:
+      name: {{ $name }}
+      labels:
+        app: {{ $name }}
+        toolchain_service_type: {{ $service_type }}
+        toolchain_product:  {{ $product_name }}
+        chart: {{ .Chart.Name  }}
+        release: {{ .Release.Name }}
+        heritage: {{ .Release.Service }}
+        # Used the monitor label is used by PodMonitor to select pods to monitor
+        # see prod/helm/observability/monitoring/README.md for more info.
+        monitor: "true"
+        services: "toolchain"
+      annotations:
+        {{- if .Values.dbs }}
+        toolchain.com/databases: {{ .Values.dbs | join "," }}
+        {{- end }}
+    spec:
+      {{- if $service_account_name }}
+      serviceAccountName: {{ $service_account_name }}
+      {{ end }}
+      volumes:
+      {{- if .Values.serviceExtraVolumes  }}{{ toYaml .Values.serviceExtraVolumes | trim | nindent 6 }}{{ end }}
+      - name: staticfiles
+        emptyDir: {}
+      - name: config-volume
+        configMap:
+          name: {{ $name }}
+      - name: prometheus-metrics-volume
+        emptyDir: {}
+      {{- range $secrets }}
+      # A volume for each secret.
+      - name: {{ . }}
+        secret:
+          secretName: {{ . }}
+      {{- end }}
+      nodeSelector:
+        {{ .Values.service_node_selector }}
+      {{- if .Values.has_static_files }}
+      initContainers:
+      - name: copy-staticfiles
+        image: {{ .gunicorn_image }}
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - name: staticfiles
+          mountPath: /staticfiles_dst
+        # Copy the static files baked into the gunicorn image at /staticfiles into the volume,
+        # so that the nginx container can mount it.
+        command: ["cp", "-rf", "/staticfiles/.", "/staticfiles_dst"]
+        args: []
+      {{- end }}
+      containers:
+      - name: nginx
+        image: {{ .nginx_image }}
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: NGINX_HOST_NAME
+          value: {{ $host_name }}
+        resources:
+          requests:
+            cpu: {{ .Values.resources.nginx.requests.cpu }}
+            memory: {{ .Values.resources.nginx.requests.memory }}
+            ephemeral-storage: {{ .Values.resources.nginx.requests.ephemeral_storage }}
+          limits:
+            cpu: {{ .Values.resources.nginx.limits.cpu }}
+            memory: {{ .Values.resources.nginx.limits.memory }}
+            ephemeral-storage: {{ .Values.resources.nginx.limits.ephemeral_storage }}
+        ports:
+          - containerPort: 8000
+            name: http
+          - containerPort: 8010
+            name: metrics
+          - containerPort: 8020
+            name: checks
+        # If readiness probes fail, Kubernetes stops routing traffic to the container.
+        readinessProbe:
+          httpGet:
+            path: {{ .Values.healthcheck_path }}
+            port: 8000
+          initialDelaySeconds: 7
+          periodSeconds: 3
+          timeoutSeconds: 1
+          successThreshold: 2  # After a failure, must succeed twice to be ready.
+        # If liveness probes fail, Kubernetes restarts the container.
+        livenessProbe:
+          httpGet:
+            path: {{ .Values.healthcheck_path }}
+            port: 8000
+          # Should be safely longer than the time an app usually takes to start up, so we
+          # don't get caught in a restart loop.
+          initialDelaySeconds: 10
+          periodSeconds: 20
+          timeoutSeconds: 1
+          successThreshold: 1  # Required value for liveness.
+        # TODO: Health endpoints that can test application health details (e.g., database availability)?
+        lifecycle:
+          # Wait 5 seconds to give a reasonable chance for the pod to be removed from all node iptables
+          # (after which no new connections will arrive), then make nginx quit gracefully, i.e., finish
+          # handling any outstanding connections.
+          preStop:
+            exec:
+              command: ["sh", "-c", "sleep 5 && /usr/sbin/nginx -s quit"]
+        volumeMounts:
+        - name: staticfiles
+          mountPath: /staticfiles
+          readOnly: true
+      - name: nginx-exporter
+        image: {{ $nginx_exporter_img }}
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: "30m"
+            memory: "64Mi"
+            ephemeral-storage: "512Mi"
+          limits:
+            cpu: "100m"
+            memory: "128Mi"
+            ephemeral-storage: "1Gi"
+        ports:
+          - containerPort: 9113
+            name: nginx-metrics
+        env:
+          # https://github.com/nginxinc/nginx-prometheus-exporter#command-line-arguments
+          - name: NGINX_RETRIES
+            value: "3"
+          - name: SCRAPE_URI
+            value: "http://127.0.0.1:8010/metricsz/nginx_basic_status"
+      - name: gunicorn
+        image: {{ .gunicorn_image }}
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: {{ .Values.resources.gunicorn.requests.cpu }}
+            memory: {{ .Values.resources.gunicorn.requests.memory }}
+            ephemeral-storage: {{ .Values.resources.gunicorn.requests.ephemeral_storage }}
+          limits:
+            cpu: {{ .Values.resources.gunicorn.limits.cpu }}
+            memory: {{ .Values.resources.gunicorn.limits.memory }}
+            ephemeral-storage: {{ .Values.resources.gunicorn.limits.ephemeral_storage }}
+        lifecycle:
+          # Wait 5 seconds to give a reasonable chance for the pod to be removed from all node iptables
+          # (after which no new connections will arrive), and then another 5 to give a reasonable chance
+          # for our service to finish handling any outstanding connections.  This will effect graceful
+          # shutdown in almost all reasonable cases in practice, without having to write graceful shutdown
+          # code in all our services.
+          # See https://freecontent.manning.com/handling-client-requests-properly-with-kubernetes/
+          preStop:
+            exec:
+              command: ["sh", "-c", "sleep 10"]
+        volumeMounts:
+        - name: prometheus-metrics-volume
+          mountPath: /prometheus-metrics
+        - name: config-volume
+          mountPath: /etc/config
+        {{- if .Values.gunicornExtraVolumeMounts }}{{ toYaml .Values.gunicornExtraVolumeMounts | trim | nindent 8 }}{{ end }}
+        {{- range $secrets }}
+        # Mount every secret at /secrets/<name_of_secret>.
+        - name: {{ . }}
+          mountPath: /secrets/{{ . }}
+          readOnly: true
+        {{- end }}
+        env:
+        - name: prometheus_multiproc_dir
+          value: /prometheus-metrics
+        - name: TOOLCHAIN_ENV
+          value: {{ $toolchain_env }}
+        - name: K8S_NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: K8S_POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: K8S_POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: K8S_POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+      {{- if .Values.extraContainers }}{{ toYaml .Values.extraContainers | trim | nindent 6 }}{{ end }}
+{{- end -}}
+{{- end -}}

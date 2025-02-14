@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BreadCrumbs /> should render the component 1`] = `
+<DocumentFragment>
+  <nav
+    aria-label="breadcrumb"
+    class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-1g0lp15-MuiTypography-root-MuiBreadcrumbs-root"
+  >
+    <ol
+      class="MuiBreadcrumbs-ol css-4pdmu4-MuiBreadcrumbs-ol"
+    >
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <a
+              color="inherit"
+              href="/organizations/ToolchainLabs/"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-x1nkjx-MuiTypography-root"
+                >
+                  ToolchainLabs
+                </p>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-a1vg0r-MuiSvgIcon-root"
+                  data-testid="ChevronRightIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <a
+              color="inherit"
+              href="/organizations/ToolchainLabs/repos/Buildsense/builds/?user=me"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-x1nkjx-MuiTypography-root"
+                >
+                  Buildsense
+                </p>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-a1vg0r-MuiSvgIcon-root"
+                  data-testid="ChevronRightIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </nav>
+</DocumentFragment>
+`;

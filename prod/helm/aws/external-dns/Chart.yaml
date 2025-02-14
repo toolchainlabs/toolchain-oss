@@ -1,0 +1,12 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+appVersion: 0.13.4
+description: Configure External-DNS deployment on prod clusters
+name: external-dns
+version: 2.1.0
+dependencies:
+- name: external-dns
+  version: 1.12.2
+  repository: https://kubernetes-sigs.github.io/external-dns/

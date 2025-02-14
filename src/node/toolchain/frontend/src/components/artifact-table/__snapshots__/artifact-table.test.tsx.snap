@@ -1,0 +1,274 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArtifactTable /> should render the component 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-cqph87-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-x9mjaw-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item css-1g4wkug-MuiGrid-root"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle1 css-mzn4b3-MuiTypography-root"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 tss-11quiee-MUIDataTable-paper tss-1x5mjc5-MUIDataTable-root css-1wr1dl7-MuiPaper-root"
+        >
+          <div
+            class="tss-1vsygk-MUIDataTableFilterList-root"
+          />
+          <div
+            class="tss-1cdcmys-MUIDataTable-responsiveBase"
+            style="position: relative; height: auto;"
+          >
+            <table
+              class="MuiTable-root tss-900muf-MUIDataTable-tableRoot css-31ecur-MuiTable-root"
+              role="grid"
+              tabindex="0"
+            >
+              <caption
+                class="tss-1opebqo-MUIDataTable-caption"
+              />
+              <thead
+                class="MuiTableHead-root tss-1937jnc-MUIDataTableHead-main css-15wwp11-MuiTableHead-root"
+              >
+                <tr
+                  class="MuiTableRow-root MuiTableRow-head tss-1832qqn-MUIDataTableHeadRow-root css-pkh10g-MuiTableRow-root"
+                >
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium tss-10syd3x-MUIDataTableHeadCell-root tss-gm6zfk-MUIDataTableHeadCell-fixedHeader css-15b2l11-MuiTableCell-root"
+                    data-colindex="0"
+                    data-tableid="0"
+                    scope="col"
+                  >
+                    <span
+                      class="tss-178gktx-MUIDataTableHeadCell-contentWrapper"
+                    >
+                      <button
+                        aria-label="Sort"
+                        class="MuiButtonBase-root MuiButton-root MuiButton-Primary MuiButton-sizeMedium MuiButton-SizeMedium MuiButton-root MuiButton-Primary MuiButton-sizeMedium MuiButton-SizeMedium tss-1fbujeu-MUIDataTableHeadCell-toolButton css-i91zku-MuiButtonBase-root-MuiButton-root"
+                        data-mui-internal-clone-element="true"
+                        data-testid="headcol-0"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <div
+                          class="tss-1h9t3sl-MUIDataTableHeadCell-sortAction"
+                        >
+                          <div
+                            class="tss-1akey0g-MUIDataTableHeadCell-data"
+                          >
+                            <span
+                              class="MuiTypography-root MuiTypography-overline css-lje11y-MuiTypography-root"
+                            >
+                              COUNTER
+                            </span>
+                          </div>
+                          <div
+                            class="tss-1h9t3sl-MUIDataTableHeadCell-sortAction"
+                          >
+                            <span
+                              class="MuiButtonBase-root MuiTableSortLabel-root tss-1ntzg4z-MUIDataTableHeadCell-sortLabelRoot css-1lsft91-MuiButtonBase-root-MuiTableSortLabel-root"
+                              role="button"
+                              tabindex="-1"
+                            />
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium tss-10syd3x-MUIDataTableHeadCell-root tss-gm6zfk-MUIDataTableHeadCell-fixedHeader css-15b2l11-MuiTableCell-root"
+                    data-colindex="1"
+                    data-tableid="0"
+                    scope="col"
+                  >
+                    <span
+                      class="tss-178gktx-MUIDataTableHeadCell-contentWrapper"
+                    >
+                      <button
+                        aria-label="Sort"
+                        class="MuiButtonBase-root MuiButton-root MuiButton-Primary MuiButton-sizeMedium MuiButton-SizeMedium MuiButton-root MuiButton-Primary MuiButton-sizeMedium MuiButton-SizeMedium tss-1fbujeu-MUIDataTableHeadCell-toolButton css-i91zku-MuiButtonBase-root-MuiButton-root"
+                        data-mui-internal-clone-element="true"
+                        data-testid="headcol-1"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <div
+                          class="tss-1h9t3sl-MUIDataTableHeadCell-sortAction"
+                        >
+                          <div
+                            class="tss-1akey0g-MUIDataTableHeadCell-data"
+                          >
+                            <span
+                              class="MuiTypography-root MuiTypography-overline css-lje11y-MuiTypography-root"
+                            >
+                              VALUE
+                            </span>
+                          </div>
+                          <div
+                            class="tss-1h9t3sl-MUIDataTableHeadCell-sortAction"
+                          >
+                            <span
+                              class="MuiButtonBase-root MuiTableSortLabel-root tss-1ntzg4z-MUIDataTableHeadCell-sortLabelRoot css-1lsft91-MuiButtonBase-root-MuiTableSortLabel-root"
+                              role="button"
+                              tabindex="-1"
+                            />
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+              >
+                <tr
+                  class="MuiTableRow-root MuiTableRow-hover tss-mwfche-MUIDataTableBodyRow-root undefined tss-mwfche-MUIDataTableBodyRow-root css-pkh10g-MuiTableRow-root"
+                  data-testid="MUIDataTableBodyRow-0"
+                  id="MUIDataTableBodyRow-0-0"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium tss-1qtl85h-MUIDataTableBodyCell-root css-1wjrcoi-MuiTableCell-root"
+                    data-colindex="0"
+                    data-tableid="0"
+                    data-testid="MuiDataTableBodyCell-0-0"
+                  >
+                    <div
+                      class="tss-1qtl85h-MUIDataTableBodyCell-root"
+                    >
+                      Some metric one
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium tss-1qtl85h-MUIDataTableBodyCell-root css-1wjrcoi-MuiTableCell-root"
+                    data-colindex="1"
+                    data-tableid="0"
+                    data-testid="MuiDataTableBodyCell-1-0"
+                  >
+                    <div
+                      class="tss-1qtl85h-MUIDataTableBodyCell-root"
+                    >
+                      10
+                    </div>
+                  </td>
+                </tr>
+                <tr
+                  class="MuiTableRow-root MuiTableRow-hover tss-mwfche-MUIDataTableBodyRow-root undefined tss-mwfche-MUIDataTableBodyRow-root css-pkh10g-MuiTableRow-root"
+                  data-testid="MUIDataTableBodyRow-1"
+                  id="MUIDataTableBodyRow-0-1"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium tss-1qtl85h-MUIDataTableBodyCell-root css-1wjrcoi-MuiTableCell-root"
+                    data-colindex="0"
+                    data-tableid="0"
+                    data-testid="MuiDataTableBodyCell-0-1"
+                  >
+                    <div
+                      class="tss-1qtl85h-MUIDataTableBodyCell-root"
+                    >
+                      Some metric two
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium tss-1qtl85h-MUIDataTableBodyCell-root css-1wjrcoi-MuiTableCell-root"
+                    data-colindex="1"
+                    data-tableid="0"
+                    data-testid="MuiDataTableBodyCell-1-1"
+                  >
+                    <div
+                      class="tss-1qtl85h-MUIDataTableBodyCell-root"
+                    >
+                      20
+                    </div>
+                  </td>
+                </tr>
+                <tr
+                  class="MuiTableRow-root MuiTableRow-hover tss-mwfche-MUIDataTableBodyRow-root undefined tss-mwfche-MUIDataTableBodyRow-root css-pkh10g-MuiTableRow-root"
+                  data-testid="MUIDataTableBodyRow-2"
+                  id="MUIDataTableBodyRow-0-2"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium tss-1qtl85h-MUIDataTableBodyCell-root css-1wjrcoi-MuiTableCell-root"
+                    data-colindex="0"
+                    data-tableid="0"
+                    data-testid="MuiDataTableBodyCell-0-2"
+                  >
+                    <div
+                      class="tss-1qtl85h-MUIDataTableBodyCell-root"
+                    >
+                      Some metric three
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium tss-1qtl85h-MUIDataTableBodyCell-root css-1wjrcoi-MuiTableCell-root"
+                    data-colindex="1"
+                    data-tableid="0"
+                    data-testid="MuiDataTableBodyCell-1-2"
+                  >
+                    <div
+                      class="tss-1qtl85h-MUIDataTableBodyCell-root"
+                    >
+                      30
+                    </div>
+                  </td>
+                </tr>
+                <tr
+                  class="MuiTableRow-root MuiTableRow-hover tss-mwfche-MUIDataTableBodyRow-root undefined tss-mwfche-MUIDataTableBodyRow-root css-pkh10g-MuiTableRow-root"
+                  data-testid="MUIDataTableBodyRow-3"
+                  id="MUIDataTableBodyRow-0-3"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium tss-1qtl85h-MUIDataTableBodyCell-root css-1wjrcoi-MuiTableCell-root"
+                    data-colindex="0"
+                    data-tableid="0"
+                    data-testid="MuiDataTableBodyCell-0-3"
+                  >
+                    <div
+                      class="tss-1qtl85h-MUIDataTableBodyCell-root"
+                    >
+                      Some metric four
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium tss-1qtl85h-MUIDataTableBodyCell-root css-1wjrcoi-MuiTableCell-root"
+                    data-colindex="1"
+                    data-tableid="0"
+                    data-testid="MuiDataTableBodyCell-1-3"
+                  >
+                    <div
+                      class="tss-1qtl85h-MUIDataTableBodyCell-root"
+                    >
+                      40
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            aria-live="polite"
+            class="tss-hwdp7s-MUIDataTable-liveAnnounce"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,28 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "workflow/base.html" %}
+
+{% block content %}
+  <h2>WorkUnit Details for {{ object.__class__.__name__ }} {{ object.pk }}</h2>
+  {% if object.work_unit.state == object.work_unit.SUCCEEDED  %}
+    <h4>As of {{ object.work_unit.succeeded_at|datetime_fmt_std() }}</h4>
+  {% endif %}
+
+  <table class="table">
+    {% block all_workunit_detail_content_pre_trs %}
+    {% endblock all_workunit_detail_content_pre_trs %}
+    {% if object.work_unit.state == object.work_unit.SUCCEEDED %}
+      {% block successful_workunit_detail_content_trs %}
+      {% endblock successful_workunit_detail_content_trs %}
+    {% else %}
+      <tr><td colspan="2" class="workunit-never-successful-msg">This WorkUnit has not run successfully.</td></tr>
+      {% block unsuccessful_workunit_detail_content_trs %}
+      {% endblock unsuccessful_workunit_detail_content_trs %}
+    {% endif %}
+    {% block all_workunit_detail_content_post_trs %}
+    {% endblock all_workunit_detail_content_post_trs %}
+  </table>
+{% endblock content %}

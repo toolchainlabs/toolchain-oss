@@ -1,0 +1,33 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{ if .Values.features.monitorToolchainPythonServices }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  namespace: monitoring
+  name: monitor-toolchain-services
+  labels:
+    services: toolchain-monitoring
+spec:
+  targetLabels:
+    - app
+    - toolchain_service_type
+    - toolchain_product
+    - services
+  namespaceSelector:
+     matchNames:
+      - prod
+      - staging
+  selector:
+    matchLabels:
+      monitor: "true"
+      services: "toolchain"
+  endpoints:
+  - port: nginx-metrics
+    path: "/metrics"
+    interval: 10s
+  - port: metrics
+    path: "/metricsz"
+    interval: 10s
+{{ end }}

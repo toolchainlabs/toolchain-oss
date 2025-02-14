@@ -1,0 +1,62 @@
+[
+    {
+      "address": "a",
+      "dependencies": []
+    },
+    {
+      "address": "a/aa",
+      "dependencies": ["a/ab/aba", "b/bb", "b/bc"]
+    },
+    {
+      "address": "a/ab",
+      "dependencies": []
+    },
+    {
+      "address": "a/ab/aba",
+      "dependencies": []
+    },
+    {
+      "address": "a/ab/abb",
+      "dependencies": []
+    },
+    {
+      "address": "a/ab/abb/abba",
+      "dependencies": ["c/ca/caa"]
+    },
+    {
+      "address": "a/ac",
+      "dependencies": []
+    },
+    {
+      "address": "b",
+      "dependencies": []
+    },
+    {
+      "address": "b/ba",
+      "dependencies": ["a/ac", "b/bb"]
+    },
+    {
+      "address": "b/bb",
+      "dependencies": ["b/bc", "c/ca/caa", "c/ca/cab"]
+    },
+    {
+      "address": "b/bc",
+      "dependencies": []
+    },
+    {
+      "address": "c",
+      "dependencies": []
+    },
+    {
+      "address": "c/ca",
+      "dependencies": []
+    },
+    {
+      "address": "c/ca/caa",
+      "dependencies": []
+    },
+    {
+      "address": "c/ca/cab",
+      "dependencies": []
+    }
+  ]

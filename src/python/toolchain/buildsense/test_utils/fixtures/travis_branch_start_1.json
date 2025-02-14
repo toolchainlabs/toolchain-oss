@@ -1,0 +1,38 @@
+{
+    "ci_env": {
+        "TRAVIS_BRANCH": "festivus",
+        "TRAVIS_APP_HOST": "build.travis-ci.com",
+        "TRAVIS_BUILD_ID": "184301399",
+        "TRAVIS_BUILD_DIR": "/home/travis/build/toolchainlabs/example-python",
+        "TRAVIS_BUILD_NUMBER": "92",
+        "TRAVIS": "true",
+        "TRAVIS_BUILD_STAGE_NAME": "",
+        "TRAVIS_ARCH": "amd64",
+        "TRAVIS_APT_PROXY": "http://build-cache.travisci.net",
+        "TRAVIS_ALLOW_FAILURE": ""
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "allow_external_binary_tool_downloads": true,
+            "build_file_prelude_globs": [],
+            "ca_certs_path": null,
+            "binaries_path_by_id": {},
+            "binaries_fetch_timeout_secs": 30
+        }
+    },
+    "run_info": {
+        "buildroot": "/home/travis/build/toolchainlabs/example-python",
+        "timestamp": "1600127893.748846",
+        "datetime": "Monday Sep 14, 2020 23:58:13",
+        "machine": "travis-job-3942f4cf-22e3-4c2d-8a1d-133ee9ec3a1b",
+        "version": "2.0.0a3",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.0.0a3 awslambda helloworld:helloworld-awslambda",
+        "specs_from_command_line": [
+            "helloworld:helloworld-awslambda"
+        ],
+        "path": "/home/travis/build/toolchainlabs/example-python",
+        "id": "pants_run_2020_09_14_23_58_13_748_9e11cd329da54ca9b6aea7ceb0e3addb",
+        "user": "travis",
+        "outcome": "NOT_AVAILABLE"
+    }
+}

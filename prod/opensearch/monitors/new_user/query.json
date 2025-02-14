@@ -1,0 +1,67 @@
+{
+    "size": 10,
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "range": {
+                        "@timestamp": {
+                            "from": "now-32m",
+                            "to": null,
+                            "include_lower": true,
+                            "include_upper": true,
+                            "boost": 1
+                        }
+                    }
+                },
+                {
+                    "match_phrase": {
+                        "kubernetes.container_name": {
+                            "query": "gunicorn",
+                            "slop": 0,
+                            "zero_terms_query": "NONE",
+                            "boost": 1
+                        }
+                    }
+                },
+                {
+                    "match_phrase": {
+                        "kubernetes.labels.app": {
+                            "query": "users-ui",
+                            "slop": 0,
+                            "zero_terms_query": "NONE",
+                            "boost": 1
+                        }
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "multi_match": {
+                        "query": "Create new user",
+                        "fields": [],
+                        "type": "phrase",
+                        "operator": "OR",
+                        "slop": 0,
+                        "prefix_length": 0,
+                        "max_expansions": 50,
+                        "lenient": true,
+                        "zero_terms_query": "NONE",
+                        "auto_generate_synonyms_phrase_query": true,
+                        "fuzzy_transpositions": true,
+                        "boost": 1
+                    }
+                }
+            ],
+            "adjust_pure_negative": true,
+            "boost": 1
+        }
+    },
+    "_source": {
+        "includes": [
+            "@timestamp",
+            "log"
+        ],
+        "excludes": []
+    }
+}

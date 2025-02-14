@@ -1,0 +1,34 @@
+[package]
+name = "proxy"
+version = "0.0.1"
+edition = "2021"
+publish = false
+
+[dependencies]
+arc-swap = "1.6"
+async-stream = "0.3"
+bytes = "1.4"
+clap = "4"
+either = "1.8"
+execution_util = { path = "../execution_util" }
+futures = "0.3"
+ginepro = "0.6"
+grpc_util = { path = "../grpc_util" }
+http = "0.2"
+itertools = "0.10"
+log = "0.4"
+metrics = "0.21"
+metrics-exporter-prometheus = "0.12"
+parking_lot = "0.12"
+protos = { path = "../protos" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+tokio = { version = "1.27", features = ["fs", "macros", "net", "rt-multi-thread", "sync", "time"] }
+tonic = { version = "0.9", features = ["transport", "codegen", "tls", "tls-roots"] }
+tower = "0.4"
+tower-http = { version = "0.4", features = ["metrics", "sensitive-headers"] }
+tracing = "0.1"
+
+[dev-dependencies]
+hyper = "0.14"

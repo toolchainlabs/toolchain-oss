@@ -1,0 +1,17 @@
+# This file is read indirectly via direnv: https://direnv.net/.
+
+TOOLCHAIN_BREW="${HOME}/.toolchain/homebrew/bin"
+
+# Use toolchain specific homebrew binaries.
+PATH_add "${TOOLCHAIN_BREW}"
+read -r TOOLCHAIN_SSL TOOLCHAIN_ZLIB TOOLCHAIN_SQLITE TOOLCHAIN_LEVELDB <<<$(brew --prefix openssl zlib sqlite leveldb | tr '\n' ' ')
+
+# Set LDFLAGS and CPPFLAGS to stop the missing header files error when pants bootstraps openssl.
+export LDFLAGS="-L${TOOLCHAIN_SSL}/lib -L${TOOLCHAIN_ZLIB}/lib -L${TOOLCHAIN_SQLITE}/lib -L${TOOLCHAIN_LEVELDB}/lib"
+export CPPFLAGS="-I${TOOLCHAIN_SSL}/include -I${TOOLCHAIN_ZLIB}/include -I${TOOLCHAIN_SQLITE}/include -I${TOOLCHAIN_LEVELDB}/include"
+
+# We add -mmacosx-version-min=10.7 to CXXFLAGS so plyvel can be installed.
+# See: https://github.com/wbolster/plyvel/issues/66.
+export CXXFLAGS="${CXXFLAGS} -mmacosx-version-min=10.7"
+
+export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} ${TOOLCHAIN_ZLIB}/lib/pkgconfig ${TOOLCHAIN_SQLITE}/lib/pkgconfig"

@@ -1,0 +1,31 @@
+{
+    "id": "cus_Lcef9euUopSu9p",
+    "object": "customer",
+    "address": null,
+    "balance": 0,
+    "created": 1651598252,
+    "currency": "usd",
+    "default_currency": "usd",
+    "default_source": null,
+    "delinquent": false,
+    "description": null,
+    "discount": null,
+    "email": null,
+    "invoice_prefix": "8B76B3B8",
+    "invoice_settings": {
+      "custom_fields": null,
+      "default_payment_method": null,
+      "footer": null,
+      "rendering_options": null
+    },
+    "livemode": false,
+    "metadata": {
+      "order_id": "6735"
+    },
+    "name": "Seinfeld Fake Customer",
+    "phone": null,
+    "preferred_locales": [],
+    "shipping": null,
+    "tax_exempt": "none",
+    "test_clock": null
+  }

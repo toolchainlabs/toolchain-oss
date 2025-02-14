@@ -1,0 +1,30 @@
+{#
+Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h2>Installed {{ deploy_result.name }} into {{ deploy_target }}</h2>
+  <h4>Deployer: <b>{{ deployer }}</b></h4>
+  <ul>
+    {% for result in deploy_result.charts %}
+      <li>Chart: <b>{{ result.chart_name }}</b> version: {{ result.chart_version }} Success: {{ result.success }} Latency: {{ result.install_latency }}
+        {% if deploy_result.components %}
+        <ul>
+          {% for component in result.components %}
+            <li>Component: <b>{{ component.name }}</b> revision: {{ component.revision }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  <p>
+  <br />
+  <p>That is all.</p>
+</body>
+

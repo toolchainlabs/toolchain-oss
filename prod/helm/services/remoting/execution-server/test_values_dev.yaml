@@ -1,0 +1,10 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+toolchain_env: toolchain_dev
+replicas: 1
+image_registry: example
+global:
+  region: us-east-1
+image_rev:
+  us-east-1: ovaltine
+cas_address: "grpc:://example.toolchain.com:50051"

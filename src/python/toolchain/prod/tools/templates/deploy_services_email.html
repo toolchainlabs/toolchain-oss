@@ -1,0 +1,29 @@
+{#
+Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h2>Installed {{ deploy_result.count }} services into {{ deploy_target }}</h2>
+  <h4>Deployer: <b>{{ deployer  }}</b></h4>
+  <ul>
+    {% for result in deploy_result.services %}
+      <li>Service: <b>{{ result.service_name }}</b> revision: {{ result.revision }} Success: {{ result.success }} Tests: {{ result.tests.value }}  Latency: {{ result.install_latency }}
+        {% if result.changes %}
+          <p>Deployed changes: </p>
+          <ul>
+            {% for msg, link in result.changes %}
+              <li>{% if link %}<a href="{{ link }}">{{ msg }}</a>{% else %}{{ msg }}{% endif %}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  <br />
+  <p>That is all.</p>
+</body>

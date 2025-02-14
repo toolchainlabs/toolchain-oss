@@ -1,0 +1,45 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: servicerouter
+dbs: [users]
+secrets:
+- django-secret-key
+- source-maps-private-key
+- jwt-auth-secret-key
+service_type: web-ui
+toolchain_product_name: servicerouter
+host_name: app.toolchain.com
+iam_service_role_arn: null
+service_location: edge
+gunicorn_image_rev:
+  us-east-1: prod-2023-04-17.13-57-14-370f2370ad1b
+resources:
+  gunicorn:
+    requests:
+      cpu: 150m
+      memory: 512Mi
+      ephemeral_storage: 1Gi
+    limits:
+      ephemeral_storage: 10Gi
+extra_config:
+  LOGIN_URL_HOST: app.toolchain.com
+ingress:
+  name: servicerouter-ingress
+  enabled: false
+  external_ingress_sg_id:  # Gets overwritten by install_service_prod.py
+    us-east-1: null
+  ssl_certificate_arn:  # Gets overwritten by install_service_prod.py
+    us-east-1: null
+  healthcheck_path: /healthz
+  rules:
+  - host: app.toolchain.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: servicerouter
+            port:
+              number: 80

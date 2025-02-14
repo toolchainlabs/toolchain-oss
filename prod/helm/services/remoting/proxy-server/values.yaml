@@ -1,0 +1,76 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+replicas: 1
+image_registry: 283194185447.dkr.ecr.us-east-1.amazonaws.com
+global:
+  region: us-east-1
+image_rev:
+  us-east-1: prod-2023-03-27.14-47-50-20121c7720cb
+iam_service_role_arn: null # populated by install script
+# Name of the Secrets containing the JWT key to use for authenticating requests.
+jwtSecrets:
+- jwk-access-token-keys
+auth_token_mapping:
+  s3_bucket: null # populated by install script (resource_resolver)
+  s3_path: null # populated by install script (resource_resolver)
+  refresh_frequency_s: 120 # for now, 2m is more than enough since the file in s3 is static.
+request_log:
+  deliver_stream_name: null # populated by install script (resource_resolver)
+
+proxy_backends:
+  storage:
+    host: null  # populated by install script (resource_resolver)
+
+proxy_per_instance_backends: {}  # populated by install script (resource_resolver)
+
+tests:
+  enabled: true
+  setup_jwt_keys:
+    image_rev:
+      us-east-1: prod-2023-03-27.14-47-50-20121c7720cb # Filled by install script
+  casload:
+    repo: toolchainlabs/remote-api-tools-casload
+    tag: nightly
+
+server_sentry_dsn: null  # Filled by install script
+
+grpc:
+  maxConcurrentStreams: 1000
+  concurrencyLimitPerConnection: 64
+
+backend_timeouts:
+  get_action_result: 10000 # milliseconds
+
+workers_ingress:
+  host: workers.toolchain.com
+  cert_arn: null
+
+workers_auth_scheme: auth_token
+
+ingress:
+  name: remoting-proxy-server
+  # Disable ingress by default so it doesn't get enabled in dev. the install prod script will enable it and insert the security group and cert ARN
+  enabled: false
+  ssl_redirect_enabled: false
+  scheme: internet-facing
+  backend_protocol_version: GRPC
+  listen_ports: '[{"HTTPS": 443}]'
+  extra_attributes: routing.http2.enabled=true,idle_timeout.timeout_seconds=900
+  external_ingress_sg_id:  # Gets overwritten by install_service_prod.py
+    us-east-1: null
+  ssl_certificate_arn:  # Gets overwritten by install_service_prod.py
+    us-east-1: null
+  healthcheck_path: /grpc.health.v1.Health/Check
+  healthcheck_success_codes: '12' # in gRPC mode, the success codes must be a gRPC status value. so GRPC 12 instead of HTTP 200
+  rules:
+  - host: cache.toolchain.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: remoting-proxy-server
+            port:
+              number: 8980

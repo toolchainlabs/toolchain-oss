@@ -1,0 +1,74 @@
+name: buildbox-binaries-release
+on:
+  workflow_dispatch: # Allow running on-demand
+  push:
+    tags:
+      - remote-exec-worker-v*
+jobs:
+  build-and-publish-release:
+    # see: https://github.com/actions/runner-images/tree/main/images/linux https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#choosing-github-hosted-runners
+    runs-on: ubuntu-22.04
+    permissions:
+      # https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#adding-permissions-settings
+      id-token: write 
+      contents: read 
+    env:
+      DOCKER_BUILDKIT: "1"
+      AWS_BUCKET: "binaries.toolchain.com"
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2.0.0
+        with:
+          # see: prod/terraform/resources/global/iam/github_actions_publish_binaries.tf
+          role-to-assume: arn:aws:iam::283194185447:role/github-actions-for-toolchain-repo
+          aws-region: us-east-1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2.5.0
+      - uses: actions/checkout@v3
+        with:
+          lfs: false
+      - name: Set env vars
+        run: |
+          source ./src/sh/util/versions.sh
+          echo VERSION_TAG="$(current_tag)" >> ${GITHUB_ENV}
+      - uses: actions-rs/toolchain@v1.0.7
+        with:
+          toolchain: 1.68.0
+      - name: Rust/Cargo cache
+        uses: actions/cache@v3
+        with:
+          key: rust-cache-v2-${{ hashFiles('src/rust/Cargo.lock') }}
+          # See: https://doc.rust-lang.org/cargo/guide/cargo-home.html#caching-the-cargo-home-in-ci
+          path: |
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+      - name: Build rust binary for remote exec worker
+        working-directory: src/rust
+        run: cargo build --locked  --release --manifest-path="worker/Cargo.toml"  --target-dir=./target 
+      - name: Copy rust binary
+        run: cp src/rust/target/release/worker  prod/docker/remoting/worker_scie/
+      - name: Prep destination directory
+        run: mkdir -p dist/worker-scie
+      - name: Build remote worker scie in docker
+        uses: docker/build-push-action@v4
+        with:
+          context: prod/docker/remoting/worker_scie
+          file: prod/docker/remoting/worker_scie/Dockerfile
+          platforms: "linux/amd64"
+          push: false
+          load: true
+          tags: worker-scie:latest
+          # https://docs.docker.com/build/ci/github-actions/examples/#github-cache
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - name: copy remoting worker binary out of the container
+        # based on https://github.com/addnab/docker-run-action/blob/main/entrypoint.sh
+        run: |
+          docker run -v "/var/run/docker.sock":"/var/run/docker.sock" --mount type=bind,source="$(pwd)/dist/worker-scie",target=/dist -t worker-scie:latest cp /build/remote-workers /dist/
+      - name: generate sha256sum
+        run: sha256sum dist/worker-scie/remote-workers > dist/worker-scie/sha256.txt
+      - name: upload to s3 
+        run: |
+          aws s3 cp --acl=public-read dist/worker-scie/sha256.txt "s3://${AWS_BUCKET}/remote-workers/gha/${VERSION_TAG}/"
+          aws s3 cp --acl=public-read dist/worker-scie/remote-workers "s3://${AWS_BUCKET}/remote-workers/gha/${VERSION_TAG}/"

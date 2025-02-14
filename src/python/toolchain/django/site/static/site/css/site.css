@@ -1,0 +1,182 @@
+/*
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+*/
+
+body {
+  padding-top: 5rem;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.hidden {
+  display: none;
+}
+
+.content {
+  margin: auto;
+  max-width: 1200px;
+}
+
+.checkmark:before {
+  content: '\2713';
+  color: #5cb85c;
+}
+
+.xmark:before {
+  content: '\2718';
+  color: #a94442;
+}
+
+.hourglass:before {
+  content: '\231b';
+  color: #8a6d3b;
+}
+
+.login-block {
+  margin-top: 20px;
+}
+
+.login-text {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+img.avatar-img-small {
+  height: 32px;
+  width: 32px;
+}
+
+.post-fields-block {
+  font-size: 12px;
+}
+
+.form {
+  padding-top: 15px;
+  text-align: left;
+}
+
+.form .form-heading {
+  margin-bottom: 10px;
+}
+
+.form .form-error-container {
+  margin: 0;
+  padding: 10px 0 10px 0;
+}
+
+.form .form-error {
+  margin: 0;
+  padding: 0;
+  color: #a94442;
+  vertical-align: middle;
+}
+
+.form .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form .form-control:focus {
+  z-index: 2;
+}
+
+.form-button-container {
+  padding-top: 10px;
+}
+
+.sql {
+  font-weight: bold;
+  color: darkgreen;
+  font-family: "Courier New", Courier, monospace;
+}
+
+td {
+  vertical-align: top;
+}
+
+table.dbz-backends-table {
+  font-size: 12px;
+  text-align: left;
+}
+
+table.dbz-backends-table .pid { width: 50px; }
+table.dbz-backends-table .datname { width: 80px; }
+table.dbz-backends-table .client { width: 80px; }
+table.dbz-backends-table .user { width: 80px; }
+table.dbz-backends-table .state { width: 80px; }
+table.dbz-backends-table .backend_start { width: 80px; }
+table.dbz-backends-table .xact_start { width: 80px; }
+table.dbz-backends-table .query_start { width: 80px; }
+
+table.dbz-backends-table .state-idle .query code {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+table.dbz-backends-table .state-idle .query_start {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+code {
+  color: darkgreen;
+  background-color: inherit;
+}
+
+.site-message {
+  padding-top: 20px;
+  margin: auto;
+  width: 600px;
+}
+
+table.dbz-locks-table .pid { width: 50px; }
+table.dbz-locks-table .datname { width: 80px; }
+table.dbz-locks-table .locktype { width: 100px; }
+table.dbz-locks-table .mode { width: 150px; }
+table.dbz-locks-table .granted { width: 80px; }
+
+table.dbz-blocked-locks-table .pid { width: 50px; }
+table.dbz-blocked-locks-table .statement { width: 550px; }
+
+table.dbz-bgwriter-table {
+  table-layout: fixed;
+  width: auto;
+}
+
+table.dbz-bgwriter-table td.bgwriter-key {
+  width: 200px;
+}
+
+table.dbz-bgwriter-table td.bgwriter-value {
+  width: 400px;
+}
+
+.explain-form-container {
+  width: 800px;
+  padding: 15px;
+}
+
+.explain-form-container textarea {
+  width: 800px;
+  height: 200px;
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: darkgreen;
+}
+
+#explain-tree {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  white-space: pre;
+}
+
+#explain-error {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: #a94442;
+  white-space: pre;
+}

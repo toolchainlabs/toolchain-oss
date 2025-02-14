@@ -1,0 +1,2317 @@
+{
+    "ci_env": {
+        "CIRCLECI": "true",
+        "CIRCLE_BRANCH": "dependabot/cargo/src/rust/console-subscriber-0.1.5",
+        "CIRCLE_BUILD_NUM": "167826",
+        "CIRCLE_BUILD_URL": "https://circleci.com/gh/toolchainlabs/toolchain/167826",
+        "CIRCLE_COMPARE_URL": "",
+        "CIRCLE_INTERNAL_CONFIG": "/.circleci-runner-config.json",
+        "CIRCLE_INTERNAL_SCRATCH": "/tmp/circleci-4095288832",
+        "CIRCLE_INTERNAL_TASK_DATA": "/tmp/.circleci-task-data-627ab349375c7c761939a329-0-build",
+        "CIRCLE_JOB": "build-with-pants",
+        "CIRCLE_NODE_INDEX": "0",
+        "CIRCLE_NODE_TOTAL": "1",
+        "CIRCLE_PREVIOUS_BUILD_NUM": "167825",
+        "CIRCLE_PROJECT_REPONAME": "toolchain",
+        "CIRCLE_PROJECT_USERNAME": "toolchainlabs",
+        "CIRCLE_PULL_REQUEST": "https://github.com/toolchainlabs/toolchain/pull/13619",
+        "CIRCLE_PULL_REQUESTS": "https://github.com/toolchainlabs/toolchain/pull/13619",
+        "CIRCLE_REPOSITORY_URL": "git@github.com:toolchainlabs/toolchain.git",
+        "CIRCLE_SHA1": "0e77182d699944d91e62b29367f4710b93221cbb",
+        "CIRCLE_SHELL_ENV": "/tmp/.bash_env-627ab349375c7c761939a329-0-build",
+        "CIRCLE_STAGE": "build-with-pants",
+        "CIRCLE_USERNAME": "",
+        "CIRCLE_WORKFLOW_ID": "4aa251c0-21d8-4ae9-a998-72f892081a13",
+        "CIRCLE_WORKFLOW_JOB_ID": "c5f40f35-fb01-473d-b992-0a7454e0e978",
+        "CIRCLE_WORKFLOW_UPSTREAM_JOB_IDS": "",
+        "CIRCLE_WORKFLOW_WORKSPACE_ID": "4aa251c0-21d8-4ae9-a998-72f892081a13",
+        "CIRCLE_WORKING_DIRECTORY": "~/project"
+    },
+    "counter_names": [
+        "local_process_total_time_run_ms",
+        "local_cache_requests",
+        "local_cache_requests_cached",
+        "local_cache_requests_uncached",
+        "local_cache_read_errors",
+        "remote_store_missing_digest",
+        "remote_store_blob_bytes_downloaded",
+        "remote_store_blob_bytes_uploaded"
+    ],
+    "counters": {
+        "local_cache_requests": 125,
+        "local_cache_requests_cached": 108,
+        "remote_cache_write_attempts": 15,
+        "remote_cache_write_successes": 9,
+        "remote_store_blob_bytes_downloaded": 4374
+    },
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 9.661160707473755
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 1039,
+        "preceding_graph_size": 253,
+        "resulting_graph_size": 12466
+    },
+    "platform": {
+        "architecture": "x86_64",
+        "cpu_count": 36,
+        "mem_bytes": 73638334464,
+        "os": "Linux",
+        "os_release": "5.13.0-1021-aws",
+        "processor": "",
+        "python_implementation": "CPython",
+        "python_version": "3.8.12"
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "local_execution_root_dir": "/tmp",
+            "local_store_dir": "/home/toolchain/.cache/pants/lmdb_store",
+            "local_store_directories_max_size_bytes": 16000000000,
+            "local_store_files_max_size_bytes": 256000000000,
+            "local_store_processes_max_size_bytes": 16000000000,
+            "local_store_shard_count": 16,
+            "log_levels_by_target": {},
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "process_execution_cache_namespace": null,
+            "process_execution_local_enable_nailgun": true,
+            "process_execution_local_parallelism": 4,
+            "process_execution_remote_parallelism": 128,
+            "pythonpath": [
+                "/home/toolchain/project/src/python"
+            ],
+            "remote_auth_plugin": "toolchain.pants.auth.plugin:toolchain_auth_plugin",
+            "remote_ca_certs_path": null,
+            "remote_cache_eager_fetch": true,
+            "remote_cache_read": true,
+            "remote_cache_read_timeout_millis": 1500,
+            "remote_cache_rpc_concurrency": 128,
+            "use_deprecated_python_macros": false,
+            "verify_config": true,
+            "watch_filesystem": true
+        },
+        "update-build-files": {
+            "check": false,
+            "fix_python_macros": false,
+            "fix_safe_deprecations": true,
+            "fmt": true,
+            "formatter": "black"
+        },
+        "version": {}
+    },
+    "run_info": {
+        "branch": "dependabot/cargo/src/rust/console-subscriber-0.1.5",
+        "buildroot": "/home/toolchain/project",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.11.0 package src/python/toolchain:toolchain-pants-plugin",
+        "computed_goals": [
+            "package"
+        ],
+        "datetime": "Tuesday May 10, 2022 18:52:46",
+        "id": "pants_run_2022_05_10_18_52_49_823_f42379adc5ce48ec82571fa0e54fb1f9",
+        "machine": "ac57398de0a2 [docker]",
+        "outcome": "SUCCESS",
+        "path": "/home/toolchain/project",
+        "revision": "0e77182d699944d91e62b29367f4710b93221cbb",
+        "specs_from_command_line": [
+            "src/python/toolchain:toolchain-pants-plugin"
+        ],
+        "timestamp": 1652208766.8669493,
+        "user": "toolchain",
+        "version": "2.11.0"
+    },
+    "targets": {
+        "src/python/toolchain:toolchain-pants-plugin": [
+            {
+                "filename": "src/python/toolchain:toolchain-pants-plugin"
+            }
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "381eead53210a8c9",
+            "name": "pants.core.goals.package.package_asset",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [],
+            "last_update": 1652208776,
+            "start_usecs": 1652208769892287,
+            "description": "`package` goal",
+            "end_usecs": 1652208776521216,
+            "counters": {
+                "remote_cache_requests_uncached": 8,
+                "local_execution_requests": 17,
+                "local_cache_requests": 125,
+                "remote_cache_write_attempts": 15,
+                "remote_cache_speculation_remote_completed_first": 1,
+                "remote_store_blob_bytes_downloaded": 4374,
+                "remote_cache_total_time_saved_ms": 1128,
+                "local_cache_requests_uncached": 17,
+                "local_process_total_time_run_ms": 4542,
+                "remote_cache_requests": 17,
+                "local_cache_requests_cached": 108,
+                "remote_cache_write_successes": 9,
+                "remote_cache_requests_cached": 1,
+                "remote_cache_speculation_local_completed_first": 8,
+                "local_cache_total_time_saved_ms": 22850,
+                "DEPRECATED_ConsumeGlobalCountersInstead": 0
+            }
+        },
+        {
+            "workunit_id": "9cca9ba2b6dacd8d",
+            "name": "pants.backend.python.dependency_inference.module_mapper.map_third_party_modules_to_addresses",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "381eead53210a8c9"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208769923828,
+            "description": "Creating map of third party targets to Python modules",
+            "end_usecs": 1652208772704551
+        },
+        {
+            "workunit_id": "94c4931371bf4376",
+            "name": "pants.backend.python.dependency_inference.module_mapper.find_all_python_projects",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "9cca9ba2b6dacd8d"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208769923937,
+            "description": "Find all Python targets in project",
+            "end_usecs": 1652208772703026
+        },
+        {
+            "workunit_id": "678cd8626dc17f00",
+            "name": "pants.engine.internals.graph.find_all_targets",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "94c4931371bf4376"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208769924716,
+            "description": "Find all targets in the project",
+            "end_usecs": 1652208772681124
+        },
+        {
+            "workunit_id": "1d12e38a00a057c6",
+            "name": "pants.backend.go.target_type_rules.generate_targets_from_go_mod",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "678cd8626dc17f00"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208770793769,
+            "description": "Generate `go_third_party_package` targets from `go_mod` target",
+            "end_usecs": 1652208772117911
+        },
+        {
+            "workunit_id": "ef526b64e1ec9e60",
+            "name": "pants.backend.go.subsystems.golang.setup_goroot",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "1d12e38a00a057c6"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208770859547,
+            "description": "Find Go binary",
+            "end_usecs": 1652208771009555
+        },
+        {
+            "workunit_id": "3252ed4fcabe4049",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "ef526b64e1ec9e60"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208770957081,
+            "description": "Scheduling: Searching for `go` on PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin/",
+            "end_usecs": 1652208770968559,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/usr/local/bin/go\n",
+                "stderr": "+ CHECK_FILE_ENTRIES=\n+ for path in ${PATH//:/ }\n+ [[ -d /usr/local/bin ]]\n+ maybe_exe=/us"
+            }
+        },
+        {
+            "workunit_id": "7e28058ab8552d26",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "ef526b64e1ec9e60"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208770969514,
+            "description": "Scheduling: Test binary /usr/local/bin/go.",
+            "end_usecs": 1652208770982094,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "go version go1.17.8 linux/amd64\n"
+            }
+        },
+        {
+            "workunit_id": "039af5d596808146",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "ef526b64e1ec9e60"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208770983010,
+            "description": "Scheduling: Determine Go version for /usr/local/bin/go",
+            "end_usecs": 1652208770995127,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "go version go1.17.8 linux/amd64\n"
+            }
+        },
+        {
+            "workunit_id": "b038f133bd872528",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "ef526b64e1ec9e60"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208770996027,
+            "description": "Scheduling: Determine Go SDK metadata for /usr/local/bin/go",
+            "end_usecs": 1652208771008826,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"AR\": \"ar\",\n\t\"CC\": \"gcc\",\n\t\"CGO_CFLAGS\": \"-g -O2\",\n\t\"CGO_CPPFLAGS\": \"\",\n\t\"CGO_CXXFLAGS\""
+            }
+        },
+        {
+            "workunit_id": "577f24d1732424bf",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "1d12e38a00a057c6"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771011209,
+            "description": "Scheduling: Parse src/go/src/toolchain/remoting/go.mod",
+            "end_usecs": 1652208771011456,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Module\": {\n\t\t\"Path\": \"github.com/toolchainlabs/toolchain/src/go/src/toolchain/remoting"
+            }
+        },
+        {
+            "workunit_id": "e327188720cf1bf3",
+            "name": "pants.backend.go.util_rules.third_party_pkg.download_and_analyze_third_party_packages",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "1d12e38a00a057c6"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771012951,
+            "description": "Download and analyze all third-party Go packages",
+            "end_usecs": 1652208771928126
+        },
+        {
+            "workunit_id": "2463889436216664",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771013651,
+            "description": "Scheduling: Analyze Go module dependencies.",
+            "end_usecs": 1652208771020657,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/toolchainlabs/toolchain/src/go/src/toolchain/remoting\",\n\t\"Main\": tr"
+            }
+        },
+        {
+            "workunit_id": "55f3930cc8655064",
+            "name": "pants.backend.go.util_rules.import_analysis.determine_go_std_lib_imports",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771028974,
+            "description": "Determine Go std lib's imports",
+            "end_usecs": 1652208771034243
+        },
+        {
+            "workunit_id": "528d4004b14e6a2b",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "55f3930cc8655064"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771029529,
+            "description": "Scheduling: Ask Go for its available import paths",
+            "end_usecs": 1652208771029732,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Dir\": \"/usr/local/go/src/archive/tar\",\n\t\"ImportPath\": \"archive/tar\",\n\t\"Name\": \"tar\",\n\t"
+            }
+        },
+        {
+            "workunit_id": "5ac7b15f825516a1",
+            "name": "pants.backend.go.util_rules.build_pkg.build_go_package",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771035316,
+            "description": "Compile with Go",
+            "end_usecs": 1652208771037259
+        },
+        {
+            "workunit_id": "8a7acfd845537270",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "5ac7b15f825516a1"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771036105,
+            "description": "Scheduling: Obtain tool ID for Go tool `compile`.",
+            "end_usecs": 1652208771036284,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "compile version go1.17.8\n"
+            }
+        },
+        {
+            "workunit_id": "518217b48dd419ee",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771037767,
+            "description": "Scheduling: Obtain tool ID for Go tool `link`.",
+            "end_usecs": 1652208771037930,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "link version go1.17.8\n"
+            }
+        },
+        {
+            "workunit_id": "2773fb03876219f2",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771043768,
+            "description": "Scheduling: Download Go module github.com/spf13/pflag@v1.0.5.",
+            "end_usecs": 1652208771059914,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/spf13/pflag\",\n\t\"Version\": \"v1.0.5\",\n\t\"Info\": \"/tmp/process-executio"
+            }
+        },
+        {
+            "workunit_id": "dd0fbd7c5eb61221",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771044083,
+            "description": "Scheduling: Download Go module golang.org/x/exp@v0.0.0-20190121172915-509febef88a4.",
+            "end_usecs": 1652208771174470,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"golang.org/x/exp\",\n\t\"Version\": \"v0.0.0-20190121172915-509febef88a4\",\n\t\"Info\": "
+            }
+        },
+        {
+            "workunit_id": "fabfc52696442bb0",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771044101,
+            "description": "Scheduling: Download Go module github.com/golang/mock@v1.1.1.",
+            "end_usecs": 1652208771081014,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/golang/mock\",\n\t\"Version\": \"v1.1.1\",\n\t\"Info\": \"/tmp/process-executio"
+            }
+        },
+        {
+            "workunit_id": "2b11ad8e0b29a326",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771044933,
+            "description": "Scheduling: Download Go module google.golang.org/grpc@v1.32.0.",
+            "end_usecs": 1652208771189609,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"google.golang.org/grpc\",\n\t\"Version\": \"v1.32.0\",\n\t\"Info\": \"/tmp/process-executi"
+            }
+        },
+        {
+            "workunit_id": "d5997dbd7de15c9c",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771044991,
+            "description": "Scheduling: Download Go module golang.org/x/oauth2@v0.0.0-20180821212333-d2e6202438be.",
+            "end_usecs": 1652208771178356,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"golang.org/x/oauth2\",\n\t\"Version\": \"v0.0.0-20180821212333-d2e6202438be\",\n\t\"Info"
+            }
+        },
+        {
+            "workunit_id": "606d1ec0f1b7d104",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771045011,
+            "description": "Scheduling: Download Go module gopkg.in/check.v1@v1.0.0-20190902080502-41f04d3bba15.",
+            "end_usecs": 1652208771085362,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"gopkg.in/check.v1\",\n\t\"Version\": \"v1.0.0-20190902080502-41f04d3bba15\",\n\t\"Info\":"
+            }
+        },
+        {
+            "workunit_id": "24b8ab4eed296490",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771045193,
+            "description": "Scheduling: Download Go module github.com/kr/pty@v1.1.1.",
+            "end_usecs": 1652208771061365,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/kr/pty\",\n\t\"Version\": \"v1.1.1\",\n\t\"Info\": \"/tmp/process-executionhDsQ"
+            }
+        },
+        {
+            "workunit_id": "598ba3d7dfa0afad",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771045273,
+            "description": "Scheduling: Download Go module honnef.co/go/tools@v0.0.0-20190523083050-ea95bdfd59fc.",
+            "end_usecs": 1652208771177889,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"honnef.co/go/tools\",\n\t\"Version\": \"v0.0.0-20190523083050-ea95bdfd59fc\",\n\t\"Info\""
+            }
+        },
+        {
+            "workunit_id": "73f33d936ae6665c",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771045558,
+            "description": "Scheduling: Download Go module github.com/stretchr/testify@v1.5.1.",
+            "end_usecs": 1652208771081232,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/stretchr/testify\",\n\t\"Version\": \"v1.5.1\",\n\t\"Info\": \"/tmp/process-exe"
+            }
+        },
+        {
+            "workunit_id": "cb48b60d1413f0dd",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771045851,
+            "description": "Scheduling: Download Go module github.com/pmezard/go-difflib@v1.0.0.",
+            "end_usecs": 1652208771078982,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/pmezard/go-difflib\",\n\t\"Version\": \"v1.0.0\",\n\t\"Info\": \"/tmp/process-e"
+            }
+        },
+        {
+            "workunit_id": "4d7fc375e3542590",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771046588,
+            "description": "Scheduling: Download Go module golang.org/x/crypto@v0.0.0-20190308221718-c2843e01d9a2.",
+            "end_usecs": 1652208771177308,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"golang.org/x/crypto\",\n\t\"Version\": \"v0.0.0-20190308221718-c2843e01d9a2\",\n\t\"Info"
+            }
+        },
+        {
+            "workunit_id": "ebbccd567fc1d7c2",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771047531,
+            "description": "Scheduling: Download Go module google.golang.org/genproto@v0.0.0-20190819201941-24fa4b261c55.",
+            "end_usecs": 1652208771388659,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"google.golang.org/genproto\",\n\t\"Version\": \"v0.0.0-20190819201941-24fa4b261c55\","
+            }
+        },
+        {
+            "workunit_id": "62de61c5e869aabd",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771047541,
+            "description": "Scheduling: Download Go module golang.org/x/xerrors@v0.0.0-20191204190536-9bdfabe68543.",
+            "end_usecs": 1652208771075718,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"golang.org/x/xerrors\",\n\t\"Version\": \"v0.0.0-20191204190536-9bdfabe68543\",\n\t\"Inf"
+            }
+        },
+        {
+            "workunit_id": "5c5275c12f020f13",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771047551,
+            "description": "Scheduling: Download Go module golang.org/x/sync@v0.0.0-20190423024810-112230192c58.",
+            "end_usecs": 1652208771073654,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"golang.org/x/sync\",\n\t\"Version\": \"v0.0.0-20190423024810-112230192c58\",\n\t\"Info\":"
+            }
+        },
+        {
+            "workunit_id": "5c9c37a9d723ac8b",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771047567,
+            "description": "Scheduling: Download Go module github.com/kr/text@v0.1.0.",
+            "end_usecs": 1652208771078802,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/kr/text\",\n\t\"Version\": \"v0.1.0\",\n\t\"Info\": \"/tmp/process-executionaGG"
+            }
+        },
+        {
+            "workunit_id": "c5b05e8442a46c40",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771049525,
+            "description": "Scheduling: Download Go module github.com/census-instrumentation/opencensus-proto@v0.2.1.",
+            "end_usecs": 1652208771282987,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/census-instrumentation/opencensus-proto\",\n\t\"Version\": \"v0.2.1\",\n\t\"I"
+            }
+        },
+        {
+            "workunit_id": "1a54cf807f544e3d",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771049916,
+            "description": "Scheduling: Download Go module google.golang.org/protobuf@v1.23.0.",
+            "end_usecs": 1652208771271673,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"google.golang.org/protobuf\",\n\t\"Version\": \"v1.23.0\",\n\t\"Info\": \"/tmp/process-exe"
+            }
+        },
+        {
+            "workunit_id": "f126ce3d08e70894",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771049936,
+            "description": "Scheduling: Download Go module google.golang.org/appengine@v1.4.0.",
+            "end_usecs": 1652208771283619,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"google.golang.org/appengine\",\n\t\"Version\": \"v1.4.0\",\n\t\"Info\": \"/tmp/process-exe"
+            }
+        },
+        {
+            "workunit_id": "44d235f692eb3822",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771050170,
+            "description": "Scheduling: Download Go module golang.org/x/tools@v0.0.0-20190524140312-2c0ae7006135.",
+            "end_usecs": 1652208771391788,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"golang.org/x/tools\",\n\t\"Version\": \"v0.0.0-20190524140312-2c0ae7006135\",\n\t\"Info\""
+            }
+        },
+        {
+            "workunit_id": "54f525336e06e99c",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771051949,
+            "description": "Scheduling: Download Go module golang.org/x/lint@v0.0.0-20190313153728-d0100b6bd8b3.",
+            "end_usecs": 1652208771281011,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"golang.org/x/lint\",\n\t\"Version\": \"v0.0.0-20190313153728-d0100b6bd8b3\",\n\t\"Info\":"
+            }
+        },
+        {
+            "workunit_id": "6f4e48cd00ab4f1a",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771052667,
+            "description": "Scheduling: Download Go module github.com/konsorten/go-windows-terminal-sequences@v1.0.3.",
+            "end_usecs": 1652208771173303,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/konsorten/go-windows-terminal-sequences\",\n\t\"Version\": \"v1.0.3\",\n\t\"I"
+            }
+        },
+        {
+            "workunit_id": "aee277d63e96889b",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771052674,
+            "description": "Scheduling: Download Go module github.com/envoyproxy/go-control-plane@v0.9.4.",
+            "end_usecs": 1652208771381052,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/envoyproxy/go-control-plane\",\n\t\"Version\": \"v0.9.4\",\n\t\"Info\": \"/tmp/"
+            }
+        },
+        {
+            "workunit_id": "63d66c8f78c94a10",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771052791,
+            "description": "Scheduling: Download Go module github.com/envoyproxy/protoc-gen-validate@v0.1.0.",
+            "end_usecs": 1652208771286531,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/envoyproxy/protoc-gen-validate\",\n\t\"Version\": \"v0.1.0\",\n\t\"Info\": \"/t"
+            }
+        },
+        {
+            "workunit_id": "c4cf966744499e5c",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771052853,
+            "description": "Scheduling: Download Go module golang.org/x/net@v0.0.0-20190613194153-d28f0bde5980.",
+            "end_usecs": 1652208771373080,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"golang.org/x/net\",\n\t\"Version\": \"v0.0.0-20190613194153-d28f0bde5980\",\n\t\"Info\": "
+            }
+        },
+        {
+            "workunit_id": "1b8a305b2858321c",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771054397,
+            "description": "Scheduling: Download Go module github.com/stretchr/objx@v0.1.0.",
+            "end_usecs": 1652208771178523,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/stretchr/objx\",\n\t\"Version\": \"v0.1.0\",\n\t\"Info\": \"/tmp/process-execut"
+            }
+        },
+        {
+            "workunit_id": "d5341aae664147f2",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771054619,
+            "description": "Scheduling: Download Go module github.com/google/go-cmp@v0.4.0.",
+            "end_usecs": 1652208771086767,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/google/go-cmp\",\n\t\"Version\": \"v0.4.0\",\n\t\"Info\": \"/tmp/process-execut"
+            }
+        },
+        {
+            "workunit_id": "a474e64ca0a5b76c",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771054649,
+            "description": "Scheduling: Download Go module golang.org/x/sys@v0.0.0-20200420163511-1957bb5e6d1f.",
+            "end_usecs": 1652208771283230,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"golang.org/x/sys\",\n\t\"Version\": \"v0.0.0-20200420163511-1957bb5e6d1f\",\n\t\"Info\": "
+            }
+        },
+        {
+            "workunit_id": "275f679167432db5",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771054763,
+            "description": "Scheduling: Download Go module cloud.google.com/go@v0.26.0.",
+            "end_usecs": 1652208771376115,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"cloud.google.com/go\",\n\t\"Version\": \"v0.26.0\",\n\t\"Info\": \"/tmp/process-executionz"
+            }
+        },
+        {
+            "workunit_id": "f9adb9745fc8b048",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771056188,
+            "description": "Scheduling: Download Go module github.com/cncf/udpa/go@v0.0.0-20191209042840-269d4d468f6f.",
+            "end_usecs": 1652208771180936,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/cncf/udpa/go\",\n\t\"Version\": \"v0.0.0-20191209042840-269d4d468f6f\",\n\t\""
+            }
+        },
+        {
+            "workunit_id": "89d96b3edefce188",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771056249,
+            "description": "Scheduling: Download Go module github.com/kr/pretty@v0.1.0.",
+            "end_usecs": 1652208771183440,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/kr/pretty\",\n\t\"Version\": \"v0.1.0\",\n\t\"Info\": \"/tmp/process-executionK"
+            }
+        },
+        {
+            "workunit_id": "a4b5b8b29e5d8bfd",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771056923,
+            "description": "Scheduling: Download Go module github.com/BurntSushi/toml@v0.3.1.",
+            "end_usecs": 1652208771191425,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/BurntSushi/toml\",\n\t\"Version\": \"v0.3.1\",\n\t\"Info\": \"/tmp/process-exec"
+            }
+        },
+        {
+            "workunit_id": "487abc5c07ac21bd",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771056939,
+            "description": "Scheduling: Download Go module github.com/prometheus/client_model@v0.0.0-20190812154241-14fe0d1b01d4.",
+            "end_usecs": 1652208771185851,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/prometheus/client_model\",\n\t\"Version\": \"v0.0.0-20190812154241-14fe0d"
+            }
+        },
+        {
+            "workunit_id": "133c5dc8338b28f9",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771057125,
+            "description": "Scheduling: Download Go module github.com/davecgh/go-spew@v1.1.1.",
+            "end_usecs": 1652208771273343,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/davecgh/go-spew\",\n\t\"Version\": \"v1.1.1\",\n\t\"Info\": \"/tmp/process-exec"
+            }
+        },
+        {
+            "workunit_id": "863624fceee6b744",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771057847,
+            "description": "Scheduling: Download Go module github.com/golang/glog@v0.0.0-20160126235308-23def4e6c14b.",
+            "end_usecs": 1652208771085440,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/golang/glog\",\n\t\"Version\": \"v0.0.0-20160126235308-23def4e6c14b\",\n\t\"I"
+            }
+        },
+        {
+            "workunit_id": "e5650557bed2228c",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771058341,
+            "description": "Scheduling: Download Go module gopkg.in/yaml.v2@v2.2.5.",
+            "end_usecs": 1652208771374361,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"gopkg.in/yaml.v2\",\n\t\"Version\": \"v2.2.5\",\n\t\"Info\": \"/tmp/process-executionpdD0d"
+            }
+        },
+        {
+            "workunit_id": "02adf4904f9707d6",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771058659,
+            "description": "Scheduling: Download Go module github.com/golang/protobuf@v1.4.2.",
+            "end_usecs": 1652208771274971,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/golang/protobuf\",\n\t\"Version\": \"v1.4.2\",\n\t\"Info\": \"/tmp/process-exec"
+            }
+        },
+        {
+            "workunit_id": "4b013cac363855b1",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771058819,
+            "description": "Scheduling: Download Go module golang.org/x/text@v0.3.0.",
+            "end_usecs": 1652208771379289,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"golang.org/x/text\",\n\t\"Version\": \"v0.3.0\",\n\t\"Info\": \"/tmp/process-executiona8d5"
+            }
+        },
+        {
+            "workunit_id": "380417d3fdcd68a3",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771058942,
+            "description": "Scheduling: Download Go module github.com/client9/misspell@v0.3.4.",
+            "end_usecs": 1652208771186269,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/client9/misspell\",\n\t\"Version\": \"v0.3.4\",\n\t\"Info\": \"/tmp/process-exe"
+            }
+        },
+        {
+            "workunit_id": "e47ac2e3ac991281",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771059693,
+            "description": "Scheduling: Download Go module github.com/sirupsen/logrus@v1.6.0.",
+            "end_usecs": 1652208771171541,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/sirupsen/logrus\",\n\t\"Version\": \"v1.6.0\",\n\t\"Info\": \"/tmp/process-exec"
+            }
+        },
+        {
+            "workunit_id": "580ea32de2da2439",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771059898,
+            "description": "Scheduling: Download Go module github.com/opencontainers/runtime-spec@v1.0.2.",
+            "end_usecs": 1652208771282744,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\n\t\"Path\": \"github.com/opencontainers/runtime-spec\",\n\t\"Version\": \"v1.0.2\",\n\t\"Info\": \"/tmp/"
+            }
+        },
+        {
+            "workunit_id": "9f4ae21829c4a2b3",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771279680,
+            "description": "Scheduling: Analyze metadata for Go third-party module: gopkg.in/check.v1@v1.0.0-20190902080502-41f04d3bba15",
+            "end_usecs": 1652208771284866,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"check\",\"GoFiles\":[\"benchmark.go\",\"check.go\",\"checkers.go\",\"helpers.go\",\"printer.g"
+            }
+        },
+        {
+            "workunit_id": "b2bc863f59c8b81c",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771282814,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/kr/pty@v1.1.1",
+            "end_usecs": 1652208771290416,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"pty\",\"AllTags\":[\"386\",\"amd64\",\"arm\",\"arm64\",\"darwin\",\"dragonfly\",\"freebsd\",\"ignor"
+            }
+        },
+        {
+            "workunit_id": "ffe241786782952d",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771284746,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/sync@v0.0.0-20190423024810-112230192c58",
+            "end_usecs": 1652208771292638,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"errgroup\",\"GoFiles\":[\"errgroup.go\"],\"XTestGoFiles\":[\"errgroup_example_md5all_test"
+            }
+        },
+        {
+            "workunit_id": "290352a11a1c2506",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771284751,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/xerrors@v0.0.0-20191204190536-9bdfabe68543",
+            "end_usecs": 1652208771292483,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"xerrors\",\"AllTags\":[\"go1.13\"],\"GoFiles\":[\"adaptor.go\",\"doc.go\",\"errors.go\",\"fmt.g"
+            }
+        },
+        {
+            "workunit_id": "9cf9fee4d44956ec",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771287937,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/pmezard/go-difflib@v1.0.0",
+            "end_usecs": 1652208771372467,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"difflib\",\"GoFiles\":[\"difflib.go\"],\"TestGoFiles\":[\"difflib_test.go\"],\"Imports\":[\"bufio\",\"bytes\",\"fmt\",\"io\",\"strings\"],\"TestImports\":[\"bytes\",\"fmt\",\"math\",\"reflect\",\"strings\",\"testing\"]}"
+            }
+        },
+        {
+            "workunit_id": "590a3bea8ecef812",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771289496,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/spf13/pflag@v1.0.5",
+            "end_usecs": 1652208771372750,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"pflag\",\"GoFiles\":[\"bool.go\",\"bool_slice.go\",\"bytes.go\",\"count.go\",\"duration.go\",\""
+            }
+        },
+        {
+            "workunit_id": "6decc2b577add70f",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771292102,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/golang/mock@v1.1.1",
+            "end_usecs": 1652208771379416,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"gomock\",\"GoFiles\":[\"call.go\",\"callset.go\",\"controller.go\",\"matchers.go\"],\"TestGoF"
+            }
+        },
+        {
+            "workunit_id": "df069d295c73fb40",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771371618,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/kr/text@v0.1.0",
+            "end_usecs": 1652208771381194,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"text\",\"GoFiles\":[\"doc.go\",\"indent.go\",\"wrap.go\"],\"TestGoFiles\":[\"indent_test.go\","
+            }
+        },
+        {
+            "workunit_id": "3e8477cad27d8f69",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771372369,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/sirupsen/logrus@v1.6.0",
+            "end_usecs": 1652208771375802,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"logrus\",\"AllTags\":[\"aix\",\"appengine\",\"darwin\",\"dragonfly\",\"freebsd\",\"js\",\"linux\","
+            }
+        },
+        {
+            "workunit_id": "5357f669c75e2d13",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771372385,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/stretchr/objx@v0.1.0",
+            "end_usecs": 1652208771375570,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"objx\",\"GoFiles\":[\"accessors.go\",\"constants.go\",\"conversions.go\",\"doc.go\",\"map.go\""
+            }
+        },
+        {
+            "workunit_id": "9432885def281921",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771375137,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/konsorten/go-windows-terminal-sequences@v1.0.3",
+            "end_usecs": 1652208771392911,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"sequences\",\"AllTags\":[\"darwin\",\"linux\",\"windows\"],\"GoFiles\":[\"sequences_dummy.go\"],\"IgnoredGoFiles\":[\"sequences.go\",\"sequences_test.go\"],\"Imports\":[\"fmt\"]}"
+            }
+        },
+        {
+            "workunit_id": "ee09a787f6e38a34",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771377147,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/golang/glog@v0.0.0-20160126235308-23def4e6c14b",
+            "end_usecs": 1652208771389020,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"glog\",\"GoFiles\":[\"glog.go\",\"glog_file.go\"],\"TestGoFiles\":[\"glog_test.go\"],\"Import"
+            }
+        },
+        {
+            "workunit_id": "6efe56d7a438b6a8",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771387856,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/stretchr/testify@v1.5.1",
+            "end_usecs": 1652208771395612,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"testify\",\"GoFiles\":[\"doc.go\"],\"TestGoFiles\":[\"package_test.go\"],\"Imports\":[\"githu"
+            }
+        },
+        {
+            "workunit_id": "6b7372bf93b5299e",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771388815,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/google/go-cmp@v0.4.0",
+            "end_usecs": 1652208771395855,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"cmp\",\"AllTags\":[\"purego\"],\"GoFiles\":[\"compare.go\",\"export_unsafe.go\",\"options.go\""
+            }
+        },
+        {
+            "workunit_id": "99573196654e69bd",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771388882,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/kr/pretty@v0.1.0",
+            "end_usecs": 1652208771393503,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"pretty\",\"GoFiles\":[\"diff.go\",\"formatter.go\",\"pretty.go\",\"zero.go\"],\"TestGoFiles\":"
+            }
+        },
+        {
+            "workunit_id": "a61c0f367e386c42",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771392796,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/exp@v0.0.0-20190121172915-509febef88a4",
+            "end_usecs": 1652208771395358,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"apidiff\",\"GoFiles\":[\"apidiff.go\",\"compatibility.go\",\"correspondence.go\",\"messages"
+            }
+        },
+        {
+            "workunit_id": "bdc6fb77fbe85af7",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771392897,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/crypto@v0.0.0-20190308221718-c2843e01d9a2",
+            "end_usecs": 1652208771469675,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"acme\",\"GoFiles\":[\"acme.go\",\"http.go\",\"jws.go\",\"types.go\"],\"TestGoFiles\":[\"acme_te"
+            }
+        },
+        {
+            "workunit_id": "dd0ea2b04a23dcec",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771393144,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/client9/misspell@v0.3.4",
+            "end_usecs": 1652208771474487,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"misspell\",\"GoFiles\":[\"ascii.go\",\"case.go\",\"legal.go\",\"mime.go\",\"notwords.go\",\"rep"
+            }
+        },
+        {
+            "workunit_id": "ca259d9a2f947103",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771393313,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/oauth2@v0.0.0-20180821212333-d2e6202438be",
+            "end_usecs": 1652208771474581,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"oauth2\",\"GoFiles\":[\"oauth2.go\",\"token.go\",\"transport.go\"],\"TestGoFiles\":[\"oauth2_"
+            }
+        },
+        {
+            "workunit_id": "3be60f0c39f5a553",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771395121,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/cncf/udpa/go@v0.0.0-20191209042840-269d4d468f6f",
+            "end_usecs": 1652208771396402,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"udpa_annotations\",\"GoFiles\":[\"migrate.pb.go\",\"migrate.pb.validate.go\",\"versioning"
+            }
+        },
+        {
+            "workunit_id": "fb9dddbd5eaffa1b",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771395221,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/BurntSushi/toml@v0.3.1",
+            "end_usecs": 1652208771476594,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"toml\",\"AllTags\":[\"go1.2\"],\"GoFiles\":[\"decode.go\",\"decode_meta.go\",\"doc.go\",\"encod"
+            }
+        },
+        {
+            "workunit_id": "bfb5d17f062c9d7a",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771474885,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/prometheus/client_model@v0.0.0-20190812154241-14fe0d1b01d4",
+            "end_usecs": 1652208771482431,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"io_prometheus_client\",\"GoFiles\":[\"metrics.pb.go\"],\"Imports\":[\"fmt\",\"github.com/golang/protobuf/proto\",\"math\"]}"
+            }
+        },
+        {
+            "workunit_id": "9de62b1d9b6b888b",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771474943,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/davecgh/go-spew@v1.1.1",
+            "end_usecs": 1652208771487526,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"spew\",\"AllTags\":[\"appengine\",\"cgo\",\"disableunsafe\",\"go1.4\",\"js\",\"safe\",\"testcgo\"]"
+            }
+        },
+        {
+            "workunit_id": "f23e1b7f7c586b50",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771481005,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/opencontainers/runtime-spec@v1.0.2",
+            "end_usecs": 1652208771492786,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"\",\"AllTags\":[\"ignore\"],\"IgnoredGoFiles\":[\"version-doc.go\"],\"Error\":\"no buildable "
+            }
+        },
+        {
+            "workunit_id": "bb3829f46391d590",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771481476,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/golang/protobuf@v1.4.2",
+            "end_usecs": 1652208771494576,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"descriptor\",\"GoFiles\":[\"descriptor.go\"],\"TestGoFiles\":[\"descriptor_test.go\"],\"Imp"
+            }
+        },
+        {
+            "workunit_id": "38a3baa8bf45dc1e",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771482003,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/census-instrumentation/opencensus-proto@v0.2.1",
+            "end_usecs": 1652208771494635,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"v1\",\"GoFiles\":[\"common.pb.go\"],\"Imports\":[\"fmt\",\"github.com/golang/protobuf/proto"
+            }
+        },
+        {
+            "workunit_id": "c6897fa3afaef444",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771482078,
+            "description": "Scheduling: Analyze metadata for Go third-party module: google.golang.org/appengine@v1.4.0",
+            "end_usecs": 1652208771494696,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"appengine\",\"AllTags\":[\"appengine\"],\"GoFiles\":[\"appengine.go\",\"appengine_vm.go\",\"e"
+            }
+        },
+        {
+            "workunit_id": "a10a80f2eb7e7ed4",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771482236,
+            "description": "Scheduling: Analyze metadata for Go third-party module: honnef.co/go/tools@v0.0.0-20190523083050-ea95bdfd59fc",
+            "end_usecs": 1652208771494787,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"\",\"AllTags\":[\"ignore\"],\"IgnoredGoFiles\":[\"benchmark.go\"],\"Error\":\"no buildable Go"
+            }
+        },
+        {
+            "workunit_id": "dc4ee932a5a98fa3",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771486824,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/lint@v0.0.0-20190313153728-d0100b6bd8b3",
+            "end_usecs": 1652208771499185,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"lint\",\"GoFiles\":[\"lint.go\"],\"TestGoFiles\":[\"lint_test.go\"],\"Imports\":[\"bufio\",\"by"
+            }
+        },
+        {
+            "workunit_id": "b7bd6b51873acb2a",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771492686,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/sys@v0.0.0-20200420163511-1957bb5e6d1f",
+            "end_usecs": 1652208771497376,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"cpu\",\"AllTags\":[\"386\",\"aix\",\"amd64\",\"amd64p32\",\"arm\",\"arm64\",\"gccgo\",\"linux\",\"mip"
+            }
+        },
+        {
+            "workunit_id": "65aef7bce5138362",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771494408,
+            "description": "Scheduling: Analyze metadata for Go third-party module: google.golang.org/protobuf@v1.23.0",
+            "end_usecs": 1652208771506747,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"\",\"AllTags\":[\"ignore\"],\"IgnoredGoFiles\":[\"integration_test.go\"],\"Error\":\"no build"
+            }
+        },
+        {
+            "workunit_id": "aebaa2a6545b49d0",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771497826,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/envoyproxy/protoc-gen-validate@v0.1.0",
+            "end_usecs": 1652208771506894,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"main\",\"GoFiles\":[\"main.go\"],\"Imports\":[\"github.com/envoyproxy/protoc-gen-validate"
+            }
+        },
+        {
+            "workunit_id": "5938ff9399a735b0",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771498852,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/text@v0.3.0",
+            "end_usecs": 1652208771517517,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"text\",\"AllTags\":[\"ignore\"],\"GoFiles\":[\"doc.go\"],\"IgnoredGoFiles\":[\"gen.go\"]}{\"Nam"
+            }
+        },
+        {
+            "workunit_id": "fa260f3fe03b82b9",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771501470,
+            "description": "Scheduling: Analyze metadata for Go third-party module: gopkg.in/yaml.v2@v2.2.5",
+            "end_usecs": 1652208771517700,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"yaml\",\"GoFiles\":[\"apic.go\",\"decode.go\",\"emitterc.go\",\"encode.go\",\"parserc.go\",\"re"
+            }
+        },
+        {
+            "workunit_id": "465839873b7abc56",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771508045,
+            "description": "Scheduling: Analyze metadata for Go third-party module: google.golang.org/grpc@v1.32.0",
+            "end_usecs": 1652208771520669,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"grpc\",\"AllTags\":[\"race\"],\"GoFiles\":[\"backoff.go\",\"balancer_conn_wrappers.go\",\"cal"
+            }
+        },
+        {
+            "workunit_id": "e1053665d9595998",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771519242,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/net@v0.0.0-20190613194153-d28f0bde5980",
+            "end_usecs": 1652208771533102,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"bpf\",\"GoFiles\":[\"asm.go\",\"constants.go\",\"doc.go\",\"instructions.go\",\"setter.go\",\"v"
+            }
+        },
+        {
+            "workunit_id": "bdd4afbd424b6a8b",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771569740,
+            "description": "Scheduling: Analyze metadata for Go third-party module: github.com/envoyproxy/go-control-plane@v0.9.4",
+            "end_usecs": 1652208771573172,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"envoy_admin_v2alpha\",\"GoFiles\":[\"certs.pb.go\",\"certs.pb.validate.go\",\"clusters.pb"
+            }
+        },
+        {
+            "workunit_id": "63ca505450ed4323",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771572674,
+            "description": "Scheduling: Analyze metadata for Go third-party module: cloud.google.com/go@v0.26.0",
+            "end_usecs": 1652208771573166,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"cloud\",\"GoFiles\":[\"cloud.go\"],\"TestGoFiles\":[\"import_test.go\",\"license_test.go\"],"
+            }
+        },
+        {
+            "workunit_id": "52ee7c12a3f92347",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771572910,
+            "description": "Scheduling: Analyze metadata for Go third-party module: google.golang.org/genproto@v0.0.0-20190819201941-24fa4b261c55",
+            "end_usecs": 1652208771578387,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"\",\"AllTags\":[\"ignore\",\"tools\"],\"IgnoredGoFiles\":[\"regen.go\",\"tools.go\"],\"Error\":\""
+            }
+        },
+        {
+            "workunit_id": "859d2e3e8b1732b8",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "e327188720cf1bf3"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208771606295,
+            "description": "Scheduling: Analyze metadata for Go third-party module: golang.org/x/tools@v0.0.0-20190524140312-2c0ae7006135",
+            "end_usecs": 1652208771612227,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"Name\":\"parse\",\"GoFiles\":[\"parse.go\"],\"TestGoFiles\":[\"parse_test.go\"],\"Imports\":[\"bufio\","
+            }
+        },
+        {
+            "workunit_id": "88a832e841637ca1",
+            "name": "pants.backend.python.util_rules.pex.find_interpreter",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "381eead53210a8c9"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208772988464,
+            "description": "Find Python interpreter for constraints",
+            "end_usecs": 1652208774129284
+        },
+        {
+            "workunit_id": "23b7b67f18365dc5",
+            "name": "pants.backend.python.util_rules.pex_environment.find_pex_python",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "88a832e841637ca1"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208772995897,
+            "description": "Prepare environment for running PEXes",
+            "end_usecs": 1652208773070027
+        },
+        {
+            "workunit_id": "53f81ab318f11ce1",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "23b7b67f18365dc5"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208773002076,
+            "description": "Scheduling: Searching for `python3` on PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin/",
+            "end_usecs": 1652208773022503,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/usr/local/bin/python3\n/usr/bin/python3\n",
+                "stderr": "+ CHECK_FILE_ENTRIES=1\n+ for path in ${PATH//:/ }\n+ [[ -d /usr/local/bin ]]\n+ maybe_exe=/u"
+            }
+        },
+        {
+            "workunit_id": "7f2311863cb0f5b9",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "23b7b67f18365dc5"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208773002197,
+            "description": "Scheduling: Searching for `python` on PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/jdk-11.0.2/bin:/usr/lib/postgresql/11/bin/",
+            "end_usecs": 1652208773036645,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "/usr/local/bin/python\n/usr/bin/python\n",
+                "stderr": "+ CHECK_FILE_ENTRIES=1\n+ for path in ${PATH//:/ }\n+ [[ -d /usr/local/bin ]]\n+ maybe_exe=/u"
+            }
+        },
+        {
+            "workunit_id": "cc8461b8bd94dc30",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "381eead53210a8c9"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208774068172,
+            "description": "Scheduling: Determine Python dependencies for src/python/toolchain/pants/auth/rules.py",
+            "end_usecs": 1652208774068410,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"__future__.annotations\": {\"lineno\": 13, \"weak\": false}, \"logging\": {\"lineno\""
+            }
+        },
+        {
+            "workunit_id": "d1c42bd48679d7d4",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "381eead53210a8c9"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208774068793,
+            "description": "Scheduling: Determine Python dependencies for src/python/toolchain/pants/auth/server.py",
+            "end_usecs": 1652208774069866,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"__future__.annotations\": {\"lineno\": 10, \"weak\": false}, \"http\": {\"lineno\": 1"
+            }
+        },
+        {
+            "workunit_id": "54c45bbcdee134e7",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "381eead53210a8c9"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208774069743,
+            "description": "Scheduling: Determine Python dependencies for src/python/toolchain/pants/auth/client.py",
+            "end_usecs": 1652208774069932,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"__future__.annotations\": {\"lineno\": 10, \"weak\": false}, \"datetime\": {\"lineno"
+            }
+        },
+        {
+            "workunit_id": "9a6fd23c02a0016e",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "381eead53210a8c9"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208774070425,
+            "description": "Scheduling: Determine Python dependencies for src/python/toolchain/pants/auth/token.py",
+            "end_usecs": 1652208774070642,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"__future__.annotations\": {\"lineno\": 10, \"weak\": false}, \"base64\": {\"lineno\":"
+            }
+        },
+        {
+            "workunit_id": "44646c514d7ba81c",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "381eead53210a8c9"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208774070501,
+            "description": "Scheduling: Determine Python dependencies for src/python/toolchain/pants/auth/store.py",
+            "end_usecs": 1652208774070767,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"__future__.annotations\": {\"lineno\": 10, \"weak\": false}, \"datetime\": {\"lineno"
+            }
+        },
+        {
+            "workunit_id": "9e3c1025b713349e",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "381eead53210a8c9"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208774070507,
+            "description": "Scheduling: Determine Python dependencies for src/python/toolchain/pants/buildsense/common.py",
+            "end_usecs": 1652208774070704,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"__future__.annotations\": {\"lineno\": 10, \"weak\": false}, \"dataclasses.dataclass\": {\"lineno\": 12, \"weak\": false}, \"pathlib.Path\": {\"lineno\": 13, \"weak\": false}, \"typing.Dict\": {\"lineno\": 14, \"weak\": false}, \"typing.List\": {\"lineno\": 14, \"weak\": false}}, \"assets\": []}"
+            }
+        },
+        {
+            "workunit_id": "fc1b80df2c0e1c14",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "381eead53210a8c9"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208774070552,
+            "description": "Scheduling: Determine Python dependencies for src/python/toolchain/pants/buildsense/client.py",
+            "end_usecs": 1652208774070947,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"__future__.annotations\": {\"lineno\": 10, \"weak\": false}, \"json\": {\"lineno\": 1"
+            }
+        },
+        {
+            "workunit_id": "9c3e58a1e032d58c",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "381eead53210a8c9"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208774070948,
+            "description": "Scheduling: Determine Python dependencies for src/python/toolchain/pants/buildsense/converter.py",
+            "end_usecs": 1652208774071214,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"__future__.annotations\": {\"lineno\": 10, \"weak\": false}, \"json\": {\"lineno\": 1"
+            }
+        },
+        {
+            "workunit_id": "8397ab00b89fcd04",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "381eead53210a8c9"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208774071023,
+            "description": "Scheduling: Determine Python dependencies for src/python/toolchain/pants/common/version_helper.py",
+            "end_usecs": 1652208774071246,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "{\"imports\": {\"__future__.annotations\": {\"lineno\": 10, \"weak\": false}, \"pants.version.VERSION\": {\"lineno\": 12, \"weak\": false}}, \"assets\": []}"
+            }
+        },
+        {
+            "workunit_id": "ba6b1f442c7a4eed",
+            "name": "process",
+            "state": "finished",
+            "version": 2,
+            "parent_ids": [
+                "381eead53210a8c9"
+            ],
+            "last_update": 1652208776,
+            "start_usecs": 1652208775292773,
+            "description": "Scheduling: Run setuptools.build_meta:__legacy__ for src/python/toolchain:toolchain-pants-plugin",
+            "end_usecs": 1652208776519175,
+            "metadata": {
+                "source": "RanLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "running bdist_wheel\nrunning build\nrunning build_py\ncreating build\ncreating build/lib\ncreat",
+                "stderr": "package init file 'toolchain/base/__init__.py' not found (or not a regular file)\npackage i"
+            }
+        }
+    ]
+}

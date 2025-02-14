@@ -1,0 +1,149 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{ if .Values.features.monitorToolchainPythonServices }}
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: toolchain-alert-rules
+  labels:
+    app: prometheus-operator
+    release: {{ .Release.Name }}
+spec:
+  groups:
+  # - name: ./toolchain.buildsense
+  #   rules:
+  #     Disabled as we offboard customers, the use of buildsense will become zero
+  #     - alert: BuildSenseNotProcessingBuilds
+  #       for: 2h
+  #       expr: max without (pod,instance) (delta(toolchain_workflow_workunit_state{toolchain_product="buildsense", payload_model="processpantsrun", state="succeeded"}[3h])) < 100
+  #       annotations:
+  #         message: Buildsense worker is not processing pants builds runs successfully. There might be an issue w/ ingestion or with processing them in the workeflow worker(s). value={{`{{ $value }}`}}
+  #       labels:
+  #           severity: critical
+  #           type: toolchain-alerts
+  #           team: buildsense
+  - name: ./toolchain.github_integration
+    rules:
+        - alert: GitHubStatsNotFetchingData
+          for: 2h
+          # Expect last attempt timestamp to increase by an hour every 25h, if not, alert.
+          expr: ((time() - toolchain_workflow_workunit_last_attempt{payload_app="github_integration", payload_model="githubrepostatsconfiguration"}) / 3600) > 25
+          annotations:
+              message: GitHub-integration worker is not fetching GitHub repository statistics.
+          labels:
+              severity: critical
+              type: toolchain-alerts
+  - name: ./toolchain.general
+    rules:
+    - alert: TargetDown
+      for: 10m
+      labels:
+         severity: critical
+         type: toolchain-alerts
+      expr: 100 * (count(up == 0) BY (job, namespace, service) / count(up) BY (job, namespace, service)) > 10
+      annotations:
+        message: '{{`{{ printf "%.4g" $value }}`}}% of the {{`{{ $labels.job }}`}}/{{`{{ $labels.app }}`}} / {{`{{ $labels.pod }}`}} targets in {{`{{ $labels.namespace }}`}} namespace are down.'
+    - alert: WorkflowWorkersAbsent
+      for: 5m
+      labels:
+         severity: critical
+         type: toolchain-alerts
+      expr: count(up{job="monitoring/monitor-workers"}) < 4
+      annotations:
+        message: 'Workflow workers Services have disappeared from Prometheus target discovery.'
+    - alert: ServicesAbsent
+      for: 5m
+      labels:
+         severity: critical
+         type: toolchain-alerts
+      expr: count(up{toolchain_service_type=~"web-ui|api|admin"}) < 50
+      annotations:
+        message: 'nginx/gunicorn Services have disappeared from Prometheus target discovery.'
+    - alert: HighCardinalityMetricLabels
+      for: 10m
+      labels:
+         severity: warning
+         type: toolchain-alerts
+      expr: label_replace(count by(__name__) ({__name__=~".+"}), "name", "$1", "__name__", "(.+)") > 30000
+      annotations:
+        message: Metrics with high cardinality labels are being collected by Prometheus.
+  - name: ./toolchain.django.db
+    rules:
+    - alert: UnappliedMigrations
+      annotations:
+         message: There are unapplied Django migrations in production.
+      for: 24h
+      labels:
+        severity: warning
+        type: toolchain-alerts
+      expr: count (django_migrations_unapplied_total > 0) by (connection)
+  - name: ./toolchain.django.http
+    rules:
+    - alert: ErrorResponseRate
+      for: 10m
+      labels:
+        severity: critical
+        type: toolchain-alerts
+      expr: |-
+        (
+          sum by (app, view, status) (rate(django_http_responses_total_by_status_view_method_total{status!~"20.|30.|404",toolchain_service_type!="admin"}[5m])) 
+            /
+          sum by (app, view, status) (rate(django_http_responses_total_by_status_view_method_total{toolchain_service_type!="admin"}[5m]))
+          ) > 0.03
+      annotations:
+         message: 'Error responses rate ({{`{{`}} $value | humanizePercentage {{`}}`}}) from {{`{{`}} $labels.app {{`}}`}} {{`{{`}} $labels.view {{`}}`}} .'
+    - alert: ServerErrorResponseRate
+      for: 10m
+      labels:
+        severity: critical
+        type: toolchain-alerts
+        pagerduty: high-severity
+      expr: |-
+        (
+          sum by (app, view, status) (rate(django_http_responses_total_by_status_view_method_total{status=~"50.",toolchain_service_type!="admin"}[5m])) 
+            /
+          sum by (app, view, status) (rate(django_http_responses_total_by_status_view_method_total{toolchain_service_type!="admin"}[5m]))
+          ) > 0.03
+      annotations:
+         message: 'Error responses rate ({{`{{`}} $value | humanizePercentage {{`}}`}}) from {{`{{`}} $labels.app {{`}}`}} {{`{{`}} $labels.view {{`}}`}} .'
+    - alert: NotFoundErrorResponseRate
+      for: 10m
+      labels:
+        severity: critical
+        type: toolchain-alerts
+      expr: |-
+        (
+          sum by (app, view, status) (rate(django_http_responses_total_by_status_view_method_total{status="404",toolchain_service_type="web-ui"}[5m])) 
+            /
+          sum by (app, view, status) (rate(django_http_responses_total_by_status_view_method_total{toolchain_service_type="web-ui"}[5m]))
+          ) > 0.03
+      annotations:
+         message: 'HTTP 404 Error responses rate ({{`{{`}} $value | humanizePercentage {{`}}`}}) from {{`{{`}} $labels.app {{`}}`}} {{`{{`}} $labels.view {{`}}`}} .'
+  - name: ./toolchain.access_tokens.checks
+    rules:
+    - alert: InvalidAccessTokenRate
+      for: 5m
+      labels:
+        severity: critical
+        type: toolchain-alerts
+      expr: |-
+                sum by (token_type) (rate(toolchain_access_tokens_check_failure_total[5m]))
+                /
+                sum  by (token_type) (rate(toolchain_access_tokens_check_total[5m]))
+                 > 0.01
+      annotations:
+         message: 'High ratio ({{`{{`}} $value | humanizePercentage {{`}}`}}) of failed {{`{{`}} $labels.token_type {{`}}`}} tokens checks.'
+  - name: ./toolchain.workflow
+    rules:
+      - alert: WorkUnitsInInfeasibleState
+        for: 10m
+        labels:
+          serverity: critical
+          type: toolchain-alerts
+        # We currently have issues w/ Work units in the buildsense service. Until those are resolved (in followups) we don't want to alert
+        # if that service has work units in infeasible state,
+        expr: sum by (toolchain_product,payload_model,chart) (toolchain_workflow_workunit_state{state="infeasible", toolchain_product!~"buildsense"}) > 0
+        annotations:
+          message: 'Work Units of type {{`{{ $labels.payload_model }}`}} in service {{`{{ $labels.chart }}`}} are in infeasible state due to errors.'
+{{ end }}

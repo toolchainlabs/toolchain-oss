@@ -1,0 +1,80 @@
+[
+    {
+        "entry_url": "http://spire.bugout.dev/journals/26fab8ef-9575-4638-9fe2-603df8bea4b9/entries/b6f1ce84-dac3-4584-a448-5ccb27a79fbc",
+        "content_url": "http://spire.bugout.dev/journals/26fab8ef-9575-4638-9fe2-603df8bea4b9/entries/b6f1ce84-dac3-4584-a448-5ccb27a79fbc/content",
+        "title": "pants run pants_run_2022_01_02_23_34_39_362_f20b252223b84f42924fcd47fc21668f",
+        "content": "{\"active_standard_backends\": [\"pants.backend.awslambda.python\", \"pants.backend.experimental.docker\", \"pants.backend.experimental.go\", \"pants.backend.experimental.python\", \"pants.backend.experimental.python.lint.autoflake\", \"pants.backend.experimental.python.lint.pyupgrade\", \"pants.backend.experimental.terraform\", \"pants.backend.plugin_development\", \"pants.backend.project_info\", \"pants.backend.python\", \"pants.backend.python.lint.bandit\", \"pants.backend.python.lint.black\", \"pants.backend.python.lint.docformatter\", \"pants.backend.python.lint.flake8\", \"pants.backend.python.lint.isort\", \"pants.backend.python.lint.pylint\", \"pants.backend.python.mixed_interpreter_constraints\", \"pants.backend.python.typecheck.mypy\"], \"duration\": \"8.70499324798584\", \"machine_id\": \"8ec1ead12d02e4f5d1e81842c06852d67cd4ad1618f38a7a3ce03c086ee81810\", \"num_goals\": \"1\", \"outcome\": \"SUCCESS\", \"pants_version\": \"2.9.0rc0\", \"platform\": \"Linux-5.11.0-1022-aws-x86_64-with-glibc2.2.5\", \"python_implementation\": \"CPython\", \"python_version\": \"3.8.12\", \"repo_id\": \"93651e60079b070911a5573b3e8c02e1203658d9eaf6bc8b7dc0d225563db6c5\", \"run_id\": \"pants_run_2022_01_02_23_34_39_362_f20b252223b84f42924fcd47fc21668f\", \"standard_goals\": [\"run\"], \"timestamp\": \"1641166479.2209666\", \"user_id\": \"6263e7cafaf59bb0ab01ea49c1955b6025eaa3f77a8bb62a055042f2d63c4a02\"}",
+        "tags": [
+            "duration:8.70499324798584",
+            "source:pantsbuild/pants",
+            "os:Linux",
+            "python:3",
+            "python:3.8",
+            "pants_version:2.9.0rc0",
+            "user:6263e7cafaf59bb0ab01ea49c1955b6025eaa3f77a8bb62a055042f2d63c4a02",
+            "reporter_token:974b1acc-e052-4e5f-a45e-bae928e47bb0",
+            "session:pants_run_2022_01_02_23_34_39_362_f20b252223b84f42924fcd47fc21668f",
+            "machine:8ec1ead12d02e4f5d1e81842c06852d67cd4ad1618f38a7a3ce03c086ee81810",
+            "repo:93651e60079b070911a5573b3e8c02e1203658d9eaf6bc8b7dc0d225563db6c5",
+            "goal:run",
+            "outcome:SUCCESS",
+            "arch:x86_64",
+            "python:3.8.12"
+        ],
+        "created_at": "2022-01-02 23:34:48.379432+00:00",
+        "updated_at": "2022-01-02 23:34:48.379432+00:00",
+        "score": 1
+    },
+    {
+        "entry_url": "http://spire.bugout.dev/journals/26fab8ef-9575-4638-9fe2-603df8bea4b9/entries/ec529c3e-eb7a-4c64-821e-0f9bdc5a0807",
+        "content_url": "http://spire.bugout.dev/journals/26fab8ef-9575-4638-9fe2-603df8bea4b9/entries/ec529c3e-eb7a-4c64-821e-0f9bdc5a0807/content",
+        "title": "pants run pants_run_2022_01_02_23_32_13_442_2f88fd081a16461587b3658795f913fb",
+        "content": "{\"active_standard_backends\": [\"pants.backend.awslambda.python\", \"pants.backend.experimental.docker\", \"pants.backend.experimental.go\", \"pants.backend.experimental.python\", \"pants.backend.experimental.python.lint.autoflake\", \"pants.backend.experimental.python.lint.pyupgrade\", \"pants.backend.experimental.terraform\", \"pants.backend.plugin_development\", \"pants.backend.project_info\", \"pants.backend.python\", \"pants.backend.python.lint.bandit\", \"pants.backend.python.lint.black\", \"pants.backend.python.lint.docformatter\", \"pants.backend.python.lint.flake8\", \"pants.backend.python.lint.isort\", \"pants.backend.python.lint.pylint\", \"pants.backend.python.mixed_interpreter_constraints\", \"pants.backend.python.typecheck.mypy\"], \"duration\": \"20.71903395652771\", \"machine_id\": \"cc8e44a38ab329f503891d3e906f16c5152a171b68ae33e9718cebea95a06116\", \"num_goals\": \"1\", \"outcome\": \"SUCCESS\", \"pants_version\": \"2.9.0rc0\", \"platform\": \"Linux-5.10.76-linuxkit-x86_64-with-glibc2.2.5\", \"python_implementation\": \"CPython\", \"python_version\": \"3.8.12\", \"repo_id\": \"93651e60079b070911a5573b3e8c02e1203658d9eaf6bc8b7dc0d225563db6c5\", \"run_id\": \"pants_run_2022_01_02_23_32_13_442_2f88fd081a16461587b3658795f913fb\", \"standard_goals\": [\"package\"], \"timestamp\": \"1641166330.839421\", \"user_id\": \"6263e7cafaf59bb0ab01ea49c1955b6025eaa3f77a8bb62a055042f2d63c4a02\"}",
+        "tags": [
+            "source:pantsbuild/pants",
+            "os:Linux",
+            "python:3",
+            "python:3.8",
+            "session:pants_run_2022_01_02_23_32_13_442_2f88fd081a16461587b3658795f913fb",
+            "pants_version:2.9.0rc0",
+            "user:6263e7cafaf59bb0ab01ea49c1955b6025eaa3f77a8bb62a055042f2d63c4a02",
+            "machine:cc8e44a38ab329f503891d3e906f16c5152a171b68ae33e9718cebea95a06116",
+            "reporter_token:974b1acc-e052-4e5f-a45e-bae928e47bb0",
+            "goal:package",
+            "repo:93651e60079b070911a5573b3e8c02e1203658d9eaf6bc8b7dc0d225563db6c5",
+            "outcome:SUCCESS",
+            "arch:x86_64",
+            "duration:20.71903395652771",
+            "python:3.8.12"
+        ],
+        "created_at": "2022-01-02 23:32:32.714184+00:00",
+        "updated_at": "2022-01-02 23:32:32.714184+00:00",
+        "score": 1
+    },
+    {
+        "entry_url": "http://spire.bugout.dev/journals/26fab8ef-9575-4638-9fe2-603df8bea4b9/entries/7671d894-5808-429a-85f7-7b69c71cf497",
+        "content_url": "http://spire.bugout.dev/journals/26fab8ef-9575-4638-9fe2-603df8bea4b9/entries/7671d894-5808-429a-85f7-7b69c71cf497/content",
+        "title": "pants run pants_run_2022_01_02_23_31_42_187_cca81c50fcbe423689a955675888ca13",
+        "content": "{\"active_standard_backends\": [\"pants.backend.awslambda.python\", \"pants.backend.experimental.docker\", \"pants.backend.experimental.go\", \"pants.backend.experimental.python\", \"pants.backend.experimental.python.lint.autoflake\", \"pants.backend.experimental.python.lint.pyupgrade\", \"pants.backend.experimental.terraform\", \"pants.backend.plugin_development\", \"pants.backend.project_info\", \"pants.backend.python\", \"pants.backend.python.lint.bandit\", \"pants.backend.python.lint.black\", \"pants.backend.python.lint.docformatter\", \"pants.backend.python.lint.flake8\", \"pants.backend.python.lint.isort\", \"pants.backend.python.lint.pylint\", \"pants.backend.python.mixed_interpreter_constraints\", \"pants.backend.python.typecheck.mypy\"], \"duration\": \"20.510681629180908\", \"machine_id\": \"cc8e44a38ab329f503891d3e906f16c5152a171b68ae33e9718cebea95a06116\", \"num_goals\": \"1\", \"outcome\": \"SUCCESS\", \"pants_version\": \"2.9.0rc0\", \"platform\": \"Linux-5.10.76-linuxkit-x86_64-with-glibc2.2.5\", \"python_implementation\": \"CPython\", \"python_version\": \"3.8.12\", \"repo_id\": \"93651e60079b070911a5573b3e8c02e1203658d9eaf6bc8b7dc0d225563db6c5\", \"run_id\": \"pants_run_2022_01_02_23_31_42_187_cca81c50fcbe423689a955675888ca13\", \"standard_goals\": [\"package\"], \"timestamp\": \"1641166299.1479561\", \"user_id\": \"6263e7cafaf59bb0ab01ea49c1955b6025eaa3f77a8bb62a055042f2d63c4a02\"}",
+        "tags": [
+            "session:pants_run_2022_01_02_23_31_42_187_cca81c50fcbe423689a955675888ca13",
+            "source:pantsbuild/pants",
+            "os:Linux",
+            "python:3",
+            "python:3.8",
+            "pants_version:2.9.0rc0",
+            "machine:cc8e44a38ab329f503891d3e906f16c5152a171b68ae33e9718cebea95a06116",
+            "user:6263e7cafaf59bb0ab01ea49c1955b6025eaa3f77a8bb62a055042f2d63c4a02",
+            "duration:20.510681629180908",
+            "reporter_token:974b1acc-e052-4e5f-a45e-bae928e47bb0",
+            "goal:package",
+            "repo:93651e60079b070911a5573b3e8c02e1203658d9eaf6bc8b7dc0d225563db6c5",
+            "outcome:SUCCESS",
+            "arch:x86_64",
+            "python:3.8.12"
+        ],
+        "created_at": "2022-01-02 23:32:00.611600+00:00",
+        "updated_at": "2022-01-02 23:32:00.611600+00:00",
+        "score": 1
+    }
+]

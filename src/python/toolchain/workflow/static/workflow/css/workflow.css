@@ -1,0 +1,68 @@
+/*
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+*/
+
+.content {
+  max-width: 1200px;
+}
+
+.workunit-list-table-container .bs-checkbox {
+  display: none;
+}
+
+div.workunit-context-links-container {
+  padding-bottom: 8px;
+}
+
+a.workunit-context-links {
+  padding-right: 32px;
+}
+
+table.workunit-list-table {
+  font-size: 12px;
+  text-align: left;
+}
+
+table.workunit-list-table td {
+  white-space: nowrap;
+}
+
+.fixed-table-container tbody .selected td {
+  /* TODO: style here, or delete. */
+}
+
+.workunit-list-table-description div {
+  width: 450px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.workunit-list-table-description div .popover {
+  max-width: 1000px;
+  width: auto;
+}
+
+.workunit-list-table-description div .popover-content {
+  overflow: initial;
+  white-space: initial;
+  width: auto;
+}
+
+table.workexceptionlog-table {
+  font-size: 12px;
+  text-align: left;
+}
+
+.workexceptionlog-table-container .bs-checkbox {
+  display: none;
+}
+
+ul.workexceptionlog-detail-stackframes {
+  list-style-type: none;
+  padding-left: 0;
+  font-family: monospace;
+  font-size: 12px;
+
+}

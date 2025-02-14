@@ -1,0 +1,31 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+{{ if .Values.features.monitorToolchainPythonServices }}
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  namespace: monitoring
+  name: monitor-workers
+  labels:
+    monitoring: toolchain-service
+    release: {{ .Release.Name }}
+spec:
+  podTargetLabels:
+    - app
+    - toolchain_service_type
+    - toolchain_product
+    - chart
+  namespaceSelector:
+    any: true
+  selector:
+    matchLabels:
+      monitor: "true"
+      services: "toolchain"
+    matchExpressions:
+      - {key: toolchain_service_type, operator: In, values: [worker, worker-maintenance]}
+  podMetricsEndpoints:
+  - port: http
+    path: "/metricsz"
+    interval: 10s
+{{ end }}

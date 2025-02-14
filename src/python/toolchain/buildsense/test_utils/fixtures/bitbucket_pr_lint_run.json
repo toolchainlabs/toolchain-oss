@@ -1,0 +1,152 @@
+{
+    "ci_env": {
+        "BITBUCKET_BRANCH": "upgrades",
+        "BITBUCKET_BUILD_NUMBER": "29",
+        "BITBUCKET_CLONE_DIR": "/opt/atlassian/pipelines/agent/build",
+        "BITBUCKET_COMMIT": "527af4185a06",
+        "BITBUCKET_DOCKER_HOST_INTERNAL": "10.36.202.236",
+        "BITBUCKET_GIT_HTTP_ORIGIN": "http://bitbucket.org/festivus-miracle/minimal-pants",
+        "BITBUCKET_GIT_SSH_ORIGIN": "git@bitbucket.org:festivus-miracle/minimal-pants.git",
+        "BITBUCKET_PIPELINE_UUID": "{d1a5f858-5afe-4b22-98f3-77646b86344c}",
+        "BITBUCKET_PROJECT_KEY": "EX",
+        "BITBUCKET_PROJECT_UUID": "{8454e8bb-7290-4396-9eb9-6c0d77556bc5}",
+        "BITBUCKET_PR_DESTINATION_BRANCH": "main",
+        "BITBUCKET_PR_DESTINATION_COMMIT": "f16804a4d9b6",
+        "BITBUCKET_PR_ID": "11",
+        "BITBUCKET_REPO_FULL_NAME": "festivus-miracle/minimal-pants",
+        "BITBUCKET_REPO_IS_PRIVATE": "false",
+        "BITBUCKET_REPO_OWNER": "festivus-miracle",
+        "BITBUCKET_REPO_OWNER_UUID": "{acf54878-51be-473e-bf0b-0fbb12e011ad}",
+        "BITBUCKET_REPO_SLUG": "minimal-pants",
+        "BITBUCKET_REPO_UUID": "{c389eba6-ca13-49c5-8dec-4e617d39dffe}",
+        "BITBUCKET_STEP_RUN_NUMBER": "1",
+        "BITBUCKET_STEP_TRIGGERER_UUID": "{6ae3c307-ae59-4135-9c72-bdd06eb2010a}",
+        "BITBUCKET_STEP_UUID": "{aa13f106-c64d-41c6-b68c-5fe26f04bd00}",
+        "BITBUCKET_WORKSPACE": "festivus-miracle"
+    },
+    "counter_names": [
+        "local_cache_requests",
+        "local_cache_requests_cached"
+    ],
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 9.559502840042114
+        }
+    ],
+    "observation_histograms": {
+        "histograms": {
+            "local_cache_time_saved_ms": "HISTFAAAADZ4nC3GsREAEBBE0b1FJpOakehDczpQgQ5lInOCu5+8X+cqADKs4IrRdBy7m/iEu1MjP43lB24=",
+            "local_store_read_blob_size": "HISTFAAAAIh4nC1LPQrCUBj7mi/vez/UoRSRoqLg0BM4d/QYnsITKDiLBxBXb+JtBEeH+mpNSAIhWZyutYgcZIT+s/h51/fdaywqwEPQZi2RbWBinSBJ1ykorQylgI4GT2yhaYIZHSqKTbmiILJltJ3Nh3+DiA2OwE3to3nXYM+z4vIo8Cxw93i78AX0dw8f"
+        },
+        "version": 0
+    },
+    "pantsd_stats": {
+        "affected_file_count": 9,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 249
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "backend_packages": [
+                "pants.backend.project_info",
+                "pants.backend.python",
+                "pants.backend.python.lint.black",
+                "pants.backend.python.lint.flake8",
+                "pants.backend.python.lint.isort"
+            ],
+            "build_file_prelude_globs": [],
+            "build_ignore": [],
+            "build_patterns": [
+                "BUILD",
+                "BUILD.*"
+            ],
+            "ca_certs_path": null,
+            "colors": false,
+            "concurrent": false,
+            "dynamic_ui": false,
+            "exclude_target_regexp": [],
+            "verify_config": true,
+            "watch_filesystem": true
+        },
+        "python-infer": {
+            "conftests": true,
+            "entry_points": true,
+            "imports": true,
+            "inits": false,
+            "string_imports": false
+        },
+        "sourcefile-validation": {
+            "config": {}
+        },
+        "stats": {
+            "log": false
+        },
+        "subprocess-environment": {
+            "env_vars": [
+                "LANG",
+                "LC_CTYPE",
+                "LC_ALL"
+            ]
+        },
+        "tailor": {
+            "alias_mapping": {},
+            "build_file_indent": "    "
+        },
+        "typecheck": {},
+        "validate": {
+            "detail_level": "nonmatching"
+        }
+    },
+    "run_info": {
+        "branch": "upgrades",
+        "buildroot": "/opt/atlassian/pipelines/agent/build",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.6.0 lint ::",
+        "computed_goals": [
+            "lint"
+        ],
+        "datetime": "Wednesday Aug 11, 2021 00:11:29",
+        "id": "pants_run_2021_08_11_00_11_30_828_66be5f4f9775442d8b4bd3b9dbb50e55",
+        "machine": "aa13f106-c64d-41c6-b68c-5fe26f04bd00-qf5cx",
+        "outcome": "SUCCESS",
+        "path": "/opt/atlassian/pipelines/agent/build",
+        "revision": "60741389c6e2cb4006795dbbb6bb8c0a1acb2576",
+        "specs_from_command_line": [
+            "::"
+        ],
+        "timestamp": 1628640689.0416584,
+        "user": "root",
+        "version": "2.6.0"
+    },
+    "targets": {
+        "//:ansicolors": [
+            {
+                "filename": "//:ansicolors"
+            }
+        ],
+        "//:requirements.txt": [
+            {
+                "filename": "//:requirements.txt"
+            }
+        ],
+        "seinfeld": [
+            {
+                "filename": "seinfeld/main.py"
+            },
+            {
+                "filename": "seinfeld/quote_of_the_day.py"
+            }
+        ],
+        "seinfeld:main": [
+            {
+                "filename": "seinfeld:main"
+            }
+        ],
+        "seinfeld:tests": [
+            {
+                "filename": "seinfeld/quote_of_the_day_test.py"
+            }
+        ]
+    },
+    "workunits": []
+}

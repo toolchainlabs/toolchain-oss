@@ -1,0 +1,74 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# null values may (and sometimes must) be provided in the dependent chart's values.
+
+global:
+  region: null
+image_registry: 283194185447.dkr.ecr.us-east-1.amazonaws.com
+name: null
+worker_deployment_name: null  # Defaults to name. Use if the worker service has multiple deployments.
+toolchain_env: null
+service_location: internal
+has_static_files: true
+toolchain_product_name:  # set by chart
+service_account_name: null
+host_name: null  # host name, mostly for edge services.
+nginx:
+  image_rev:
+    us-east-1: 2022-12-19.19-59-22-6b2ee884e597
+  exporter:
+    # https://hub.docker.com/r/nginx/nginx-prometheus-exporter/tags?page=1&ordering=last_updated
+    image_tag: 0.10.0@sha256:1b6ce49379eb08fcd8b99661167be95764a7b419b35c3a81f38823f15902622b
+gunicorn_image_rev:
+  us-east-1: null
+workflow_server_rev:
+  us-east-1: null
+replicas: 1
+resources:
+  nginx:
+    requests:
+      cpu: "40m"
+      memory: "64Mi"
+      ephemeral_storage: "128Mi"
+    limits:
+      cpu: "100m"
+      memory: "128Mi"
+      ephemeral_storage: "512Mi"
+  gunicorn:
+    requests:
+      cpu: "10m"
+      memory: "256Mi"
+      ephemeral_storage: "128Mi"
+    limits:
+      cpu: "800m"
+      memory: "1Gi"
+      ephemeral_storage: "1Gi"
+dbs: []  # List of dbs releases of this chart can access (so we know to mount their creds secrets).
+log_level: info  # Ignored if loggers is non-empty.
+secrets: []
+temporary_prod_debug_mode_remove_me: 0
+service_node_selector: "toolchain.instance_category: service"
+# NB: Helm doesn't interpolate in values.yaml itself, so when constructing the env config we must
+# explicitly call tpl on the values below.
+config:
+  SECRET_KEY_NAME: "django-secret-key"
+  LOG_LEVEL: "{{ .Values.log_level }}"
+  # See https://github.com/boto/botocore/issues/1617 (we have encountered this issue occasionally).
+  AWS_METADATA_SERVICE_TIMEOUT: "10"
+  AWS_METADATA_SERVICE_NUM_ATTEMPTS: "3"
+extra_config: {}
+healthcheck_path: /healthz
+# Any extra volumes to define for the  service (gunicorn/nginx) pod
+serviceExtraVolumes: []
+  # - name: example-name
+  #   hostPath:
+  #     path: /path/on/host
+  #     type: DirectoryOrCreate
+# Any extra volume mounts to define for the gunicorn container
+gunicornExtraVolumeMounts: []
+#   - name: example-name
+#     mountPath: /path/in/container
+
+# Any extra containers to add to the service pod
+extraContainers: []

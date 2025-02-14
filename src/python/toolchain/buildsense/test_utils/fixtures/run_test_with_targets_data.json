@@ -1,0 +1,307 @@
+{
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 36.424625873565674
+        }
+    ],
+    "observation_histograms": {
+        "histograms": {
+            "local_store_read_blob_size": "HISTFAAAAxp4nC1Sz4scRRR+9erV6+ofldmZtp3Zl87uLLths8aQgBND0GTQYLxIK6uCIsEcFJQ96P+QFTwpoijCHkQ0IN7di+TgSRC9KIInIQpePCSE3BI2X8+mGrpeVb3ve9/7qtrdT2siWaXD4R/Orv9lBwcH81uHG+VGYF+IkvgYM6mCSIr+EfESSSwKScFTJRaeFaEiphjpRrg+/2340+jeq3vxz+X/L9+q/gg/yM3wo//XfeRv8o34of+aP3fX+YVd99bPsuuffP8zN3rlpUlcijQpomCwCkUthCfCiKg4QgUVgYv0jeu8VnSCLu65pRGH7rUQpej2nH+WrnZZlAR1GeTJQieGj5i8BJb0tO9o22PhO9/PXSepQyfUdUsd9SBEJI2OY5DmBHeZ+MlXzoM0k6zz3GdIKcsadIiokcFj8GQNp3y1klqYc85l44hywxkPhLYJacEG4hm1GHYuPkZEkjMhIlZOUl60rKJKDT73ZcwLWTAyAhEZ9w2QttmMI+5j5i2ogbPt2cKoaTP1gCC7xHZgw2ImZY+3TDMuYQH2ei5mbwmXliy3Ic/GZzwnHqJG2XoTNNAm6WF+JTH4eskkkyK1jfDjpAPAgyGdtpMZKjXgGvBKMNs8JM90BexdZqmHG+dTtH+GZgstuDGPOiWDZIB8pNvQcpTZ7GlzS7CxZuub3sIpzYbg2WprlgvvwLjcNm2upGZjq+H1sk39RrboM+d64djrHDRHCuGdmLehlvYUspeRH3oXYR1B6zl+uToOtjVYlXA24POa8xPQdM3ZwGpb12ypAcFxKyEhzK70swY71pZ20la78/Y8+oBvMHLN+G1s/s4oRIb009bwOsI0miNpaFsLDWs2BsFJexM9nK1q+8KBYx34wEehdyx2Tv9zWJcAHMX3ImCX7F3zekHeg9ga4E+cntVnbEdxNboDR07xl87m9qvTWraM9A1rLNfnwHUKlDVaKHXfofBYGxzfZqi7zdMrctp+cdhKctfhie/YMfk76tgu6R2v15x+7AD8nuVb0e/co/dV/lrl/Ub2p9UHfvLPZXsAMkZvzA=="
+        },
+        "version": 0
+    },
+    "pantsd_stats": {
+        "affected_file_count": 1159,
+        "preceding_graph_size": 0,
+        "resulting_graph_size": 13432
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "ca_certs_path": null,
+            "colors": true,
+            "concurrent": false,
+            "dynamic_ui": false,
+            "exclude_target_regexp": [],
+            "files_not_found_behavior": "warn",
+            "ignore_pants_warnings": [],
+            "level": "info",
+            "local_execution_root_dir": "/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T",
+            "local_store_dir": "/Users/asher/.cache/pants/lmdb_store",
+            "log_levels_by_target": {},
+            "log_show_rust_3rdparty": false,
+            "logdir": null,
+            "loop": false,
+            "loop_max": 4294967296,
+            "named_caches_dir": "/Users/asher/.cache/pants/named_caches",
+            "plugins_force_resolve": false,
+            "streaming_workunits_report_interval": 1,
+            "subproject_roots": [],
+            "tag": [],
+            "verify_config": true
+        },
+        "auth": {
+            "auth_file": ".pants.d/toolchain_auth/auth-dev.json",
+            "base_url": "http://localhost:9500/api/v1",
+            "ci_env_variables": [],
+            "from_env_var": null,
+            "org": null
+        },
+        "auth-acquire": {
+            "headless": false,
+            "local_port": null,
+            "output": "file"
+        },
+        "package": {},
+        "subprocess-environment": {
+            "env_vars": [
+                "LANG",
+                "LC_CTYPE",
+                "LC_ALL"
+            ]
+        },
+        "test": {
+            "debug": false,
+            "extra_env_vars": [],
+            "force": false,
+            "open_coverage": false,
+            "output": "failed",
+            "use_coverage": true
+        },
+        "toolchain-resolve": {
+            "abis": [],
+            "output_file": null,
+            "python_version": "3.8",
+            "sep": "\\n"
+        },
+        "toolchain-setup": {
+            "repo": "toolchain"
+        },
+        "typecheck": {},
+        "validate": {
+            "detail_level": "nonmatching"
+        }
+    },
+    "run_info": {
+        "branch": "bania",
+        "buildroot": "/Users/asher/projects/toolchain",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.3.0.dev3 --no-dynamic-ui test src/python/toolchain/users/::",
+        "computed_goals": [
+            "test"
+        ],
+        "datetime": "Wednesday Feb 24, 2021 09:55:33",
+        "id": "pants_run_2021_02_24_09_55_34_372_5967bac7dff5483abdfc028653352bd0",
+        "machine": "Ashers-MacBook-Pro.local",
+        "outcome": "SUCCESS",
+        "path": "/Users/asher/projects/toolchain",
+        "revision": "a0b41da7ece7fa9fa75e5deabc336edf3a7a8ef7",
+        "specs_from_command_line": [
+            "src/python/toolchain/users::"
+        ],
+        "timestamp": 1614189333.1405172,
+        "user": "asher",
+        "version": "2.3.0.dev3"
+    },
+    "targets": {
+        "src/python/toolchain/users": [
+            {
+                "filename": "src/python/toolchain/users/__init__.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/apps.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/auth_util.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/constants.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/dependent_resources_check.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/models.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/url_names.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/urls.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/urls_api.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/views.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/views_api.py"
+            }
+        ],
+        "src/python/toolchain/users/jwt": [
+            {
+                "filename": "src/python/toolchain/users/jwt/authentication.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/jwt/constants.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/jwt/permissions.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/jwt/utils.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/jwt/views.py"
+            }
+        ],
+        "src/python/toolchain/users/jwt:tests": [
+            {
+                "filename": "src/python/toolchain/users/jwt/authentication_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/jwt/conftest.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/jwt/constants_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/jwt/permissions_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/jwt/utils_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/jwt/views_test.py"
+            }
+        ],
+        "src/python/toolchain/users/management/commands": [
+            {
+                "filename": "src/python/toolchain/users/management/commands/bootstrap.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/management/commands/configure_checkers.py"
+            }
+        ],
+        "src/python/toolchain/users/management/commands:tests": [
+            {
+                "filename": "src/python/toolchain/users/management/commands/configure_checkers_test.py"
+            }
+        ],
+        "src/python/toolchain/users/migrations": [
+            {
+                "filename": "src/python/toolchain/users/migrations/0001_initial.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/migrations/0002_periodicallyrevoketokens.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/migrations/0003_restrictedaccesstoken.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/migrations/0004_auto_20201114_0010.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/migrations/0005_githubrepoconfig.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/migrations/0006_auto_20201207_2141.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/migrations/0007_accesstokenexchangecode.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/migrations/0008_auto_20201212_0003.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/migrations/0009_auto_20201214_1612.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/migrations/0010_auto_20210104_1914.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/migrations/__init__.py"
+            }
+        ],
+        "src/python/toolchain/users/workers": [
+            {
+                "filename": "src/python/toolchain/users/workers/periodic_access_tokens_checker.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/workers/users_worker.py"
+            }
+        ],
+        "src/python/toolchain/users/workers:tests": [
+            {
+                "filename": "src/python/toolchain/users/workers/conftest.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/workers/periodic_access_tokens_checker_test.py"
+            }
+        ],
+        "src/python/toolchain/users:fixtures": [
+            {
+                "filename": "src/python/toolchain/users/fixtures/github_user.json"
+            },
+            {
+                "filename": "src/python/toolchain/users/fixtures/github_user_emails.json"
+            },
+            {
+                "filename": "src/python/toolchain/users/fixtures/github_user_orgs.json"
+            }
+        ],
+        "src/python/toolchain/users:templates": [
+            {
+                "filename": "src/python/toolchain/users/jinja2/site_base/base.html"
+            },
+            {
+                "filename": "src/python/toolchain/users/jinja2/site_base/form.html"
+            },
+            {
+                "filename": "src/python/toolchain/users/jinja2/site_base/form_without_cancel.html"
+            },
+            {
+                "filename": "src/python/toolchain/users/jinja2/users/error.html"
+            },
+            {
+                "filename": "src/python/toolchain/users/jinja2/users/headless.html"
+            },
+            {
+                "filename": "src/python/toolchain/users/jinja2/users/login.html"
+            }
+        ],
+        "src/python/toolchain/users:tests": [
+            {
+                "filename": "src/python/toolchain/users/auth_util_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/conftest.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/dependent_resources_check_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/models_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/views_api_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/users/views_test.py"
+            }
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "f7982077c6c4490c",
+            "name": "select",
+            "state": "finished",
+            "version": 35,
+            "parent_id": null,
+            "last_update": 1614189369,
+            "start_usecs": 1614189334864471,
+            "end_usecs": 1614189334869416
+        }
+      
+    ]
+}

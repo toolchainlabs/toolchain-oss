@@ -1,0 +1,64 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: remoting-proxy-server
+  labels:
+    app: remoting-proxy-server
+    chart: {{ .Chart.Name  }}
+    heritage: {{ .Release.Service }}
+    toolchain_product: "remote-cache"
+data:
+  proxy.yaml: |
+    listen_addresses:
+      - addr: 0.0.0.0:8980
+        auth_scheme: jwt
+        allowed_service_names:
+          - build.bazel.remote.execution.v2.ActionCache
+          - build.bazel.remote.execution.v2.Capabilities
+          - build.bazel.remote.execution.v2.ContentAddressableStorage
+          - build.bazel.remote.execution.v2.Execution
+          - google.bytestream.ByteStream
+          - google.longrunning.Operations
+      - addr: 0.0.0.0:8981
+        auth_scheme: {{ .Values.workers_auth_scheme }}
+        allowed_service_names:
+          - build.bazel.remote.execution.v2.Capabilities
+          - build.bazel.remote.execution.v2.ContentAddressableStorage
+          - google.bytestream.ByteStream
+          - google.longrunning.Bots
+
+    backends:
+      {{- range $name, $value := .Values.proxy_backends }}
+      {{ $name | quote }}:
+        address: {{ $value.host }}:{{ $value.port }}
+        connections: {{ $value.connections }}
+      {{- end }}
+    per_instance_backends:
+      {{- range $name, $value := .Values.proxy_per_instance_backends }}
+      {{ $name | quote }}:
+        cas: {{ $value.cas | quote }}
+        action_cache: {{ $value.action_cache | quote }}
+        execution: {{ $value.execution | quote }}
+      {{- end }}
+    default_backends:
+      cas: storage
+      action_cache: storage
+      {{- if hasKey .Values.proxy_backends "execution" }}
+      execution: execution
+      {{- end }}
+    jwk_set_path: /secrets/{{ index .Values.jwtSecrets 0 }}/secret_string
+    auth_token_mapping:
+      s3_bucket: {{ $.Values.auth_token_mapping.s3_bucket }}
+      s3_region: us-east-1
+      s3_path: {{ $.Values.auth_token_mapping.s3_path }}
+      refresh_frequency_s: {{ $.Values.auth_token_mapping.refresh_frequency_s }}
+    infra:
+      sentry_dsn: {{ .Values.server_sentry_dsn }}
+    grpc:
+      max_concurrent_streams: {{ .Values.grpc.maxConcurrentStreams }}
+      concurrency_limit_per_connection: {{ .Values.grpc.concurrencyLimitPerConnection }}
+    backend_timeouts:
+      get_action_result: {{ .Values.backend_timeouts.get_action_result }}

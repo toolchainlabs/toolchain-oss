@@ -1,0 +1,178 @@
+[
+    {
+        "metadata": {
+            "account": "406",
+            "meterApiName": "cache-write-bytes",
+            "aggregation": "sum",
+            "timeRange": {
+                "startTimeInSeconds": 1657584000,
+                "endTimeInSeconds": 1657756800
+            },
+            "filter": {
+                "customerId": [
+                    "prod_v1_exBgciGKk7hyzGVQ7MDsTn"
+                ]
+            },
+            "groupBy": null,
+            "take": null,
+            "timeGroupingInterval": "day",
+            "valuesTimeGroupingInterval": "day"
+        },
+        "secondsSinceEpochIntervals": [
+            1657584000,
+            1657670400
+        ],
+        "clientMeters": [
+            {
+                "group": {
+                    "groupInfo": {}
+                },
+                "groupValue": 3780459403,
+                "values": [
+                    {
+                        "percentageFromPrevious": 0,
+                        "value": 2813011043,
+                        "secondsSinceEpochUtc": 1657584000
+                    },
+                    {
+                        "percentageFromPrevious": -65.60808524348192,
+                        "value": 967448360,
+                        "secondsSinceEpochUtc": 1657670400
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "account": "406",
+            "meterApiName": "cache-read-bytes",
+            "aggregation": "sum",
+            "timeRange": {
+                "startTimeInSeconds": 1657584000,
+                "endTimeInSeconds": 1657756800
+            },
+            "filter": {
+                "customerId": [
+                    "prod_v1_exBgciGKk7hyzGVQ7MDsTn"
+                ]
+            },
+            "groupBy": null,
+            "take": null,
+            "timeGroupingInterval": "day",
+            "valuesTimeGroupingInterval": "day"
+        },
+        "secondsSinceEpochIntervals": [
+            1657584000,
+            1657670400
+        ],
+        "clientMeters": [
+            {
+                "group": {
+                    "groupInfo": {}
+                },
+                "groupValue": 19091441774,
+                "values": [
+                    {
+                        "percentageFromPrevious": 0,
+                        "value": 13745395506,
+                        "secondsSinceEpochUtc": 1657584000
+                    },
+                    {
+                        "percentageFromPrevious": -61.10663919662117,
+                        "value": 5346046268,
+                        "secondsSinceEpochUtc": 1657670400
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "account": "406",
+            "meterApiName": "cache-num-write-blobs",
+            "aggregation": "sum",
+            "timeRange": {
+                "startTimeInSeconds": 1657584000,
+                "endTimeInSeconds": 1657756800
+            },
+            "filter": {
+                "customerId": [
+                    "prod_v1_exBgciGKk7hyzGVQ7MDsTn"
+                ]
+            },
+            "groupBy": null,
+            "take": null,
+            "timeGroupingInterval": "day",
+            "valuesTimeGroupingInterval": "day"
+        },
+        "secondsSinceEpochIntervals": [
+            1657584000,
+            1657670400
+        ],
+        "clientMeters": [
+            {
+                "group": {
+                    "groupInfo": {}
+                },
+                "groupValue": 180198,
+                "values": [
+                    {
+                        "percentageFromPrevious": 0,
+                        "value": 130294,
+                        "secondsSinceEpochUtc": 1657584000
+                    },
+                    {
+                        "percentageFromPrevious": -61.69892704192058,
+                        "value": 49904,
+                        "secondsSinceEpochUtc": 1657670400
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "account": "406",
+            "meterApiName": "cache-num-read-blobs",
+            "aggregation": "sum",
+            "timeRange": {
+                "startTimeInSeconds": 1657584000,
+                "endTimeInSeconds": 1657756800
+            },
+            "filter": {
+                "customerId": [
+                    "prod_v1_exBgciGKk7hyzGVQ7MDsTn"
+                ]
+            },
+            "groupBy": null,
+            "take": null,
+            "timeGroupingInterval": "day",
+            "valuesTimeGroupingInterval": "day"
+        },
+        "secondsSinceEpochIntervals": [
+            1657584000,
+            1657670400
+        ],
+        "clientMeters": [
+            {
+                "group": {
+                    "groupInfo": {}
+                },
+                "groupValue": 534780,
+                "values": [
+                    {
+                        "percentageFromPrevious": 0,
+                        "value": 374397,
+                        "secondsSinceEpochUtc": 1657584000
+                    },
+                    {
+                        "percentageFromPrevious": -57.16231700574524,
+                        "value": 160383,
+                        "secondsSinceEpochUtc": 1657670400
+                    }
+                ]
+            }
+        ]
+    }
+]

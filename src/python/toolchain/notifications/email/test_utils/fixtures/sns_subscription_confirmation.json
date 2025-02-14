@@ -1,0 +1,11 @@
+{
+    "headers": {
+        "Content-Type": "text/plain; charset=UTF-8",
+        "User-Agent": "Amazon Simple Notification Service Agent",
+        "Accept-Encoding": "gzip,deflate",
+        "X-Amz-Sns-Message-Id": "d6f68dee-6a6b-4fe0-ab50-767239aea4ac",
+        "X-Amz-Sns-Message-Type": "SubscriptionConfirmation",
+        "X-Amz-Sns-Topic-Arn": "arn:aws:sns:us-east-1:283194185447:ses-delivery"
+    },
+    "body": "{\"Type\": \"SubscriptionConfirmation\", \"MessageId\": \"1bfdfcb4-ea5b-4a0b-acf2-c8d20d40115c\", \"Token\": \"2336412f37fb687f5d51e6e2425dacbbaa2961433adef909fc88effd892adcfeb4fd4b4b1c86ab6cff61c2a919af7caa7937f50d4a1abb160b36d596d9cf6f4560b2befa8fa1fef525be6aadfe2a7dc43c6697842c7fef2a2dd1ce66c2325f8509457298b9773745e0fe5a279f1c8bce\", \"TopicArn\": \"arn:aws:sns:us-east-1:283194185447:ses-delivery\", \"Message\": \"You have chosen to subscribe to the topic arn:aws:sns:us-east-1:283194185447:ses-delivery.\\nTo confirm the subscription, visit the SubscribeURL included in this message.\", \"SubscribeURL\": \"https://sns.us-east-1.amazonaws.com/?Action=ConfirmSubscription&TopicArn=arn:aws:sns:us-east-1:283194185447:ses-delivery&Token=2336412f37fb687f5d51e6e2425dacbbaa2961433adef909fc88effd892adcfeb4fd4b4b1c86ab6cff61c2a919af7caa7937f50d4a1abb160b36d596d9cf6f4560b2befa8fa1fef525be6aadfe2a7dc43c6697842c7fef2a2dd1ce66c2325f8509457298b9773745e0fe5a279f1c8bce\", \"Timestamp\": \"2022-05-16T18:27:40.999Z\", \"SignatureVersion\": \"1\", \"Signature\": \"YQlrnsZRybA8ftPgcVsAaampIb+RgfiIed8AClGZanI2JGki7meNl7baWguQfrdNb4QErXfLFWeFoKFUO6+7rED7CubZGB+6rwAsBotcYhbI/j2mmW7W7u+mZWlFbUFwJD8PqCLjHsRNkjD00FmXbTePu/SvRNO+90SLNzVWT3AUoVw1jt3dEedruTTGz10uALvesdk9XXIviXqji+5lpspK0mLS6zPMZ615MAnvaGk/ZynXOshGRnTZ6ILAfkkaJZoH3ddtyX64yK46zMk1wdx/QKpDDS+Y04CBPZ/1vNQqCPfXJg6c4aqoFkThtzoTaEBgIjUHiQu77c7hJtpuHA==\", \"SigningCertURL\": \"https://sns.us-east-1.amazonaws.com/SimpleNotificationService-7ff5318490ec183fbaddaa2a969abfda.pem\"}"
+}

@@ -1,0 +1,40 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "workflow/base.html" %}
+{% block title %}{{ super() }}Summary{% endblock title %}
+{% block content %}
+  <h2>Workflow Status</h2>
+  <div class="workunit-stats-table-container">
+    <table id="workunit-stats-table" class="workunit-list-table"></table>
+  </div>
+
+  <h2>Currently Active WorkUnits</h2>
+  <div class="workunit-list-table-container">
+    <table id="workunit-active-table" class="workunit-list-table"></table>
+  </div>
+
+{% endblock content %}
+
+{% block js %}
+  {{ super() }}
+  <script src="{{ static('workflow/js/mark_as_feasible.js') }}"></script>
+  {{ csrf_input }}
+  <script src="{{ static('workflow/js/workunit_list_table.js') }}"></script>
+  <script>
+    $(function() {
+      var workunitStatsURL = new URL('{{ views_links.workunit_stats }}', window.location.href);
+      toolchain.workflow.initWorkunitStatsTable('#workunit-stats-table',
+          workunitStatsURL, '{{ views_links.workunit_stats_recompute }}');      
+      toolchain.workflow.initWorkunitListTable(
+          '#workunit-active-table',
+          '{{ views_links.workunit_active_data }}',
+          undefined,
+          false,
+          true
+      );
+    });
+  </script>
+{% endblock js %}

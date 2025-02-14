@@ -1,0 +1,47 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+name: toolshed
+toolchain_product_name: toolshed
+dbs:
+- users
+- buildsense
+- scm-integration
+- oss-metrics
+- pants-demos
+- payments
+service_type: admin
+iam_service_role_arn: null
+service_location: edge
+host_name: toolshed.toolchainlabs.com
+secrets:
+- django-secret-key
+- toolshed-admin-github-oauth-app
+- toolshed-cookie-salt
+- duo-toolshed-app
+gunicorn_image_rev:
+  us-east-1: prod-2023-04-12.15-01-48-8a5f67793cb5
+resources:
+  gunicorn:
+    requests:
+      cpu: 50m
+      memory: 256Mi
+ingress:
+  name: toolshed-ingress
+  enabled: false
+  external_ingress_sg_id:  # Gets overwritten by install_service_prod.py
+    us-east-1: null
+  ssl_certificate_arn:  # Gets overwritten by install_service_prod.py
+    us-east-1: null
+  healthcheck_path: /healthz
+  rules:
+  - host: toolshed.toolchainlabs.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: toolshed
+            port:
+              number: 80

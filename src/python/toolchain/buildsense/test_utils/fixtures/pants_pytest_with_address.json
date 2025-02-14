@@ -1,0 +1,1656 @@
+{
+    "counter_names": [
+        "local_process_total_time_run_ms",
+        "local_cache_requests",
+        "remote_store_blob_bytes_downloaded",
+        "remote_store_blob_bytes_uploaded"
+    ],
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 13.735099077224731
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 1170,
+        "preceding_graph_size": 748,
+        "resulting_graph_size": 12827
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "level": "info",
+            "local_execution_root_dir": "/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T",
+            "local_store_dir": "/Users/asher/.cache/pants/lmdb_store",
+            "local_store_directories_max_size_bytes": 16000000000,
+            "local_store_files_max_size_bytes": 256000000000
+        },
+        "typecheck": {}
+    },
+    "run_info": {
+        "branch": "susan",
+        "buildroot": "/Users/asher/projects/toolchain",
+        "cmd_line": "pants --pants-bin-name=./pants --pants-version=2.8.0.dev4 test src/python/toolchain/github_integration/::",
+        "computed_goals": [
+            "test"
+        ],
+        "datetime": "Friday Oct 15, 2021 16:00:08",
+        "id": "pants_run_2021_10_15_16_00_12_172_250dacad3db74bac948681365d99ecc2",
+        "machine": "Ashers-MacBook-Pro.local",
+        "outcome": "SUCCESS",
+        "path": "/Users/asher/projects/toolchain",
+        "revision": "1bedfdfda26f9a9ce3b9ee8bfacabff2274fb7d6",
+        "specs_from_command_line": [
+            "src/python/toolchain/github_integration::"
+        ],
+        "timestamp": 1634338808.2888699,
+        "user": "asher",
+        "version": "2.8.0.dev4"
+    },
+    "targets": {
+        "src/python/toolchain/github_integration": [
+            {
+                "filename": "src/python/toolchain/github_integration/__init__.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/app_client.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/apps.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/config.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/constants.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/models.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/repo_data_store.py"
+            }
+        ],
+        "src/python/toolchain/github_integration/api": [
+            {
+                "filename": "src/python/toolchain/github_integration/api/constants.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/api/exceptions.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/api/github_actions_checks.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/api/resources_check.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/api/travis_checks.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/api/urls.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/api/views.py"
+            }
+        ],
+        "src/python/toolchain/github_integration/api:tests": [
+            {
+                "filename": "src/python/toolchain/github_integration/api/conftest.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/api/resources_check_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/api/views_test.py"
+            }
+        ],
+        "src/python/toolchain/github_integration/client": [
+            {
+                "filename": "src/python/toolchain/github_integration/client/app_clients.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/client/common.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/client/repo_clients.py"
+            }
+        ],
+        "src/python/toolchain/github_integration/client:tests": [
+            {
+                "filename": "src/python/toolchain/github_integration/client/app_clients_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/client/conftest.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/client/repo_clients_test.py"
+            }
+        ],
+        "src/python/toolchain/github_integration/common": [
+            {
+                "filename": "src/python/toolchain/github_integration/common/constants.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/common/webhook_events.py"
+            }
+        ],
+        "src/python/toolchain/github_integration/hook_handlers": [
+            {
+                "filename": "src/python/toolchain/github_integration/hook_handlers/app_handlers.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/hook_handlers/repo_handlers.py"
+            }
+        ],
+        "src/python/toolchain/github_integration/hook_handlers:tests": [
+            {
+                "filename": "src/python/toolchain/github_integration/hook_handlers/app_handlers_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/hook_handlers/conftest.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/hook_handlers/repo_handlers_test.py"
+            }
+        ],
+        "src/python/toolchain/github_integration/management/commands": [
+            {
+                "filename": "src/python/toolchain/github_integration/management/commands/add_repo_stats_fetch.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/management/commands/deactivate_repo.py"
+            }
+        ],
+        "src/python/toolchain/github_integration/management/commands:tests": [
+            {
+                "filename": "src/python/toolchain/github_integration/management/commands/add_repo_stats_fetch_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/management/commands/deactivate_repo_test.py"
+            }
+        ],
+        "src/python/toolchain/github_integration/migrations": [
+            {
+                "filename": "src/python/toolchain/github_integration/migrations/0001_initial.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/migrations/0002_configuregithubrepo.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/migrations/0003_githubrepo_last_updated.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/migrations/0004_githubrepostatsconfiguration.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/migrations/0005_alter_githubrepo_name.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/migrations/__init__.py"
+            }
+        ],
+        "src/python/toolchain/github_integration/test_utils": [
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/__init__.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures_loader.py"
+            }
+        ],
+        "src/python/toolchain/github_integration/test_utils:fixtures": [
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/check_run_completed_codecov_pull_request.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/check_run_completed_fail_github_actions_pull_request.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/check_run_completed_success_github_actions_pull_request.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/check_run_created_codecov_pull_request.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/check_run_created_github_actions_pull_request.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/create_branch.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/create_tag.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/create_webhook_response.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/get_workflow_run_response.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/github_api_clones.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/github_api_paths.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/github_api_referrers.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/github_api_repo.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/github_api_views.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/installation.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/installation_created_all_repos.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/installation_created_selected_repos.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/installation_deleted.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/installation_repositories_added.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/installation_repositories_removed.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/integration_installation.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/list_installations_response.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/list_webhooks_response.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/pants_master_commit_e58d40.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/ping.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/public_pull_request.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/pull_request_assigned.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/pull_request_opened.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/pull_request_review_requested.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/pull_request_synchronize.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/repo_push.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/repo_push_branch.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/repo_push_branch_name.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/repo_push_nested_branch.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/repo_push_tag.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/travis_pull_request_failed.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/travis_pull_request_start.json"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/test_utils/fixtures/travis_push_branch.json"
+            }
+        ],
+        "src/python/toolchain/github_integration/workers": [
+            {
+                "filename": "src/python/toolchain/github_integration/workers/configure_github_repo.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/workers/dispatcher.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/workers/github_repo_stats.py"
+            }
+        ],
+        "src/python/toolchain/github_integration/workers:tests": [
+            {
+                "filename": "src/python/toolchain/github_integration/workers/configure_github_repo_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/workers/conftest.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/workers/github_repo_stats_test.py"
+            }
+        ],
+        "src/python/toolchain/github_integration:tests": [
+            {
+                "filename": "src/python/toolchain/github_integration/app_client_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/config_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/conftest.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/models_test.py"
+            },
+            {
+                "filename": "src/python/toolchain/github_integration/repo_data_store_test.py"
+            }
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "4738b2d0d80a5424",
+            "name": "pants.engine.internals.graph.resolve_targets",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "c1ba44511324d1a1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338816975987,
+            "end_usecs": 1634338817075772
+        },
+        {
+            "workunit_id": "144042b1ba4deb65",
+            "name": "pants.engine.internals.graph.resolve_unexpanded_targets",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "4738b2d0d80a5424",
+            "last_update": 1634338823,
+            "start_usecs": 1634338816976302,
+            "end_usecs": 1634338817074255
+        },
+        {
+            "workunit_id": "6ccd3192ac78661d",
+            "name": "pants.engine.internals.graph.resolve_dependencies",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "144042b1ba4deb65",
+            "last_update": 1634338823,
+            "start_usecs": 1634338816976933,
+            "description": "Resolve direct dependencies",
+            "end_usecs": 1634338817069418
+        },
+        {
+            "workunit_id": "555bb9b1e853beba",
+            "name": "pants.engine.internals.graph.resolve_targets",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "6ab844b2dfb98474",
+            "last_update": 1634338823,
+            "start_usecs": 1634338816985537,
+            "end_usecs": 1634338817068421
+        },
+        {
+            "workunit_id": "ed8eb4491b167a69",
+            "name": "pants.engine.internals.graph.resolve_unexpanded_targets",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "555bb9b1e853beba",
+            "last_update": 1634338823,
+            "start_usecs": 1634338816985670,
+            "end_usecs": 1634338817066013
+        },
+        {
+            "workunit_id": "f095ce90680e0470",
+            "name": "pants.engine.internals.graph.resolve_dependencies",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "ed8eb4491b167a69",
+            "last_update": 1634338823,
+            "start_usecs": 1634338816985804,
+            "description": "Resolve direct dependencies",
+            "end_usecs": 1634338817062200
+        },
+        {
+            "workunit_id": "374764b68aa96cf9",
+            "name": "pants.engine.internals.graph.resolve_targets",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "6ab844b2dfb98474",
+            "last_update": 1634338823,
+            "start_usecs": 1634338816991953,
+            "end_usecs": 1634338817061177
+        },
+        {
+            "workunit_id": "85e76abd4237e30a",
+            "name": "pants.engine.internals.graph.resolve_unexpanded_targets",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "374764b68aa96cf9",
+            "last_update": 1634338823,
+            "start_usecs": 1634338816992304,
+            "end_usecs": 1634338817059424
+        },
+        {
+            "workunit_id": "d082cbe9e1d606e6",
+            "name": "pants.engine.internals.graph.resolve_dependencies",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "85e76abd4237e30a",
+            "last_update": 1634338823,
+            "start_usecs": 1634338816992467,
+            "description": "Resolve direct dependencies",
+            "end_usecs": 1634338817058429
+        },
+        {
+            "workunit_id": "12dc8bb3869a18e6",
+            "name": "pants.backend.python.dependency_inference.rules.infer_python_dependencies_via_imports",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "f095ce90680e0470",
+            "last_update": 1634338823,
+            "start_usecs": 1634338816995357,
+            "description": "Inferring Python dependencies by analyzing imports",
+            "end_usecs": 1634338817061781
+        },
+        {
+            "workunit_id": "f59752c42459092d",
+            "name": "pants.engine.internals.graph.resolve_targets",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "453626b0d9f55272",
+            "last_update": 1634338823,
+            "start_usecs": 1634338816997734,
+            "end_usecs": 1634338817072098
+        },
+        {
+            "workunit_id": "ce53c947959caaba",
+            "name": "pants.backend.python.dependency_inference.import_parser.parse_python_imports",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "12dc8bb3869a18e6",
+            "last_update": 1634338823,
+            "start_usecs": 1634338816998007,
+            "end_usecs": 1634338817054654
+        },
+        {
+            "workunit_id": "e57bf9e83978266b",
+            "name": "pants.engine.internals.graph.resolve_unexpanded_targets",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "f59752c42459092d",
+            "last_update": 1634338823,
+            "start_usecs": 1634338816998012,
+            "end_usecs": 1634338817071512
+        },
+        {
+            "workunit_id": "c5762f4dbadbb92f",
+            "name": "pants.engine.internals.graph.resolve_dependencies",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "e57bf9e83978266b",
+            "last_update": 1634338823,
+            "start_usecs": 1634338816998264,
+            "description": "Resolve direct dependencies",
+            "end_usecs": 1634338817070577
+        },
+        {
+            "workunit_id": "b389e04e303e0db4",
+            "name": "pants.backend.python.dependency_inference.rules.infer_python_dependencies_via_imports",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "d082cbe9e1d606e6",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817002999,
+            "description": "Inferring Python dependencies by analyzing imports",
+            "end_usecs": 1634338817058222
+        },
+        {
+            "workunit_id": "0f3b828867353144",
+            "name": "pants.backend.python.dependency_inference.rules.infer_python_dependencies_via_imports",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "c5762f4dbadbb92f",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817003354,
+            "description": "Inferring Python dependencies by analyzing imports",
+            "end_usecs": 1634338817070106
+        },
+        {
+            "workunit_id": "4cdc2fa3a40cf8c1",
+            "name": "pants.backend.python.dependency_inference.import_parser.parse_python_imports",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "b389e04e303e0db4",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817005626,
+            "end_usecs": 1634338817054395
+        },
+        {
+            "workunit_id": "23130ddb399b223a",
+            "name": "pants.backend.python.dependency_inference.import_parser.parse_python_imports",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "0f3b828867353144",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817007057,
+            "end_usecs": 1634338817067491
+        },
+        {
+            "workunit_id": "c383ebcf26e48c34",
+            "name": "pants.backend.python.dependency_inference.rules.infer_python_dependencies_via_imports",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "6ccd3192ac78661d",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817019243,
+            "description": "Inferring Python dependencies by analyzing imports",
+            "end_usecs": 1634338817068938
+        },
+        {
+            "workunit_id": "96c4e9373a8f9817",
+            "name": "pants.backend.python.dependency_inference.import_parser.parse_python_imports",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "c383ebcf26e48c34",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817021099,
+            "end_usecs": 1634338817064518
+        },
+        {
+            "workunit_id": "95c3d058d43917fc",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "4cdc2fa3a40cf8c1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817040017,
+            "end_usecs": 1634338817054228
+        },
+        {
+            "workunit_id": "c97bb995c88410c7",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "95c3d058d43917fc",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817042187,
+            "end_usecs": 1634338817053920
+        },
+        {
+            "workunit_id": "b760bc11f2b65865",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "c97bb995c88410c7",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817044888,
+            "description": "Scheduling: Determine Python imports for src/python/toolchain/github_integration/hook_handlers/app_handlers.py",
+            "end_usecs": 1634338817048790,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "__future__.annotations\ndataclasses.dataclass\nlogging\ntoolchain.django.site.models.Customer\ntoolchain.django.site.models.Repo\ntoolchain.django.site.models.RepoCreationError\ntoolchain.github_integration.common.webhook_events.GitHubEvent\ntoolchain.github_integration.models.ConfigureGithubRepo\ntoolchain.github_integration.models.GithubRepo"
+            }
+        },
+        {
+            "workunit_id": "a26f48d49b8af193",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "b760bc11f2b65865",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817044917,
+            "description": "Hit: Local cache lookup: Determine Python imports for src/python/toolchain/github_integration/hook_handlers/app_handlers.py",
+            "end_usecs": 1634338817048769,
+            "counters": {
+                "local_cache_requests_cached": 1,
+                "local_cache_total_time_saved_ms": 488,
+                "local_cache_requests": 1
+            }
+        },
+        {
+            "workunit_id": "8b12770a98fe0c0f",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "96c4e9373a8f9817",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817045889,
+            "end_usecs": 1634338817064322
+        },
+        {
+            "workunit_id": "6a37675612bc8192",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "ce53c947959caaba",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817046260,
+            "end_usecs": 1634338817054311
+        },
+        {
+            "workunit_id": "71ee014b4928d0e9",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "6a37675612bc8192",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817047195,
+            "end_usecs": 1634338817054105
+        },
+        {
+            "workunit_id": "c286a179785e3aff",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "8b12770a98fe0c0f",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817047388,
+            "end_usecs": 1634338817064004
+        },
+        {
+            "workunit_id": "94916c752f6e2db5",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "71ee014b4928d0e9",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817048405,
+            "description": "Scheduling: Determine Python imports for src/python/toolchain/github_integration/hook_handlers/conftest.py:tests",
+            "end_usecs": 1634338817049100,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "logging.config\ntoolchain.conftest.APPS_UNDER_TEST\ntoolchain.conftest.EXTRA_SETTINGS\ntoolchain.conftest.configure_settings\ntoolchain.django.site.logging.logging_helpers.get_logging_config\ntoolchain.github_integration.constants.GITHUB_INTEGRATION_DJANGO_APP"
+            }
+        },
+        {
+            "workunit_id": "a5078ad54ca359b0",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "94916c752f6e2db5",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817048430,
+            "description": "Hit: Local cache lookup: Determine Python imports for src/python/toolchain/github_integration/hook_handlers/conftest.py:tests",
+            "end_usecs": 1634338817049081,
+            "counters": {
+                "local_cache_requests": 1,
+                "local_cache_total_time_saved_ms": 828,
+                "local_cache_requests_cached": 1
+            }
+        },
+        {
+            "workunit_id": "592268b232d95ed1",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "c286a179785e3aff",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817051399,
+            "description": "Scheduling: Determine Python imports for src/python/toolchain/github_integration/workers/conftest.py:tests",
+            "end_usecs": 1634338817061330,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "logging.config\nre\ntoolchain.conftest.APPS_UNDER_TEST\ntoolchain.conftest.EXTRA_SETTINGS\ntoolchain.conftest.configure_settings\ntoolchain.django.site.logging.logging_helpers.get_logging_config\ntoolchain.github_integration.config.GithubIntegrationConfig\ntoolchain.github_integration.constants.GITHUB_INTEGRATION_DJANGO_APP\ntoolchain.util.test.crypto_utils.generate_private_key"
+            }
+        },
+        {
+            "workunit_id": "09123aa1ade34f96",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "592268b232d95ed1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817051424,
+            "description": "Hit: Local cache lookup: Determine Python imports for src/python/toolchain/github_integration/workers/conftest.py:tests",
+            "end_usecs": 1634338817061310,
+            "counters": {
+                "local_cache_total_time_saved_ms": 731,
+                "local_cache_requests": 1,
+                "local_cache_requests_cached": 1
+            }
+        },
+        {
+            "workunit_id": "41caead23559322d",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "23130ddb399b223a",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817056918,
+            "end_usecs": 1634338817067330
+        },
+        {
+            "workunit_id": "3779d0b99fc8d1ae",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "41caead23559322d",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817058248,
+            "end_usecs": 1634338817066021
+        },
+        {
+            "workunit_id": "c3bad5cbf88c9550",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "3779d0b99fc8d1ae",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817061935,
+            "description": "Scheduling: Determine Python imports for src/python/toolchain/github_integration/hook_handlers/repo_handlers.py",
+            "end_usecs": 1634338817063639,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "logging\ntoolchain.github_integration.common.webhook_events.GitHubEvent\ntoolchain.github_integration.repo_data_store.GithubRepoDataStore\ntyping.Optional"
+            }
+        },
+        {
+            "workunit_id": "936f185dd5e7ec75",
+            "name": "local_cache_read",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "c3bad5cbf88c9550",
+            "last_update": 1634338823,
+            "start_usecs": 1634338817061961,
+            "description": "Hit: Local cache lookup: Determine Python imports for src/python/toolchain/github_integration/hook_handlers/repo_handlers.py",
+            "end_usecs": 1634338817063613,
+            "counters": {
+                "local_cache_total_time_saved_ms": 951,
+                "local_cache_requests": 1,
+                "local_cache_requests_cached": 1
+            }
+        },
+        {
+            "workunit_id": "269eec0beca347ea",
+            "name": "select",
+            "state": "finished",
+            "version": 10,
+            "parent_id": null,
+            "last_update": 1634338823,
+            "start_usecs": 1634338812219724,
+            "end_usecs": 1634338822017970
+        },
+        {
+            "workunit_id": "31a1c476885cc3f1",
+            "name": "pants.core.goals.test.run_tests",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "269eec0beca347ea",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812219905,
+            "description": "`test` goal",
+            "end_usecs": 1634338822017898
+        },
+        {
+            "workunit_id": "5d56b1b2a23d6d42",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812349290,
+            "description": "Run Pytest",
+            "end_usecs": 1634338821930406,
+            "metadata": {
+                "address": "src/python/toolchain/github_integration/app_client_test.py:tests"
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionJoDkjt\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 13 items\n\nsrc/python/toolchain/github_integration/app_client_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionJoDkjt/src.python.toolchain.github_integration.app_client_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m13 passed\u001b[0m\u001b[32m in 9.09s\u001b[0m\u001b[32m ==============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n",
+                "xml_results": {
+                    "src.python.toolchain.github_integration.app_client_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"13\" time=\"9.137\" timestamp=\"2021-10-15T15:16:57.694169\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.github_integration.app_client_test.TestGithubRepoClient\" name=\"test_get_client\" time=\"1.970\" /><testcase classname=\"src.python.toolchain.github_integration.app_client_test.TestGithubRepoClient\" name=\"test_github_api_responses\" time=\"1.111\" /><testcase classname=\"src.python.toolchain.github_integration.app_client_test.TestGithubRepoClient\" name=\"test_list_webhooks\" time=\"0.158\" /><testcase classname=\"src.python.toolchain.github_integration.app_client_test.TestGithubRepoClient\" name=\"test_list_webhooks_http_error\" time=\"0.097\" /><testcase classname=\"src.python.toolchain.github_integration.app_client_test.TestGithubRepoClient\" name=\"test_create_webhook\" time=\"0.145\" /><testcase classname=\"src.python.toolchain.github_integration.app_client_test.TestGithubRepoClient\" name=\"test_create_webhook_invalid_secret\" time=\"0.117\" /><testcase classname=\"src.python.toolchain.github_integration.app_client_test.TestGithubRepoClient\" name=\"test_delete_webhook\" time=\"0.120\" /><testcase classname=\"src.python.toolchain.github_integration.app_client_test.TestGithubRepoClient\" name=\"test_delete_webhook_invalid_webhook_id\" time=\"0.113\" /><testcase classname=\"src.python.toolchain.github_integration.app_client_test.TestGithubRepoClient\" name=\"test_update_webhook\" time=\"0.098\" /><testcase classname=\"src.python.toolchain.github_integration.app_client_test.TestGithubRepoClient\" name=\"test_get_workflow_actions_run\" time=\"0.332\" /><testcase classname=\"src.python.toolchain.github_integration.app_client_test.TestGithubRepoClient\" name=\"test_get_workflow_actions_run_not_found\" time=\"0.093\" /><testcase classname=\"src.python.toolchain.github_integration.app_client_test.TestGithubAppClient\" name=\"test_get_installation_access_token\" time=\"0.119\" /><testcase classname=\"src.python.toolchain.github_integration.app_client_test.TestGithubAppClient\" name=\"test_list_installations\" time=\"0.592\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "1e7758f064dcc6fc",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812349394,
+            "description": "Run Pytest",
+            "end_usecs": 1634338821928996,
+            "metadata": {
+                "address": "src/python/toolchain/github_integration/config_test.py:tests"
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionZ441eX\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 2 items\n\nsrc/python/toolchain/github_integration/config_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionZ441eX/src.python.toolchain.github_integration.config_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m2 passed\u001b[0m\u001b[32m in 7.47s\u001b[0m\u001b[32m ===============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n",
+                "xml_results": {
+                    "src.python.toolchain.github_integration.config_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"2\" time=\"7.544\" timestamp=\"2021-10-15T15:16:57.690669\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.github_integration.config_test.TestGithubIntegrationConfig\" name=\"test_missing_secret\" time=\"0.031\" /><testcase classname=\"src.python.toolchain.github_integration.config_test.TestGithubIntegrationConfig\" name=\"test_config\" time=\"0.012\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "1c0b41e4b2227544",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812349477,
+            "description": "Run Pytest",
+            "end_usecs": 1634338821925220,
+            "metadata": {
+                "address": "src/python/toolchain/github_integration/models_test.py:tests"
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionEQONQW\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 10 items\n\nsrc/python/toolchain/github_integration/models_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m        [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionEQONQW/src.python.toolchain.github_integration.models_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m10 passed\u001b[0m\u001b[32m in 7.86s\u001b[0m\u001b[32m ==============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/78ed784e/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n",
+                "xml_results": {
+                    "src.python.toolchain.github_integration.models_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"10\" time=\"7.913\" timestamp=\"2021-10-15T15:16:57.706258\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.github_integration.models_test.TestGithubRepo\" name=\"test_activate_create\" time=\"1.669\" /><testcase classname=\"src.python.toolchain.github_integration.models_test.TestGithubRepo\" name=\"test_activate_different_customer\" time=\"0.080\" /><testcase classname=\"src.python.toolchain.github_integration.models_test.TestGithubRepo\" name=\"test_activate_already_active\" time=\"0.648\" /><testcase classname=\"src.python.toolchain.github_integration.models_test.TestGithubRepo\" name=\"test_deactivate_active\" time=\"0.099\" /><testcase classname=\"src.python.toolchain.github_integration.models_test.TestGithubRepo\" name=\"test_deactivate_inactive\" time=\"0.124\" /><testcase classname=\"src.python.toolchain.github_integration.models_test.TestGithubRepo\" name=\"test_get_by_github_repo_id\" time=\"0.057\" /><testcase classname=\"src.python.toolchain.github_integration.models_test.TestGithubRepo\" name=\"test_get_webhook_secret\" time=\"0.066\" /><testcase classname=\"src.python.toolchain.github_integration.models_test.TestGithubRepo\" name=\"test_get_by_id\" time=\"0.058\" /><testcase classname=\"src.python.toolchain.github_integration.models_test.TestGithubRepo\" name=\"test_activate_create_long_name\" time=\"0.046\" /><testcase classname=\"src.python.toolchain.github_integration.models_test.TestGithubRepoStatsConifguration\" name=\"test_github_repo_stats_configuration\" time=\"2.087\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "b9f75f0d9eadb148",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812349813,
+            "description": "Run Pytest",
+            "end_usecs": 1634338821923747,
+            "metadata": {
+                "address": "src/python/toolchain/github_integration/repo_data_store_test.py:tests"
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionRpYp0M\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 14 items\n\nsrc/python/toolchain/github_integration/repo_data_store_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m [ 57%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                   [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionRpYp0M/src.python.toolchain.github_integration.repo_data_store_test.py.tests.xml -\n\n\n\u001b[32m============================= \u001b[32m\u001b[1m14 passed\u001b[0m\u001b[32m in 14.89s\u001b[0m\u001b[32m ==============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/c0babb84/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n",
+                "xml_results": {
+                    "src.python.toolchain.github_integration.repo_data_store_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"14\" time=\"14.949\" timestamp=\"2021-10-15T15:16:57.925653\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.github_integration.repo_data_store_test.TestGithubRepoDataStore\" name=\"test_store_pr\" time=\"6.470\" /><testcase classname=\"src.python.toolchain.github_integration.repo_data_store_test.TestGithubRepoDataStore\" name=\"test_get_pr\" time=\"0.671\" /><testcase classname=\"src.python.toolchain.github_integration.repo_data_store_test.TestGithubRepoDataStore\" name=\"test_get_non_existent_pr\" time=\"0.425\" /><testcase classname=\"src.python.toolchain.github_integration.repo_data_store_test.TestGithubRepoDataStore\" name=\"test_for_github_repo_id_invalid_repo\" time=\"0.373\" /><testcase classname=\"src.python.toolchain.github_integration.repo_data_store_test.TestGithubRepoDataStore\" name=\"test_store_push\" time=\"0.406\" /><testcase classname=\"src.python.toolchain.github_integration.repo_data_store_test.TestGithubRepoDataStore\" name=\"test_store_push_nested_branch\" time=\"0.388\" /><testcase classname=\"src.python.toolchain.github_integration.repo_data_store_test.TestGithubRepoDataStore\" name=\"test_get_push\" time=\"0.298\" /><testcase classname=\"src.python.toolchain.github_integration.repo_data_store_test.TestGithubRepoDataStore\" name=\"test_save_repo_stats_data\" time=\"0.403\" /><testcase classname=\"src.python.toolchain.github_integration.repo_data_store_test.TestGithubRepoDataStore\" name=\"test_save_check_run\" time=\"0.502\" /><testcase classname=\"src.python.toolchain.github_integration.repo_data_store_test.TestGithubRepoDataStore\" name=\"test_get_check_run\" time=\"0.335\" /><testcase classname=\"src.python.toolchain.github_integration.repo_data_store_test.TestGithubRepoDataStore\" name=\"test_get_check_run_missing\" time=\"0.349\" /><testcase classname=\"src.python.toolchain.github_integration.repo_data_store_test.TestTravisRepoDataStore\" name=\"test_save_build\" time=\"0.299\" /><testcase classname=\"src.python.toolchain.github_integration.repo_data_store_test.TestTravisRepoDataStore\" name=\"test_get_build_not_existing\" time=\"0.285\" /><testcase classname=\"src.python.toolchain.github_integration.repo_data_store_test.TestTravisRepoDataStore\" name=\"test_get_build\" time=\"0.475\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "7f39fc7cee281846",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812349829,
+            "description": "Run Pytest",
+            "end_usecs": 1634338821931583,
+            "metadata": {
+                "address": "src/python/toolchain/github_integration/api/resources_check_test.py:tests"
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionOeXQLd\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 2 items\n\nsrc/python/toolchain/github_integration/api/resources_check_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m   [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionOeXQLd/src.python.toolchain.github_integration.api.resources_check_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m2 passed\u001b[0m\u001b[32m in 8.06s\u001b[0m\u001b[32m ===============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/001e0fdd/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n",
+                "xml_results": {
+                    "src.python.toolchain.github_integration.api.resources_check_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"2\" time=\"8.092\" timestamp=\"2021-10-15T15:17:09.827870\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.github_integration.api.resources_check_test.TestResourcesCheckz\" name=\"test_resources_check_view\" time=\"6.116\" /><testcase classname=\"src.python.toolchain.github_integration.api.resources_check_test.TestResourcesCheckz\" name=\"test_resources_check_view_empty_db\" time=\"0.411\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "b7a2dc15af1c5265",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812349891,
+            "description": "Run Pytest",
+            "end_usecs": 1634338821932175,
+            "metadata": {
+                "address": "src/python/toolchain/github_integration/api/views_test.py:tests"
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/7f1e4dc7/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n",
+                "xml_results": {
+                    "src.python.toolchain.github_integration.api.views_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"49\" time=\"23.652\" timestamp=\"2021-10-15T15:17:10.886256\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestPullRequestView\" name=\"test_get_pr\" time=\"4.917\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestPullRequestView\" name=\"test_get_non_existent_pr\" time=\"0.246\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCommitView\" name=\"test_get_commit_nested_branch\" time=\"0.229\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCommitView\" name=\"test_get_non_existent_commit\" time=\"0.221\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCommitView\" name=\"test_get_commit_named_branch\" time=\"0.321\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestPushView\" name=\"test_get_push_nested_branch\" time=\"0.383\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestPushView\" name=\"test_get_non_existent_push\" time=\"0.222\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestPushView\" name=\"test_get_push_named_branch\" time=\"0.269\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestRepoWebhookView\" name=\"test_get_repo_secret\" time=\"0.247\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestRepoWebhookView\" name=\"test_get_repo_secret_inactive_repo\" time=\"0.233\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestRepoWebhookView\" name=\"test_get_repo_secret_no_secret\" time=\"0.244\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestRepoWebhookView\" name=\"test_get_repo_secret_no_repo\" time=\"0.409\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestRepoWebhookView\" name=\"test_post_webhook_missing_repo\" time=\"0.293\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestRepoWebhookView\" name=\"test_post_webhook_handled\" time=\"0.256\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestAppWebhookView\" name=\"test_post_install_app_created\" time=\"1.388\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestTravisWebhookView\" name=\"test_post_github_webhook\" time=\"0.234\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestTravisWebhookView\" name=\"test_post_github_webhook_no_repo\" time=\"0.214\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewTravis\" name=\"test_resolve_ci\" time=\"0.475\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewTravis\" name=\"test_resolve_ci_key_too_long\" time=\"0.433\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewTravis\" name=\"test_resolve_ci_fail_no_github_pr_info\" time=\"0.328\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewTravis\" name=\"test_resolve_ci_fail_old_build\" time=\"0.284\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewTravis\" name=\"test_resolve_ci_fail_invalid_job\" time=\"0.279\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewTravis\" name=\"test_resolve_ci_fail_invalid_pr\" time=\"0.285\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewTravis\" name=\"test_resolve_ci_fail_missing_env_vars\" time=\"0.294\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewTravis\" name=\"test_resolve_ci_fail_missing_not_pull_request\" time=\"0.410\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewTravis\" name=\"test_resolve_ci_fail_unknown_build_id\" time=\"0.223\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewTravis\" name=\"test_resolve_ci_fail_not_travis\" time=\"0.225\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewTravis\" name=\"test_resolve_ci_fail_build_state\" time=\"0.284\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci\" time=\"0.539\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_inactive_repo\" time=\"0.272\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_key_too_long\" time=\"0.472\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_fail_no_github_pr_info\" time=\"0.534\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_fail_unknown_run_id\" time=\"0.335\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_run_id_mismatch\" time=\"0.410\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_fail_pr_parsing_error\" time=\"0.383\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_fail_not_pull_request_event_env\" time=\"0.248\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_fail_not_pull_request_event_workflow_run\" time=\"0.442\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_fail_build_status\" time=\"0.664\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_missing_env_vars[missing0]\" time=\"0.245\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_missing_env_vars[missing1]\" time=\"0.303\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_missing_env_vars[missing2]\" time=\"0.260\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_missing_env_vars[missing3]\" time=\"0.249\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_missing_env_vars[missing4]\" time=\"0.241\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_missing_env_vars[missing5]\" time=\"0.235\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCIResolveViewGithubActions\" name=\"test_resolve_ci_missing_env_vars[missing6]\" time=\"0.385\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCustomerRepoView\" name=\"test_get_repos\" time=\"0.093\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCustomerRepoView\" name=\"test_get_repos_options_no_customer\" time=\"0.028\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCustomerRepoView\" name=\"test_get_repos_options\" time=\"0.101\" /><testcase classname=\"src.python.toolchain.github_integration.api.views_test.TestCustomerRepoView\" name=\"test_get_repos_options_no_repos\" time=\"0.263\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "907b23c61545d920",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812350487,
+            "description": "Run Pytest",
+            "end_usecs": 1634338821930902,
+            "metadata": {
+                "address": "src/python/toolchain/github_integration/client/app_clients_test.py:tests"
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionSWtA5V\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 1 item\n\nsrc/python/toolchain/github_integration/client/app_clients_test.py \u001b[32m.\u001b[0m\u001b[32m     [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionSWtA5V/src.python.toolchain.github_integration.client.app_clients_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m1 passed\u001b[0m\u001b[32m in 4.14s\u001b[0m\u001b[32m ===============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n",
+                "xml_results": {
+                    "src.python.toolchain.github_integration.client.app_clients_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"1\" time=\"4.172\" timestamp=\"2021-10-15T15:16:57.458845\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.github_integration.client.app_clients_test.TestRepoWebhookClient\" name=\"test_post_github_webhook\" time=\"0.133\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "a64d0d1aca37f6a8",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812351115,
+            "description": "Run Pytest",
+            "end_usecs": 1634338821928123,
+            "metadata": {
+                "address": "src/python/toolchain/github_integration/client/repo_clients_test.py:tests"
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n",
+                "xml_results": {
+                    "src.python.toolchain.github_integration.client.repo_clients_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"29\" time=\"6.704\" timestamp=\"2021-10-15T15:16:57.649766\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_pull_request_info\" time=\"0.225\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_pull_request_info_no_info\" time=\"0.065\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_pull_request_info_invalid_pr[None]\" time=\"0.045\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_pull_request_info_invalid_pr[0]\" time=\"0.066\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_pull_request_info_invalid_pr[]\" time=\"0.044\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_commit_info\" time=\"0.091\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_commit_info_invalid_params[None-None]\" time=\"0.092\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_commit_info_invalid_params[None-]\" time=\"0.090\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_commit_info_invalid_params[-]\" time=\"0.110\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_commit_info_invalid_params[puffy-]\" time=\"0.062\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_commit_info_invalid_params[-shirt]\" time=\"0.112\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_commit_info_no_info\" time=\"0.086\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_push_info\" time=\"0.061\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_push_info_invalid_params[None-None]\" time=\"0.063\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_push_info_invalid_params[None-]\" time=\"0.071\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_push_info_invalid_params[-]\" time=\"0.068\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_push_info_invalid_params[puffy-]\" time=\"0.059\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_push_info_invalid_params[-shirt]\" time=\"0.116\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_get_push_info_no_info\" time=\"0.056\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_resolve_ci_build\" time=\"0.074\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubRepoInfoClient\" name=\"test_resolve_ci_build_denied\" time=\"0.065\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestRepoWebhookClient\" name=\"test_get_webhook_secret\" time=\"0.051\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestRepoWebhookClient\" name=\"test_post_github_webhook\" time=\"0.093\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestRepoWebhookClient\" name=\"test_post_travis_webhook\" time=\"0.074\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestRepoWebhookClient\" name=\"test_post_travis_webhook_404\" time=\"0.064\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubCustomerReposClient\" name=\"test_get_repos_empty\" time=\"0.105\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubCustomerReposClient\" name=\"test_get_repos\" time=\"0.054\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubCustomerReposClient\" name=\"test_get_install_info_no_installs\" time=\"0.056\" /><testcase classname=\"src.python.toolchain.github_integration.client.repo_clients_test.TestGithubCustomerReposClient\" name=\"test_get_install_info\" time=\"0.152\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "3eda2c6958578e90",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812352726,
+            "description": "Run Pytest",
+            "end_usecs": 1634338821930439,
+            "metadata": {
+                "address": "src/python/toolchain/github_integration/hook_handlers/app_handlers_test.py:tests"
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionZ9AXGC\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 12 items\n\nsrc/python/toolchain/github_integration/hook_handlers/app_handlers_test.py \u001b[32m.\u001b[0m\u001b[32m [  8%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                              [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionZ9AXGC/src.python.toolchain.github_integration.hook_handlers.app_handlers_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m12 passed\u001b[0m\u001b[32m in 8.66s\u001b[0m\u001b[32m ==============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n",
+                "xml_results": {
+                    "src.python.toolchain.github_integration.hook_handlers.app_handlers_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"12\" time=\"8.711\" timestamp=\"2021-10-15T15:16:57.681643\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.app_handlers_test.TestAppInstallEvents\" name=\"test_install_app_created_missing_customer\" time=\"1.897\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.app_handlers_test.TestAppInstallEvents\" name=\"test_install_app_created\" time=\"1.966\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.app_handlers_test.TestAppInstallEvents\" name=\"test_install_app_reactivate_active\" time=\"0.129\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.app_handlers_test.TestAppInstallEvents\" name=\"test_install_app_reactivate_inactive\" time=\"0.164\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.app_handlers_test.TestAppInstallEvents\" name=\"test_install_app_reactivate_switch_customers\" time=\"0.103\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.app_handlers_test.TestAppInstallEvents\" name=\"test_delete_app_install\" time=\"0.091\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.app_handlers_test.TestAppInstallEvents\" name=\"test_delete_app_install_missing_customer\" time=\"0.058\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.app_handlers_test.TestAppInstallEvents\" name=\"test_install_app_slug_exists_on_different_customer\" time=\"0.150\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.app_handlers_test.TestAppInstallEvents\" name=\"test_install_app_slug_exists\" time=\"0.123\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.app_handlers_test.TestAppInstallEvents\" name=\"test_install_app_slug_exists_but_deactivated\" time=\"0.101\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.app_handlers_test.TestRepoInstallEvents\" name=\"test_install_repo_removed\" time=\"0.108\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.app_handlers_test.TestRepoInstallEvents\" name=\"test_install_repo_removed_invalid_install_id\" time=\"0.267\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "6ba366b5817f8ec8",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812352796,
+            "description": "Run Pytest",
+            "end_usecs": 1634338821926353,
+            "metadata": {
+                "address": "src/python/toolchain/github_integration/hook_handlers/repo_handlers_test.py:tests"
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executiontq20Yi\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 9 items\n\nsrc/python/toolchain/github_integration/hook_handlers/repo_handlers_test.py \u001b[32m.\u001b[0m\u001b[32m [ 11%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                 [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executiontq20Yi/src.python.toolchain.github_integration.hook_handlers.repo_handlers_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m9 passed\u001b[0m\u001b[32m in 13.32s\u001b[0m\u001b[32m ==============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/c0babb84/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n",
+                "xml_results": {
+                    "src.python.toolchain.github_integration.hook_handlers.repo_handlers_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"9\" time=\"13.380\" timestamp=\"2021-10-15T15:16:57.952506\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.repo_handlers_test.TestRepoWebhookHandlers\" name=\"test_pull_request_open\" time=\"6.892\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.repo_handlers_test.TestRepoWebhookHandlers\" name=\"test_pull_request_open_no_repo\" time=\"0.605\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.repo_handlers_test.TestRepoWebhookHandlers\" name=\"test_pull_request_assigned\" time=\"0.395\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.repo_handlers_test.TestRepoWebhookHandlers\" name=\"test_push_branch\" time=\"0.438\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.repo_handlers_test.TestRepoWebhookHandlers\" name=\"test_push_no_head\" time=\"0.372\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.repo_handlers_test.TestRepoWebhookHandlers\" name=\"test_push_tag\" time=\"0.364\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.repo_handlers_test.TestRepoWebhookHandlers\" name=\"test_change_run_not_github_action\" time=\"0.353\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.repo_handlers_test.TestRepoWebhookHandlers\" name=\"test_change_run_github_action\" time=\"0.355\" /><testcase classname=\"src.python.toolchain.github_integration.hook_handlers.repo_handlers_test.TestRepoWebhookHandlers\" name=\"test_change_run_github_action_missing_repo\" time=\"0.687\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "4674dcf90db7cea4",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812353009,
+            "description": "Run Pytest",
+            "end_usecs": 1634338821930271,
+            "metadata": {
+                "address": "src/python/toolchain/github_integration/management/commands/add_repo_stats_fetch_test.py:tests"
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionmijPK7\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 1 item\n\nsrc/python/toolchain/github_integration/management/commands/add_repo_stats_fetch_test.py \u001b[32m.\u001b[0m\u001b[32m [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionmijPK7/src.python.toolchain.github_integration.management.commands.add_repo_stats_fetch_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m1 passed\u001b[0m\u001b[32m in 6.28s\u001b[0m\u001b[32m ===============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n",
+                "xml_results": {
+                    "src.python.toolchain.github_integration.management.commands.add_repo_stats_fetch_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"1\" time=\"6.334\" timestamp=\"2021-10-15T15:16:57.987134\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.github_integration.management.commands.add_repo_stats_fetch_test.TestAddRepoStatsFetchCommand\" name=\"test_add_repo_stats_fetch\" time=\"3.964\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "ff19a4359c9befa2",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812353128,
+            "description": "Run Pytest",
+            "end_usecs": 1634338821925048,
+            "metadata": {
+                "address": "src/python/toolchain/github_integration/workers/github_repo_stats_test.py:tests"
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionplAbyX\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 3 items\n\nsrc/python/toolchain/github_integration/workers/github_repo_stats_test.py \u001b[32m.\u001b[0m\u001b[32m [ 33%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                       [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionplAbyX/src.python.toolchain.github_integration.workers.github_repo_stats_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m3 passed\u001b[0m\u001b[32m in 12.54s\u001b[0m\u001b[32m ==============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/c1757a0e/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n",
+                "xml_results": {
+                    "src.python.toolchain.github_integration.workers.github_repo_stats_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"3\" time=\"12.589\" timestamp=\"2021-10-15T15:16:57.734820\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.github_integration.workers.github_repo_stats_test.TestGithubRepoStats\" name=\"test_repeating_repo_stats_fetch\" time=\"8.807\" /><testcase classname=\"src.python.toolchain.github_integration.workers.github_repo_stats_test.TestGithubRepoStats\" name=\"test_one_off_repo_stats_fetch\" time=\"0.538\" /><testcase classname=\"src.python.toolchain.github_integration.workers.github_repo_stats_test.TestGithubRepoStats\" name=\"test_no_repo_id_found_case\" time=\"0.485\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "de55c5fbae12ab14",
+            "name": "pants.backend.python.goals.pytest_runner.setup_pytest_for_target",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "6ba366b5817f8ec8",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812353987,
+            "end_usecs": 1634338821899363
+        },
+        {
+            "workunit_id": "6eaf4a45c4fc1502",
+            "name": "pants.backend.python.goals.pytest_runner.setup_pytest_for_target",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "3eda2c6958578e90",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812354024,
+            "end_usecs": 1634338821905165
+        },
+        {
+            "workunit_id": "10dd69ae539e4326",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812354439,
+            "description": "Run Pytest",
+            "end_usecs": 1634338821929543,
+            "metadata": {
+                "address": "src/python/toolchain/github_integration/management/commands/deactivate_repo_test.py:tests"
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionxOuuaA\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 2 items\n\nsrc/python/toolchain/github_integration/management/commands/deactivate_repo_test.py \u001b[32m.\u001b[0m\u001b[32m [ 50%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                        [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionxOuuaA/src.python.toolchain.github_integration.management.commands.deactivate_repo_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m2 passed\u001b[0m\u001b[32m in 6.67s\u001b[0m\u001b[32m ===============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n",
+                "xml_results": {
+                    "src.python.toolchain.github_integration.management.commands.deactivate_repo_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"2\" time=\"6.693\" timestamp=\"2021-10-15T15:16:57.737689\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.github_integration.management.commands.deactivate_repo_test.TestDeactivateRepoCommand\" name=\"test_deactivate_repo\" time=\"3.716\" /><testcase classname=\"src.python.toolchain.github_integration.management.commands.deactivate_repo_test.TestDeactivateRepoCommand\" name=\"test_deactivate_repo_inactive_repo\" time=\"0.647\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "58c39e1f3d0ee306",
+            "name": "pants.backend.python.goals.pytest_runner.run_python_test",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812354768,
+            "description": "Run Pytest",
+            "end_usecs": 1634338821928318,
+            "metadata": {
+                "address": "src/python/toolchain/github_integration/workers/configure_github_repo_test.py:tests"
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionr45x9M\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 7 items\n\nsrc/python/toolchain/github_integration/workers/configure_github_repo_test.py \u001b[32m.\u001b[0m\u001b[32m [ 14%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                   [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionr45x9M/src.python.toolchain.github_integration.workers.configure_github_repo_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m7 passed\u001b[0m\u001b[32m in 9.76s\u001b[0m\u001b[32m ===============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n",
+                "xml_results": {
+                    "src.python.toolchain.github_integration.workers.configure_github_repo_test.py.tests.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"7\" time=\"9.798\" timestamp=\"2021-10-15T15:16:57.835109\" hostname=\"Ashers-MacBook-Pro.local\"><testcase classname=\"src.python.toolchain.github_integration.workers.configure_github_repo_test.TestGithubRepoConfigurator\" name=\"test_unknown_repo\" time=\"3.486\" /><testcase classname=\"src.python.toolchain.github_integration.workers.configure_github_repo_test.TestGithubRepoConfigurator\" name=\"test_create_webhook_no_hooks\" time=\"0.406\" /><testcase classname=\"src.python.toolchain.github_integration.workers.configure_github_repo_test.TestGithubRepoConfigurator\" name=\"test_create_webhook_other_hooks\" time=\"0.292\" /><testcase classname=\"src.python.toolchain.github_integration.workers.configure_github_repo_test.TestGithubRepoConfigurator\" name=\"test_delete_webhook_no_hooks\" time=\"0.299\" /><testcase classname=\"src.python.toolchain.github_integration.workers.configure_github_repo_test.TestGithubRepoConfigurator\" name=\"test_delete_webhook_no_toolchain_hooks\" time=\"0.399\" /><testcase classname=\"src.python.toolchain.github_integration.workers.configure_github_repo_test.TestGithubRepoConfigurator\" name=\"test_delete_webhook\" time=\"0.330\" /><testcase classname=\"src.python.toolchain.github_integration.workers.configure_github_repo_test.TestGithubRepoConfigurator\" name=\"test_update_webhook\" time=\"0.518\" /></testsuite></testsuites>"
+                }
+            }
+        },
+        {
+            "workunit_id": "7a528cdafa925c35",
+            "name": "pants.backend.python.goals.pytest_runner.setup_pytest_for_target",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "58c39e1f3d0ee306",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812358256,
+            "end_usecs": 1634338821905457
+        },
+        {
+            "workunit_id": "b14a6fac35d22d6f",
+            "name": "pants.engine.internals.graph.transitive_targets",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "7a528cdafa925c35",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812377465,
+            "description": "Resolve transitive targets",
+            "end_usecs": 1634338819592643
+        },
+        {
+            "workunit_id": "c1ba44511324d1a1",
+            "name": "pants.engine.internals.graph.transitive_dependency_mapping",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "b14a6fac35d22d6f",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812378118,
+            "end_usecs": 1634338819591196
+        },
+        {
+            "workunit_id": "968c5c633232433d",
+            "name": "pants.engine.internals.graph.transitive_targets",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "6eaf4a45c4fc1502",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812463276,
+            "description": "Resolve transitive targets",
+            "end_usecs": 1634338819505611
+        },
+        {
+            "workunit_id": "6ab844b2dfb98474",
+            "name": "pants.engine.internals.graph.transitive_dependency_mapping",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "968c5c633232433d",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812465677,
+            "end_usecs": 1634338819499874
+        },
+        {
+            "workunit_id": "6c520710859dfadc",
+            "name": "pants.engine.internals.graph.transitive_targets",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "de55c5fbae12ab14",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812466525,
+            "description": "Resolve transitive targets",
+            "end_usecs": 1634338819520496
+        },
+        {
+            "workunit_id": "453626b0d9f55272",
+            "name": "pants.engine.internals.graph.transitive_dependency_mapping",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "6c520710859dfadc",
+            "last_update": 1634338823,
+            "start_usecs": 1634338812467221,
+            "end_usecs": 1634338819515737
+        },
+        {
+            "workunit_id": "0fb9b687079b582f",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "ff19a4359c9befa2",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821897450,
+            "end_usecs": 1634338821909801
+        },
+        {
+            "workunit_id": "ee8554141273e281",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "b9f75f0d9eadb148",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821897505,
+            "end_usecs": 1634338821909234
+        },
+        {
+            "workunit_id": "a435a7db0de9b95a",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "1c0b41e4b2227544",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821898908,
+            "end_usecs": 1634338821909569
+        },
+        {
+            "workunit_id": "41d1cd1cc2c1eef9",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "6ba366b5817f8ec8",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821899681,
+            "end_usecs": 1634338821910833
+        },
+        {
+            "workunit_id": "456dc6e06817d55a",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "0fb9b687079b582f",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821899715,
+            "description": "Scheduling: Run Pytest for src/python/toolchain/github_integration/workers/github_repo_stats_test.py:tests",
+            "end_usecs": 1634338821904332,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionplAbyX\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 3 items\n\nsrc/python/toolchain/github_integration/workers/github_repo_stats_test.py \u001b[32m.\u001b[0m\u001b[32m [ 33%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                       [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionplAbyX/src.python.toolchain.github_integration.workers.github_repo_stats_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m3 passed\u001b[0m\u001b[32m in 12.54s\u001b[0m\u001b[32m ==============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/c1757a0e/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n"
+            }
+        },
+        {
+            "workunit_id": "9852f4f1f5481748",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "ee8554141273e281",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821900141,
+            "description": "Scheduling: Run Pytest for src/python/toolchain/github_integration/repo_data_store_test.py:tests",
+            "end_usecs": 1634338821904409,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionRpYp0M\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 14 items\n\nsrc/python/toolchain/github_integration/repo_data_store_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m [ 57%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                   [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionRpYp0M/src.python.toolchain.github_integration.repo_data_store_test.py.tests.xml -\n\n\n\u001b[32m============================= \u001b[32m\u001b[1m14 passed\u001b[0m\u001b[32m in 14.89s\u001b[0m\u001b[32m ==============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/c0babb84/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n"
+            }
+        },
+        {
+            "workunit_id": "153102d111fb96b3",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "1e7758f064dcc6fc",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821901048,
+            "end_usecs": 1634338821913113
+        },
+        {
+            "workunit_id": "3ea75ab8d48a40a9",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "a435a7db0de9b95a",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821901216,
+            "description": "Scheduling: Run Pytest for src/python/toolchain/github_integration/models_test.py:tests",
+            "end_usecs": 1634338821904468,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionEQONQW\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 10 items\n\nsrc/python/toolchain/github_integration/models_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m        [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionEQONQW/src.python.toolchain.github_integration.models_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m10 passed\u001b[0m\u001b[32m in 7.86s\u001b[0m\u001b[32m ==============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/78ed784e/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n"
+            }
+        },
+        {
+            "workunit_id": "bdb3154f35e67672",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "41d1cd1cc2c1eef9",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821902797,
+            "description": "Scheduling: Run Pytest for src/python/toolchain/github_integration/hook_handlers/repo_handlers_test.py:tests",
+            "end_usecs": 1634338821907231,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executiontq20Yi\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 9 items\n\nsrc/python/toolchain/github_integration/hook_handlers/repo_handlers_test.py \u001b[32m.\u001b[0m\u001b[32m [ 11%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                 [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executiontq20Yi/src.python.toolchain.github_integration.hook_handlers.repo_handlers_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m9 passed\u001b[0m\u001b[32m in 13.32s\u001b[0m\u001b[32m ==============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/c0babb84/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n"
+            }
+        },
+        {
+            "workunit_id": "31bb9b47f076b32f",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "153102d111fb96b3",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821904330,
+            "description": "Scheduling: Run Pytest for src/python/toolchain/github_integration/config_test.py:tests",
+            "end_usecs": 1634338821908807,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionZ441eX\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 2 items\n\nsrc/python/toolchain/github_integration/config_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionZ441eX/src.python.toolchain.github_integration.config_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m2 passed\u001b[0m\u001b[32m in 7.47s\u001b[0m\u001b[32m ===============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n"
+            }
+        },
+        {
+            "workunit_id": "283d64cef6ca4ebb",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "a64d0d1aca37f6a8",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821905122,
+            "end_usecs": 1634338821913573
+        },
+        {
+            "workunit_id": "669e67ee46be8257",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "10dd69ae539e4326",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821905200,
+            "end_usecs": 1634338821913549
+        },
+        {
+            "workunit_id": "daad0fcf93516713",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "4674dcf90db7cea4",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821905578,
+            "end_usecs": 1634338821915771
+        },
+        {
+            "workunit_id": "54b291f892e9aae1",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "3eda2c6958578e90",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821905627,
+            "end_usecs": 1634338821917404
+        },
+        {
+            "workunit_id": "bb2eab4bfbbebef0",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "58c39e1f3d0ee306",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821905658,
+            "end_usecs": 1634338821916968
+        },
+        {
+            "workunit_id": "84c658d6e9f23c4f",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "669e67ee46be8257",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821907188,
+            "description": "Scheduling: Run Pytest for src/python/toolchain/github_integration/management/commands/deactivate_repo_test.py:tests",
+            "end_usecs": 1634338821910553,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionxOuuaA\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 2 items\n\nsrc/python/toolchain/github_integration/management/commands/deactivate_repo_test.py \u001b[32m.\u001b[0m\u001b[32m [ 50%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                        [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionxOuuaA/src.python.toolchain.github_integration.management.commands.deactivate_repo_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m2 passed\u001b[0m\u001b[32m in 6.67s\u001b[0m\u001b[32m ===============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n"
+            }
+        },
+        {
+            "workunit_id": "411a5c1618b8d8d8",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "283d64cef6ca4ebb",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821907230,
+            "description": "Scheduling: Run Pytest for src/python/toolchain/github_integration/client/repo_clients_test.py:tests",
+            "end_usecs": 1634338821910616,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n"
+            }
+        },
+        {
+            "workunit_id": "ae4b7ba87e5bd8cf",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "daad0fcf93516713",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821907749,
+            "description": "Scheduling: Run Pytest for src/python/toolchain/github_integration/management/commands/add_repo_stats_fetch_test.py:tests",
+            "end_usecs": 1634338821910758,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionmijPK7\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 1 item\n\nsrc/python/toolchain/github_integration/management/commands/add_repo_stats_fetch_test.py \u001b[32m.\u001b[0m\u001b[32m [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionmijPK7/src.python.toolchain.github_integration.management.commands.add_repo_stats_fetch_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m1 passed\u001b[0m\u001b[32m in 6.28s\u001b[0m\u001b[32m ===============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n"
+            }
+        },
+        {
+            "workunit_id": "612b6f930222b86a",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "bb2eab4bfbbebef0",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821907911,
+            "description": "Scheduling: Run Pytest for src/python/toolchain/github_integration/workers/configure_github_repo_test.py:tests",
+            "end_usecs": 1634338821911140,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionr45x9M\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 7 items\n\nsrc/python/toolchain/github_integration/workers/configure_github_repo_test.py \u001b[32m.\u001b[0m\u001b[32m [ 14%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                   [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionr45x9M/src.python.toolchain.github_integration.workers.configure_github_repo_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m7 passed\u001b[0m\u001b[32m in 9.76s\u001b[0m\u001b[32m ===============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n"
+            }
+        },
+        {
+            "workunit_id": "a40b81c0f86f8823",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "5d56b1b2a23d6d42",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821908422,
+            "end_usecs": 1634338821918678
+        },
+        {
+            "workunit_id": "125c58f8e83d17d9",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "54b291f892e9aae1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821908734,
+            "description": "Scheduling: Run Pytest for src/python/toolchain/github_integration/hook_handlers/app_handlers_test.py:tests",
+            "end_usecs": 1634338821911188,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionZ9AXGC\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 12 items\n\nsrc/python/toolchain/github_integration/hook_handlers/app_handlers_test.py \u001b[32m.\u001b[0m\u001b[32m [  8%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                              [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionZ9AXGC/src.python.toolchain.github_integration.hook_handlers.app_handlers_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m12 passed\u001b[0m\u001b[32m in 8.66s\u001b[0m\u001b[32m ==============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n"
+            }
+        },
+        {
+            "workunit_id": "680a9df071a5d41e",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "907b23c61545d920",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821909405,
+            "end_usecs": 1634338821921558
+        },
+        {
+            "workunit_id": "eb5fbb64c08d6676",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "a40b81c0f86f8823",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821910672,
+            "description": "Scheduling: Run Pytest for src/python/toolchain/github_integration/app_client_test.py:tests",
+            "end_usecs": 1634338821914563,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionJoDkjt\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 13 items\n\nsrc/python/toolchain/github_integration/app_client_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionJoDkjt/src.python.toolchain.github_integration.app_client_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m13 passed\u001b[0m\u001b[32m in 9.09s\u001b[0m\u001b[32m ==============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n"
+            }
+        },
+        {
+            "workunit_id": "582b45cbba27e780",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "680a9df071a5d41e",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821911371,
+            "description": "Scheduling: Run Pytest for src/python/toolchain/github_integration/client/app_clients_test.py:tests",
+            "end_usecs": 1634338821915354,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionSWtA5V\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 1 item\n\nsrc/python/toolchain/github_integration/client/app_clients_test.py \u001b[32m.\u001b[0m\u001b[32m     [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionSWtA5V/src.python.toolchain.github_integration.client.app_clients_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m1 passed\u001b[0m\u001b[32m in 4.14s\u001b[0m\u001b[32m ===============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/cb65cd13/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n"
+            }
+        },
+        {
+            "workunit_id": "6418ef6937cac017",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "7f39fc7cee281846",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821920678,
+            "end_usecs": 1634338821927954
+        },
+        {
+            "workunit_id": "bf04403daa775682",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "6418ef6937cac017",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821923325,
+            "description": "Scheduling: Run Pytest for src/python/toolchain/github_integration/api/resources_check_test.py:tests",
+            "end_usecs": 1634338821925308,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m============================= test session starts ==============================\u001b[0m\nplatform darwin -- Python 3.8.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0\nrootdir: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionOeXQLd\nplugins: responses-0.5.0, anyio-3.3.3, icdiff-0.5, django-4.4.0, cov-3.0.0, httpx-0.13.0\ncollected 2 items\n\nsrc/python/toolchain/github_integration/api/resources_check_test.py \u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m   [100%]\u001b[0m\n\n- generated xml file: /private/var/folders/hv/p6g7p3p95d19gtm5cfkrk5w00000gn/T/process-executionOeXQLd/src.python.toolchain.github_integration.api.resources_check_test.py.tests.xml -\n\n\n\u001b[32m============================== \u001b[32m\u001b[1m2 passed\u001b[0m\u001b[32m in 8.06s\u001b[0m\u001b[32m ===============================\u001b[0m\n",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/001e0fdd/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n"
+            }
+        },
+        {
+            "workunit_id": "c26be371b23a0d75",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "b7a2dc15af1c5265",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821928965,
+            "end_usecs": 1634338821931162
+        },
+        {
+            "workunit_id": "828dc02493f29c4b",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "c26be371b23a0d75",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821930738,
+            "description": "Scheduling: Run Pytest for src/python/toolchain/github_integration/api/views_test.py:tests",
+            "end_usecs": 1634338821930976,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large",
+                "stderr": "/Users/asher/.cache/pants/named_caches/pex_root/venvs/short/7f1e4dc7/lib/python3.8/site-packages/django/apps/registry.py:91: RemovedInDjango41Warning: 'django_prometheus' defines default_app_config = 'django_prometheus.apps.DjangoPrometheusConfig'. Django now detects this configuration automatically. You can remove default_app_config.\n  app_config = AppConfig.create(entry)\n"
+            }
+        },
+        {
+            "workunit_id": "ce10a711dce13ecb",
+            "name": "pants.backend.python.goals.coverage_py.generate_coverage_reports",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "31a1c476885cc3f1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821937966,
+            "description": "Generate Pytest coverage reports",
+            "end_usecs": 1634338822014077
+        },
+        {
+            "workunit_id": "9a78c0e7d7d46a3b",
+            "name": "pants.backend.python.goals.coverage_py.merge_coverage_data",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "ce10a711dce13ecb",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821938019,
+            "description": "Merge Pytest coverage data",
+            "end_usecs": 1634338821960676
+        },
+        {
+            "workunit_id": "dd9c6e66b4a860a1",
+            "name": "pants.engine.process.fallible_to_exec_result_or_raise",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "9a78c0e7d7d46a3b",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821959751,
+            "end_usecs": 1634338821960540
+        },
+        {
+            "workunit_id": "e7c4c9b48c92e34c",
+            "name": "pants.engine.process.remove_platform_information",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "dd9c6e66b4a860a1",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821959825,
+            "end_usecs": 1634338821960516
+        },
+        {
+            "workunit_id": "f013bb4db172a91e",
+            "name": "multi_platform_process",
+            "state": "finished",
+            "version": 10,
+            "parent_id": "e7c4c9b48c92e34c",
+            "last_update": 1634338823,
+            "start_usecs": 1634338821960225,
+            "description": "Scheduling: Merge 14 Pytest coverage reports.",
+            "end_usecs": 1634338821960419,
+            "metadata": {
+                "source": "HitLocally",
+                "exit_code": 0
+            },
+            "artifacts": {
+                "stdout": "redacted-because-too-large"
+            }
+        }
+    ]
+}

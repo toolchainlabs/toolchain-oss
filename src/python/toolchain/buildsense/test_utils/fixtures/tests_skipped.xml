@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite name="pytest" errors="0" failures="0" skipped="1" tests="1" time="2.490" timestamp="2022-06-03T13:09:11.243159" hostname="acd6c0f437a9">
+		<testcase classname="" name="base_api.api.tests_api.test_blabla_redacted" time="0.000">
+			<skipped message="collection skipped">('/tmp/process-executionhjr7Ry/scan_backend/redacted_test.py', 33, 'no soup for you')</skipped>
+		</testcase>
+	</testsuite>
+</testsuites>

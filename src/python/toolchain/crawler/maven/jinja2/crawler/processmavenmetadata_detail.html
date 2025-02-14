@@ -1,0 +1,22 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "crawler/workunit_detail_base.html" %}
+
+{% block successful_workunit_detail_content_trs %}
+  {{ super() }}
+  <tr>
+    <td>Versions discovered:</td>
+    <td>
+      <ul class="maven-metadata-artifact-version-list">
+        {% for mmv in object.web_resource.maven_metadata.versions.all() %}
+          <li>
+            <a href="{{ mmv.artifact_version.get_absolute_url() }}">{{ mmv.artifact_version }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </td>
+  </tr>
+{% endblock successful_workunit_detail_content_trs %}

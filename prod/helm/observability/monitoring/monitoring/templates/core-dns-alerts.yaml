@@ -1,0 +1,45 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# https://sysdig.com/blog/how-to-monitor-coredns/
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: core-alerts-rules
+  labels:
+    app: prometheus-operator
+    release: {{ .Release.Name }}
+spec:
+  groups:
+  - name: ./core-dns
+    rules:
+    - alert: CoreDNSPanic
+      for: 5m
+      expr: increase(coredns_panics_total[2h]) > 0
+      annotations:
+        message: CoreDNS Panics occured
+      labels:
+         severity: critical
+         type: toolchain-alerts
+         team: devops
+         state: testing
+    - alert: CoreDNSHealthRequestFailures
+      for: 5m
+      expr: increase(coredns_health_request_failures_total[2h]) > 0
+      annotations:
+        message: CoreDNS Health requests are failing
+      labels:
+        severity: critical
+        type: toolchain-alerts
+        team: devops
+        state: testing
+    - alert: CoreDNSHighRequestsVolume
+      for: 20m
+      expr: (sum(rate(coredns_dns_requests_total[15m])) by (type,instance)) > 1000
+      annotations:
+        message: CoreDNS is seeing a high volume of requests.
+      labels:
+        severity: critical
+        type: toolchain-alerts
+        team: devops
+        state: testing

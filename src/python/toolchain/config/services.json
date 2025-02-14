@@ -1,0 +1,265 @@
+{
+    "regions": {
+        "us-east-1": {
+            "clusters": {
+                "prod": {
+                    "name": "prod-e1-1",
+                    "default": true
+                },
+                "dev": {
+                    "name": "dev-e1-1"
+                },
+                "remoting": {
+                    "name": "remoting-prod-e1-1",
+                    "notify_channel": "backend",
+                    "explicit": true
+                }
+            }
+        }
+    },
+    "services": [
+        {
+            "name": "infosite",
+            "type": "gunicorn",
+            "dev_port": 9000,
+            "enabled": false,
+            "config": {
+                "has_static_files": true
+            }
+        },
+        {
+            "name": "users/ui",
+            "type": "gunicorn",
+            "alias_groups": [
+                "dev",
+                "prod",
+                "staging"
+            ],
+            "dev_port": 9010,
+            "config": {
+                "has_static_files": true
+            }
+        },
+        {
+            "name": "users/workflow",
+            "type": "workflow",
+            "dev_port": 9007,
+            "alias_groups": [
+                "staging"
+            ]
+        },
+        {
+            "name": "users/api",
+            "type": "gunicorn",
+            "alias_groups": [
+                "dev",
+                "prod",
+                "staging"
+            ],
+            "dev_port": 9011,
+            "config": {
+                "has_static_files": true
+            }
+        },
+        {
+            "name": "buildsense/workflow",
+            "type": "workflow",
+            "alias_groups": [
+                "dev",
+                "staging"
+            ],
+            "dev_port": 9041
+        },
+        {
+            "name": "buildsense/api",
+            "type": "gunicorn",
+            "alias_groups": [
+                "dev",
+                "prod",
+                "staging"
+            ],
+            "dev_port": 9042
+        },
+        {
+            "name": "crawler/pypi/workflow",
+            "type": "workflow",
+            "dev_port": 9061
+        },
+        {
+            "name": "dependency/api",
+            "type": "gunicorn",
+            "enabled": false,
+            "dev_port": 9071,
+            "config": {
+                "replicas": {
+                    "prod": 1
+                }
+            }
+        },
+        {
+            "name": "dependency/workflow",
+            "type": "workflow",
+            "enabled": false,
+            "dev_port": 9073
+        },
+        {
+            "name": "scm-integration/api",
+            "type": "gunicorn",
+            "dev_port": 9080,
+            "alias_groups": [
+                "dev",
+                "staging",
+                "prod"
+            ]
+        },
+        {
+            "name": "scm-integration/workflow",
+            "type": "workflow",
+            "alias_groups": [
+                "staging"
+            ],
+            "dev_port": 9082
+        },
+        {
+            "name": "servicerouter",
+            "type": "gunicorn",
+            "alias_groups": [
+                "dev",
+                "prod",
+                "staging"
+            ],
+            "dev_port": 9500,
+            "config": {
+                "has_static_files": true
+            }
+        },
+        {
+            "name": "toolshed",
+            "type": "gunicorn",
+            "alias_groups": [
+                "dev",
+                "prod",
+                "staging"
+            ],
+            "dev_port": 9600,
+            "config": {
+                "replicas": {
+                    "prod": 1
+                },
+                "has_static_files": true,
+                "ingress": "private"
+            }
+        },
+        {
+            "name": "webhooks",
+            "type": "gunicorn",
+            "dev_port": 9700,
+            "alias_groups": [
+                "prod",
+                "staging"
+            ],
+            "use_aws": false,
+            "config": {
+                "replicas": {
+                    "prod": 2
+                },
+                "tests_timeout_sec": 300
+            }
+        },
+        {
+            "name": "execution-server",
+            "type": "rust",
+            "service_dir": "remoting",
+            "cluster": "remoting",
+            "use_aws": false,
+            "alias_groups": [
+                "cache"
+            ],
+            "config": {
+                "replicas": {
+                    "prod": 1
+                }
+            }
+        },
+        {
+            "name": "proxy-server",
+            "type": "rust",
+            "service_dir": "remoting",
+            "cluster": "remoting",
+            "alias_groups": [
+                "cache"
+            ],
+            "config": {
+                "replicas": {
+                    "prod": 7
+                }
+            }
+        },
+        {
+            "name": "storage-server",
+            "type": "rust",
+            "service_dir": "remoting",
+            "cluster": "remoting",
+            "use_aws": false,
+            "alias_groups": [
+                "cache"
+            ],
+            "config": {
+                "replicas": {
+                    "prod": 13
+                }
+            }
+        },
+        {
+            "name": "pants-demos/depgraph/web",
+            "type": "gunicorn",
+            "dev_port": 9050,
+            "config": {
+                "has_static_files": true
+            }
+        },
+        {
+            "name": "pants-demos/depgraph/workflow",
+            "type": "workflow",
+            "dev_port": 9053
+        },
+        {
+            "name": "oss-metrics/workflow",
+            "type": "workflow",
+            "dev_port": 9060
+        },
+        {
+            "name": "payments/workflow",
+            "type": "workflow",
+            "dev_port": 9070,
+            "alias_groups": [
+                "staging"
+            ]
+        },
+        {
+            "name": "payments/api",
+            "type": "gunicorn",
+            "alias_groups": [
+                "dev",
+                "staging",
+                "prod"
+            ],
+            "config": {
+                "replicas": {
+                    "prod": 2
+                }
+            },
+            "dev_port": 9075
+        },
+        {
+            "name": "notifications/workflow",
+            "type": "workflow",
+            "dev_port": 9081
+        },
+        {
+            "name": "notifications/api",
+            "type": "gunicorn",
+            "dev_port": 9085
+        }
+    ]
+}

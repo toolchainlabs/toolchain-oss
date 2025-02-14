@@ -1,0 +1,29 @@
+{#
+Copyright 2017 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends "workflow/base.html" %}
+{% block title %}{{ super() }}WorkUnits{% endblock title %}
+{% block content %}
+  <h2>WorkUnits</h2>
+
+  <div class="workunit-list-table-container">
+    <table id="workunit-list-table" class="table table-condensed workunit-list-table">
+    </table>
+  </div>
+
+{% endblock content %}
+
+{% block js %}
+  {{ super() }}
+  <script src="{{ static('workflow/js/workunit_list_table.js') }}"></script>
+  <script src="{{ static('workflow/js/mark_as_feasible.js') }}"></script>
+  {{ csrf_input }}
+  <script>
+    $(function() {
+      toolchain.workflow.setMarkSelectedUrl('{{ views_links.mark_as_feasible }}');
+      toolchain.workflow.initWorkunitListTable('#workunit-list-table', '{{ views_links.workunit_list_data }}');
+    });
+  </script>
+{% endblock js %}

@@ -1,0 +1,158 @@
+{
+    "counter_names": [
+        "local_process_total_time_run_ms",
+        "local_cache_requests",
+        "local_cache_requests_cached",
+        "docker_execution_errors"
+    ],
+    "counters": {
+        "local_cache_requests": 574,
+        "local_cache_requests_cached": 558,
+        "local_cache_requests_uncached": 16,
+        "local_cache_total_time_saved_ms": 68052,
+        "local_execution_requests": 16,
+        "local_process_total_time_run_ms": 16178
+    },
+    "cumulative_timings": [
+        {
+            "label": "main",
+            "timing": 25.91981291770935
+        }
+    ],
+    "pantsd_stats": {
+        "affected_file_count": 1740,
+        "preceding_graph_size": 245,
+        "resulting_graph_size": 24956
+    },
+    "platform": {
+        "architecture": "arm64",
+        "cpu_count": 10,
+        "mem_bytes": 68719476736,
+        "os": "Darwin",
+        "os_release": "22.4.0",
+        "processor": "arm",
+        "python_implementation": "CPython",
+        "python_version": "3.9.15"
+    },
+    "recorded_options": {
+        "GLOBAL": {
+            "local_cache": true,
+            "local_execution_root_dir": "/var/folders/xc/2kgvvynj1qd95h3_0mqsf6c00000gn/T",
+            "local_store_dir": "/Users/asher/.cache/pants/lmdb_store",
+            "local_store_directories_max_size_bytes": 16000000000,
+            "remote_execution_extra_platform_properties": [],
+            "subproject_roots": [],
+            "tag": [],
+            "unmatched_build_file_globs": "warn",
+            "unmatched_cli_globs": "error",
+            "verify_config": true,
+            "watch_filesystem": true
+        },
+        "py-constraints": {
+            "output_file": null,
+            "summary": false,
+            "summary_use_new_header": true
+        },
+        "toolchain-setup": {
+            "base_url": "http://localhost:9500",
+            "org": "seinfeld",
+            "repo": "toolchain"
+        }
+    },
+    "run_info": {
+        "branch": "keith",
+        "buildroot": "/Users/asher/projects/toolchain",
+        "cmd_line": "pants --python-repos-find-links=-['file:///Users/asher/Library/Caches/nce/00433ac7c0da22422677f1a99f7d949934e0f1e0054b438473585f9063393e0b/bindings/find_links/2.16.0rc0/57940640/index.html'] check src/python/toolchain/django/site/::",
+        "computed_goals": [
+            "check"
+        ],
+        "datetime": "Wednesday Apr 12, 2023 10:59:40",
+        "id": "pants_run_2023_04_12_10_59_43_558_4763aa3ae5f4499786a99fb4f2a05acd",
+        "machine": "ip-10-69-226-36.ec2.internal",
+        "outcome": "SUCCESS",
+        "path": "/Users/asher/projects/toolchain",
+        "revision": "fa7eadb456e43a4feea13102ec3af09c039e5f34",
+        "specs_from_command_line": [
+            "src/python/toolchain/django/site::"
+        ],
+        "timestamp": 1681311580.956347,
+        "user": "asher",
+        "version": "2.16.0rc0"
+    },
+    "targets": {
+        "src/python/toolchain/django/site/logging/gunicorn_logger_test.py:tests": [
+            {
+                "filename": "src/python/toolchain/django/site/logging/gunicorn_logger_test.py"
+            }
+        ],
+        "src/python/toolchain/django/site/logging/logging_helpers.py": [
+            {
+                "filename": "src/python/toolchain/django/site/logging/logging_helpers.py"
+            }
+        ],
+        "src/python/toolchain/django/site/logging:logging": [],
+        "src/python/toolchain/django/site/logging:tests": [],
+        "src/python/toolchain/django/site/middleware/error_middleware.py": [
+            {
+                "filename": "src/python/toolchain/django/site/middleware/error_middleware.py"
+            }
+        ]
+    },
+    "workunits": [
+        {
+            "workunit_id": "fc23853b7499bb27",
+            "name": "pants.core.goals.check.check",
+            "state": "finished",
+            "version": 23,
+            "parent_ids": [],
+            "last_update": 1681311607,
+            "start_usecs": 1681311583967863,
+            "description": "`check` goal",
+            "end_usecs": 1681311606873215,
+            "counters": {
+                "local_process_total_time_run_ms": 16178,
+                "DEPRECATED_ConsumeGlobalCountersInstead": 0,
+                "local_cache_requests_uncached": 16,
+                "local_execution_requests": 16,
+                "local_cache_requests": 574,
+                "local_cache_requests_cached": 558,
+                "local_cache_total_time_saved_ms": 68052
+            }
+        },
+        {
+            "workunit_id": "2162816faf9d5f78",
+            "name": "pants.backend.python.typecheck.mypy.rules.mypy_typecheck",
+            "state": "finished",
+            "version": 23,
+            "parent_ids": [
+                "fc23853b7499bb27"
+            ],
+            "last_update": 1681311607,
+            "start_usecs": 1681311584082614,
+            "description": "Typecheck using MyPy - mypy",
+            "end_usecs": 1681311606872732,
+            "metadata": {}
+        },
+        {
+            "workunit_id": "36ac945483c7386a",
+            "name": "process",
+            "state": "finished",
+            "version": 23,
+            "parent_ids": [
+                "2162816faf9d5f78"
+            ],
+            "last_update": 1681311607,
+            "start_usecs": 1681311604070743,
+            "description": "Scheduling: Run MyPy on 86 files.",
+            "end_usecs": 1681311606872211,
+            "metadata": {
+                "source": "Ran",
+                "exit_code": 0,
+                "environment_type": "local"
+            },
+            "artifacts": {
+                "stdout": "\u001b[1m\u001b[32mSuccess: no issues found in 86 source files\u001b[0;10m\n"
+            }
+        }
+    ]
+}

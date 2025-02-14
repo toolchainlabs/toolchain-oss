@@ -1,0 +1,92 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: remote-cache-usage-reporter
+  labels:
+    app: remote-cache-usage-reporter
+    toolchain_product: "remote-cache"
+spec:
+  schedule: "4 */6 * * *"  # every 6th hour at 4m past the hour.
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 2
+  suspend: false
+  jobTemplate:
+    spec:
+      parallelism: 1
+      completions: 1
+      backoffLimit: 1
+      template:
+        metadata:
+         name: remote-cache-usage-reporter
+         labels:
+           services: toolchain
+           app: remote-cache-usage-reporter
+           chart: {{ .Chart.Name  }}
+           heritage: {{ .Release.Service }}
+           toolchain_product: "remote-cache"
+         annotations:
+           iam.amazonaws.com/role: {{ .Values.iam_role }}
+        spec:
+          restartPolicy: Never
+          nodeSelector:
+             toolchain.instance_category: service
+          volumes:
+             - name: cache-local-storage
+               persistentVolumeClaim:
+                claimName: remote-cache-efs-storage-claim
+          {{- if .Values.slack_webhook }}
+             - name: slack-webhook-secret
+               secret:
+                secretName: remote-cache-usage-reporter-slack-webhook
+          {{- end }}
+          containers:
+          - name: remote-cache-usage-reporter
+            image: {{ .Values.image }}
+            imagePullPolicy: IfNotPresent
+            volumeMounts:
+              - name: cache-local-storage
+                mountPath: /remote-cache-data
+            {{- if .Values.slack_webhook }}
+              - name: slack-webhook-secret
+                mountPath: /secrets/slack-webhook
+                readOnly: true
+            {{- end }}
+            args:
+             - "--no-colors"
+             {{- if .Values.push_gateway_url }}
+             - --push-gateway-url
+             - "{{ .Values.push_gateway_url }}"
+              {{- end }}
+             - --chat-report-hour
+             - "18" # 6pm UTC/ 10am PST / 1pm EST
+             - "--redis-cluster-prefix"
+             - "{{ .Values.redis_cluster_prefix }}"
+             - "--s3-base-path"
+             - "{{ .Values.s3_base_path }}"
+             - "--file-system-storage-path"
+             - /remote-cache-data/cas/v1/instances
+             {{- if .Values.customers_map_s3_url }}
+             - --customers-map-s3-url
+             - "{{ .Values.customers_map_s3_url }}"
+            {{- end }}
+            env:
+            - name: K8S_NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+            - name: K8S_POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: K8S_POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: K8S_POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP

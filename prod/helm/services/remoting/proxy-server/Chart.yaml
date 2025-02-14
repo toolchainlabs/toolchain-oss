@@ -1,0 +1,12 @@
+# Copyright 2021 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+description: Remoting proxy service
+name: proxy-server
+version: 2.0.0
+kubeVersion: '>=v1.24.0-0,<v1.28-0'
+dependencies:
+- name: ingress
+  version: '*'
+  repository: file://../../../base/ingress/

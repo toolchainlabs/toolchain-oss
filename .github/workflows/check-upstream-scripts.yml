@@ -1,0 +1,29 @@
+name: Check for changes in upstream scripts
+on: 
+  workflow_dispatch: # Allow running on-demand
+jobs:
+  check-scripts:
+    name: Check for upstream changes to script
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        python-version: ["3.9"]
+        os: [ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          lfs: false
+      - name: Check pantsup.sh script
+        run: |
+          diff src/sh/pants/pantsup.sh <(curl -fsSL https://static.pantsbuild.org/setup/pantsup.sh)
+      - name: Notify slack on failure
+        if: failure()
+        # rtCamp/action-slack-notify@v2.2.0 - pinned it a git hash for maximum safety
+        # https://github.com/rtCamp/action-slack-notify/releases/tag/v2.2.0
+        uses: rtCamp/action-slack-notify@12e36fc18b0689399306c2e0b3e0f2978b7f1ee7
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_COLOR: yellow
+          SLACK_TITLE: Out of date script
+          SLACK_MESSAGE: "A local in repo script is out of date compared to an upstream script., See log for details: https://github.com/toolchainlabs/toolchain/actions/workflows/check-upstream-scripts.yml"
+          SLACK_CHANNEL: "devops"

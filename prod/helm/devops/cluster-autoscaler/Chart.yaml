@@ -1,0 +1,13 @@
+# Copyright 2023 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+appVersion: 1.26.2
+description: Scales Kubernetes worker nodes within autoscaling groups.
+name: cluster-autoscaler
+version: 0.4.0
+home: https://github.com/kubernetes/autoscaler
+dependencies:
+- name: cluster-autoscaler
+  version: 9.28.0
+  repository: https://kubernetes.github.io/autoscaler

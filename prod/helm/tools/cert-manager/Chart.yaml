@@ -1,0 +1,13 @@
+# Copyright 2020 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v2
+appVersion: 0.14.2
+description: Configure cert-manager certificate manager
+name: cert-manager
+version: 0.7.0
+dependencies:
+# Values example: https://github.com/jetstack/cert-manager/blob/master/deploy/charts/cert-manager/values.yaml
+- name: cert-manager
+  version: 1.4.0
+  repository: https://charts.jetstack.io

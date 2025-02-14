@@ -1,0 +1,24 @@
+{#
+Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+#}
+
+{% extends 'workflow/base.html' %}
+
+{% block navbar_left %}
+  {{ super() }}
+
+  <li id="nav-pypi" class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      PyPI
+    </a>
+    <ul class="dropdown-menu">
+      <a class="dropdown-item" href="{{ views_links.pypi_projects }}">Projects</a>
+    </ul>
+  </li>
+{% endblock navbar_left %}
+
+{% block css %}
+{{ super() }}
+<link rel="stylesheet" href="{{ static('packagerepopypi/css/packagerepopypi.css') }}">
+{% endblock css %}

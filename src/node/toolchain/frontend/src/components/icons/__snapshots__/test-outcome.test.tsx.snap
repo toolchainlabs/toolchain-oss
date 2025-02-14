@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TestOutcome /> should not render random test outcome 1`] = `<DocumentFragment />`;

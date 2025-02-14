@@ -1,0 +1,55 @@
+{
+  "globals": {
+    "ts-loader": {
+      "tsConfig": "<rootDir>/tsconfig.json"
+    }
+  },
+  "reporters": [
+    "default",
+    "jest-junit"
+  ],
+  "transform": {
+    "^.+\\.(js|jsx|ts|tsx)?$": [
+      "ts-jest",
+      {
+        "isolatedModules": true
+      }
+    ]
+  },
+  "moduleDirectories": [
+    "node_modules",
+    "src"
+  ],
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "jsx",
+    "json",
+    "node"
+  ],
+  "transformIgnorePatterns": [
+    "/node_modules/(?!query-string|decode-uri-component|split-on-first|filter-obj)"
+  ],
+  "moduleNameMapper": {
+    "\\.(png|svg|jpg|gif)$": "<rootDir>/tests/__mocks__/file-mock.ts"
+  },
+  "setupFiles": [
+    "<rootDir>tests/setup.ts"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>tests/setupAfterEnv.ts"
+  ],
+  "collectCoverage": true,
+  "coverageProvider": "v8",
+  "coverageDirectory": "../../../../dist/node_coverage/frontend",
+  "coveragePathIgnorePatterns": [
+    "/node_modules/",
+    "<rootDir>/tests/"
+  ],
+  "coverageReporters": [
+    "clover"
+  ],
+  "globalSetup": "<rootDir>/jest-global-setup.js",
+  "testTimeout": 10000
+}

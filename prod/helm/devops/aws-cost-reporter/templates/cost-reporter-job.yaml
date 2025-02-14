@@ -1,0 +1,56 @@
+# Copyright 2019 Toolchain Labs, Inc. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  # prod/terraform/resources/us-east-1/kubernetes/dev-e1-1/service_role_policies/cost_reporter.tf
+  name: aws-cost-reporter
+  labels:
+      app: aws-cost-reporter
+  annotations:
+     eks.amazonaws.com/role-arn: {{ .Values.iam_role_arn }}
+
+
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{  .Chart.Name  }}
+spec:
+  schedule: "0 21 * * 1-5"  # Mon-Friday, at 9pm UTC (2pm PST)
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 2
+  suspend: false
+  jobTemplate:
+    spec:
+      parallelism: 1
+      completions: 1
+      backoffLimit: 1
+      # this doesn't actually work right now. https://github.com/aws/containers-roadmap/issues/255
+      ttlSecondsAfterFinished: 900
+      template:
+        metadata:
+         name: {{  .Chart.Name  }}
+         labels:
+           services: toolchain
+           app: aws-cost-reporter
+        spec:
+          serviceAccountName: aws-cost-reporter
+          restartPolicy: Never
+          nodeSelector:
+             toolchain.instance_category: worker
+          volumes:
+             - name: slack-webhook-secret
+               secret:
+                secretName: aws-cost-reporter-slack-webhook
+          containers:
+          - name: {{  .Chart.Name  }}
+            image: {{ .Values.image }}
+            imagePullPolicy: IfNotPresent
+            volumeMounts:
+               - name: slack-webhook-secret
+                 mountPath: /secrets/slack-webhook
+                 readOnly: true
+

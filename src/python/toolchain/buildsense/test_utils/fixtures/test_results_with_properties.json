@@ -1,0 +1,56 @@
+[
+    {
+        "tests": [
+            {
+                "name": "src.python.python-proto.python_proto.tests.test_common",
+                "test_file_path": "test_results_with_properties.py",
+                "time": 2.0,
+                "tests": [
+                    {
+                        "name": "test_uuid_encode_decode",
+                        "time": 0.488,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_uuid_from_into",
+                        "time": 0.189,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_timestamp_encode_decode",
+                        "time": 0.467,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_timestamp_from_into",
+                        "time": 0.244,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_epoch_timestamp_is_since_variant",
+                        "time": 0.001,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_duration_encode_decode",
+                        "time": 0.347,
+                        "outcome": "pass"
+                    },
+                    {
+                        "name": "test_duration_from_into",
+                        "time": 0.26,
+                        "outcome": "pass"
+                    }
+                ]
+            }
+        ],
+        "timing": {
+            "total": 2.0
+        },
+        "target": "test_results_with_properties.py",
+        "outputs": {
+            "stdout": "He stopped short?",
+            "stderr": "Three squares? You can\u2019t spare three squares?"
+        }
+    }
+]
