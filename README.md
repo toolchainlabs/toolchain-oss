@@ -1,8 +1,15 @@
 # Toolchain
 
-[![CircleCI](https://circleci.com/gh/toolchainlabs/toolchain/tree/master.svg?style=svg&circle-token=9cfd5257265ef84a3b6de0db319ed4adeee9c903)](https://circleci.com/gh/toolchainlabs/toolchain/tree/master)
+Toolchain Labs, Inc. was a company created to build commercial solutions around the [Pants OSS build system](https://www.pantsbuild.org/).
 
-[![codecov](https://codecov.io/gh/toolchainlabs/toolchain/branch/master/graph/badge.svg?token=DlqpSfuPM6)](https://codecov.io/gh/toolchainlabs/toolchain)
+Toolchain ceased operations in 2023 (although Pants is still going strong as a community-supported OSS project). Upon dissolution
+Toolchain donated the bulk of its IP to the open-source community.
+
+This repo is a copy of Toolchain's proprietary codebase, now under the Apache 2.0 license. It is a snapshot of
+that codebase on the day Toolchain wound down, without the commit history. We hope that the Pants project,
+members of the Pants community, and the open-source community in general may find this useful.
+
+----------------------------
 
 ## Getting Started
 
