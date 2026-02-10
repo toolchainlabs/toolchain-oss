@@ -1,6 +1,8 @@
 // Copyright 2021 Toolchain Labs, Inc. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (see LICENSE).
 
+#![allow(clippy::result_large_err)]
+
 use std::convert::TryInto;
 use std::sync::Arc;
 
@@ -36,7 +38,7 @@ pub mod sync_wrapper;
 #[cfg(test)]
 mod tests;
 
-pub(self) struct InnerServer {
+struct InnerServer {
     cas: Arc<dyn BlobStorage + Send + Sync + 'static>,
     action_cache: Arc<dyn BlobStorage + Send + Sync + 'static>,
     max_batch_total_size_bytes: usize,

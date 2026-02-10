@@ -1,5 +1,5 @@
 name: Node JS CI
-on: 
+on:
   push:
     branches:
       - master
@@ -9,9 +9,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
   cancel-in-progress: true
 jobs:
-  check_for_changes: 
+  check_for_changes:
       name: Check JS Changes
-      runs-on: ubuntu-latest
+      runs-on: ubuntu-24.04
       outputs:
         js_changes: ${{ steps.changed-files.outputs.any_modified }}
       steps:
@@ -29,7 +29,7 @@ jobs:
             .github/**
   nodes_js_ci:
     name: Node/JS CI
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     needs: check_for_changes
     timeout-minutes: 20
     steps:
@@ -106,7 +106,7 @@ jobs:
         run: yarn build
   cypress-run:
     name: Cypress tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: check_for_changes
     if: needs.check_for_changes.outputs.js_changes == 'true'
     steps:
@@ -117,7 +117,7 @@ jobs:
         with:
           cache: 'yarn'
           cache-dependency-path: src/node/yarn.lock
-          node-version-file: 'src/node/toolchain/pants-demo-site/.nvmrc'  
+          node-version-file: 'src/node/toolchain/pants-demo-site/.nvmrc'
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run

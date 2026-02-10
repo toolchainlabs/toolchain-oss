@@ -32,7 +32,7 @@ struct ParsedWriteResourceName<'a> {
 /// Parses a resource name of the form `{instance_name}/uploads/{uuid}/blobs/{hash}/{size}` into
 /// a struct with references to the individual components of the resource name. The
 /// `{instance_name}` may be blank (with no leading slash).
-fn parse_write_resource_name(resource: &str) -> Result<ParsedWriteResourceName, String> {
+fn parse_write_resource_name(resource: &str) -> Result<ParsedWriteResourceName<'_>, String> {
     if resource.is_empty() {
         return Err("Missing resource name".to_owned());
     }
@@ -87,7 +87,7 @@ struct ParsedReadResourceName<'a> {
 /// Parses a resource name of the form `"{instance_name}/blobs/{hash}/{size}"` into a struct
 /// with references to the individual components of the resource name. The `{instance_name}`
 /// may be blank (with no leading slash).
-fn parse_read_resource_name(resource: &str) -> Result<ParsedReadResourceName, String> {
+fn parse_read_resource_name(resource: &str) -> Result<ParsedReadResourceName<'_>, String> {
     if resource.is_empty() {
         return Err("Missing resource name".to_owned());
     }
@@ -173,7 +173,7 @@ impl ByteStream for ByteStreamService {
                 4 * 1024,
                 read_offset,
                 read_limit,
-                DriverState::default(),
+                DriverState,
             )
             .await
         {
@@ -221,7 +221,7 @@ impl ByteStream for ByteStreamService {
             let mut attempt = self
                 .inner
                 .cas
-                .begin_write_blob(instance, digest, DriverState::default())
+                .begin_write_blob(instance, digest, DriverState)
                 .await?;
 
             let mut committed_size: i64 = 0;

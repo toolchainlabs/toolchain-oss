@@ -1,5 +1,5 @@
 name: Rust CI
-on: 
+on:
   push:
     branches:
       - master
@@ -9,7 +9,7 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
   cancel-in-progress: true
 jobs:
-   check_for_changes: 
+   check_for_changes:
       name: Check Rust Changes
       runs-on: ubuntu-latest
       outputs:
@@ -44,7 +44,7 @@ jobs:
       - uses: actions-rs/toolchain@v1.0.7
         if: needs.check_for_changes.outputs.rust_changes == 'true'
         with:
-          toolchain: 1.68.0
+          toolchain: 1.93.0
       - name: Install Protoc
         uses: arduino/setup-protoc@64c0c85d18e984422218383b81c52f8b077404d3
         if: needs.check_for_changes.outputs.rust_changes == 'true'

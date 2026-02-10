@@ -2,6 +2,7 @@
 // Licensed under the Apache License, Version 2.0 (see LICENSE).
 
 #![allow(clippy::upper_case_acronyms)]
+#![allow(clippy::result_large_err)]
 
 use std::collections::HashMap;
 
@@ -13,6 +14,7 @@ use biscuit::Validation;
 use biscuit::{ClaimPresenceOptions, TemporalOptions, ValidationOptions};
 use biscuit::{Presence, SingleOrMultiple};
 use chrono::Duration;
+use chrono::TimeDelta;
 use serde::{Deserialize, Serialize};
 use tonic::metadata::MetadataMap;
 use tonic::Status;
@@ -221,7 +223,7 @@ fn validate_claims_defined_and_not_expired(claims_set: &ClaimsSet) -> Result<(),
             now: None,
         },
         // Check that iat is not in the future, but don't worry about it being too old of a token.
-        issued_at: Validation::Validate(Duration::max_value()),
+        issued_at: Validation::Validate(TimeDelta::MAX),
         // Check that token has not expired.
         expiry: Validation::Validate(()),
         not_before: Validation::Ignored,

@@ -1,10 +1,10 @@
 name: Check for changes in upstream scripts
-on: 
+on:
   workflow_dispatch: # Allow running on-demand
 jobs:
   check-scripts:
     name: Check for upstream changes to script
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         python-version: ["3.9"]
@@ -25,5 +25,5 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_COLOR: yellow
           SLACK_TITLE: Out of date script
-          SLACK_MESSAGE: "A local in repo script is out of date compared to an upstream script., See log for details: https://github.com/toolchainlabs/toolchain/actions/workflows/check-upstream-scripts.yml"
+          SLACK_MESSAGE: "A local in repo script is out of date compared to an upstream script., See log for details: https://github.com/toolchainlabs/toolchain-oss/actions/workflows/check-upstream-scripts.yml"
           SLACK_CHANNEL: "devops"

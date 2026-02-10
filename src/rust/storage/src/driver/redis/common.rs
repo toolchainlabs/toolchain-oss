@@ -202,29 +202,27 @@ where
 
 /// Make a call to Redis backend and emit metrics. Handles retrying the command once if the
 /// connection is dropped or refused. The command must be idempotent.
-pub fn redis_query<'a, C, T>(
+pub async fn redis_query<'a, C, T>(
     conn: &'a mut C,
     cmd_label: &'static str,
     driver_label: &'static str,
     cmd: &'a Cmd,
-) -> impl Future<Output = Result<T, StorageError>> + 'a
+) -> Result<T, StorageError>
 where
     C: AsRedisConnectionMut + IdentifyRedisConnection + Send + Sync,
     T: FromRedisValue,
 {
-    async move {
-        let mut result = send_one_query(conn, cmd_label, driver_label, cmd).await;
-        if let Err(ref err) = result {
-            if err.is_connection_dropped() || err.is_connection_refusal() {
-                // If the connection is dropped or refused, retry the request once since the
-                // `ConnectionManager` will be reconnecting.
-                metrics::counter!("toolchain_storage_redis_retried_requests_total", 1,
-                    "driver" => driver_label, "redis_cmd" => cmd_label);
-                result = send_one_query(conn, cmd_label, driver_label, cmd).await
-            }
+    let mut result = send_one_query(conn, cmd_label, driver_label, cmd).await;
+    if let Err(ref err) = result {
+        if err.is_connection_dropped() || err.is_connection_refusal() {
+            // If the connection is dropped or refused, retry the request once since the
+            // `ConnectionManager` will be reconnecting.
+            metrics::counter!("toolchain_storage_redis_retried_requests_total", 1,
+                "driver" => driver_label, "redis_cmd" => cmd_label);
+            result = send_one_query(conn, cmd_label, driver_label, cmd).await
         }
-        result.map_err(StorageError::from)
     }
+    result.map_err(StorageError::from)
 }
 
 /// Make a call to the Redis backend and emit metrics.
@@ -268,37 +266,35 @@ where
 
 /// Make a call to Redis backend and emit metrics. Handles retrying the command once if the
 /// connection is dropped or refused. The command must be idempotent.
-pub fn redis_pipeline<'a, C, T>(
+pub async fn redis_pipeline<'a, C, T>(
     conn: &'a mut C,
     cmd_label: &'static str,
     driver_label: &'static str,
     pipeline: &'a Pipeline,
-) -> impl Future<Output = Result<T, StorageError>> + 'a
+) -> Result<T, StorageError>
 where
     C: AsRedisConnectionMut + IdentifyRedisConnection + Send + Sync,
     T: FromRedisValue,
 {
-    async move {
-        let mut result = send_one_pipeline(conn, cmd_label, driver_label, pipeline).await;
-        if let Err(ref err) = result {
-            if err.is_connection_dropped() || err.is_connection_refusal() {
-                // If the connection is dropped or refused, retry the request once since the
-                // `ConnectionManager` will be reconnecting.
-                let conn_name = conn.identify_redis_connection();
+    let mut result = send_one_pipeline(conn, cmd_label, driver_label, pipeline).await;
+    if let Err(ref err) = result {
+        if err.is_connection_dropped() || err.is_connection_refusal() {
+            // If the connection is dropped or refused, retry the request once since the
+            // `ConnectionManager` will be reconnecting.
+            let conn_name = conn.identify_redis_connection();
 
-                metrics::counter!(
-                    "toolchain_storage_redis_retried_requests_total",
-                    1,
-                    "driver" => driver_label,
-                    "redis_backend" => conn_name.backend.clone(),
-                    "redis_endpoint" => conn_name.endpoint,
-                    "redis_cmd" => cmd_label,
-                );
-                result = send_one_pipeline(conn, cmd_label, driver_label, pipeline).await
-            }
+            metrics::counter!(
+                "toolchain_storage_redis_retried_requests_total",
+                1,
+                "driver" => driver_label,
+                "redis_backend" => conn_name.backend.clone(),
+                "redis_endpoint" => conn_name.endpoint,
+                "redis_cmd" => cmd_label,
+            );
+            result = send_one_pipeline(conn, cmd_label, driver_label, pipeline).await
         }
-        result.map_err(StorageError::from)
     }
+    result.map_err(StorageError::from)
 }
 
 /// Wrap `redis::Client` to implement `ConnectionGetter` and `IdentifyRedisConnection`.

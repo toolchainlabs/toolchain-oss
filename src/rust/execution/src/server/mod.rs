@@ -30,6 +30,7 @@ type WorkerName = String;
 
 type LeaseId = String;
 
+#[allow(clippy::large_enum_variant)]
 #[derive(Debug, Clone)]
 pub(crate) enum ActionStatus {
     Running(ExecuteOperationMetadata),
@@ -119,8 +120,12 @@ impl RunningAction {
     }
 
     fn update(&self, actions: &Actions, stage: ExecutionStageValue) {
-        let Some(action_digest) = self.digest.as_ref() else { return };
-        let Some(action) = actions.all.get(action_digest) else { return };
+        let Some(action_digest) = self.digest.as_ref() else {
+            return;
+        };
+        let Some(action) = actions.all.get(action_digest) else {
+            return;
+        };
 
         log::info!(
             "[{}] Lease {} now in stage: {:?}",
@@ -159,7 +164,9 @@ impl Drop for RunningAction {
 
             self.update(&actions, ExecutionStageValue::Queued);
 
-            let Some(action_digest) = self.digest.take() else { return };
+            let Some(action_digest) = self.digest.take() else {
+                return;
+            };
             actions
                 .queued
                 .send_modify(|queued| queued.push_front(action_digest));
@@ -351,7 +358,7 @@ impl Workers {
         &self,
         worker_name: WorkerName,
         session_name: SessionName,
-    ) -> MappedMutexGuard<Worker> {
+    ) -> MappedMutexGuard<'_, Worker> {
         MutexGuard::map(self.workers.lock(), |workers| {
             workers.entry(session_name.clone()).or_insert_with(|| {
                 Worker::new(

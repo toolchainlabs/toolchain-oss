@@ -232,7 +232,7 @@ where
         // Store this chunk in Redis.
         // https://redis.io/commands/setex
         let key = format!("{}-{}", &self.base_key, self.chunk_num);
-        redis_query(
+        redis_query::<_, ()>(
             &mut conn,
             "SET",
             DRIVER_LABEL,
@@ -258,7 +258,7 @@ where
             .encode(&mut metadata_value)
             .map_err(|_| StorageError::Internal("Failed to encode metadata chunk".to_owned()))?;
 
-        redis_query(
+        redis_query::<_, ()>(
             &mut conn,
             "SET",
             DRIVER_LABEL,
@@ -275,7 +275,7 @@ where
             self.digest.hex(),
             self.digest.size_bytes
         );
-        redis_query(
+        redis_query::<_, ()>(
             &mut conn,
             "SET",
             DRIVER_LABEL,

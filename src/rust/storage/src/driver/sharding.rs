@@ -42,12 +42,12 @@ pub struct ShardingStorage<T> {
 /// assigned and not just that key's primary shard. Thus:
 ///
 /// - Reads are sent to all shards for a digest with the first shard returning content for that
-/// digest winning. Unavailable shards are skipped; other errors are surfaced. A digest will
-/// only be reported as missing if there was at least one available shard.
+///   digest winning. Unavailable shards are skipped; other errors are surfaced. A digest will
+///   only be reported as missing if there was at least one available shard.
 ///
 /// - Writes are distributed to all shards for a digest. Each chunk on the write stream is
-/// written in lockstep. If any shard errors, it is removed from the write attempt in order
-/// to avoid passing that error back to the API client.
+///   written in lockstep. If any shard errors, it is removed from the write attempt in order
+///   to avoid passing that error back to the API client.
 ///
 /// Note: This driver intentionally favors high availability over strong consistency and so
 /// the driver will not attempt to retry failed writes etc.
@@ -119,7 +119,7 @@ where
             for replica_key in replica_keys {
                 storage_to_digest
                     .entry(*replica_key)
-                    .or_insert_with(HashSet::new)
+                    .or_default()
                     .insert(*digest);
             }
         }
