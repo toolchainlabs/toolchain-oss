@@ -23,7 +23,7 @@ fasteners
 freezegun
 gitpython==3.1.31
 gunicorn==20.1.0
-hdrhistogram==0.10.2
+hdrhistogram==0.10.3
 httpx==0.24.1
 humanize==4.6.0
 influxdb-client==1.36.1
