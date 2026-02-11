@@ -119,7 +119,7 @@ where
     ) -> Result<(), StorageError> {
         let mut conn = self.conn.get_redis_connection(true).await?;
         let key = Self::key_for_digest(&self.prefix, &instance, digest);
-        redis_query(
+        redis_query::<_, ()>(
             &mut conn,
             "SET",
             DRIVER_LABEL,

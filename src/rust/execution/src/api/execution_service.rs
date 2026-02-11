@@ -90,7 +90,10 @@ impl ExecutionServer {
             .into_inner();
 
         let Some(response) = responses.responses.pop() else {
-            return Err(Status::internal(format!("Wrong number of responses: {}", responses.responses.len())));
+            return Err(Status::internal(format!(
+                "Wrong number of responses: {}",
+                responses.responses.len()
+            )));
         };
 
         match response.status {

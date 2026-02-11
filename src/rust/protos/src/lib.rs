@@ -3,6 +3,7 @@
 
 #![deny(warnings)]
 #![allow(clippy::derive_partial_eq_without_eq)]
+#![allow(clippy::doc_lazy_continuation)]
 
 // NOTE: Prost automatically relies on the existence of this nested module structure because
 // it uses multiple `super` references (e.g., `super::super::super::Foo`) to traverse out of

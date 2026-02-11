@@ -36,7 +36,7 @@ pub mod sync_wrapper;
 #[cfg(test)]
 mod tests;
 
-pub(self) struct InnerServer {
+struct InnerServer {
     cas: Arc<dyn BlobStorage + Send + Sync + 'static>,
     action_cache: Arc<dyn BlobStorage + Send + Sync + 'static>,
     max_batch_total_size_bytes: usize,
