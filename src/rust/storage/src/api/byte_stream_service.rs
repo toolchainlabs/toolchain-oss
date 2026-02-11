@@ -173,7 +173,7 @@ impl ByteStream for ByteStreamService {
                 4 * 1024,
                 read_offset,
                 read_limit,
-                DriverState::default(),
+                DriverState,
             )
             .await
         {
@@ -221,7 +221,7 @@ impl ByteStream for ByteStreamService {
             let mut attempt = self
                 .inner
                 .cas
-                .begin_write_blob(instance, digest, DriverState::default())
+                .begin_write_blob(instance, digest, DriverState)
                 .await?;
 
             let mut committed_size: i64 = 0;

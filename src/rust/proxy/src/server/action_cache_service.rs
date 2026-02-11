@@ -14,8 +14,6 @@ use tonic::{Request, Response, Status};
 
 use crate::server::{client_call, ProxyServerInner};
 
-#[allow(clippy::result_large_err)]
-
 pub(crate) struct ActionCacheService {
     inner: Arc<ProxyServerInner>,
     auth_scheme: AuthScheme,

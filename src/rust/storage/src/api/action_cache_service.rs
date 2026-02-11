@@ -57,7 +57,7 @@ impl ActionCacheService {
                 16 * 1024 * 1024,
                 None,
                 None,
-                DriverState::default(),
+                DriverState,
             )
             .await?
         {
@@ -130,7 +130,7 @@ impl ActionCacheService {
         let missing_digests = self
             .inner
             .cas
-            .find_missing_blobs(instance, digests, DriverState::default())
+            .find_missing_blobs(instance, digests, DriverState)
             .await?;
         Ok(missing_digests.is_empty())
     }
@@ -164,7 +164,7 @@ impl ActionCache for ActionCacheService {
                 16 * 1024 * 1024,
                 None,
                 None,
-                DriverState::default(),
+                DriverState,
             )
             .await
             .map_err(Status::internal)?;
@@ -237,14 +237,7 @@ impl ActionCache for ActionCacheService {
 
             async move {
                 let stream_opt = cas
-                    .read_blob(
-                        instance,
-                        digest,
-                        16 * 1024 * 1024,
-                        None,
-                        None,
-                        DriverState::default(),
-                    )
+                    .read_blob(instance, digest, 16 * 1024 * 1024, None, None, DriverState)
                     .await
                     .ok()?;
 
@@ -327,7 +320,7 @@ impl ActionCache for ActionCacheService {
         ) -> Result<(), Status> {
             let write = async move {
                 let mut attempt = storage
-                    .begin_write_blob(instance, digest, DriverState::default())
+                    .begin_write_blob(instance, digest, DriverState)
                     .await?;
                 attempt.write(data).await?;
                 attempt.commit().await

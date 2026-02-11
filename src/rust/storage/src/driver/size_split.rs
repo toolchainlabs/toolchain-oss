@@ -45,7 +45,7 @@ where
         .await?;
         let missing_digests = missing_digests1
             .into_iter()
-            .chain(missing_digest2.into_iter())
+            .chain(missing_digest2)
             .collect();
         Ok(missing_digests)
     }

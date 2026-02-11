@@ -64,14 +64,7 @@ impl CasService {
         let mut stream = match self
             .inner
             .cas
-            .read_blob(
-                instance.clone(),
-                digest,
-                2048,
-                None,
-                None,
-                DriverState::default(),
-            )
+            .read_blob(instance.clone(), digest, 2048, None, None, DriverState)
             .await
         {
             Ok(Some(stream)) => stream,
@@ -168,7 +161,7 @@ impl CasService {
             let mut attempt = self
                 .inner
                 .cas
-                .begin_write_blob(instance.clone(), digest, DriverState::default())
+                .begin_write_blob(instance.clone(), digest, DriverState)
                 .await?;
 
             attempt.write(data).await?;
@@ -201,7 +194,7 @@ impl ContentAddressableStorage for CasService {
         let missing_digests = self
             .inner
             .cas
-            .find_missing_blobs(instance, digests, DriverState::default())
+            .find_missing_blobs(instance, digests, DriverState)
             .await
             .map_err(Status::internal)?;
         let response = FindMissingBlobsResponse {
